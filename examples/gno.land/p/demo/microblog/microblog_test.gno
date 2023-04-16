@@ -23,6 +23,9 @@ func TestMicroblog(t *testing.T) {
 	if d.Render("/wrongpath") != "404" {
 		t.Fatalf("rendering not giving 404")
 	}
+	if d.Render("") == "404" {
+		t.Fatalf("rendering / should not give 404")
+	}
 	if err := d.NewPage(); err != nil {
 		t.Fatalf("%+v", err)
 	}
