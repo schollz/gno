@@ -19,7 +19,7 @@ func TestMicroblog(t *testing.T) {
 
 	std.TestSetOrigCaller(author1)
 
-	d := NewMicroblog()
+	d := NewMicroblog(title, prefix)
 	if d.Render("/wrongpath") != "404" {
 		t.Fatalf("rendering not giving 404")
 	}

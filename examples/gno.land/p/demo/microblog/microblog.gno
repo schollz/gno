@@ -17,10 +17,10 @@ type Microblog struct {
 	Pages  avl.Tree // author (string) -> Page
 }
 
-func NewMicroblog() (m *Microblog) {
+func NewMicroblog(title string, prefix string) (m *Microblog) {
 	return &Microblog{
-		Title:  "Gnoland microblog",
-		Prefix: "/r/gnoland/microblog",
+		Title:  title,
+		Prefix: prefix,
 		Pages:  avl.Tree{},
 	}
 }

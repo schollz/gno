@@ -41,7 +41,17 @@ Run tests with `gno`, from the root directory of `gno` while working in the pack
 gno test --verbose examples/gno.land/p/demo/microblog
 ```
 
+```
+gno test --verbose examples/gno.land/p/demo/microblog 2>&1 | grep panic
+```
+
+
 ## Debug statements
 
 
 Since `fmt.Print` does not exist, use `println()` and if you need formatting use `println(ufmt.Sprintf(...))`.
+
+
+## Creating an instance (a realm)
+
+Create a new folder in `examples/r/`
