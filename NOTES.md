@@ -130,6 +130,10 @@ gnokey maketx addpkg --pkgpath "gno.land/r/demo/microblog" --pkgdir "examples/gn
 gnokey maketx call --pkgpath "gno.land/r/demo/microblog" --func "NewPost" --args "hello, world" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 zkey
 ```
 
+## URLS
+
+You specify a URL for your realm, like `/r/demo/microblog`, but what is actually seen as a "`path`" in your realm is only part after a colon, e.g. `http://localhost:8888/r/demo/microblog:test123` has the path `test123`.
+
 ### questions
 
 ?? why doesn't ^ work??
@@ -142,3 +146,12 @@ gnokey maketx call --pkgpath "gno.land/r/demo/microblog" --func "NewPost" --args
 
 ?? what is the `gas-fee` and `gas-wanted`?
 
+?? why when I make a `gnokey maketx call` with a new key does it give an `unknown address error`, is it because there are no funds for that key? 
+
+
+
+gnokey maketx addpkg --pkgpath "gno.land/r/demo/microblog" --pkgdir "examples/gno.land/r/demo/microblog" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey 
+
+g1qyktfeacrhcj3n3ckk5gc3neasgqvf2vwqgmtf
+
+g1eghpfgxd4saycj0m6pwdajx3fldgg7c8z56khp
