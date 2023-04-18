@@ -73,6 +73,8 @@ enter the addresses into `genesis_balances.txt`.
 
 ## Start gno.land locally
 
+note: remove `gno.land/testdir` to reset local instance.
+
 ```
 cd gno.land
 make build
@@ -100,7 +102,8 @@ check if funds exist
 
 
 ```
-cd gno.land && ./build/gnoweb
+cd gno.land 
+./build/gnoweb
 ```
 
 ## deploy a package to the website
@@ -124,5 +127,18 @@ gnokey maketx addpkg --pkgpath "gno.land/r/demo/microblog" --pkgdir "examples/gn
 `--arg` lists the arguments in order.
 
 ```
-gnokey maketx call --pkgpath "gno.land/r/demo/microblog2" --func "NewPost" --args "hello, world" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 zkey
+gnokey maketx call --pkgpath "gno.land/r/demo/microblog" --func "NewPost" --args "hello, world" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 zkey
 ```
+
+### questions
+
+?? why doesn't ^ work??
+
+?? how do I update an realm/package without creating a new `pkgpath`?
+
+?? where is the data stored when I run things locally?
+
+?? how do I setup a faucet?
+
+?? what is the `gas-fee` and `gas-wanted`?
+
