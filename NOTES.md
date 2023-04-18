@@ -52,6 +52,77 @@ gno test --verbose examples/gno.land/p/demo/microblog 2>&1 | grep panic
 Since `fmt.Print` does not exist, use `println()` and if you need formatting use `println(ufmt.Sprintf(...))`.
 
 
-## Creating an instance (a realm)
+## Rendering
 
-Create a new folder in `examples/r/`
+Create an instance (a realm), that will hold state and render.
+
+Create a new folder in `examples/gno.land/r/demo/`. Write code, with public functions that will be available.
+
+## Make a private key
+
+```
+gnokey generate
+gnokey add --recover zkey
+# enter password
+# enter bip39 mnemonic from gnokey generate
+```
+
+you should now have an address.
+
+enter the addresses into `genesis_balances.txt`.
+
+## Start gno.land locally
+
+```
+cd gno.land
+make build
+./build/gnoland
+```
+
+check if address exist
+
+```
+gnokey list
+```
+
+check if funds exist
+
+```
+/build/gnokey query --remote localhost:26657 auth/accounts/<address>
+```
+
+## Use a faucet to get funds
+
+??
+
+
+## spin up website
+
+
+```
+cd gno.land && ./build/gnoweb
+```
+
+## deploy a package to the website
+
+`pkgpath` is where to deploy the package.
+
+`pkgdir` is where the source code actually is.
+
+```
+gnokey maketx addpkg --pkgpath "gno.land/p/demo/microblog" --pkgdir "examples/gno.land/p/demo/microblog" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
+```
+
+## deploy a realm
+
+```
+gnokey maketx addpkg --pkgpath "gno.land/r/demo/microblog" --pkgdir "examples/gno.land/r/demo/microblog" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
+```
+
+## add a post
+
+`--arg` lists the arguments in order.
+
+```
+gnokey maketx call --pkgpath "gno.land/r/demo/microblog2" --func "NewPost" --args "hello, world" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 zkey
+```
