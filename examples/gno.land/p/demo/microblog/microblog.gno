@@ -43,11 +43,10 @@ func (m *Microblog) GetPages() []*Page {
 }
 
 func (m *Microblog) Render(path string) string {
-	return path
 	parts := strings.Split(path, "/")
 
 	isHome := path == ""
-	isUser := len(parts) == 2
+	isUser := len(parts) == 1
 
 	switch {
 	case isHome:
@@ -55,13 +54,13 @@ func (m *Microblog) Render(path string) string {
 		output += "# pages\n\n"
 
 		for _, page := range m.GetPages() {
-			output += ufmt.Sprintf("- [%s](/%s)\n", page.Author.String(), page.Author.String())
+			output += ufmt.Sprintf("- [%s](%s%s)\n", page.Author.String(), m.Prefix, page.Author.String())
 		}
 
 		return output
 
 	case isUser:
-		user := parts[1]
+		user := parts[0]
 
 		silo, found := m.Pages.Get(user)
 		if !found {
