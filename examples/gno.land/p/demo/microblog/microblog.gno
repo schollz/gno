@@ -43,6 +43,7 @@ func (m *Microblog) GetPages() []*Page {
 }
 
 func (m *Microblog) Render(path string) string {
+	return path
 	parts := strings.Split(path, "/")
 
 	isHome := path == ""
