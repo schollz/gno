@@ -44,11 +44,17 @@ func TestMicroblog(t *testing.T) {
 	if err := d.NewPost("hello, web3"); err != nil {
 		t.Fatalf("could not create post")
 	}
+	if err := d.NewPost("hello again, web3"); err != nil {
+		t.Fatalf("could not create post")
+	}
+	if err := d.NewPost("hi again, web4?"); err != nil {
+		t.Fatalf("could not create post")
+	}
 
 	println("--- MICROBLOG ---\n\n")
 	println(d.Render(""))
 	println("\n\n--- AUTHOR PAGE ---\n\n")
-	println(d.Render("/" + author1.String()))
+	println(d.Render(author1.String()))
 	println("\n\n--- AUTHOR PAGE ---\n\n")
-	println(d.Render("/" + author2.String()))
+	println(d.Render(author2.String()))
 }

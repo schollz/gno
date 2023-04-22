@@ -2,6 +2,7 @@ package microblog
 
 import (
 	"errors"
+	"sort"
 	"std"
 	"strconv"
 	"strings"
@@ -109,6 +110,7 @@ func (m *Microblog) GetPage(author string) *Page {
 }
 
 type Page struct {
+	ID         int
 	Author     std.Address
 	CreatedAt  time.Time
 	LastPosted time.Time
@@ -128,7 +130,8 @@ func (p *Page) String() string {
 func (p *Page) NewPost(text string) error {
 	now := time.Now()
 	p.LastPosted = now
-	p.Posts.Set(now.Format(time.RFC822), &Post{
+	p.Posts.Set(ufmt.Sprintf("%s%d", now, p.Posts.Size()), &Post{
+		ID:        p.Posts.Size(),
 		Text:      text,
 		CreatedAt: now,
 	})
@@ -136,29 +139,38 @@ func (p *Page) NewPost(text string) error {
 }
 
 func (p *Page) GetPosts() []*Post {
-	var (
-		posts = make([]*Post, p.Posts.Size())
-		index = 0
-	)
+	posts := make([]*Post, p.Posts.Size())
 
 	p.Posts.Iterate("", "", func(post *avl.Node) bool {
-		posts[index] = post.Value().(*Post)
-		index++
+		postParsed := post.Value().(*Post)
+		posts[postParsed.ID] = postParsed
 		return false
 	})
 
-	// TODO: sort posts
+	return reverse(posts)
+}
 
-	return posts
+func reverse(input []*Post) []*Post {
+	inputLen := len(input)
+	output := make([]*Post, inputLen)
+
+	for i, n := range input {
+		j := inputLen - i - 1
+
+		output[j] = n
+	}
+
+	return output
 }
 
 // Post lists the specific update
 
 type Post struct {
+	ID        int
 	CreatedAt time.Time
 	Text      string
 }
 
 func (p *Post) String() string {
-	return "> " + p.Text + " **- " + p.CreatedAt.Format(time.RFC822) + "**"
+	return "> " + p.Text + " *- " + p.CreatedAt.Format(time.RFC822) + "*"
 }
