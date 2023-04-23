@@ -44,3 +44,17 @@ fmt:
 .PHONY: lint
 lint:
 	golangci-lint run --config .github/golangci.yml
+
+
+runall:
+	gno test --verbose examples/gno.land/p/demo/microblog
+	rm -rf gno.land/testdir
+	cd gno.land && ./build/gnoland & 
+	sleep 5
+	cd gno.land && ./build/gnoweb & 
+	sleep 2
+	gnokey maketx addpkg --pkgpath "gno.land/p/demo/microblog" --pkgdir "examples/gno.land/p/demo/microblog" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
+	gnokey maketx addpkg --pkgpath "gno.land/r/demo/microblog" --pkgdir "examples/gno.land/r/demo/microblog" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
+	gnokey maketx call --pkgpath "gno.land/r/demo/microblog" --func "NewPost" --args "hello, world" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 zkey
+
+
