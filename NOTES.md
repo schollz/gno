@@ -150,8 +150,3 @@ You specify a URL for your realm, like `/r/demo/microblog`, but what is actually
 
 
 
-gnokey maketx addpkg --pkgpath "gno.land/r/demo/microblog" --pkgdir "examples/gno.land/r/demo/microblog" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey 
-
-g1qyktfeacrhcj3n3ckk5gc3neasgqvf2vwqgmtf
-
-g1eghpfgxd4saycj0m6pwdajx3fldgg7c8z56khp
