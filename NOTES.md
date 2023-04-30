@@ -134,6 +134,12 @@ gnokey maketx call --pkgpath "gno.land/r/demo/microblog" --func "NewPost" --args
 
 You specify a URL for your realm, like `/r/demo/microblog`, but what is actually seen as a "`path`" in your realm is only part after a colon, e.g. `http://localhost:8888/r/demo/microblog:test123` has the path `test123`.
 
+## Catching small errors:
+
+```
+go run ./gnovm/cmd/gno precompile --verbose ./examples &&  go run ./gnovm/cmd/gno build --verbose ./examples
+```
+
 ### questions
 
 ?? why doesn't ^ work??
