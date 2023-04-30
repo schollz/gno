@@ -457,11 +457,18 @@ func testPackageInjector(store gno.Store, pn *gno.PackageNode) {
 	// Also inject stdlibs native functions.
 	stdlibs.InjectPackage(store, pn)
 	isOriginCall := func(m *gno.Machine) bool {
-		switch m.Frames[0].Func.Name {
+		tname := m.Frames[0].Func.Name
+		switch tname {
 		case "main": // test is a _filetest
 			return len(m.Frames) == 3
 		case "runtest": // test is a _test
 			return len(m.Frames) == 7
+		}
+		// support init() in _filetest
+		// XXX do we need to distinguish from 'runtest'/_test?
+		// XXX pretty hacky even if not.
+		if strings.HasPrefix(string(tname), "init.") {
+			return len(m.Frames) == 3
 		}
 		panic("unable to determine if test is a _test or a _filetest")
 	}
@@ -485,6 +492,7 @@ func testPackageInjector(store gno.Store, pn *gno.PackageNode) {
 			func(m *gno.Machine) {
 				if !isOriginCall(m) {
 					m.Panic(typedString("invalid non-origin call"))
+					return
 				}
 			},
 		)
@@ -515,13 +523,15 @@ func testPackageInjector(store gno.Store, pn *gno.PackageNode) {
 				arg0 := m.LastBlock().GetParams1().TV
 				n := arg0.GetInt()
 				if n <= 0 {
-					panic("GetCallerAt requires positive arg")
+					m.Panic(typedString("GetCallerAt requires positive arg"))
+					return
 				}
 				if n > m.NumFrames()-1 {
 					// NOTE: the last frame's LastPackage
 					// is set to the original non-frame
 					// package, so need this check.
-					panic("frame not found")
+					m.Panic(typedString("frame not found"))
+					return
 				}
 				var pkgAddr string
 				if n == m.NumFrames()-1 {
