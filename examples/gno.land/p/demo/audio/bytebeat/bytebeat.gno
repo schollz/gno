@@ -1,20 +1,27 @@
 package bytebeat
 
 import (
-	"io"
+	"bufio"
+	"bytes"
+	"encoding/base64"
 	"math"
 
 	"gno.land/p/demo/audio/biquad"
 	"gno.land/p/demo/audio/wav"
+	"gno.land/p/demo/ufmt"
 )
 
-func ByteBeat(w io.Writer, seconds uint32, sampleRate uint32, bytebeat_func func(t int) int) (err error) {
+func ByteBeat(seconds uint32, sampleRate uint32, bytebeat_func func(t int) int) (data string) {
+	var b bytes.Buffer
+	w := bufio.NewWriter(&b)
+
 	var numSamples uint32 = sampleRate * seconds
 	var numChannels uint16 = 1
 	var bitsPerSample uint16 = 16
 
 	writer, err := wav.NewWriter(w, numSamples*2, numChannels, sampleRate, bitsPerSample)
 	if err != nil {
+		data = ufmt.Sprintf("error: %s", err)
 		return
 	}
 
@@ -47,12 +54,18 @@ func ByteBeat(w io.Writer, seconds uint32, sampleRate uint32, bytebeat_func func
 
 	err = writer.WriteSamples(samples)
 	if err != nil {
+		data = ufmt.Sprintf("error: %s", err)
 		return
 	}
 
 	err = writer.WriteSamples(samples)
 	if err != nil {
+		data = ufmt.Sprintf("error: %s", err)
 		return
 	}
+
+	w.Flush()
+
+	data = base64.StdEncoding.EncodeToString(b.Bytes())
 	return
 }
