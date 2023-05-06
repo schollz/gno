@@ -40,7 +40,6 @@ func ByteBeat(seconds uint32, sampleRate uint32, bytebeat_func func(t int) int) 
 	for i := uint32(0); i < numSamples; i++ {
 		samples[i].Values[0] = (samples[i].Values[0] * 28000 / maxValue)
 	}
-
 	// highpass filter
 	hpf := biquad.New(10, float64(sampleRate), 0.707, 0, "highpass")
 	for i := uint32(0); i < numSamples; i++ {
