@@ -12,8 +12,8 @@ import (
 )
 
 func ByteBeat(seconds uint32, sampleRate uint32, bytebeat_func func(t int) int) (data string) {
-	var b bytes.Buffer
-	w := bufio.NewWriter(&b)
+	b := new(bytes.Buffer)
+	w := bufio.NewWriter(b)
 
 	var numSamples uint32 = sampleRate * seconds
 	var numChannels uint16 = 1
