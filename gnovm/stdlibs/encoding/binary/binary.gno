@@ -25,8 +25,9 @@ import (
 	"errors"
 	"io"
 	"math"
-	"reflect"
-	"sync"
+	"unsafe"
+	// "reflect"
+	// "sync"
 )
 
 // A ByteOrder specifies how to convert byte slices into
@@ -252,10 +253,10 @@ func Read(r io.Reader, order ByteOrder, data interface{}) error {
 			*data = int64(order.Uint64(bs))
 		case *uint64:
 			*data = order.Uint64(bs)
-		case *float32:
-			*data = math.Float32frombits(order.Uint32(bs))
-		case *float64:
-			*data = math.Float64frombits(order.Uint64(bs))
+		// case *float32:
+		// 	*data = math.Float32frombits(order.Uint32(bs))
+		// case *float64:
+		// 	*data = math.Float64frombits(order.Uint64(bs))
 		case []bool:
 			for i, x := range bs { // Easier to loop over the input for 8-bit values.
 				data[i] = x != 0
@@ -290,14 +291,14 @@ func Read(r io.Reader, order ByteOrder, data interface{}) error {
 			for i := range data {
 				data[i] = order.Uint64(bs[8*i:])
 			}
-		case []float32:
-			for i := range data {
-				data[i] = math.Float32frombits(order.Uint32(bs[4*i:]))
-			}
-		case []float64:
-			for i := range data {
-				data[i] = math.Float64frombits(order.Uint64(bs[8*i:]))
-			}
+		// case []float32:
+		// 	for i := range data {
+		// 		data[i] = math.Float32frombits(order.Uint32(bs[4*i:]))
+		// 	}
+		// case []float64:
+		// 	for i := range data {
+		// 		data[i] = math.Float64frombits(order.Uint64(bs[8*i:]))
+		// 	}
 		default:
 			n = 0 // fast path doesn't apply
 		}
@@ -306,25 +307,26 @@ func Read(r io.Reader, order ByteOrder, data interface{}) error {
 		}
 	}
 
-	// Fallback to reflect-based decoding.
-	v := reflect.ValueOf(data)
-	size := -1
-	switch v.Kind() {
-	case reflect.Pointer:
-		v = v.Elem()
-		size = dataSize(v)
-	case reflect.Slice:
-		size = dataSize(v)
-	}
-	if size < 0 {
-		return errors.New("binary.Read: invalid type " + reflect.TypeOf(data).String())
-	}
-	d := &decoder{order: order, buf: make([]byte, size)}
-	if _, err := io.ReadFull(r, d.buf); err != nil {
-		return err
-	}
-	d.value(v)
-	return nil
+	return errors.New("binary.Read: reflection not implemented")
+	// // Fallback to reflect-based decoding.
+	// v := reflect.ValueOf(data)
+	// size := -1
+	// switch v.Kind() {
+	// case reflect.Pointer:
+	// 	v = v.Elem()
+	// 	size = dataSize(v)
+	// case reflect.Slice:
+	// 	size = dataSize(v)
+	// }
+	// if size < 0 {
+	// 	return errors.New("binary.Read: invalid type " + reflect.TypeOf(data).String())
+	// }
+	// d := &decoder{order: order, buf: make([]byte, size)}
+	// if _, err := io.ReadFull(r, d.buf); err != nil {
+	// 	return err
+	// }
+	// d.value(v)
+	// return nil
 }
 
 // Write writes the binary representation of data into w.
@@ -422,103 +424,105 @@ func Write(w io.Writer, order ByteOrder, data interface{}) error {
 			for i, x := range v {
 				order.PutUint64(bs[8*i:], x)
 			}
-		case *float32:
-			order.PutUint32(bs, math.Float32bits(*v))
-		case float32:
-			order.PutUint32(bs, math.Float32bits(v))
-		case []float32:
-			for i, x := range v {
-				order.PutUint32(bs[4*i:], math.Float32bits(x))
-			}
-		case *float64:
-			order.PutUint64(bs, math.Float64bits(*v))
-		case float64:
-			order.PutUint64(bs, math.Float64bits(v))
-		case []float64:
-			for i, x := range v {
-				order.PutUint64(bs[8*i:], math.Float64bits(x))
-			}
+			// case *float32:
+			// 	order.PutUint32(bs, math.Float32bits(*v))
+			// case float32:
+			// 	order.PutUint32(bs, math.Float32bits(v))
+			// case []float32:
+			// 	for i, x := range v {
+			// 		order.PutUint32(bs[4*i:], math.Float32bits(x))
+			// 	}
+			// case *float64:
+			// 	order.PutUint64(bs, math.Float64bits(*v))
+			// case float64:
+			// 	order.PutUint64(bs, math.Float64bits(v))
+			// case []float64:
+			// 	for i, x := range v {
+			// 		order.PutUint64(bs[8*i:], math.Float64bits(x))
+			// 	}
 		}
 		_, err := w.Write(bs)
 		return err
 	}
 
-	// Fallback to reflect-based encoding.
-	v := reflect.Indirect(reflect.ValueOf(data))
-	size := dataSize(v)
-	if size < 0 {
-		return errors.New("binary.Write: invalid type " + reflect.TypeOf(data).String())
-	}
-	buf := make([]byte, size)
-	e := &encoder{order: order, buf: buf}
-	e.value(v)
-	_, err := w.Write(buf)
-	return err
+	return errors.New("binary.Write: reflection not implemented")
+	// // Fallback to reflect-based encoding.
+	// v := reflect.Indirect(reflect.ValueOf(data))
+	// size := dataSize(v)
+	// if size < 0 {
+	// 	return errors.New("binary.Write: invalid type " + reflect.TypeOf(data).String())
+	// }
+	// buf := make([]byte, size)
+	// e := &encoder{order: order, buf: buf}
+	// e.value(v)
+	// _, err := w.Write(buf)
+	// return err
 }
 
 // Size returns how many bytes Write would generate to encode the value v, which
 // must be a fixed-size value or a slice of fixed-size values, or a pointer to such data.
 // If v is neither of these, Size returns -1.
 func Size(v interface{}) int {
-	return dataSize(reflect.Indirect(reflect.ValueOf(v)))
+	return int(unsafe.Sizeof(v))
+	// return dataSize(reflect.Indirect(reflect.ValueOf(v)))
 }
 
-var structSize sync.Map // map[reflect.Type]int
+// var structSize sync.Map // map[reflect.Type]int
 
-// dataSize returns the number of bytes the actual data represented by v occupies in memory.
-// For compound structures, it sums the sizes of the elements. Thus, for instance, for a slice
-// it returns the length of the slice times the element size and does not count the memory
-// occupied by the header. If the type of v is not acceptable, dataSize returns -1.
-func dataSize(v reflect.Value) int {
-	switch v.Kind() {
-	case reflect.Slice:
-		if s := sizeof(v.Type().Elem()); s >= 0 {
-			return s * v.Len()
-		}
-		return -1
+// // dataSize returns the number of bytes the actual data represented by v occupies in memory.
+// // For compound structures, it sums the sizes of the elements. Thus, for instance, for a slice
+// // it returns the length of the slice times the element size and does not count the memory
+// // occupied by the header. If the type of v is not acceptable, dataSize returns -1.
+// func dataSize(v reflect.Value) int {
+// 	switch v.Kind() {
+// 	case reflect.Slice:
+// 		if s := sizeof(v.Type().Elem()); s >= 0 {
+// 			return s * v.Len()
+// 		}
+// 		return -1
 
-	case reflect.Struct:
-		t := v.Type()
-		if size, ok := structSize.Load(t); ok {
-			return size.(int)
-		}
-		size := sizeof(t)
-		structSize.Store(t, size)
-		return size
+// 	case reflect.Struct:
+// 		t := v.Type()
+// 		if size, ok := structSize.Load(t); ok {
+// 			return size.(int)
+// 		}
+// 		size := sizeof(t)
+// 		structSize.Store(t, size)
+// 		return size
 
-	default:
-		return sizeof(v.Type())
-	}
-}
+// 	default:
+// 		return sizeof(v.Type())
+// 	}
+// }
 
-// sizeof returns the size >= 0 of variables for the given type or -1 if the type is not acceptable.
-func sizeof(t reflect.Type) int {
-	switch t.Kind() {
-	case reflect.Array:
-		if s := sizeof(t.Elem()); s >= 0 {
-			return s * t.Len()
-		}
+// // sizeof returns the size >= 0 of variables for the given type or -1 if the type is not acceptable.
+// func sizeof(t reflect.Type) int {
+// 	switch t.Kind() {
+// 	case reflect.Array:
+// 		if s := sizeof(t.Elem()); s >= 0 {
+// 			return s * t.Len()
+// 		}
 
-	case reflect.Struct:
-		sum := 0
-		for i, n := 0, t.NumField(); i < n; i++ {
-			s := sizeof(t.Field(i).Type)
-			if s < 0 {
-				return -1
-			}
-			sum += s
-		}
-		return sum
+// 	case reflect.Struct:
+// 		sum := 0
+// 		for i, n := 0, t.NumField(); i < n; i++ {
+// 			s := sizeof(t.Field(i).Type)
+// 			if s < 0 {
+// 				return -1
+// 			}
+// 			sum += s
+// 		}
+// 		return sum
 
-	case reflect.Bool,
-		reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64,
-		reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64,
-		reflect.Float32, reflect.Float64, reflect.Complex64, reflect.Complex128:
-		return int(t.Size())
-	}
+// 	case reflect.Bool,
+// 		reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64,
+// 		reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64,
+// 		reflect.Float32, reflect.Float64, reflect.Complex64, reflect.Complex128:
+// 		return int(t.Size())
+// 	}
 
-	return -1
-}
+// 	return -1
+// }
 
 type coder struct {
 	order  ByteOrder
@@ -526,8 +530,10 @@ type coder struct {
 	offset int
 }
 
-type decoder coder
-type encoder coder
+type (
+	decoder coder
+	encoder coder
+)
 
 func (d *decoder) bool() bool {
 	x := d.buf[d.offset]
@@ -604,162 +610,162 @@ func (d *decoder) int64() int64 { return int64(d.uint64()) }
 
 func (e *encoder) int64(x int64) { e.uint64(uint64(x)) }
 
-func (d *decoder) value(v reflect.Value) {
-	switch v.Kind() {
-	case reflect.Array:
-		l := v.Len()
-		for i := 0; i < l; i++ {
-			d.value(v.Index(i))
-		}
+// func (d *decoder) value(v reflect.Value) {
+// 	switch v.Kind() {
+// 	case reflect.Array:
+// 		l := v.Len()
+// 		for i := 0; i < l; i++ {
+// 			d.value(v.Index(i))
+// 		}
 
-	case reflect.Struct:
-		t := v.Type()
-		l := v.NumField()
-		for i := 0; i < l; i++ {
-			// Note: Calling v.CanSet() below is an optimization.
-			// It would be sufficient to check the field name,
-			// but creating the StructField info for each field is
-			// costly (run "go test -bench=ReadStruct" and compare
-			// results when making changes to this code).
-			if v := v.Field(i); v.CanSet() || t.Field(i).Name != "_" {
-				d.value(v)
-			} else {
-				d.skip(v)
-			}
-		}
+// 	case reflect.Struct:
+// 		t := v.Type()
+// 		l := v.NumField()
+// 		for i := 0; i < l; i++ {
+// 			// Note: Calling v.CanSet() below is an optimization.
+// 			// It would be sufficient to check the field name,
+// 			// but creating the StructField info for each field is
+// 			// costly (run "go test -bench=ReadStruct" and compare
+// 			// results when making changes to this code).
+// 			if v := v.Field(i); v.CanSet() || t.Field(i).Name != "_" {
+// 				d.value(v)
+// 			} else {
+// 				d.skip(v)
+// 			}
+// 		}
 
-	case reflect.Slice:
-		l := v.Len()
-		for i := 0; i < l; i++ {
-			d.value(v.Index(i))
-		}
+// 	case reflect.Slice:
+// 		l := v.Len()
+// 		for i := 0; i < l; i++ {
+// 			d.value(v.Index(i))
+// 		}
 
-	case reflect.Bool:
-		v.SetBool(d.bool())
+// 	case reflect.Bool:
+// 		v.SetBool(d.bool())
 
-	case reflect.Int8:
-		v.SetInt(int64(d.int8()))
-	case reflect.Int16:
-		v.SetInt(int64(d.int16()))
-	case reflect.Int32:
-		v.SetInt(int64(d.int32()))
-	case reflect.Int64:
-		v.SetInt(d.int64())
+// 	case reflect.Int8:
+// 		v.SetInt(int64(d.int8()))
+// 	case reflect.Int16:
+// 		v.SetInt(int64(d.int16()))
+// 	case reflect.Int32:
+// 		v.SetInt(int64(d.int32()))
+// 	case reflect.Int64:
+// 		v.SetInt(d.int64())
 
-	case reflect.Uint8:
-		v.SetUint(uint64(d.uint8()))
-	case reflect.Uint16:
-		v.SetUint(uint64(d.uint16()))
-	case reflect.Uint32:
-		v.SetUint(uint64(d.uint32()))
-	case reflect.Uint64:
-		v.SetUint(d.uint64())
+// 	case reflect.Uint8:
+// 		v.SetUint(uint64(d.uint8()))
+// 	case reflect.Uint16:
+// 		v.SetUint(uint64(d.uint16()))
+// 	case reflect.Uint32:
+// 		v.SetUint(uint64(d.uint32()))
+// 	case reflect.Uint64:
+// 		v.SetUint(d.uint64())
 
-	case reflect.Float32:
-		v.SetFloat(float64(math.Float32frombits(d.uint32())))
-	case reflect.Float64:
-		v.SetFloat(math.Float64frombits(d.uint64()))
+// 	case reflect.Float32:
+// 		v.SetFloat(float64(math.Float32frombits(d.uint32())))
+// 	case reflect.Float64:
+// 		v.SetFloat(math.Float64frombits(d.uint64()))
 
-	case reflect.Complex64:
-		v.SetComplex(complex(
-			float64(math.Float32frombits(d.uint32())),
-			float64(math.Float32frombits(d.uint32())),
-		))
-	case reflect.Complex128:
-		v.SetComplex(complex(
-			math.Float64frombits(d.uint64()),
-			math.Float64frombits(d.uint64()),
-		))
-	}
-}
+// 	case reflect.Complex64:
+// 		v.SetComplex(complex(
+// 			float64(math.Float32frombits(d.uint32())),
+// 			float64(math.Float32frombits(d.uint32())),
+// 		))
+// 	case reflect.Complex128:
+// 		v.SetComplex(complex(
+// 			math.Float64frombits(d.uint64()),
+// 			math.Float64frombits(d.uint64()),
+// 		))
+// 	}
+// }
 
-func (e *encoder) value(v reflect.Value) {
-	switch v.Kind() {
-	case reflect.Array:
-		l := v.Len()
-		for i := 0; i < l; i++ {
-			e.value(v.Index(i))
-		}
+// func (e *encoder) value(v reflect.Value) {
+// 	switch v.Kind() {
+// 	case reflect.Array:
+// 		l := v.Len()
+// 		for i := 0; i < l; i++ {
+// 			e.value(v.Index(i))
+// 		}
 
-	case reflect.Struct:
-		t := v.Type()
-		l := v.NumField()
-		for i := 0; i < l; i++ {
-			// see comment for corresponding code in decoder.value()
-			if v := v.Field(i); v.CanSet() || t.Field(i).Name != "_" {
-				e.value(v)
-			} else {
-				e.skip(v)
-			}
-		}
+// 	case reflect.Struct:
+// 		t := v.Type()
+// 		l := v.NumField()
+// 		for i := 0; i < l; i++ {
+// 			// see comment for corresponding code in decoder.value()
+// 			if v := v.Field(i); v.CanSet() || t.Field(i).Name != "_" {
+// 				e.value(v)
+// 			} else {
+// 				e.skip(v)
+// 			}
+// 		}
 
-	case reflect.Slice:
-		l := v.Len()
-		for i := 0; i < l; i++ {
-			e.value(v.Index(i))
-		}
+// 	case reflect.Slice:
+// 		l := v.Len()
+// 		for i := 0; i < l; i++ {
+// 			e.value(v.Index(i))
+// 		}
 
-	case reflect.Bool:
-		e.bool(v.Bool())
+// 	case reflect.Bool:
+// 		e.bool(v.Bool())
 
-	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
-		switch v.Type().Kind() {
-		case reflect.Int8:
-			e.int8(int8(v.Int()))
-		case reflect.Int16:
-			e.int16(int16(v.Int()))
-		case reflect.Int32:
-			e.int32(int32(v.Int()))
-		case reflect.Int64:
-			e.int64(v.Int())
-		}
+// 	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
+// 		switch v.Type().Kind() {
+// 		case reflect.Int8:
+// 			e.int8(int8(v.Int()))
+// 		case reflect.Int16:
+// 			e.int16(int16(v.Int()))
+// 		case reflect.Int32:
+// 			e.int32(int32(v.Int()))
+// 		case reflect.Int64:
+// 			e.int64(v.Int())
+// 		}
 
-	case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64, reflect.Uintptr:
-		switch v.Type().Kind() {
-		case reflect.Uint8:
-			e.uint8(uint8(v.Uint()))
-		case reflect.Uint16:
-			e.uint16(uint16(v.Uint()))
-		case reflect.Uint32:
-			e.uint32(uint32(v.Uint()))
-		case reflect.Uint64:
-			e.uint64(v.Uint())
-		}
+// 	case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64, reflect.Uintptr:
+// 		switch v.Type().Kind() {
+// 		case reflect.Uint8:
+// 			e.uint8(uint8(v.Uint()))
+// 		case reflect.Uint16:
+// 			e.uint16(uint16(v.Uint()))
+// 		case reflect.Uint32:
+// 			e.uint32(uint32(v.Uint()))
+// 		case reflect.Uint64:
+// 			e.uint64(v.Uint())
+// 		}
 
-	case reflect.Float32, reflect.Float64:
-		switch v.Type().Kind() {
-		case reflect.Float32:
-			e.uint32(math.Float32bits(float32(v.Float())))
-		case reflect.Float64:
-			e.uint64(math.Float64bits(v.Float()))
-		}
+// 	case reflect.Float32, reflect.Float64:
+// 		switch v.Type().Kind() {
+// 		case reflect.Float32:
+// 			e.uint32(math.Float32bits(float32(v.Float())))
+// 		case reflect.Float64:
+// 			e.uint64(math.Float64bits(v.Float()))
+// 		}
 
-	case reflect.Complex64, reflect.Complex128:
-		switch v.Type().Kind() {
-		case reflect.Complex64:
-			x := v.Complex()
-			e.uint32(math.Float32bits(float32(real(x))))
-			e.uint32(math.Float32bits(float32(imag(x))))
-		case reflect.Complex128:
-			x := v.Complex()
-			e.uint64(math.Float64bits(real(x)))
-			e.uint64(math.Float64bits(imag(x)))
-		}
-	}
-}
+// 	case reflect.Complex64, reflect.Complex128:
+// 		switch v.Type().Kind() {
+// 		case reflect.Complex64:
+// 			x := v.Complex()
+// 			e.uint32(math.Float32bits(float32(real(x))))
+// 			e.uint32(math.Float32bits(float32(imag(x))))
+// 		case reflect.Complex128:
+// 			x := v.Complex()
+// 			e.uint64(math.Float64bits(real(x)))
+// 			e.uint64(math.Float64bits(imag(x)))
+// 		}
+// 	}
+// }
 
-func (d *decoder) skip(v reflect.Value) {
-	d.offset += dataSize(v)
-}
+// func (d *decoder) skip(v reflect.Value) {
+// 	d.offset += dataSize(v)
+// }
 
-func (e *encoder) skip(v reflect.Value) {
-	n := dataSize(v)
-	zero := e.buf[e.offset : e.offset+n]
-	for i := range zero {
-		zero[i] = 0
-	}
-	e.offset += n
-}
+// func (e *encoder) skip(v reflect.Value) {
+// 	n := dataSize(v)
+// 	zero := e.buf[e.offset : e.offset+n]
+// 	for i := range zero {
+// 		zero[i] = 0
+// 	}
+// 	e.offset += n
+// }
 
 // intDataSize returns the size of the data required to represent the data when encoded.
 // It returns zero if the type cannot be implemented by the fast path in Read or Write.
