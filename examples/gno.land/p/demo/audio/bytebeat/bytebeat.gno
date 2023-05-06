@@ -4,8 +4,8 @@ import (
 	"io"
 	"math"
 
-	"github.com/gnolang/gno/examples/gno.land/p/demo/audio/biquad"
-	"github.com/gnolang/gno/examples/gno.land/p/demo/audio/wav"
+	"gno.land/p/demo/audio/biquad"
+	"gno.land/p/demo/audio/wav"
 )
 
 func ByteBeat(w io.Writer, seconds uint32, sampleRate uint32, bytebeat_func func(t int) int) (err error) {
@@ -39,7 +39,7 @@ func ByteBeat(w io.Writer, seconds uint32, sampleRate uint32, bytebeat_func func
 	for i := uint32(0); i < numSamples; i++ {
 		samples[i].Values[0] = int(math.Round(hpf.Update(float64(samples[i].Values[0]))))
 	}
-	//lowpass
+	// lowpass
 	lpf := biquad.New(float64(sampleRate)*0.25, float64(sampleRate), 0.707, 0, "lowpass")
 	for i := uint32(0); i < numSamples; i++ {
 		samples[i].Values[0] = int(math.Round(lpf.Update(float64(samples[i].Values[0]))))

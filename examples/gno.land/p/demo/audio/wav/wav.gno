@@ -4,7 +4,7 @@ import (
 	"io"
 	"math"
 
-	"github.com/gnolang/gno/examples/gno.land/p/demo/audio/riff"
+	"gno.land/p/demo/audio/riff"
 )
 
 const (

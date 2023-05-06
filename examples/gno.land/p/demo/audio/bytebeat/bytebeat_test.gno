@@ -3,6 +3,7 @@ package bytebeat
 import (
 	"bufio"
 	"bytes"
+	"encoding/base64"
 	"testing"
 )
 
@@ -20,9 +21,9 @@ func TestByteBeat(tt *testing.T) {
 		tt.Fatalf("%s", err)
 	}
 
-	// TRY AT HOME: write bytes to file
-	// f, _ := os.Create("test.wav")
-	// f.Write(b.Bytes())
-	// f.Close()
-	// you can now play the bytebeat "test.wav"
+	// TRY AT HOME: write bytes to base64
+	// println(base64.StdEncoding.EncodeToString(b.Bytes()))
+	// save to bytes.base64
+	// using sox:
+	// base64 -d bytes.base64 | play
 }

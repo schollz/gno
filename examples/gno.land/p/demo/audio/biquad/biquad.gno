@@ -11,9 +11,11 @@ func New(fc float64, fs float64, q float64, db float64, filter_type string) (f *
 	w0 := 2 * 3.1415926535897932384626 * (fc / fs)
 	cosW := math.Cos(w0)
 	sinW := math.Sin(w0)
-	A := math.Pow(10, (db / 40))
+	A := 1.0 // db = 0
+	// A := math.Pow(10, (db / 40))
 	alpha := sinW / (2 * q)
-	beta := math.Pow(A, 0.5) / q
+	beta := 1 // db = 0
+	// beta := A ^ 0.5/q
 	_ = beta
 	b0 := (1 - cosW) / 2
 	b1 := 1 - cosW
