@@ -46,7 +46,7 @@ lint:
 	golangci-lint run --config .github/golangci.yml
 
 
-runall:
+server:
 	-pkill -f 'build/gnoland'
 	-pkill -f 'build/gnoweb'
 	# gno test --verbose examples/gno.land/p/demo/audio
@@ -57,12 +57,20 @@ runall:
 	sleep 2
 
 p:
-	# -gnokey maketx addpkg --pkgpath "gno.land/p/demo/audio/biquad" --pkgdir "examples/gno.land/p/demo/audio/biquad" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
-	# -gnokey maketx addpkg --pkgpath "gno.land/p/demo/audio/riff" --pkgdir "examples/gno.land/p/demo/audio/riff" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
-	# -gnokey maketx addpkg --pkgpath "gno.land/p/demo/audio/wav" --pkgdir "examples/gno.land/p/demo/audio/wav" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
-	-gnokey maketx addpkg --pkgpath "gno.land/p/demo/audio/bytebeat" --pkgdir "examples/gno.land/p/demo/audio/bytebeat" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
+	-gnokey maketx addpkg --pkgpath "gno.land/p/demo/audio/biquad" --pkgdir "examples/gno.land/p/demo/audio/biquad" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
+	-gnokey maketx addpkg --pkgpath "gno.land/p/demo/audio/riff" --pkgdir "examples/gno.land/p/demo/audio/riff" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
+	-gnokey maketx addpkg --pkgpath "gno.land/p/demo/audio/wav" --pkgdir "examples/gno.land/p/demo/audio/wav" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
+	-gnokey maketx addpkg --pkgpath "gno.land/p/demo/audio/bytebeat" --pkgdir "examples/gno.land/p/demo/audio/bytebeat" --deposit 1000000000ugnot --gas-fee 10000000ugnot --gas-wanted 20000000 --broadcast --chainid dev --remote localhost:26657 zkey
 
 r:
 	gnokey maketx addpkg --pkgpath "gno.land/r/demo/bytebeat" --pkgdir "examples/gno.land/r/demo/bytebeat" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 zkey
 
 
+
+tests:
+	gno test --verbose examples/gno.land/p/demo/audio/ 2>&1
+	go run ./gnovm/cmd/gno precompile --verbose ./examples/gno.land/p/demo/audio
+	go run ./gnovm/cmd/gno build --verbose ./examples/gno.land/p/demo/audio
+	go run ./gnovm/cmd/gno precompile --verbose ./examples/gno.land/r/demo/bytebeat
+	go run ./gnovm/cmd/gno build --verbose ./examples/gno.land/r/demo/bytebeat
+	
