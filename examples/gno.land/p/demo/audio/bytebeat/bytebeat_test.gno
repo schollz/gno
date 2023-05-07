@@ -14,7 +14,7 @@ func TestByteBeat(tt *testing.T) {
 	}
 
 	// TRY AT HOME: write bytes to base64
-	// println(base64.StdEncoding.EncodeToString(b.Bytes()))
+	println(base64.StdEncoding.EncodeToString(b.Bytes()))
 	// save to bytes.base64
 	// using sox:
 	// base64 -d bytes.base64 | play
