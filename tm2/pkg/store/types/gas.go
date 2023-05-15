@@ -94,6 +94,10 @@ func (g *basicGasMeter) ConsumeGas(amount Gas, descriptor string) {
 	// corollary, call (Did)ConsumeGas after consumption.
 	g.consumed = consumed
 	if consumed > g.limit {
+		print("g.consumed",g.consumed)
+		print("amount",amount)
+		print("g.limit",g.limit)
+		print("PANIC PANIC PANIC2")
 		panic(OutOfGasException{descriptor})
 	}
 }
