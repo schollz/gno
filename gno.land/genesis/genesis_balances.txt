@@ -63,6 +63,7 @@ g1644qje5rx6jsdqfkzmgnfcegx4dxkjh6rwqd69=10000000000ugnot # @MadafakAvril14th #9
 g1mzjajymvmtksdwh3wkrndwj6zls2awl9q83dh6=10000000000ugnot # @Vanlee #89
 g1qpymzwx4l4cy6cerdyajp9ksvjsf20rk5y9rtt=10000000000ugnot # @zooma
 g1qyktfeacrhcj3n3ckk5gc3neasgqvf2vwqgmtf=10000000000ugnot # @zkey
+g1d3lk3saqxvm53jlm8e0hsf0ua624699h2q0edp=10000000000ugnot # @zzkey1
 
 # NOTE: Thanks guys, no more keys through genesis this way though:
 # we now have a faucet.
