@@ -14,16 +14,17 @@ func TestAmulet(t *testing.T) {
 	haiku := `a zoo a zoo a
 zoo a zoo a zoo a zoo 
 a zoo a zoo a`
+	haiku = `a zoo a zoo a\nzoo a zoo a zoo a zoo \na zoo a zoo a\n`
 	if err := isHaiku(haiku); err != nil {
-		t.Errorf("%s", err)
+		t.Errorf("not haiku: %s", err.Error())
 	}
-	if calculateRarity("88aa888aaaa8a8a8a8a88a8a") != 3 {
+	if calculateRarity("88aa888aaaa8a8a8a8a88a8a") != "common" {
 		t.Errorf("rarity calculations errored")
 	}
 	addr1 := testutils.TestAddress("addr1")
 	std.TestSetOrigCaller(addr1)
 	if err := Mint(haiku); err != "" {
-		t.Errorf("%s", err)
+		t.Errorf("could not mint: %s", err)
 	}
 	if err := Mint("not a haiku"); err == "" {
 		t.Errorf("not a haiku")
@@ -32,7 +33,6 @@ a zoo a zoo a`
 		t.Errorf("token already exists")
 	}
 
-	for _, ha := range listAllNFTs() {
-		println(ha.TokenID, ha.Text, ha.Rarity)
-	}
+	println(Render(""))
+	println(Render("ae60a376a9be58296c4e31db658f3ea031115553169964f9c5b54f23269704ae"))
 }

@@ -17,8 +17,9 @@ import (
 
 // globals
 var (
+	pageURL              = "/r/demo/art/haiku"
 	nonAlphanumericRegex = regexp.MustCompile(`[^a-zA-Z ]+`)
-	wordsWithSyllables   map[string]int
+	wordsWithSyllables   avl.Tree
 	nftName              = "TextNFT"
 	nftSymbol            = "NFTEXT"
 	nfts                 *grc721.BasicNFT
@@ -27,20 +28,21 @@ var (
 
 // errors
 var (
-	ErrNotEnglish          error = errors.New("non-english word detected")
-	ErrIncorrectLineNumber error = errors.New("incorrect number of lines")
-	ErrIncorrectSyllables  error = errors.New("incorrect number of syllables")
+	ErrNotEnglish          error  = errors.New("non-english word detected")
+	ErrIncorrectLineNumber error  = errors.New("incorrect number of lines")
+	ErrIncorrectSyllables  error  = errors.New("incorrect number of syllables")
+	StatusNotFound         string = "404"
 )
 
 func init() {
 	nfts = grc721.NewBasicNFT(nftName, nftSymbol)
 	nftDB = avl.Tree{}
 	// load dicitionary of words
-	wordsWithSyllables = make(map[string]int)
+	wordsWithSyllables = avl.Tree{}
 	for _, line := range strings.Split(rawwordlist, "\n") {
 		line = strings.TrimSpace(line)
 		word := strings.Replace(line, ";", "", -1)
-		wordsWithSyllables[word] = strings.Count(line, ";") + 1
+		wordsWithSyllables.Set(word, strings.Count(line, ";")+1)
 	}
 }
 
@@ -63,12 +65,28 @@ func sanitizeString(unclean string) string {
 // and return an error if a non-english word is detected
 func countSyllables(line string) (numSyllables int, err error) {
 	for _, word := range strings.Fields(line) {
-		v, ok := wordsWithSyllables[word]
+		v, ok := wordsWithSyllables.Get(word)
 		if !ok {
-			err = errors.New(ufmt.Sprintf("'%s' is not an english word", word))
-			return
+			v, ok = wordsWithSyllables.Get(word + "s")
+			if !ok {
+				v, ok = wordsWithSyllables.Get(strings.TrimSuffix(word, "s"))
+				if !ok {
+					v, ok = wordsWithSyllables.Get(strings.TrimSuffix(word, "ed"))
+					if !ok {
+						err = errors.New(ufmt.Sprintf("'%s' is not an english word", word))
+						return
+					} else {
+						numSyllables += v.(int)
+					}
+				} else {
+					numSyllables += v.(int)
+				}
+			} else {
+				numSyllables += v.(int)
+			}
+		} else {
+			numSyllables += v.(int)
 		}
-		numSyllables += v
 	}
 	return
 }
@@ -77,36 +95,36 @@ func countSyllables(line string) (numSyllables int, err error) {
 // three lines and syllables of each line is
 // 5-7-5. the text is assumed to be sanitized.
 func isHaiku(text string) (err error) {
-	text = strings.TrimSpace(text)
-	lines := strings.Split(text, "\n")
+	text = strings.Replace(text, `\n`, "\n", -1)
+	lines := strings.Split(strings.TrimSpace(text), "\n")
 	if len(lines) != 3 {
-		return ErrIncorrectLineNumber
+		return errors.New(ufmt.Sprintf("incorrect number of lines: %d != 3", len(lines)))
 	}
 	v, err := countSyllables(lines[0])
 	if err != nil {
 		return
 	}
 	if v != 5 {
-		return ErrIncorrectSyllables
+		return errors.New(ufmt.Sprintf("incorrect number of syllables: %d != 5 for '%s'", v, lines[0]))
 	}
 	v, err = countSyllables(lines[1])
 	if err != nil {
 		return
 	}
 	if v != 7 {
-		return ErrIncorrectSyllables
+		return errors.New(ufmt.Sprintf("incorrect number of syllables: %d != 7 for '%s'", v, lines[1]))
 	}
 	v, err = countSyllables(lines[2])
 	if err != nil {
 		return
 	}
 	if v != 5 {
-		return ErrIncorrectSyllables
+		return errors.New(ufmt.Sprintf("incorrect number of syllables: %d != 5 for '%s'", v, lines[2]))
 	}
 	return
 }
 
-// The number of sequential 8s in the hash determines the rarity of the amulet:
+// The number of sequential 8s in the hash determines the rarity of the haiku:
 //
 //	8888: common
 //	88888: uncommon
@@ -117,8 +135,8 @@ func isHaiku(text string) (err error) {
 //	8888888888+: ???
 //
 // https://archive.is/IADSf
-// https://twitter.com/WildAmulet/status/1374506730575437828
-func calculateRarity(s string) int {
+// arbitrary/artificial scarcity
+func calculateRarity(s string) string {
 	res := 0
 	resBest := 0
 	for _, v := range s {
@@ -131,30 +149,60 @@ func calculateRarity(s string) int {
 			res = 0
 		}
 	}
-	return resBest
-}
-
-func listAllNFTs() (ha []*haikuAmulet) {
-	ha = make([]*haikuAmulet, nftDB.Size())
-	i := 0
-	nftDB.Iterate("", "", func(key string, value interface{}) bool {
-		ha[i] = value.(*haikuAmulet)
-		i++
-		return false
-	})
-	return
+	if resBest <= 4 {
+		return "common"
+	} else if resBest == 5 {
+		return "uncommon"
+	} else if resBest == 6 {
+		return "rare"
+	} else if resBest == 7 {
+		return "epic"
+	} else if resBest == 8 {
+		return "legendary"
+	} else {
+		return "mythic"
+	}
 }
 
 type haikuAmulet struct {
 	Text      string
 	TokenID   string
-	Rarity    int
+	Rarity    string
 	CreatedAt time.Time
+	CreatedBy std.Address
+}
+
+func (ha *haikuAmulet) String() string {
+	tokenid := ha.TokenID
+	for _, s := range []string{"888888888", "88888888", "8888888", "888888", "88888", "8888", "888", "88", "8"} {
+		if strings.Contains(tokenid, s) {
+			tokenid = strings.Replace(tokenid, s, "***"+s+"***", 1)
+			break
+		}
+	}
+	render := ufmt.Sprintf("### [%s](%s:%s)\n\n", tokenid, pageURL, ha.TokenID)
+	render += "```\n" + ha.Text + "\n```\n\n"
+	render += ufmt.Sprintf("[rarity](%s:rarity): **", pageURL) + ha.Rarity + "**\n\n"
+	render += "*created on " + ha.CreatedAt.Format(time.RFC1123) + " "
+	render += "by " + ha.CreatedBy.String() + ", "
+	owner, err := nfts.OwnerOf(grc721.TokenID(ha.TokenID))
+	if err == nil {
+		render += "collected by " + owner.String()
+	}
+	render += "*"
+	render += "\n\n"
+	return render
 }
 
 func Mint(text string) string {
+	// basic sanitiziation
+	text = strings.Replace(text, `\n`, "\n", -1)
+	text = strings.TrimSpace(text)
+	// under-the-hood sanitation
 	cleanedText := sanitizeString(text)
+	println(cleanedText)
 	if err := isHaiku(cleanedText); err != nil {
+		println(cleanedText)
 		return err.Error()
 	}
 
@@ -168,6 +216,7 @@ func Mint(text string) string {
 		TokenID:   hashHex,
 		Rarity:    rarity,
 		CreatedAt: time.Now(),
+		CreatedBy: std.GetOrigCaller(),
 	}
 
 	err := nfts.Mint(std.GetOrigCaller(), grc721.TokenID(ha.TokenID))
@@ -179,6 +228,43 @@ func Mint(text string) string {
 	return ""
 }
 
+func renderAll() string {
+	render := "# haikus\n\n"
+	nftDB.Iterate("", "", func(key string, value interface{}) bool {
+		ha := value.(*haikuAmulet)
+		render += ha.String()
+		return false
+	})
+	return render
+}
+
+func renderSingle(tokenid string) string {
+	value, found := nftDB.Get(tokenid)
+	if !found {
+		return StatusNotFound
+	}
+	ha := value.(*haikuAmulet)
+	return ha.String()
+}
+
 func Render(path string) string {
-	return path
+	if path == "" {
+		return renderAll()
+	} else if path == "rarity" {
+		return `## about "rarity"
+
+The number of sequential 8s in the SHA-256 hash of the sanitized text determines the rarity of the haiku:
+
+	8888: common
+	88888: uncommon
+	888888: rare
+	8888888: epic
+	88888888: legendary
+	888888888+: mythic
+
+Please note that a haiku should be judged by its total effect and not simply by its adherence to this arbitrary definition of rarity.
+	`
+	} else {
+		return renderSingle(path)
+	}
 }
