@@ -34,5 +34,10 @@ a zoo a zoo a`
 	}
 
 	println(Render(""))
+	println("\n\n~~~~~~~~~~~\n\n")
 	println(Render("ae60a376a9be58296c4e31db658f3ea031115553169964f9c5b54f23269704ae"))
+	println("\n\n~~~~~~~~~~~\n\n")
+	println(Render("createdby:" + addr1.String()))
+	println("\n\n~~~~~~~~~~~\n\n")
+	println(Render("collectedby:" + addr1.String()))
 }

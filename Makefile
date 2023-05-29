@@ -46,6 +46,9 @@ lint:
 	golangci-lint run --config .github/golangci.yml
 
 
+rebuild:
+	make install
+	cd gno.land && make build 
 
 server:
 	-pkill -f 'build/gnoland'
@@ -57,21 +60,16 @@ server:
 	cd gno.land && ./build/gnoweb -bind 0.0.0.0:8888 & 
 	sleep 3
 
-p:
-	cat password | gnokey maketx addpkg --pkgpath "gno.land/p/demo/microblog" --pkgdir "examples/gno.land/p/demo/microblog" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 --insecure-password-stdin=true zzkey1
-
 r:
-	cat password | gnokey maketx addpkg --pkgpath "gno.land/r/demo/microblog" --pkgdir "examples/gno.land/r/demo/microblog" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 --insecure-password-stdin=true zzkey1
+	cat password | gnokey maketx addpkg --pkgpath "gno.land/r/demo/art/haiku" --pkgdir "examples/gno.land/r/demo/art/haiku" --deposit 100000000ugnot --gas-fee 2000000000ugnot --gas-wanted 10000000000 --broadcast --chainid dev --remote localhost:26657 --insecure-password-stdin=true zzkey1
+	sleep 2
 
-microblog: p r 
-	cat password | gnokey maketx call --pkgpath "gno.land/r/demo/microblog" --func "NewPost" --args "hello, world" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 -insecure-password-stdin=true zzkey1
-	cat password | gnokey maketx call --pkgpath "gno.land/r/demo/microblog" --func "NewPost" --args "hi, universe" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 -insecure-password-stdin=true zzkey2
-	cat password | gnokey maketx call --pkgpath "gno.land/r/demo/users" --func "Register" --args "" --args "schollz" --args "https://schollz.com" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 --send "200000000ugnot" -insecure-password-stdin=true zzkey1
+haiku:
+	# -cat password | gnokey maketx call --pkgpath "gno.land/r/demo/art/haiku" --func "Mint" --args "a zoo a zoo a\nzoo a zoo a zoo a zoo \na zoo a zoo zoo\n" --gas-fee "1000000ugnot" --gas-wanted "8000000" --broadcast --chainid dev --remote localhost:26657  --insecure-password-stdin=true zzkey1
+	# -cat password | gnokey maketx call --pkgpath "gno.land/r/demo/art/haiku" --func "Mint" --args "a zoo a zoo a\nzoo a zoo a zoo a zoo \na zoo a zoo a\n" --gas-fee "1000000ugnot" --gas-wanted "8000000" --broadcast --chainid dev --remote localhost:26657  --insecure-password-stdin=true zzkey2
+	-cat password | gnokey maketx call --pkgpath "gno.land/r/demo/art/haiku" --func "Mint" --args "Knock over a plant,\ncat's innocent eyes proclaim,\n'Nature needed that!'" --gas-fee "1000000ugnot" --gas-wanted "8000000" --broadcast --chainid dev --remote localhost:26657  --insecure-password-stdin=true zzkey1
+	-cat password | gnokey maketx call --pkgpath "gno.land/r/demo/art/haiku" --func "Mint" --args "Box arrives, cat's joy.\nMore interested in box,\nThan the gift inside." --gas-fee "1000000ugnot" --gas-wanted "8000000" --broadcast --chainid dev --remote localhost:26657  --insecure-password-stdin=true zzkey1
+	-cat password | gnokey maketx call --pkgpath "gno.land/r/demo/art/haiku" --func "Mint" --args "Cat knocked off my mug.\nSpilled coffee on my laptop.\nFeline tech support." --gas-fee "1000000ugnot" --gas-wanted "8000000" --broadcast --chainid dev --remote localhost:26657  --insecure-password-stdin=true zzkey2
 
-
-
-microblogtest:
-	gno test --verbose examples/gno.land/r/demo/microblog/ 2>&1
-	
-
-all: server p r
+rhaiku: r haiku
+	-cat password | gnokey maketx call --pkgpath "gno.land/r/demo/users" --func "Register" --args "" --args "schollz" --args "https://schollz.com" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 --send "200000000ugnot" -insecure-password-stdin=true zzkey1

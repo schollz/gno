@@ -185,10 +185,10 @@ func (ha *haikuAmulet) String() string {
 	render += "```\n" + ha.Text + "\n```\n\n"
 	render += ufmt.Sprintf("[rarity](%s:rarity): **", pageURL) + ha.Rarity + "**\n\n"
 	render += "*created on " + ha.CreatedAt.Format(time.RFC1123) + " "
-	render += "by " + renderUserAddress(ha.CreatedBy) + ", "
+	render += "by " + renderUserAddress1(ha.CreatedBy, "createdby") + ", "
 	owner, err := nfts.OwnerOf(grc721.TokenID(ha.TokenID))
 	if err == nil {
-		render += "collected by " + renderUserAddress(owner)
+		render += "collected by " + renderUserAddress1(owner, "collectedby")
 	}
 	render += "*"
 	render += "\n\n"
@@ -229,9 +229,16 @@ func Mint(text string) string {
 	return ""
 }
 
-func renderUserAddress(addr std.Address) string {
+func renderUserAddress1(addr std.Address, prefix string) string {
 	if u := users.GetUserByAddress(addr); u != nil {
-		return ufmt.Sprintf("[%s](/r/demo/users:%s)", u.Name(), u.Name())
+		return ufmt.Sprintf("[%s](%s:%s:%s)", u.Name(), pageURL, prefix, addr.String())
+	}
+	return ufmt.Sprintf("[%s](%s:%s:%s)", addr.String(), pageURL, prefix, addr.String())
+}
+
+func renderUserAddress2(addr std.Address) string {
+	if u := users.GetUserByAddress(addr); u != nil {
+		return ufmt.Sprintf("[%s](%s:%s)", u.Name(), "/r/demo/users", addr.String())
 	}
 	return addr.String()
 }
@@ -255,6 +262,40 @@ func renderSingle(tokenid string) string {
 	return ha.String()
 }
 
+func renderCreatedBy(userid string) string {
+	render := ""
+	nftDB.Iterate("", "", func(key string, value interface{}) bool {
+		ha := value.(*haikuAmulet)
+		if ha.CreatedBy.String() == userid {
+			if render == "" {
+				render = "# " + renderUserAddress2(ha.CreatedBy) + " creations\n\n"
+			}
+			render += ha.String()
+		}
+		return false
+	})
+	return render
+}
+
+func renderCollectedBy(userid string) string {
+	render := ""
+	nftDB.Iterate("", "", func(key string, value interface{}) bool {
+		ha := value.(*haikuAmulet)
+		owner, err := nfts.OwnerOf(grc721.TokenID(ha.TokenID))
+		if err != nil || owner == nil {
+			return false
+		}
+		if owner.String() == userid {
+			if render == "" {
+				render = "# " + renderUserAddress2(owner) + " collection\n\n"
+			}
+			render += ha.String()
+		}
+		return false
+	})
+	return render
+}
+
 func Render(path string) string {
 	if path == "" {
 		return renderAll()
@@ -272,6 +313,10 @@ The number of sequential 8s in the SHA-256 hash of the sanitized text determines
 
 Please note that a haiku should be judged by its total effect and not simply by its adherence to this arbitrary definition of rarity.
 	`
+	} else if strings.HasPrefix(path, "createdby:") {
+		return renderCreatedBy(strings.TrimPrefix(path, "createdby:"))
+	} else if strings.HasPrefix(path, "collectedby:") {
+		return renderCollectedBy(strings.TrimPrefix(path, "collectedby:"))
 	} else {
 		return renderSingle(path)
 	}
