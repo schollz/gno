@@ -13,6 +13,7 @@ import (
 	"gno.land/p/demo/avl"
 	"gno.land/p/demo/grc/grc721"
 	"gno.land/p/demo/ufmt"
+	"gno.land/r/demo/users"
 )
 
 // globals
@@ -184,10 +185,10 @@ func (ha *haikuAmulet) String() string {
 	render += "```\n" + ha.Text + "\n```\n\n"
 	render += ufmt.Sprintf("[rarity](%s:rarity): **", pageURL) + ha.Rarity + "**\n\n"
 	render += "*created on " + ha.CreatedAt.Format(time.RFC1123) + " "
-	render += "by " + ha.CreatedBy.String() + ", "
+	render += "by " + renderUserAddress(ha.CreatedBy) + ", "
 	owner, err := nfts.OwnerOf(grc721.TokenID(ha.TokenID))
 	if err == nil {
-		render += "collected by " + owner.String()
+		render += "collected by " + renderUserAddress(owner)
 	}
 	render += "*"
 	render += "\n\n"
@@ -226,6 +227,13 @@ func Mint(text string) string {
 
 	nftDB.Set(ha.TokenID, &ha)
 	return ""
+}
+
+func renderUserAddress(addr std.Address) string {
+	if u := users.GetUserByAddress(addr); u != nil {
+		return ufmt.Sprintf("[%s](/r/demo/users:%s)", u.Name(), u.Name())
+	}
+	return addr.String()
 }
 
 func renderAll() string {
