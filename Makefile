@@ -73,3 +73,9 @@ haiku:
 
 rhaiku: r haiku
 	-cat password | gnokey maketx call --pkgpath "gno.land/r/demo/users" --func "Register" --args "" --args "schollz" --args "https://schollz.com" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 --send "200000000ugnot" -insecure-password-stdin=true zzkey1
+
+rhaiku2: r 
+	-cat password | gnokey maketx call --pkgpath "gno.land/r/demo/users" --func "Register" --args "" --args "schollz" --args "https://schollz.com" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 --send "200000000ugnot" -insecure-password-stdin=true zzkey1
+	-cat password | gnokey maketx call --pkgpath "gno.land/r/demo/users" --func "Register" --args "" --args "schollz2" --args "https://schollz.com" --gas-fee "1000000ugnot" --gas-wanted "2000000" --broadcast --chainid dev --remote localhost:26657 --send "200000000ugnot" -insecure-password-stdin=true zzkey2
+	-cat password | gnokey maketx call --pkgpath "gno.land/r/demo/art/haiku" --func "Mint" --args "a zoo a zoo a\nzoo a zoo a zoo a zoo \na zoo a zoo zoo\n" --gas-fee "1000000ugnot" --gas-wanted "8000000" --broadcast --chainid dev --remote localhost:26657  --insecure-password-stdin=true zzkey1
+	-cat password | gnokey maketx call --pkgpath "gno.land/r/demo/art/haiku" --func "Transfer" --args "g1ylem8jpttaa2nkt2gt4fu50y6zmhjjmdsmd0pc" --args "a616c68c758ad1be34836c1b938972a588d8520cbffa54eb2fdbad9eaf907817" --gas-fee "1000000ugnot" --gas-wanted "8000000" --broadcast --chainid dev --remote localhost:26657  --insecure-password-stdin=true zzkey1

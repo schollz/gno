@@ -98,7 +98,7 @@ func DefaultRPCConfig() *RPCConfig {
 		Unsafe:             false,
 		MaxOpenConnections: 900,
 
-		TimeoutBroadcastTxCommit: 30 * time.Second,
+		TimeoutBroadcastTxCommit: 120 * time.Second,
 
 		MaxBodyBytes:   int64(1000000), // 1MB
 		MaxHeaderBytes: 1 << 20,        // same as the net/http default

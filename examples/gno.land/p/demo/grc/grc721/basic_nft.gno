@@ -282,8 +282,6 @@ func (s *BasicNFT) transfer(from, to std.Address, tid TokenID) error {
 
 // Helper for Mint() and SafeMint()
 func (s *BasicNFT) mint(to std.Address, tid TokenID) error {
-	println(to)
-	println(s.exists(tid))
 	if err := isValidAddress(to); err != nil {
 		return err
 	}

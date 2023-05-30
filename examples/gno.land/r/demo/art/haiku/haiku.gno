@@ -16,15 +16,20 @@ import (
 	"gno.land/r/demo/users"
 )
 
-// globals
 var (
-	pageURL              = "/r/demo/art/haiku"
+	// URL for the realm
+	pageURL = "/r/demo/art/haiku"
+	// regex for sanitizer
 	nonAlphanumericRegex = regexp.MustCompile(`[^a-zA-Z ]+`)
-	wordsWithSyllables   avl.Tree
-	nftName              = "TextNFT"
-	nftSymbol            = "NFTEXT"
-	nfts                 *grc721.BasicNFT
-	nftDB                avl.Tree // tokenID (string) -> haikuAmulet
+	// definitions for the NFT
+	nftName   = "TextNFT"
+	nftSymbol = "NFTEXT"
+	// storage for the fnts
+	nfts *grc721.BasicNFT
+	// storage for the syllable dictionary
+	wordsWithSyllables avl.Tree
+	// storage for the haikus
+	nftDB avl.Tree // tokenID (string) -> haikuAmulet
 )
 
 // errors
@@ -35,6 +40,8 @@ var (
 	StatusNotFound         string = "404"
 )
 
+// init initializes the NFT, the database, and the dictionary
+// of syllables
 func init() {
 	nfts = grc721.NewBasicNFT(nftName, nftSymbol)
 	nftDB = avl.Tree{}
@@ -125,6 +132,7 @@ func isHaiku(text string) (err error) {
 	return
 }
 
+// calculateRarity creates an arbitrary definition of scarcity.
 // The number of sequential 8s in the hash determines the rarity of the haiku:
 //
 //	8888: common
@@ -136,7 +144,6 @@ func isHaiku(text string) (err error) {
 //	8888888888+: ???
 //
 // https://archive.is/IADSf
-// arbitrary/artificial scarcity
 func calculateRarity(s string) string {
 	res := 0
 	resBest := 0
@@ -165,6 +172,7 @@ func calculateRarity(s string) string {
 	}
 }
 
+// haikuAmulet keeps track of the haiku and its metadata
 type haikuAmulet struct {
 	Text      string
 	TokenID   string
@@ -173,6 +181,7 @@ type haikuAmulet struct {
 	CreatedBy std.Address
 }
 
+// String renders the haiku to markdown
 func (ha *haikuAmulet) String() string {
 	tokenid := ha.TokenID
 	for _, s := range []string{"888888888", "88888888", "8888888", "888888", "88888", "8888", "888", "88", "8"} {
@@ -195,16 +204,51 @@ func (ha *haikuAmulet) String() string {
 	return render
 }
 
+// Transfer allows the caller to transfer a haiku they own
+// to a recipient.
+func Transfer(to std.Address, tokenid string) string {
+	caller := std.GetOrigCaller()
+	value, found := nftDB.Get(tokenid)
+	if !found {
+		return ufmt.Sprintf("error: token ID '%s' not found", tokenid)
+	}
+	ha := value.(*haikuAmulet)
+
+	// get the owner
+	owner, err := nfts.OwnerOf(grc721.TokenID(ha.TokenID))
+	if err != nil || owner == nil {
+		return ufmt.Sprintf("error: owner for ID '%s' not found", tokenid)
+	}
+
+	// raise error if the owner is not the caller
+	if caller != owner {
+		return ufmt.Sprintf("error: caller '%s' is not owner '%s'", caller, owner)
+	}
+
+	// throws if the to address is empty
+	if to == "" {
+		return ufmt.Sprintf("error: to address cannot be empty", caller, owner)
+	}
+
+	// do the transfer
+	nfts.TransferFrom(caller, to, grc721.TokenID(ha.TokenID))
+	return ufmt.Sprintf("transfered '%s' from '%s' to '%s'", tokenid, caller.String(), to.String())
+}
+
+// Mint creates a Haiku, if it passes the basic
+// criteria:
+//   - only english words (dictionary in wordlist.gno)
+//   - three lines
+//   - each line has 5, 7, and 5 syllables respectively
+//   - haiku is unique
 func Mint(text string) string {
 	// basic sanitiziation
 	text = strings.Replace(text, `\n`, "\n", -1)
 	text = strings.TrimSpace(text)
 	// under-the-hood sanitation
 	cleanedText := sanitizeString(text)
-	println(cleanedText)
 	if err := isHaiku(cleanedText); err != nil {
-		println(cleanedText)
-		return err.Error()
+		return "error: " + err.Error()
 	}
 
 	var buf bytes.Buffer
@@ -222,13 +266,15 @@ func Mint(text string) string {
 
 	err := nfts.Mint(std.GetOrigCaller(), grc721.TokenID(ha.TokenID))
 	if err != nil {
-		return err.Error()
+		return "error: " + err.Error()
 	}
 
 	nftDB.Set(ha.TokenID, &ha)
-	return ""
+	return ha.TokenID
 }
 
+// renderUserAddress1 will render a user address to point to the
+// haikus that they own.
 func renderUserAddress1(addr std.Address, prefix string) string {
 	if u := users.GetUserByAddress(addr); u != nil {
 		return ufmt.Sprintf("[%s](%s:%s:%s)", u.Name(), pageURL, prefix, addr.String())
@@ -236,6 +282,8 @@ func renderUserAddress1(addr std.Address, prefix string) string {
 	return ufmt.Sprintf("[%s](%s:%s:%s)", addr.String(), pageURL, prefix, addr.String())
 }
 
+// renderUserAddress2 will render a user address to point to the
+// user page generated from the users domain.
 func renderUserAddress2(addr std.Address) string {
 	if u := users.GetUserByAddress(addr); u != nil {
 		return ufmt.Sprintf("[%s](%s:%s)", u.Name(), "/r/demo/users", addr.String())
@@ -243,6 +291,7 @@ func renderUserAddress2(addr std.Address) string {
 	return addr.String()
 }
 
+// renderAll renders all of the haikus
 func renderAll() string {
 	render := "# haikus\n\n"
 	nftDB.Iterate("", "", func(key string, value interface{}) bool {
@@ -253,6 +302,7 @@ func renderAll() string {
 	return render
 }
 
+// renderSingle renders a single haiku
 func renderSingle(tokenid string) string {
 	value, found := nftDB.Get(tokenid)
 	if !found {
@@ -262,6 +312,7 @@ func renderSingle(tokenid string) string {
 	return ha.String()
 }
 
+// renderCreatedBy renders all the haikus created by a specific user.
 func renderCreatedBy(userid string) string {
 	render := ""
 	nftDB.Iterate("", "", func(key string, value interface{}) bool {
@@ -277,6 +328,7 @@ func renderCreatedBy(userid string) string {
 	return render
 }
 
+// renderCreatedBy renders all the haikus collected by a specific user.
 func renderCollectedBy(userid string) string {
 	render := ""
 	nftDB.Iterate("", "", func(key string, value interface{}) bool {
@@ -296,6 +348,12 @@ func renderCollectedBy(userid string) string {
 	return render
 }
 
+// Render is the main screen render
+// - / -> renders all
+// - /rarity -> renders rarity information
+// - /createdby:userid -> renders all haikus created by a user
+// - /collectedby:userid -> renders all haikus collected by a user
+// - /tokenid -> renders a specific haiku
 func Render(path string) string {
 	if path == "" {
 		return renderAll()
