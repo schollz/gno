@@ -216,7 +216,7 @@ func Transfer(to std.Address, tokenid string) string {
 
 	// get the owner
 	owner, err := nfts.OwnerOf(grc721.TokenID(ha.TokenID))
-	if err != nil || owner == nil {
+	if err != nil {
 		return ufmt.Sprintf("error: owner for ID '%s' not found", tokenid)
 	}
 
@@ -334,7 +334,7 @@ func renderCollectedBy(userid string) string {
 	nftDB.Iterate("", "", func(key string, value interface{}) bool {
 		ha := value.(*haikuAmulet)
 		owner, err := nfts.OwnerOf(grc721.TokenID(ha.TokenID))
-		if err != nil || owner == nil {
+		if err != nil {
 			return false
 		}
 		if owner.String() == userid {
