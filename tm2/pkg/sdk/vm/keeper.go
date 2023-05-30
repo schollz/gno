@@ -18,7 +18,7 @@ import (
 )
 
 const (
-	maxAllocTx    = 500 * 1000 * 1000
+	maxAllocTx    = 25000 * 1000 * 1000
 	maxAllocQuery = 1500 * 1000 * 1000 // higher limit for queries
 )
 
@@ -174,7 +174,7 @@ func (vm *VMKeeper) AddPackage(ctx sdk.Context, msg MsgAddPackage) error {
 			Store:     store,
 			Alloc:     store.GetAllocator(),
 			Context:   msgCtx,
-			MaxCycles: 10 * 1000 * 1000, // 10M cycles // XXX
+			MaxCycles: 1000 * 1000 * 1000, // 1000M cycles // XXX
 		})
 	defer m2.Release()
 	m2.RunMemPackage(memPkg, true)

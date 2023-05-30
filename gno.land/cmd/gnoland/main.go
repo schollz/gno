@@ -183,10 +183,10 @@ func makeGenesisDoc(
 	gen.ConsensusParams = abci.ConsensusParams{
 		Block: &abci.BlockParams{
 			// TODO: update limits.
-			MaxTxBytes:   1000000,  // 1MB,
-			MaxDataBytes: 2000000,  // 2MB,
-			MaxGas:       10000000, // 10M gas
-			TimeIotaMS:   100,      // 100ms
+			MaxTxBytes:   10000000,     // 10MB,
+			MaxDataBytes: 20000000,     // 20MB,
+			MaxGas:       100000000000, // 100000M gas
+			TimeIotaMS:   100,          // 100ms
 		},
 	}
 	gen.Validators = []bft.GenesisValidator{
