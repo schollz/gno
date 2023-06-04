@@ -3,24527 +3,24524 @@
 // which is released into the public domain.
 package haiku
 
-var rawwordlist = `a
-u
-aa
-ab
-ad
-ae
-ag
-ah
-ai
-al
-am
-an
-ar
-as
-at
-aw
-ax
-ay
-ba
-be
-bi
-bo
-by
-da
-de
-do
-ed
-ef
-eh
-el
-em
-en
-er
-es
-et
-ex
-fa
-fe
-gi
-go
-ha
-he
-hi
-hm
-ho
-id
-if
-in
-is
-it
-jo
-ka
-ki
-la
-li
-lo
-ma
-me
-mi
-mm
-mo
-mu
-my
-na
-ne
-no
-nu
-od
-oe
-of
-oh
-oi
-ok
-om
-on
-op
-or
-os
-ow
-ox
-oy
-pa
-pe
-pi
-po
-qi
-re
-sh
-si
-so
-ta
-te
-ti
-to
-uh
-um
-un
-up
-us
-ut
-we
-wo
-xi
-xu
-ya
-ye
-yo
-za
-a;a
-a;back
-a;ban;don
-a;ban;don;ment
-a;ban;doned
-a;bat;ed
-a;bate
-a;bate;ment
-a;bet
-a;bi;ot;ic
-a;bid;ing
-a;bide
-a;bil;i;ty
-a;blaze
-a;ble
-a;bly
-a;board
-a;bode
-a;bol;ish
-a;bom;i;na;ble
-a;bom;i;na;tion
-a;bor;tion
-a;bort
-a;bound
-a;bout
-a;bove
-a;bra;sion
-a;bra;sive
-a;breast
-a;bridged
-a;broad
-a;bu;sive
-a;bun;dance
-a;bun;dant
-a;bun;dant;ly
-a;bus;er
-a;bus;ing
-a;buse
-a;bused
-a;but;ting
-a;by
-a;bys;mal
-a;byss
-a;ca;cia
-a;cad;e;my
-a;ce;tic
-a;cet;y;lene
-a;chiev;a;ble
-a;chiev;er
-a;chiev;ing
-a;chieve
-a;chieve;ment
-a;chieved
-a;cid;i;ty
-a;cid;ic
-a;corn
-a;cous;ti;cal
-a;cous;tic
-a;cous;tics
-a;cre
-a;cre;age
-a;crop;o;lis
-a;cross
-a;cryl;ic
-a;cu;i;ty
-a;cute
-a;cute;ly
-a;cy;clic
-a;da;gio
-a;dap;tive
-a;dap;tor
-a;dapt
-a;dapt;a;bil;i;ty
-a;dapt;a;ble
-a;dapt;er
-a;den;o;sine
-a;dieu
-a;do
-a;do;be
-a;dop;tion
-a;dop;tive
-a;dopt
-a;dopt;ed
-a;dopt;er
-a;dor;a;ble
-a;dore
-a;dored
-a;dorn
-a;dren;a;line
-a;drift
-a;dul;ter;y
-a;dult
-a;dult;hood
-a;far
-a;fi;cio;na;do
-a;field
-a;float
-a;foot
-a;fore;men;tioned
-a;fore;said
-a;fraid
-a;ga
-a;ga;ve
-a;gain
-a;gainst
-a;gape
-a;gar
-a;ged
-a;gee
-a;gen;cy
-a;gen;da
-a;gent
-a;gil;i;ty
-a;go
-a;grar;i;an
-a;gree
-a;gree;a;ble
-a;gree;ing
-a;gree;ment
-a;greed
-a;gron;o;my
-a;ha
-a;head
-a;hem
-a;hold
-a;hoy
-a;i
-a;is
-a;kin
-a;la
-a;larm
-a;las
-a;leph
-a;lert
-a;lert;ness
-a;lex;i;a
-a;li;as;es
-a;light
-a;lign
-a;lign;ment
-a;like
-a;line
-a;list
-a;live
-a;lo;ha
-a;loft
-a;lone
-a;long
-a;long;side
-a;loof
-a;loud
-a;lu;mi;na
-a;lu;mi;num
-a;lum;nus
-a;mal;gam
-a;mal;gam;a;tion
-a;mal;gam;at;ed
-a;maz;ing
-a;maz;ing;ly
-a;maze
-a;maze;ment
-a;mazed
-a;me;na;ble
-a;men
-a;men;i;ty
-a;mend
-a;mend;ment
-a;mends
-a;mi
-a;mi;a;ble
-a;mi;ga
-a;mi;go
-a;mi;no
-a;mid
-a;midst
-a;mie
-a;mine
-a;mir
-a;mis
-a;miss
-a;moe;ba
-a;mok
-a;mong
-a;mongst
-a;mor;phous
-a;mount
-a;mour
-a;mus;ing
-a;muse
-a;muse;ment
-a;mused
-a;myg;da;la
-a;nae;mi;a
-a;nal;o;gous
-a;nal;o;gy
-a;nal;y;sis
-a;nan;da
-a;nat;o;my
-a;nath;e;ma
-a;ne;mi;a
-a;nem;o;ne
-a;new
-a;ni
-a;nom;a;lous
-a;nom;a;ly
-a;non;y;mous
-a;non;y;mous;ly
-a;nus
-a;or;ta
-a;or;tic
-a;pa
-a;pache
-a;part
-a;part;heid
-a;part;ment
-a;pex
-a;pha;sia
-a;phid
-a;phis
-a;piece
-a;poc;a;lyp;tic
-a;poc;a;lypse
-a;pol;lo
-a;pol;o;get;ic
-a;pol;o;get;ics
-a;pol;o;gise
-a;pol;o;gize
-a;pol;o;gized
-a;pol;o;gy
-a;pos;tle
-a;pos;tro;phe
-a;poth;e;car;y
-a;pr
-a;pron
-a;quar;i;um
-a;quar;i;ums
-a;quat;ic
-a;quat;ics
-a;que;ous
-a;r
-a;re;na
-a;ri;a
-a;ris;en
-a;ris;ta
-a;ris;to;crat
-a;ris;to;crat;ic
-a;rise
-a;rith;me;tic
-a;ro;ma
-a;rose
-a;round
-a;rous;al
-a;rouse
-a;roused
-a;sep;tic
-a;shamed
-a;shore
-a;side
-a;skew
-a;sleep
-a;spher;i;cal
-a;stig;ma;tism
-a;strag;a;lus
-a;stray
-a;sy;lum
-a;sym;me;try
-a;sym;met;ri;cal
-a;sym;met;ric
-a;symp;to;mat;ic
-a;syn;chro;nous
-a;tax;i;a
-a;the;ism
-a;the;ist
-a;tom;ic
-a;tone;ment
-a;top
-a;tri;a
-a;tri;al
-a;tri;um
-a;tro;cious
-a;troc;i;ty
-a;typ;i;cal
-a;va
-a;vail
-a;vail;a;bil;i;ty
-a;vail;a;ble
-a;vast
-a;veng;er
-a;venge
-a;venged
-a;ver
-a;ver;sion
-a;verse
-a;vert
-a;vi;a;tion
-a;vi;a;tor
-a;vi;an
-a;vi;on;ics
-a;vi;so
-a;viar;y
-a;vion
-a;vo
-a;void
-a;void;a;ble
-a;void;ance
-a;wa
-a;wait
-a;wak;en
-a;wak;en;ing
-a;wake
-a;ward
-a;ware
-a;ware;ness
-a;wash
-a;way
-a;while
-a;woke
-a;wry
-a;zal;ea
-aard;vark
-ab;a
-ab;a;cus
-ab;a;lo;ne
-ab;ba
-ab;bey
-ab;bot
-ab;bre;vi;a;tion
-ab;bre;vi;at;ed
-ab;do;men
-ab;dom;i;nal
-ab;duc;tion
-ab;er;ra;tion
-ab;er;rant
-ab;i;gail
-ab;ject
-ab;la;tion
-ab;nor;mal
-ab;nor;mal;i;ty
-ab;nor;mal;ly
-ab;o
-ab;o;li;tion
-ab;o;rig;i;nal
-ab;rupt
-ab;rupt;ly
-ab;scess
-ab;sen;tee
-ab;sen;tee;ism
-ab;sence
-ab;sent
-ab;sinthe
-ab;so;lu;tion
-ab;so;lute
-ab;so;lute;ly
-ab;sorb
-ab;sorb;ance
-ab;sorb;ent
-ab;sorb;er
-ab;sorb;ing
-ab;sorbed
-ab;sorp;tion
-ab;stain
-ab;sti;nence
-ab;strac;tion
-ab;stract
-ab;stract;ed
-ab;surd
-ab;surd;i;ty
-abb
-abl
-abp
-abr
-ac;a;dem;i;a
-ac;a;dem;i;cal;ly
-ac;a;dem;ic
-ac;a;deme
-ac;cel;er;a;tion
-ac;cel;er;a;tor
-ac;cel;er;at;ed
-ac;cel;er;at;ing
-ac;cel;er;ate
-ac;cel;er;om;e;ter
-ac;cen;tu;ate
-ac;cent
-ac;cep;tor
-ac;cept
-ac;cept;a;bil;i;ty
-ac;cept;a;ble
-ac;cept;ance
-ac;cept;ed
-ac;ces;si;bil;i;ty
-ac;ces;si;ble
-ac;ces;sion
-ac;ces;so;ry
-ac;cess
-ac;ci;den;tal
-ac;ci;den;tal;ly
-ac;ci;dent
-ac;claim
-ac;co;lade
-ac;com;mo;da;tion
-ac;com;mo;dat;ed
-ac;com;mo;dat;ing
-ac;com;mo;date
-ac;com;pa;ni;ment
-ac;com;pa;nied
-ac;com;pa;ny
-ac;com;pa;ny;ing
-ac;com;plice
-ac;com;plish
-ac;com;plish;ment
-ac;com;plished
-ac;cor;di;on
-ac;cord
-ac;cord;ance
-ac;cord;ing
-ac;cord;ing;ly
-ac;count
-ac;count;a;bil;i;ty
-ac;count;a;ble
-ac;count;an;cy
-ac;count;ant
-ac;count;ing
-ac;cra
-ac;cre;tion
-ac;cred;i;ta;tion
-ac;cru;al
-ac;cru;ing
-ac;crue
-ac;crued
-ac;cu;mu;la;tion
-ac;cu;mu;la;tor
-ac;cu;mu;lat;ed
-ac;cu;mu;lat;ing
-ac;cu;mu;late
-ac;cu;ra;cy
-ac;cu;rate
-ac;cu;rate;ly
-ac;cu;sa;tion
-ac;cus;er
-ac;cus;ing
-ac;cus;tomed
-ac;cuse
-ac;cused
-ac;e;tate
-ac;e;tone
-ac;e;tyl
-ac;e;tyl;cho;line
-ac;i;do;sis
-ac;i;doph;i;lus
-ac;id
-ac;knowl;edg;ing
-ac;knowl;edg;ment
-ac;knowl;edge
-ac;knowl;edge;ment
-ac;knowl;edged
-ac;me
-ac;ne
-ac;quaint
-ac;quaint;ance
-ac;quaint;ed
-ac;qui;si;tion
-ac;quir;ing
-ac;quire
-ac;quired
-ac;quit;tal
-ac;quit;ted
-ac;ro;bat
-ac;ro;bat;ic
-ac;ro;nym
-ac;ti;va;tion
-ac;ti;va;tor
-ac;ti;vat;ed
-ac;ti;vat;ing
-ac;ti;vate
-ac;tin
-ac;tion
-ac;tion;a;ble
-ac;tiv;i;ty
-ac;tiv;ism
-ac;tiv;ist
-ac;tive
-ac;tive;ly
-ac;ton
-ac;tor
-ac;tress
-ac;tu;a;tion
-ac;tu;a;tor
-ac;tu;al
-ac;tu;al;i;ty
-ac;tu;al;ly
-ac;tu;ar;i;al
-ac;tu;ar;ies
-ac;tu;ary
-ac;tu;at;ed
-ac;tu;ate
-ac;u;men
-ac;u;punc;ture
-ac;yl
-ace
-ach;ing
-ache
-act
-act;ing
-ad;a;mant
-ad;age
-ad;ap;ta;tion
-ad;den;dum
-ad;di;tion
-ad;di;tion;al
-ad;di;tion;al;ly
-ad;di;tive
-ad;dic;tion
-ad;dic;tive
-ad;dict
-ad;dict;ed
-ad;dress
-ad;dress;ee
-ad;dress;ing
-ad;dy
-ad;e;nine
-ad;e;no;car;ci;no;ma
-ad;e;no;ma
-ad;e;no;vi;rus
-ad;e;qua;cy
-ad;e;quate
-ad;e;quate;ly
-ad;ept
-ad;he;sion
-ad;he;sive
-ad;her;ence
-ad;her;ent
-ad;her;ing
-ad;here
-ad;hered
-ad;i;a;bat;ic
-ad;i;os
-ad;i;pose
-ad;ja;cen;cy
-ad;ja;cent
-ad;jec;tive
-ad;join;ing
-ad;joint
-ad;journ
-ad;journ;ment
-ad;ju;di;ca;tion
-ad;ju;di;ca;tor
-ad;ju;di;cat;ed
-ad;ju;tant
-ad;ju;vant
-ad;junct
-ad;just
-ad;just;a;ble
-ad;just;er
-ad;just;ment
-ad;mi;ra;ble
-ad;mi;ra;bly
-ad;mi;ra;tion
-ad;mi;ral
-ad;mi;ral;ty
-ad;min
-ad;min;is;ter
-ad;min;is;tra;tion
-ad;min;is;tra;tive
-ad;min;is;tra;tive;ly
-ad;min;is;tra;tor
-ad;mir;er
-ad;mir;ing
-ad;mire
-ad;mired
-ad;mis;si;bil;i;ty
-ad;mis;si;ble
-ad;mis;sion
-ad;mit
-ad;mit;tance
-ad;mit;ted
-ad;mit;ted;ly
-ad;mit;ting
-ad;mix;ture
-ad;mo;ni;tion
-ad;o;les;cence
-ad;o;les;cent
-ad;o;ra;tion
-ad;re;nal
-ad;ren;er;gic
-ad;sorp;tion
-ad;van;ta;geous
-ad;van;tage
-ad;vanc;es
-ad;vanc;ing
-ad;vance
-ad;vance;ment
-ad;vanced
-ad;vec;tion
-ad;ven;tur;er
-ad;ven;tur;ous
-ad;ven;ture
-ad;vent
-ad;ver;sar;ies
-ad;ver;sar;y
-ad;ver;si;ty
-ad;ver;tis;er
-ad;ver;tis;ing
-ad;ver;tise
-ad;ver;tise;ment
-ad;ver;tised
-ad;verb
-ad;verse
-ad;verse;ly
-ad;vert
-ad;vi;so;ry
-ad;vi;sor
-ad;vice
-ad;vis;a;ble
-ad;vis;er
-ad;vise
-ad;vise;ment
-ad;vised
-ad;vo;ca;cy
-ad;vo;cat;ed
-ad;vo;cat;ing
-ad;vo;cate
-add
-add;er
-adj
-adv
-ae;gis
-ae;on
-aer;a;tion
-aer;i;al
-aer;o
-aer;o;bic
-aer;o;drome
-aer;o;dy;nam;ic
-aer;o;dy;nam;ics
-aer;o;nau;ti;cal
-aer;o;naut;ics
-aer;o;plane
-aer;o;sol
-aer;o;space
-aes;thet;i;cal;ly
-aes;thet;ic
-aes;thet;ics
-aet
-af;fair
-af;fairs
-af;fec;tion
-af;fec;tion;ate
-af;fec;tion;ate;ly
-af;fec;tive
-af;fect
-af;fect;ed
-af;fect;ing
-af;fer;ent
-af;fi;da;vit
-af;fil;i;a;tion
-af;fil;i;at;ed
-af;fil;i;ate
-af;fin;i;ty
-af;fine
-af;fir;ma;tion
-af;firm
-af;firm;a;tive
-af;firm;a;tive;ly
-af;fix
-af;flic;tion
-af;flu;ence
-af;flu;ent
-af;ford
-af;ford;a;ble
-af;ghan
-af;ghan;i
-af;ter
-af;ter;care
-af;ter;glow
-af;ter;life
-af;ter;math
-af;ter;noon
-af;ter;noons
-af;ter;shock
-af;ter;thought
-af;ter;ward
-af;ter;wards
-aff
-aft
-ag;ate
-ag;gie
-ag;glom;er;a;tion
-ag;gra;va;tion
-ag;gra;vat;ing
-ag;gra;vate
-ag;gra;vated
-ag;gre;ga;tion
-ag;gre;gat;ed
-ag;gre;gat;ing
-ag;gre;gate
-ag;gres;sion
-ag;gres;sive
-ag;gres;sive;ly
-ag;gres;sive;ness
-ag;gres;sor
-ag;grieved
-ag;i;ta;tion
-ag;i;ta;tor
-ag;i;tat;ed
-ag;ile
-ag;ing
-ag;nos;tic
-ag;o;nist
-ag;o;niz;ing
-ag;o;ny
-ag;o;ra
-ag;ri;busi;ness
-ag;ri;cul;tur;al
-ag;ri;cul;ture
-ag;ro;nom;ic
-age
-age;ing
-age;less
-agr
-agric
-agt
-ai;kid;o
-aid
-aide
-ail
-ail;ing
-ail;ment
-aim
-ain
-air
-air;borne
-air;brush
-air;bus
-air;craft
-air;field
-air;flow
-air;frame
-air;ing
-air;lift
-air;lin;er
-air;line
-air;lines
-air;mail
-air;man
-air;plane
-air;port
-air;ship
-air;space
-air;strip
-air;tight
-air;waves
-air;way
-air;wor;thi;ness
-air;y
-airs
-aisle
-ait
-ake
-al;a;bas;ter
-al;a;me;da
-al;a;mo
-al;a;nine
-al;ba
-al;ba;tross
-al;be;do
-al;be;it
-al;ber;go
-al;bert
-al;bi;no
-al;bu;min
-al;bum
-al;che;mist
-al;che;my
-al;co;hol
-al;co;hol;ic
-al;co;hol;ism
-al;cove
-al;de;hyde
-al;der
-al;der;man
-al;ec
-al;ex;an;der
-al;ex;an;drite
-al;fal;fa
-al;gae
-al;gal
-al;ge;bra
-al;ge;bra;ic
-al;go;rith;mic
-al;go;rithm
-al;i;bi
-al;i;mo;ny
-al;i;phat;ic
-al;ien
-al;ien;a;tion
-al;ien;at;ed
-al;ien;at;ing
-al;ien;ate
-al;ka;li
-al;ka;lin;i;ty
-al;ka;line
-al;kyl
-al;le;ga;tion
-al;le;giance
-al;le;go;ry
-al;le;gro
-al;le;vi;a;tion
-al;le;vi;at;ing
-al;le;vi;ate
-al;leg;ed;ly
-al;leg;ing
-al;lege
-al;leged
-al;lel;ic
-al;lele
-al;ler;gen
-al;ler;gen;ic
-al;ler;gic
-al;ler;gy
-al;ley
-al;li;ance
-al;li;ga;tor
-al;li;um
-al;lied
-al;lies
-al;lo;ca;tion
-al;lo;cat;ed
-al;lo;cat;ing
-al;lo;cate
-al;lot
-al;lot;ment
-al;lot;ted
-al;low
-al;low;a;ble
-al;low;ance
-al;lowed
-al;loy
-al;lu;sion
-al;lu;vi;al
-al;lud;ed
-al;lur;ing
-al;lure
-al;ly
-al;ma
-al;ma;nac
-al;might;y
-al;mond
-al;most
-al;o;pe;ci;a
-al;oe
-al;pac;a
-al;pha
-al;pha;bet
-al;pha;bet;i;cal
-al;pha;bet;i;cal;ly
-al;pha;bet;ic
-al;pine
-al;read;y
-al;right
-al;so
-al;tar
-al;ter
-al;ter;a;tion
-al;ter;ca;tion
-al;ter;na;tion
-al;ter;na;tive
-al;ter;na;tive;ly
-al;ter;na;tor
-al;ter;nat;ing
-al;ter;nate
-al;ter;nate;ly
-al;though
-al;ti;tude
-al;tim;e;ter
-al;to
-al;to;geth;er
-al;tru;is;tic
-al;tru;ism
-al;u;min;i;um
-al;ve;o;lar
-al;ways
-alb
-ale
-alfa
-alg
-alias
-alk
-all
-alms
-alp
-alpha;numeric
-alt
-alum
-am;a;ryl;lis
-am;a;teur
-am;a;zon
-am;bas;sa;dor
-am;ber
-am;bi;ance
-am;bi;ence
-am;bi;ent
-am;bi;gu;i;ty
-am;bi;tion
-am;bi;tious
-am;big;u;ous
-am;bit
-am;biv;a;lence
-am;biv;a;lent
-am;bler
-am;bro;sia
-am;bu;la;to;ry
-am;bu;lance
-am;bush
-am;e;thyst
-am;i;ty
-am;ide
-am;mo
-am;mo;ni;um
-am;mo;nia
-am;mu;ni;tion
-am;ne;sia
-am;nes;ty
-am;ni;ot;ic
-am;o;rous
-am;or;ti;sa;tion
-am;or;ti;za;tion
-am;or;tized
-am;per;sand
-am;pere
-am;phet;a;mine
-am;phi;the;a;ter
-am;phi;the;a;tre
-am;phib;i;an
-am;phib;i;ous
-am;ple
-am;pli;fi;ca;tion
-am;pli;fi;er
-am;pli;fied
-am;pli;fy
-am;pli;tude
-am;ply
-am;pu;ta;tion
-am;pu;tee
-am;u;let
-am;y;loid
-am;yl;ase
-amp
-amt
-amu
-an;a
-an;a;bol;ic
-an;a;con;da
-an;a;gram
-an;a;log
-an;a;logue
-an;a;lys;er
-an;a;lys;ing
-an;a;lyse
-an;a;lysed
-an;a;lyst
-an;a;lyt;i;cal
-an;a;lyt;i;cal;ly
-an;a;lyt;ic
-an;a;lyt;ics
-an;a;lyz;er
-an;a;lyz;ing
-an;a;lyze
-an;a;lyzed
-an;a;mor;phic
-an;a;phy;lax;is
-an;a;tom;i;cal
-an;a;tom;ic
-an;aer;o;bic
-an;aes;the;sia
-an;aes;thet;ic
-an;al;ge;si;a
-an;al;ge;sic
-an;ar;chism
-an;ar;chist
-an;ar;chy
-an;ces;tor
-an;ces;tral
-an;ces;try
-an;chor
-an;chor;age
-an;chor;man
-an;cient
-an;cil;lar;y
-an;co;na
-an;dan;te
-an;dro;gen
-an;droid
-an;drom;e;da
-an;ec;do;tal
-an;ec;dote
-an;es;the;si;ol;o;gy
-an;es;the;sia
-an;es;thet;ic
-an;eu;rysm
-an;ge;lique
-an;ge;lus
-an;gel
-an;gel;ic
-an;gel;ic;a
-an;ger
-an;gi;na
-an;gle
-an;gled
-an;gler
-an;gling
-an;go;ra
-an;gri;ly
-an;gry
-an;gu;lar
-an;guish
-an;hy;drous
-an;i;ma
-an;i;ma;tion
-an;i;ma;tor
-an;i;mal
-an;i;mat;ed
-an;i;mat;ing
-an;i;mate
-an;i;me
-an;i;mos;i;ty
-an;i;on
-an;i;so;trop;ic
-an;i;sot;ro;py
-an;il
-an;ise
-an;kle
-an;klet
-an;na
-an;nals
-an;nex
-an;nex;a;tion
-an;nexe
-an;ni;hi;la;tion
-an;ni;ver;sa;ry
-an;no;ta;tion
-an;no;tat;ed
-an;no;tate
-an;nounc;er
-an;nounc;ing
-an;nounce
-an;nounce;ment
-an;nounced
-an;noy
-an;noy;ance
-an;noy;ing
-an;nu;al
-an;nu;al;ly
-an;nu;i;ty
-an;nu;lar
-an;nul;ment
-an;o;dized
-an;o;nym;i;ty
-an;o;rex;i;a
-an;ode
-an;oth;er
-an;swer
-an;swer;er
-an;tag;o;nis;tic
-an;tag;o;nism
-an;tag;o;nist
-an;te
-an;te;ced;ent
-an;te;ced;ents
-an;te;lope
-an;te;na;tal
-an;te;ri;or
-an;ten;na
-an;ten;nae
-an;ten;nas
-an;them
-an;thol;o;gy
-an;thra;cite
-an;thrax
-an;thro;po;log;i;cal
-an;thro;pol;o;gist
-an;thro;pol;o;gy
-an;ti
-an;ti;bac;te;ri;al
-an;ti;bi;ot;ic
-an;ti;bod;ies
-an;ti;bod;y
-an;ti;co;ag;u;lant
-an;ti;de;pres;sant
-an;ti;dote
-an;ti;freeze
-an;ti;fun;gal
-an;ti;gen
-an;ti;gen;ic
-an;ti;mi;cro;bi;al
-an;ti;mo;ny
-an;ti;ox;i;dant
-an;ti;quar;i;an
-an;ti;quat;ed
-an;ti;sep;tic
-an;ti;so;cial
-an;ti;stat;ic
-an;ti;trust
-an;ti;vi;ral
-an;ti;vi;rus
-an;ti;war
-an;tic;i;pa;tion
-an;tic;i;pa;to;ry
-an;tic;i;pat;ed
-an;tic;i;pat;ing
-an;tic;i;pate
-an;tics
-an;tiq;ui;ties
-an;tiq;ui;ty
-an;tique
-an;tiqued
-an;tith;e;sis
-an;vil
-an;y
-an;y;bod;y
-an;y;how
-an;y;more
-an;y;one
-an;y;place
-an;y;thing
-an;y;time
-an;y;way
-an;y;ways
-an;y;where
-anal
-anat
-is
-i
-and
-ane
-angst
-anim
-ankh
-ann
-anon
-ant
-ant;arc;tic
-ant;ler
-anx;i;e;ty
-anx;ious
-anx;ious;ly
-ap;a;thet;ic
-ap;a;thy
-ap;er;ture
-ap;i;cal
-ap;ne;a
-ap;o;gee
-ap;os;tol;ic
-ap;pa;rat;us
-ap;pa;ri;tion
-ap;pall;ing
-ap;palled
-ap;par;el
-ap;par;ent
-ap;par;ent;ly
-ap;pe;tite
-ap;pe;tiz;er
-ap;peal
-ap;peal;ing
-ap;pear
-ap;pear;ance
-ap;pease
-ap;pel
-ap;pel;la;tion
-ap;pel;lant
-ap;pel;late
-ap;pel;lee
-ap;pen;di;ces
-ap;pen;di;ci;tis
-ap;pen;dix
-ap;pen;dix;es
-ap;pend
-ap;plaud
-ap;plause
-ap;ple
-ap;ple;sauce
-ap;ples
-ap;pli;ance
-ap;pli;ca;bil;i;ty
-ap;pli;ca;ble
-ap;pli;ca;tion
-ap;pli;ca;tor
-ap;pli;cant
-ap;pli;que
-ap;plied
-ap;ply
-ap;ply;ing
-ap;point
-ap;point;ed
-ap;point;ee
-ap;point;ment
-ap;por;tion;ment
-ap;prais;al
-ap;prais;er
-ap;prais;ing
-ap;praise
-ap;praised
-ap;pre;ci;a;ble
-ap;pre;ci;a;tion
-ap;pre;ci;at;ed
-ap;pre;ci;at;ing
-ap;pre;ci;ate
-ap;pre;cia;tive
-ap;pre;hen;sion
-ap;pre;hen;sive
-ap;pre;hend
-ap;pren;tice
-ap;pren;tice;ship
-ap;pro
-ap;pro;ba;tion
-ap;pro;pri;a;tion
-ap;pro;pri;at;ed
-ap;pro;pri;at;ing
-ap;pro;pri;ate
-ap;pro;pri;ate;ly
-ap;pro;pri;ate;ness
-ap;proach
-ap;proach;a;ble
-ap;prov;al
-ap;prov;er
-ap;prov;ing
-ap;prove
-ap;proved
-ap;prox;i;ma;tion
-ap;prox;i;mat;ed
-ap;prox;i;mat;ing
-ap;prox;i;mate
-ap;prox;i;mate;ly
-ap;ri;cot
-ap;ro;pos
-ap;ti;tude
-ape
-aph;ro;dis;i;ac
-app
-approx
-apt
-apt;ly
-aq;ua
-aq;ua;cul;ture
-aq;ua;ma;rine
-aq;ue;duct
-aq;ui;fer
-ar;a;besque
-ar;a;ble
-ar;bi;ter
-ar;bi;tra;tion
-ar;bi;tra;tor
-ar;bi;trage
-ar;bi;tral
-ar;bi;trar;i;ly
-ar;bi;trar;y
-ar;bo;re;tum
-ar;bor
-ar;ca
-ar;ca;na
-ar;cade
-ar;cane
-ar;cha;ic
-ar;chae;o;log;i;cal
-ar;chae;ol;o;gist
-ar;chae;ol;o;gy
-ar;che;o;log;i;cal
-ar;che;ol;o;gy
-ar;che;typ;al
-ar;che;type
-ar;cher;y
-ar;chi;pel;a;go
-ar;chi;tec;tur;al
-ar;chi;tec;ture
-ar;chi;tect
-ar;chi;val
-ar;chi;vist
-ar;chive
-ar;chives
-ar;co
-ar;dent
-ar;dour
-ar;du;ous
-ar;e;a
-ar;e;al
-ar;gen;tine
-ar;gent
-ar;gi;nine
-ar;go;sy
-ar;gon
-ar;gu;ing
-ar;gu;men;ta;tion
-ar;gu;men;ta;tive
-ar;gu;ment
-ar;gue
-ar;gued
-ar;gyle
-ar;i;el
-ar;id
-ar;is;toc;ra;cy
-ar;ma;da
-ar;ma;dil;lo
-ar;ma;ment
-ar;ma;ture
-ar;mi;stice
-ar;moire
-ar;mor
-ar;mor;y
-ar;mored
-ar;mour
-ar;moured
-ar;my
-ar;ni;ca
-ar;o;mat;ic
-ar;raign;ment
-ar;rang;er
-ar;rang;ing
-ar;range
-ar;range;ment
-ar;ranged
-ar;ray
-ar;rears
-ar;rest
-ar;rest;ing
-ar;rhyth;mi;a
-ar;ri;val
-ar;riv;ing
-ar;rive
-ar;rived
-ar;ro;gance
-ar;ro;gant
-ar;row
-ar;row;head
-ar;rows
-ar;roy;o
-ar;se;nal
-ar;se;nic
-ar;son
-ar;te;fact
-ar;te;mis;i;a
-ar;te;ri;al
-ar;te;ri;o;scle;ro;sis
-ar;ter;ies
-ar;ter;y
-ar;thri;tis
-ar;ti;choke
-ar;ti;cle
-ar;ti;fact
-ar;ti;fi;cial
-ar;ti;fi;cial;ly
-ar;ti;fice
-ar;ti;san
-ar;tic
-ar;tic;u;la;tion
-ar;tic;u;lar
-ar;tic;u;lat;ed
-ar;tic;u;lat;ing
-ar;tic;u;late
-ar;til;ler;y
-ar;tis;ti;cal;ly
-ar;tis;tic
-ar;tiste
-ar;yl
-arc
-arc;tic
-arch
-arch;an;gel
-arch;bish;op
-arch;di;o;cese
-arch;er
-arch;ing
-arch;way
-arched
-arcs
-are
-ark
-arles
-arm
-arm;band
-arm;chair
-arm;ing
-arm;pit
-arm;rest
-armed
-arms
-arr
-arse
-art
-art;ful
-art;ist
-art;ist;ry
-art;work
-art;y
-arts
-as;bes;tos
-as;cen;sion
-as;cend
-as;cend;ant
-as;cend;ing
-as;cent
-as;cer;tain
-as;cot
-as;cribe
-as;cribed
-as;par;a;gus
-as;pect
-as;pen
-as;per;gil;lus
-as;phalt
-as;pi;ra;tion
-as;pi;rin
-as;pir;ing
-as;pire
-as;sail;ant
-as;sam
-as;sas;si;na;tion
-as;sas;si;nat;ed
-as;sas;si;nate
-as;sas;sin
-as;sault
-as;say
-as;sem;blage
-as;sem;ble
-as;sem;bled
-as;sem;bler
-as;sem;bly
-as;sem;bly;man
-as;sent
-as;ser;tion
-as;ser;tive
-as;ser;tive;ness
-as;sert
-as;sert;ed
-as;ses
-as;ses;sor
-as;sess
-as;sess;a;ble
-as;sess;ment
-as;set
-as;sets
-as;sign
-as;sign;a;ble
-as;sign;ee
-as;sign;ment
-as;sim;i;la;tion
-as;sim;i;lat;ed
-as;sim;i;late
-as;sis;tance
-as;sis;tant
-as;sist
-as;sist;ive
-as;so;ci;a;tion
-as;so;ci;a;tive
-as;so;ci;at;ed
-as;so;ci;at;ing
-as;so;ci;ate
-as;sort;ed
-as;sort;ment
-as;sum;ing
-as;sume
-as;sumed
-as;sump;tion
-as;sur;ance
-as;sur;ed;ly
-as;sur;ing
-as;sure
-as;sured
-as;ter
-as;ter;isk
-as;ter;oid
-as;ton;ish;ing
-as;ton;ish;ing;ly
-as;ton;ish;ment
-as;tound;ing
-as;tral
-as;tro;bi;ol;o;gy
-as;tro;log;i;cal
-as;tro;met;ric
-as;tro;nau;tics
-as;tro;naut
-as;tro;nom;i;cal
-as;tro;pho;tog;ra;phy
-as;tro;phys;i;cal
-as;tro;phys;ics
-as;trol;o;ger
-as;trol;o;gy
-as;tron;o;mer
-as;tron;o;my
-as;tute
-as;ymp;tot;i;cal;ly
-as;ymp;tot;ic
-ash
-ash;es
-ash;ram
-ash;tray
-ask
-ask;er
-asp
-ass
-assn
-assoc
-asst
-asth;ma
-asth;mat;ic
-astron
-at;el;ier
-at;las
-at;las;es
-at;mos;pher;ic
-at;mos;phere
-at;oll
-at;om
-at;ro;phy
-at;ro;pine
-at;ta;che
-at;ta;ches
-at;tach
-at;tach;ment
-at;tached
-at;tack
-at;tack;er
-at;tain
-at;tain;a;ble
-at;tain;ment
-at;tempt
-at;ten;tion
-at;ten;tive
-at;ten;u;a;tion
-at;ten;u;a;tor
-at;ten;u;at;ed
-at;tend
-at;tend;ance
-at;tend;ant
-at;tend;ing
-at;tes;ta;tion
-at;test
-at;test;ed
-at;ti;tude
-at;tic
-at;tire
-at;tor;ney
-at;trac;tion
-at;trac;tive
-at;trac;tive;ly
-at;trac;tive;ness
-at;trac;tor
-at;tract
-at;tri;bu;tion
-at;tri;tion
-at;trib;ut;a;ble
-at;trib;ut;ed
-at;trib;ut;ing
-at;trib;ute
-at;tuned
-ate
-ath;e;nae;um
-ath;er;o;scle;ro;sis
-ath;let;ic
-ath;let;ics
-ath;lete
-atm
-att
-attn
-attrib
-atty
-au;berge
-au;burn
-au;da;cious
-au;dac;i;ty
-au;di;ble
-au;di;ence
-au;di;o
-au;di;o;phile
-au;di;o;vis;u;al
-au;di;ol;o;gy
-au;di;tion
-au;di;to;ri;um
-au;di;to;ry
-au;di;tor
-au;dit
-au;ger
-au;gust
-au;ra
-au;ral
-au;re;us
-au;ro;ra
-au;ro;ral
-au;teur
-au;then;ti;ca;tion
-au;then;ti;ca;tor
-au;then;ti;cat;ed
-au;then;ti;cate
-au;then;tic
-au;then;tic;i;ty
-au;thor
-au;thor;i;sa;tion
-au;thor;i;ta;tive
-au;thor;i;tar;i;an
-au;thor;i;ty
-au;thor;i;za;tion
-au;thor;is;ing
-au;thor;ise
-au;thor;ised
-au;thor;ize
-au;thor;ized
-au;thor;ship
-au;thors
-au;tis;tic
-au;tism
-au;to;bahn
-au;to;bi;o;graph;i;cal
-au;to;bi;og;ra;phy
-au;to;clave
-au;to;cor;re;la;tion
-au;to;graph
-au;to;im;mune
-au;to;ma;tion
-au;to;mat;ed
-au;to;mat;i;cal;ly
-au;to;mat;ic
-au;to;mat;ing
-au;to;mate
-au;to;mo;bile
-au;to;mo;tive
-au;to;nom;ic
-au;to;pi;lot
-au;tom;a;ta
-au;tom;a;ton
-au;ton;o;mous
-au;ton;o;my
-au;top;sy
-au;tumn
-auc;tion
-auc;tion;eer
-aud
-aug
-aug;men;ta;tion
-aug;ment
-aug;ment;ed
-auk
-auld
-aunt
-aunt;ie
-aus;pi;cious
-aus;pic;es
-aus;tere
-aus;tral
-auth
-auto
-aux
-aux;il;ia;ries
-aux;il;ia;ry
-av;a;lanche
-av;a;tar
-av;e;nue
-av;en;tail
-av;er;ag;ing
-av;er;age
-av;er;aged
-av;id
-av;o;ca;do
-ave
-avg
-avn
-avoir
-aw;ful
-aw;ful;ly
-awe
-awe;some
-awk;ward
-awk;ward;ly
-awn;ing
-ax;el
-ax;es
-ax;i;al
-ax;i;o;mat;ic
-ax;i;om
-ax;il;lar;y
-ax;is
-ax;le
-ax;on
-axe
-aye
-az;i;muth
-az;ide
-az;o
-az;ure
-ba;ba
-ba;boon
-ba;bu
-ba;by
-ba;cil;lus
-ba;con
-ba;gel
-ba;guette
-ba;na;nas
-ba;nal
-ba;nan;a
-ba;rom;e;ter
-ba;roque
-ba;sal
-ba;si;cal;ly
-ba;sic
-ba;sil;i;ca
-ba;sin
-ba;sis
-ba;thym;e;try
-ba;tik
-ba;ton
-ba;zaar
-ba;zar
-ba;zoo;ka
-baa
-baal
-bab;bitt
-bab;ble
-bab;bler
-bab;bling
-babe
-bac;ca;lau;re;ate
-bac;ca;rat
-bac;te;ri;a
-bac;te;ri;al
-bac;te;ri;o;phage
-bac;te;ri;ol;o;gy
-bac;te;ri;um
-bach
-bach;e;lor
-back
-back;bone
-back;door
-back;drop
-back;er
-back;fill
-back;fire
-back;flow
-back;gam;mon
-back;ground
-back;hand
-back;ing
-back;lash
-back;lit
-back;log
-back;pack
-back;pack;er
-back;rest
-back;side
-back;space
-back;stage
-back;street
-back;stroke
-back;up
-back;wa;ter
-back;ward
-back;wards
-back;yard
-backed
-bad
-bad;lands
-bad;ly
-bad;min;ton
-bad;ness
-bade
-badg;er
-badge
-baf;fle
-baf;fling
-bag
-bag;gage
-bag;ging
-bag;gy
-bag;pipe
-bag;pipes
-bags
-bah
-baht
-bai
-bai;ley
-bail
-bail;iff
-bait
-bak;er
-bak;er;ies
-bak;er;y
-bak;ing
-bake
-bake;ware
-bal
-bal;anc;er
-bal;anc;ing
-bal;ance
-bal;anced
-bal;bo;a
-bal;co;ny
-bal;lad
-bal;last
-bal;le;ri;na
-bal;let
-bal;lets
-bal;lis;tic
-bal;lon
-bal;loon
-bal;lot
-bal;lot;ing
-bal;ly
-bal;sa
-bal;sam
-bal;sam;ic
-bald
-bald;ing
-bald;ness
-bale
-balk
-ball
-ball;er
-ball;park
-ball;point
-ball;room
-balls
-balm
-bam;boo
-ban
-ban;dan;a
-ban;di;coot
-ban;dit
-ban;dits
-ban;gle
-ban;ish
-ban;jo
-ban;ner
-ban;ning
-ban;nis;ter
-ban;quet
-ban;quet;ing
-ban;shee
-ban;tam
-ban;ter
-ban;yan
-banc
-band
-band;age
-band;ed
-band;ing
-band;wag;on
-band;width
-bane
-bang
-bang;er
-bank
-bank;er
-bank;ing
-bank;roll
-bank;rupt
-bank;rupt;cy
-bans
-bap
-bap;tis;mal
-bap;tised
-bap;tism
-bap;tized
-bapt
-bar
-bar;bar;i;an
-bar;bar;ic
-bar;be;cue
-bar;be;que
-bar;bell
-bar;ber
-bar;ber;shop
-bar;bi;can
-bar;fly
-bar;gain
-bar;i;tone
-bar;i;um
-bar;ing
-bar;ley
-bar;man
-bar;ney
-bar;o;met;ric
-bar;on
-bar;on;ess
-bar;r
-bar;ra;cu;da
-bar;rack
-bar;racks
-bar;rage
-bar;rel
-bar;ren
-bar;ri;cade
-bar;ri;er
-bar;ring
-bar;rio
-bar;ris;ter
-bar;row
-bar;ry
-bar;tend;er
-bar;ter
-bar;ton
-bar;y;on
-barb
-barbed
-bard
-bare
-bare;back
-bare;foot
-bare;ly
-barge
-bark
-bark;er
-barm
-barn
-barn;yard
-barre
-barred
-bas;alt
-bas;es
-bas;il
-bas;ing
-bas;ket
-bas;ket;ball
-bas;set
-bas;si;net
-bas;so
-bas;soon
-bas;tard
-bas;tille
-bas;tion
-base
-base;ball
-base;board
-base;line
-base;man
-base;ment
-bash
-bask
-bass
-bass;es
-bass;ist
-bast
-bat
-bat;man
-bat;tal;ion
-bat;te;rie
-bat;ted
-bat;ten
-bat;ter
-bat;ter;ies
-bat;ter;y
-bat;ting
-bat;tle
-bat;tle;field
-bat;tle;front
-bat;tle;ground
-bat;tle;ship
-bat;tled
-bat;ty
-batch
-bate
-bath
-bath;ing
-bath;robe
-bath;room
-bath;tub
-bathe
-bats
-bats;man
-batt
-baud
-baux;ite
-bay
-bay;ard
-bay;o;net
-bay;ou
-bbl
-bdl
-bds
-be;bop
-be;came
-be;cause
-be;com;ing
-be;come
-be;fore
-be;fore;hand
-be;gan
-be;gin
-be;gin;ner
-be;gin;ning
-be;got;ten
-be;gun
-be;half
-be;hav;ior
-be;hav;ior;al
-be;hav;iour
-be;have
-be;haved
-be;he;moth
-be;held
-be;hest
-be;hind
-be;hold
-be;hold;er
-be;ing
-be;jew;eled
-be;lat;ed
-be;lay
-be;lief
-be;liev;a;ble
-be;liev;er
-be;lieve
-be;lieved
-be;live
-be;long
-be;long;ing
-be;long;ings
-be;lov;ed
-be;low
-be;lu;ga
-be;neath
-be;nev;o;lence
-be;nev;o;lent
-be;nign
-be;quest
-be;reave;ment
-be;ret
-be;ryl;li;um
-be;seech
-be;set
-be;side
-be;sides
-be;sieged
-be;spoke
-be;stow
-be;ta
-be;tray
-be;tray;al
-be;tween
-be;ware
-be;yond
-bea;con
-bea;gle
-bea;ver
-beach
-beach;comb;er
-bead
-bead;ed
-bead;ing
-bead;work
-beak
-beak;er
-beam
-beam;ing
-bean
-bean;ie
-bean;o
-bear
-bear;er
-bear;ing
-bear;ings
-bear;ish
-beard
-beard;ed
-beast
-beast;ie
-beat
-beat;en
-beat;er
-beat;ing
-beau
-beau;ti;fi;ca;tion
-beau;ti;ful
-beau;ti;ful;ly
-beau;ty
-beaux
-beck
-beck;et
-bed
-bed;ded
-bed;ding
-bed;lam
-bed;rock
-bed;room
-bed;side
-bed;spread
-bed;stead
-bed;time
-bee
-bee;hive
-bee;keep;ing
-bee;tle
-beech
-beech;wood
-beef
-beef;y
-been
-beep
-beep;er
-beer
-bees;wax
-beet
-beg
-beg;gar
-beige
-bel
-bel;fry
-bel;la;don;na
-bel;lied
-bel;lig;er;ent
-bel;low
-bel;lows
-bel;ly
-bel;ve;dere
-belch;er
-bell
-bell;flow;er
-bell;man
-belle
-belt
-belt;ed
-belt;ing
-belt;way
-ben
-ben;e;dict
-ben;e;fac;tor
-ben;e;fi;ci;ar;ies
-ben;e;fi;cial
-ben;e;fi;cial;ly
-ben;e;fi;ciar;y
-ben;e;fit
-ben;e;fit;ed
-ben;ja;min
-ben;net
-ben;ny
-ben;thic
-ben;zene
-ben;zyl
-bench
-bench;mark
-bend
-bend;er
-bend;ing
-bends
-bene
-bent
-ber;et;ta
-ber;ga;mot
-ber;lin
-ber;ry
-ber;serk
-ber;tha
-ber;yl
-berg
-berk
-berth
-bes;ti;al;i;ty
-bes;ti;ar;y
-bes;tial
-best
-bet
-bet;ta
-bet;ter
-bet;ter;ment
-bet;ting
-bet;ty
-beth
-beth;el
-bev;el
-bev;eled
-bev;er;age
-bey
-bez;el
-bhp
-bi;as
-bi;ased
-bi;ath;lon
-bi;car;bo;nate
-bi;cen;ten;ni;al
-bi;ceps
-bi;cy;cle
-bi;det
-bi;di
-bi;di;rec;tion;al
-bi;en;ni;al
-bi;en;ni;um
-bi;fo;cal
-bi;fur;ca;tion
-bi;jou
-bi;ki;ni
-bi;lat;er;al
-bi;lin;gual
-bi;month;ly
-bi;na;ry
-bi;no;mi;al
-bi;o;as;say
-bi;o;chem;i;cal
-bi;o;chem;is;try
-bi;o;de;grad;a;ble
-bi;o;en;gi;neer;ing
-bi;o;feed;back
-bi;o;ge;og;ra;phy
-bi;o;gen;e;sis
-bi;o;graph;i;cal
-bi;o;log;i;cal
-bi;o;log;i;cal;ly
-bi;o;log;ic
-bi;o;mass
-bi;o;med;i;cal
-bi;o;met;ric
-bi;o;met;rics
-bi;o;phys;i;cal
-bi;o;phys;ics
-bi;o;sphere
-bi;o;syn;the;sis
-bi;o;ta
-bi;o;tech;nol;o;gy
-bi;o;tin
-bi;og;ra;pher
-bi;og;ra;phy
-bi;ol;o;gist
-bi;ol;o;gy
-bi;on;ic
-bi;op;sy
-bi;ot;ic
-bi;par;ti;san
-bi;po;lar
-bi;sex;u;al
-bi;son
-bi;tu;men
-bi;tu;mi;nous
-bi;week;ly
-bi;zarre
-bib
-bib;li;cal
-bib;li;o;graph;ic
-bib;li;og;ra;phy
-bibb
-bibl
-bice
-bick;er;ing
-bid
-bid;der
-bid;ding
-bien;ve;nue
-bier
-biff
-big
-big;ger
-big;gest
-big;gie
-big;horn
-big;ot
-big;ot;ry
-bight
-bik;ing
-bike
-bil;bo
-bil;i;ar;y
-bil;i;ru;bin
-bil;la;ble
-bil;la;bong
-bil;let
-bil;liard
-bil;liards
-bil;lion
-bil;lion;aire
-bil;ly
-bile
-bilge
-bill
-bill;board
-bill;ing
-bim;bo
-bin
-bin;au;ral
-bin;go
-bin;ning
-bin;oc;u;lar
-bin;oc;u;lars
-bind
-bind;er
-bind;er;y
-bind;ing
-bing
-binge
-biol
-birch
-bird
-bird;hous;es
-bird;house
-bird;ie
-bird;man
-birr
-birth
-birth;day
-birth;place
-birth;right
-birth;stone
-bis
-bis;cuit
-bis;muth
-bis;tro
-bish;op
-bisque
-bist
-bit
-bit;ing
-bit;te
-bit;ten
-bit;ter
-bit;ter;ly
-bit;ter;ness
-bit;ter;sweet
-bit;ty
-bitch
-bite
-biz
-bks
-bla;s
-bla;tant
-bla;tant;ly
-black
-black;ber;ry
-black;bird
-black;board
-black;jack
-black;list
-black;mail
-black;ness
-black;out
-black;smith
-black;wood
-blad;der
-blade
-blah
-blam;ing
-blame
-blamed
-blan;ket
-blanc
-bland
-blank
-blas;phe;my
-blast
-blast;ed
-blast;er
-blast;ing
-blath;er
-blaz;er
-blaz;es
-blaz;ing
-blaze
-bldg
-bleach
-bleach;ers
-bleak
-bleed
-bleed;ing
-bleep
-blem;ish
-blend
-blend;ed
-blend;er
-blend;ing
-bless
-bless;ed
-bless;ing
-blew
-blight
-blimp
-blind
-blind;fold
-blind;ing
-blind;ly
-blind;ness
-blink
-blink;ing
-blinks
-blip
-blis;ter
-bliss
-bliss;ful
-blitz
-blitz;krieg
-bliz;zard
-blk
-bloat
-bloat;ed
-blob
-bloc
-block
-block;ade
-block;age
-block;bust;er
-block;er
-block;ing
-blocked
-bloke
-blond
-blonde
-blood
-blood;ed
-blood;hound
-blood;line
-blood;shed
-blood;stream
-blood;y
-bloom
-bloom;er
-bloom;ing
-blos;som
-blot
-blot;ter
-blot;ting
-blouse
-blow
-blow;er
-blow;fish
-blow;ing
-blow;out
-blown
-blu;ish
-blue
-blue;ber;ry
-blue;bird
-blue;bon;net
-blue;fish
-blue;grass
-blue;print
-blues
-bluff
-blun;der
-blunt
-blunt;ly
-blur
-blur;ring
-blur;ry
-blurb
-blush
-bo;a
-bo;as
-bo;de;ga
-bo;gey
-bo;gus
-bo;la
-bo;le;ro
-bo;li;via;no
-bo;lo
-bo;lo;gna
-bo;lus
-bo;nan;za
-bo;ni;to
-bo;nus
-bo;nus;es
-bo;ra
-bo;re;al
-bo;ron
-bo;tan;i;cal
-bo;tan;ic
-bo;vine
-boar
-board
-board;er
-board;ing
-board;room
-board;walk
-boast
-boat
-boat;er
-boat;house
-boat;ing
-bob
-bob;bin
-bob;bing
-bob;ble
-bob;by
-bob;cat
-bob;sled
-bobs
-bock
-bod
-bod;i;ly
-bod;ice
-bod;ied
-bod;ies
-bod;y
-bod;y;guard
-bod;y;work
-bode
-bog
-boil
-boil;er
-boil;ing
-boiled
-bol;i;var
-bol;locks
-bol;she;vik
-bol;ster
-bold
-bold;face
-bold;ly
-bold;ness
-boll
-bolt
-bom;bar;dier
-bom;bard;ment
-bomb
-bomb;er
-bomb;shell
-bon;a;ven;ture
-bon;er
-bon;fire
-bon;go
-bon;ing
-bon;jour
-bon;net
-bon;nie
-bon;ny
-bon;sai
-bon;y
-bond
-bond;age
-bond;ed
-bone
-bone;less
-boned
-bong
-bonne
-boo
-boo;by
-boo;ty
-boob
-boog;ie
-book
-book;case
-book;ie
-book;ing
-book;ish
-book;keep;er
-book;keep;ing
-book;let
-book;mak;er
-book;man
-book;mark
-book;sel;ler
-book;shelf
-book;shop
-book;store
-book;worm
-bool;e;an
-boom
-boom;er
-boom;er;ang
-boon
-boost
-boost;er
-boot
-boot;ed
-boot;leg
-boot;load;er
-boot;strap
-booth
-boots
-booze
-bop
-bor
-bor;der
-bor;der;less
-bor;der;line
-bor;dered
-bor;er
-bor;ing
-bor;ough
-bor;row
-bor;row;er
-bor;row;ing
-bord
-bore
-bore;dom
-bore;hole
-born
-borne
-bos;om
-bos;on
-bos;ton
-bosh
-boss
-boss;i;er
-bot
-bot;a;ny
-bot;tle
-bot;tle;neck
-bot;tom
-bot;tom;less
-bot;toms
-both
-both;er
-both;er;some
-bots
-bott
-bou;doir
-bou;quet
-bou;tique
-bough
-bought
-bouil;lon
-boul;der
-boul;der;ing
-boule;vard
-boun;ti;ful
-boun;ty
-bounc;er
-bounc;ing
-bounc;y
-bounce
-bound
-bound;a;ry
-bound;ed
-bound;less
-bounds
-bour;bon
-bour;geoi;sie
-bour;geois
-bourne
-bout
-bow
-bow;el
-bow;er
-bow;er;y
-bow;ing
-bow;man
-bow;ser
-bow;yer
-bowl
-bowl;er
-bowl;ing
-bowls
-box
-box;car
-box;er
-box;ers
-box;ing
-boy
-boy;cott
-boy;friend
-boy;hood
-bpi
-bra
-bra;sil
-bra;va
-bra;va;do
-bra;vo
-bra;zen
-bra;zil
-brac;es
-brac;ing
-brace
-brace;let
-brace;lets
-brack;en
-brack;et
-brack;ish
-brad
-brag
-brag;ging
-braid
-braid;ed
-brain
-brain;child
-brain;storm
-brain;storm;ing
-brain;wash;ing
-brain;y
-brak;ing
-brake
-bram;ble
-bran
-bran;dy
-branch
-branch;ing
-brand
-brant
-bras;se;rie
-bras;si;ca
-brash
-brass
-brat
-brav;er;y
-brave
-brave;ly
-brawl
-bray
-braz;ing
-breach
-bread
-breadth
-break
-break;a;way
-break;age
-break;down
-break;er
-break;fast
-break;ing
-break;out
-break;point
-break;through
-break;up
-break;wa;ter
-bream
-breast
-breast;stroke
-breath
-breath;a;ble
-breath;er
-breath;ing
-breath;less
-breath;tak;ing
-breathe
-brecht
-bred
-bree
-breech
-breech;es
-breed
-breed;er
-breed;ing
-breez;y
-breeze
-brent
-breth;ren
-brev;i;ty
-breve
-brew
-brew;er
-brew;er;ies
-brew;er;y
-brew;ing
-bri;an
-bri;ar
-bri;dle
-bri;er
-bri;gade
-bri;o
-brib;er;y
-bribe
-brick
-brick;yard
-brid;al
-bride
-bride;groom
-brides;maid
-bridg;ing
-bridge
-brie
-brief
-brief;case
-brief;ing
-brief;ly
-briefs
-brig
-brig;a;dier
-bright
-bright;en
-bright;ly
-bright;ness
-bril;liance
-bril;liant
-bril;liant;ly
-brill
-brim
-brim;ming
-brim;stone
-brin;dle
-brine
-bring
-bring;ing
-brink
-bris;tle
-brisk
-brit
-brit;tle
-bro
-bro;cade
-bro;chure
-bro;die
-bro;gan
-bro;ken
-bro;ker
-bro;ker;age
-bro;mide
-bro;mine
-broad
-broad;band
-broad;cast
-broad;cast;er
-broad;cast;ing
-broad;en
-broad;leaf
-broad;ly
-broad;side
-broc;co;li
-brock
-broil
-broil;er
-broke
-bron;chi;al
-bron;chi;tis
-bron;co
-bronze
-brooch
-brood
-brook
-broom
-bros
-broth
-broth;el
-broth;er
-broth;er;hood
-broth;er;ly
-brough
-brought
-brow
-brown
-brown;ie
-brown;ing
-brown;ish
-brown;stone
-brows;er
-brows;ing
-browse
-bru;in
-bru;nette
-bru;tal
-bru;tal;i;ty
-bru;tal;ly
-bruis;ing
-bruise
-brunch
-brunt
-brush
-brush;less
-brushed
-brut
-brute
-btl
-btu
-bu;gle
-bu;lim;i;a
-bu;reau
-bu;reau;crat
-bu;reau;crat;ic
-bu;reauc;ra;cy
-bu;reaus
-bu;reaux
-bu;ta;di;ene
-bu;tane
-bu;tyl
-bub
-bub;ble
-bub;bly
-buc;ca;neer
-buck
-buck;et
-buck;eye
-buck;le
-buck;ling
-buck;skin
-buck;wheat
-bud
-bud;dha
-bud;dy
-budg;et
-budg;et;ar;y
-budg;et;ed
-budge
-bue;no
-buf;fa;lo
-buf;fet
-buf;fets
-buff
-buff;er
-bug
-bug;a;boo
-bug;ger
-bug;gy
-bugs
-build
-build;er
-build;ing
-build;up
-built
-bul
-bul;le;tin
-bul;let
-bul;let;ed
-bul;let;proof
-bul;lied
-bul;lion
-bul;ly
-bul;ly;ing
-bulb
-bulge
-bulk
-bulk;head
-bulk;y
-bull
-bull;dog
-bull;doz;er
-bull;frog
-bull;head
-bull;ish
-bull;ock
-bull;pen
-bull;shit
-bum
-bum;ble
-bum;ble;bee
-bum;mer
-bump
-bump;er
-bump;y
-bun
-bun;combe
-bun;dle
-bun;ga;low
-bun;gee
-bun;ny
-bunch
-bunch;es
-bund
-bunk
-bunk;er
-bunn
-bunt
-bunt;ing
-buoy
-buoy;an;cy
-buoy;ant
-bur
-bur;den
-bur;den;some
-bur;dened
-bur;gess
-bur;gla;ry
-bur;glar
-bur;i;al
-bur;ied
-bur;lesque
-bur;ley
-bur;ly
-bur;net
-bur;row
-bur;sa
-bur;sa;ry
-bur;sar
-bur;ton
-bur;y
-bur;y;ing
-burg
-burg;er
-burgh
-burk
-burke
-burl
-burn
-burn;er
-burn;ing
-burn;out
-burned
-burnt
-burp
-burr
-burst
-burst;ing
-bus
-bus;by
-bus;es
-bus;i;est
-bus;i;ly
-bus;ses
-bus;tle
-bus;y
-bush
-bush;el
-bush;ing
-bush;man
-bush;y
-busi;ness
-busi;ness;man
-buss
-bust
-bust;er
-bust;i;er
-bust;y
-but
-but;ler
-but;ter
-but;ter;cup
-but;ter;flies
-but;ter;fly
-but;ter;milk
-but;ter;nut
-but;ter;scotch
-but;ter;y
-but;ton
-but;tons
-but;tress
-butch
-butch;er
-butt
-butte
-buy
-buy;er
-buy;ing
-buz;zard
-buzz
-buzz;er
-by;gone
-by;law
-by;pass
-by;pass;ing
-by;stand;er
-by;way
-bye
-byte
-ca;ba;na
-ca;bal
-ca;bal;le;ro
-ca;ble
-ca;bling
-ca;boose
-ca;ca;o
-ca;chet
-ca;das;tre
-ca;dav;er
-ca;dence
-ca;det
-ca;dre
-ca;f
-ca;fe
-ca;hill
-ca;lam;i;ty
-ca;len;du;la
-ca;lif
-ca;lor;ic
-ca;lyp;so
-ca;lyx
-ca;ma;ra;de;rie
-ca;mel;lia
-ca;na;da
-ca;nal
-ca;nar;ies
-ca;nar;y
-ca;nas;ta
-ca;nine
-ca;noe
-ca;noe;ing
-ca;non;i;cal
-ca;pa
-ca;pa;bil;i;ty
-ca;pa;ble
-ca;pac;i;tance
-ca;pac;i;tive
-ca;pac;i;tor
-ca;pac;i;ty
-ca;per
-ca;pers
-ca;po
-ca;pote
-ca;pri;cious
-ca;price
-ca;rafe
-ca;reer
-ca;ress
-ca;ri;be
-ca;ri;na
-ca;ri;tas
-ca;rot;id
-ca;sa
-ca;sein
-ca;si;no
-ca;tab;o;lism
-ca;tal;y;sis
-ca;tas;tro;phe
-ca;ter
-ca;ter;er
-ca;ter;ing
-ca;the;dral
-ca;ve;at
-cab
-cab;a;ret
-cab;bage
-cab;i;net
-cab;i;net;ry
-cab;in
-cab;o;chon
-cab;ri;o;let
-cac;ti
-cac;tus
-cach;ing
-cache
-cad
-cad;dy
-cad;mi;um
-cade
-caf;e;te;ri;a
-caf;feine
-cage
-cain
-cairn
-cake
-cake;walk
-cal
-cal;car;e;ous
-cal;ci;um
-cal;cite
-cal;cu;la;tion
-cal;cu;la;tor
-cal;cu;lat;ed
-cal;cu;lat;ing
-cal;cu;late
-cal;cu;lus
-cal;de;ra
-cal;en;dar
-cal;en;der
-cal;i;ber
-cal;i;bra;tion
-cal;i;bra;tor
-cal;i;brat;ed
-cal;i;brat;ing
-cal;i;brate
-cal;i;bre
-cal;i;co
-cal;i;per
-cal;la
-cal;lan
-cal;lig;ra;phy
-cal;lous
-cal;o;rie
-cal;o;rim;e;ter
-cal;u;met
-cal;va;ry
-calf
-call
-call;a;ble
-call;er
-call;ing
-calm
-calm;ly
-calm;ness
-calv;ing
-calves
-cam
-cam;as
-cam;ber
-cam;e;o
-cam;e;os
-cam;el
-cam;er;a
-cam;er;a;man
-cam;er;as
-cam;i;sole
-cam;ou;flage
-cam;pa;ni;le
-cam;paign
-cam;paign;er
-cam;pi;on
-cam;po
-cam;pus
-cam;pus;es
-cam;shaft
-came
-camp
-camp;er
-camp;fire
-camp;ground
-camp;site
-camp;y
-can
-can;cel
-can;cel;ing
-can;cel;la;tion
-can;cel;ling
-can;celed
-can;celled
-can;cer
-can;cer;ous
-can;cio;nes
-can;de;la;bra
-can;di;da;cy
-can;di;date
-can;did
-can;died
-can;dle
-can;dle;hold;er
-can;dle;light
-can;dle;stick
-can;dle;wood
-can;dler
-can;dor
-can;dy
-can;field
-can;is;ter
-can;ker
-can;na
-can;na;bis
-can;ner;y
-can;ni;bal
-can;ni;bal;ism
-can;ning
-can;non
-can;non;ball
-can;o;py
-can;on
-can;ta;ta
-can;teen
-can;ter;bur;y
-can;ti;lev;er
-can;ti;na
-can;to
-can;ton
-can;tor
-can;vas
-can;vass
-can;yon
-can;zo;ne
-can;zo;ni
-cane
-canned
-cans
-cant
-cant;er
-cap
-cap;i;ta
-cap;i;tal
-cap;i;tal;i;sa;tion
-cap;i;tal;i;za;tion
-cap;i;tal;ism
-cap;i;tal;ist
-cap;i;tal;iz;ing
-cap;i;tal;ize
-cap;i;tal;ized
-cap;il;lar;ies
-cap;il;lar;y
-cap;ping
-cap;puc;ci;no
-cap;si;cum
-cap;stone
-cap;sule
-cap;tain
-cap;ti;vat;ed
-cap;ti;vat;ing
-cap;ti;vate
-cap;tion
-cap;tiv;i;ty
-cap;tive
-cap;tor
-cap;tur;ing
-cap;ture
-cap;tured
-cape
-caps
-car
-car;a;bin;er
-car;a;mel
-car;a;van
-car;at
-car;bide
-car;bine
-car;bo;hy;drate
-car;bon
-car;bon;at;ed
-car;bon;ate
-car;bon;yl
-car;box;yl
-car;box;yl;ic
-car;bu;re;tor
-car;cass
-car;ci;no;ge;nic;i;ty
-car;ci;no;ma
-car;ci;no;mas
-car;cin;o;gen
-car;cin;o;gen;ic
-car;da;mom
-car;di;ac
-car;di;gan
-car;di;nal
-car;di;o;vas;cu;lar
-car;di;ol;o;gist
-car;di;ol;o;gy
-car;er
-car;et
-car;fax
-car;go
-car;i;bou
-car;i;ca;ture
-car;i;sop;ro;dol
-car;ies
-car;ing
-car;lin
-car;ling
-car;man
-car;mel
-car;mine
-car;na;tion
-car;nage
-car;nal
-car;nel;ian
-car;ney
-car;ni;val
-car;ni;vore
-car;niv;o;rous
-car;o;tene
-car;ol
-car;ou;sel
-car;pal
-car;pen;ter
-car;pen;try
-car;pet
-car;pet;ing
-car;port
-car;ri;er
-car;ri;on
-car;riage
-car;riage;way
-car;ried
-car;rot
-car;ry
-car;ry;ing
-car;tel
-car;ti;lage
-car;to;graph;ic
-car;tog;ra;phy
-car;ton
-car;toon
-car;toon;ist
-car;touche
-car;tridge
-card
-card;board
-card;hold;er
-cards
-care
-care;free
-care;ful
-care;ful;ly
-care;less
-care;less;ly
-care;less;ness
-care;tak;er
-carl
-carle
-carp
-cart
-cart;er
-cart;wright
-carte
-carv;er
-carv;ing
-carve
-cas;cad;ing
-cas;cade
-cas;ing
-cas;ket
-cas;sa;va
-cas;se;role
-cas;sette
-cas;sia
-cas;sie
-cas;tle
-cas;tor
-cas;tra;tion
-cas;u;al
-cas;u;al;ly
-cas;u;al;ty
-case
-case;book
-case;load
-case;work
-cash
-cash;ew
-cash;ier
-cash;mere
-cask
-cast
-cast;a;way
-cast;er
-cast;ing
-caste
-cat
-cat;a;lase
-cat;a;log
-cat;a;logue
-cat;a;lyst
-cat;a;lyt;ic
-cat;a;lyzed
-cat;a;ma;ran
-cat;a;pult
-cat;a;ract
-cat;a;stroph;ic
-cat;e;chism
-cat;e;go;ri;za;tion
-cat;e;go;rised
-cat;e;go;rize
-cat;e;go;rized
-cat;e;go;ry
-cat;e;gor;i;cal
-cat;e;gor;i;cal;ly
-cat;ed
-cat;er;pil;lar
-cat;fish
-cat;i;on
-cat;i;on;ic
-cat;nip
-cat;ter;y
-cat;tle
-cat;walk
-catch
-catch;er
-catch;ing
-catch;ment
-catch;y
-cate
-cates
-cath;e;ter
-cath;e;ter;i;za;tion
-cath;o;lic
-cath;ode
-cau;cus
-cau;cus;es
-cau;dal
-cau;li;flow;er
-cau;sa;tion
-cau;sal;i;ty
-cau;tion
-cau;tion;ar;y
-cau;tious
-cau;tious;ly
-caught
-caul;dron
-caulk
-caus;a;tive
-caus;al
-caus;ing
-caus;tic
-cause
-cause;way
-cav
-cav;a;lier
-cav;al;ry
-cav;en;dish
-cav;ern
-cav;ern;ous
-cav;i;ar
-cav;i;ty
-cav;ing
-cave
-cave;man
-caw
-cay
-cay;enne
-cay;man
-cbd
-ce;dar
-ce;di
-ce;leb
-ce;leb;ri;ty
-ce;les;tial
-ce;leste
-ce;li;ac
-ce;ment
-ce;ram;ic
-ce;ram;ics
-ce;re;al
-ce;si;um
-ceas;ing
-cease
-ced;ed
-ceil;ing
-cel;e;bra;tion
-cel;e;bra;to;ry
-cel;e;brat;ed
-cel;e;brat;ing
-cel;e;brate
-cel;er;y
-cel;i;ba;cy
-cel;lar
-cel;lo
-cel;lo;phane
-cel;lu;lar
-cel;lu;loid
-cel;lu;lose
-cell
-celt
-cem;e;ter;ies
-cem;e;ter;y
-cen
-cen;sor
-cen;sor;ship
-cen;sure
-cen;sus
-cen;sus;es
-cen;taur
-cen;te;nar;y
-cen;ten;ni;al
-cen;ter
-cen;ter;fold
-cen;ter;ing
-cen;ter;line
-cen;ter;piece
-cen;tered
-cen;ti;me;ter
-cen;tra
-cen;tral
-cen;tral;i;ty
-cen;tral;i;za;tion
-cen;tral;ised
-cen;tral;ized
-cen;tral;ly
-cen;tre
-cen;tri;fuge
-cen;tric
-cen;trif;u;ga;tion
-cen;trif;u;gal
-cen;trist
-cen;troid
-cen;trum
-cen;tu;ri;on
-cen;tu;ry
-cent
-cep
-cer;e;bel;lum
-cer;e;bral
-cer;e;bro;spi;nal
-cer;e;bro;vas;cu;lar
-cer;e;mo;ni;al
-cer;e;mo;ny
-cer;tain
-cer;tain;ly
-cer;tain;ty
-cer;ti;fi;ca;tion
-cer;ti;fied
-cer;ti;fy
-cer;ti;fy;ing
-cer;ti;o;ra;ri
-cer;tif;i;cat;ed
-cer;tif;i;cate
-cer;vi;cal
-cer;vix
-cert
-ces;sa;tion
-cess
-cfi
-cha;grin
-cha;let
-cha;lets
-cha;me;le;on
-cha;os
-cha;ot;ic
-cha;rade
-cha;ris;ma
-cha;teau
-chad
-chaff
-chain
-chair
-chair;man
-chair;man;ship
-chair;wom;an
-chaise
-chak;ra
-chal;ice
-chal;leng;er
-chal;leng;ing
-chal;lenge
-chal;lenged
-chalk
-chalk;board
-cham
-cham;ber
-cham;ber;lain
-cham;bers
-cham;o;mile
-cham;ois
-cham;pagne
-cham;paign
-cham;pi;on
-cham;pi;on;ship
-champ
-chan;cel;lor
-chan;cer;y
-chan;de;lier
-chan;dler
-chan;dler;y
-chan;nel
-chan;nel;ing
-chan;neled
-chan;son
-chance
-chang;er
-chang;ing
-change
-change;a;ble
-change;o;ver
-chant
-chap
-chap;ar;ral
-chap;el
-chap;er;one
-chap;lain
-chap;lain;cy
-chap;man
-chap;ter
-chaps
-char
-char;ac;ter
-char;ac;ter;i;sa;tion
-char;ac;ter;i;za;tion
-char;ac;ter;is;ti;cal;ly
-char;ac;ter;is;tic
-char;ac;ter;ise
-char;ac;ter;ised
-char;ac;ter;iz;ing
-char;ac;ter;ize
-char;ac;ter;ized
-char;coal
-char;i;ot
-char;i;ta;ble
-char;i;ty
-char;ing
-char;is;mat;ic
-char;lie
-char;lotte
-char;ter
-char;treuse
-chard
-charg;er
-charg;ing
-charge
-charge;a;ble
-charged
-charles;ton
-charm
-charm;er
-charm;ing
-chart
-chas;er
-chas;ing
-chas;se
-chas;sis
-chas;ti;ty
-chase
-chasm
-chaste
-chat
-chat;ted
-chat;ter
-chat;ter;box
-chat;ting
-chat;ty
-chau;tau;qua
-chauf;feur
-che;la;tion
-che;mise
-che;nille
-che;rie
-cheap
-cheap;ly
-cheat
-cheat;er
-check
-check;book
-check;er
-check;er;board
-check;ered
-check;ers
-check;mate
-check;point
-check;sum
-check;up
-checked
-chee;tah
-cheek
-cheek;y
-cheep
-cheer
-cheer;ful
-cheer;ful;ly
-cheer;lead;er
-cheer;lead;ing
-cheer;y
-cheers
-chees;y
-cheese
-cheese;burg;er
-cheese;cake
-chef
-chem
-chem;i;cal
-chem;i;cal;ly
-chem;is;try
-chem;ist
-chem;o;ther;a;py
-cheque
-cher;ish
-cher;ry
-cher;ub
-cher;ubs
-ches;ter;field
-chess
-chest
-chest;nut
-chev;a;lier
-chev;ron
-chev;y
-chew
-chew;a;ble
-chew;y
-chez
-chg
-chi
-chi;an;ti
-chi;ca;no
-chi;co
-chi;me;ra
-chi;mer;ic
-chi;na
-chi;no
-chi;nook
-chi;ro;prac;tic
-chi;ro;prac;tor
-chic
-chick
-chick;en
-chick;en;pox
-chief
-chief;ly
-chief;tain
-chif;fon
-chil;dren
-chil;e
-chil;i
-chil;ler
-chil;li
-chil;ly
-child
-child;bear;ing
-child;birth
-child;hood
-child;ish
-child;less
-child;like
-chill
-chim;ney
-chim;pan;zee
-chime
-chimp
-chin
-chin;chil;la
-chine
-chip
-chip;munk
-chip;pen;dale
-chip;per
-chip;ping
-chis;el
-chit
-chiv;al;ry
-chlo;ram;phen;i;col
-chlo;ride
-chlo;rin;at;ed
-chlo;rine
-chlo;ro;form
-chlo;ro;phyll
-chlo;ro;plast
-chlor;phe;nir;a;mine
-chm
-cho;les;ter;ol
-cho;lin;er;gic
-cho;line
-cho;ral
-cho;rale
-cho;re;og;ra;pher
-cho;re;og;ra;phy
-cho;rus
-cho;rus;es
-cho;sen
-choc;o;late
-choc;taw
-chock
-choice
-choir
-chok;er
-chok;ing
-choke
-chokes
-chol;er;a
-chomp
-choos;er
-choose
-chop
-chop;in
-chop;per
-chop;pers
-chop;ping
-chop;py
-chop;sticks
-chops
-chord
-chore
-chose
-chou
-chow
-chow;der
-chow;hound
-choy
-chris;ten
-chris;ten;ing
-chro;ma
-chro;ma;tin
-chro;ma;to;graph;ic
-chro;ma;tog;ra;phy
-chro;mat;ic
-chro;mi;um
-chro;mo;so;mal
-chro;mo;some
-chro;nol;o;gy
-chrome
-chron
-chron;i;cal;ly
-chron;i;cle
-chron;ic
-chron;o;graph
-chron;o;log;i;cal
-chron;o;log;i;cal;ly
-chry;san;the;mum
-chrys;a;lis
-chs
-chub
-chub;by
-chuck
-chuck;le
-chuck;led
-chuck;y
-chum
-chump
-chunk
-chunk;y
-church
-church;yard
-churn
-churn;ing
-chut;ney
-chute
-ci;der
-ci;gar
-ci;pher
-ci;ta;tion
-ci;vil;i;ty
-ci;vil;ian
-ciao
-cic;e;ro
-cif
-cig
-cig;a;rette
-cin;der
-cin;e
-cin;e;ma
-cin;e;ma;tog;ra;pher
-cin;e;ma;tog;ra;phy
-cin;e;mat;ic
-cin;na;mon
-cinch
-cinque
-cir
-cir;ca
-cir;ca;di;an
-cir;cle
-cir;cu;la;tion
-cir;cu;la;to;ry
-cir;cu;lar
-cir;cu;lat;ed
-cir;cu;lat;ing
-cir;cu;late
-cir;cuit
-cir;cuit;ry
-cir;cum;ci;sion
-cir;cum;cised
-cir;cum;fer;ence
-cir;cum;stan;tial
-cir;cum;stance
-cir;cum;ven;tion
-cir;cum;vent
-cir;cus
-cir;rho;sis
-cir;rus
-circ
-cirque
-cis;co
-cit
-cit;a;del
-cit;ed
-cit;i;zen
-cit;i;zen;ry
-cit;i;zen;ship
-cit;ies
-cit;ing
-cit;rate
-cit;ric
-cit;rine
-cit;ron
-cit;rus
-cit;y
-cit;y;scape
-cite
-civ
-civ;i;li;sa;tion
-civ;i;li;za;tion
-civ;i;lised
-civ;i;lized
-civ;ic
-civ;ics
-civ;il
-clack
-clad
-clad;ding
-claim
-claim;ant
-clam
-clam;shell
-clamp
-clan
-clan;des;tine
-clank
-clap
-clap;ping
-clar;en;don
-clar;ence
-clar;et
-clar;i;fi;ca;tion
-clar;i;fied
-clar;i;fy
-clar;i;fy;ing
-clar;i;net
-clar;i;on
-clar;i;ty
-clar;o
-clar;y
-clas;ses
-clas;si;cal
-clas;si;cal;ly
-clas;si;cism
-clas;si;fi;a;ble
-clas;si;fi;ca;tion
-clas;si;fi;er
-clas;si;fied
-clas;si;fy
-clas;si;fy;ing
-clas;sic
-clas;sics
-clash
-clasp
-class
-class;mate
-class;room
-class;y
-clause
-clave
-claw
-clay
-clean
-clean;er
-clean;ing
-clean;li;ness
-clean;ly
-clean;up
-cleans;er
-cleans;ing
-cleanse
-clear
-clear;ance
-clear;er
-clear;ing
-clear;ly
-cleat
-cleav;age
-cleav;er
-cleave
-clef
-cleft
-clem
-clem;a;tis
-clem;en;cy
-clem;en;tine
-clem;ent
-cler;gy
-cler;gy;man
-cler;i;cal
-cler;ic
-clerk
-clerk;ship
-clev;er
-clev;er;ly
-cli;che
-cli;en;tele
-cli;ent
-cli;ma;tol;o;gy
-cli;mat;ic
-cli;mate
-cli;max
-cli;ni;cian
-click
-click;er
-cliff
-clift
-climb
-climb;er
-climb;ing
-clin;i;cal
-clin;i;cal;ly
-clin;ic
-clinch
-cline
-cling
-cling;ing
-clip
-clip;board
-clip;per
-clip;pers
-clip;ping
-clipped
-clips
-clique
-clit;o;ral
-clit;o;ris
-clo;sure
-clo;ture
-clo;ver
-cloak
-clob;ber
-clock
-clock;wise
-clock;work
-clog
-clog;ging
-cloi;son;ne
-clois;ter
-clone
-clos;er
-clos;est
-clos;et
-clos;ing
-clos;trid;i;um
-close
-close;ly
-close;ness
-close;out
-closed
-clot
-clot;ting
-cloth
-cloth;ing
-clothe
-clothes
-cloud
-cloud;ed
-cloud;y
-clough
-clout
-clove
-clown
-club
-club;bing
-club;house
-clue
-clue;less
-clum;sy
-clump
-clung
-clus;ter
-clus;tered
-clut;ter
-clutch
-cml
-co;a;li;tion
-co;ag;u;la;tion
-co;au;thor
-co;ax;i;al
-co;balt
-co;bra
-co;burg
-co;ca
-co;caine
-co;chin
-co;co
-co;co;nut
-co;coa
-co;coon
-co;da
-co;deine
-co;dex
-co;don
-co;ed
-co;ef;fi;cient
-co;en;zyme
-co;er;cion
-co;er;cive
-co;erce
-co;erced
-co;ex;ist
-co;ex;ist;ence
-co;fac;tor
-co;gent
-co;gnac
-co;hab;i;ta;tion
-co;he;sion
-co;he;sive
-co;her;ence
-co;her;ent
-co;ho
-co;hort
-co;hosh
-co;in;ci;den;tal
-co;in;ci;den;tal;ly
-co;in;ci;dence
-co;in;ci;dent
-co;in;cid;ed
-co;in;cide
-co;in;sur;ance
-co;la
-co;le;op;ter;a
-co;li;tis
-co;lo;ni;al
-co;lo;ni;al;ism
-co;logne
-co;lon
-co;lon;ic
-co;los;sal
-co;los;sus
-co;los;trum
-co;lum;nar
-co;ma
-co;me;di;an
-co;me;dic
-co;mes
-co;ney
-co;ni;fer
-co;nif;er;ous
-co;nun;drum
-co;op;er;a;tion
-co;op;er;a;tive
-co;op;er;a;tive;ly
-co;op;er;at;ed
-co;op;er;at;ing
-co;op;er;ate
-co;or;di;na;tion
-co;or;di;na;tor
-co;or;di;nat;ed
-co;or;di;nat;ing
-co;or;di;nate
-co;or;di;nates
-co;pi;lot
-co;pi;ous
-co;pol;y;mer
-co;quille
-co;ri;an;der
-co;ro;na
-co;rol;la
-co;sine
-co;sy
-co;va;lent
-co;var;i;ance
-co;vers
-co;zy
-coach
-coal
-coarse
-coarse;ly
-coast
-coast;al
-coast;er
-coast;guard
-coast;line
-coat
-coat;ed
-coat;ing
-coax
-cob
-cob;ble
-cob;ble;stone
-cob;bler
-cob;webs
-cobb
-coch;le;ar
-cock
-cock;er
-cock;pit
-cock;roach
-cock;tail
-cock;y
-cod
-cod;ed
-cod;er
-cod;i;fi;ca;tion
-cod;i;fied
-cod;ing
-code
-cof;fee
-cof;fee;house
-cof;fin
-cog
-cog;nate
-cog;ni;tion
-cog;ni;tive
-cog;ni;zant
-coil
-coin
-coin;age
-cok;er
-coke
-col
-col;i;form
-col;i;se;um
-col;ic
-col;in
-col;la;gen
-col;la;tion
-col;lab;o;ra;tion
-col;lab;o;ra;tive
-col;lab;o;ra;tive;ly
-col;lab;o;ra;tor
-col;lab;o;rat;ed
-col;lab;o;rat;ing
-col;lab;o;rate
-col;lage
-col;laps;i;ble
-col;laps;ing
-col;lapse
-col;lapsed
-col;lar
-col;lat;ed
-col;lat;er;al
-col;lat;ing
-col;late
-col;le;giate
-col;league
-col;lec;tion
-col;lec;tive
-col;lec;tive;ly
-col;lec;tor
-col;lect
-col;lect;a;ble
-col;lect;ed
-col;lect;i;ble
-col;leen
-col;lege
-col;let
-col;li;sion
-col;lid;ed
-col;lid;ing
-col;lide
-col;lie
-col;lier
-col;lier;y
-col;lins
-col;lo;ca;tion
-col;lo;qui;a
-col;lo;qui;al
-col;lo;qui;um
-col;loi;dal
-col;loid
-col;lu;sion
-col;o;ni;za;tion
-col;o;nized
-col;o;ny
-col;o;phon
-col;o;rad;o
-col;or
-col;or;a;tion
-col;or;ful
-col;or;ing
-col;or;less
-col;ored
-col;ors
-col;os;se;um
-col;um;bine
-col;umn
-col;umn;ist
-cold
-cole
-coll
-colo;nel
-colt
-com
-com;bat
-com;bat;ant
-com;bat;ing
-com;bi;na;tion
-com;bi;na;tions
-com;bi;na;to;ri;al
-com;bin;ing
-com;bine
-com;bined
-com;bo
-com;bus;ti;ble
-com;bus;tion
-com;e;dy
-com;er
-com;et
-com;eth
-com;fort
-com;fort;a;ble
-com;fort;a;bly
-com;fort;er
-com;fy
-com;i;cal
-com;ic
-com;ing
-com;ma
-com;man;dant
-com;man;do
-com;mand
-com;mand;er
-com;mand;ing
-com;mand;ment
-com;mem;o;ra;tion
-com;mem;o;ra;tive
-com;mem;o;rat;ing
-com;mem;o;rate
-com;men;da;tion
-com;men;su;rate
-com;men;ta;tor
-com;men;tar;ies
-com;men;tar;y
-com;menc;ing
-com;mence
-com;mence;ment
-com;menced
-com;mend
-com;mend;a;ble
-com;ment
-com;ment;er
-com;mer;cial
-com;mer;cial;i;za;tion
-com;mer;cial;ize
-com;mer;cial;ly
-com;merce
-com;mis
-com;mis;sar;y
-com;mis;sion
-com;mis;sion;er
-com;mit
-com;mit;ment
-com;mit;ted
-com;mit;tee
-com;mit;ting
-com;mo;dore
-com;mo;tion
-com;mod;i;ty
-com;mon
-com;mon;al;i;ty
-com;mon;ly
-com;mon;place
-com;mon;sense
-com;mon;wealth
-com;mons
-com;mu;nal
-com;mu;ni;ca;ble
-com;mu;ni;ca;tion
-com;mu;ni;ca;tive
-com;mu;ni;ca;tor
-com;mu;ni;cat;ed
-com;mu;ni;cat;ing
-com;mu;ni;cate
-com;mu;ni;que
-com;mu;ni;ty
-com;mu;ta;tion
-com;mu;ta;tive
-com;mun;ion
-com;mun;ism
-com;mun;ist
-com;mune
-com;mut;er
-com;mut;ing
-com;mute
-com;pa;gnie
-com;pa;ny
-com;pa;ra;bil;i;ty
-com;pa;ra;ble
-com;pac;tion
-com;pact
-com;pact;ness
-com;pan;ion
-com;pan;ion;ship
-com;par;a;tive
-com;par;a;tive;ly
-com;par;a;tor
-com;par;i;son
-com;par;ing
-com;pare
-com;pared
-com;part;ment
-com;pas;sion
-com;pas;sion;ate
-com;pass
-com;pat;i;bil;i;ty
-com;pat;i;ble
-com;pe;ten;cy
-com;pe;tence
-com;pe;tent
-com;pe;tent;ly
-com;pe;ti;tion
-com;pel
-com;pel;ling
-com;pelled
-com;pen;di;um
-com;pen;sa;tion
-com;pen;sa;to;ry
-com;pen;sat;ed
-com;pen;sat;ing
-com;pen;sate
-com;pet;ed
-com;pet;i;tive
-com;pet;i;tive;ly
-com;pet;i;tive;ness
-com;pet;i;tor
-com;pet;ing
-com;pete
-com;pi;la;tion
-com;pil;er
-com;pil;ing
-com;pile
-com;piled
-com;pla;cen;cy
-com;pla;cent
-com;plain
-com;plain;ant
-com;plaint
-com;ple;men;ta;ry
-com;ple;ment
-com;ple;ment;ed
-com;ple;tion
-com;plet;ed
-com;plet;ing
-com;plete
-com;plete;ly
-com;plete;ness
-com;plex
-com;plex;i;ty
-com;plex;ion
-com;pli;ance
-com;pli;ant
-com;pli;ca;tion
-com;pli;cat;ed
-com;pli;cat;ing
-com;pli;cate
-com;pli;men;ta;ry
-com;pli;ment
-com;plic;i;ty
-com;plied
-com;ply
-com;ply;ing
-com;po
-com;po;nent
-com;po;si;tion
-com;po;si;tion;al
-com;po;sure
-com;pos;er
-com;pos;ing
-com;pos;ite
-com;pose
-com;posed
-com;post
-com;pound
-com;pre;hen;si;ble
-com;pre;hen;sion
-com;pre;hen;sive
-com;pre;hen;sive;ly
-com;pre;hend
-com;pres;sion
-com;pres;sive
-com;pres;sor
-com;press
-com;press;i;ble
-com;pressed
-com;pris;ing
-com;prise
-com;prised
-com;pro;mis;ing
-com;pro;mise
-com;pro;mised
-com;pu;ta;tion
-com;pu;ta;tion;al
-com;pu;ter;ized
-com;pul;sion
-com;pul;sive
-com;pul;so;ry
-com;put;a;ble
-com;put;ed
-com;put;er
-com;put;ing
-com;pute
-com;rade
-comb
-combe
-come
-come;back
-comm
-comp
-comp;trol;ler
-con
-con;cat;e;na;tion
-con;cat;e;nat;ed
-con;cave
-con;ceal
-con;ceal;er
-con;ceal;ment
-con;ced;ed
-con;cede
-con;ceit
-con;ceiv;a;ble
-con;ceiv;a;bly
-con;ceive
-con;ceived
-con;cen;tra;tion
-con;cen;tra;tor
-con;cen;trat;ed
-con;cen;trat;ing
-con;cen;trate
-con;cen;tric
-con;cep;tion
-con;cep;tu;al
-con;cep;tu;al;i;za;tion
-con;cep;tu;al;ly
-con;cept
-con;cer;to
-con;cern
-con;cern;ing
-con;cerned
-con;cert
-con;cert;ed
-con;ces;sion
-con;cierge
-con;cil;i;a;tion
-con;cise
-con;cise;ly
-con;clave
-con;clu;sion
-con;clu;sive
-con;clu;sive;ly
-con;clud;ed
-con;clud;ing
-con;clude
-con;com;i;tant
-con;cord
-con;cord;ance
-con;course
-con;crete
-con;cur
-con;cur;rence
-con;cur;rent
-con;cur;rent;ly
-con;cur;ring
-con;curred
-con;cus;sion
-con;de;scend;ing
-con;dem;na;tion
-con;demn
-con;den;sa;tion
-con;den;sate
-con;dens;er
-con;dens;ing
-con;densed
-con;di;ment
-con;di;tion
-con;di;tion;al
-con;di;tion;al;ly
-con;di;tion;er
-con;di;tion;ing
-con;di;tioned
-con;do;min;i;um
-con;dom
-con;done
-con;dor
-con;du;cive
-con;duc;tion
-con;duc;tiv;i;ty
-con;duc;tive
-con;duc;tor
-con;duct
-con;duct;ance
-con;duit
-con;fec;tion;er;y
-con;fed;er;a;cy
-con;fed;er;a;tion
-con;fed;er;ate
-con;fer
-con;fer;ence
-con;fer;ring
-con;ferred
-con;fes;sion
-con;fes;sion;al
-con;fess
-con;fet;ti
-con;fi;den;ti;al;i;ty
-con;fi;den;tial
-con;fi;den;tial;ly
-con;fi;dence
-con;fi;dent
-con;fi;dent;ly
-con;fig;u;ra;tion
-con;fig;ure
-con;fin;ing
-con;fine
-con;fine;ment
-con;fined
-con;fir;ma;tion
-con;firm
-con;firmed
-con;fis;ca;tion
-con;fis;cat;ed
-con;flict
-con;flu;ence
-con;fo;cal
-con;for;ma;tion
-con;for;mal
-con;form
-con;form;ance
-con;form;i;ty
-con;found
-con;found;ed
-con;fron;ta;tion
-con;front
-con;fu;sion
-con;fus;ing
-con;fuse
-con;fused
-con;ga
-con;gen;i;tal
-con;gen;ial
-con;ges;tion
-con;ges;tive
-con;glom;er;ate
-con;go
-con;grat;u;la;tion
-con;grat;u;la;tions
-con;grat;u;lat;ed
-con;grat;u;lat;ing
-con;grat;u;late
-con;grats
-con;gre;ga;tion
-con;gre;ga;tion;al
-con;gre;gate
-con;gres;sion;al
-con;gress
-con;gress;man
-con;gress;wom;an
-con;gru;ence
-con;gru;ent
-con;i;cal
-con;jec;ture
-con;ju;ga;tion
-con;ju;gat;ed
-con;ju;gate
-con;junc;ti;vi;tis
-con;junc;tion
-con;jure
-con;nec;tion
-con;nec;tiv;i;ty
-con;nec;tive
-con;nec;tor
-con;nect
-con;nect;ed
-con;nect;ed;ness
-con;nex;ion
-con;no;ta;tion
-con;nois;seur
-con;quer
-con;quer;or
-con;quest
-con;sci;en;tious
-con;science
-con;scious
-con;scious;ly
-con;scious;ness
-con;scrip;tion
-con;se;cra;tion
-con;se;crat;ed
-con;se;quen;tial
-con;se;quenc;es
-con;se;quence
-con;se;quent
-con;se;quent;ly
-con;sec;u;tive
-con;sec;u;tive;ly
-con;sen;su;al
-con;sen;sus
-con;sent
-con;ser;va;tor
-con;serv;a;tism
-con;serv;a;tive
-con;serv;a;tive;ly
-con;serv;a;tory
-con;serv;an;cy
-con;serve
-con;sid;er
-con;sid;er;a;ble
-con;sid;er;a;bly
-con;sid;er;a;tion
-con;sid;er;ate
-con;sid;er;ing
-con;sid;ered
-con;sign;ee
-con;sign;ment
-con;sist
-con;sist;en;cy
-con;sist;ent
-con;sist;ent;ly
-con;so;la;tion
-con;so;nant
-con;sol;i;da;tion
-con;sol;i;da;tor
-con;sol;i;dat;ed
-con;sol;i;dat;ing
-con;sol;i;date
-con;sole
-con;sor;ti;a
-con;sor;ti;um
-con;sort
-con;spic;u;ous
-con;spic;u;ous;ly
-con;spir;a;cy
-con;spir;ing
-con;spired
-con;sta;ble
-con;stab;u;lar;y
-con;stan;cy
-con;stant
-con;stant;ly
-con;stel;la;tion
-con;sti;pa;tion
-con;sti;tu;tion
-con;sti;tu;tion;al
-con;sti;tu;tion;al;i;ty
-con;sti;tu;tion;al;ly
-con;sti;tu;tive
-con;sti;tut;ed
-con;sti;tut;ing
-con;sti;tute
-con;stit;u;en;cy
-con;stit;u;ent
-con;strain
-con;strained
-con;straint
-con;stric;tion
-con;struc;tion
-con;struc;tive
-con;struc;tive;ly
-con;struc;tor
-con;struct
-con;strued
-con;su;lar
-con;su;late
-con;sul
-con;sul;ta;tion
-con;sult
-con;sult;a;tive
-con;sult;ant
-con;sult;ing
-con;sum;a;ble
-con;sum;er
-con;sum;er;ism
-con;sum;ing
-con;sum;ma;tion
-con;sum;mate
-con;sume
-con;sumed
-con;sump;tion
-con;ta;gion
-con;ta;gious
-con;tact
-con;tain
-con;tain;er
-con;tain;ment
-con;tained
-con;tam;i;na;tion
-con;tam;i;nant
-con;tam;i;nat;ed
-con;tam;i;nat;ing
-con;tam;i;nate
-con;tem;pla;tion
-con;tem;pla;tive
-con;tem;plat;ed
-con;tem;plat;ing
-con;tem;plate
-con;tem;po;ra;ne;ous
-con;tem;po;rar;ies
-con;tem;po;rar;y
-con;tempt
-con;ten;tion
-con;ten;tious
-con;tend
-con;tent
-con;tent;ed
-con;tent;ment
-con;test
-con;test;ant
-con;tex;tu;al
-con;text
-con;ti;nen;tal
-con;ti;nence
-con;ti;nent
-con;ti;nu;i;ty
-con;tig;u;ous
-con;tin;gen;cy
-con;tin;gent
-con;tin;u;a
-con;tin;u;a;tion
-con;tin;u;al
-con;tin;u;al;ly
-con;tin;u;ance
-con;tin;u;ing
-con;tin;u;ous
-con;tin;u;ous;ly
-con;tin;u;um
-con;tin;ue
-con;tin;ued
-con;to
-con;tour
-con;tra
-con;tra;band
-con;tra;cep;tion
-con;tra;cep;tive
-con;tra;dic;tion
-con;tra;dic;to;ry
-con;tra;dict
-con;tra;ry
-con;tra;ven;tion
-con;trac;tion
-con;trac;tor
-con;trac;tu;al
-con;trac;tu;al;ly
-con;tract
-con;tract;ed
-con;trast
-con;tri;bu;tion
-con;tri;but;ed
-con;tri;but;ing
-con;trib;u;to;ry
-con;trib;u;tor
-con;trib;ute
-con;trived
-con;tro;ver;sial
-con;tro;ver;sy
-con;trol
-con;trol;la;ble
-con;trol;ler
-con;trol;ling
-con;trolled
-con;va;les;cent
-con;vec;tion
-con;vec;tive
-con;ven;er
-con;ven;ience
-con;ven;ient
-con;ven;ient;ly
-con;ven;ing
-con;ven;or
-con;ven;tion
-con;ven;tion;al
-con;ven;tion;al;ly
-con;vene
-con;vened
-con;vent
-con;ver;gence
-con;ver;gent
-con;ver;sa;tion
-con;ver;sa;tion;al
-con;ver;sion
-con;ver;tor
-con;verg;ing
-con;verge
-con;verged
-con;vers;ing
-con;verse
-con;verse;ly
-con;vert
-con;vert;ed
-con;vert;er
-con;vert;i;ble
-con;vex
-con;vey
-con;vey;anc;ing
-con;vey;ance
-con;vey;or
-con;vic;tion
-con;vict
-con;vinc;ing
-con;vinc;ing;ly
-con;vince
-con;vinced
-con;vo;ca;tion
-con;vo;lu;tion
-con;vo;lut;ed
-con;voy
-conc
-conch
-concur;ren;cy
-cone
-conf
-cong
-conn
-cons
-conserva;tion
-const
-constr
-cont
-conte
-contr
-coo
-cook
-cook;book
-cook;er
-cook;er;y
-cook;ie
-cook;ies
-cook;ing
-cook;ware
-cool
-cool;ant
-cool;er
-cool;ness
-coon
-coop
-coop;er
-cop
-cop;i;er
-cop;ied
-cop;ies
-cop;ing
-cop;per
-cop;y
-cop;y;cat
-cop;y;ing
-cop;y;right
-cop;y;right;ed
-cop;y;writ;er
-cop;y;writ;ing
-cope
-cor
-cor;al
-cor;by
-cor;dial
-cor;dial;ly
-cor;dis
-cor;do;ba
-cor;don
-cor;du;roy
-cor;gi
-cor;mo;rant
-cor;ne;a
-cor;ne;al
-cor;ner
-cor;ner;stone
-cor;nered
-cor;net
-cor;nu;co;pi;a
-cor;o;na;tion
-cor;o;nal
-cor;o;nar;y
-cor;o;ner
-cor;o;net
-cor;ol;lar;y
-cor;po;ra
-cor;po;ra;tion
-cor;po;ral
-cor;po;rate
-cor;pus
-cor;ral
-cor;re;la;tion
-cor;re;lat;ed
-cor;re;lat;ing
-cor;re;late
-cor;re;spond
-cor;re;spond;ence
-cor;re;spond;ent
-cor;re;spond;ing;ly
-cor;rec;tion
-cor;rec;tion;al
-cor;rec;tive
-cor;rec;tor
-cor;rect
-cor;rect;ly
-cor;rect;ness
-cor;ren;te
-cor;ri;dor
-cor;rie
-cor;ro;sion
-cor;ro;sive
-cor;rob;o;rat;ed
-cor;ru;gat;ed
-cor;rup;tion
-cor;rupt
-cor;sair
-cor;set
-cor;t
-cor;tex
-cor;ti;cal
-cor;ti;co;ster;oid
-cor;ti;sol
-cor;vette
-cord
-cord;ed
-cord;less
-cords
-core
-cork
-cork;screw
-cork;y
-corn
-corn;starch
-corn;y
-corp
-corps
-corpse
-corr
-corse
-cos
-cos;me;tol;o;gy
-cos;met;ic
-cos;mic
-cos;mo;log;i;cal
-cos;mo;pol;i;tan
-cos;mol;o;gy
-cos;mos
-cos;ta
-cos;tume
-cosh
-cost
-cost;ing
-cost;ly
-cot
-cot;ta
-cot;tage
-cot;ter
-cot;ton
-cot;ton;wood
-cote
-cou;gar
-cou;lee
-cou;lomb
-cou;ple
-cou;pler
-cou;pon
-cou;ra;geous
-cou;ra;geous;ly
-cou;rant
-cou;ture
-couch
-cough
-coul;ter
-could
-coun;ci;lor
-coun;cil
-coun;cil;lor
-coun;cil;man
-coun;cil;wom;an
-coun;se;lor
-coun;sel
-coun;sel;ing
-coun;sel;ling
-coun;sel;lor
-coun;seled
-coun;te;nance
-coun;ter;act
-coun;ter;clock;wise
-coun;ter;feit
-coun;ter;part
-coun;ter;point
-coun;ter;pro;duc;tive
-coun;ter;punch
-coun;tess
-coun;try
-coun;try;man
-coun;try;side
-coun;try;wide
-coun;ty
-count
-count;a;ble
-count;down
-count;er
-count;less
-coup
-coup;ling
-coupe
-cour;age
-cour;i;er
-cour;te;ous
-cour;te;sy
-cours;es
-course
-court
-court;house
-court;room
-court;ship
-court;yard
-cous;in
-cov;e;nant
-cov;en
-cov;er
-cov;er;age
-cov;er;ing
-cov;ered
-cov;ert
-cov;ey
-cove
-cow
-cow;ard
-cow;ard;ice
-cow;ard;ly
-cow;bell
-cow;boy
-cow;girl
-cow;hide
-cowl
-cox
-coy
-coy;ote
-coz
-cpd
-cps
-cr;l
-cra;dle
-cra;ni;al
-cra;ni;um
-cra;ter
-cra;ven
-cra;zi;ness
-cra;zy
-crab
-crabs
-crack
-crack;down
-crack;er
-crack;ers
-crack;ing
-crack;le
-crack;ling
-cracked
-craft
-craft;y
-crafts;man
-crafts;man;ship
-crag
-cram
-cramp
-cramped
-cran
-cran;ber;ry
-cran;dall
-crane
-crank
-crank;shaft
-crank;y
-crap
-crap;pie
-craps
-crash
-crash;ing
-crass
-crate
-crav;ing
-crave
-craw;fish
-crawl
-crawl;er
-cray
-cray;fish
-cray;on
-craze
-crazed
-cre;a;tine
-cre;a;tion
-cre;a;tion;ism
-cre;a;tion;ist
-cre;a;tiv;i;ty
-cre;a;tive
-cre;a;tive;ly
-cre;a;tor
-cre;at;ed
-cre;at;i;nine
-cre;at;ing
-cre;ate
-cre;den;tial
-cre;dence
-cre;do
-cre;ma;tion
-cre;ole
-cre;scen;do
-cre;ta;ceous
-crea;ture
-cream
-cream;er
-cream;er;y
-cream;y
-crease
-cred;i;bil;i;ty
-cred;i;ble
-cred;i;tor
-cred;it
-cred;it;a;ble
-cred;its
-cree
-creed
-creek
-creep
-creep;er
-creep;ing
-creep;y
-creeps
-crem;a;to;ri;um
-crepe
-crept
-cres;cent
-cress
-crest
-crest;ed
-crew
-crew;neck
-cri;er
-cri;sis
-cri;te;ri;a
-cri;te;ri;on
-cri;tique
-crib
-crib;bage
-crick
-crick;et
-crick;et;er
-cried
-crim
-crim;i;nal
-crim;i;nal;i;ty
-crim;i;nal;ly
-crim;i;nol;o;gy
-crim;son
-crime
-crimp
-cringe
-crip;ple
-crip;pling
-crisp
-crisp;y
-criss;cross
-crit
-crit;i;cal
-crit;i;cal;ly
-crit;i;cise
-crit;i;cised
-crit;i;cism
-crit;i;ciz;ing
-crit;i;cize
-crit;i;cized
-crit;ic
-crit;ter
-cro;chet
-cro;cus
-cro;quet
-cro;ton
-croc;o;dile
-crock
-crock;er;y
-croft
-crook
-crook;ed
-crop
-crop;land
-crop;ping
-crore
-cross
-cross;bar
-cross;bow
-cross;cut
-cross;fire
-cross;ing
-cross;o;ver
-cross;road
-cross;roads
-cross;talk
-cross;walk
-crosse
-crossed
-crotch
-crouch
-croup;i;er
-crouse
-crow
-crow;bar
-crowd
-crowd;ed
-crown
-crown;ing
-crowned
-cru
-cru;ces
-cru;ci;ble
-cru;ci;fied
-cru;ci;fix
-cru;ci;fix;ion
-cru;cial
-cru;cial;ly
-cru;el
-cru;el;ly
-cru;el;ty
-cru;sad;er
-cru;sade
-crud
-crude
-cruis;er
-cruis;ing
-cruise
-crum
-crum;ble
-crum;pled
-crumb
-crumbs
-crump
-crunch
-crunch;y
-crus;tal
-crush
-crush;er
-crush;ing
-crust
-crust;y
-crutch
-crux
-cry
-cry;ing
-cry;o;gen;ic
-cryp;tic
-cryp;to;graph;ic
-cryp;tog;ra;phy
-crypt
-crys;tal
-crys;tal;li;za;tion
-crys;tal;line
-crys;tal;lized
-crys;tal;lo;graph;ic
-crys;tal;log;ra;phy
-csc
-ctn
-ctr
-cts
-cu;bi;cle
-cu;bic
-cu;cum;ber
-cu;da
-cu;mu;la;tive
-cu;mu;lus
-cu;ra;tor
-cu;res
-cu;ri;ae
-cu;ri;o
-cu;ri;os
-cu;ri;os;i;ty
-cu;ri;ous
-cu;ri;ous;ly
-cu;rie
-cu;ta;ne;ous
-cu;ti;cle
-cub
-cube
-cuck;old
-cuck;oo
-cud
-cud;dle
-cue
-cues;ta
-cuff
-cuffs
-cui;sine
-cul;i;nar;y
-cul;mi;na;tion
-cul;mi;nat;ed
-cul;mi;nat;ing
-cul;mi;nate
-cul;pa
-cul;prit
-cul;ti;va;tion
-cul;ti;var
-cul;ti;vat;ed
-cul;ti;vat;ing
-cul;ti;vate
-cul;tur;al
-cul;tur;al;ly
-cul;ture
-cul;tured
-cul;ver
-cul;vert
-cull
-cult
-cum
-cum;ber;some
-cum;in
-cun;ni;lin;gus
-cun;ning
-cunt
-cup
-cup;board
-cup;cake
-cur
-cur;a;tive
-cur;few
-cur;ing
-cur;mudg;eon
-cur;rant
-cur;ren;cy
-cur;rent
-cur;rent;ly
-cur;ri;er
-cur;ric;u;lar
-cur;ric;u;lum
-cur;rie
-cur;ry
-cur;sive
-cur;so;ry
-cur;sor
-cur;tail
-cur;tain
-cur;tains
-cur;va;ture
-curb
-curb;ing
-curd
-cure
-curl
-curl;ing
-curl;y
-curr
-curs;ed
-curs;es
-curs;ing
-curse
-curt
-curv;ing
-curv;y
-curve
-cus;tard
-cus;to;di;al
-cus;to;di;an
-cus;to;dy
-cus;tom
-cus;tom;ar;i;ly
-cus;tom;ar;y
-cus;tom;er
-cus;tom;ise
-cus;tom;ize
-cus;toms
-cush;ion
-cusp
-cuss
-cut
-cut;a;way
-cut;est
-cut;ie
-cut;lass
-cut;ler
-cut;ler;y
-cut;off
-cut;out
-cut;ter
-cut;throat
-cut;ting
-cute
-cwm
-cwt
-cy;a;nide
-cy;an
-cy;ber;net;ics
-cy;cle
-cy;cli;cal
-cy;clic
-cy;cling
-cy;clist
-cy;clo;tron
-cy;clon;ic
-cy;clone
-cy;lin;dri;cal
-cy;pher
-cy;press
-cy;prus
-cy;to;chrome
-cy;to;ge;net;ic
-cy;to;plas;mic
-cy;to;plasm
-cy;to;tox;ic
-cy;tol;o;gy
-cyc
-cyc;la;des
-cyl
-cyl;in;der
-cym;bal
-cyn;i;cal
-cyn;i;cism
-cyn;ic
-cys;te;ine
-cys;ti;tis
-cyst
-cyst;ic
-czar
-d;j
-da;do
-da;la;si
-da;ta
-da;to
-da;tum
-dab
-dachs;hund
-dad
-dad;dy
-dae;mon
-daf;fo;dil
-daff;y
-daft
-dag
-dag;ger
-dah
-dahl;ia
-dai;lies
-dai;ly
-dai;sy
-dain;ty
-dair;ies
-dair;y
-dak
-dal
-dal;ton
-dale
-dalles
-dam
-dam;ag;es
-dam;ag;ing
-dam;age
-dam;aged
-dam;an
-dam;ask
-dam;mit
-dam;na;tion
-dam;sel
-dame
-damn
-damn;ing
-damned
-damp
-damp;en
-damp;er
-dan
-dan;de;li;on
-dan;druff
-dan;dy
-dan;ger
-dan;ger;ous
-dan;ger;ous;ly
-dan;gle
-dan;ny
-danc;er
-danc;ing
-dance
-dang
-dank
-dap
-dap;per
-daph;ne
-dar;by
-dar;ing
-dar;ling
-dard
-dare
-dare;dev;il
-dark
-dark;en
-dark;ly
-dark;ness
-dark;room
-darn
-darned
-dart
-darts
-dash
-dash;board
-dash;ing
-dashed
-dat
-dat;ed
-dat;ing
-date
-date;line
-dates
-dau
-dau;phin
-daugh;ter
-dav;en;port
-daw
-dawn
-day
-day;bed
-day;break
-day;dream
-day;light
-day;time
-days
-daz;zle
-daze
-dbl
-de;ac;ti;va;tion
-de;ac;ti;vat;ed
-de;ac;tiv;ate
-de;ba;cle
-de;bar;ment
-de;bat;a;ble
-de;bat;ed
-de;bat;ing
-de;bate
-de;bauch;er;y
-de;bil;i;tat;ing
-de;bris
-de;bug
-de;bug;ging
-de;but
-de;cal
-de;cant;er
-de;cap;i;tat;ed
-de;car;box;yl;ase
-de;cath;lon
-de;cay
-de;ce;dent
-de;ceased
-de;ceit
-de;ceit;ful
-de;ceiv;ing
-de;ceive
-de;ceived
-de;cel;er;a;tion
-de;cen;cy
-de;cen;tral;i;za;tion
-de;cen;tral;ised
-de;cen;tral;ized
-de;cent
-de;cep;tion
-de;cep;tive
-de;cep;tive;ly
-de;ci;pher
-de;ci;sion
-de;ci;sive
-de;ci;sive;ly
-de;cid;ed
-de;cid;ed;ly
-de;cid;ing
-de;cid;u;ous
-de;cide
-de;clar;a;tive
-de;clar;a;to;ry
-de;clar;ing
-de;clare
-de;clared
-de;clas;si;fied
-de;clin;ing
-de;cline
-de;clined
-de;co;rum
-de;cod;ed
-de;cod;er
-de;cod;ing
-de;code
-de;com;po;si;tion
-de;com;pos;ing
-de;com;pose
-de;com;posed
-de;com;pres;sion
-de;com;press
-de;con;tam;i;na;tion
-de;cor
-de;cou;page
-de;cou;pling
-de;coy
-de;creas;ing
-de;crease
-de;cree
-de;creed
-de;crypt
-de;duc;tion
-de;duc;tive
-de;duce
-de;duced
-de;duct
-de;duct;i;ble
-de;faced
-de;fam;a;to;ry
-de;fam;er
-de;fault
-de;feat
-de;fec;tive
-de;fect
-de;fen;si;ble
-de;fen;sive
-de;fen;sive;ly
-de;fence
-de;fend
-de;fend;ant
-de;fend;er
-de;fense
-de;fense;man
-de;fer
-de;fer;ment
-de;fer;ral
-de;ferred
-de;fi;ance
-de;fi;ant
-de;fi;ant;ly
-de;fi;cien;cy
-de;fi;cient
-de;fib;ril;la;tor
-de;fin;a;ble
-de;fin;i;tive
-de;fin;i;tive;ly
-de;fin;ing
-de;fine
-de;fined
-de;fla;tion
-de;flat;ed
-de;flate
-de;flec;tion
-de;flec;tor
-de;flect
-de;flect;ed
-de;for;est;a;tion
-de;for;ma;tion
-de;form;i;ty
-de;formed
-de;fraud
-de;fray
-de;frost
-de;funct
-de;fuse
-de;fy
-de;gas
-de;gen;er;a;tion
-de;gen;er;a;tive
-de;gen;er;ate
-de;grad;ed
-de;grad;ing
-de;grade
-de;gree
-de;hu;mid;i;fi;er
-de;hy;dra;tion
-de;hy;drat;ed
-de;hy;dro;gen;ase
-de;i;ty
-de;lay
-de;le;tion
-de;lec;ta;ble
-de;let;ed
-de;let;ing
-de;lete
-de;li;cious
-de;li;cious;ly
-de;lib;er;a;tion
-de;lib;er;a;tive
-de;lib;er;ate
-de;lib;er;ate;ly
-de;light
-de;light;ed
-de;light;ful
-de;light;ful;ly
-de;lin;e;a;tion
-de;lin;e;at;ed
-de;lin;e;ate
-de;lin;quen;cy
-de;lin;quent
-de;lir;i;ous
-de;lir;i;um
-de;liv;er
-de;liv;er;a;ble
-de;liv;er;ance
-de;liv;er;ies
-de;liv;er;y
-de;lu;sion
-de;lu;sion;al
-de;lud;ed
-de;luxe
-de;mand
-de;mand;ing
-de;mar;ca;tion
-de;mean;or
-de;men;tia
-de;ment;ed
-de;mise
-de;mo;graph;ic
-de;moc;ra;cy
-de;moc;ra;ti;za;tion
-de;mog;ra;phy
-de;mol;ish
-de;mon
-de;mon;ic
-de;mon;stra;ble
-de;mon;stra;bly
-de;ni;al
-de;nied
-de;nom;i;na;tion
-de;nom;i;na;tion;al
-de;nom;i;na;tor
-de;nom;i;nat;ed
-de;not;ed
-de;not;ing
-de;note
-de;nounc;ing
-de;nounce
-de;nounced
-de;ny
-de;ny;ing
-de;o;dor;ant
-de;par;ture
-de;part
-de;part;ed
-de;part;men;tal
-de;part;ment
-de;pend
-de;pend;a;bil;i;ty
-de;pend;a;ble
-de;pend;ant
-de;pend;en;cy
-de;pend;ence
-de;pend;ent
-de;pic;tion
-de;pict
-de;ple;tion
-de;plet;ed
-de;plet;ing
-de;plor;a;ble
-de;ploy
-de;ploy;ment
-de;por;ta;tion
-de;port
-de;pos;i;tar;y
-de;pos;i;to;ry
-de;pos;i;tor
-de;pos;it
-de;posed
-de;pot
-de;prav;i;ty
-de;praved
-de;pre;ci;a;tion
-de;pre;ci;at;ed
-de;pres;sant
-de;pres;sion
-de;pres;sive
-de;press
-de;pressed
-de;priv;ing
-de;prive
-de;prived
-de;rail
-de;rail;leur
-de;ranged
-de;riv;a;tive
-de;rive
-de;rived
-de;rog;a;to;ry
-de;sal;i;na;tion
-de;scend
-de;scend;ant
-de;scent
-de;scrib;ing
-de;scribe
-de;scribed
-de;scrip;tion
-de;scrip;tive
-de;seg;re;ga;tion
-de;sert;ed
-de;serv;ing
-de;serve
-de;served
-de;sign
-de;sign;er
-de;sign;ing
-de;signed
-de;sir;a;bil;i;ty
-de;sir;a;ble
-de;sir;ing
-de;sir;ous
-de;sire
-de;sired
-de;sist
-de;sorp;tion
-de;spised
-de;spite
-de;stroy
-de;stroy;er
-de;struc;tion
-de;struc;tive
-de;struc;tor
-de;struct
-de;tach
-de;tach;a;ble
-de;tach;ment
-de;tached
-de;tail
-de;tailed
-de;tain
-de;te;ri;o;ra;tion
-de;te;ri;o;rat;ed
-de;te;ri;o;rat;ing
-de;te;ri;o;rate
-de;tec;tion
-de;tec;tive
-de;tec;tor
-de;tect
-de;tect;a;ble
-de;ten;tion
-de;ter
-de;ter;gent
-de;ter;mi;na;tion
-de;ter;mi;nant
-de;ter;min;ing
-de;ter;min;is;tic
-de;ter;min;ism
-de;ter;mine
-de;ter;mined
-de;ter;rence
-de;ter;rent
-de;terred
-de;tour
-de;tox;i;fi;ca;tion
-de;tract
-de;tri;tus
-de;va
-de;val;u;a;tion
-de;vel;op
-de;vel;op;er
-de;vel;op;ing
-de;vel;op;men;tal
-de;vel;op;ment
-de;vel;ope;ment
-de;vel;oped
-de;vi;a;tion
-de;vi;ance
-de;vi;ant
-de;vi;ate
-de;vi;ous
-de;vice
-de;vis;ing
-de;vise
-de;vised
-de;vo;tion
-de;vo;tion;al
-de;void
-de;volved
-de;vot;ed
-de;vot;ing
-de;vote
-de;vour
-de;vout
-dea;con
-dea;con;ess
-dead
-dead;li;est
-dead;line
-dead;lock
-dead;ly
-dead;wood
-deaf
-deaf;en;ing
-deaf;ness
-deal
-deal;er
-deal;er;ship
-deal;ing
-deal;ings
-dealt
-dean
-dear
-dear;ly
-dearth
-death
-deb
-deb;it
-debt
-debt;or
-dec
-dec;a;dence
-dec;a;dent
-dec;ade
-dec;i;bel
-dec;i;ma;tion
-dec;i;mal
-dec;i;mat;ed
-dec;la;ra;tion
-dec;li;na;tion
-dec;o;ra;tion
-dec;o;ra;tive
-dec;o;ra;tor
-dec;o;rat;ed
-dec;o;rat;ing
-dec;o;rate
-dec;re;ment
-deck
-deck;er
-deck;ing
-decks
-decl
-ded;i;ca;tion
-ded;i;cat;ed
-ded;i;cat;ing
-ded;i;cate
-dee
-dee;jay
-deed
-deem
-deep
-deep;en
-deep;ly
-deep;wa;ter
-deer
-def
-def;a;ma;tion
-def;er;ence
-def;i;cit
-def;i;ni;tion
-def;i;nite
-def;i;nite;ly
-deft
-deft;ly
-deg
-deg;ra;da;tion
-del
-del;e;ga;tion
-del;e;gat;ed
-del;e;gat;ing
-del;e;gate
-del;e;te;ri;ous
-del;i
-del;i;ca;cy
-del;i;ca;tes;sen
-del;i;cate
-del;i;cate;ly
-del;la
-del;ta
-del;uge
-delft
-dell
-dells
-delv;ing
-delve
-dem;o
-dem;o;crat
-dem;o;crat;i;cal;ly
-dem;o;crat;ic
-dem;o;li;tion
-dem;on;stra;tion
-dem;on;stra;tor
-dem;on;strat;ed
-dem;on;strat;ing
-dem;on;strate
-dem;os
-demp;ster
-den
-den;drit;ic
-den;gue
-den;ier
-den;im
-den;ning
-den;si;ty
-den;tal
-den;tist
-den;tist;ry
-den;ture
-dene
-dens
-dens;er
-dense
-dense;ly
-dent
-dep
-dep;o;si;tion
-dep;re;cat;ed
-dep;ri;va;tion
-dep;u;ty
-dept
-depth
-der
-der;by
-der;e;lict
-der;i;va;tion
-der;ma
-der;ma;ti;tis
-der;ma;tol;o;gist
-der;ma;tol;o;gy
-der;mal
-der;o;ga;tion
-der;rick
-der;ry
-derm
-des
-des;e;cra;tion
-des;ert
-des;ig;na;tion
-des;ig;na;tor
-des;ig;nat;ed
-des;ig;nat;ing
-des;ig;nate
-des;ig;nee
-des;o;la;tion
-des;o;late
-des;pair
-des;patch
-des;per;a;do
-des;per;a;tion
-des;per;ate
-des;per;ate;ly
-des;pic;a;ble
-des;pise
-des;sert
-des;ti;na;tion
-des;ti;ny
-des;ti;tute
-des;tined
-desc
-desk
-det;o;na;tion
-det;o;na;tor
-det;o;nat;ed
-det;ri;men;tal
-det;ri;ment
-deu;ter;i;um
-deuce
-dev;as;ta;tion
-dev;as;tat;ed
-dev;as;tat;ing
-dev;el
-dev;il
-dev;il;ish
-dev;o;lu;tion
-dev;o;tee
-dew
-dex;a;meth;a;sone
-dex;ter
-dex;ter;i;ty
-dex;trose
-dey
-dham;ma
-dhar;ma
-di;a;be;tes
-di;a;bet;ic
-di;a;bol;i;cal
-di;a;bol;ic
-di;a;gram
-di;a;lec;ti;cal
-di;a;lec;tic
-di;a;lect
-di;a;log
-di;a;log;ic
-di;a;logue
-di;a;man;t
-di;a;phragm
-di;a;ry
-di;a;tom
-di;ag;no;sis
-di;ag;nos;ing
-di;ag;nos;tic
-di;ag;nos;tics
-di;ag;nose
-di;ag;nosed
-di;ag;o;nal
-di;ag;o;nal;ly
-di;al;er
-di;al;ing
-di;al;ling
-di;al;y;sis
-di;aled
-di;am;e;ter
-di;ar;rhe;a
-di;ar;rhoe;a
-di;as;tol;ic
-di;chot;o;my
-di;chro;ic
-di;dac;tic
-di;do
-di;e;lec;tric
-di;e;tar;y
-di;e;tet;ic
-di;e;tet;ics
-di;e;ti;tian
-di;et
-di;et;er
-di;et;ing
-di;ges;tion
-di;ges;tive
-di;gest
-di;gest;er
-di;gress
-di;la;tion
-di;lap;i;dat;ed
-di;lat;ed
-di;lem;ma
-di;lu;tion
-di;lut;ed
-di;lute
-di;men;sion
-di;men;sion;al
-di;men;sion;al;i;ty
-di;men;sion;less
-di;mer
-di;meth;yl
-di;min;ish
-di;min;ished
-di;min;u;tive
-di;nar
-di;nette
-di;no;saur
-di;o;cese
-di;o;ram;a
-di;oc;e;san
-di;ode
-di;ox;ide
-di;phos;phate
-di;plo;ma
-di;plo;ma;cy
-di;pole
-di;rec;tion
-di;rec;tion;al
-di;rec;tions
-di;rec;tive
-di;rec;to;rate
-di;rec;to;ri;al
-di;rec;to;ry
-di;rec;tor
-di;rect
-di;rect;ed
-di;rect;ly
-di;sul;fide
-di;ta
-di;u;ret;ic
-di;ur;nal
-di;va
-di;van
-di;ver;gence
-di;ver;gent
-di;ver;si;fi;ca;tion
-di;ver;si;fied
-di;ver;si;fy
-di;ver;si;fy;ing
-di;ver;si;ty
-di;ver;sion
-di;verge
-di;vers
-di;verse
-di;vert
-di;vert;ing
-di;vest
-di;vest;i;ture
-di;vi
-di;vi;sion
-di;vi;sion;al
-di;vi;sive
-di;vi;sor
-di;vid;ed
-di;vid;er
-di;vid;ers
-di;vid;ing
-di;vide
-di;vin;i;ty
-di;vine
-di;vine;ly
-di;vis;i;ble
-di;vorce
-di;vorced
-di;vulge
-di;vulged
-dia
-dia;mond
-dia;mond;back
-dia;per
-diag
-dial
-diam
-dic;ta;tion
-dic;ta;tor
-dic;ta;tor;ship
-dic;tate
-dic;tion
-dic;tion;ar;ies
-dic;tion;ar;y
-dic;tum
-dice
-dick
-dick;ens
-dick;ey
-dick;ie
-dick;ies
-dict
-did
-didst
-die
-die;hard
-die;sel
-dies
-dif;fer
-dif;fer;en;ti;a;ble
-dif;fer;en;ti;a;tion
-dif;fer;en;ti;at;ed
-dif;fer;en;ti;at;ing
-dif;fer;en;ti;ate
-dif;fer;en;tial
-dif;fer;en;tial;ly
-dif;fer;ence
-dif;fer;ent
-dif;fer;ent;ly
-dif;fi;cul;ty
-dif;fi;cult
-dif;frac;tion
-dif;fu;sion
-dif;fus;er
-dif;fuse
-diff
-difficul;ties
-dig
-dig;ger
-dig;ging
-dig;i;ti;za;tion
-dig;i;tiz;ing
-dig;i;tized
-dig;it
-dig;it;al
-dig;it;al;ly
-dig;it;ize
-dig;ni;fied
-dig;ni;tar;ies
-dig;ni;ty
-digs
-dike
-dil;a;ta;tion
-dil;do
-dil;i;gence
-dil;i;gent
-dil;i;gent;ly
-dill
-dim
-dim;i;nu;tion
-dim;ly
-dim;mer
-dim;ming
-dime
-din
-din;er
-din;ghy
-din;gle
-din;go
-din;gy
-din;ing
-din;ner
-din;ner;ware
-din;ning
-dine
-ding
-dink
-dink;y
-dip
-dip;lo;mat
-dip;lo;mat;ic
-dip;loid
-dip;per
-dip;ping
-dip;ter;a
-diph;the;ri;a
-dir
-dir;ham
-dire
-dirge
-dirk
-dirt
-dirt;y
-dis;a;bil;i;ty
-dis;a;ble
-dis;a;bled
-dis;a;gree
-dis;a;gree;a;ble
-dis;a;gree;ing
-dis;a;gree;ment
-dis;a;greed
-dis;ad;van;taged
-dis;ad;vant;age
-dis;al;low
-dis;ap;pear
-dis;ap;pear;ance
-dis;ap;point
-dis;ap;point;ed
-dis;ap;point;ment
-dis;ap;prov;al
-dis;ap;prove
-dis;ap;proved
-dis;ar;ray
-dis;arm
-dis;arm;a;ment
-dis;arm;ing
-dis;as;sem;ble
-dis;as;sem;bly
-dis;as;ter
-dis;as;trous
-dis;be;lief
-dis;burse;ment
-dis;bursed
-dis;card
-dis;cern
-dis;cern;i;ble
-dis;cern;ing
-dis;cern;ment
-dis;charge
-dis;ci;ple
-dis;ci;ple;ship
-dis;ci;pli;nar;y
-dis;ci;pline
-dis;ci;plined
-dis;claim
-dis;claim;er
-dis;clo;sure
-dis;clos;ing
-dis;close
-dis;closed
-dis;co
-dis;cog;ra;phy
-dis;col;or;a;tion
-dis;com;fort
-dis;con;nec;tion
-dis;con;nect
-dis;con;nect;ed
-dis;con;tent
-dis;con;ti;nu;i;ty
-dis;con;tin;u;a;tion
-dis;con;tin;u;ance
-dis;con;tin;u;ing
-dis;con;tin;u;ous
-dis;con;tin;ue
-dis;con;tin;ued
-dis;cord
-dis;count
-dis;cour;ag;ing
-dis;cour;age
-dis;cour;aged
-dis;course
-dis;cov;er
-dis;cov;er;er
-dis;cov;er;ies
-dis;cov;er;y
-dis;cre;tion
-dis;cre;tion;ar;y
-dis;cred;it
-dis;creet
-dis;creet;ly
-dis;crep;an;cy
-dis;crete
-dis;crim;i;na;tion
-dis;crim;i;na;to;ry
-dis;crim;i;nant
-dis;crim;i;nat;ed
-dis;crim;i;nat;ing
-dis;crim;i;nate
-dis;cur;sive
-dis;cus
-dis;cus;sant
-dis;cus;sion
-dis;cuss
-dis;dain
-dis;ease
-dis;eased
-dis;en;fran;chised
-dis;en;gage;ment
-dis;grace
-dis;grace;ful
-dis;graced
-dis;guise
-dis;guised
-dis;gust
-dis;gust;ing
-dis;hon;es;ty
-dis;hon;est
-dis;hon;or
-dis;in;fec;tion
-dis;in;fect;ant
-dis;in;te;gra;tion
-dis;in;ter;est;ed
-dis;joint
-dis;joint;ed
-dis;like
-dis;liked
-dis;lo;ca;tion
-dis;lo;cat;ed
-dis;mal
-dis;man;tle
-dis;may
-dis;miss
-dis;miss;al
-dis;o;be;di;ence
-dis;or;der
-dis;or;der;ly
-dis;or;dered
-dis;or;gan;ized
-dis;par;ate
-dis;par;i;ty
-dis;patch
-dis;patch;er
-dis;pel
-dis;pen;sa;tion
-dis;pens;er
-dis;pens;ing
-dis;pense
-dis;pensed
-dis;per;sal
-dis;per;sion
-dis;perse
-dis;persed
-dis;plac;ing
-dis;place
-dis;place;ment
-dis;placed
-dis;play
-dis;played
-dis;pleas;ure
-dis;pleased
-dis;po;si;tion
-dis;pos;a;ble
-dis;pos;al
-dis;pos;ing
-dis;pose
-dis;posed
-dis;pro;por;tion;ate
-dis;pro;por;tion;ate;ly
-dis;prove
-dis;put;ed
-dis;put;ing
-dis;pute
-dis;qual;i;fi;ca;tion
-dis;qual;i;fied
-dis;qual;i;fy
-dis;re;gard
-dis;re;spect
-dis;re;spect;ful
-dis;rup;tion
-dis;rup;tive
-dis;rupt
-dis;sat;is;fac;tion
-dis;sat;is;fied
-dis;sec;tion
-dis;sect
-dis;sect;ed
-dis;sem;i;na;tion
-dis;sem;i;nat;ed
-dis;sem;i;nat;ing
-dis;sem;i;nate
-dis;sent
-dis;ser;ta;tion
-dis;serv;ice
-dis;si;dent
-dis;si;pa;tion
-dis;si;pat;ed
-dis;si;pate
-dis;sim;i;lar
-dis;so;ci;a;tion
-dis;so;lu;tion
-dis;so;nance
-dis;solv;ing
-dis;solve
-dis;solved
-dis;tal
-dis;tance
-dis;tant
-dis;taste;ful
-dis;til;la;tion
-dis;til;late
-dis;till;er
-dis;till;er;y
-dis;tilled
-dis;tin;guish
-dis;tin;guish;a;ble
-dis;tin;guish;ing
-dis;tin;guished
-dis;tinc;tion
-dis;tinc;tive
-dis;tinc;tive;ly
-dis;tinct
-dis;tinct;ly
-dis;tor;tion
-dis;tort
-dis;tort;ed
-dis;trac;tion
-dis;tract
-dis;tract;ed
-dis;traught
-dis;tress
-dis;tressed
-dis;tri;bu;tion
-dis;tri;bu;tion;al
-dis;trib;u;tive
-dis;trib;u;tor
-dis;trib;ut;a;ble
-dis;trib;ut;ed
-dis;trib;ut;ing
-dis;trib;ute
-dis;trict
-dis;trust
-dis;turb
-dis;turb;ance
-dis;turb;ing
-dis;turbed
-disc
-dish
-dish;wash;er
-disk
-dist
-distr
-dit
-dit;to
-dit;ty
-ditch
-div
-div;er
-div;i;dend
-div;i;na;tion
-div;ing
-dive
-dix;ie
-dix;it
-diy
-diz;zi;ness
-diz;zy
-diz;zy;ing
-dlr
-do;a;ble
-do;bra
-do;do
-do;er
-do;ing
-do;ings
-do;jo
-do;lo;mite
-do;main
-do;mes;ti;cal;ly
-do;mes;ti;cat;ed
-do;mes;tic
-do;min;ion
-do;na
-do;na;tion
-do;nat;ed
-do;nat;ing
-do;nate
-do;nor
-do;nut
-do;ra;do
-do;re
-do;ry
-do;sim;e;try
-dob;son
-doc
-doc;tor
-doc;tor;al
-doc;tor;ate
-doc;tri;nal
-doc;trine
-doc;u;men;ta;ry
-doc;u;men;ta;tion
-doc;u;ment
-dock
-dock;et
-dodg;er
-dodg;ing
-dodg;y
-dodge
-doe
-does
-dog
-dog;ged
-dog;gie
-dog;ging
-dog;gy
-dog;house
-dog;ma
-dog;mat;ic
-dog;wood
-dogs
-doh
-doit
-dol
-dol;ce
-dol;lar
-dol;lies
-dol;ly
-dol;or
-dol;phin
-dole
-doll
-doll;house
-dom
-dom;i;cile
-dom;i;ciled
-dom;i;na;tion
-dom;i;na;tor
-dom;i;nance
-dom;i;nant
-dom;i;nat;ed
-dom;i;nat;ing
-dom;i;nate
-dom;i;no
-dom;i;noes
-dome
-domed
-don
-don;key
-don;na
-don;ne
-don;ny
-done
-dong
-doo;dle
-doom
-dooms;day
-door
-door;bell
-door;man
-door;step
-door;way
-dop
-dop;ing
-dope
-dor
-dor;mant
-dor;mer
-dor;mi;to;ry
-dor;sal
-dorm
-dorr
-dos;age
-dos;ing
-dos;si;er
-dos;si;ers
-dose
-doss
-dost
-dot
-dot;ted
-dot;y
-doth
-dou;ble
-dou;ble;tree
-dou;bles
-dou;blet
-dou;bling
-dou;bly
-doubt
-doubt;ful
-doubt;less
-douche
-dough
-dough;nut
-dough;ty
-dove
-dove;cot
-dove;tail
-dow
-dow;el
-dow;ry
-down
-down;er
-down;fall
-down;grad;ed
-down;grade
-down;hill
-down;right
-down;stairs
-down;stream
-down;time
-down;town
-down;turn
-down;ward
-down;wards
-down;wind
-down;y
-downs
-doz
-doz;en
-doz;ens
-doz;er
-dpt
-dra;goon
-dra;ma
-dra;mat;i;cal;ly
-dra;mat;ic
-dra;per;ies
-dra;per;y
-drab
-draft
-draft;er
-drag
-drag;ging
-drag;on
-drag;on;fly
-drag;ster
-drain
-drain;age
-drake
-dram
-drank
-drap;er
-drape
-drapes
-dras;ti;cal;ly
-dras;tic
-draught
-draw
-draw;back
-draw;er
-draw;ing
-draw;string
-drawn
-dread
-dread;ful
-dread;nought
-dream
-dream;er
-dream;ing
-dream;land
-dream;time
-dream;y
-dreamt
-drear;y
-dredg;ing
-dredge
-dree
-dres;sage
-dress
-dress;er
-dress;ing
-dress;ings
-dress;y
-drew
-dri;er
-drib;ble
-dried
-drift
-drift;er
-drift;wood
-drill
-drill;er
-drill;ing
-drink
-drink;er
-drink;ing
-drip
-drip;ping
-driv;el
-driv;en
-driv;er
-driv;ing
-drive
-drive;way
-driz;zle
-dro;soph;i;la
-droit
-drone
-drool
-drop
-drop;let
-drop;out
-drop;per
-drop;ping
-drop;pings
-drops
-drought
-drove
-drow;si;ness
-drown
-drows;y
-dru;id
-drudge
-drug
-drug;store
-drum
-drum;mer
-drum;ming
-drunk
-drunk;en
-drunk;en;ness
-dry
-dry;ing
-dry;ness
-dryer
-dsp
-du;al
-du;al;i;ty
-du;al;ism
-du;al;ly
-du;bi;ous
-du;ce
-du;el
-du;el;ing
-du;et
-du;ly
-du;ma
-du;o
-du;o;de;nal
-du;plex
-du;pli;ca;tion
-du;pli;ca;tor
-du;pli;cat;ed
-du;pli;cat;ing
-du;pli;cate
-du;ra
-du;ra;bil;i;ty
-du;ra;ble
-du;ra;tion
-du;ress
-du;ro
-du;ty
-du;vet
-dub
-dub;bing
-duc;tile
-duch;ess
-duch;y
-duck
-duck;ling
-duck;y
-ducks
-duct
-dud
-dude
-due
-dues
-duf;fel
-duf;fle
-duff
-dug
-dug;out
-duke
-dukes
-dul;ci;mer
-dull
-dum;my
-dumb
-dumb;bell
-dump
-dump;er
-dumps
-dun
-dun;geon
-dun;ning
-dun;no
-dune
-dung
-dunk
-duo;mo
-dup
-dup;er
-dupe
-dur;ing
-durst
-dusk
-dusk;y
-dust
-dust;er
-dust;ing
-dust;y
-dutch
-dwarf
-dwell
-dwell;er
-dwell;ing
-dwelt
-dwt
-dy;er
-dy;ing
-dy;na;mism
-dy;na;mite
-dy;na;mo
-dy;nam;i;cal
-dy;nam;i;cal;ly
-dy;nam;ic
-dy;nam;ics
-dye
-dye;ing
-dyke
-dyn;as;ty
-dys;func;tion
-dys;lex;i;a
-dys;pha;gia
-dys;pla;sia
-dys;top;i;a
-dys;tro;phy
-e;clipse
-e;clipsed
-e;co;nom;i;cal
-e;co;nom;i;cal;ly
-e;co;nom;ic
-e;co;nom;ics
-e;col;o;gist
-e;col;o;gy
-e;con;o;met;ric
-e;con;o;met;rics
-e;con;o;mist
-e;con;o;my
-e;cu
-e;de;ma
-e;del;weiss
-e;di;tion
-e;dict
-e;gal;i;tar;i;an
-e;go
-e;gos
-e;gre;gious
-e;gress
-e;gret
-e;jac;u;la;tion
-e;jac;u;lat;ing
-e;jac;u;late
-e;jec;tion
-e;ject
-e;la;tion
-e;lab;o;ra;tion
-e;lab;o;rat;ed
-e;lab;o;rate
-e;lan
-e;lapsed
-e;las;tic
-e;las;tic;i;ty
-e;las;to;mer
-e;lat;ed
-e;lec;tion
-e;lec;tive
-e;lec;tor
-e;lec;tor;al
-e;lec;tor;ate
-e;lec;tri;cal
-e;lec;tri;cal;ly
-e;lec;tri;cian
-e;lec;tri;fi;ca;tion
-e;lec;tri;fied
-e;lec;tri;fy;ing
-e;lec;tric
-e;lec;tric;i;ty
-e;lec;tro
-e;lec;tro;chem;i;cal
-e;lec;tro;chem;is;try
-e;lec;tro;lyt;ic
-e;lec;tro;lyte
-e;lec;tro;mag;net;ic
-e;lec;tro;me;chan;i;cal
-e;lec;tro;pho;re;sis
-e;lec;tro;pho;ret;ic
-e;lec;tro;phys;i;ol;o;gy
-e;lec;tro;stat;ic
-e;lec;trode
-e;lec;trol;y;sis
-e;lec;tron
-e;lec;tron;i;cal;ly
-e;lec;tron;ic
-e;lec;tron;ics
-e;lek;tra
-e;lev;en
-e;lev;enth
-e;lic;it
-e;lim;i;na;tion
-e;lim;i;na;tor
-e;lim;i;nat;ed
-e;lim;i;nat;ing
-e;lim;i;nate
-e;lit;ist
-e;lite
-e;lix;ir
-e;lon;ga;tion
-e;lon;gat;ed
-e;lu;ci;date
-e;lu;sive
-e;man;ci;pa;tion
-e;mer;gen;cy
-e;mer;gence
-e;mer;gent
-e;mer;i;tus
-e;merg;ing
-e;merge
-e;merged
-e;mir
-e;mis;sion
-e;mit
-e;mit;ted
-e;mit;ter
-e;mit;ting
-e;mo;tion
-e;mo;tion;al
-e;mo;tion;al;ly
-e;mo;tive
-e;mul;sion
-e;nam;el
-e;nam;eled
-e;nig;ma
-e;nor;mous
-e;nor;mous;ly
-e;nough
-e;nu;mer;a;tion
-e;nu;mer;a;tor
-e;nu;mer;at;ed
-e;nu;mer;ate
-e;on
-e;p
-e;phed;ra
-e;phed;rine
-e;phem;er;a
-e;phem;er;al
-e;phem;er;is
-e;pi;dur;al
-e;piph;a;ny
-e;pis;co;pal
-e;pis;te;mo;log;i;cal
-e;pis;te;mol;o;gy
-e;pis;tle
-e;pit;o;me
-e;qua;tion
-e;qua;to;ri;al
-e;qua;tor
-e;qual
-e;qual;i;ty
-e;qual;i;za;tion
-e;qual;iz;er
-e;qual;ly
-e;quat;ed
-e;quat;ing
-e;quate
-e;ques;tri;an
-e;qui;lib;ri;a
-e;qui;lib;ri;um
-e;qui;nox
-e;quip
-e;quip;ment
-e;quip;ping
-e;quipped
-e;quiv;a;lent
-e;quiv;a;lent;ly
-e;ra
-e;rad;i;ca;tion
-e;rad;i;cat;ed
-e;rad;i;cat;ing
-e;rad;i;cate
-e;ras;er
-e;ras;ing
-e;ras;ure
-e;rase
-e;rased
-e;rec;tile
-e;rec;tion
-e;rect
-e;ro;sion
-e;rod;ed
-e;rod;ing
-e;rode
-e;rot;i;ca
-e;rot;ic
-e;rup;tion
-e;rupt
-e;ryth;ro;cyte
-e;ryth;ro;my;cin
-e;soph;a;ge;al
-e;soph;a;gus
-e;ta
-e;ter;nal
-e;ter;nal;ly
-e;ter;ni;ty
-e;the;re;al
-e;ther
-e;thos
-e;ti;ol;o;gy
-e;tude
-e;va;sion
-e;va;sive
-e;vac;u;a;tion
-e;vac;u;at;ed
-e;vac;u;ate
-e;vade
-e;val;u;a;tion
-e;val;u;a;tive
-e;val;u;a;tor
-e;val;u;at;ed
-e;val;u;at;ing
-e;val;u;ate
-e;van;ge;lis;tic
-e;van;ge;lism
-e;van;ge;list
-e;van;gel;i;cal
-e;vap;o;ra;tion
-e;vap;o;ra;tive
-e;vap;o;ra;tor
-e;vap;o;rat;ed
-e;vap;o;rate
-e;ven
-e;ven;ly
-e;ven;tu;al
-e;ven;tu;al;ly
-e;vent
-e;vent;ful
-e;vert
-e;vic;tion
-e;vil
-e;vite
-e;voc;a;tive
-e;vok;ing
-e;voke
-e;voked
-e;volv;ing
-e;volve
-e;volved
-ea;ger
-ea;ger;ly
-ea;ger;ness
-ea;gle
-ea;sel
-each
-ear
-ear;li;er
-ear;li;est
-ear;ly
-ear;nest
-ear;nest;ly
-ear;phone
-ear;piece
-ear;ring
-eared
-earl
-earn
-earn;er
-earn;ing
-earn;ings
-earth
-earth;en
-earth;en;ware
-earth;ly
-earth;quake
-earth;y
-eas;i;er
-eas;i;est
-eas;i;ly
-eas;ing
-eas;y
-ease
-ease;ment
-east
-east;bound
-east;er;ly
-east;ern
-east;ward
-eat
-eat;en
-eat;er
-eat;er;ies
-eat;er;y
-eat;ing
-eats
-eaves
-eaves;drop;ping
-eb;on;y
-ebb
-ec;cen;tric
-ec;cen;tric;i;ty
-ec;cle;si;as;ti;cal
-ec;lec;tic
-ec;o;log;i;cal
-ec;o;log;i;cal;ly
-ec;o;sys;tem
-ec;ru
-ec;sta;sy
-ec;stat;ic
-ec;top;ic
-ec;u;men;i;cal
-ec;ze;ma
-eccles
-ech;e;lon
-ech;o
-ech;o;ing
-ech;oed
-ech;oes
-ecol
-econ
-ed;dy
-ed;i;ble
-ed;i;fice
-ed;i;to;ri;al
-ed;i;tor
-ed;u;ca;tion
-ed;u;ca;tion;al
-ed;u;ca;tion;al;ly
-ed;u;ca;tor
-ed;u;cat;ed
-ed;u;cat;ing
-ed;u;cate
-edg;ing
-edg;y
-edge
-edit
-edp
-educ
-ee;rie
-eel
-ef;fec;tive
-ef;fec;tive;ly
-ef;fec;tive;ness
-ef;fec;tor
-ef;fect
-ef;fects
-ef;fi;ca;cious
-ef;fi;ca;cy
-ef;fi;cien;cy
-ef;fi;cient
-ef;fi;cient;ly
-ef;fluent
-ef;flux
-ef;fort
-ef;fort;less
-ef;fort;less;ly
-ef;fu;sion
-eff
-eft
-egg
-egg;plant
-ei;de
-ei;dos
-ei;gen;val;ue
-ei;ther
-eight
-eight;een
-eight;eenth
-eight;ies
-eight;y
-eighth
-el;bow
-el;e;gance
-el;e;gant
-el;e;gant;ly
-el;e;gy
-el;e;men;ta;ry
-el;e;ment
-el;e;ment;al
-el;e;phant
-el;e;va;tion
-el;e;va;tor
-el;e;vat;ed
-el;e;vat;ing
-el;e;vate
-el;i;gi;bil;i;ty
-el;i;gi;ble
-el;lip;sis
-el;lip;soid
-el;lip;ti;cal
-el;lip;tic
-el;lipse
-el;o;quence
-el;o;quent
-el;o;quent;ly
-eld
-eld;er
-eld;er;ly
-eld;est
-elec
-elect
-elem
-elev
-elf
-elk
-ell
-elm
-else
-else;where
-elves
-em;a;nat;ing
-em;bank;ment
-em;bar;go
-em;bar;rass
-em;bar;rass;ment
-em;bark
-em;bas;sy
-em;bat;tled
-em;bed
-em;bed;ded
-em;bed;ding
-em;bel;lish;ment
-em;ber
-em;bez;zle;ment
-em;blem
-em;bo;lism
-em;bod;i;ment
-em;bod;ied
-em;bod;y
-em;bod;y;ing
-em;boss
-em;brac;ing
-em;brace
-em;braced
-em;broi;der;y
-em;bry;o
-em;bry;ol;o;gy
-em;bry;on;ic
-em;cee
-em;er;ald
-em;er;y
-em;i;gra;tion
-em;i;grant
-em;i;grat;ed
-em;i;nence
-em;i;nent
-em;i;nent;ly
-em;met
-em;pa;thy
-em;per;or
-em;pha;sis
-em;pha;sis;ing
-em;pha;sise
-em;pha;sised
-em;pha;siz;ing
-em;pha;size
-em;pha;sized
-em;phat;ic
-em;phy;se;ma
-em;pir;i;cal
-em;pir;i;cal;ly
-em;pire
-em;place;ment
-em;ploy
-em;ploy;a;bil;i;ty
-em;ploy;ee
-em;ploy;er
-em;ploy;ment
-em;po;ri;um
-em;pow;er
-em;pow;er;ment
-em;press
-em;u;la;tion
-em;u;la;tor
-em;u;lat;ed
-em;u;lat;ing
-em;u;late
-eme
-emf
-emp;ti;ness
-emp;tied
-emp;ty
-emp;ty;ing
-emu
-en;a;ble
-en;a;bler
-en;a;bling
-en;act
-en;act;ment
-en;camp;ment
-en;cap;su;la;tion
-en;cap;su;lat;ed
-en;cap;su;lat;ing
-en;cap;su;late
-en;cased
-en;ceph;a;li;tis
-en;ceph;a;lop;a;thy
-en;chant
-en;chant;ing
-en;chant;ment
-en;clave
-en;clo;sure
-en;clos;ing
-en;close
-en;closed
-en;cod;ed
-en;cod;er
-en;cod;ing
-en;code
-en;com;pass
-en;core
-en;coun;ter
-en;cour;ag;ing
-en;cour;age
-en;cour;age;ment
-en;cour;aged
-en;croach;ment
-en;cryp;tion
-en;crypt
-en;cum;brance
-en;cy;clo;pae;di;a
-en;cy;clo;pe;di;a
-en;cy;clo;pe;dic
-en;cyc;li;cal
-en;dan;ger
-en;deav;or
-en;do;car;di;tis
-en;do;cri;nol;o;gy
-en;do;crine
-en;do;me;tri;al
-en;do;me;tri;o;sis
-en;do;plas;mic
-en;do;scop;ic
-en;do;the;li;al
-en;do;the;li;um
-en;do;tox;in
-en;dog;e;nous
-en;dors;ing
-en;dorse
-en;dorse;ment
-en;dorsed
-en;dos;co;py
-en;dow;ment
-en;dur;ance
-en;dur;ing
-en;dure
-en;dured
-en;e;ma
-en;e;my
-en;er;get;ic
-en;er;get;ics
-en;er;giz;er
-en;er;giz;ing
-en;er;gize
-en;er;gized
-en;er;gy
-en;forc;er
-en;forc;ing
-en;force
-en;force;a;bil;i;ty
-en;force;a;ble
-en;force;ment
-en;forced
-en;gag;ing
-en;gage
-en;gage;ment
-en;gaged
-en;gen;der
-en;gi;neer
-en;gi;neer;ing
-en;gine
-en;grav;er
-en;grav;ing
-en;grave
-en;graved
-en;gross;ing
-en;hanc;er
-en;hanc;ing
-en;hance
-en;hance;ment
-en;hanced
-en;ig;mat;ic
-en;joy
-en;joy;a;ble
-en;joy;ment
-en;larg;er
-en;larg;ing
-en;large
-en;large;ment
-en;larged
-en;light;en
-en;light;en;ment
-en;list
-en;list;ment
-en;mi;ty
-en;quir;ies
-en;quir;y
-en;quire
-en;raged
-en;rich
-en;rich;ment
-en;rol
-en;rol;ling
-en;rol;ment
-en;roll
-en;roll;ee
-en;roll;ment
-en;rolled
-en;sem;ble
-en;shrined
-en;sign
-en;slaved
-en;su;ing
-en;sue
-en;sued
-en;sur;ing
-en;sure
-en;sured
-en;tail
-en;tan;gle;ment
-en;ter
-en;ter;al
-en;ter;ic
-en;ter;pris;ing
-en;ter;prise
-en;ter;tain
-en;ter;tain;er
-en;ter;tain;ing
-en;ter;tain;ment
-en;thal;py
-en;thralled
-en;thu;si;as;ti;cal;ly
-en;thu;si;as;tic
-en;thu;si;asm
-en;thu;si;ast
-en;ti;tle
-en;ti;tle;ment
-en;ti;ty
-en;tic;ing
-en;tice
-en;tire
-en;tire;ly
-en;tire;ty
-en;to;mo;log;i;cal
-en;to;mol;o;gy
-en;tou;rage
-en;tra;da
-en;trance
-en;trant
-en;trap;ment
-en;tre;pre;neur
-en;tre;pre;neur;i;al
-en;tre;pre;neur;ship
-en;tree
-en;tro;py
-en;trust
-en;try
-en;ve;lope
-en;vel;oped
-en;vi;a;ble
-en;vi;ous
-en;vi;ron
-en;vi;ron;men;tal
-en;vi;ron;men;tal;ism
-en;vi;ron;men;tal;ist
-en;vi;ron;men;tal;ly
-en;vi;ron;ment
-en;vi;rons
-en;vi;sion
-en;vis;age
-en;vis;aged
-en;voy
-en;vy
-en;zy;mat;ic
-en;zy;mol;o;gy
-en;zyme
-enc
-end
-end;er
-end;game
-end;ing
-end;less
-end;less;ly
-end;note
-end;point
-endemic
-eng
-engin
-engr
-ens
-ep;i;cen;ter
-ep;i;de;mi;o;log;i;cal
-ep;i;de;mi;ol;o;gy
-ep;i;dem;ic
-ep;i;der;mal
-ep;i;der;mis
-ep;i;lep;sy
-ep;i;lep;tic
-ep;i;logue
-ep;i;neph;rine
-ep;i;sod;ic
-ep;i;sode
-ep;i;taph
-ep;i;the;li;al
-ep;i;the;li;um
-ep;ic
-ep;is;tem;ic
-ep;och
-ep;os
-ep;ox;y
-ep;si;lon
-eq;ui;ta;ble
-eq;ui;ta;bly
-eq;ui;ties
-eq;ui;ty
-eq;ui;va;len;cy
-eq;ui;va;lence
-eq;uine
-equiv
-er;go
-er;go;nom;ic
-er;go;nom;ics
-er;i;ca
-er;ic
-er;ra;ta
-er;ra;tum
-er;rand
-er;rant
-er;rat;ic
-er;ro;ne;ous
-er;ro;ne;ous;ly
-er;ror
-er;y;the;ma
-ere
-erg
-erk
-ern
-err
-ers
-erst;while
-es;ca;la;tion
-es;ca;la;tor
-es;ca;lade
-es;ca;lat;ed
-es;ca;lat;ing
-es;ca;late
-es;cap;ing
-es;cape
-es;caped
-es;carp;ment
-es;cha;tol;o;gy
-es;cort
-es;crow
-es;cu;do
-es;ker
-es;o;ter;ic
-es;pa;nol
-es;pe;cial
-es;pe;cial;ly
-es;per;ance
-es;pi;o;nage
-es;pla;nade
-es;poused
-es;pres;so
-es;prit
-es;quire
-es;say
-es;se
-es;sen;tial
-es;sen;tial;ly
-es;sence
-es;tab;lish
-es;tab;lish;ment
-es;tate
-es;teem
-es;ter
-es;ti;ma;tion
-es;ti;ma;tor
-es;ti;mat;ed
-es;ti;mat;ing
-es;ti;mate
-es;top;pel
-es;tra;di;ol
-es;tranged
-es;tro;gen
-es;tu;a;rine
-es;tu;ar;ies
-es;tu;ar;y
-esp
-ess
-est
-esu
-et;cet;er;a
-et;i;quette
-et;na
-et;y;mol;o;gy
-etc
-etch
-etch;ing
-eth
-eth;a;nol
-eth;i;cal
-eth;i;cal;ly
-eth;ic
-eth;ics
-eth;ni;cal;ly
-eth;nic
-eth;nic;i;ty
-eth;no;graph;ic
-eth;nog;ra;phy
-eth;nol;o;gy
-eth;yl
-eth;yl;ene
-eu;ca;lyp;tus
-eu;chre
-eu;gen;ics
-eu;lo;gy
-eu;pho;ni;um
-eu;pho;ri;a
-eu;phor;ic
-eu;re;ka
-eu;ryth;mics
-eu;tha;na;sia
-eu;troph;i;ca;tion
-ev;a;nes;cence
-ev;er
-ev;er;green
-ev;er;last;ing
-ev;er;more
-ev;i;den;tia;ry
-ev;i;dence
-ev;i;denced
-ev;i;dent
-ev;i;dent;ly
-ev;o;lu;tion
-ev;o;lu;tion;ar;y
-evan
-eve
-eve;ning
-eve;nings
-eve;ry
-eve;ry;bod;y
-eve;ry;day
-eve;ry;one
-eve;ry;thing
-eve;ry;where
-ewe
-ex;a;men
-ex;ac;er;bat;ed
-ex;ac;er;bate
-ex;act
-ex;act;ing
-ex;act;ly
-ex;ag;ger;a;tion
-ex;ag;ger;at;ed
-ex;ag;ger;at;ing
-ex;ag;ger;ate
-ex;alt;ed
-ex;am
-ex;am;i;na;tion
-ex;am;in;er
-ex;am;in;ing
-ex;am;ine
-ex;am;ined
-ex;am;ple
-ex;ca;va;tion
-ex;ca;va;tor
-ex;ca;vat;ed
-ex;ca;vat;ing
-ex;ceed
-ex;ceed;ing
-ex;ceed;ing;ly
-ex;cel
-ex;cel;len;cy
-ex;cel;lence
-ex;cel;lent
-ex;cel;lent;ly
-ex;cel;si;or
-ex;celled
-ex;cep;tion
-ex;cep;tion;al
-ex;cep;tion;al;ly
-ex;cept
-ex;cept;ing
-ex;cerpt
-ex;ces;sive
-ex;ces;sive;ly
-ex;cess
-ex;chang;er
-ex;chang;ing
-ex;change
-ex;change;a;ble
-ex;changed
-ex;cheq;uer
-ex;ci;sion
-ex;ci;ta;tion
-ex;cise
-ex;cised
-ex;cit;a;to;ry
-ex;cit;ed
-ex;cit;ed;ly
-ex;cit;ing
-ex;cite
-ex;cite;ment
-ex;cla;ma;tion
-ex;clu;sion
-ex;clu;sion;ar;y
-ex;clu;siv;i;ty
-ex;clu;sive
-ex;clu;sive;ly
-ex;clud;ed
-ex;clud;ing
-ex;clude
-ex;cre;tion
-ex;cret;ed
-ex;cru;ci;at;ing
-ex;cur;sion
-ex;cuse
-ex;cused
-ex;e;cu;tion
-ex;e;cu;tion;er
-ex;e;cut;a;ble
-ex;e;cut;ed
-ex;e;cut;ing
-ex;e;cute
-ex;e;ge;sis
-ex;ec;u;tive
-ex;ec;u;tor
-ex;em;pla;ry
-ex;em;plar
-ex;em;pli;fied
-ex;em;pli;fy
-ex;emp;tion
-ex;empt
-ex;er;cis;a;ble
-ex;er;cis;ing
-ex;er;cise
-ex;er;cised
-ex;er;tion
-ex;ert
-ex;fo;li;at;ing
-ex;hale
-ex;haus;tion
-ex;haus;tive
-ex;haust
-ex;hi;bi;tion
-ex;hi;bi;tion;ism
-ex;hi;bi;tion;ist
-ex;hib;i;tor
-ex;hib;it
-ex;hil;a;rat;ing
-ex;ile
-ex;iled
-ex;is;ten;tial
-ex;is;ten;tial;ism
-ex;ist
-ex;ist;ence
-ex;ist;ent
-ex;it
-ex;o;dus
-ex;og;e;nous
-ex;on
-ex;or;bi;tant
-ex;or;cism
-ex;or;cist
-ex;ot;i;ca
-ex;ot;ic
-ex;pan;sion
-ex;pan;sive
-ex;pand
-ex;pand;a;ble
-ex;pand;ed
-ex;pand;er
-ex;panse
-ex;pat;ri;ate
-ex;pe;di;ent
-ex;pe;di;tion
-ex;pe;di;tion;ar;y
-ex;pe;di;tious
-ex;pe;di;tious;ly
-ex;pe;dit;ed
-ex;pe;dit;ing
-ex;pe;dite
-ex;pe;ri;en;tial
-ex;pe;ri;enc;ing
-ex;pe;ri;ence
-ex;pe;ri;enced
-ex;pec;ta;tion
-ex;pect
-ex;pect;an;cy
-ex;pect;ant
-ex;pect;ing
-ex;pel
-ex;pelled
-ex;pen;sive
-ex;pend
-ex;pend;a;ble
-ex;pend;i;ture
-ex;pense
-ex;per;i;men;ta;tion
-ex;per;i;men;tal
-ex;per;i;men;tal;ly
-ex;per;i;ment
-ex;per;i;ment;er
-ex;pert
-ex;pert;ise
-ex;pert;ly
-ex;pi;ra;tion
-ex;pi;ry
-ex;pir;ing
-ex;pire
-ex;pired
-ex;pla;na;tion
-ex;plain
-ex;plan;a;to;ry
-ex;plic;it
-ex;plic;it;ly
-ex;plo;ra;tion
-ex;plo;sion
-ex;plo;sive
-ex;plod;ed
-ex;plod;ing
-ex;plode
-ex;ploi;ta;tion
-ex;ploit
-ex;ploit;a;ble
-ex;plor;a;to;ry
-ex;plor;er
-ex;plor;ing
-ex;plore
-ex;plored
-ex;po
-ex;po;nen;tial
-ex;po;nen;tial;ly
-ex;po;nent
-ex;po;s
-ex;po;si;tion
-ex;po;sure
-ex;por;ta;tion
-ex;port
-ex;port;er
-ex;pos;i;to;ry
-ex;pos;ing
-ex;pose
-ex;posed
-ex;pres;sion
-ex;pres;sion;ism
-ex;pres;sive
-ex;press
-ex;press;ly
-ex;press;o
-ex;press;way
-ex;pro;pri;a;tion
-ex;pul;sion
-ex;qui;site;ly
-ex;quis;ite
-ex;tant
-ex;te;ri;or
-ex;ten;si;bil;i;ty
-ex;ten;si;ble
-ex;ten;sion
-ex;ten;sive
-ex;ten;sive;ly
-ex;ten;u;at;ing
-ex;tend
-ex;tend;a;ble
-ex;tend;ed
-ex;tend;er
-ex;tent
-ex;ter;mi;na;tion
-ex;ter;nal
-ex;ter;nal;ly
-ex;tern
-ex;tin;guish
-ex;tin;guish;er
-ex;tinc;tion
-ex;tinct
-ex;tor;tion
-ex;tra
-ex;tra;cel;lu;lar
-ex;tra;cur;ric;u;lar
-ex;tra;di;tion
-ex;tra;mu;ral
-ex;tra;ne;ous
-ex;tra;ter;res;tri;al
-ex;trac;tion
-ex;trac;tions
-ex;trac;tive
-ex;trac;tor
-ex;tract
-ex;traor;di;nar;i;ly
-ex;traor;di;nar;y
-ex;trap;o;la;tion
-ex;trap;o;lat;ed
-ex;trap;o;late
-ex;trav;a;gan;za
-ex;trav;a;gance
-ex;trav;a;gant
-ex;trem;i;ty
-ex;trem;ism
-ex;trem;ist
-ex;treme
-ex;treme;ly
-ex;trin;sic
-ex;tru;sion
-ex;trud;ed
-ex;u;ber;ance
-ex;u;ber;ant
-exc
-exch
-excl
-exec
-exp
-ext
-eye
-eye;ball
-eye;brow
-eye;glass
-eye;glass;es
-eye;ing
-eye;lash
-eye;let
-eye;lid
-eye;lin;er
-eye;piece
-eye;sight
-eye;wit;ness
-eyed
-eyes
-eyre
-fa;ble
-fa;bled
-fa;cade
-fa;ci;a
-fa;ci;es
-fa;cial
-fa;cil;i;ta;tion
-fa;cil;i;ta;tor
-fa;cil;i;tat;ed
-fa;cil;i;tat;ing
-fa;cil;i;tate
-fa;cil;i;ty
-fa;er;ie
-fa;er;ies
-fa;er;y
-fa;mil;i;ar;i;ty
-fa;mil;ial
-fa;mil;iar
-fa;mil;iar;ize
-fa;mille
-fa;mous
-fa;mous;ly
-fa;nat;i;cal
-fa;nat;i;cism
-fa;nat;ic
-fa;ri;na
-fa;tal
-fa;tal;i;ty
-fa;tal;ly
-fa;ther
-fa;ther;hood
-fa;tigue
-fa;tigued
-fa;vor
-fa;vor;a;ble
-fa;vor;a;bly
-fa;vor;ite
-fa;vored
-fa;vors
-fa;vour
-fa;vour;a;ble
-fa;vour;a;bly
-fa;vour;ite
-fa;voured
-fa;vours
-fab
-fab;ri;ca;tion
-fab;ri;ca;tor
-fab;ri;cat;ed
-fab;ri;cat;ing
-fab;ri;cate
-fab;ric
-fab;u;lous
-fac
-fac;et
-fac;et;ed
-fac;ile
-fac;ing
-fac;sim;i;le
-fac;tion
-fac;to;ri;al
-fac;to;ry
-fac;tor
-fac;tor;i;za;tion
-fac;tor;ing
-fac;tu;al
-fac;tu;al;ly
-fac;ul;ty
-face
-face;less
-face;plate
-fact
-fad
-fad;ed
-fad;er
-fad;ing
-fade
-fag
-fag;got
-fail
-fail;ing
-fail;ure
-fain
-faint
-faint;er
-faint;ly
-fair
-fair;banks
-fair;ies
-fair;ing
-fair;ly
-fair;ness
-fair;way
-fair;y
-faith
-faith;ful
-faith;ful;ly
-faith;ful;ness
-faith;less
-fak;ing
-fake
-fal;con
-fal;con;er
-fal;la;cy
-fal;low
-fal;si;fi;ca;tion
-fal;si;fied
-fal;ter
-fall
-fall;en
-fall;ing
-fall;out
-false
-false;hood
-false;ly
-fam
-fam;i;ly
-fam;ine
-fame
-famed
-fan
-fan;ci;ful
-fan;cied
-fan;cy
-fan;dan;go
-fan;fare
-fan;ning
-fan;ny
-fan;ta;sia
-fan;ta;sy
-fan;tas;ti;cal;ly
-fan;tas;tic
-fan;tom
-fang
-faq
-far
-far;a;day
-far;a;way
-far;o
-far;row
-far;ther
-far;thest
-farce
-fare
-fare;well
-farm
-farm;er
-farm;hous;es
-farm;house
-farm;ing
-farm;land
-fart
-fas
-fas;ci;a
-fas;ci;na;tion
-fas;ci;nat;ed
-fas;ci;nat;ing
-fas;cism
-fas;cist
-fas;ten
-fas;ten;er
-fas;ten;ing
-fash;ion
-fash;ion;a;ble
-fast
-fat
-fat;ed
-fat;ter
-fat;ty
-fat;wa
-fate
-fate;ful
-fath
-fath;om
-fats
-fau;cet
-fau;na
-fault
-fault;y
-fawn
-fay
-fe;cal
-fe;ces
-fe;do;ra
-fe;lic;i;ty
-fe;line
-fe;male
-fe;mur
-fe;ral
-fe;ro;cious
-fe;tal
-fe;tus
-fe;tus;es
-fe;ver
-fea;si;bil;i;ty
-fea;si;ble
-fea;tur;ette
-fea;tur;ing
-fea;ture
-fea;tured
-fear
-fear;ful
-fear;less
-fear;some
-feast
-feat
-feath;er
-feath;er;weight
-feath;ered
-feath;ers
-fec
-fed
-fed;er;a;tion
-fed;er;al
-fed;er;al;ism
-fed;er;al;ist
-fed;er;al;ly
-fed;er;at;ed
-fee
-fee;ble
-feed
-feed;back
-feed;er
-feed;ing
-feel
-feel;ing
-feet
-feist
-feist;y
-fel;la;ti;o
-fel;low
-fel;low;ship
-fel;o;ny
-fel;on
-feld;spar
-fell
-fell;er
-felt
-fem
-fem;i;ni;za;tion
-fem;i;nin;i;ty
-fem;i;nine
-fem;i;nism
-fem;i;nist
-fem;o;ral
-femme
-fen
-fen;nel
-fenc;ing
-fence
-fend
-fend;er
-fer
-fer;men;ta;tion
-fer;mi
-fer;mi;on
-fer;ret
-fer;ric
-fer;rite
-fer;ro;mag;net;ic
-fer;rous
-fer;ry
-fer;ti;li;za;tion
-fer;ti;lis;er
-fer;ti;liz;er
-fer;ti;lized
-fer;til;i;ty
-fer;tile
-fer;vent
-fer;vent;ly
-fer;vor
-fere
-fern
-fes;cue
-fes;ta
-fes;ti;val
-fes;tive
-fet
-fet;a
-fet;ish
-fetch
-fetch;ing
-fete
-feu
-feu;dal
-feud
-few
-few;er
-fey
-fez
-ffa
-fi;an;ce
-fi;an;cee
-fi;as;co
-fi;at
-fi;ber
-fi;ber;glass
-fi;bre
-fi;bre;glass
-fi;bril;la;tion
-fi;brin;o;gen
-fi;bro;blast
-fi;bro;sis
-fi;brous
-fi;co
-fi;del;i;ty
-fi;du;ci;ar;y
-fi;es;ta
-fi;let
-fi;na;le
-fi;na;li;za;tion
-fi;na;liz;ing
-fi;na;lized
-fi;nal
-fi;nal;i;ty
-fi;nal;ise
-fi;nal;ist
-fi;nal;ize
-fi;nal;ly
-fi;nals
-fi;nan;cial
-fi;nan;cial;ly
-fi;nanc;ing
-fi;nanced
-fi;nesse
-fi;nite
-fi;nite;ly
-fi;no
-fib
-fic;ti;tious
-fic;tion
-fic;tion;al
-fiche
-fick;le
-fid
-fid;dle
-fid;dler
-fid;dling
-fie
-field
-field;er
-field;work
-fiend
-fier;y
-fierce
-fierce;ly
-fif;teen
-fif;teenth
-fif;ty
-fife
-fifth
-fig
-fig;ur;a;tive
-fig;ur;a;tive;ly
-fig;ur;al
-fig;ur;ine
-fig;ur;ing
-fig;ure
-fig;ured
-fight
-fight;er
-fight;ing
-fil
-fil;a;ment
-fil;er
-fil;i;bus;ter
-fil;i;gree
-fil;ing
-fil;ings
-fil;ip
-fil;let
-fil;ly
-fil;mog;ra;phy
-fil;ter
-fil;tra;tion
-file
-file;name
-fill
-fill;er
-fill;ing
-film
-film;ing
-film;mak;er
-film;mak;ing
-film;strip
-film;y
-fils
-filth
-filth;y
-fin
-fin;an;cier
-fin;ca
-fin;er
-fin;est
-fin;ger
-fin;ger;board
-fin;ger;ing
-fin;ger;print
-fin;ger;tip
-fin;gered
-fin;i;al
-fin;ish
-fin;ish;er
-fin;ished
-finance
-finch
-find
-find;er
-find;ing
-fine
-fine;ly
-fink
-fir
-fir;ing
-fire
-fire;arm
-fire;ball
-fire;bird
-fire;box
-fire;fly
-fire;house
-fire;man
-fire;place
-fire;pow;er
-fire;proof
-fire;side
-fire;stone
-fire;storm
-fire;wood
-fire;work
-fire;works
-firm
-firm;ly
-firm;ness
-firm;ware
-first
-first;hand
-first;ly
-firsts
-firth
-fis;cal
-fis;cal;ly
-fis;sion
-fis;sure
-fis;tu;la
-fish
-fish;bowl
-fish;er
-fish;er;ies
-fish;er;man
-fish;er;y
-fish;es
-fish;eye
-fish;ing
-fish;net
-fish;y
-fist
-fist;ful
-fit
-fit;ness
-fit;ted
-fit;ter
-fit;test
-fit;ting
-fitch
-five
-fives
-fix
-fix;a;tion
-fix;er
-fix;ing
-fix;ings
-fix;ture
-fixed
-fizz
-fjord
-fla;grant
-fla;men;co
-fla;min;go
-fla;vor
-fla;vor;ful
-fla;vor;ing
-fla;vour
-flack
-flag
-flag;ging
-flag;pole
-flag;ship
-flag;staff
-flags
-flair
-flak
-flak;y
-flake
-flam;boy;ant
-flam;ing
-flam;ma;bil;i;ty
-flam;ma;ble
-flame
-flan;nel
-flange
-flank
-flap
-flap;ping
-flaps
-flar;ing
-flare
-flash
-flash;back
-flash;er
-flash;ing
-flash;light
-flash;y
-flask
-flat
-flat;head
-flat;i;ron
-flat;ly
-flat;ness
-flat;ten
-flat;ter
-flat;ter;y
-flat;ware
-flats
-flaw
-flaw;less
-flaw;less;ly
-flawed
-flax
-flax;seed
-fld
-flea
-fleck
-fled
-fledg;ling
-fledged
-flee
-flee;ing
-fleece
-fleer
-fleet
-fleet;ing
-flesh
-flesh;y
-fletch;er
-fleu;ry
-flew
-flex
-flex;i;bil;i;ty
-flex;i;ble
-flex;i;bly
-flex;ion
-fli;er
-flick
-flick;er
-flied
-flight
-flim;sy
-flin;ders
-fling
-flint
-flip
-flip;per
-flip;ping
-flirt
-flirt;y
-flite
-flo;ra
-flo;ral
-flo;res
-flo;rist
-flo;ta;tion
-float
-float;er
-float;ing
-floats
-flock
-flog;ging
-flood
-flood;ed
-floor
-floor;ing
-flop
-flop;py
-flor
-flor;in
-floss
-floun;der
-flour
-flour;ish
-flour;ish;ing
-flow
-flow;er
-flow;er;ing
-flow;er;y
-flow;ered
-flow;ing
-flown
-flu
-flu;en;cy
-flu;ent
-flu;ent;ly
-flu;id
-flu;id;i;ty
-flu;o;res;ce;in
-flu;o;res;cence
-flu;o;res;cent
-flu;o;ride
-flu;o;rine
-flu;or
-fluc;tu;a;tion
-fluc;tu;at;ing
-fluc;tu;ate
-flue
-fluff
-fluff;y
-fluke
-flung
-flur;ry
-flush
-flut;ed
-flut;ter
-flute
-flux
-fly
-fly;catch;er
-fly;er
-fly;ing
-fly;wheel
-fo;cal
-fo;ci
-fo;cus
-fo;cus;es
-fo;cus;ing
-fo;cus;sing
-fo;cused
-fo;cussed
-fo;li;age
-fo;li;ar
-fo;li;o
-fo;li;os
-fo;lic
-fo;ra
-fo;ren;sic
-fo;ren;sics
-fo;rum
-fo;rums
-foal
-foam
-fob
-fod;der
-foe
-foe;tus
-fog
-fog;dog
-fog;gy
-foil
-foiled
-fol
-fol;li;cle
-fol;lic;u;lar
-fol;low
-fol;low;er
-fol;low;ing
-fol;ly
-fold
-fold;a;ble
-fold;er
-folk
-folk;lore
-fon;due
-fond
-fond;ly
-fond;ness
-font
-food
-fool
-fool;ish
-fool;ish;ly
-fool;ish;ness
-fool;proof
-foot
-foot;age
-foot;ball
-foot;ed
-foot;er
-foot;hill
-foot;hold
-foot;ing
-foot;note
-foot;path
-foot;print
-foot;wear
-foot;work
-foot;y
-fop
-for
-for;ag;ing
-for;age
-for;ay
-for;bade
-for;bear;ance
-for;bid
-for;bid;den
-for;bid;ding
-for;ceps
-for;ci;ble
-for;ci;bly
-for;eign
-for;eign;er
-for;est
-for;est;er
-for;est;ry
-for;ev;er
-for;fei;ture
-for;feit
-for;ger;y
-for;get
-for;get;ting
-for;giv;en
-for;giv;ing
-for;give
-for;give;ness
-for;go
-for;got
-for;got;ten
-for;int
-for;lorn
-for;ma;tion
-for;mal
-for;mal;i;ty
-for;mal;ism
-for;mal;ize
-for;mal;ized
-for;mal;ly
-for;mat
-for;mat;ted
-for;mat;ting
-for;mer;ly
-for;mi;da;ble
-for;mu;la
-for;mu;la;tion
-for;mu;lar;y
-for;mu;lat;ed
-for;mu;lat;ing
-for;mu;late
-for;ni;ca;tion
-for;sak;en
-for;sake
-for;ti;fi;ca;tion
-for;ti;fied
-for;ti;fy
-for;ti;fy;ing
-for;ti;tude
-for;tis
-for;tress
-for;tu;nate
-for;tu;nate;ly
-for;tune
-for;ty
-for;ward
-for;ward;er
-for;ward;ing
-for;wards
-forc;ing
-force
-force;ful
-force;ful;ly
-forced
-ford
-fore
-fore;arm
-fore;cast
-fore;cast;ed
-fore;cast;er
-fore;cast;ing
-fore;clo;sure
-fore;closed
-fore;foot
-fore;front
-fore;go
-fore;go;ing
-fore;gone
-fore;ground
-fore;hand
-fore;head
-fore;man
-fore;most
-fore;play
-fore;run;ner
-fore;see
-fore;see;a;ble
-fore;seen
-fore;shore
-fore;sight
-fore;skin
-fore;told
-fore;word
-forg;ing
-forge
-fork
-fork;lift
-forked
-form
-form;a;tive
-form;al;de;hyde
-form;er
-forme
-fort
-fort;night
-fort;night;ly
-forte
-forth
-forth;com;ing
-forth;right
-forth;with
-fos;sil
-fos;ter
-foss
-fought
-foul
-fouls
-foun;da;tion;al
-foun;tain
-found
-found;er
-found;ry
-founda;tion
-four
-four;some
-four;teen
-four;teenth
-fourth
-fowl
-fowl;er
-fox
-fox;es
-fox;trot
-fox;y
-foy
-foy;er
-fps
-fra;gil;i;ty
-fra;grance
-fra;grant
-fra;ter;nal
-fra;ter;ni;ty
-frac;tion
-frac;tion;a;tion
-frac;tion;al
-frac;ture
-frac;tured
-frag
-frag;ile
-frag;men;ta;tion
-frag;ment
-frag;ment;ed
-frail
-fram;ing
-frame
-frame;work
-fran;chis;ing
-fran;chis;or
-fran;chise
-fran;chised
-fran;co;phone
-fran;ti;cal;ly
-fran;tic
-franc
-frank
-frank;fort
-frank;furt
-frank;furt;er
-frank;lin
-frank;ly
-frat
-fraud
-fraud;u;lent
-fraud;u;lent;ly
-fraught
-fray
-fre;er
-fre;net;ic
-fre;quen;cy
-fre;quent
-fre;quent;ly
-freak
-freak;y
-free
-free;bie
-free;dom
-free;hand
-free;hold
-free;ing
-free;lanc;er
-free;lanc;ing
-free;lance
-free;ly
-free;ma;son;ry
-free;man
-free;stand;ing
-free;style
-free;way
-freed;man
-freez;er
-freez;ing
-freeze
-freight
-freight;er
-freight;lin;er
-fren;zied
-fren;zy
-freq
-fres;co
-fres;nel
-fresh
-fresh;en;er
-fresh;er
-fresh;ly
-fresh;man
-fresh;ness
-fresh;wa;ter
-fret
-fri;ar
-fric;tion
-fridge
-fried
-friend
-friend;li;er
-friend;li;ness
-friend;ly
-friend;ship
-fries
-frieze
-frig;ate
-fright
-fright;en
-fright;ened
-fright;ful
-frigid
-fringe
-frith
-fritz
-friv;o;lous
-fro
-fro;zen
-frog
-frog;gy
-frol;ic
-from
-fron;tier
-front
-front;age
-front;al
-frosh
-frost
-frost;bite
-frost;ed
-frost;ing
-frost;y
-froth
-frown
-froze
-fru;gal
-fru;i;tion
-fruc;tose
-fruit
-fruit;ful
-fruit;less
-fruit;y
-frus;tra;tion
-frus;trat;ed
-frus;trat;ing
-frus;trate
-fry
-fry;er
-fry;ing
-fu;el;ing
-fu;eled
-fu;elled
-fu;gi;tive
-fu;mi;ga;tion
-fu;ner;al
-fu;ri;ous
-fu;ri;ous;ly
-fu;ry
-fu;se;lage
-fu;sion
-fu;til;i;ty
-fu;tile
-fu;tu;ram;a
-fu;tur;is;tic
-fu;ture
-fu;tures
-fuch;sia
-fuck
-fuck;er
-fucking
-fudge
-fuel
-fug
-fugue
-ful;crum
-ful;fil
-ful;fil;ling
-ful;fil;ment
-ful;fill
-ful;fill;ment
-ful;filled
-ful;ham
-ful;ly
-full
-full;er
-full;ness
-fum;ble
-fume
-fun
-fun;da;men;tal
-fun;da;men;tal;ism
-fun;da;men;tal;ist
-fun;da;men;tal;ly
-fun;gal
-fun;gi
-fun;gi;cide
-fun;gus
-fun;nel
-fun;ni;er
-fun;ni;est
-fun;nies
-fun;ny
-func;tion
-func;tion;al
-func;tion;al;ly
-func;tor
-fund
-funds
-funk
-funk;y
-fur
-fur;long
-fur;nace
-fur;ni;ture
-fur;nish
-fur;nish;ing
-fur;nish;ings
-fur;row
-fur;ry
-fur;ther
-fur;ther;ance
-fur;ther;more
-fur;thest
-furl
-fus;ing
-fuse
-fuss
-fuss;y
-fut
-fuzz
-fuzz;y
-fwd
-ga;ble
-ga;by
-ga;la
-ga;lac;tic
-ga;lac;tose
-ga;le;na
-ga;lore
-ga;ta
-ga;tor
-ga;ze;bo
-ga;zelle
-ga;zette
-gab
-gab;ber
-gab;by
-gad
-gadg;et
-gag
-gag;ging
-gage
-gain
-gain;er
-gains
-gait
-gal
-gal;ax;y
-gal;i;lee
-gal;lant
-gal;ler;ies
-gal;ler;y
-gal;ley
-gal;li;um
-gal;lon
-gal;lop
-gal;lop;ing
-gal;lows
-gal;lus
-gal;va;nised
-gal;va;nized
-galax;ies
-gale
-gall
-gall;blad;der
-gam
-gam;bier
-gam;bit
-gam;ble
-gam;bler
-gam;er
-gam;ing
-gam;ma
-gam;mon
-gam;ut
-game
-gan
-gan;der
-gan;gli;a
-gan;gli;on
-gang
-gang;bang
-gang;ster
-gap
-gap;ing
-gar
-gar;age
-gar;bage
-gar;de;nia
-gar;den
-gar;den;er
-gar;den;ing
-gar;goyle
-gar;i;bal;di
-gar;land
-gar;lic
-gar;ment
-gar;ner
-gar;net
-gar;nett
-gar;nish
-gar;nish;ment
-gar;ret
-gar;ri;son
-gar;ter
-gar;vey
-garb
-gare
-garth
-gas
-gas;e;ous
-gas;es
-gas;i;fi;ca;tion
-gas;ket
-gas;o;line
-gas;tri;tis
-gas;tric
-gas;tro;en;ter;i;tis
-gas;tro;en;ter;ol;o;gy
-gas;tro;in;tes;ti;nal
-gas;tron;o;my
-gash
-gasp
-gat
-gat;ed
-gat;ing
-gate
-gate;fold
-gate;keep;er
-gate;way
-gath;er
-gath;er;er
-gath;er;ing
-gau;cho
-gauche
-gaud;y
-gaug;ing
-gauge
-gaunt
-gaunt;let
-gauss
-gauze
-gav;el
-gave
-gawk
-gay
-gaz
-gaz;et;teer
-gaz;ing
-gaze
-gcm
-gds
-ge;na
-ge;ne;a;log;i;cal
-ge;ne;al;o;gy
-ge;ne;va
-ge;ner;i;cal;ly
-ge;ner;ic
-ge;net;i;cal;ly
-ge;net;ic
-ge;net;ics
-ge;nie
-ge;no;mic
-ge;nome
-ge;nus
-ge;o;chem;i;cal
-ge;o;chem;is;try
-ge;o;des;ic
-ge;o;det;ic
-ge;o;graph;i;cal
-ge;o;graph;i;cal;ly
-ge;o;graph;ic
-ge;o;log;i;cal
-ge;o;log;ic
-ge;o;mag;net;ic
-ge;o;met;ri;cal
-ge;o;met;ri;cal;ly
-ge;o;met;ric
-ge;o;mor;phol;o;gy
-ge;o;phys;i;cal
-ge;o;phys;ics
-ge;o;po;lit;i;cal
-ge;o;pol;i;tics
-ge;o;sci;ence
-ge;o;ther;mal
-ge;od;e;sy
-ge;og;ra;phy
-ge;ol;o;gy
-ge;om;e;try
-ge;ra;ni;um
-ge;sell;schaft
-ge;stalt
-ge;sund;heit
-gear
-gear;box
-gear;ing
-geck;o
-ged
-gee
-gee;zer
-geek
-geese
-gei;sha
-gel
-gel;a;tin
-geld
-geld;ing
-gem
-gem;i;ni
-gem;ma
-gem;stone
-gems
-gen
-gen;der
-gen;e;sis
-gen;er;a
-gen;er;a;tion
-gen;er;a;tive
-gen;er;a;tor
-gen;er;al
-gen;er;al;i;ty
-gen;er;al;i;za;tion
-gen;er;al;ised
-gen;er;al;ist
-gen;er;al;ize
-gen;er;al;ized
-gen;er;al;ly
-gen;er;at;ed
-gen;er;at;ing
-gen;er;ate
-gen;er;os;i;ty
-gen;er;ous
-gen;er;ous;ly
-gen;et
-gen;i;ta;lia
-gen;i;tal
-gen;i;tals
-gen;ial
-gen;ius
-gen;ius;es
-gen;o;a
-gen;o;cide
-gen;o;type
-gen;re
-gen;tile
-gen;tle
-gen;tle;man
-gen;tle;ness
-gen;tle;wom;an
-gen;tly
-gen;try
-gen;u;ine
-gen;u;ine;ly
-gene
-gens
-gent
-gents
-geog
-geol
-geom
-geor;gette
-ger
-ger;bil
-ger;i;at;ric
-ger;i;at;rics
-ger;ma;ni;um
-ger;man
-ger;man;ic
-ger;mi;na;tion
-ger;on;tol;o;gy
-ger;trude
-ger;vais
-germ
-ges;ta;tion
-ges;ta;tion;al
-ges;tion
-ges;ture
-gest
-get
-get;a;way
-get;ter
-get;ting
-gey;ser
-ghast;ly
-ghet;to
-ghost
-ghost;ly
-ghoul
-gi;ant
-gi;gan;tic
-gi;raffe
-gi;ro
-gib
-gib;ber;ish
-gib;bon
-gid
-gid;dy
-gift
-gift;ed
-gig
-gig;gle
-gig;o;lo
-gil;bert
-gild;ed
-giles
-gill
-gills
-gilt
-gim;me
-gim;mick
-gimp
-gin
-gin;ger
-gin;ger;bread
-gin;seng
-ging;ham
-gink;go
-gip
-gip;sy
-gir;dle
-gird;er
-girl
-girl;friend
-girl;ie
-girl;y
-girth
-gist
-git
-giv;en
-giv;er
-giv;ing
-give
-give;a;way
-giz;mo
-gla;ce
-gla;cial
-glac;i;er
-glad
-glad;i;a;tor
-glad;ly
-glade
-glam;or;ous
-glan;du;lar
-glanc;ing
-glance
-gland
-glar;ing
-glare
-glass
-glass;es
-glass;man
-glass;ware
-glass;y
-glau;co;ma
-glaz;er
-glaz;ing
-glaze
-glazed
-gld
-gleam
-glebe
-glee
-glen
-gli;al
-gli;o;ma
-glib
-glid;er
-glid;ing
-glide
-glim;mer
-glimpse
-glint
-glit;ter
-glo;mer;u;lar
-glo;ri;a
-glo;ri;fied
-glo;ri;fy
-glo;ri;ous
-glo;ri;ous;ly
-glo;ry
-glob
-glob;al
-glob;al;ly
-glob;u;lar
-glob;u;lin
-globe
-gloom
-gloom;y
-glos;sa;ry
-gloss
-gloss;y
-glov;er
-glove
-glow
-glow;ing
-glu;ca;gon
-glu;cose
-glu;ing
-glu;on
-glu;ta;mate
-glu;ta;mine
-glu;ta;thi;one
-glu;ten
-glue
-glut
-gly;ce;mic
-gly;cine
-gly;co;gen
-gly;co;pro;tein
-gly;col
-glyc;er;in
-glyc;er;ol
-glyph
-gnat
-gnome
-gnos;tic
-gnu
-go;a
-go;go
-go;ing
-go;lem
-go;pher
-go;ril;la
-goal
-goal;ie
-goal;keep;er
-goal;tend;er
-goat
-gob
-gob;ble
-gob;let
-gob;lin
-god
-god;damn
-god;dess
-god;fa;ther
-god;less
-god;ly
-god;send
-goes
-gog;gle
-goi
-gol;ly
-gold
-gold;en
-gold;en;eye
-gold;en;rod
-gold;fields
-gold;fish
-gold;smith
-gold;stone
-golf
-golf;er
-gon;ad;o;tro;pin
-gon;do;la
-gon;na
-gon;or;rhe;a
-gone
-gong
-goo
-goo;ey
-good
-good;bye
-good;ies
-good;ly
-good;man
-good;ness
-good;will
-good;y
-goods
-goof
-goof;y
-goog
-goon
-goose
-goose;neck
-gor
-gor;geous
-gor;y
-gore
-gorge
-gos;ling
-gos;pel
-gos;port
-gos;sa;mer
-gos;sip
-gosh
-got
-got;ta
-got;ten
-gou;lash
-gouache
-goug;ing
-gour;met
-gourd
-gourde
-gout
-gov
-gov;er;nor
-gov;ern
-gov;ern;ance
-gov;ern;men;tal
-gov;ern;ment
-govt
-gown
-gra;ci;as
-gra;cious
-gra;cious;ly
-gra;da;tion
-gra;di;ent
-gra;ham
-gra;mer;cy
-gra;tu;i;tous
-gra;tu;i;ty
-gra;vy
-grab
-grab;ber
-grab;bing
-grace
-grace;ful
-grace;ful;ly
-grad
-grad;ed
-grad;er
-grad;ing
-grad;u;a;tion
-grad;u;al
-grad;u;al;ly
-grad;u;at;ed
-grad;u;at;ing
-grad;u;ate
-grade
-graft
-graft;ing
-grain
-grain;y
-grained
-grains
-gram
-gram;mar
-gram;mat;i;cal
-gram;o;phone
-gran;deur
-gran;di;ose
-gran;ite
-gran;ny
-gran;tor
-gran;u;lar
-gran;u;lar;i;ty
-gran;u;lat;ed
-gran;ule
-grand
-grand;chil;dren
-grand;child
-grand;daugh;ter
-grand;fa;ther
-grand;ma
-grand;mas;ter
-grand;moth;er
-grand;pa
-grand;par;ent
-grand;son
-grand;stand
-grang;er
-grange
-grant
-grant;ee
-grap;ple
-grap;pling
-grape
-grape;fruit
-grape;vine
-grapes
-graph
-graph;i;cal
-graph;i;cal;ly
-graph;ic
-graph;ics
-graph;ite
-grasp
-grasp;ing
-grass
-grass;hop;per
-grass;land
-grass;y
-grat;ed
-grat;i;fi;ca;tion
-grat;i;fy;ing
-grat;i;tude
-grat;ing
-grat;is
-grate
-grate;ful
-grate;ful;ly
-grav
-grav;el
-grav;er
-grav;i;ta;tion
-grav;i;ta;tion;al
-grav;i;ty
-grave
-grave;ly
-grave;stone
-grave;yard
-gray
-gray;ling
-graz;ing
-graze
-gre;nade
-greas;y
-grease
-great
-great;est
-great;ly
-great;ness
-greaves
-grebe
-gree
-greed
-greed;y
-green
-green;bri;er
-green;er;y
-green;hous;es
-green;house
-green;ing
-green;ish
-green;wood
-greet
-greet;ing
-grem;lin
-grew
-grey
-grey;hound
-grid
-grid;dle
-grid;i;ron
-grief
-griev;ance
-griev;ing
-griev;ous
-grieve
-grif;fin
-grif;fon
-griff
-grill
-grille
-grilled
-grim
-grime
-grin
-grin;go
-grin;ning
-grind
-grind;er
-grind;ing
-grip
-grip;per
-grip;ping
-gripe
-gris;ly
-grist
-grit
-grit;ty
-grits
-griz;zly
-gro
-gro;cer
-gro;cer;ies
-gro;cer;y
-gro;tesque
-groan
-groin
-grom;met
-groom
-groov;y
-groove
-grooved
-gross
-gross;es
-gross;ly
-grot;to
-ground
-ground;work
-group
-group;er
-group;ie
-group;ing
-group;wise
-grouse
-grout
-grove
-grow
-grow;er
-grow;ing
-growl
-grown
-growth
-gru;el;ing
-grub
-grudge
-grue;some
-grum;ble
-grump;y
-grunt
-gryph;on
-gtc
-gtd
-gu;ber;na;to;ri;al
-gu;ru
-gua;ca;mo;le
-gua;nine
-gua;ra;ni
-gua;va
-guan
-guar
-guar;an;tee
-guar;an;tee;ing
-guar;an;teed
-guar;an;tor
-guar;an;ty
-guard
-guard;ed
-guard;i;an
-guard;i;an;ship
-gue;ril;la
-guer;ril;la
-guess
-guess;work
-guest
-guest;hous;es
-guest;house
-gui;tar
-gui;tar;ist
-guid;ance
-guid;ed
-guid;ing
-guide
-guide;book
-guide;line
-guil;der
-guil;le;mot
-guil;lo;tine
-guild
-guild;hall
-guile
-guilt
-guilt;y
-guin;ea
-guise
-gul;li;ble
-gul;ly
-gulch
-gulf
-gull
-gulp
-gum
-gum;bo
-gum;my
-gump
-gun
-gun;fire
-gun;man
-gun;met;al
-gun;ner
-gun;ning
-gun;pow;der
-gun;shot
-gun;sling;er
-gun;ter
-gun;ther
-gunned
-guns
-gus;set
-gus;to
-gush
-gust
-gut
-gut;ted
-gut;ter
-guy
-gy;nae;col;o;gy
-gy;ne;col;o;gy
-gy;ro
-gym
-gym;na;si;um
-gym;nas;tic
-gym;nas;tics
-gym;nast
-gyn
-gyn;e;co;log;ic
-gyp;sum
-gyp;sy
-ha;bit;u;al
-ha;bit;u;al;ly
-ha;dith
-ha;keem
-ha;kim
-ha;lo
-ha;tred
-ha;zel
-ha;zel;nut
-ha;zy
-haar
-hab;i;ta;tion
-hab;i;tat
-hab;it
-hab;it;a;ble
-hac;i;en;da
-hack
-hack;er
-hack;ing
-hack;man
-hack;ney
-had
-had;dock
-had;ron
-hae
-haem;a;tol;o;gy
-hag
-hag;gard
-hag;gis
-hag;gle
-hah
-hai;ku
-hail
-hair
-hair;cut
-hair;dress;er
-hair;dress;ing
-hair;less
-hair;pin
-hair;style
-hair;y
-haj;i
-hajj
-hal;al
-hal;cy;on
-hal;i;but
-hal;ide
-hal;le;lu;jah
-hal;lo
-hal;lowed
-hal;o;gen
-hale
-half
-half;way
-hall
-hall;mark
-hall;way
-halt
-halt;er
-halt;ing
-halves
-ham
-ham;burg
-ham;burg;er
-ham;let
-ham;mer
-ham;mer;head
-ham;mer;ing
-ham;mered
-ham;mock
-ham;per
-ham;ster
-ham;string
-ham;za
-han;dle
-han;dle;bar
-han;dle;bars
-han;dled
-han;dler
-han;dling
-han;sel
-hand
-hand;bag
-hand;ball
-hand;book
-hand;craft;ed
-hand;cuffs
-hand;ed
-hand;ful
-hand;gun
-hand;i;cap
-hand;i;cap;per
-hand;i;cap;ping
-hand;i;capped
-hand;i;craft
-hand;ker;chief
-hand;made
-hand;out
-hand;set
-hand;shake
-hand;some
-hand;some;ly
-hand;spring
-hand;writ;ing
-hand;writ;ten
-hand;y
-hand;y;man
-hands
-hang
-hang;ar
-hang;er
-hang;ing
-hang;man
-hang;o;ver
-hang;out
-hank
-hank;y
-hap
-hap;haz;ard
-hap;less
-hap;pen
-hap;pen;ing
-hap;pi;er
-hap;pi;est
-hap;pi;ly
-hap;pi;ness
-hap;py
-har;ass
-har;ass;ment
-har;assed
-har;bin;ger
-har;bor
-har;bour
-har;di;ness
-har;die
-har;dy
-har;em
-har;le;quin
-har;lot
-har;mo;ni;ous
-har;mo;ni;sa;tion
-har;mo;ni;za;tion
-har;mo;nised
-har;mo;nize
-har;mo;nized
-har;mo;ny
-har;mon;i;ca
-har;mon;ic
-har;mon;ics
-har;ness
-har;poon
-har;ri;er
-har;row
-har;ry
-har;vest
-har;vest;er
-har;vest;ing
-hard
-hard;back
-hard;ball
-hard;bound
-hard;core
-hard;cov;er
-hard;en
-hard;en;ing
-hard;ened
-hard;ly
-hard;ness
-hard;ship
-hard;top
-hard;ware
-hard;wood
-hare
-hark
-hark;en
-harm
-harm;ful
-harm;less
-harp
-harp;er
-harp;si;chord
-harsh
-harsh;ly
-hart
-has
-has;sle
-has;ten
-hash
-hash;ing
-hast
-hast;i;ly
-hast;y
-haste
-hat
-hat;ed
-hat;er
-hat;ing
-hat;ter
-hatch
-hatch;back
-hatch;er
-hatch;er;y
-hatch;et
-hatch;ing
-hate
-hate;ful
-hath
-haugh;ty
-haul
-haul;age
-haul;er
-haunt
-haunt;ed
-haunt;ing
-haus;frau
-haus;frau;en
-hav;en
-hav;ing
-hav;oc
-have
-have;lock
-haw
-haw;thorn
-hawk
-hawk;er
-hawk;ing
-hay
-hay;stack
-hay;ward
-haz;ard
-haz;ard;ous
-haz;ing
-haze
-hcf
-he;don;ism
-he;gem;o;ny
-he;li;o
-he;li;um
-he;lix
-he;mo;di;al;y;sis
-he;mo;dy;nam;ic
-he;mo;lyt;ic
-he;mo;phil;i;a
-he;pat;ic
-he;red;i;tar;y
-he;red;i;ty
-he;res
-he;ret;i;cal
-he;ro
-he;ro;ic
-hea;then
-head
-head;ache
-head;band
-head;board
-head;ed
-head;er
-head;gear
-head;hunt;er
-head;ing
-head;lamp
-head;land
-head;less
-head;light
-head;lin;er
-head;lin;ing
-head;line
-head;long
-head;mas;ter
-head;phone
-head;phones
-head;quar;ter
-head;quar;ters
-head;rest
-head;room
-head;set
-head;stone
-head;wa;ters
-head;way
-head;y
-heads
-heal
-heal;er
-heal;ing
-heald
-health
-health;ful
-health;i;er
-health;i;est
-health;y
-heap
-hear
-hear;ing
-hear;say
-hearse
-heart
-heart;ache
-heart;beat
-heart;break
-heart;break;er
-heart;break;ing
-heart;burn
-heart;ed
-heart;felt
-heart;i;ly
-heart;land
-heart;less
-heart;warm;ing
-heart;wood
-heart;worm
-heart;y
-hearth
-hearts
-heat
-heat;ed
-heat;er
-heath
-heath;er
-heav;en
-heav;en;ly
-heav;i;er
-heav;i;est
-heav;i;ly
-heav;y
-heav;y;weight
-heave
-hec;tare
-hec;tic
-hec;tor
-hecht
-heck
-hedg;ing
-hedge
-hedge;hog
-heed
-heel
-heeled
-heft
-heft;y
-heh
-hei;nous
-heif;er
-height
-height;en
-heir
-heir;ess
-heir;loom
-heist
-hel;i;cal
-hel;i;ces
-hel;i;cop;ter
-hel;lo
-hel;met
-held
-hell
-hell;er
-hell;fire
-hell;ish
-helm
-help
-help;er
-help;ful
-help;ful;ness
-help;ing
-help;less
-help;less;ly
-help;less;ness
-hem
-hem;a;tite
-hem;a;to;log;ic
-hem;a;to;poi;et;ic
-hem;a;tol;o;gy
-hem;i;spher;ic
-hem;i;sphere
-hem;lock
-hem;or;rhag;ic
-hem;or;rhage
-hem;or;rhoids
-heme
-hemo;globin
-hemp
-hen
-hen;na
-hen;ri;et;ta
-hen;ry
-hence
-hence;forth
-hep
-hep;a;rin
-hep;a;ti;tis
-her
-her;ald
-her;ald;ry
-her;ba;ceous
-her;bar;i;um
-her;e;sy
-her;e;tic
-her;i;ot
-her;it;age
-her;maph;ro;dite
-her;me;neu;tics
-her;mes
-her;met;ic
-her;mit
-her;mit;age
-her;ni;a
-her;o;in
-her;o;ine
-her;o;ism
-her;on
-her;pes
-her;ring
-her;ring;bone
-her;self
-herb
-herb;al
-herb;i;cide
-herd
-herd;er
-here
-here;af;ter
-here;by
-here;in
-here;in;af;ter
-here;of
-here;to
-here;to;fore
-here;un;der
-here;with
-hers
-hertz
-hes;i;ta;tion
-hes;i;tant
-hes;i;tat;ed
-hes;i;tate
-hes;si;an
-het
-het;er;o
-het;er;o;ge;ne;i;ty
-het;er;o;ge;ne;ous
-het;er;o;sex;u;al
-het;er;o;zy;gous
-heu;ris;tic
-hew
-hex
-hex;a;dec;i;mal
-hex;a;gon
-hex;ag;o;nal
-hex;ane
-hey
-hey;day
-hgt
-hi;a;tus
-hi;ber;na;tion
-hi;ber;nate
-hi;bis;cus
-hi;dal;go
-hi;er;ar;chi;cal
-hi;er;ar;chy
-hi;jack
-hi;lar;i;ous
-hi;lar;i;ty
-hic
-hick
-hick;ey
-hick;o;ry
-hid
-hid;den
-hid;e;ous
-hid;ing
-hide
-hide;a;way
-hide;out
-hie
-high
-high;land
-high;light
-high;light;ed
-high;light;ing
-high;line
-high;ly
-high;ness
-high;way
-hight
-hik;er
-hik;ing
-hike
-hill
-hill;bil;ly
-hill;er
-hill;i;er
-hill;side
-hill;top
-hill;y
-hills
-hilt
-him
-him;self
-hin
-hin;di
-hin;drance
-hin;ter;land
-hind
-hind;er
-hind;sight
-hinge
-hint
-hip
-hip;pie
-hip;po
-hip;po;cam;pal
-hip;po;cam;pus
-hip;py
-hip;ster
-hir;ing
-hir;sute
-hire
-his
-his;ta;mine
-his;ti;dine
-his;to;gram
-his;to;log;i;cal
-his;to;ri;an
-his;to;ri;og;ra;phy
-his;to;ry
-his;tol;o;gy
-his;tone
-his;tor;i;cal
-his;tor;i;cal;ly
-his;tor;ic
-hiss
-hiss;ing
-hist
-hit
-hit;ter
-hit;ting
-hitch
-hith;er
-hith;er;to
-hive
-hives
-ho;bo
-ho;gan
-ho;li;ness
-ho;lis;tic
-ho;lo;gram
-ho;ly
-ho;me;o;path;ic
-ho;me;o;sta;sis
-ho;me;op;a;thy
-ho;mo
-ho;mo;ge;ne;i;ty
-ho;mo;ge;ne;ous
-ho;mo;mor;phism
-ho;mo;sex;u;al
-ho;mo;sex;u;al;i;ty
-ho;mo;zy;gous
-ho;mog;e;nous
-ho;mol;o;gous
-ho;mol;o;gy
-ho;ra
-ho;ri;zon
-ho;sier;y
-ho;tel
-hoar;y
-hoard
-hoard;ing
-hoarse
-hoax
-hob
-hob;by
-hob;by;ist
-hock
-hock;ey
-hod
-hodge
-hoe
-hog
-hog;tied
-hogg
-hoist
-hoke
-hol;i;day
-hol;la
-hol;land
-hol;ler
-hol;low
-hol;ly
-hol;o;caust
-hol;o;graph;ic
-hol;o;mor;phic
-hol;ster
-hold
-hold;all
-hold;en
-hold;er
-hold;ing
-hole
-holm
-holt
-hom
-hom;age
-hom;bre
-hom;er
-hom;i;cide
-hom;i;nid
-hom;ing
-hom;o;log
-hom;o;logue
-home
-home;bound
-home;com;ing
-home;land
-home;less
-home;less;ness
-home;ly
-home;made
-home;mak;er
-home;sick
-home;site
-home;spun
-home;stead
-home;town
-home;ward
-home;work
-hon
-hon;da
-hon;es;ty
-hon;est
-hon;est;ly
-hon;ey
-hon;ey;comb
-hon;ey;moon
-hon;ey;suck;le
-hon;eys
-hon;ing
-hon;or
-hon;or;a;ble
-hon;or;ar;y
-hon;ors
-hone
-hong
-honk
-honk;y
-hoo
-hoo;ray
-hood
-hood;ed
-hood;ie
-hoof
-hook
-hook;ah
-hook;er
-hook;up
-hooked
-hoop
-hoop;er
-hoot
-hop
-hop;ing
-hop;per
-hop;ping
-hope
-hope;ful
-hope;ful;ly
-hope;less
-hope;less;ly
-hope;less;ness
-hops
-hor
-hor;i;zon;tal
-hor;i;zon;tal;ly
-hor;mo;nal
-hor;mone
-hor;net
-hor;o;scope
-hor;ren;dous
-hor;ri;ble
-hor;ri;bly
-hor;ri;fied
-hor;ri;fy;ing
-hor;rid
-hor;rif;ic
-hor;ror
-hor;rors
-hor;ti;cul;tur;al
-hor;ti;cul;ture
-horde
-horn
-horn;y
-horned
-hors;es
-horse
-horse;back
-horse;man
-horse;pow;er
-horse;rad;ish
-horse;shoe
-horse;shoes
-horst
-hort
-hos;es
-hos;pi;ta;ble
-hos;pi;tal
-hos;pi;tal;i;ty
-hos;pi;tal;i;za;tion
-hos;pi;tal;ized
-hos;pice
-hos;ta
-hos;tage
-hos;tel
-hos;til;i;ty
-hos;tile
-hose
-hosp
-host
-host;ess
-hot
-hot;line
-hot;ly
-hot;spur
-hot;ter
-hot;test
-hot;tie
-hough
-hound
-hour
-hour;glass
-hour;ly
-hours
-hous;es
-hous;ing
-house
-house;boat
-house;hold
-house;hold;er
-house;keep;er
-house;keep;ing
-house;wares
-house;warm;ing
-house;wife
-house;work
-hov;er
-hov;er;craft
-hove
-how
-how;dy
-how;ev;er
-howe
-howl
-howl;er
-howl;ing
-hoy
-hoy;a
-hsien
-hu;bris
-hu;la
-hu;man
-hu;man;i;tar;i;an
-hu;man;i;ty
-hu;man;is;tic
-hu;man;ism
-hu;man;ist
-hu;man;kind
-hu;man;ly
-hu;man;oid
-hu;mane
-hu;mi;dor
-hu;mid
-hu;mid;i;fi;er
-hu;mid;i;ty
-hu;mil;i;a;tion
-hu;mil;i;at;ed
-hu;mil;i;at;ing
-hu;mil;i;ty
-hu;mor
-hu;mor;ous
-hu;mour
-hub
-hub;ble
-hub;by
-huck;le;ber;ry
-hud;dle
-hue
-huff
-hug
-hug;ger
-hug;ging
-huge
-huge;ly
-huh
-hul;la;ba;loo
-hulk
-hull
-hum
-hum;ble
-hum;bly
-hum;bug
-hum;mel
-hum;mer
-hum;ming
-hum;ming;bird
-hump
-hump;back
-hump;ty
-hun;dred
-hun;dredth
-hun;ger
-hun;gry
-hunch
-hunch;back
-hung
-hunk
-hunk;y
-hunks
-hunt
-hunt;ed
-hunt;er
-hunt;ing
-hunts;man
-hur;dle
-hur;rah
-hur;ri;cane
-hur;ried
-hur;ried;ly
-hur;ry
-hurl
-hurl;ey
-hurl;ing
-hurst
-hurt
-hurt;ful
-hurt;ing
-hus;band
-hus;band;ry
-hus;tle
-hus;tler
-hush
-husk
-husk;ies
-husk;y
-hut
-hutch
-hy;a;cinth
-hy;brid
-hy;dra
-hy;dra;tion
-hy;dran;gea
-hy;drant
-hy;drat;ed
-hy;drat;ing
-hy;drate
-hy;drau;lic
-hy;drau;lics
-hy;dride
-hy;dro
-hy;dro;car;bon
-hy;dro;ceph;a;lus
-hy;dro;chlo;ric
-hy;dro;chlo;ride
-hy;dro;chlo;ro;thi;a;zide
-hy;dro;cor;ti;sone
-hy;dro;dy;nam;ic
-hy;dro;e;lec;tric
-hy;dro;gen
-hy;dro;gen;at;ed
-hy;dro;graph;ic
-hy;dro;lase
-hy;dro;log;ic
-hy;dro;phil;ic
-hy;dro;pho;bic
-hy;dro;pon;ic
-hy;dro;pon;ics
-hy;dro;pow;er
-hy;dro;stat;ic
-hy;dro;ther;a;py
-hy;dro;ther;mal
-hy;drol;o;gy
-hy;drol;y;sis
-hy;drox;ide
-hy;drox;y
-hy;drox;yl
-hy;e;na
-hy;gien;ic
-hy;gien;ist
-hy;giene
-hy;me;nop;ter;a
-hy;men
-hy;per;ac;tiv;i;ty
-hy;per;ac;tive
-hy;per;bar;ic
-hy;per;bo;le
-hy;per;bol;ic
-hy;per;plas;i;a
-hy;per;sen;si;tiv;i;ty
-hy;per;space
-hy;per;ten;sion
-hy;per;ten;sive
-hy;per;thy;roid;ism
-hy;per;tro;phy
-hy;phen
-hy;phen;at;ed
-hy;po
-hy;po;gly;ce;mi;a
-hy;po;ten;sion
-hy;po;tha;lam;ic
-hy;po;thal;a;mus
-hy;po;ther;mi;a
-hy;po;thet;i;cal
-hy;po;thy;roid;ism
-hy;poc;ri;sy
-hy;poth;e;sis
-hy;poth;e;sized
-hy;pox;i;a
-hymn
-hyp
-hyp;no;sis
-hyp;no;ther;a;py
-hyp;no;tist
-hyp;no;tize
-hyp;not;ic
-hyp;o;crit;i;cal
-hyp;o;crite
-hype
-hys;te;ri;a
-hys;ter;e;sis
-hys;ter;ec;to;my
-hys;ter;i;cal
-i;bex
-i;bis
-i;co;nog;ra;phy
-i;con
-i;con;ic
-i;cons
-i;cy
-i;d
-i;de;a
-i;de;al
-i;de;al;is;tic
-i;de;al;ism
-i;de;al;ist
-i;de;al;ized
-i;de;al;ly
-i;de;o;log;i;cal
-i;de;ol;o;gy
-i;dem
-i;den;ti;cal
-i;den;ti;cal;ly
-i;den;ti;fi;a;ble
-i;den;ti;fi;ca;tion
-i;den;ti;fi;er
-i;den;ti;fied
-i;den;ti;fy
-i;den;ti;fy;ing
-i;den;ti;ty
-i;dle
-i;dler
-i;dling
-i;dly
-i;dol
-i;dol;a;try
-i;dyl;lic
-i;gua;na
-i;kon
-i;ma;gi;nes
-i;ma;go
-i;mam
-i;man
-i;o;dide
-i;o;dine
-i;o;ta
-i;on
-i;on;i;za;tion
-i;on;ic
-i;on;iz;ing
-i;on;ized
-i;on;o;spher;ic
-i;on;o;sphere
-i;rate
-i;rid;i;um
-i;ris
-i;ron
-i;ron;i;cal;ly
-i;ron;ic
-i;ron;ing
-i;ron;wood
-i;ron;y
-i;rons
-i;so;bar;ic
-i;so;la;tion
-i;so;la;tor
-i;so;lat;ed
-i;so;lat;ing
-i;so;late
-i;so;met;ric
-i;so;mor;phic
-i;so;mor;phism
-i;so;pro;pyl
-i;so;top;ic
-i;so;tope
-i;so;trop;ic
-i;so;type
-i;tal;i;cized
-i;tal;ic
-i;tem
-i;tem;ize
-i;tem;ized
-i;tin;er;ant
-i;tin;er;ar;ies
-i;tin;er;ar;y
-i;vo;ry
-i;vy
-ic;ing
-ice
-ice;berg
-ice;break;er
-ice;man
-iced
-ich
-ick;y
-id;e;o;graph
-id;i;o;cy
-id;i;o;path;ic
-id;i;o;syn;crat;ic
-id;i;om
-id;i;ot
-id;i;ot;ic
-ide
-ides
-ig;loo
-ig;ne;ous
-ig;ni;tion
-ig;nit;ed
-ig;nite
-ig;no;rance
-ig;no;rant
-ig;nor;ing
-ig;nore
-ig;nored
-ign
-ike
-il;i;a
-il;le;gal
-il;le;gal;ly
-il;le;git;i;mate
-il;leg;i;ble
-il;lic;it
-il;lit;er;a;cy
-il;lit;er;ate
-il;log;i;cal
-il;lu;mi;na;ti
-il;lu;mi;na;tion
-il;lu;mi;na;tor
-il;lu;mi;nat;ed
-il;lu;mi;nat;ing
-il;lu;mi;nate
-il;lu;sion
-il;lu;so;ry
-il;lus;tra;tion
-il;lus;tra;tive
-il;lus;tra;tor
-il;lus;trat;ed
-il;lus;trat;ing
-il;lus;trate
-il;lus;tri;ous
-ilk
-ill
-ill;ness
-illus
-im;ag;er
-im;ag;i;na;ble
-im;ag;i;na;tion
-im;ag;i;na;tive
-im;ag;i;nar;y
-im;ag;in;ing
-im;ag;ine
-im;ag;ined
-im;ag;ing
-im;age
-im;age;ry
-im;aged
-im;bal;ance
-im;bed;ded
-im;bued
-im;i;ta;tion
-im;i;tat;ed
-im;i;tat;ing
-im;i;tate
-im;ma;te;ri;al
-im;ma;ture
-im;mac;u;late
-im;me;di;a;cy
-im;me;di;ate
-im;me;di;ate;ly
-im;mense
-im;mense;ly
-im;mer;sion
-im;merse
-im;mersed
-im;mi;gra;tion
-im;mi;grant
-im;mi;grat;ed
-im;mi;nent
-im;mo;bi;li;za;tion
-im;mo;bi;lized
-im;mo;ral;i;ty
-im;mor;al
-im;mor;tal
-im;mor;tal;i;ty
-im;mov;a;ble
-im;mu;ni;ty
-im;mu;ni;za;tion
-im;mu;nized
-im;mu;no;as;say
-im;mu;no;glob;u;lin
-im;mu;no;log;ic
-im;mu;no;ther;a;py
-im;mu;nol;o;gy
-im;mu;ta;ble
-im;mune
-im;pa;tience
-im;pa;tient
-im;pa;tient;ly
-im;pact
-im;pact;ed
-im;pair
-im;pair;ment
-im;pal;a
-im;paled
-im;par;ti;al;i;ty
-im;par;tial
-im;part
-im;pas;sioned
-im;passe
-im;pe;ri;al
-im;pe;ri;al;ism
-im;pe;ri;al;ist
-im;pe;ri;um
-im;pe;tus
-im;peach
-im;peach;ment
-im;pec;ca;ble
-im;ped;ance
-im;ped;ed
-im;ped;i;ment
-im;ped;ing
-im;pede
-im;pel;ler
-im;pen;e;tra;ble
-im;pend;ing
-im;per;a;tive
-im;per;fec;tion
-im;per;fect
-im;per;son;a;tion
-im;per;son;al
-im;per;son;ate
-im;per;vi;ous
-im;plan;ta;tion
-im;plant
-im;plau;si;ble
-im;ple;men;ta;tion
-im;ple;ment
-im;pli;ca;tion
-im;pli;cat;ed
-im;pli;cate
-im;plic;it
-im;plic;it;ly
-im;plied
-im;plo;sion
-im;plode
-im;ply
-im;ply;ing
-im;po;si;tion
-im;po;tence
-im;po;tent
-im;por;ta;tion
-im;por;tance
-im;por;tant
-im;por;tant;ly
-im;port
-im;port;er
-im;pos;ing
-im;pos;si;bil;i;ty
-im;pos;si;ble
-im;pos;si;bly
-im;pose
-im;posed
-im;pound;ment
-im;pov;er;ished
-im;prac;ti;cal
-im;pre;cise
-im;pres;sing
-im;pres;sion
-im;pres;sion;ism
-im;pres;sion;ist
-im;pres;sive
-im;pres;sive;ly
-im;press
-im;print
-im;print;ing
-im;pris;on;ment
-im;pro;vise
-im;pro;vised
-im;prob;a;ble
-im;promp;tu
-im;prop;er
-im;prop;er;ly
-im;prov;i;sa;tion
-im;prov;ing
-im;prove
-im;prove;ment
-im;proved
-im;pu;ni;ty
-im;pu;ri;ty
-im;pu;ta;tion
-im;pul;sive
-im;pulse
-im;pure
-im;put;ed
-imp
-in;a;bil;i;ty
-in;ac;ces;si;ble
-in;ac;cu;ra;cy
-in;ac;cu;rate
-in;ac;ti;va;tion
-in;ac;ti;vat;ed
-in;ac;tion
-in;ac;tiv;i;ty
-in;ac;tive
-in;ad;e;qua;cy
-in;ad;e;quate
-in;ad;e;quate;ly
-in;ad;mis;si;ble
-in;ad;vert;ent
-in;ad;vert;ent;ly
-in;al;ien;a;ble
-in;an;i;mate
-in;ane
-in;ap;pli;ca;ble
-in;ap;pro;pri;ate
-in;ap;pro;pri;ate;ly
-in;au;di;ble
-in;au;gu;ra;tion
-in;au;gu;ral
-in;au;gu;rat;ed
-in;board
-in;bound
-in;bred
-in;ca;pa;ble
-in;ca;pac;i;tat;ed
-in;ca;pac;i;ty
-in;can;des;cent
-in;car;cer;a;tion
-in;car;cer;at;ed
-in;car;na;tion
-in;car;nate
-in;case
-in;cen;di;ar;y
-in;cen;tive
-in;cense
-in;cep;tion
-in;ces;sant
-in;ces;sant;ly
-in;cest
-in;ci;den;tal
-in;ci;den;tal;ly
-in;ci;dence
-in;ci;dent
-in;ci;sion
-in;ci;sive
-in;cin;er;a;tion
-in;cin;er;a;tor
-in;cip;i;ent
-in;cit;ing
-in;cite
-in;cite;ment
-in;clem;ent
-in;cli;na;tion
-in;cline
-in;clined
-in;clu;sion
-in;clu;sive
-in;clud;ed
-in;clud;ing
-in;clude
-in;co;her;ent
-in;cog;ni;to
-in;com;ing
-in;com;pa;ra;ble
-in;com;pat;i;bil;i;ty
-in;com;pat;i;ble
-in;com;pe;tence
-in;com;pe;tent
-in;com;plete
-in;com;plete;ness
-in;com;pre;hen;si;ble
-in;come
-in;con;ceiv;a;ble
-in;con;clu;sive
-in;con;se;quen;tial
-in;con;sist;en;cy
-in;con;sist;ent
-in;con;ti;nence
-in;con;ven;ience
-in;con;ven;ient
-in;cor;po;ra;tion
-in;cor;po;rat;ed
-in;cor;po;rat;ing
-in;cor;po;rate
-in;cor;rect
-in;cor;rect;ly
-in;cre;men;tal
-in;cre;ment
-in;creas;ing
-in;creas;ing;ly
-in;crease
-in;creased
-in;cred;i;ble
-in;cred;i;bly
-in;cu;ba;tion
-in;cu;ba;tor
-in;cu;bat;ed
-in;cu;bus
-in;cum;bent
-in;cur
-in;cur;a;ble
-in;cur;ring
-in;curred
-in;de
-in;de;cen;cy
-in;de;cent
-in;de;ci;sion
-in;de;pend;ence
-in;de;pend;ent
-in;de;pend;ent;ly
-in;de;scrib;a;ble
-in;de;struct;i;ble
-in;de;ter;mi;nate
-in;debt;ed
-in;debt;ed;ness
-in;deed
-in;def;i;nite
-in;def;i;nite;ly
-in;del;i;ble
-in;dem;ni;fi;ca;tion
-in;dem;ni;fied
-in;dem;ni;fy
-in;dem;ni;ty
-in;den;ta;tion
-in;den;ture
-in;dent
-in;dent;ed
-in;dex
-in;dex;er
-in;dex;es
-in;di;ca;tion
-in;di;ca;tor
-in;di;cat;ed
-in;di;cat;ing
-in;di;cate
-in;di;ces
-in;di;ci;a
-in;di;gent
-in;di;ges;tion
-in;di;go
-in;di;rect
-in;di;rect;ly
-in;di;um
-in;di;vid;u;al
-in;di;vid;u;al;i;ty
-in;di;vid;u;al;is;tic
-in;di;vid;u;al;ism
-in;di;vid;u;al;ized
-in;di;vid;u;al;ly
-in;dic;a;tive
-in;dict;ment
-in;dif;fer;ence
-in;dif;fer;ent
-in;dig;e;nous
-in;dig;na;tion
-in;dig;nant
-in;dis;crim;i;nate
-in;dis;pen;sa;ble
-in;dis;tin;guish;a;ble
-in;do;meth;a;cin
-in;doc;tri;na;tion
-in;door
-in;doors
-in;duc;i;ble
-in;duc;ing
-in;duc;tion
-in;duc;tive
-in;duc;tor
-in;duce
-in;duce;ment
-in;duced
-in;duct;ance
-in;dul;gence
-in;dul;gent
-in;dulg;ing
-in;dulge
-in;dulged
-in;dus;tri;al
-in;dus;tri;al;i;za;tion
-in;dus;tri;al;ised
-in;dus;tri;al;ized
-in;dus;tri;als
-in;dus;tri;ous
-in;dus;try
-in;e;las;tic
-in;e;qual;i;ty
-in;ef;fec;tive
-in;ef;fi;cien;cy
-in;ef;fi;cient
-in;el;i;gi;ble
-in;ept
-in;eq;ui;ty
-in;er;tia
-in;er;tial
-in;ert
-in;es;cap;a;ble
-in;ev;i;ta;bil;i;ty
-in;ev;i;ta;ble
-in;ev;i;ta;bly
-in;ex;pe;ri;enced
-in;ex;pen;sive
-in;ex;pen;sive;ly
-in;ex;pli;ca;ble
-in;ex;pli;ca;bly
-in;ex;tri;ca;bly
-in;fa;mous
-in;fa;my
-in;fal;li;ble
-in;fan;cy
-in;fan;tile
-in;fan;try
-in;fant
-in;farc;tion
-in;fat;u;a;tion
-in;fe;ri;or
-in;fe;ri;or;i;ty
-in;fea;si;ble
-in;fec;tion
-in;fec;tious
-in;fec;tive
-in;fect
-in;fer
-in;fer;ence
-in;fer;nal
-in;fer;no
-in;fer;ring
-in;fer;til;i;ty
-in;fer;tile
-in;ferred
-in;fes;ta;tion
-in;fi;del
-in;fi;del;i;ty
-in;fi;nite
-in;fi;nite;ly
-in;field
-in;fil;tra;tion
-in;fil;trat;ed
-in;fil;trate
-in;fill
-in;fin;i;tes;i;mal
-in;fin;i;ty
-in;fir;ma;ry
-in;firm
-in;fla;tion
-in;fla;tion;ar;y
-in;flam;ma;tion
-in;flam;ma;to;ry
-in;flamed
-in;flat;a;ble
-in;flat;ed
-in;flat;ing
-in;flate
-in;flec;tion
-in;flex;i;ble
-in;flict
-in;flight
-in;flow
-in;flu;en;tial
-in;flu;en;za
-in;flu;enc;ing
-in;flu;ence
-in;flu;enced
-in;flux
-in;fo
-in;for;ma;tion
-in;for;ma;tion;al
-in;for;mal
-in;for;mal;ly
-in;form
-in;form;a;tive
-in;form;ant
-in;form;er
-in;formed
-in;fra
-in;fra;red
-in;fra;struc;ture
-in;frac;tion
-in;fre;quent
-in;fre;quent;ly
-in;fring;ing
-in;fringe
-in;fringe;ment
-in;fringed
-in;fu;sion
-in;fuse
-in;fused
-in;ge;nu;i;ty
-in;gen;ious
-in;ges;tion
-in;gest
-in;gle
-in;gle;side
-in;grained
-in;gre;di;ent
-in;gress
-in;ha;la;tion
-in;hab;it
-in;hab;it;ant
-in;hab;it;ed
-in;hal;er
-in;hal;ing
-in;hale
-in;haled
-in;her;ent
-in;her;ent;ly
-in;her;it
-in;her;it;ance
-in;her;it;ed
-in;hi;bi;tion
-in;hib;i;to;ry
-in;hib;i;tor
-in;hib;it
-in;ho;mo;ge;ne;ous
-in;hu;man
-in;hu;mane
-in;i;ti;a;tion
-in;i;ti;a;tive
-in;i;ti;a;tor
-in;i;ti;at;ed
-in;i;ti;at;ing
-in;i;ti;ate
-in;i;tial
-in;i;tial;ize
-in;i;tial;ly
-in;iq;ui;ty
-in;jec;tion
-in;jec;tor
-in;ject
-in;ject;a;ble
-in;ju;ri;ous
-in;ju;ries
-in;ju;ry
-in;junc;tion
-in;junc;tive
-in;jur;ing
-in;jure
-in;jured
-in;jus;tice
-in;laid
-in;land
-in;lay
-in;let
-in;line
-in;mate
-in;nate
-in;ner
-in;ner;most
-in;ner;va;tion
-in;ning
-in;nings
-in;no;cence
-in;no;cent
-in;no;cent;ly
-in;no;va;tion
-in;no;va;tive
-in;no;va;tor
-in;no;vate
-in;noc;u;ous
-in;nu;en;do
-in;nu;mer;a;ble
-in;o;si;tol
-in;oc;u;la;tion
-in;oc;u;lat;ed
-in;op;er;a;ble
-in;op;er;a;tive
-in;or;di;nate
-in;or;gan;ic
-in;pa;tient
-in;put
-in;put;ting
-in;quest
-in;qui;si;tion
-in;quir;er
-in;quir;ies
-in;quir;ing
-in;quir;y
-in;quire
-in;quired
-in;quis;i;tive
-in;quis;i;tor
-in;sa;tia;ble
-in;san;i;ty
-in;sane
-in;sane;ly
-in;scribed
-in;scrip;tion
-in;se;cu;ri;ty
-in;se;cure
-in;sec;ti;cide
-in;sect
-in;sem;i;na;tion
-in;sen;si;tiv;i;ty
-in;sen;si;tive
-in;sep;a;ra;ble
-in;ser;tion
-in;sert
-in;sert;ed
-in;set
-in;shore
-in;sid;er
-in;sid;i;ous
-in;side
-in;sides
-in;sig;ni;a
-in;sig;nif;i;cant
-in;sight
-in;sight;ful
-in;sist
-in;sist;ence
-in;sist;ent
-in;so;far
-in;sol;u;ble
-in;sol;ven;cy
-in;sol;vent
-in;sole
-in;som;ni;a
-in;som;ni;ac
-in;spec;tion
-in;spec;tor
-in;spec;tor;ate
-in;spect
-in;spi;ra;tion
-in;spi;ra;tion;al
-in;spir;ing
-in;spire
-in;spired
-in;sta;bil;i;ty
-in;stal;la;tion
-in;stal;ling
-in;stal;ment
-in;stall
-in;stall;er
-in;stall;ment
-in;stalled
-in;stan;ta;ne;ous
-in;stan;ta;ne;ous;ly
-in;stan;ti;ate
-in;stance
-in;stant
-in;stant;ly
-in;stead
-in;step
-in;sti;gat;ed
-in;sti;tu;tion
-in;sti;tu;tion;al
-in;sti;tu;tion;al;i;za;tion
-in;sti;tu;tion;al;ized
-in;sti;tut;ed
-in;sti;tut;ing
-in;sti;tute
-in;sti;tutes
-in;still
-in;stilled
-in;stinc;tive
-in;stinc;tive;ly
-in;stinct
-in;stru;men;ta;tion
-in;stru;men;tal
-in;stru;men;tal;i;ty
-in;stru;ment
-in;struc;tion
-in;struc;tion;al
-in;struc;tions
-in;struc;tive
-in;struc;tor
-in;struct
-in;su;la;tion
-in;su;la;tor
-in;su;lar
-in;su;lat;ed
-in;su;lat;ing
-in;su;late
-in;su;lin
-in;suf;fi;cien;cy
-in;suf;fi;cient
-in;suf;fi;cient;ly
-in;sult
-in;sult;ing
-in;sur;er
-in;sur;gen;cy
-in;sur;gent
-in;sur;ing
-in;sur;mount;a;ble
-in;sur;rec;tion
-in;sure
-in;sured
-in;tact
-in;take
-in;tan;gi;ble
-in;te;ger
-in;te;gra;ble
-in;te;gra;tion
-in;te;gra;tive
-in;te;gra;tor
-in;te;gral
-in;te;grat;ed
-in;te;grat;ing
-in;te;grate
-in;te;ri;or
-in;teg;ri;ty
-in;tel;lec;tu;al
-in;tel;lec;tu;al;ly
-in;tel;lect
-in;tel;li;genc;er
-in;tel;li;gence
-in;tel;li;gent
-in;tel;li;gent;ly
-in;tel;li;gi;ble
-in;ten;si;fi;ca;tion
-in;ten;si;fied
-in;ten;si;fy
-in;ten;si;fy;ing
-in;ten;si;ty
-in;ten;sive
-in;ten;sive;ly
-in;ten;tion
-in;ten;tion;al
-in;ten;tion;al;ly
-in;ten;tioned
-in;tend
-in;tend;ed
-in;tense
-in;tense;ly
-in;tent
-in;tent;ly
-in;ter;a;gen;cy
-in;ter;ac;tion
-in;ter;ac;tive
-in;ter;act
-in;ter;bank
-in;ter;cep;tion
-in;ter;cep;tor
-in;ter;cept
-in;ter;ces;sion
-in;ter;change
-in;ter;change;a;ble
-in;ter;change;a;bly
-in;ter;cit;y
-in;ter;col;le;giate
-in;ter;com
-in;ter;con;nec;tion
-in;ter;con;ti;nen;tal
-in;ter;cool;er
-in;ter;course
-in;ter;de;part;men;tal
-in;ter;de;pend;ence
-in;ter;de;pend;ent
-in;ter;dic;tion
-in;ter;dis;ci;pli;nar;y
-in;ter;est
-in;ter;est;ed
-in;ter;est;ing
-in;ter;est;ing;ly
-in;ter;fa;cial
-in;ter;fac;ing
-in;ter;face
-in;ter;faith
-in;ter;fer;ence
-in;ter;fer;ing
-in;ter;fer;om;e;ter
-in;ter;fer;om;e;try
-in;ter;fer;on
-in;ter;fere
-in;ter;fered
-in;ter;ga;lac;tic
-in;ter;gov;ern;men;tal
-in;ter;im
-in;ter;laced
-in;ter;leaved
-in;ter;li;brar;y
-in;ter;link
-in;ter;lock
-in;ter;lude
-in;ter;me;di;a;tion
-in;ter;me;di;ar;ies
-in;ter;me;di;ar;y
-in;ter;me;di;ate
-in;ter;ment
-in;ter;mis;sion
-in;ter;mit;tent
-in;ter;mit;tent;ly
-in;ter;moun;tain
-in;ter;na;tion
-in;ter;na;tion;al
-in;ter;na;tion;al;i;za;tion
-in;ter;na;tion;al;ly
-in;ter;nal
-in;ter;nal;ly
-in;ter;per;son;al
-in;ter;phase
-in;ter;plan;e;tar;y
-in;ter;play
-in;ter;po;la;tion
-in;ter;po;lat;ed
-in;ter;pre;ta;tion
-in;ter;pre;ta;tive
-in;ter;pre;tive
-in;ter;pret
-in;ter;pret;er
-in;ter;ra;cial
-in;ter;re;lat;ed
-in;ter;ro;ga;tion
-in;ter;ro;gat;ed
-in;ter;ro;gate
-in;ter;rog;a;to;ries
-in;ter;rup;tion
-in;ter;rupt
-in;ter;rupt;ed
-in;ter;sci;ence
-in;ter;sec;tion
-in;ter;sect
-in;ter;spersed
-in;ter;state
-in;ter;stel;lar
-in;ter;sti;tial
-in;ter;tid;al
-in;ter;twined
-in;ter;val
-in;ter;ven;ing
-in;ter;ven;tion
-in;ter;ven;tion;al
-in;ter;vene
-in;ter;vened
-in;ter;view
-in;ter;view;ee
-in;ter;view;er
-in;ter;wo;ven
-in;ter;work;ing
-in;tern
-in;tern;ment
-in;tern;ship
-in;terne
-in;tes;ti;nal
-in;tes;tine
-in;ti;ma;cy
-in;ti;mate
-in;ti;mate;ly
-in;ti;tle
-in;tim;i;da;tion
-in;tim;i;dat;ed
-in;tim;i;dat;ing
-in;tim;i;date
-in;to
-in;to;na;tion
-in;tol;er;a;ble
-in;tol;er;ance
-in;tol;er;ant
-in;tox;i;ca;tion
-in;tox;i;cat;ed
-in;tox;i;cat;ing
-in;tra;cel;lu;lar
-in;tra;cra;ni;al
-in;tra;mu;ral
-in;tra;mus;cu;lar
-in;tra;state
-in;tra;u;ter;ine
-in;tra;ve;nous
-in;trac;ta;ble
-in;trep;id
-in;tri;cate
-in;tri;cate;ly
-in;tri;guing
-in;trigue
-in;trigued
-in;trin;si;cal;ly
-in;trin;sic
-in;tro;duc;ing
-in;tro;duc;tion
-in;tro;duc;to;ry
-in;tro;duce
-in;tro;duced
-in;tro;spec;tion
-in;tro;spec;tive
-in;tru;sion
-in;tru;sive
-in;trud;er
-in;trude
-in;tu;ba;tion
-in;tu;i;tion
-in;tu;i;tive
-in;tu;i;tive;ly
-in;tu;it
-in;un;dat;ed
-in;va;lid;i;ty
-in;va;sion
-in;va;sive
-in;vad;ed
-in;vad;er
-in;vad;ing
-in;vade
-in;val;i;dat;ed
-in;val;i;date
-in;val;id
-in;val;u;a;ble
-in;var;i;a;bly
-in;var;i;ant
-in;ven;tion
-in;ven;tive
-in;ven;to;ries
-in;ven;to;ry
-in;ven;tor
-in;vent
-in;ver;sion
-in;ver;te;brate
-in;verse
-in;verse;ly
-in;vert
-in;vert;er
-in;ves;ti;ga;tion
-in;ves;ti;ga;tion;al
-in;ves;ti;ga;tive
-in;ves;ti;ga;tor
-in;ves;ti;gat;ed
-in;ves;ti;gat;ing
-in;ves;ti;gate
-in;ves;tor
-in;vest
-in;vest;ment
-in;vi;ta;tion
-in;vi;ta;tion;al
-in;vig;or;at;ing
-in;vin;ci;ble
-in;vis;i;bil;i;ty
-in;vis;i;ble
-in;vit;ed
-in;vit;ing
-in;vite
-in;vo;ca;tion
-in;voic;ing
-in;voice
-in;voiced
-in;vok;ing
-in;voke
-in;voked
-in;vol;un;tar;i;ly
-in;vol;un;tar;y
-in;volv;ing
-in;volve
-in;volve;ment
-in;volved
-in;ward
-in;ward;ly
-inc
-inch
-incl
-incr
-ind
-inf
-init
-ink
-inn
-inn;keep;er
-ins
-insp
-inst
-instr
-insur;ance
-int
-inter
-intl
-intr
-intro
-inv
-ir;i;des;cent
-ir;ra;di;a;tion
-ir;ra;di;ance
-ir;ra;di;at;ed
-ir;ra;tion;al
-ir;re;duc;i;ble
-ir;re;place;a;ble
-ir;re;sist;i;ble
-ir;re;spec;tive
-ir;re;spon;si;ble
-ir;re;vers;i;ble
-ir;reg;u;lar
-ir;reg;u;lar;i;ty
-ir;reg;u;lar;ly
-ir;rel;e;vant
-ir;rep;a;ra;ble
-ir;rev;er;ent
-ir;rev;o;ca;ble
-ir;rev;o;ca;bly
-ir;ri;ga;tion
-ir;ri;gat;ed
-ir;ri;ta;bil;i;ty
-ir;ri;ta;ble
-ir;ri;ta;tion
-ir;ri;tant
-ir;ri;tat;ed
-ir;ri;tat;ing
-ir;ri;tate
-ire
-is;che;mi;a
-is;che;mic
-is;chi;a
-is;land
-is;land;er
-is;let
-is;su;ance
-is;su;er
-is;su;ing
-is;sue
-is;sued
-isle
-ism
-isth;mus
-it;er
-it;er;a;tion
-it;er;a;tive
-it;er;at;ed
-it;er;ate
-it;self
-ita
-ital
-itch
-itch;ing
-itch;y
-its
-ja;ger
-ja;pan
-ja;pon;i;ca
-jaap
-jab
-jab;ber
-jac;quard
-jack
-jack;al
-jack;ass
-jack;et
-jack;pot
-jacks
-jad
-jad;ed
-jade
-jae;ger
-jag
-jag;ged
-jag;uar
-jai
-jail
-jail;house
-jak
-jake
-jakes
-jam
-jam;bo;ree
-jam;ming
-jan;i;to;ri;al
-jan;i;tor
-jane
-jar
-jar;gon
-jar;ring
-jas;mine
-jas;per
-jaun;dice
-jave;lin
-jaw
-jaws
-jay
-jazz
-jazz;y
-jct
-jeal;ous
-jeal;ous;y
-jean
-jeans
-jee
-jee;pers
-jeep
-jeez
-jel;ly
-jel;ly;fish
-jell;o
-jen
-jen;nie
-jen;ny
-jeop;ard;ize
-jeop;ard;y
-jer
-jer;ry
-jer;sey
-jerk
-jerk;y
-jess
-jesse
-jest
-jest;er
-jet
-jet;ty
-jew;el
-jew;el;er
-jew;el;ler;y
-jew;el;ry
-jew;eled
-ji;had
-jib
-jif;fy
-jig
-jig;saw
-jill
-jim;my
-jin
-jin;gle
-jinx
-jit;ter
-jive
-jo;ey
-jo;han;nes
-jo;jo;ba
-jo;seph
-jo;ta
-job
-job;less
-jock
-jock;ey
-jodh;pur
-joe
-jog
-jog;ger
-jog;ging
-john
-john;ny
-join
-join;er
-join;er;y
-joint
-joint;ed
-joint;ly
-jok;er
-jok;ing
-joke
-jol;ly
-jolt
-jor;dan
-jor;na;da
-josh
-joss
-jot
-joule
-jour
-jour;nal
-jour;nal;is;tic
-jour;nal;ism
-jour;nal;ist
-jour;ney
-jour;ney;man
-joy
-joy;ful
-joy;ous
-ju;bi;lee
-ju;das
-ju;di;ci;ar;y
-ju;di;cial
-ju;di;cious
-ju;do
-ju;ju
-ju;ni;per
-ju;ra
-ju;rid;i;cal
-ju;ris;dic;tion
-ju;ris;pru;dence
-ju;rist
-ju;ror
-ju;ry
-ju;ve;nile
-judg;ing
-judg;men;tal
-judg;ment
-judge
-judge;ment
-jug
-jug;ger;naut
-jug;gle
-juic;er
-juic;y
-juice
-juke;box
-jum;ble
-jum;bo
-jump
-jump;er
-jun;gle
-jun;ior
-jun;ta
-junc;tion
-junc;ture
-junk
-junk;ie
-junk;y
-junk;yard
-jus
-jus;ti;fi;a;ble
-jus;ti;fi;a;bly
-jus;ti;fi;ca;tion
-jus;ti;fied
-jus;ti;fy
-jus;ti;fy;ing
-jus;tice
-just
-just;ly
-jute
-jux;ta;po;si;tion
-ka;bu;ki
-ka;hu;na
-ka;lei;do;scope
-ka;mi
-ka;mi;ka;ze
-ka;na
-ka;ra;te
-ka;roo
-ka;ta;na
-ka;va
-kai;ser
-kain
-kal;i
-kale
-kan;ga;roo
-kan;ji
-kane
-kang
-kap;pa
-kar;at
-kar;ma
-kar;mic
-karst
-kart
-kas
-kash;mir
-kat
-kay;ak
-kcal
-ke;a
-ke;bab
-ke;no
-ke;to
-ke;tone
-keck
-keel
-keen
-keen;er
-keen;ly
-keep
-keep;er
-keep;ing
-keep;sake
-kef
-keg
-kel;ly
-kel;vin
-kelp
-kemp
-ken
-ken;do
-ken;nel
-kent
-kept
-ker;a;tin
-ker;nel
-ker;o;sene
-ker;ry
-kerb
-kern
-kes;trel
-ket;tle
-ketch;up
-key
-key;board
-key;hole
-key;ing
-key;less
-key;note
-key;stone
-key;stroke
-key;word
-keyed
-khak;i
-khan
-ki;ley
-ki;mo;no
-ki;nase
-ki;ne;si;ol;o;gy
-ki;net;ic
-ki;net;ics
-ki;no
-ki;osk
-ki;wi
-kick
-kick;back
-kick;er
-kick;off
-kid
-kid;der
-kid;die
-kid;ding
-kid;dy
-kid;nap
-kid;nap;ping
-kid;ney
-kil;o
-kil;o;gram
-kil;o;me;ter
-kil;o;me;tre
-kil;o;watt
-kil;os
-kill
-kill;er
-kill;ing
-kiln
-kilt
-kin
-kin;der;gar;ten
-kin;dling
-kin;dred
-kin;e;mat;ic
-kin;e;mat;ics
-kin;ship
-kind
-kind;ly
-kind;ness
-kine
-king
-king;dom
-king;fish;er
-king;pin
-king;wood
-kink
-kink;y
-kins;man
-kip
-kir;by
-kirk
-kis;met
-kish
-kiss
-kit
-kit;ten
-kit;ty
-kitch;en
-kitch;en;er
-kitch;en;ette
-kitch;en;ware
-kite
-kitsch
-knack
-knee
-kneel
-kneel;ing
-knelt
-knew
-knick;ers
-knife
-knight
-knit
-knit;ted
-knit;ter
-knit;ting
-knit;wear
-knives
-knob
-knock
-knock;out
-knoll
-knot
-knot;ted
-knot;ting
-know
-know;ing
-know;ing;ly
-knowl;edg;a;ble
-knowl;edge
-knowl;edge;a;ble
-known
-knuck;le
-ko;a
-ko;a;la
-ko;ko
-ko;la
-ko;na
-ko;re
-ko;ru;na
-ko;sher
-kohl
-kon;do
-kor
-kos
-kraft
-krem;lin
-kris
-kro;na
-kro;ne
-kroon
-kryp;ton
-ku;dos
-ku;la
-kud;zu
-kun;da;li;ni
-kwa;cha
-kwan;za
-kwh
-ky;lie
-ky;lix
-kyat
-kyle
-kyu
-la;bel
-la;bel;ing
-la;bel;ling
-la;beled
-la;belled
-la;bi;a
-la;bo;ri;ous
-la;bor
-la;bor;er
-la;bored
-la;bour
-la;bour;er
-la;crosse
-la;cu;na
-la;dies
-la;dle
-la;dy
-la;dy;bird
-la;dy;bug
-la;ger
-la;goon
-la;i;ty
-la;ma
-la;ment
-la;ment;ed
-la;na;i
-la;pel
-la;sa;gna
-la;ser
-la;ta
-la;ten;cy
-la;tent
-la;tex
-la;ti;no
-la;va
-la;zi;ly
-la;zi;ness
-la;zy
-lab
-lab;o;ra;to;ry
-lab;y;rinth
-lac
-lac;ing
-lac;quer
-lac;ta;tion
-lac;tat;ing
-lac;tate
-lac;tic
-lac;to;ba;cil;lus
-lac;tose
-lac;y
-lace
-lack
-lack;ey
-lack;ing
-lack;lus;ter
-lad
-lad;der
-lad;en
-lad;ing
-lag
-lag;ging
-lah
-lai
-laid
-lain
-lair
-laird
-lake
-lake;front
-lake;shore
-lakh
-lam
-lam;bert
-lam;i;na
-lam;i;na;tion
-lam;i;na;tor
-lam;i;nar
-lam;i;nat;ed
-lam;i;nat;ing
-lam;i;nate
-lam;poon
-lamb
-lamb;da
-lame
-lamp
-lan;cet
-lan;dau
-lan;guage
-lan;ta;na
-lan;tern
-lan;yard
-lanc;er
-lance
-land
-land;ed
-land;fall
-land;ing
-land;locked
-land;lord
-land;mark
-land;own;er
-land;scap;ing
-land;scape
-land;scaped
-land;slide
-lands
-lane
-lang
-langue
-lap
-lap;is
-lap;ping
-lapse
-lar
-lar;ce;ny
-lar;der
-lar;go
-lar;i;at
-lar;ry
-lar;va
-lar;val
-lar;yn;ge;al
-lar;ynx
-larch
-lard
-larg;er
-larg;est
-large
-large;ly
-lark
-lark;spur
-las;sie
-las;so
-lash
-lash;ing
-lashed
-lass
-last
-last;ing
-last;ly
-lat
-lat;ed
-lat;er
-lat;er;al
-lat;er;al;ly
-lat;est
-lat;i;tude
-lat;ter
-lat;tice
-latch
-latch;ing
-late
-late;ly
-lath;er
-lathe
-lau;ra
-lau;re;ate
-lau;rel
-lau;rence
-laud;a;ble
-laud;er
-laugh
-laugh;a;ble
-laugh;ing
-laugh;ter
-laun;dry
-launch
-launch;er
-lav
-lav;a;to;ry
-lav;en;der
-lav;ish
-lav;ish;ly
-law
-law;ful
-law;ful;ly
-law;less
-law;less;ness
-law;mak;er
-law;suit
-law;yer
-lawn
-lax
-lax;a;tive
-lay
-lay;er
-lay;er;ing
-lay;ette
-lay;ing
-lay;man
-lay;off
-lay;out
-lay;up
-laz;ar
-laz;u;li
-lbw
-lcd
-lcl
-lcm
-le;ga;to
-le;gal
-le;gal;i;ty
-le;gal;i;za;tion
-le;gal;ize
-le;gal;ized
-le;gal;ly
-le;gion
-le;git
-le;git;i;ma;cy
-le;git;i;mate
-le;git;i;mate;ly
-le;is
-le;mur
-le;ni;ent
-le;no
-le;o;ne
-le;o;tard
-le;sion
-le;thal
-le;thal;i;ty
-le;u
-le;vant
-le;vi;a;than
-lea
-leach
-lead
-lead;er
-lead;er;ship
-lead;ing
-leaf
-leaf;let
-leaf;y
-league
-leak
-leak;age
-leak;y
-leal
-lean
-lean;er
-lean;ing
-leap
-leap;frog
-leap;ing
-leapt
-lear
-lear;y
-learn
-learn;ed
-learn;er
-learn;ing
-learnt
-leas;ing
-lease
-lease;hold
-leash
-least
-leath;er
-leath;er;head
-leav;ing
-leave
-leaved
-leaves
-leb;en
-lec;i;thin
-lec;tion;ar;y
-lec;tur;er
-lec;tur;ing
-lec;ture
-lec;tured
-lech
-lect
-led
-ledg;er
-ledge
-lee
-lee;ward
-lee;way
-leech
-leek
-leer
-lees
-left
-left;ies
-left;ist
-left;o;ver
-left;y
-leg
-leg;a;cy
-leg;end
-leg;end;ar;y
-leg;er
-leg;ged
-leg;gings
-leg;i;ble
-leg;is;la;tion
-leg;is;la;tive
-leg;is;la;tor
-leg;is;la;ture
-leg;is;lat;ed
-leg;is;late
-leg;ume
-lei
-lei;sure
-lei;sure;ly
-leish;ma;ni;a
-lek
-lem;ma
-lem;mas
-lem;on
-lem;on;ade
-lem;on;y
-lem;pi;ra
-len;til
-lend
-lend;er
-lend;ing
-length
-length;en
-length;wise
-length;y
-lens
-lens;es
-lent
-leop;ard
-lep;i;dop;ter;a
-lep;re;chaun
-lep;ro;sy
-lep;ton
-les;bi;an
-les;bi;an;ism
-les;see
-les;son
-les;sor
-les;te
-less
-less;en
-less;er
-lest
-let
-let;ter
-let;ter;head
-let;ter;ing
-let;ter;man
-let;tered
-let;ters
-let;ting
-let;tuce
-leth;ar;gy
-leu;cine
-leu;kae;mi;a
-leu;ke;mi;a
-leu;ko;cyte
-lev
-lev;ee
-lev;el
-lev;el;ing
-lev;el;ling
-lev;eled
-lev;elled
-lev;er
-lev;er;age
-lev;ied
-lev;ies
-lev;in
-lev;y
-lew;is
-lewd
-lex
-lex;i;cal
-lex;i;con
-lex;is
-ley
-lge
-li;a;bil;i;ties
-li;a;bil;i;ty
-li;a;ble
-li;ai;son
-li;aise
-li;ar
-li;bel
-li;bel;lous
-li;bel;ous
-li;ber
-li;bi;do
-li;bra
-li;brar;i;an
-li;brar;i;an;ship
-li;brar;ies
-li;brar;y
-li;bret;to
-li;bri
-li;cen;see
-li;cen;sor
-li;cence
-li;cenced
-li;cens;ing
-li;cense
-li;censed
-li;chen
-li;do
-li;do;caine
-li;ga;tion
-li;la
-li;lac
-li;mes
-li;no
-li;no;le;um
-li;on
-li;on;heart
-li;pase
-li;pid
-li;queur
-li;quid;i;ty
-li;ra
-li;re
-li;tas
-li;ter
-li;thog;ra;phy
-li;tre
-li;tur;gi;cal
-li;vre
-li;za
-liang
-lib
-lib;er;a;tion
-lib;er;a;tor
-lib;er;al
-lib;er;al;i;za;tion
-lib;er;al;ism
-lib;er;al;ly
-lib;er;at;ed
-lib;er;at;ing
-lib;er;ate
-lib;er;tar;i;an
-lib;er;tar;i;an;ism
-lib;er;ty
-lic;o;rice
-lice
-licht
-lick
-lick;ing
-lid
-lie
-lied
-lied;er
-liege
-lien
-lieu
-lieu;ten;ant
-life
-life;boat
-life;guard
-life;less
-life;like
-life;line
-life;long
-life;sav;ing
-life;time
-lift
-lift;er
-lig;a;ment
-lig;and
-lig;nin
-light
-light;ed
-light;en
-light;en;ing
-light;er
-light;hous;es
-light;house
-light;ing
-light;ly
-light;ness
-light;ning
-light;weight
-lights
-ligne
-lik;a;ble
-lik;ing
-like
-like;a;ble
-like;li;hood
-like;ly
-like;ness
-like;wise
-lil;ies
-lil;y
-lim;bo
-lim;er;ick
-lim;i;ta;tion
-lim;it
-lim;it;ed
-lim;it;er
-lim;it;ing
-lim;it;less
-lim;ou;sine
-limb
-lime
-lime;light
-lime;stone
-limp
-lin
-lin;ac
-lin;den
-lin;dy
-lin;e;ar
-lin;e;ar;i;ty
-lin;e;ar;ized
-lin;e;ar;ly
-lin;en
-lin;er
-lin;ge;rie
-lin;ger
-lin;go
-lin;gua
-lin;gual
-lin;guis;ti;cal;ly
-lin;guis;tic
-lin;guis;tics
-lin;guist
-lin;ing
-lin;o;le;ic
-lin;sey
-line
-line;age
-line;back;er
-line;man
-line;up
-lines
-ling
-link
-link;age
-linked
-links
-linn
-lint
-lip
-lip;o;pro;tein
-lip;per
-lip;stick
-lipped
-liq;ue;fied
-liq;ui;da;tion
-liq;ui;da;tor
-liq;ui;dat;ed
-liq;ui;date
-liq;uid
-liq;uor
-lis;te;ri;a
-lis;ten
-lis;ten;er
-lisle
-lisp
-list
-list;ed
-list;er
-list;ing
-lists
-lit
-lit;a;ny
-lit;er;a;cy
-lit;er;a;ture
-lit;er;al
-lit;er;al;ly
-lit;er;ar;y
-lit;er;ate
-lit;i;ga;tion
-lit;mus
-lit;ter
-lit;tle
-lit;tlest
-lit;to;ral
-lit;ur;gy
-lith
-lith;i;um
-lith;o;graph
-litho
-liv;a;ble
-liv;er
-liv;er;y
-liv;id
-liv;ing
-live
-live;li;hood
-live;ly
-live;stock
-lived
-lives
-liz;ard
-liz;zie
-lla;ma
-lla;no
-lo;bo
-lo;ca
-lo;ca;tion
-lo;ca;tor
-lo;cal
-lo;cal;i;sa;tion
-lo;cal;i;ty
-lo;cal;i;za;tion
-lo;cal;ised
-lo;cal;ize
-lo;cal;ized
-lo;cal;ly
-lo;cale
-lo;cat;ed
-lo;cat;ing
-lo;cate
-lo;ci
-lo;co
-lo;co;mo;tion
-lo;co;mo;tive
-lo;cum
-lo;cus
-lo;cust
-lo;gan
-lo;gis;ti;cal
-lo;gis;tic
-lo;gis;tics
-lo;ma
-lo;ris
-lo;tion
-lo;tus
-load
-load;ed
-load;er
-load;ing
-loads
-loaf
-loaf;er
-loam
-loan
-loath;ing
-loathe
-loaves
-lob
-lob;bied
-lob;by
-lob;by;ing
-lob;by;ist
-lob;ster
-lobe
-loch
-lock
-lock;a;ble
-lock;er
-lock;et
-lock;out
-lock;smith
-lock;up
-lode
-lodg;er
-lodg;ing
-lodg;ings
-lodge
-lodged
-loe
-loft
-loft;y
-log
-log;a;rith;mic
-log;a;rithm
-log;book
-log;ger
-log;ging
-log;i;cal
-log;i;cal;ly
-log;ic
-log;o
-log;o;type
-log;os
-loge
-loin
-loins
-lol;li;pop
-lol;ly
-lon;er
-lon;gev;i;ty
-lon;gi;tu;di;nal
-lon;gi;tude
-lone
-lone;li;ness
-lone;ly
-lone;some
-long
-long;er
-long;horn
-long;ing
-long;stand;ing
-long;time
-longs
-loo
-look
-look;out
-loom
-loom;ing
-loon
-loon;ey
-loon;y
-loop
-loop;er
-loop;hole
-loop;y
-looped
-loos;en
-loos;er
-loos;ing
-loose
-loose;ly
-loot
-lop
-lor
-lor;ry
-lord
-lord;ship
-lore
-los;er
-los;ing
-los;sy
-lose
-loss
-lost
-lot
-lot;ter;ies
-lot;ter;y
-lot;to
-lots
-lou;ie
-lou;is
-lou;vre
-loud
-loud;ly
-loud;ness
-loud;speak;er
-lough
-loung;ing
-lounge
-loup
-lous;y
-lov;a;ble
-lov;er
-lov;ing
-lov;ing;ly
-love
-love;a;ble
-love;less
-love;ly
-love;mak;ing
-low
-low;ball
-low;down
-low;er
-low;er;ing
-low;er;y
-low;ing
-low;land
-low;ly
-lowe
-lox
-loy;al
-loy;al;ist
-loy;al;ty
-lsd
-ltd
-lu;au
-lu;bri;ca;tion
-lu;bri;cat;ed
-lu;bri;cat;ing
-lu;cent
-lu;cerne
-lu;ci;da
-lu;ci;fer
-lu;cid
-lu;cif;er;ase
-lu;di;crous
-lu;lu
-lu;men
-lu;mens
-lu;mi;na
-lu;mi;nance
-lu;mi;nar;ies
-lu;mi;nes;cence
-lu;mi;nes;cent
-lu;mi;nos;i;ty
-lu;mi;nous
-lu;na;cy
-lu;na;tic
-lu;nar
-lu;pin
-lu;pine
-lu;pus
-lu;te;in
-lub;ri;cant
-lube
-luc;ra;tive
-luce
-luck
-luck;i;ly
-luck;y
-lug
-lug;gage
-luge
-luke;warm
-lull
-lull;a;by
-lum;bar
-lum;ber
-lum;ber;jack
-lump
-lump;y
-lunch
-lunch;eon
-lunch;time
-lune
-lung
-lure
-lurk
-lurk;er
-lus;cious
-lus;ter
-lus;tre
-lus;trous
-lush
-lust
-lust;y
-lute
-lux
-lux;u;ri;ous
-lux;u;ri;ous;ly
-lux;u;ry
-luxe
-ly;ce;um
-ly;ing
-ly;sine
-ly;sis
-lye
-lym;phat;ic
-lym;pho;cyt;ic
-lym;pho;cyte
-lym;pho;ma
-lym;phoid
-lymph
-lynch
-lynx
-lyr;i;cal
-lyr;i;cist
-lyr;ic
-lyre
-m;l
-m;ro
-ma;ca;bre
-ma;caw
-ma;chet;e
-ma;chin;er;y
-ma;chin;ing
-ma;chin;ist
-ma;chine
-ma;chined
-ma;dre
-ma;du;ro
-ma;gen;ta
-ma;gi
-ma;gi;cian
-ma;gus
-ma;ha;ra;ja
-ma;ha;ri;shi
-ma;hat;ma
-ma;hog;a;ny
-ma;jes;tic
-ma;jor
-ma;jor;i;ty
-ma;ko
-ma;lac;ca
-ma;laise
-ma;lar;i;a
-ma;lev;o;lent
-ma;li
-ma;li;cious
-ma;lig;nan;cy
-ma;lig;nant
-ma;ma
-ma;na
-ma;net
-ma;neu;ver
-ma;ni;a
-ma;ni;ac
-ma;nip;u;la;tive
-ma;nip;u;la;tor
-ma;nip;u;lat;ed
-ma;nip;u;lat;ing
-ma;nip;u;late
-ma;noeu;vre
-ma;nu;ka
-ma;nure
-ma;ple
-ma;ra
-ma;raud;er
-ma;ri;a
-ma;ri;jua;na
-ma;ri;na
-ma;rim;ba
-ma;rine
-ma;roon
-ma;son
-ma;son;ic
-ma;son;ry
-ma;te;ri;al
-ma;te;ri;al;i;ty
-ma;te;ri;al;ism
-ma;te;ri;al;ize
-ma;te;ri;al;ized
-ma;te;ri;al;ly
-ma;te;ri;als
-ma;te;ri;el
-ma;ter
-ma;ter;nal
-ma;ter;ni;ty
-ma;til;da
-ma;tri;ces
-ma;tric;u;la;tion
-ma;trix
-ma;tron
-ma;tur;i;ty
-ma;ture
-ma;ven
-ma;vis
-ma;ya
-ma;yan
-maar
-mac
-mac;a;da;mi;a
-mac;a;ro;ni
-mac;far;lane
-mac;in;tosh
-mac;ro
-mac;ro;e;co;nom;ics
-mac;ro;mo;lec;u;lar
-mac;ro;phage
-mac;ro;scop;ic
-mac;u;lar
-mace
-mach
-mack
-mack;i;naw
-mack;in;tosh
-macke;rel
-mad
-mad;am
-mad;ame
-mad;den
-mad;e;leine
-mad;e;moi;selle
-mad;ly
-mad;man
-mad;ness
-mad;ras
-made
-mael;strom
-maes;tro
-mag
-mag;a;zine
-mag;da;len
-mag;da;lene
-mag;gie
-mag;got
-mag;i;cal
-mag;i;cal;ly
-mag;ic
-mag;is;trate
-mag;ma
-mag;ne;si;um
-mag;ne;to
-mag;ne;tom;e;ter
-mag;net
-mag;net;i;cal;ly
-mag;net;i;za;tion
-mag;net;ic
-mag;net;ics
-mag;net;ism
-mag;ni;fi;ca;tion
-mag;ni;fi;er
-mag;ni;fied
-mag;ni;fy
-mag;ni;fy;ing
-mag;ni;tude
-mag;nif;i;cence
-mag;nif;i;cent
-mag;no;lia
-mag;num
-mag;pie
-mage
-mah;jong
-maid
-maid;en
-maid;en;head
-mail
-mail;bag
-mail;box
-mail;er
-mail;man
-mailed
-main
-main;land
-main;line
-main;ly
-main;stay
-main;stream
-main;tain
-main;tain;er
-main;te;nance
-mains
-mair
-maize
-maj;es;ty
-mak;er
-mak;ing
-make
-make;shift
-make;up
-mal;a;chite
-mal;func;tion
-mal;ice
-mal;kin
-mal;lard
-mal;le;a;ble
-mal;let
-mal;low
-mal;nour;ished
-mal;nu;tri;tion
-mal;prac;tice
-male
-mall
-malt
-mam
-mam;bo
-mam;ma
-mam;ma;li;an
-mam;ma;ry
-mam;mal
-mam;moth
-man
-man;a;ge;ri;al
-man;a;tee
-man;ag;er
-man;ag;ing
-man;age
-man;age;a;ble
-man;age;ment
-man;aged
-man;da;la
-man;da;rin
-man;da;to;ry
-man;dat;ed
-man;dat;ing
-man;date
-man;di
-man;di;ble
-man;dib;u;lar
-man;dir
-man;do;lin
-man;drake
-man;ga;nese
-man;ger
-man;go
-man;go;steen
-man;grove
-man;hole
-man;hood
-man;hunt
-man;i;cure
-man;i;fes;ta;tion
-man;i;fes;to
-man;i;fest
-man;i;fold
-man;i;tou
-man;ic
-man;kind
-man;ly
-man;na
-man;ne;quin
-man;ner
-man;nered
-man;ners
-man;nose
-man;or
-man;pow;er
-man;sion
-man;slaugh;ter
-man;ta
-man;tel
-man;tis
-man;tle
-man;tra
-man;tu;a
-man;u;al
-man;u;al;ly
-man;u;fac;tur;er
-man;u;fac;tur;ing
-man;u;fac;ture
-man;u;fac;tured
-man;u;script
-man;y
-mane
-mange
-manned
-manuf
-map
-map;ping
-mar
-mar;a;nath;a
-mar;a;thon
-mar;ble
-mar;bles
-mar;ca;site
-mar;cel
-mar;cel;la
-mar;ga;ri;ta
-mar;ga;rine
-mar;gin
-mar;gin;al
-mar;gue;rite
-mar;i;ach;i
-mar;i;gold
-mar;i;nade
-mar;i;nat;ed
-mar;i;ner
-mar;i;on;ette
-mar;i;po;sa
-mar;i;tal
-mar;i;time
-mar;ket
-mar;ket;a;ble
-mar;ket;er
-mar;ket;ing
-mar;ket;place
-mar;lin
-mar;ma;lade
-mar;mot
-mar;quee
-mar;quis
-mar;quise
-mar;riage
-mar;ried
-mar;row
-mar;ry
-mar;ry;ing
-mar;seille
-mar;seilles
-mar;shal
-mar;shall
-mar;ten
-mar;ti;ni
-mar;tial
-mar;tin
-mar;tin;gale
-mar;tyr
-mar;tyr;dom
-mar;vel
-mar;vel;lous
-mar;vel;ous
-mar;y
-mar;ys
-marc
-march
-mare
-marg
-marge
-mark
-mark;ed;ly
-mark;er
-mark;ing
-mark;ka
-mark;up
-marked
-marl
-marque
-marsh
-marsh;mal;low
-mart
-mas;car;a
-mas;cot
-mas;cu;lin;i;ty
-mas;cu;line
-mas;jid
-mas;och;ism
-mas;quer;ad;ing
-mas;quer;ade
-mas;sa;cre
-mas;sag;er
-mas;sag;ing
-mas;sage
-mas;sif
-mas;sive
-mas;sive;ly
-mas;tec;to;my
-mas;ter
-mas;ter;ful
-mas;ter;mind
-mas;ter;piece
-mas;ter;y
-mas;tiff
-mas;tur;ba;tion
-mas;tur;bate
-mash
-mask
-masked
-masque
-mass
-mass;es
-mast
-mast;head
-mat
-mat;a;dor
-mat;ed
-mat;i;nee
-mat;ing
-mat;ri;mo;ni;al
-mat;ri;mo;ny
-mat;ted
-mat;ter
-mat;ting
-mat;tress
-mat;u;ra;tion
-match
-match;book
-match;box
-match;er
-match;mak;er
-match;mak;ing
-mate
-math
-math;e;ma;ti;cian
-math;e;mat;i;cal
-math;e;mat;i;cal;ly
-math;e;mat;ics
-maths
-matt
-matte
-mau;so;le;um
-maud
-maul
-mauve
-mav;er;ick
-maw
-max
-max;i
-max;i;ma
-max;i;mal
-max;i;mal;ly
-max;i;mi;za;tion
-max;i;miz;ing
-max;i;mized
-max;i;mum
-max;i;mus
-max;im
-max;im;ise
-max;im;ize
-max;well
-may
-may;be
-may;flow;er
-may;hem
-may;on;naise
-may;or;al
-mayor
-maze
-me;an;der
-me;chan;i;cal
-me;chan;i;cal;ly
-me;chan;ic
-me;chan;ics
-me;dal;lion
-me;di;a
-me;di;a;tion
-me;di;a;tor
-me;di;ae;val
-me;di;al
-me;di;an
-me;di;at;ed
-me;di;at;ing
-me;di;ate
-me;di;e;val
-me;di;na
-me;di;o;cre
-me;di;oc;ri;ty
-me;di;um
-me;di;ums
-me;dic;i;nal
-me;du;sa
-me;dul;la
-me;la
-me;lee
-me;lod;ic
-me;men;to
-me;mo;ri;al
-me;nag;er;ie
-me;nin;go;coc;cal
-me;nor;ah
-me;ow
-me;ren;gue
-me;ri;no
-me;rid;i;an
-me;sa
-me;son
-me;tab;o;lism
-me;tab;o;lite
-me;tal;lic
-me;tas;ta;sis
-me;te;or;ite
-me;te;or;o;log;i;cal
-me;te;or;ol;o;gy
-me;ter
-me;thi;o;nine
-me;thinks
-me;thod;i;cal
-me;thox;y
-me;thyl
-me;tic;u;lous
-me;tic;u;lous;ly
-me;tis
-me;tre
-me;trol;o;gy
-me;trop;o;lis
-mea;ger
-mea;sles
-mead
-mead;ow
-meal
-mean
-mean;ing
-mean;ing;ful
-mean;ing;ful;ly
-mean;ing;less
-mean;time
-mean;while
-means
-meant
-meas
-meas;ur;a;ble
-meas;ur;ing
-meas;ure
-meas;ure;ment
-meas;ured
-meas;ures
-meat
-meat;y
-mech
-mech;a;nis;tic
-mech;an;ism
-med
-med;al
-med;al;ist
-med;i;ca;tion
-med;i;caid
-med;i;cal
-med;i;care
-med;i;cat;ed
-med;i;cine
-med;i;co
-med;i;ta;tion
-med;i;tat;ing
-med;i;tate
-med;ic
-med;ley
-mee
-meek
-meet
-meet;ing
-meg;a;hertz
-meg;a;lith;ic
-meg;a;watt
-mei;o;sis
-mel
-mel;a;mine
-mel;a;no;ma
-mel;a;to;nin
-mel;an;chol;y
-mel;low
-mel;o;dra;ma
-mel;o;dy
-mel;on
-mel;ton
-meld
-melt
-mem
-mem;ber
-mem;ber;ship
-mem;brane
-mem;o
-mem;o;ra;bil;i;a
-mem;o;ra;ble
-mem;o;ran;dum
-mem;o;riz;ing
-mem;o;rize
-mem;o;rized
-mem;o;ry
-mem;oir
-mem;oirs
-men
-men;ac;ing
-men;ace
-men;in;gi;tis
-men;o;pau;sal
-men;o;pause
-men;sa
-men;stru;a;tion
-men;stru;al
-men;tal
-men;tal;i;ty
-men;tal;ly
-men;thol
-men;tion
-men;tor
-men;u
-mend
-mend;ing
-mens;wear
-mer
-mer;can;tile
-mer;ce;nar;ies
-mer;ce;nar;y
-mer;cer
-mer;chan;dis;er
-mer;chan;dis;ing
-mer;chan;dise
-mer;chant
-mer;ci;ful
-mer;ci;less
-mer;ci;less;ly
-mer;cu;ri;al
-mer;cu;ry
-mer;cy
-mer;i;da
-mer;i;to;ri;ous
-mer;it
-mer;its
-mer;lin
-mer;maid
-mer;ri;mack
-mer;ry
-mere
-mere;ly
-merg;er
-merg;ing
-merge
-merle
-mes;mer;iz;ing
-mes;o;the;li;o;ma
-mes;quite
-mes;sage
-mes;sen;ger
-mes;si;an;ic
-mesh
-mess
-mess;i;er
-mess;y
-met
-met;a
-met;a;bol;ic
-met;a;mor;phic
-met;a;mor;pho;sis
-met;a;phor
-met;a;phor;i;cal
-met;a;phys;i;cal
-met;a;phys;ics
-met;a;stat;ic
-met;al;lur;gy
-met;al;ware
-met;al;work
-met;al;work;ing
-met;ric
-met;rics
-met;ro
-met;ro;ni;da;zole
-met;ro;nome
-met;ro;pol;i;tan
-metal
-meteor
-meth;a;done
-meth;a;nol
-meth;ane
-meth;o;trex;ate
-meth;od
-meth;od;ol;o;gy
-meth;yl;a;tion
-meth;yl;ene
-meu
-mew
-mews
-mez;za;nine
-mez;zo
-mfg
-mfr
-mi;ca
-mi;cra
-mi;cro;bi;al
-mi;cro;bi;o;log;i;cal
-mi;cro;bi;ol;o;gy
-mi;cro;cosm
-mi;cro;e;co;nom;ics
-mi;cro;e;lec;tron;ics
-mi;cro;fiche
-mi;cro;film
-mi;cro;gram
-mi;cro;phone
-mi;cro;pro;ces;sor
-mi;cro;scop;ic
-mi;cro;scope
-mi;cro;struc;ture
-mi;cro;wave
-mi;crobe
-mi;crom;e;ter
-mi;cron
-mi;cros;co;py
-mi;gnon
-mi;gra;tion
-mi;gra;to;ry
-mi;graine
-mi;grant
-mi;grat;ed
-mi;grat;ing
-mi;grate
-mi;ka;do
-mi;li;tia
-mi;lieu
-mi;lo
-mi;mo;sa
-mi;na
-mi;nor
-mi;nor;i;ty
-mi;nus
-mi;rac;u;lous
-mi;rac;u;lous;ly
-mi;rage
-mi;s
-mi;so
-mi;ter
-mi;to;chon;dri;al
-mi;to;sis
-mi;tot;ic
-mi;tra
-mi;tral
-mi;tre
-mib
-mice
-mich
-mich;i;gan
-mick;ey
-mick;y
-mid
-mid;day
-mid;dle
-mid;dle;man
-mid;dle;weight
-mid;field
-mid;i
-mid;land
-mid;line
-mid;night
-mid;point
-mid;sum;mer
-mid;term
-mid;town
-mid;way
-mid;week
-mid;wife
-mid;wife;ry
-mid;win;ter
-midg;et
-midge
-midst
-mien
-mig
-might
-might;i;ly
-might;y
-mike
-mil
-mil;dew
-mil;i;ta;rism
-mil;i;tant
-mil;i;tar;i;ly
-mil;i;tar;y
-mil;len;ni;a
-mil;len;ni;al
-mil;len;ni;um
-mil;ler
-mil;let
-mil;li;gram
-mil;li;me;ter
-mil;li;sec;ond
-mil;lion
-mil;lion;aire
-mild
-mild;ly
-mile
-mile;age
-mile;stone
-milk
-milk;y
-mill
-mill;ing
-mill;stone
-mill;work
-milled
-milt
-mim
-mim;ic
-mim;ick;ing
-mime
-min
-min;er
-min;er;al
-min;er;al;o;gy
-min;gle
-min;i
-min;i;bus
-min;i;ma
-min;i;mal
-min;i;mal;ist
-min;i;mal;ly
-min;i;mi;za;tion
-min;i;mis;ing
-min;i;mise
-min;i;mised
-min;i;miz;ing
-min;i;mize
-min;i;mized
-min;i;mum
-min;i;skirt
-min;ia;ture
-min;ing
-min;ion
-min;is;te;ri;al
-min;is;ter
-min;is;try
-min;nie
-min;now
-min;ster
-min;strel
-min;ute
-min;utes
-mince
-mind
-mind;ed
-mind;er
-mind;ful
-mind;ful;ness
-mind;less
-mine
-mine;field
-mink
-mint
-mint;er
-minx
-mir
-mir;a;cle
-mir;ror
-mir;za
-mire
-mirth
-mis;car;riage
-mis;cat;e;go;rized
-mis;cel;la;ne;a
-mis;cel;la;ne;ous
-mis;cel;la;ny
-mis;chie;vous
-mis;chief
-mis;con;cep;tion
-mis;con;duct
-mis;de;mean;or
-mis;er;a;ble
-mis;er;a;bly
-mis;er;y
-mis;fit
-mis;for;tune
-mis;guid;ed
-mis;hap
-mis;heard
-mis;in;for;ma;tion
-mis;lead
-mis;lead;ing
-mis;led
-mis;man;age;ment
-mis;match
-mis;place
-mis;placed
-mis;rep;re;sen;ta;tion
-mis;rep;re;sent
-mis;sile
-mis;sing
-mis;sion
-mis;sion;ar;ies
-mis;sion;ar;y
-mis;tak;en
-mis;tak;en;ly
-mis;take
-mis;ter
-mis;tle;toe
-mis;tral
-mis;treat;ment
-mis;tress
-mis;trust
-mis;un;der;stand
-mis;un;der;stand;ing
-mis;un;der;stood
-mis;use
-mis;used
-misc
-mise
-miss
-miss;es
-miss;y
-mist
-mist;y
-mit;i;ga;tion
-mit;i;gate
-mit;ten
-mitch
-mite
-mitt
-mitz;vah
-mix
-mix;er
-mix;ing
-mix;ture
-mixed
-mkt
-mmf
-mne;mon;ic
-mo;a
-mo;bi;li;sa;tion
-mo;bi;li;za;tion
-mo;bi;lize
-mo;bil;i;ty
-mo;bile
-mo;cha
-mo;dal;i;ty
-mo;dem
-mo;der;ni;ty
-mo;derne
-mo;gul
-mo;hair
-mo;hawk
-mo;lar
-mo;las;ses
-mo;lec;u;lar
-mo;les;ta;tion
-mo;line
-mo;lyb;de;num
-mo;men;tar;i;ly
-mo;men;tar;y
-mo;men;tous
-mo;men;tum
-mo;ment
-mo;na
-mo;nas;tic
-mo;noc;u;lar
-mo;nop;o;lis;tic
-mo;nop;o;ly
-mo;not;o;nous
-mo;ped
-mo;ra
-mo;raine
-mo;ral;i;ty
-mo;rale
-mo;ray
-mo;rel
-mo;res
-mo;roc;co
-mo;sa;ic
-mo;tel
-mo;ti;va;tion
-mo;ti;va;tion;al
-mo;ti;vat;ed
-mo;ti;vat;ing
-mo;ti;vate
-mo;tif
-mo;til;i;ty
-mo;tion
-mo;tion;less
-mo;tive
-mo;to;cross
-mo;tor
-mo;tor;bike
-mo;tor;coach
-mo;tor;cy;cle
-mo;tor;ing
-mo;tor;ised
-mo;tor;ist
-mo;tor;ized
-mo;tor;way
-moan
-moat
-mob
-mobs
-moc
-moc;ca;sin
-mock
-mock;er;y
-mock;ing;bird
-mod
-mod;al
-mod;el
-mod;el;er
-mod;el;ing
-mod;el;ler
-mod;el;ling
-mod;eled
-mod;elled
-mod;er;a;tion
-mod;er;a;tor
-mod;er;ate
-mod;er;ate;ly
-mod;ern
-mod;ern;i;za;tion
-mod;ern;is;ing
-mod;ern;ism
-mod;ern;iz;ing
-mod;ern;ize
-mod;ern;ized
-mod;es;ty
-mod;est
-mod;est;ly
-mod;i;fi;ca;tion
-mod;i;fi;er
-mod;i;fied
-mod;i;fy
-mod;i;fy;ing
-mod;u;la;tion
-mod;u;la;tor
-mod;u;lar
-mod;u;lar;i;ty
-mod;u;lat;ed
-mod;u;lat;ing
-mod;u;late
-mod;u;lo
-mod;u;lus
-mod;ule
-mode
-mog
-moi;e;ty
-mois;tur;iz;er
-mois;ture
-moist
-mol
-mol;e;cule
-mol;ly
-mol;ten
-mol;to
-mold
-mold;ing
-mole
-moll
-mom
-mom;my
-mon
-mon;ar;chy
-mon;arch
-mon;as;ter;y
-mon;do
-mon;e;tar;y
-mon;ey
-mon;eys
-mon;go;li;an
-mon;gol
-mon;goose
-mon;i;ker
-mon;i;tor
-mon;ies
-mon;key
-mon;o
-mon;o;chro;mat;ic
-mon;o;chrome
-mon;o;gram
-mon;o;graph
-mon;o;hy;drate
-mon;o;lay;er
-mon;o;lith
-mon;o;lith;ic
-mon;o;logue
-mon;o;mer
-mon;o;nu;cle;ar
-mon;o;phon;ic
-mon;o;rail
-mon;o;ton;ic
-mon;o;tone
-mon;o;type
-mon;ox;ide
-mon;sieur
-mon;soon
-mon;ster
-mon;strous
-mon;tage
-mon;tane
-mon;te
-mon;te;ro
-mon;tes
-mon;u;men;tal
-mon;u;ment
-mond;i;al
-mong
-monk
-mons
-month
-month;ly
-moo
-mood
-mood;y
-moon
-moon;light
-moon;shine
-moon;stone
-moor
-moor;cock
-moor;ing
-moor;ings
-moor;land
-moose
-moot
-mop
-mor
-mor;a;to;ri;um
-mor;al
-mor;bid
-mor;bid;i;ty
-mor;gen
-mor;on
-mor;phine
-mor;pho;gen;e;sis
-mor;phol;o;gy
-mor;ro
-mor;row
-mor;tal
-mor;tal;i;ty
-mor;tar
-mor;tu;ar;y
-more
-more;o;ver
-morgue
-morn
-morn;ing
-morn;ings
-morph
-morse
-mort
-mort;ga;gee
-mort;gage
-mos
-mos;qui;to
-mosque
-moss
-moss;y
-most
-most;ly
-mot
-mot;ley
-mot;tled
-mot;to
-mote
-moth
-moth;er
-moth;er;fuck;er
-moth;er;hood
-moth;er;ing
-moth;er;land
-motte
-mou;lin
-mou;ton
-mould
-mould;ing
-moun;tain
-moun;tain;eer
-moun;tain;eer;ing
-moun;tain;ous
-moun;tain;side
-mound
-mount
-mount;ed
-mount;ing
-mourn
-mourn;ing
-mous;er
-mous;tache
-mouse
-mousse
-mouth
-mouth;ful
-mouth;piece
-mov;a;ble
-mov;er
-mov;ie
-mov;ing
-move
-move;a;ble
-move;ment
-mow
-mow;er
-mow;ing
-mox;ie
-moz;za;rel;la
-mpg
-mph
-msl
-mtg
-mu;co;sa
-mu;co;sal
-mu;cous
-mu;cus
-mu;ni;tions
-mu;nic;i;pal
-mu;nic;i;pal;i;ty
-mu;on
-mu;ral
-mu;rine
-mu;se;um
-mu;si;cal
-mu;si;cal;ly
-mu;si;cian
-mu;si;cian;ship
-mu;si;col;o;gy
-mu;sic
-mu;ta;ble
-mu;ta;tion
-mu;tant
-mu;tat;ed
-mu;ti;la;tion
-mu;ti;lat;ed
-mu;ti;ny
-mu;tu;al
-mu;tu;al;ly
-much
-muck
-mud
-mud;dy
-muen;ster
-muf;fin
-muf;fler
-muff
-mug
-mul;ber;ry
-mul;len
-mul;let
-mul;li;gan
-mul;ti;chan;nel
-mul;ti;col;or
-mul;ti;col;ored
-mul;ti;di;men;sion;al
-mul;ti;dis;ci;pli;nar;y
-mul;ti;fac;et;ed
-mul;ti;lat;er;al
-mul;ti;lay;er
-mul;ti;lin;gual
-mul;ti;me;di;a
-mul;ti;mil;lion
-mul;ti;na;tion;al
-mul;ti;path
-mul;ti;ple
-mul;ti;plex
-mul;ti;pli;ca;tion
-mul;ti;pli;ca;tive
-mul;ti;pli;er
-mul;ti;plic;i;ty
-mul;ti;plied
-mul;ti;ply
-mul;ti;ply;ing
-mul;ti;pur;pose
-mul;ti;racial
-mul;ti;thread;ed
-mul;ti;tude
-mul;ti;var;i;ate
-mul;tim;e;ter
-mulch
-mule
-mull
-mull;er
-mum
-mum;my
-mumps
-mun
-mun;dane
-munch
-mur;der
-mur;der;er
-mur;der;ous
-mur;mur
-mur;phy
-murk;y
-mus
-mus;cat
-mus;cle
-mus;cu;lar
-mus;ing
-mus;lin
-mus;sel
-mus;tache
-mus;tang
-mus;tard
-mus;ter
-muse
-mush
-mush;room
-mush;y
-musk
-muss
-must
-mut
-mut;ed
-mut;ter
-mut;ton
-mute
-mutt
-muz;zle
-my;co;bac;te;ri;um
-my;e;lin
-my;e;lo;ma
-my;e;loid
-my;o;car;di;al
-my;o;car;di;um
-my;o;pi;a
-my;o;sin
-my;op;ic
-my;ron
-my;self
-my;thol;o;gy
-my;thos
-myr;i;ad
-myr;tle
-myrrh
-mys;te;ri;ous
-mys;te;ri;ous;ly
-mys;ter;ies
-mys;ter;y
-mys;ti;cal
-mys;ti;cism
-mys;tic
-mys;tique
-myth
-myth;i;cal
-myth;ic
-myth;o;log;i;cal
-n;v
-na;dir
-na;i;ra
-na;ive
-na;ked
-na;ma;ste
-na;na
-na;no;me;ter
-na;palm
-na;pier
-na;po;le;on
-na;sal
-na;tal
-na;tion
-na;tion;al
-na;tion;al;i;ty
-na;tion;al;ism
-na;tion;al;ist
-na;tion;al;ly
-na;tion;wide
-na;tiv;i;ty
-na;tive
-na;tive;ly
-na;tur;o;path;ic
-na;tur;op;a;thy
-na;ture
-na;val
-na;vel
-na;vy
-nab
-nae
-nag
-nag;ging
-nail
-nail;er
-nam;ing
-name
-name;less
-name;ly
-name;plate
-name;sake
-nan
-nan;cy
-nan;ny
-nance
-nap
-nap;kin
-nap;pa
-nap;ping
-nap;py
-nar;cis;sis;tic
-nar;cis;sism
-nar;cis;sus
-nar;cot;ic
-nar;ra;tion
-nar;ra;tive
-nar;ra;tor
-nar;rat;ed
-nar;row
-nar;row;ly
-nar;rows
-nar;y
-nas;cent
-nas;ty
-nat
-nat;u;ral
-nat;u;ral;i;za;tion
-nat;u;ral;is;tic
-nat;u;ral;ism
-nat;u;ral;ist
-nat;u;ral;iz;er
-nat;u;ral;ized
-nat;u;ral;ly
-natl
-nau;se;a
-nau;ti;cal
-nau;ti;lus
-naugh;ty
-naught
-nav
-nav;i;ga;ble
-nav;i;ga;tion
-nav;i;ga;tion;al
-nav;i;ga;tor
-nav;i;gat;ing
-nav;i;gate
-nave
-nay
-ne;ces;si;tat;ed
-ne;ces;si;tate
-ne;ces;si;ty
-ne;cro;sis
-ne;far;i;ous
-ne;ga;tion
-ne;gate
-ne;glect
-ne;go;ti;a;tion
-ne;go;ti;a;tor
-ne;go;ti;ate
-ne;go;tia;ble
-ne;mo
-ne;ne
-ne;o;clas;si;cal
-ne;o;dym;i;um
-ne;o;na;tal
-ne;o;plas;tic
-ne;o;plasm
-ne;o;prene
-ne;on
-ne;phrop;a;thy
-near
-near;by
-near;ly
-neat
-neat;ly
-neath
-neb
-neb;u;la
-nec;es;sar;i;ly
-nec;es;sar;y
-nec;ro;man;cer
-nec;tar
-neck
-neck;lace
-neck;line
-neck;tie
-nee
-nee;dle
-nee;dle;point
-nee;dle;work
-need
-need;ful
-need;less
-need;y
-needs
-nef
-neg
-neg;a;tiv;i;ty
-neg;a;tive
-neg;a;tive;ly
-neg;li;gence
-neg;li;gent
-neg;li;gi;ble
-nei;ther
-neigh;bor
-neigh;bor;hood
-neigh;bour
-neigh;bour;hood
-neigh;bour;ing
-neis;se;ri;a
-nel;ly
-nel;son
-nem;a;tode
-neph;ew
-nerv;ous
-nerv;ous;ly
-nerv;ous;ness
-nerve
-nerves
-nes;tle
-ness
-nest
-nest;ed
-net
-net;ball
-net;ted
-net;ting
-net;tle
-net;work
-neth;er
-nett
-neu;ral
-neu;ral;gia
-neu;ro;mus;cu;lar
-neu;ro;phys;i;ol;o;gy
-neu;ro;sis
-neu;ro;sur;ger;y
-neu;rol;o;gist
-neu;rol;o;gy
-neu;ron
-neu;rop;a;thy
-neu;rot;ic
-neu;ter
-neu;tral
-neu;tral;i;ty
-neu;tral;i;za;tion
-neu;tral;iz;ing
-neu;tral;ize
-neu;tri;no
-neu;tro;phil
-neu;tron
-neurol
-nev;er
-nev;er;mind
-nev;er;more
-nev;er;the;less
-new
-new;born
-new;com;er
-new;ly
-new;mar;ket
-new;ton
-news
-news;cast
-news;let;ter
-news;pa;per
-news;print
-news;read;er
-news;stand
-news;wor;thy
-newt
-nex;us
-next
-ni;a;cin
-ni;hil;ism
-ni;trate
-ni;tric
-ni;tride
-ni;trile
-ni;trite
-ni;tro
-ni;tro;gen
-ni;tro;glyc;er;in
-ni;trous
-nib
-nib;ble
-nic;er
-nic;est
-nic;o;tin;ic
-nic;o;tine
-nice
-nice;ly
-niche
-nick
-nick;el
-nick;el;o;de;on
-nick;name
-nick;named
-niece
-nies
-nif;ty
-nig;ger
-nigh
-night
-night;club
-night;fall
-night;hawk
-night;in;gale
-night;life
-night;ly
-night;mare
-night;shade
-night;stand
-night;time
-night;wear
-nights
-nil
-nim
-nim;ble
-nim;bus
-nine
-nine;teen
-nine;teenth
-nine;ty
-ninth
-nip
-nip;ple
-nir;va;na
-nit
-nit;ty
-nix
-no;bil;i;ty
-no;ble
-no;ble;man
-no;bod;y
-no;mad
-no;mad;ic
-no;men;cla;ture
-no;ta;ble
-no;ta;bly
-no;ta;rized
-no;ta;ry
-no;ta;tion
-no;ti;fi;a;ble
-no;ti;fi;ca;tion
-no;ti;fi;er
-no;ti;fied
-no;ti;fy
-no;ti;fy;ing
-no;tic;ing
-no;tice
-no;tice;a;ble
-no;ticed
-no;tion
-no;tion;al
-no;tions
-no;to;ri;ous
-no;to;ri;ous;ly
-no;va
-no;vel;la
-no;where
-nob
-noc;tur;nal
-noc;turne
-nod
-nod;al
-nod;ded
-nod;ding
-nod;dy
-node
-nog
-noir
-nois;y
-noise
-nom
-nom;i;na;tion
-nom;i;nal
-nom;i;nat;ed
-nom;i;nat;ing
-nom;i;nate
-nom;i;nee
-nome
-non;at;tain;ment
-non;com;mer;cial
-non;com;pli;ance
-non;de;struc;tive
-non;dis;crim;i;na;tion
-non;du;ra;ble
-non;ex;ist;ent
-non;fa;tal
-non;farm
-non;fic;tion
-non;gov;ern;men;tal
-non;lin;e;ar
-non;lin;e;ar;i;ty
-non;met;al;lic
-non;neg;a;tive
-non;par;ti;san
-non;pro;lif;er;a;tion
-non;prof;it
-non;pub;lic
-non;res;i;den;tial
-non;res;i;dent
-non;sen;si;cal
-non;sense
-non;spe;cif;ic
-non;stand;ard
-non;stick
-non;stop
-non;tra;di;tion;al
-non;triv;i;al
-non;ver;bal
-non;vi;o;lence
-non;ze;ro
-nonce
-none
-none;the;less
-noo;dle
-nook
-noon
-noose
-nope
-nor
-nor;ep;i;neph;rine
-nor;ma;tive
-nor;mal
-nor;mal;i;ty
-nor;mal;ised
-nor;mal;iz;ing
-nor;mal;ize
-nor;mal;ized
-nor;mal;ly
-norm
-north
-north;bound
-north;east
-north;east;ern
-north;er;ly
-north;ern
-north;ward
-north;west
-north;west;ern
-nos
-nos;tal;gia
-nos;tal;gic
-nose
-not
-not;ed
-not;ing
-not;with;stand;ing
-notch
-note
-note;book
-note;wor;thy
-notes
-noth;ing
-noth;ing;ness
-nou;velles
-noun
-nour;ish
-nour;ish;ment
-nous
-nov;el
-nov;el;ist
-nov;el;ty
-nov;ice
-now
-now;a;days
-nox;ious
-noz;zle
-nth
-nu;anc;es
-nu;ance
-nu;cle;a;tion
-nu;cle;ar
-nu;cle;i
-nu;cle;o;side
-nu;cle;o;tide
-nu;cle;on
-nu;cle;us
-nu;di;ty
-nu;mer;a;tor
-nu;mer;al
-nu;mer;i;cal
-nu;mer;i;cal;ly
-nu;mer;ic
-nu;mer;ol;o;gy
-nu;mer;ous
-nu;tri;ent
-nu;tri;tion
-nu;tri;tion;ist
-nu;tri;tious
-nud;ism
-nud;ist
-nude
-nudge
-nug;get
-nui;sance
-nuke
-null
-num
-num;ber
-numb
-numb;ing
-numb;ness
-nun
-nur;tur;ing
-nur;ture
-nur;tured
-nurs;er;ies
-nurse
-nurse;ry
-nut
-nut;crack;er
-nut;meg
-nut;shell
-nut;ter
-nut;ty
-nuts
-ny;lon
-ny;lons
-nye
-nym;pho
-nymph
-o;a;sis
-o;be;di;ence
-o;be;di;ent
-o;bes;i;ty
-o;bese
-o;bey
-o;bi
-o;bit;u;ar;ies
-o;bit;u;ar;y
-o;blige
-o;bliged
-o;boe
-o;ca
-o;ce;a;no;graph;ic
-o;ce;an;ic
-o;cean
-o;cean;front
-o;cean;og;ra;phy
-o;chre
-o;di;ous
-o;dom;e;ter
-o;dor
-o;dour
-o;gle
-o;gre
-o;ka
-o;kay
-o;kra
-o;l
-o;lym;pi;ad
-o;me;ga
-o;men
-o;mer
-o;mi;cron
-o;mis;sion
-o;mit
-o;mit;ted
-o;mit;ting
-o;nus
-o;o;cyte
-o;pa
-o;pac;i;ty
-o;pal
-o;paque
-o;pen
-o;pen;er
-o;pen;ing
-o;pi;ate
-o;pi;um
-o;pin;ion
-o;pin;ion;at;ed
-o;pus
-o;ra
-o;ral
-o;ral;ly
-o;rang
-o;reg;a;no
-o;ri;en;ta;tion
-o;ri;en;tal
-o;ri;en;tat;ed
-o;ri;ent
-o;ri;ga;mi
-o;ri;ole
-o;rig;i;na;tion
-o;rig;i;na;tor
-o;rig;i;nal
-o;rig;i;nal;i;ty
-o;rig;i;nal;ly
-o;rig;i;nat;ed
-o;rig;i;nat;ing
-o;rig;i;nate
-o;ti;tis
-o;to;lar;yn;gol;o;gy
-o;va
-o;va;ry
-o;va;tion
-o;val
-o;var;i;an
-o;ver;all
-o;ver;board
-o;ver;came
-o;ver;cast
-o;ver;coat
-o;ver;com;ing
-o;ver;come
-o;ver;dose
-o;ver;draft
-o;ver;drive
-o;ver;due
-o;ver;es;ti;mate
-o;ver;flow
-o;ver;grown
-o;ver;hang
-o;ver;haul
-o;ver;head
-o;ver;heads
-o;ver;heard
-o;ver;kill
-o;ver;laid
-o;ver;land
-o;ver;lap
-o;ver;lap;ping
-o;ver;lapped
-o;ver;lay
-o;ver;load
-o;ver;look
-o;ver;lord
-o;ver;ly
-o;ver;ly;ing
-o;ver;night
-o;ver;paid
-o;ver;pass
-o;ver;pay;ment
-o;ver;pow;er;ing
-o;ver;priced
-o;ver;rat;ed
-o;ver;rid;den
-o;ver;rid;ing
-o;ver;ride
-o;ver;ruled
-o;ver;run
-o;ver;saw
-o;ver;se;er
-o;ver;seas
-o;ver;see
-o;ver;see;ing
-o;ver;seen
-o;ver;sight
-o;ver;size
-o;ver;sized
-o;ver;stock
-o;ver;take
-o;ver;throw
-o;ver;time
-o;ver;ture
-o;ver;turn
-o;ver;use
-o;ver;view
-o;ver;weight
-o;ver;whelm
-o;ver;whelm;ing
-o;ver;whelm;ing;ly
-o;ver;write
-o;vert
-o;vert;ly
-o;vum
-o;yez
-o;zone
-oak
-oar
-oars
-oat
-oat;meal
-oath
-ob;e;lisk
-ob;it
-ob;jec;tion
-ob;jec;tion;a;ble
-ob;jec;tiv;i;ty
-ob;jec;tive
-ob;jec;tive;ly
-ob;jec;tor
-ob;ject
-ob;last
-ob;li;ga;tion
-ob;li;gate
-ob;li;gor
-ob;lig;a;to;ry
-ob;lique
-ob;liv;i;on
-ob;liv;i;ous
-ob;long
-ob;nox;ious
-ob;scen;i;ty
-ob;scene
-ob;scu;ri;ty
-ob;scure
-ob;ser;va;tion
-ob;ser;vant
-ob;serv;a;ble
-ob;serv;a;to;ry
-ob;serv;ance
-ob;serv;er
-ob;serv;ing
-ob;serve
-ob;served
-ob;ses;sion
-ob;ses;sive
-ob;sid;i;an
-ob;so;let;ed
-ob;so;lete
-ob;sta;cle
-ob;stet;ric
-ob;stet;rics
-ob;struc;tion
-ob;struc;tive
-ob;struct
-ob;tain
-ob;tuse
-ob;verse
-ob;vi;ous
-ob;vi;ous;ly
-obj
-obs
-obstet
-oc;a;ri;na
-oc;ca;sion
-oc;ca;sion;al
-oc;ca;sion;al;ly
-oc;ca;sions
-oc;cip;i;tal
-oc;clu;sion
-oc;cu;pa;tion
-oc;cu;pa;tion;al
-oc;cu;pan;cy
-oc;cu;pant
-oc;cu;pi;er
-oc;cu;py
-oc;cult
-oc;cur
-oc;cur;rence
-oc;cur;ring
-oc;curred
-oc;ta;gon
-oc;tag;o;nal
-oc;tal
-oc;tane
-oc;tave
-oc;tet
-oc;to;pus
-oc;u;lar
-och
-oct
-odd
-odd;ball
-odd;i;ty
-odd;ly
-odds
-ode
-oeu;vre
-oeu;vres
-of;fen;sive
-of;fence
-of;fend
-of;fend;er
-of;fense
-of;fer
-of;fer;ing
-of;fer;or
-of;fi;ci;at;ing
-of;fi;cial
-of;fi;cial;ly
-of;fic;er
-of;fice
-of;ten
-off
-off;beat
-off;set
-off;set;ting
-off;shore
-off;side
-off;spring
-oft
-ohm
-ohv
-oil
-oil;field
-oil;seed
-oil;y
-oint;ment
-ol;fac;to;ry
-ol;i;vet
-ol;i;vine
-ol;ive
-old
-old;en
-old;er
-old;est
-om;bre
-om;buds;man
-om;i;nous
-om;ni
-om;ni;bus
-om;ni;pres;ent
-om;nip;o;tent
-ome;let
-on;col;o;gy
-on;com;ing
-on;er;ous
-on;go;ing
-on;ion
-on;ly
-on;set
-on;shore
-on;slaught
-on;stage
-on;to
-on;to;log;i;cal
-on;tol;o;gy
-on;ward
-on;wards
-on;yx
-once
-one
-one;ness
-one;self
-ooh
-oops
-ooz;ing
-ooze
-op;code
-op;er;a
-op;er;a;ble
-op;er;a;tion
-op;er;a;tion;al
-op;er;a;tive
-op;er;a;tor
-op;er;and
-op;er;at;ic
-op;er;ate
-op;er;on
-op;po;nent
-op;po;si;tion
-op;po;site
-op;por;tu;ni;ty
-op;por;tun;is;tic
-op;pose
-op;pres;sion
-op;pres;sive
-op;ti;cal
-op;ti;cian
-op;ti;mal
-op;ti;mi;za;tion
-op;ti;mis;tic
-op;ti;mise
-op;ti;mism
-op;ti;mist
-op;ti;miz;ing
-op;ti;mize
-op;ti;mized
-op;ti;mum
-op;tic
-op;tics
-op;tion
-op;tion;al
-op;tion;al;ly
-op;tom;e;trist
-op;tom;e;try
-op;u;lent
-ope
-oph;thal;mic
-oph;thal;mol;o;gy
-opp
-opt
-or;a;cle
-or;a;cles
-or;a;to;ry
-or;a;tor
-or;ange
-or;bit
-or;bit;al
-or;ca
-or;chard
-or;ches;tra
-or;ches;tra;tion
-or;ches;tral
-or;ches;trat;ed
-or;chid
-or;deal
-or;der
-or;der;ly
-or;di;na;tion
-or;di;nal
-or;di;nance
-or;di;nar;i;ly
-or;di;nar;y
-or;di;nate
-or;gan
-or;gan;i;cal;ly
-or;gan;i;sa;tion
-or;gan;i;sa;tion;al
-or;gan;i;za;tion
-or;gan;i;za;tion;al
-or;gan;ic
-or;gan;is;er
-or;gan;is;ing
-or;gan;ise
-or;gan;ised
-or;gan;ism
-or;gan;ist
-or;gan;iz;er
-or;gan;iz;ing
-or;gan;ize
-or;gan;ized
-or;gan;za
-or;gas;mic
-or;gasm
-or;gy
-or;i;en;teer;ing
-or;i;fice
-or;i;gin
-or;na;men;tal
-or;na;ment
-or;nate
-or;ni;thine
-or;ni;thol;o;gy
-or;phan
-or;phan;age
-or;tho
-or;tho;don;tic
-or;tho;don;tics
-or;tho;dox
-or;tho;dox;y
-or;tho;pae;dic
-or;tho;pae;dics
-or;tho;pe;dic
-or;tho;pe;dics
-or;thog;o;nal
-or;yx
-orb
-orc
-orch
-ord
-ord;nance
-ore
-org
-orig
-os;car
-os;cil;la;tion
-os;cil;la;to;ry
-os;cil;la;tor
-os;cil;lat;ing
-os;cil;lo;scope
-os;mo;sis
-os;prey
-os;te;o;ar;thri;tis
-os;te;o;path;ic
-os;te;o;por;o;sis
-os;te;op;a;thy
-os;ten;si;bly
-os;trich
-ot;ter
-ot;to
-ot;to;man
-oth;er
-oth;er;wise
-ouch
-ought
-ounce
-our
-our;selves
-ours
-oust
-out
-out;age
-out;back
-out;board
-out;bound
-out;break
-out;burst
-out;cast
-out;come
-out;crop
-out;cry
-out;dat;ed
-out;door
-out;doors
-out;er
-out;er;most
-out;er;wear
-out;fall
-out;field
-out;field;er
-out;fit
-out;fit;ted
-out;fit;ter
-out;fit;ting
-out;flow
-out;go;ing
-out;growth
-out;house
-out;ing
-out;land;er
-out;land;ish
-out;law
-out;lay
-out;let
-out;li;er
-out;lin;ing
-out;line
-out;lined
-out;look
-out;ly;ing
-out;num;ber
-out;pa;tient
-out;per;form
-out;post
-out;pour;ing
-out;put
-out;ra;geous
-out;ra;geous;ly
-out;rage
-out;raged
-out;reach
-out;rig;ger
-out;right
-out;run
-out;set
-out;sid;er
-out;side
-out;skirts
-out;sole
-out;spo;ken
-out;sta;tion
-out;stand;ing
-out;ward
-out;ward;ly
-out;wards
-out;weigh
-ov;en
-ov;er
-ow;ing
-owe
-owl
-own
-own;er
-own;er;ship
-ox;bow
-ox;en
-ox;ford
-ox;i;da;tion
-ox;i;da;tive
-ox;i;dant
-ox;i;dase
-ox;i;do;re;duc;tase
-ox;ide
-ox;y;gen
-ox;y;gen;a;tion
-ox;y;gen;at;ed
-ox;y;mo;ron
-ox;y;to;cin
-oys;ter
-p;t
-pa;cif;ic
-pa;dre
-pa;gan
-pa;gan;ism
-pa;go;da
-pa;jam;a
-pa;jam;as
-pa;lais
-pa;laz;zo
-pa;le;on;tol;o;gy
-pa;nache
-pa;pa
-pa;pa;cy
-pa;pa;raz;zi
-pa;pa;ya
-pa;pal
-pa;per
-pa;per;back
-pa;per;board
-pa;per;weight
-pa;per;work
-pa;py;rus
-pa;ra
-pa;rade
-pa;ral;y;sis
-pa;ram;e;ter
-pa;ren;tal
-pa;ren;the;sis
-pa;ri;ah
-pa;ri;e;tal
-pa;ro;chi;al
-pa;role
-pa;se;o
-pa;sha
-pa;ta;ca
-pa;ter;nal
-pa;ter;ni;ty
-pa;thet;ic
-pa;thol;o;gy
-pa;thos
-pa;ti;o
-pa;ti;os
-pa;tience
-pa;tient
-pa;tient;ly
-pa;tri;ar;chal
-pa;tri;ar;chy
-pa;tri;arch
-pa;tri;ot
-pa;tri;ot;ic
-pa;trol
-pa;trol;ling
-pa;trolled
-pa;tron
-pa;ves
-pa;vil;ion
-pac;er
-pac;i;fi;er
-pac;i;fist
-pac;ing
-pace
-pace;mak;er
-paced
-pack
-pack;ag;ing
-pack;age
-pack;aged
-pack;er
-pack;et
-pack;ing
-pact
-pad
-pad;ding
-pad;dle
-pad;dock
-pad;dy
-pad;lock
-pae;di;at;rics
-pag;eant
-pag;ing
-page
-pah
-pai;sa
-paid
-pail
-pain
-pain;ful
-pain;ful;ly
-pain;kill;er
-pain;less
-pains
-pains;tak;ing
-pains;tak;ing;ly
-paint
-paint;brush
-paint;ed
-paint;er
-paint;ing
-pair
-pairs
-pais;ley
-pal
-pal;a;din
-pal;a;tine
-pal;ace
-pal;at;a;ble
-pal;ate
-pal;ette
-pal;i;sade
-pal;i;sades
-pal;la;di;um
-pal;let
-pal;li;a;tive
-pal;met;to
-pal;my;ra
-pal;o;mi;no
-pal;pa;ble
-pal;sy
-pal;try
-pale
-pall
-palm
-palm;er
-pam
-pam;per
-pam;phlet
-pan
-pan;a;ce;a
-pan;cake
-pan;cre;a;ti;tis
-pan;cre;as
-pan;cre;at;ic
-pan;da
-pan;de;mo;ni;um
-pan;dem;ic
-pan;do;ra
-pan;el
-pan;el;ing
-pan;el;ist
-pan;han;dle
-pan;ic
-pan;ier
-pan;ning
-pan;o;ram;a
-pan;o;ram;ic
-pan;sy
-pan;the;on
-pan;ther
-pan;to;mime
-pan;try
-pan;zer
-pane
-pang
-pant
-pant;ie
-pant;ies
-pants
-pap
-pap;il;lon
-pap;ri;ka
-par
-par;a;ble
-par;a;bol;ic
-par;a;chute
-par;a;digm
-par;a;dise
-par;a;dox
-par;a;dox;i;cal
-par;a;dox;i;cal;ly
-par;a;gon
-par;a;graph
-par;a;med;ic
-par;a;met;ric
-par;a;mil;i;tar;y
-par;a;mount
-par;a;noi;a
-par;a;noid
-par;a;nor;mal
-par;a;pher;nal;ia
-par;a;phrase
-par;a;psy;chol;o;gy
-par;a;sit;ic
-par;a;sit;ol;o;gy
-par;a;site
-par;a;sol
-par;a;thy;roid
-par;af;fin
-par;al;lax
-par;al;lel
-par;al;lel;ism
-par;cel
-par;don
-par;en;ter;al
-par;ent
-par;ent;age
-par;ent;hood
-par;i;ty
-par;ing
-par;ish
-par;ka
-par;kin
-par;lay
-par;lia;men;ta;ry
-par;lia;ment
-par;lor
-par;lour
-par;o;dy
-par;quet
-par;ra;mat;ta
-par;rot
-par;ry
-par;son
-par;take
-par;ti
-par;ti;cle
-par;ti;san
-par;ti;san;ship
-par;ti;tion
-par;tial
-par;tic;i;pa;tion
-par;tic;i;pant
-par;tic;i;pat;ed
-par;tic;i;pat;ing
-par;tic;i;pat;o;ry
-par;tic;i;pate
-par;tic;u;lar
-par;tic;u;lar;ly
-par;tic;u;late
-par;ton
-par;tridge
-par;ty
-par;ty;ing
-parch;ment
-pard
-pare
-park
-park;ing
-park;land
-park;way
-parr
-pars
-pars;er
-pars;ing
-pars;ley
-parse
-part
-part;ed
-part;ing
-part;ly
-part;ner
-part;ner;ship
-part;ners
-parts
-pas
-pas;cal
-pas;sage
-pas;se
-pas;sen;ger
-pas;ses
-pas;sion
-pas;sion;ate
-pas;sion;ate;ly
-pas;sive
-pas;ta
-pas;tel
-pas;time
-pas;to;ral
-pas;tor
-pas;try
-pas;ture
-pass
-pass;a;ble
-pass;er
-pass;ing
-pass;port
-pass;word
-passed
-past
-past;ed
-past;ing
-paste
-pat
-pat;ent
-pat;ent;ly
-pat;i;na
-pat;ri;ot;ism
-pat;ron;age
-pat;sy
-pat;ted
-pat;ten
-pat;tern
-pat;ty
-patch
-patch;ou;li
-patch;work
-patch;y
-pate
-path
-path;find;er
-path;o;gen
-path;o;gen;e;sis
-path;o;gen;ic
-path;o;log;i;cal
-path;o;log;ic
-path;way
-pathol
-pau;per
-paus;ing
-pause
-pav
-pav;ing
-pave
-pave;ment
-paw
-pawn
-pax
-pay
-pay;a;ble
-pay;check
-pay;day
-pay;ee
-pay;er
-pay;ing
-pay;load
-pay;ment
-pay;off
-pay;roll
-pct
-pe;can
-pe;cu;liar
-pe;cu;liar;ly
-pe;cu;ni;ar;y
-pe;dan;tic
-pe;des;tri;an
-pe;di;a;tri;cian
-pe;di;at;ric
-pe;di;at;rics
-pe;dom;e;ter
-pe;dro
-pe;kin
-pe;lag;ic
-pe;nal
-pe;nal;ize
-pe;nal;ized
-pe;nang
-pe;nile
-pe;nis
-pe;nul;ti;mate
-pe;o;ny
-pe;ri
-pe;ri;o;dic;i;ty
-pe;ri;od
-pe;ri;od;i;cal
-pe;ri;od;i;cal;ly
-pe;rim;e;ter
-pe;riph;er;al
-pe;riph;er;y
-pe;rus;al
-pe;ruse
-pe;se;ta
-pe;so
-pe;ter
-pe;ti;tion
-pe;ti;tion;er
-pe;tite
-pe;tro;le;um
-pe;trol;o;gy
-pe;tu;ni;a
-pea
-pea;cock
-pea;nut
-pea;nuts
-pea;vey
-peace
-peace;ful
-peace;ful;ly
-peace;mak;er
-peace;mak;ing
-peace;time
-peach
-peach;y
-peak
-peaked
-pear
-pearl
-pearl;y
-peas;ant
-pease
-peat
-peb;ble
-pec;tin
-peck
-peck;er
-ped
-ped;a;go;gy
-ped;a;gog;i;cal
-ped;al
-ped;dler
-ped;dling
-ped;es;tal
-ped;i;cure
-ped;i;gree
-pee
-pee;ing
-peek
-peel
-peel;er
-peel;ing
-peep
-peep;show
-peer
-peer;age
-peer;less
-peg
-pel;ham
-pel;i;can
-pel;let
-pel;vic
-pel;vis
-pele
-pelt
-pen
-pen;al;ty
-pen;ance
-pen;chant
-pen;cil
-pen;dant
-pen;drag;on
-pen;du;lum
-pen;e;tra;tion
-pen;e;trat;ing
-pen;e;trate
-pen;g
-pen;guin
-pen;i;cil;lin
-pen;i;ten;tia;ry
-pen;in;su;la
-pen;in;su;lar
-pen;na
-pen;nant
-pen;ner
-pen;nies
-pen;ny
-pen;sion
-pen;sion;er
-pen;ta;gon
-pen;ta;gram
-pence
-pend
-pend;ent
-pend;ing
-pent
-pent;house
-peo;ple
-pep
-pep;per
-pep;per;mint
-pep;per;o;ni
-pep;ti;dase
-pep;tic
-pep;tide
-per
-per;ceive
-per;cen;tile
-per;cent
-per;cent;age
-per;cep;ti;ble
-per;cep;tion
-per;cep;tive
-per;cep;tu;al
-per;chance
-per;chlo;rate
-per;co;la;tion
-per;cu;ta;ne;ous
-per;cus;sion
-per;di;tion
-per;due
-per;e;grine
-per;en;ni;al
-per;fec;tion
-per;fect
-per;fect;ly
-per;fo;ra;tion
-per;fo;rat;ed
-per;for;mance
-per;force
-per;form
-per;form;er
-per;form;ing
-per;fume
-per;haps
-per;i;dot
-per;i;lous
-per;i;na;tal
-per;i;o;don;tal
-per;i;od;ic
-per;i;win;kle
-per;il
-per;ish
-per;ish;a;ble
-per;ished
-per;jur;y
-per;ma;frost
-per;ma;nen;cy
-per;ma;nence
-per;ma;nent
-per;ma;nent;ly
-per;me;a;bil;i;ty
-per;me;a;ble
-per;me;ate
-per;mis;si;ble
-per;mis;sion
-per;mis;sive
-per;mit
-per;mu;ta;tion
-per;ni;cious
-per;ox;i;dase
-per;ox;ide
-per;pe;tra;tor
-per;pe;trat;ed
-per;pe;tu;i;ty
-per;pen;dic;u;lar
-per;pet;u;al
-per;pet;u;al;ly
-per;pet;u;at;ed
-per;pet;u;at;ing
-per;pet;u;ate
-per;plexed
-per;ry
-per;se;cu;tion
-per;se;cut;ed
-per;se;ver;ance
-per;se;vere
-per;sim;mon
-per;sis;tence
-per;sist
-per;sist;ent
-per;sist;ent;ly
-per;so;na
-per;son
-per;son;a;ble
-per;son;al
-per;son;al;i;ty
-per;son;al;i;za;tion
-per;son;al;ise
-per;son;al;ised
-per;son;al;ize
-per;son;al;ly
-per;son;nel
-per;spec;tive
-per;spi;ra;tion
-per;sua;sion
-per;sua;sive
-per;suade
-per;tain
-per;ti;nent
-per;tur;ba;tion
-per;tur;ba;tive
-per;tus;sis
-per;va;sive
-per;ver;sion
-per;verse
-per;vert
-per;vert;ed
-perch
-perch;es
-perf
-perk
-perk;y
-perm
-pers
-pert
-pes
-pes;si;mism
-pes;ti;cide
-pes;ti;lence
-pesk;y
-pest
-pet
-pet;al
-pet;it
-pet;ri;fied
-pet;ro;chem;i;cal
-pet;ti;coat
-pet;ting
-pet;ty
-petrol
-pew
-pew;ter
-phage
-phal;anx
-phan;ta;sy
-phan;tom
-phar
-phar;ma;ceu;ti;cal
-phar;ma;cist
-phar;ma;co;log;i;cal
-phar;ma;col;o;gy
-phar;ma;cy
-pharm
-phase
-phe;nix
-phe;no;bar;bi;tal
-phe;no;typ;ic
-phe;no;type
-phe;nol
-phe;nol;ic
-phe;nom;e;na
-phe;nom;e;nal
-phe;nom;e;nol;o;gy
-phe;nom;e;non
-phe;nyl;al;a;nine
-pheas;ant
-phen;yl
-pher;o;mone
-phew
-phi
-phi;lan;thro;pist
-phi;lan;thro;py
-phi;los;o;pher
-phi;los;o;phy
-phil
-phil;a;tel;ic
-phil;an;throp;ic
-phil;har;mon;ic
-phil;o;soph;i;cal
-phil;o;soph;i;cal;ly
-pho;bi;a
-pho;net;ic
-pho;net;ics
-pho;no
-pho;no;graph
-pho;no;log;i;cal
-pho;nol;o;gy
-pho;non
-pho;ny
-pho;to
-pho;to;chem;i;cal
-pho;to;cop;i;er
-pho;to;cop;y
-pho;to;e;lec;tric
-pho;to;graph
-pho;to;graph;ic
-pho;to;jour;nal;ism
-pho;to;met;ric
-pho;to;set
-pho;to;syn;the;sis
-pho;to;vol;ta;ic
-pho;tog;ra;pher
-pho;tog;ra;phy
-pho;tom;e;try
-pho;ton
-phoe;be
-phoe;nix
-phon;ics
-phone
-phos;pha;tase
-phos;phate
-phos;pho;lip;id
-phos;pho;rous
-phos;pho;rus
-phos;pho;ryl;a;tion
-phos;pho;ryl;at;ed
-phos;phor
-phos;phor;ic
-phr
-phras;ing
-phrase
-phy;lo;ge;net;ic
-phy;log;e;ny
-phy;lum
-phy;si;cian
-phy;sique
-phy;to;plank;ton
-phys
-phys;i;cal
-phys;i;cal;ly
-phys;i;cist
-phys;i;o;log;i;cal
-phys;i;o;log;ic
-phys;i;o;ther;a;py
-phys;i;ol;o;gy
-phys;ics
-pi;an;ist
-pi;an;os
-pi;az;za
-pi;ca
-pi;e;ty
-pi;et
-pi;geon
-pi;lar
-pi;lot
-pi;lot;ing
-pi;na
-pi;o;neer
-pi;on
-pi;ous
-pi;pa
-pi;pette
-pi;ra;cy
-pi;ra;nha
-pi;rate
-pi;ta
-pi;tu;i;tar;y
-pia;no
-pic
-pic;a;yune
-pic;co;lo
-pic;nic
-pic;to;ri;al
-pic;tur;esque
-pic;ture
-pic;tured
-pick
-pick;er
-pick;et
-pick;in
-pick;le
-pick;led
-pick;wick
-pick;y
-picked
-pie
-piec;ing
-piece
-piece;meal
-piece;wise
-pied
-pied;mont
-pier
-pierc;ing
-pierce
-pig
-pig;gy
-pig;gy;back
-pig;let
-pig;men;ta;tion
-pig;ment
-pig;tail
-pike
-pil;grim
-pil;grim;age
-pil;ing
-pil;lar
-pil;low
-pil;low;case
-pile
-piled
-piles
-pill
-pills
-pimp
-pin
-pin;ball
-pin;hole
-pin;ion
-pin;na;cle
-pin;ning
-pin;point
-pin;stripe
-pin;to
-pin;up
-pinch
-pine
-pine;ap;ple
-pine;y
-ping
-ping;ing
-pink
-pink;y
-pint
-pip
-pip;er
-pip;ing
-pip;pin
-pipe
-pipe;line
-pique
-pis;ci;na
-pis;cine
-pis;ta;chi;o
-pis;tol
-pis;ton
-piss
-piss;ing
-pissed
-piste
-pit
-pit;fall
-pit;i;ful
-pit;man
-pit;ted
-pit;ting
-pit;y
-pitch
-pitch;er
-pitch;fork
-pitch;ing
-piv;ot
-piv;ot;al
-piv;ot;ing
-pix
-pix;el
-pix;ie
-pix;ies
-piz;za
-piz;ze;ri;a
-pkg
-pkt
-pla;ce;bo
-pla;cen;ta
-pla;cen;tal
-pla;gia;rism
-pla;nar
-pla;toon
-pla;ya
-pla;yas
-pla;za
-plac;ard
-plac;er
-plac;id
-plac;ing
-place
-place;ment
-plage
-plague
-plaid
-plain
-plain;ly
-plain;tiff
-plains
-plan
-plan;e;tar;i;um
-plan;e;tar;y
-plan;er
-plan;et
-plan;ing
-plan;ning
-plan;ta;tion
-plan;tar
-plane
-plank
-plank;ton
-plank;ton;ic
-plant
-plant;er
-plaque
-plas;ma
-plas;min;o;gen
-plas;mo;di;um
-plas;ter
-plas;ter;ing
-plas;tered
-plas;tic
-plas;tic;i;ty
-plas;tics
-plat
-plat;eau
-plat;ed
-plat;form
-plat;i;num
-plat;ing
-plat;ter
-plat;y;pus
-plate
-plate;let
-plau;si;ble
-play
-play;a;ble
-play;back
-play;bill
-play;book
-play;boy
-play;er
-play;ful
-play;girl
-play;ground
-play;house
-play;mate
-play;room
-play;time
-play;wright
-ple;na;ry
-ple;num
-plea
-plead
-plead;ed
-plead;ing
-plead;ings
-pleas;ant
-pleas;er
-pleas;ing
-pleas;ur;a;ble
-pleas;ure
-please
-pleat
-pled
-pledg;ing
-pledge
-plen;ti;ful
-plen;ty
-pleth;o;ra
-pleu;ral
-plex;us
-pli;a;ble
-pli;er
-pli;ers
-plight
-plot
-plot;ter
-plough
-plov;er
-plow
-ploy
-plu
-plu;ral
-plu;ral;i;ty
-plu;ral;ism
-plu;to;ni;um
-pluck
-pluck;er
-plug
-plug;ga;ble
-plug;ging
-plum
-plum;age
-plumb
-plumb;er
-plumb;ing
-plume
-plump
-plump;er
-plun;der
-plung;er
-plung;ing
-plunge
-plus
-plush
-ply
-ply;wood
-pneu;mat;ic
-pneu;mat;ics
-pneu;mo;coc;cal
-pneu;mo;nia
-po;co
-po;di;a;try
-po;di;um
-po;em
-po;et;ic
-po;et;ics
-po;et;ry
-po;lar
-po;lar;i;sa;tion
-po;lar;i;ty
-po;lar;i;za;tion
-po;lar;iz;ing
-po;lar;ized
-po;li;o
-po;lice
-po;lice;man
-po;lit;i;cal
-po;lit;i;co
-po;lite
-po;lite;ly
-po;lite;ness
-po;lo
-po;lyg;a;my
-po;lyg;o;nal
-po;lym;er;i;za;tion
-po;ny
-po;ny;tail
-po;ros;i;ty
-po;rous
-po;sa;da
-po;si;tion
-po;si;tion;al
-po;ta;ble
-po;ta;to
-po;tas;si;um
-po;ten;cy
-po;ten;ti;om;e;ter
-po;ten;tial
-po;tent
-po;tion
-pock;et
-pock;et;book
-pod
-poet
-poi
-poi;son
-poi;son;ing
-poi;son;ous
-poign;ant
-poin;set;ti;a
-point
-point;ed
-point;er
-point;ing
-point;less
-pointe
-poise
-poised
-pok;er
-pok;ey
-pok;ing
-poke
-pol
-pol;i;cy
-pol;i;cy;hold;er
-pol;i;ti;cian
-pol;i;tic
-pol;i;tics
-pol;i;ty
-pol;is
-pol;ish
-pol;ish;er
-pol;ished
-pol;ka
-pol;lack
-pol;lard
-pol;len
-pol;li;na;tion
-pol;lock
-pol;lu;tant
-pol;lu;tion
-pol;lut;ed
-pol;lut;ing
-pol;lute
-pol;os
-pol;ter;geist
-pol;y
-pol;y;am;ide
-pol;y;es;ter
-pol;y;eth;yl;ene
-pol;y;gon
-pol;y;graph
-pol;y;mer
-pol;y;mer;ic
-pol;y;mor;phic
-pol;y;mor;phism
-pol;y;no;mi;al
-pol;y;pep;tide
-pol;y;phon;ic
-pol;y;pro;pyl;ene
-pol;y;sac;cha;ride
-pol;y;sty;rene
-pol;y;tech;nic
-pol;y;u;re;thane
-pol;y;un;sat;u;rat;ed
-pol;y;vi;nyl
-pole
-poll
-polled
-pom
-need;ed
-lap;top
-pom;be
-pom;pa;no
-pome;gran;ate
-pomp
-pomp;ous
-pon;cho
-pon;der
-pon;tiff
-pon;toon
-ponce
-pond
-pong
-pons
-pont
-poo;dle
-pooch
-poof
-pooh
-pool
-pools
-poon
-poop
-poor
-poor;ly
-pop
-pop;corn
-pop;lar
-pop;lin
-pop;per
-pop;py
-pop;u;la;tion
-pop;u;lace
-pop;u;lar
-pop;u;lar;i;ty
-pop;u;lar;ly
-pop;u;late
-pop;u;list
-pop;u;lous
-pope
-pops
-por;cine
-por;cu;pine
-por;nog;ra;phy
-por;ridge
-por;tage
-por;tal
-por;ter
-por;ti;co
-por;tion
-por;trai;ture
-por;trait
-por;tray
-por;tray;al
-porce;lain
-porch
-pore
-pork
-port
-port;a;ble
-port;cul;lis
-port;fo;li;o
-pos
-pos;er
-pos;i;tive
-pos;i;tive;ly
-pos;i;tron
-pos;ing
-pos;it
-pos;se
-pos;ses;sion
-pos;ses;sive
-pos;sess
-pos;sessed
-pos;si;bil;i;ty
-pos;si;ble
-pos;si;bly
-pos;sum
-pos;te;ri;or
-pos;ter;i;ty
-pos;tu;lat;ed
-pos;tu;late
-pos;tur;al
-pos;tur;ing
-pos;ture
-pose
-posh
-poss
-post
-post;age
-post;al
-post;card
-post;code
-post;doc;tor;al
-post;er
-post;fix
-post;grad;u;ate
-post;hu;mous
-post;ing
-post;man
-post;mark
-post;mas;ter
-post;men;o;pau;sal
-post;mor;tem
-post;op;er;a;tive
-post;par;tum
-post;pon;ing
-post;pone
-post;poned
-post;script
-post;sea;son
-pot
-pot;ash
-pot;luck
-pot;pour;ri
-pot;ted
-pot;ter
-pot;ter;y
-pot;ting
-pot;ty
-pouch
-poul;try
-pounce
-pound
-pound;er
-pour
-pout
-pov;er;ty
-pow
-pow;der
-pow;der;y
-pow;ders
-pow;er
-pow;er;boat
-pow;er;ful
-pow;er;ful;ly
-pow;er;house
-pow;er;less
-pow;ered
-pox
-ppd
-ppm
-ppr
-pra;na
-prac;ti;ca;ble
-prac;ti;cal
-prac;ti;cal;i;ty
-prac;ti;cal;ly
-prac;ti;cum
-prac;ti;tion;er
-prac;tic;ing
-prac;tice
-prac;ticed
-prac;tise
-prac;tised
-prag;ma;tism
-prag;mat;ic
-prag;mat;ics
-prai;rie
-prais;ing
-praise
-pram
-prank
-prat
-prat;er
-prawn
-prax;is
-pray
-pray;er
-pre;am;ble
-pre;car;i;ous
-pre;cast
-pre;cau;tion
-pre;cau;tion;ar;y
-pre;ced;ed
-pre;ced;ing
-pre;cede
-pre;cep;tor
-pre;cept
-pre;ci;sion
-pre;cinct
-pre;cincts
-pre;cious
-pre;cip;i;ta;tion
-pre;cip;i;tate
-pre;cise
-pre;cise;ly
-pre;clin;i;cal
-pre;clud;ed
-pre;clude
-pre;co;cious
-pre;con;ceived
-pre;con;cep;tion
-pre;con;di;tion
-pre;cur;sor
-pre;da;tion
-pre;de;fined
-pre;dic;a;ment
-pre;dic;tion
-pre;dic;tor
-pre;dict
-pre;dict;a;bil;i;ty
-pre;dict;a;ble
-pre;dict;a;bly
-pre;dis;po;si;tion
-pre;dom;i;nance
-pre;dom;i;nant
-pre;dom;i;nate
-pre;dom;i;nate;ly
-pre;em;i;nent
-pre;emp;tion
-pre;emp;tive
-pre;empt
-pre;fab
-pre;fec;ture
-pre;fect
-pre;fer
-pre;fer;ring
-pre;ferred
-pre;fix
-pre;fron;tal
-pre;heat
-pre;his;to;ry
-pre;his;tor;ic
-pre;lim;i;nar;ies
-pre;lim;i;nar;y
-pre;lims
-pre;ma;ture;ly
-pre;men;stru;al
-pre;mi;um
-pre;miered
-pre;na;tal
-pre;oc;cu;pa;tion
-pre;oc;cu;pied
-pre;or;der
-pre;pack;aged
-pre;par;a;to;ry
-pre;par;ed;ness
-pre;par;ing
-pre;pare
-pre;pared
-pre;pay
-pre;pon;der;ance
-pre;pos;ter;ous
-pre;print
-pre;qual;i;fi;ca;tion
-pre;re;lease
-pre;req;ui;site
-pre;rog;a;tive
-pre;school
-pre;scrib;er
-pre;scrib;ing
-pre;scribe
-pre;scribed
-pre;scrip;tion
-pre;scrip;tive
-pre;sea;son
-pre;serv;a;tive
-pre;serv;ing
-pre;serve
-pre;served
-pre;set
-pre;shrunk
-pre;sid;i;o
-pre;side
-pre;sum;a;bly
-pre;sume
-pre;sumed
-pre;sump;tion
-pre;sump;tive
-pre;ten;tious
-pre;tend
-pre;tend;ed
-pre;tend;er
-pre;tense
-pre;text
-pre;vail
-pre;vail;ing
-pre;ven;ta;tive
-pre;ven;tion
-pre;ven;tive
-pre;vent
-pre;vi;ous
-pre;view
-preach
-preach;er
-prec
-prec;e;dence
-prec;e;dent
-pred
-pred;a;to;ry
-pred;a;tor
-pred;e;ces;sor
-pred;i;cat;ed
-pred;i;cate
-pred;ni;sone
-pref
-pref;ace
-pref;er;a;ble
-pref;er;a;bly
-pref;er;en;tial
-pref;er;en;tial;ly
-pref;er;ence
-preg;nan;cy
-preg;nant
-prej;u;di;cial
-prej;u;dice
-prej;u;diced
-prel;ude
-prelim
-prem
-prem;a;ture
-prem;i;ere
-prem;ier
-prem;ier;ship
-prem;is;es
-prem;ise
-pren;tice
-prep
-prep;a;ra;tion
-pres
-pres;by;ter;i;an
-pres;by;ter;y
-pres;en;ta;tion
-pres;ence
-pres;ent
-pres;ent;ly
-pres;ents
-pres;er;va;tion
-pres;i;den;cy
-pres;ident
-pres;su;rized
-pres;sur;ing
-pres;sure
-pres;sured
-pres;tig;ious
-pres;tige
-pres;to
-press
-press;er
-press;ing
-press;room
-pret
-pret;ti;er
-pret;ti;est
-pret;ty
-pret;zel
-prev;a;lence
-prev;a;lent
-prey
-pri;ma;cy
-pri;ma;ry
-pri;ma;ve;ra
-pri;mal
-pri;mar;i;ly
-pri;mate
-pri;mo
-pri;mor;di;al
-pri;mus
-pri;on
-pri;or
-pri;or;i;ty
-pri;or;y
-pri;us
-pri;va;cy
-pri;va;teer
-pri;vate
-pri;vate;ly
-pri;vates
-pric;ing
-price
-price;less
-price;y
-prick
-prick;ly
-pride
-priest
-priest;ess
-priest;hood
-priest;ly
-prim
-prim;er
-prim;i;tive
-prim;ing
-prim;rose
-prime
-prin
-prin;cess
-prin;ci;pal
-prin;ci;pal;i;ty
-prin;ci;pal;ly
-prin;ci;pe
-prin;ci;ple
-prin;ci;pled
-prince
-print
-print;a;ble
-print;er
-print;ing
-print;mak;ing
-pris;on
-pris;on;er
-pris;tine
-prise
-prism
-priv
-priv;i;lege
-priv;i;leged
-priv;y
-prize
-pro
-pro;ba;tion
-pro;bate
-pro;ce;dure
-pro;ceed
-pro;ceed;ing
-pro;ceeds
-pro;ces;sion
-pro;ces;sor
-pro;claim
-pro;cras;ti;na;tion
-pro;cur;ing
-pro;cure
-pro;cure;ment
-pro;cured
-pro;di;gious
-pro;duc;er
-pro;duc;ing
-pro;duc;tion
-pro;duc;tiv;i;ty
-pro;duc;tive
-pro;duc;tive;ly
-pro;duce
-pro;duced
-pro;fan;i;ty
-pro;fane
-pro;fes;sion
-pro;fes;sion;al
-pro;fes;sion;al;ism
-pro;fes;sion;al;ly
-pro;fes;sor
-pro;fes;sor;ship
-pro;fess
-pro;fessed
-pro;fi;cien;cy
-pro;fi;cient
-pro;fil;er
-pro;fil;ing
-pro;file
-pro;filed
-pro;found
-pro;found;ly
-pro;fu;sion
-pro;fuse;ly
-pro;gen;i;tor
-pro;ges;ter;one
-pro;gram
-pro;gram;ing
-pro;gram;ma;ble
-pro;gram;mat;ic
-pro;gram;mer
-pro;gram;ming
-pro;gramme
-pro;grammed
-pro;gres;sion
-pro;gres;sive
-pro;gres;sive;ly
-pro;hi;bi;tion
-pro;hib;i;tive
-pro;hib;it
-pro;jec;tile
-pro;jec;tion
-pro;jec;tive
-pro;jec;tor
-pro;jet
-pro;lac;tin
-pro;lapse
-pro;le;tar;i;at
-pro;lif;er;a;tion
-pro;lif;er;a;tive
-pro;lif;er;ate
-pro;lif;ic
-pro;line
-pro;log
-pro;logue
-pro;lon;ga;tion
-pro;long
-pro;mis;cu;ous
-pro;mo;tion
-pro;mo;tion;al
-pro;mot;ed
-pro;mot;er
-pro;mot;ing
-pro;mote
-pro;noun
-pro;nounce
-pro;nounced
-pro;nun;ci;a;tion
-pro;pane
-pro;pel
-pro;pel;lant
-pro;pel;ler
-pro;pelled
-pro;pen;si;ty
-pro;phet;ic
-pro;pi;o;nate
-pro;po;nent
-pro;por;tion
-pro;por;tion;al
-pro;por;tion;al;i;ty
-pro;por;tion;ate
-pro;por;tion;ate;ly
-pro;por;tioned
-pro;pos;al
-pro;pos;er
-pro;pos;ing
-pro;pose
-pro;posed
-pro;pran;o;lol
-pro;pri;e;tar;y
-pro;pri;e;tor
-pro;pri;e;tor;ship
-pro;pri;e;ty
-pro;pul;sion
-pro;pyl;ene
-pro;rat;ed
-pro;spec;tive
-pro;spec;tus
-pro;spec;tus;es
-pro;stat;ic
-pro;tag;o;nist
-pro;te;a
-pro;te;ase
-pro;te;ge
-pro;te;o;lyt;ic
-pro;tec;tion
-pro;tec;tion;ism
-pro;tec;tive
-pro;tec;tor
-pro;tect
-pro;tect;ing
-pro;tein
-pro;tein;ase
-pro;test
-pro;test;er
-pro;to;col
-pro;to;type
-pro;to;zo;a
-pro;ton
-pro;trud;ing
-pro;ver;bi;al
-pro;vi;sion
-pro;vi;sion;al
-pro;vi;sion;al;ly
-pro;vi;so
-pro;vid;ed
-pro;vid;er
-pro;vid;ing
-pro;vide
-pro;vin;cial
-pro;voc;a;tive
-pro;vok;ing
-pro;voke
-pro;voked
-prob
-prob;a;bil;i;ty
-prob;a;ble
-prob;a;bly
-prob;ing
-prob;lem
-prob;lem;at;ic
-probe
-proc
-proc;ess
-proc;la;ma;tion
-proc;tor
-prod
-prod;i;gal
-prod;i;gy
-prod;uct
-prof
-prof;it
-prof;it;a;bil;i;ty
-prof;it;a;ble
-prof;it;a;bly
-prog
-prog;e;ny
-prog;no;sis
-prog;nos;tic
-prog;ress
-proj;ect
-prom
-prom;e;nade
-prom;i;nence
-prom;i;nent
-prom;is;ing
-prom;is;so;ry
-prom;ise
-prom;ised
-prom;on;to;ry
-prom;ul;ga;tion
-prom;ul;gate
-prompt
-prompt;ly
-pron
-pron;to
-prone
-prong
-proof
-proof;ing
-proof;read
-prop
-prop;a;ga;tion
-prop;a;gan;da
-prop;a;gate
-prop;er
-prop;er;ly
-prop;er;ty
-prop;o;si;tion
-prop;o;si;tion;al
-proph;e;cy
-proph;e;sy
-proph;et
-proph;y;lac;tic
-proph;y;lax;is
-pros
-pros;e;cu;tion
-pros;e;cu;tor
-pros;e;cut;ed
-pros;e;cut;ing
-pros;e;cute
-pros;pec;tor
-pros;pect
-pros;per
-pros;per;i;ty
-pros;per;ous
-pros;ta;glan;din
-pros;tate
-pros;the;sis
-pros;thet;ics
-pros;ti;tu;tion
-pros;ti;tute
-pros;trate
-prose
-pross;er
-proud
-proud;ly
-prov
-prov;e;nance
-prov;en
-prov;erb
-prov;i;dence
-prov;i;dent
-prov;ince
-prov;o;ca;tion
-prov;ost
-prove
-prow;ess
-prowl
-prowl;er
-prox;i;mal
-prox;i;mate
-prox;ies
-prox;im;i;ty
-prox;y
-prs
-pru;den;tial
-pru;dence
-pru;dent
-prun;ing
-prune
-pry
-pry;ing
-psalm
-pseu;do
-pseu;do;e;phed;rine
-pseu;do;nym
-pseu;dom;o;nas
-psf
-psi
-psig
-pso;ri;a;sis
-pss
-psy;chi;a;trist
-psy;chi;a;try
-psy;chi;at;ric
-psy;chic
-psy;cho
-psy;cho;a;nal;y;sis
-psy;cho;an;a;lyt;ic
-psy;cho;log;i;cal
-psy;cho;log;i;cal;ly
-psy;cho;met;ric
-psy;cho;pa;thol;o;gy
-psy;cho;phar;ma;col;o;gy
-psy;cho;sis
-psy;cho;so;cial
-psy;cho;ther;a;pist
-psy;cho;ther;a;py
-psy;cho;trop;ic
-psy;chol;o;gist
-psy;chol;o;gy
-psy;chot;ic
-psych
-psych;e;del;ic
-psyche
-pta
-pto
-pts
-pty
-pu;ber;ty
-pu;bes;cent
-pu;bic
-pu;ja
-pu;ma
-pu;ni;tive
-pu;ny
-pu;pa
-pu;pil
-pu;ree
-pu;ri
-pu;ri;fied
-pu;ri;fy
-pu;ri;fy;ing
-pu;ri;tan
-pu;ri;ty
-pu;rine
-pu;ta;tive
-pub
-pub;li;ca;tion
-pub;li;cist
-pub;li;cize
-pub;li;cized
-pub;lic
-pub;lic;i;ty
-pub;lic;ly
-pub;lish
-pub;lish;er
-pub;lish;ing
-publ
-puck
-pud;ding
-pud;dle
-pueb;lo
-puf;fin
-puff
-puff;y
-pug
-puke
-pul
-pul;ley
-pul;mo;nar;y
-pul;pit
-pul;sar
-pul;sat;ing
-pull
-pull;o;ver
-pulp
-puls;ing
-pulse
-pum;ice
-pump
-pump;ing
-pump;kin
-pun
-pun;dit
-pun;gent
-pun;ish
-pun;ish;a;ble
-pun;ish;er
-pun;ish;ment
-punc;tu;a;tion
-punc;tu;al
-punc;tu;al;i;ty
-punc;ture
-punch
-punk
-punt
-punt;er
-pup
-pup;pet
-pup;pet;ry
-pup;py
-pur;chas;er
-pur;chase
-pur;est
-pur;ga;to;ry
-pur;ple
-pur;port
-pur;pose
-pur;pose;ful
-pur;pose;ly
-pur;su;ance
-pur;su;ant
-pur;su;ing
-pur;sue
-pur;sued
-pur;suit
-pur;view
-pure
-pure;bred
-pure;ly
-purg;ing
-purge
-purl
-purr
-purse
-pus
-push
-push;chair
-push;er
-push;ing
-push;y
-pushed
-puss
-puss;ies
-puss;y
-put
-put;ting
-put;ty
-putt
-putt;er
-puz;zle
-py;jam;as
-py;lo;ri
-py;lon
-py;ram;i;dal
-py;rene
-py;rite
-py;ro;tech;nics
-py;thon
-pye
-pyg;my
-pyr;a;mid
-qty
-qua
-qua;sar
-qua;ter;nar;y
-qua;tre
-quack
-quad
-quad;ra
-quad;ra;ture
-quad;ran;gle
-quad;rant
-quad;rat;ic
-quad;ru;ple
-quag;ga
-quag;mire
-quail
-quaint
-quake
-qual;i;fi;ca;tion
-qual;i;fi;er
-qual;i;fied
-qual;i;fy
-qual;i;fy;ing
-qual;i;ta;tive
-qual;i;ta;tive;ly
-qual;i;ty
-quan;da;ry
-quan;ta
-quan;ti;fi;a;ble
-quan;ti;fied
-quan;ti;fy
-quan;ti;fy;ing
-quan;ti;ta;tive
-quan;ti;ta;tive;ly
-quan;ti;ty
-quan;ti;za;tion
-quan;tized
-quan;tum
-quant
-quar;an;tine
-quar;rel
-quar;ry
-quar;ry;ing
-quar;ter
-quar;ter;back
-quar;ter;ly
-quar;ter;mas;ter
-quar;ters
-quar;tet
-quar;tile
-quar;to
-quark
-quart
-quartz
-quay
-que;ry
-queen
-queer
-quell
-quench
-ques
-ques;tion
-ques;tion;a;ble
-ques;tion;ing
-ques;tion;naire
-quest
-quet;zal
-queu;ing
-queue
-qui;es;cent
-qui;et
-qui;et;er
-qui;et;ly
-quib;ble
-quiche
-quick
-quick;en
-quick;er
-quick;ie
-quick;ly
-quick;ness
-quick;sil;ver
-quid
-quill
-quilt
-quilt;ed
-quilt;er
-quilt;ing
-quin
-quin;cy
-quin;tes;sen;tial
-quin;tes;sence
-quin;tet
-quin;tile
-quin;ton
-quince
-quint
-quirk
-quirk;y
-quit
-quite
-quits
-quiv;er
-quiz
-quiz;zes
-quo
-quo;ta
-quo;ta;tion
-quo;tient
-quod
-quor;um
-quot
-quot;a;ble
-quot;ed
-quot;ing
-quote
-quoth
-ra;bies
-ra;cial
-ra;cial;ly
-ra;dar
-ra;di;a;tion
-ra;di;a;tive
-ra;di;a;tor
-ra;di;al
-ra;di;an
-ra;di;ance
-ra;di;ant
-ra;di;at;ed
-ra;di;at;ing
-ra;di;ate
-ra;di;i
-ra;di;o
-ra;di;o;ac;tiv;i;ty
-ra;di;o;ac;tive
-ra;di;o;graph;ic
-ra;di;o;log;i;cal
-ra;di;o;log;ic
-ra;di;o;nu;clide
-ra;di;o;ther;a;py
-ra;di;og;ra;phy
-ra;di;ol;o;gist
-ra;di;ol;o;gy
-ra;di;om;e;ter
-ra;di;os
-ra;di;um
-ra;di;us
-ra;dix
-ra;don
-ra;ga
-ra;ia
-ra;ja
-ra;mon
-ra;ni
-ra;pi;er
-ra;pid;i;ty
-ra;sa
-ra;ta
-ra;ti;os
-ra;tio
-ra;tion
-ra;tion;al
-ra;tion;al;i;ty
-ra;tion;al;i;za;tion
-ra;tion;al;ize
-ra;tion;al;ly
-ra;tion;ale
-ra;tions
-ra;vi;o;li
-ra;vine
-ra;ya
-ra;zor
-rab
-rab;bi
-rab;bit
-rab;ble
-rab;id
-rac;coon
-rac;er
-rac;es
-rac;ing
-rac;ism
-rac;ist
-rac;quet
-rac;y
-race
-race;course
-race;track
-race;way
-rack
-rack;et
-rack;ets
-rad
-rad;i;cal
-rad;i;cal;ly
-rad;ish
-raf;fle
-raf;fles
-raff
-raft
-raft;er
-rag
-rag;ged
-rag;ged;y
-rag;ing
-rag;lan
-rag;time
-rage
-rags
-rah
-rai;sin
-raid
-raid;er
-rail
-rail;ing
-rail;road
-rail;way
-rain
-rain;bow
-rain;coat
-rain;fall
-rain;for;est
-rain;i;er
-rain;wa;ter
-rain;wear
-rain;y
-rains
-rais;er
-rais;ing
-raise
-raised
-raj
-rak;ing
-rake
-raked
-ral;lied
-ral;ly
-ral;ly;ing
-ral;lye
-rall
-ram
-ram;ble
-ram;bler
-ram;bling
-ram;ming
-ram;page
-ram;pant
-ram;part
-ramp
-ran
-ran;cho
-ran;cid
-ran;dom
-ran;dom;ly
-ran;dom;ness
-ran;som
-ranch
-ranch;er
-rand
-rand;y
-rang
-rang;er
-rang;ing
-range
-range;find;er
-ranged
-rank
-rank;ing
-rant
-rap
-rap;id
-rap;id;ly
-rap;ids
-rap;ing
-rap;ist
-rap;per
-rap;ping
-rap;por;teur
-rap;port
-rap;tor
-rap;ture
-rape
-rar;er
-rar;est
-rar;i;ty
-rare
-rare;ly
-ras;cal
-ras;ter
-rash
-rasp;ber;ry
-rat
-rat;ed
-rat;er
-rat;i;fied
-rat;i;fy
-rat;ing
-rat;tan
-rat;tle
-rat;tle;snake
-rat;tling
-ratch;et
-rate
-rates
-rath
-rath;er
-rats
-rau;cous
-raun;chy
-rav;aged
-rav;el
-rav;en
-rav;er
-rav;ing
-rave
-raw
-raw;hide
-ray
-ray;on
-raz;er
-razz
-rcd
-rct
-re;a;gent
-re;a;lign;ment
-re;ac;ti;va;tion
-re;ac;ti;vat;ed
-re;ac;ti;vate
-re;ac;tion
-re;ac;tion;ar;y
-re;ac;tive
-re;ac;tor
-re;act
-re;ad;mis;sion
-re;af;firm
-re;al
-re;al;es;tate
-re;al;i;sa;tion
-re;al;i;ty
-re;al;is;ing
-re;al;is;ti;cal;ly
-re;al;is;tic
-re;al;ise
-re;al;ised
-re;al;ism
-re;al;ist
-re;al;iz;ing
-re;al;ize
-re;al;ized
-re;al;lo;ca;tion
-re;al;ly
-re;al;tor
-re;al;ty
-re;als
-re;ap;pear
-re;ap;ply
-re;ap;point;ment
-re;ar;rang;ing
-re;ar;range
-re;ar;range;ment
-re;ar;ranged
-re;as;sess
-re;as;sess;ment
-re;as;sign;ment
-re;as;sur;ance
-re;as;sure
-re;au;thor;i;za;tion
-re;bate
-re;bel;lion
-re;bel;lious
-re;birth
-re;born
-re;bound
-re;broad;cast
-re;build
-re;build;ing
-re;buke
-re;but;tal
-re;cal;cu;lat;ed
-re;cal;cu;late
-re;call
-re;cap
-re;cap;ture
-re;cast
-re;ced;ing
-re;ceipt
-re;ceiv;a;ble
-re;ceiv;er
-re;ceiv;ing
-re;ceive
-re;ceived
-re;cent
-re;cent;ly
-re;cep;ta;cle
-re;cep;tion
-re;cep;tion;ist
-re;cep;tive
-re;cep;tor
-re;cer;ti;fi;ca;tion
-re;cer;ti;fied
-re;ces;sion
-re;ces;sive
-re;cess
-re;charg;ing
-re;charge
-re;charge;a;ble
-re;charged
-re;cid;i;vism
-re;cip;i;ent
-re;cip;ro;cal
-re;cip;ro;cat;ing
-re;cir;cu;la;tion
-re;cit;al
-re;cit;ed
-re;cit;ing
-re;cite
-re;claim
-re;clas;si;fi;ca;tion
-re;clin;er
-re;clin;ing
-re;code
-re;coil
-re;com;bi;na;tion
-re;com;pile
-re;con
-re;con;nais;sance
-re;con;nec;tion
-re;con;nect
-re;con;sid;er
-re;con;sid;er;a;tion
-re;con;sti;tu;ted
-re;con;sti;tu;tion
-re;con;struc;tion
-re;con;struc;tive
-re;con;struct
-re;con;struct;ed
-re;cord;a;ble
-re;cord;er
-re;cord;ing
-re;count
-re;coup
-re;course
-re;cov;er
-re;cov;er;a;ble
-re;cov;er;ies
-re;cov;er;y
-re;cruit
-re;cruit;er
-re;cruit;ment
-re;cum;bent
-re;cur
-re;cur;rence
-re;cur;rent
-re;cur;sion
-re;cur;sive
-re;cy;cle
-re;de;fin;ing
-re;de;fine
-re;de;fined
-re;de;ploy;ment
-re;de;sign
-re;de;vel;op;ment
-re;deem
-re;deem;a;ble
-re;deem;er
-re;deem;ing
-re;def;i;ni;tion
-re;demp;tion
-re;des;ig;nat;ed
-re;di;rect
-re;dis;cov;er
-re;dis;tri;bu;tion
-re;dis;trib;ut;ed
-re;dis;trib;ut;ing
-re;dis;trib;ute
-re;do
-re;done
-re;dox
-re;draw
-re;dress
-re;duc;ing
-re;duc;tase
-re;duc;tion
-re;duce
-re;duced
-re;ducer
-re;dun;dan;cy
-re;dun;dant
-re;e;lec;tion
-re;en;ter
-re;en;try
-re;fer;ral
-re;fer;ring
-re;ferred
-re;fi;nanc;ing
-re;fi;nance
-re;fi;nanced
-re;fill
-re;fill;a;ble
-re;fin;er;ies
-re;fin;er;y
-re;fin;ing
-re;fine
-re;fine;ment
-re;fined
-re;flec;tion
-re;flec;tiv;i;ty
-re;flec;tive
-re;flec;tor
-re;flect
-re;flect;ance
-re;flex
-re;flex;ive
-re;flux
-re;fo;cus
-re;for;mu;lat;ed
-re;form
-re;form;er
-re;formed
-re;frac;tion
-re;frac;tive
-re;frac;to;ry
-re;frac;tor
-re;frain
-re;fresh
-re;fresh;er
-re;fresh;ing
-re;fresh;ing;ly
-re;fresh;ment
-re;frig;er;a;tion
-re;frig;er;a;tor
-re;frig;er;ant
-re;frig;er;at;ed
-re;frig;er;ate
-re;fu;el;ing
-re;fund
-re;fund;a;ble
-re;fur;bish
-re;fus;al
-re;fus;ing
-re;fused
-re;fut;ed
-re;fute
-re;ga;li;a
-re;gain
-re;gal
-re;gard
-re;gard;ing
-re;gard;less
-re;gat;ta
-re;gen;cy
-re;gen;er;a;tion
-re;gen;er;a;tive
-re;gen;er;at;ed
-re;gen;er;at;ing
-re;gen;er;ate
-re;gent
-re;gi;na
-re;gime
-re;gion
-re;gion;al
-re;gion;al;ism
-re;gion;al;ly
-re;gres;sion
-re;gres;sive
-re;gress
-re;gret
-re;gret;ta;ble
-re;gret;ta;bly
-re;growth
-re;ha;bil;i;ta;tion
-re;ha;bil;i;ta;tive
-re;ha;bil;i;tat;ed
-re;ha;bil;i;tate
-re;hear;ing
-re;hears;al
-re;hears;ing
-re;hearse
-re;hearsed
-re;im;burse
-re;im;bursed
-re;in;car;na;tion
-re;in;force
-re;in;force;ment
-re;in;stall
-re;in;stat;ed
-re;in;state
-re;in;state;ment
-re;in;sur;ance
-re;in;te;gra;tion
-re;in;tro;duc;tion
-re;in;tro;duced
-re;in;vent
-re;in;vest;ment
-re;is;sue
-re;is;sued
-re;it;er;ate
-re;jec;tion
-re;ject
-re;joic;ing
-re;joice
-re;joiced
-re;join
-re;ju;ve;nat;ing
-re;ju;ve;nate
-re;la;tion
-re;la;tion;al
-re;la;tion;ship
-re;la;tions
-re;lapse
-re;lat;ed
-re;lat;ing
-re;late
-re;launch
-re;lax
-re;lax;a;tion
-re;lay
-re;lay;ing
-re;leas;ing
-re;lease
-re;leased
-re;lent;less
-re;lent;less;ly
-re;li;a;ble
-re;li;ance
-re;li;ant
-re;li;gion
-re;li;gious
-re;li;gious;ly
-re;lied
-re;lief
-re;liev;er
-re;liev;ing
-re;lieve
-re;lieved
-re;lin;quish
-re;list
-re;live
-re;lo;ca;tion
-re;lo;cat;ed
-re;lo;cat;ing
-re;lo;cate
-re;load
-re;luc;tance
-re;luc;tant
-re;luc;tant;ly
-re;ly
-re;ly;ing
-re;main
-re;main;der
-re;mains
-re;make
-re;man;u;fac;tured
-re;mand
-re;mar;ried
-re;mark
-re;mark;a;ble
-re;mas;ter
-re;match
-re;me;di;a;tion
-re;me;di;al
-re;mem;ber
-re;mem;brance
-re;mind
-re;mis;sion
-re;mit
-re;mit;tance
-re;mit;ted
-re;mix
-re;mod;el
-re;mod;el;ing
-re;mod;eled
-re;morse
-re;mort;gage
-re;mote
-re;mote;ly
-re;mov;a;ble
-re;mov;al
-re;mov;er
-re;mov;ing
-re;move
-re;moved
-re;mu;ner;a;tion
-re;nais;sance
-re;nal
-re;nam;ing
-re;name
-re;named
-re;new
-re;new;al
-re;nin
-re;nor;mal;i;za;tion
-re;nounce
-re;nounced
-re;nown
-re;nowned
-re;nun;ci;a;tion
-re;o;pen
-re;or;der
-re;or;gan;i;za;tion
-re;or;gan;ize
-re;or;gan;ized
-re;paint
-re;pair
-re;pair;er
-re;pay
-re;pay;ment
-re;peal
-re;peat
-re;peat;a;bil;i;ty
-re;peat;a;ble
-re;peat;ed
-re;peat;ed;ly
-re;peat;er
-re;pel
-re;pel;lent
-re;pent
-re;pent;ance
-re;pet;i;tive
-re;plac;ing
-re;place
-re;place;ment
-re;placed
-re;play
-re;plen;ish
-re;plete
-re;ply
-re;po;si;tion
-re;port
-re;port;a;ble
-re;port;age
-re;port;ed;ly
-re;port;er
-re;pos;i;tor;ies
-re;pos;i;tor;y
-re;pose
-re;post
-re;pres;sion
-re;pres;sive
-re;pres;sor
-re;press
-re;prieve
-re;print
-re;pris;al
-re;prise
-re;pro
-re;pro;duc;i;bil;i;ty
-re;pro;duc;i;ble
-re;pro;duc;ing
-re;pro;duc;tion
-re;pro;duc;tive
-re;pro;duce
-re;pro;duced
-re;proach
-re;pu;di;a;tion
-re;pub;li;ca;tion
-re;pub;li;can
-re;pub;lic
-re;pub;lish
-re;pug;nant
-re;pul;sion
-re;pul;sive
-re;pur;chase
-re;put;ed
-re;quest
-re;quir;ing
-re;quire
-re;quire;ment
-re;quired
-re;read
-re;run
-re;sale
-re;sched;ule
-re;sched;uled
-re;scind
-re;scis;sion
-re;seal
-re;search
-re;search;er
-re;sec;tion
-re;sell
-re;sell;er
-re;sell;ing
-re;sem;blance
-re;sem;ble
-re;send
-re;sent
-re;sent;ment
-re;serv;ing
-re;serve
-re;served
-re;set
-re;set;ting
-re;set;tle;ment
-re;shape
-re;sid;ed
-re;sid;ing
-re;sid;u;al
-re;side
-re;sign
-re;signed
-re;sil;ien;cy
-re;sil;ience
-re;sil;ient
-re;sis;tiv;i;ty
-re;sis;tive
-re;sis;tor
-re;sist
-re;sist;ance
-re;sist;ant
-re;sold
-re;solv;er
-re;solv;ing
-re;solve
-re;solved
-re;sort
-re;source
-re;source;ful
-re;spec;tive
-re;spec;tive;ly
-re;spect
-re;spect;a;ble
-re;spect;ful
-re;spect;ful;ly
-re;spect;ing
-re;spon;si;bil;i;ty
-re;spon;si;ble
-re;spon;si;bly
-re;spon;sive
-re;spon;sive;ness
-re;spond
-re;spond;ent
-re;sponse
-re;start
-re;stat;ed
-re;state
-re;state;ment
-re;stock
-re;stor;a;tive
-re;stor;ing
-re;store
-re;stored
-re;strain
-re;straint
-re;stric;tion
-re;stric;tive
-re;strict
-re;strict;ed
-re;struc;tur;ing
-re;struc;ture
-re;struc;tured
-re;sub;mit
-re;sult
-re;sult;ant
-re;sum;ing
-re;sume
-re;sumed
-re;sump;tion
-re;sur;fac;ing
-re;sur;gence
-re;sus;ci;ta;tion
-re;tail
-re;tail;er
-re;tain
-re;tain;er
-re;take
-re;tal;i;a;tion
-re;tal;i;ate
-re;tar;da;tion
-re;tard
-re;tard;ant
-re;tard;ed
-re;te
-re;tell;ing
-re;ten;tion
-re;test
-re;think
-re;think;ing
-re;tic;u;lum
-re;tin
-re;tir;ee
-re;tir;ing
-re;tire
-re;tire;ment
-re;tired
-re;tort
-re;trac;tion
-re;tract
-re;tract;a;ble
-re;trans;mis;sion
-re;trans;mit
-re;trans;mit;ted
-re;treat
-re;triev;al
-re;triev;er
-re;triev;ing
-re;trieve
-re;trieved
-re;try
-re;turn
-re;turn;a;ble
-re;type
-re;u;ni;fi;ca;tion
-re;u;nit;ed
-re;u;nite
-re;un;ion
-re;us;a;ble
-re;us;ing
-re;use
-re;used
-re;val;u;a;tion
-re;vamp
-re;veal
-re;venge
-re;ver;sal
-re;ver;sion
-re;vere
-re;vered
-re;vers;i;ble
-re;verse
-re;vert
-re;vi;sion
-re;vi;sion;ist
-re;vi;tal;i;za;tion
-re;vi;tal;iz;ing
-re;vi;tal;ize
-re;vi;tal;ized
-re;view
-re;vis;ing
-re;vis;it
-re;vise
-re;vised
-re;viv;al
-re;viv;ing
-re;vive
-re;vived
-re;vok;ing
-re;voke
-re;voked
-re;volt
-re;volt;ing
-re;volv;er
-re;volv;ing
-re;volve
-re;volved
-re;vue
-re;ward
-re;ward;ing
-re;wind
-re;work
-re;work;ing
-re;writ;ing
-re;writ;ten
-re;write
-re;wrote
-re;zon;ing
-rea;son
-rea;son;a;ble
-rea;son;a;ble;ness
-rea;son;a;bly
-rea;son;ing
-rea;soned
-reach
-reach;a;ble
-read
-read;a;bil;i;ty
-read;a;ble
-read;er
-read;er;ship
-read;i;ly
-read;i;ness
-read;ing
-read;y
-realm
-ream
-reap
-reap;er
-rear
-reb
-reb;be
-reb;el
-rec
-rec;i;pe
-rec;i;proc;i;ty
-rec;i;ta;tion
-rec;la;ma;tion
-rec;luse
-rec;og;ni;tion
-rec;og;nis;ing
-rec;og;nise
-rec;og;nised
-rec;og;niz;a;ble
-rec;og;niz;ing
-rec;og;nize
-rec;og;nized
-rec;ol;lec;tion
-rec;ol;lect
-rec;om;men;da;tion
-rec;om;mend
-rec;on;cil;ing
-rec;on;cile
-rec;on;ciled
-rec;ord
-rec;re;a;tion
-rec;re;a;tion;al
-rec;re;ate
-rec;tal
-rec;tan;gle
-rec;tan;gu;lar
-rec;ti;fi;ca;tion
-rec;ti;fi;er
-rec;ti;fied
-rec;ti;fy
-rec;to;ry
-rec;tor
-rec;tum
-reck;less
-reck;on
-reck;on;ing
-rect
-red
-red;dish
-red;head
-red;neck
-red;ness
-red;wood
-redd
-redd;ing
-rede
-ree;bok
-reed
-reed;y
-reef
-reef;er
-reel
-reeve
-ref
-ref;er;ee
-ref;er;en;dum
-ref;er;en;tial
-ref;er;enc;ing
-ref;er;ence
-ref;er;enced
-ref;er;ent
-ref;or;ma;tion
-ref;u;gee
-ref;u;ta;tion
-ref;uge
-ref;use
-refer
-reg
-reg;gae
-reg;i;men
-reg;i;men;tal
-reg;i;ment
-reg;is;ter
-reg;is;tered
-reg;is;tra;tion
-reg;is;trant
-reg;is;trar
-reg;is;try
-reg;o
-reg;u;la;tion
-reg;u;la;tor
-reg;u;lar
-reg;u;lar;i;ty
-reg;u;lar;i;za;tion
-reg;u;lar;ly
-reg;u;lat;ed
-reg;u;lat;ing
-reg;u;late
-reif
-reign
-rein
-rein;deer
-reins
-reis
-rel
-rel;a;tiv;i;ty
-rel;a;tiv;is;tic
-rel;a;tiv;ism
-rel;a;tive
-rel;e;gat;ed
-rel;e;van;cy
-rel;e;vance
-rel;e;vant
-rel;ic
-rel;ish
-rem
-rem;e;died
-rem;e;dy
-rem;i;nis;cent
-rem;nant
-ren;con;tre
-ren;der;er
-ren;der;ing
-ren;dez;vous
-ren;di;tion
-ren;du
-ren;e;gade
-ren;o;va;tion
-ren;o;vat;ed
-ren;o;vat;ing
-ren;o;vate
-rend
-rend;er
-rent
-rent;al
-rent;er
-rep
-rep;a;ra;tion
-rep;e;ti;tion
-rep;er;to;ry
-rep;er;toire
-rep;li;ca
-rep;li;ca;tion
-rep;li;cat;ed
-rep;li;cate
-rep;re;hen;si;ble
-rep;re;sen;ta;tion
-rep;re;sen;ta;tion;al
-rep;re;sent
-rep;re;sent;a;tive
-rep;ri;mand
-rep;tile
-rep;u;ta;ble
-rep;u;ta;tion
-repr
-rept
-req
-req;ui;em
-req;ui;si;tion
-req;ui;site
-res
-res;cu;ing
-res;cue
-res;cued
-res;er;va;tion
-res;er;voir
-res;i;den;cy
-res;i;den;tial
-res;i;dence
-res;i;dent
-res;i;due
-res;ig;na;tion
-res;in
-res;o;lu;tion
-res;o;lute
-res;o;na;tor
-res;o;nance
-res;o;nant
-res;o;nate
-res;pi;ra;tion
-res;pi;ra;to;ry
-res;pi;ra;tor
-res;pite
-res;tau;rant
-res;ti;tu;tion
-res;to;ra;tion
-res;ur;rec;tion
-res;ur;rect
-resp
-rest
-rest;ful
-rest;ing
-rest;less
-rest;less;ness
-ret
-ret;i;na
-ret;i;nol
-ret;ri;bu;tion
-ret;ro
-ret;ro;ac;tive
-ret;ro;fit
-ret;ro;grade
-ret;ro;spec;tive
-ret;ro;spec;tive;ly
-ret;ro;spect
-rev
-rev;e;la;tion
-rev;e;nue
-rev;el
-rev;er;ence
-rev;er;end
-rev;er;ie
-rev;o;ca;ble
-rev;o;ca;tion
-rev;o;lu;tion
-rev;o;lu;tion;ar;ies
-rev;o;lu;tion;ar;y
-rev;o;lu;tion;ize
-rev;o;lu;tion;ized
-rhap;so;dy
-rhe;a
-rhe;ol;o;gy
-rhe;tor;i;cal
-rhet;o;ric
-rheu;ma;tism
-rheu;ma;toid
-rheu;ma;tol;o;gy
-rheu;mat;ic
-rhi;ni;tis
-rhi;no
-rhi;no;plas;ty
-rhi;noc;er;os
-rhi;zome
-rhine;stone
-rho
-rho;di;um
-rho;do;den;dron
-rhu;barb
-rhym;ing
-rhyme
-rhyth;mic
-rhythm
-ri;a
-ri;al
-ri;al;to
-ri;bo;fla;vin
-ri;bo;some
-ri;bose
-ri;cot;ta
-ri;dic;u;lous
-ri;dic;u;lous;ly
-ri;fle
-ri;ley
-ri;ot
-ri;par;i;an
-ri;sot;to
-ri;val
-ri;val;ry
-ri;yal
-rib
-rib;bon
-ric;o;chet
-rice
-rich
-rich;es
-rich;ly
-rich;ness
-rick
-rick;ey
-rid
-rid;dance
-rid;den
-rid;der
-rid;dle
-rid;er
-rid;i;cule
-rid;i;culed
-rid;ing
-rid;ley
-ride
-ridge
-ridge;way
-riel
-ries;ling
-rife
-riff
-rift
-rig
-rig;ging
-rig;id
-rig;or
-rig;or;ous
-rig;or;ous;ly
-right
-right;eous
-right;eous;ness
-right;ful
-right;ful;ly
-right;ly
-rights
-rim
-rim;ming
-rin
-rind
-ring
-ring;er
-ring;ers
-ring;git
-ring;ing
-ringed
-rink
-rins;ing
-rinse
-rip
-rip;per
-rip;ping
-rip;ple
-ripe
-ris;en
-ris;er
-ris;ing
-rise
-risk
-risk;y
-rit
-rit;a
-rit;ter
-rit;u;al
-rite
-ritz
-riv
-riv;er
-riv;er;bank
-riv;er;head
-riv;er;ine
-riv;et
-riv;et;ed
-riv;et;ing
-rive
-rms
-ro;bot
-ro;bust
-ro;bust;ness
-ro;co;co
-ro;de;o
-ro;dent
-ro;maine
-ro;man
-ro;man;ti;cism
-ro;man;tic
-ro;mance
-ro;me;ro
-ro;nin
-ro;s
-ro;sar;y
-ro;selle
-ro;sette
-ro;ta
-ro;ta;ry
-ro;ta;tion
-ro;ta;tion;al
-ro;ta;tor
-ro;tate
-ro;tis;ser;ie
-ro;to
-ro;tor
-ro;tun;da
-roach
-road
-road;block
-road;house
-road;less
-road;run;ner
-road;ster
-road;way
-roam
-roan
-roar
-roar;ing
-roast
-roast;er
-roast;ing
-rob
-rob;ber
-rob;ber;ies
-rob;ber;y
-rob;bing
-rob;in
-robe
-roc
-rock
-rock;a;bil;ly
-rock;a;way
-rock;er
-rock;et
-rock;fish
-rock;y
-rod
-rode
-roe
-roe;buck
-rog;er
-rogue
-role
-roll
-roll;a;way
-roll;back
-roll;er
-roll;ing
-rom
-romp
-romp;er
-ron;do
-ronde
-roo
-rood
-roof
-roof;ing
-rook
-rook;ie
-room
-room;mate
-room;y
-roost
-roost;er
-root
-root;ed
-root;er
-rop;er
-rop;ing
-rope
-roque
-ros;in
-ros;ter
-ros;y
-rose
-rose;bud
-rose;mar;y
-rose;wood
-ross
-rot
-rot;ten
-rot;ting
-rote
-rou;ble
-rou;lette
-rou;tine
-rou;tine;ly
-rouge
-rough
-rough;ly
-rough;ness
-round
-round;a;bout
-round;ed
-round;er
-round;ers
-round;house
-round;ing
-round;up
-rous;ing
-rouse
-rout
-rout;ed
-rout;er
-rout;ing
-route
-roux
-rov;er
-rov;ing
-rove
-row
-row;an
-row;dy
-roy;al
-roy;al;ty
-roy;ale
-rpm
-rps
-rpt
-ru;bel;la
-ru;ble
-ru;bric
-ru;by
-ru;di;men;ta;ry
-ru;mor
-ru;mour
-ru;pee
-ru;pi;ah
-ru;ral
-rub
-rub;ber
-rub;ber;ized
-rub;bing
-rub;bish
-rub;ble
-ruck;sack
-ruck;us
-rud;der
-rud;dy
-rudd
-rude
-rude;ly
-rue
-ruf;fle
-ruf;fled
-ruff
-rug
-rug;by
-rug;ged
-ruin
-rul;er
-rul;ing
-rule
-rum
-rum;ba
-rum;ble
-rum;my
-rump
-run
-run;down
-run;ner
-run;ning
-run;ny
-run;off
-run;way
-rune
-rung
-rup;ture
-rus;tic
-ruse
-rush
-rush;ing
-rusk
-rust
-rust;y
-rut
-ruth
-ruth;er;ford
-ruth;less
-rwd
-rye
-sa;ber
-sa;bin
-sa;ble
-sa;bre
-sa;cred
-sa;de
-sa;dis;tic
-sa;fa;ri
-sa;ga
-sa;go
-sa;hib
-sa;kai
-sa;la;mi
-sa;laam
-sa;li;ent
-sa;li;va
-sa;lin;a
-sa;lin;i;ty
-sa;line
-sa;lon
-sa;loon
-sa;lute
-sa;ma;ra
-sa;ri
-sa;rong
-sa;tan;ic
-sa;teen
-sa;tir;i;cal
-sa;van;na
-sa;van;nah
-sa;vant
-sa;vor
-sa;vor;y
-sa;vour
-sa;voy
-sab;bat;i;cal
-sab;o;tage
-sac
-sac;ra;men;tal
-sac;ra;ment
-sac;ri;fi;cial
-sac;ri;fice
-sack
-sad
-sad;dle
-sad;dler;y
-sad;ism
-sad;ly
-sad;ness
-sae
-saf;fron
-safe
-safe;guard
-safe;ly
-safe;ty
-sag
-sag;er
-sag;ging
-sage
-sage;brush
-said
-sail
-sail;boat
-sail;ing
-sail;or
-sain
-saint
-saith
-sake
-sal
-sal;a;man;der
-sal;a;ried
-sal;a;ry
-sal;ad
-sal;i;var;y
-sal;ly
-sal;mo;nel;la
-sal;u;ta;tion
-sal;va;tion
-sal;vage
-sal;vaged
-sal;vi;a
-sal;vo
-sale
-sales
-sales;man
-sales;peo;ple
-sales;per;son
-salm;on
-salt
-salt;ed
-salt;er
-salt;wa;ter
-salt;y
-salts
-salve
-sam;ba
-sam;my
-sam;ple
-sam;pler
-sam;pling
-sam;u;rai
-same
-samp
-san;dal
-san;dal;wood
-san;guine
-san;i;ta;tion
-san;i;tar;y
-san;i;ty
-sanc;ti;fi;ca;tion
-sanc;ti;fied
-sanc;ti;ty
-sanc;tion
-sanc;tu;ar;ies
-sanc;tu;ar;y
-sanc;tum
-sand
-sand;box
-sand;ed
-sand;er
-sand;man
-sand;pa;per
-sand;pip;er
-sand;stone
-sand;storm
-sand;wich
-sand;y
-sane
-sang
-sank
-sans
-sant
-sap
-sap;phire
-sar;a;band
-sar;cas;tic
-sar;casm
-sar;co;ma
-sarge
-sas;ka;toon
-sas;sa;fras
-sas;sy
-sash
-sass
-sat
-sat;el;lite
-sat;in
-sat;ire
-sat;is;fac;tion
-sat;is;fac;to;ri;ly
-sat;is;fac;to;ry
-sat;is;fied
-sat;is;fy
-sat;u;ra;tion
-sat;u;rat;ed
-satch;el
-sau;cer
-sau;na
-sau;sage
-sau;te
-sauc;y
-sauce
-sauce;pan
-sav
-sav;age
-sav;er
-sav;in
-sav;ing
-sav;ior
-sav;iour
-sav;vy
-save
-saw
-saw;dust
-saw;ing
-saw;mill
-saw;yer
-sawn
-sax
-sax;o;ny
-sax;o;phon;ist
-sax;o;phone
-say
-say;er
-say;ing
-sca;bies
-sca;lar
-scab
-scaf;fold
-scaf;fold;ing
-scal;a;ble
-scal;er
-scal;ing
-scal;lop
-scal;pel
-scal;y
-scale
-scaled
-scalp
-scamp
-scan
-scan;dal
-scan;dic
-scan;ner
-scan;ning
-scant
-scape
-scape;goat
-scar
-scar;ab
-scar;ci;ty
-scar;i;est
-scar;ing
-scar;let
-scar;y
-scarce
-scarce;ly
-scare
-scare;crow
-scarf
-scart
-scarves
-scat
-scat;ter
-scat;ter;ing
-scath;ing
-scav;en;ger
-sce;nar;i;o
-sce;nar;i;os
-sce;nic
-scen;er;y
-scene
-scent
-scep;ti;cal
-scep;ti;cism
-scep;tre
-sch
-sche;ma
-sche;mat;ic
-sched;ule
-scheme
-schil;ler
-schil;ling
-schism
-schiz;o;phre;ni;a
-schiz;o;phren;ic
-schnau;zer
-schnei;der
-scho;las;tic
-schol;ar
-schol;ar;ship
-school
-school;boy
-school;chil;dren
-school;girl
-school;house
-school;ing
-schoon;er
-sci
-sci;at;i;ca
-sci;en;tif;ic
-sci;en;tist
-sci;ence
-sci;on
-scin;til;la;tion
-scis;sor
-scis;sors
-scle;ro;der;ma
-scle;ro;sis
-sco;li;o;sis
-sco;tia
-sconce
-scoop
-scoot
-scoot;er
-scop
-scope
-scor;ing
-scor;pi;on
-score
-score;board
-score;card
-score;less
-scorn
-scot
-scotch
-scour
-scour;ing
-scourge
-scouse
-scout
-scout;ing
-scr
-scrab;ble
-scram;ble
-scram;bler
-scran
-scrap
-scrap;book
-scrap;er
-scrap;ing
-scrap;ping
-scrap;py
-scrape
-scratch
-scratch;es
-scratch;y
-scream
-screech
-screech;ing
-screen
-screen;ing
-screen;ings
-screen;play
-screw
-screw;driv;er
-screwed
-scrib;ble
-scribe
-scrim;mage
-scrip
-scrip;tur;al
-scrip;ture
-script
-scro;tum
-scroll
-scru;ti;nize
-scru;ti;ny
-scrub
-scrub;bed
-scrub;ber
-scrub;bing
-scrum
-scrump;tious
-scu;ba
-scud
-sculp;tor
-sculp;ture
-sculp;tured
-sculpt
-scum
-se;ces;sion
-se;clu;sion
-se;clud;ed
-se;cre;cy
-se;cre;tion
-se;cre;tive
-se;cre;to;ry
-se;cret
-se;cret;ly
-se;cu;ri;ty
-se;cure
-se;cure;ly
-se;da;tion
-se;dan
-se;di;tion
-se;duc;ing
-se;duc;tion
-se;duc;tive
-se;duce
-se;duced
-se;le;ni;um
-se;lec;ta;ble
-se;lec;tion
-se;lec;tiv;i;ty
-se;lec;tive
-se;lec;tive;ly
-se;lec;tor
-se;lect
-se;man;ti;cal;ly
-se;man;tic
-se;man;tics
-se;men
-se;mes;ter
-se;mi;ot;ics
-se;mis
-se;na
-se;nile
-se;nor
-se;pi;a
-se;quel
-se;quen;tial
-se;quen;tial;ly
-se;quenc;er
-se;quence
-se;quent
-se;ques;tra;tion
-se;quin
-se;quined
-se;quoi;a
-se;ra
-se;re;na
-se;ren;i;ty
-se;rene
-se;ri;al
-se;ri;al;i;za;tion
-se;ri;al;ize
-se;ri;al;ized
-se;ri;ous
-se;ri;ous;ly
-se;ri;ous;ness
-se;ries
-se;rum
-se;ta
-se;ton
-se;ver;i;ty
-se;vere
-se;vere;ly
-sea
-sea;board
-sea;coast
-sea;food
-sea;front
-sea;man
-sea;plane
-sea;port
-sea;scape
-sea;shell
-sea;shore
-sea;side
-sea;son
-sea;son;al
-sea;son;al;ly
-sea;son;ing
-sea;ward
-sea;weed
-seal
-seal;ant
-seal;er
-sealed
-seam
-seam;less
-seam;less;ly
-sear
-search
-search;a;ble
-search;er
-search;ing
-search;light
-seat
-seat;er
-seat;ing
-sec
-sec;ond
-sec;ond;ar;y
-sec;ond;ly
-sec;re;tar;i;al
-sec;re;tar;i;at
-sec;re;tar;y
-sec;tar;i;an
-sec;tion
-sec;tion;al
-sec;tor
-sec;tor;al
-sec;u;lar
-sec;u;lar;ism
-sect
-sed;a;tive
-sed;en;tar;y
-sed;i;men;ta;ry
-sed;i;men;ta;tion
-sed;i;ment
-sedge
-see
-see;ing
-seed
-seed;ling
-seed;y
-seek
-seek;er
-seek;ing
-seem
-seem;ing
-seen
-seep
-seep;age
-seer
-seg;men;ta;tion
-seg;men;tal
-seg;ment
-seg;re;ga;tion
-seg;re;gat;ed
-sei
-sei;zure
-seine
-seis;mic
-seis;mol;ogy
-seiz;ing
-seize
-sel
-sel;dom
-sel;va
-self
-self;ish
-self;ish;ness
-self;less
-sell
-sell;er
-sell;ing
-selves
-sem
-sem;a;phore
-sem;blance
-sem;i
-sem;i;an;nu;al
-sem;i;co;lon
-sem;i;con;duc;tor
-sem;i;fi;nal
-sem;i;nal
-sem;i;nar
-sem;i;nar;ies
-sem;i;nar;y
-sem;pre
-sen
-sen;a;to;ri;al
-sen;a;tor
-sen;ate
-sen;ior
-sen;ior;i;ty
-sen;na
-sen;sa;tion
-sen;sa;tion;al
-sen;si;bil;i;ty
-sen;si;ble
-sen;si;bly
-sen;si;ti;za;tion
-sen;si;tiv;i;ty
-sen;si;tive
-sen;so;ry
-sen;sor
-sen;su;al
-sen;su;al;i;ty
-sen;su;ous
-sen;tenc;ing
-sen;tence
-sen;tenced
-sen;ti;ent
-sen;ti;ment
-sen;ti;ment;al
-sen;ti;nel
-sen;try
-sen;za
-send
-send;er
-send;ing
-sens;ing
-sense
-sense;less
-sent
-sep
-sep;a;ra;ble
-sep;a;ra;tion
-sep;a;ra;tist
-sep;a;ra;tor
-sep;a;rat;ed
-sep;a;rat;ing
-sep;a;rate
-sep;a;rate;ly
-sep;a;rates
-sep;sis
-sep;tal
-sep;tic
-sep;tum
-sept
-seq
-ser
-ser;a;phim
-ser;e;nade
-ser;en;dip;i;ty
-ser;geant
-ser;if
-ser;ine
-ser;mon
-ser;o;to;nin
-ser;pen;tine
-ser;pent
-ser;rat;ed
-ser;vi;tude
-ser;vic;es
-ser;vo
-serge
-serv
-serv;ant
-serv;er
-serv;ic;ing
-serv;ice
-serv;ice;a;bil;i;ty
-serv;ice;a;ble
-serv;iced
-serv;ing
-serve
-ses;a;me
-ses;sion
-ses;sion;al
-ses;sions
-set
-set;ter
-set;ting
-set;tle
-set;tle;ment
-set;tler
-set;tling
-set;up
-sev;en
-sev;en;fold
-sev;en;teen
-sev;en;teenth
-sev;en;ty
-sev;ens
-sev;enth
-sev;er
-sev;er;al
-sev;er;al;ly
-sev;er;ance
-sew
-sew;age
-sew;er
-sew;er;age
-sew;ing
-sewn
-sex
-sex;i;est
-sex;ism
-sex;ist
-sex;tet
-sex;ton
-sex;u;al
-sex;u;al;i;ty
-sex;y
-sgd
-sha;lom
-sha;man;ic
-sha;man;ism
-sha;ri;a
-sha;rif
-shab;by
-shack
-shack;le
-shad
-shad;ed
-shad;ing
-shad;ow
-shad;ow;y
-shad;owed
-shad;y
-shade
-shades
-shaft
-shag
-shag;gy
-shah
-shak;en
-shak;er
-shak;ing
-shak;y
-shake
-shake;down
-shal;low
-shale
-shall
-shalt
-sham
-sham;an
-sham;bles
-sham;poo
-sham;rock
-shame
-shame;ful
-shame;less
-shame;less;ly
-shan;dy
-shan;ti
-shan;ty
-shang;hai
-shank
-shap;ing
-shape
-shaped
-shard
-share
-share;hold;er
-shark
-sharp
-sharp;en
-sharp;er
-sharp;ie
-sharp;ly
-sharp;ness
-shat;ter
-shav;en
-shav;er
-shav;ing
-shave
-shaw
-shawl
-shay
-she
-she;a
-sheaf
-shear
-shear;er
-shear;ing
-shear;ling
-shears
-sheath
-shed
-shed;ding
-sheen
-sheep
-sheep;dog
-sheep;skin
-sheer
-sheet
-sheet;ing
-shei;la
-sheik
-sheikh
-shek;el
-shel;ter
-shelf
-shell
-shell;fish
-shell;y
-shelled
-shelv;ing
-shelves
-shep;herd
-sher;iff
-sher;lock
-sher;ry
-shew
-shh
-shi;gel;la
-shield
-shift
-shil;ling
-shim
-shim;mer
-shin
-shin;er
-shin;gle
-shin;gles
-shin;ing
-shin;y
-shine
-ship
-ship;board
-ship;man
-ship;ment
-ship;per
-ship;ping
-ship;wreck
-ship;yard
-shire
-shirt
-shirt;less
-shit
-shit;ting
-shit;ty
-shiv
-shiv;er
-sho;gun
-shoal
-shock
-shock;er
-shock;ing
-shock;ing;ly
-shod;dy
-shoe
-shoe;mak;er
-shoe;string
-shone
-shook
-shoot
-shoot;er
-shop
-shop;girl
-shop;keep;er
-shop;lift;ing
-shop;per
-shop;ping
-shore
-shore;line
-short
-short;age
-short;cake
-short;com;ing
-short;cut
-short;en
-short;en;ing
-short;fall
-short;hand
-short;ly
-short;ness
-short;stop
-short;wave
-short;y
-shorts
-shot
-shot;gun
-shoul;der
-should
-shout
-shov;el
-shov;ing
-shove
-show
-show;case
-show;down
-show;er
-show;ing
-show;place
-show;room
-show;y
-shown
-shr
-shrap;nel
-shred
-shred;ded
-shred;der
-shred;ding
-shrew
-shrewd
-shrike
-shrill
-shrimp
-shrine
-shrink
-shrink;age
-shrink;ing
-shroud
-shrub
-shrug
-shrunk
-shrunk;en
-shud;der
-shuf;fle
-shun
-shunt
-shut
-shut;down
-shut;out
-shut;ter
-shut;tle
-shy
-shy;ness
-si;en;na
-si;er;ra
-si;es;ta
-si;lage
-si;lenc;er
-si;lenc;ing
-si;lence
-si;lenced
-si;lent
-si;lent;ly
-si;lex
-si;lo
-si;ma
-si;mul;ta;ne;ous;ly
-si;nus
-si;nus;es
-si;nus;i;tis
-si;nus;oi;dal
-si;phon
-si;ren
-si;sal
-si;tar
-si;tus
-sib
-sib;ling
-sic
-sick
-sick;en;ing
-sick;le
-sick;ly
-sick;ness
-sid;ed
-sid;ing
-side
-side;bar
-side;board
-side;kick
-side;line
-side;lines
-side;show
-side;step
-side;walk
-side;wall
-side;ways
-side;wind;er
-sie;mens
-siege
-sieve
-sift
-sig
-sig;ma
-sig;na;to;ry
-sig;na;ture
-sig;nal
-sig;nal;ing
-sig;nal;ling
-sig;naled
-sig;nalled
-sig;net
-sig;ni;fied
-sig;ni;fy
-sig;ni;fy;ing
-sig;nif;i;cance
-sig;nif;i;cant
-sigh
-sight
-sight;ed
-sign
-sil;hou;et;ted
-sil;hou;ette
-sil;i;cate
-sil;i;con
-sil;i;cone
-sil;ic;a
-sil;li;ness
-sil;ly
-sil;va
-sil;ver
-sil;ver;ware
-sil;ver;y
-silk
-silk;en
-silk;screen
-silk;y
-sill
-silt
-silt;y
-sim;ba
-sim;i;an
-sim;i;lar
-sim;i;lar;i;ty
-sim;i;lar;ly
-sim;i;le
-sim;mer
-sim;ple
-sim;plex
-sim;pli;fied
-sim;pli;fy
-sim;pli;fy;ing
-sim;plic;i;ty
-sim;plis;tic
-sim;u;la;tion
-sim;u;la;tor
-sim;u;lat;ed
-sim;u;lat;ing
-sim;u;late
-sim;ul;ta;ne;ous
-simp
-simp;ly
-sin
-sin;cer;i;ty
-sin;cere
-sin;cere;ly
-sin;fo;ni;a
-sin;ful
-sin;gle
-sin;gle;ton
-sin;gles
-sin;glet
-sin;gly
-sin;gu;lar
-sin;gu;lar;i;ty
-sin;gu;lar;ly
-sin;is;ter
-sin;ner
-since
-sine
-sing
-sing;er
-sing;ing
-sinh
-sink
-sink;ing
-sip
-sip;ping
-sir
-sir;loin
-sire
-sis
-sis;sy
-sis;ter
-sis;ter;hood
-sit
-sit;com
-sit;ed
-sit;ing
-sit;ter
-sit;ting
-sit;u;a;tion
-sit;u;a;tion;al
-sit;u;at;ed
-site
-sith
-six
-six;pence
-six;teen
-six;teenth
-six;ty
-sixth
-siz;a;ble
-siz;ing
-siz;zle
-size
-size;a;ble
-sized
-skat;er
-skat;ing
-skate
-skate;board
-skate;park
-skeet
-skel;e;ton
-skep;ti;cal
-skep;ti;cism
-skep;tic
-sketch
-sketch;book
-sketch;y
-skew
-ski
-ski;ing
-skid
-skiff
-skil;ful
-skil;let
-skil;ling
-skill
-skill;ful
-skill;ful;ly
-skilled
-skim
-skim;mer
-skim;ming
-skimp;y
-skin
-skin;ner
-skin;ning
-skin;ny
-skinned
-skip
-skip;per
-skip;ping
-skir;mish
-skirt
-skirt;ing
-skit
-skull
-skunk
-sky
-sky;div;ing
-sky;dive
-sky;lark
-sky;light
-sky;line
-sky;scrap;er
-sky;way
-sla;lom
-slab
-slack
-slack;er
-slacks
-slag
-slain
-slam
-slam;ming
-slan;der
-slang
-slant
-slap
-slap;ping
-slap;stick
-slash
-slash;ing
-slat
-slat;ed
-slat;er
-slate
-slaugh;ter
-slaugh;ter;house
-slav;er;y
-slave
-slaw
-slay
-slay;ing
-sld
-slea;zy
-sled
-sled;ding
-sledge
-sleek
-sleep
-sleep;er
-sleep;ing
-sleep;less
-sleep;wear
-sleep;y
-sleeps
-sleet
-sleeve
-sleeve;less
-sleigh
-slen;der
-slept
-sleuth
-slew
-slic;er
-slic;ing
-slice
-slick
-slid;er
-slid;ing
-slide
-slight
-slight;ly
-slim
-slim;line
-slim;mer
-slim;ming
-slim;y
-slime
-sling
-sling;shot
-slink;y
-slip
-slip;knot
-slip;page
-slip;per
-slip;per;y
-slit
-sliv;er
-slo;gan
-sloop
-slop;ing
-slop;py
-slope
-slot
-slot;ted
-sloth
-slough
-slow
-slow;down
-slow;ly
-slow;ness
-sludge
-slug
-slug;ger
-slug;gish
-slum
-slum;ber
-slump
-slung
-slur
-slur;ry
-slurp
-slush
-slut
-slut;ty
-sly
-smack
-smack;ing
-small
-small;pox
-smart
-smart;ly
-smart;y
-smash
-smash;ing
-smashed
-smear
-smell
-smell;ing
-smell;y
-smelt
-smelt;er
-smil;ing
-smile
-smirk
-smit
-smit;ten
-smite
-smith
-smith;ers
-smog
-smok;er
-smok;ing
-smok;y
-smoke
-smoke;less
-smooth
-smooth;er
-smooth;ie
-smooth;ies
-smooth;ly
-smooth;ness
-smote
-smoth;er
-smudge
-smug
-smug;gler
-smut
-snack
-snag
-snail
-snake
-snap
-snap;per
-snap;ping
-snap;py
-snap;shot
-snare
-snatch
-sneak
-sneak;er
-sneak;ers
-sneak;ing
-sneak;y
-sneez;ing
-sneeze
-snell
-snick;et
-snid;er
-sniff
-sniff;er
-snip
-snip;er
-snip;ing
-snip;pet
-snipe
-snips
-snob
-snook
-snook;er
-snoop
-snoop;er
-snoop;y
-snooze
-snor;ing
-snor;kel
-snore
-snort
-snot
-snout
-snow
-snow;ball
-snow;bird
-snow;fall
-snow;flake
-snow;man
-snow;mo;bile
-snow;shoe
-snow;shoe;ing
-snow;storm
-snow;y
-snr
-snub
-snuck
-snuff
-snug
-snug;gle
-snug;ly
-so;ber
-so;bri;e;ty
-so;ci;e;tal
-so;ci;e;ty
-so;ci;o;ec;o;nom;ic
-so;ci;o;log;i;cal
-so;ci;ol;o;gist
-so;ci;ol;o;gy
-so;cia;ble
-so;cial
-so;cial;i;za;tion
-so;cial;ism
-so;cial;ist
-so;cial;ite
-so;cial;iz;ing
-so;cial;ize
-so;cial;ized
-so;da
-so;di;um
-so;fa
-so;ho
-so;journ
-so;la
-so;la;no
-so;lar
-so;lar;i;um
-so;le;noid
-so;lic;i;tor
-so;lic;it
-so;lid;i;fied
-so;lid;i;fy
-so;lo
-so;lo;ist
-so;lu;tion
-so;ma
-so;mat;ic
-so;na;ta
-so;nar
-so;phis;ti;ca;tion
-so;phis;ti;cat;ed
-so;pran;o
-so;pran;os
-so;ra
-so;ror;i;ty
-so;vi;et
-soak
-soap
-soap;box
-soap;y
-soar
-soar;ing
-sob
-sob;bing
-soc
-soc;cer
-sock
-sock;et
-sock;eye
-sod
-sod;o;my
-sof;ten
-sof;ten;er
-soft
-soft;ball
-soft;ly
-soft;ness
-soft;ware
-soft;wood
-sog;gy
-soil
-sol
-sol;ace
-sol;der
-sol;dier
-sol;emn
-sol;emn;ly
-sol;i;dar;i;ty
-sol;i;taire
-sol;i;tar;y
-sol;i;tude
-sol;id
-sol;id;ly
-sol;stice
-sol;u;bil;i;ty
-sol;u;ble
-sol;ute
-sol;ven;cy
-sol;vent
-sold
-sole
-sole;ly
-solv;a;ble
-solv;er
-solv;ing
-solve
-som;ber
-som;bre
-som;er;set
-some
-some;bod;y
-some;day
-some;how
-some;one
-some;place
-some;thing
-some;time
-some;times
-some;what
-some;where
-son
-son;ic
-son;ics
-son;net
-son;ny
-song
-song;bird
-song;writ;er
-soon
-soon;er
-soot
-sooth;ing
-soothe
-sop
-soph;o;more
-sor;bet
-sor;cer;er
-sor;cer;ess
-sor;cer;y
-sor;did
-sor;ghum
-sor;rel
-sor;row
-sor;ry
-sor;tie
-sore
-sore;ly
-sore;ness
-sorp;tion
-sort
-sort;er
-sot
-sou
-sou;ve;nir
-sought
-soul
-soul;ful
-sound
-sound;board
-sound;er
-sound;ing
-sound;ly
-sound;ness
-sound;track
-soup
-sour
-sour;dough
-source
-sout;er
-south
-south;bound
-south;east
-south;east;ern
-south;er;ly
-south;ern
-south;ern;most
-south;land
-south;ward
-south;west
-south;west;ern
-sov;er;eign
-sov;er;eign;ty
-sow
-sow;ing
-sown
-sox
-soy
-soy;a
-soy;bean
-spa
-spa;cious
-spa;ghet;ti
-spa;tial
-spa;tial;ly
-spac;er
-spac;ing
-space
-space;craft
-space;ship
-spade
-spake
-span
-span;dex
-span;iel
-span;ner
-span;ning
-spank
-spank;ing
-spans
-spar
-spar;ing
-spar;ing;ly
-spar;kle
-spar;ring
-spar;row
-spare
-spark
-sparks
-sparse
-sparse;ly
-spas;tic
-spasm
-spat
-spat;u;la
-spate
-spawn
-spay
-spe;ci;a;tion
-spe;ci;al;i;ty
-spe;cial
-spe;cial;i;za;tion
-spe;cial;is;ing
-spe;cial;ise
-spe;cial;ised
-spe;cial;ist
-spe;cial;iz;ing
-spe;cial;ize
-spe;cial;ized
-spe;cial;ly
-spe;cial;ty
-spe;cies
-spe;cif;ic
-speak
-speak;eas;y
-speak;er
-speak;ing
-spear
-spear;head
-spear;man
-spec
-spec;i;fi;ca;tion
-spec;i;fi;er
-spec;i;fied
-spec;i;fy
-spec;i;fy;ing
-spec;i;men
-spec;ta;cle
-spec;ta;cles
-spec;ta;tor
-spec;tac;u;lar
-spec;tac;u;lar;ly
-spec;ter
-spec;tra
-spec;tral
-spec;tre
-spec;tro;scop;ic
-spec;trom;e;ter
-spec;trom;e;try
-spec;tros;co;py
-spec;trum
-spec;u;la;tion
-spec;u;la;tive
-spec;u;lar
-spec;u;lat;ed
-spec;u;lat;ing
-spec;u;late
-spec;u;lum
-speck
-specs
-sped
-speech
-speech;less
-speed
-speed;i;ly
-speed;ing
-speed;o
-speed;om;e;ter
-speed;way
-speed;y
-speer
-spell
-spell;bound
-spell;ing
-spelt
-spen;cer
-spence
-spend
-spend;ing
-spends
-spent
-sperm
-spew
-spher;i;cal
-sphere
-sphinc;ter
-sphinx
-spi;der
-spi;der;man
-spi;na
-spi;nal
-spi;ral;ing
-spic;y
-spice
-spie;gel
-spiel
-spiff;y
-spig;ot
-spike
-spill
-spill;age
-spill;ing
-spin
-spin;ach
-spin;dle
-spin;na;ker
-spin;ner
-spin;ning
-spin;ster
-spin;y
-spine
-spir;al
-spir;it
-spir;it;ed
-spir;it;u;al
-spir;it;u;al;i;ty
-spir;it;u;al;ism
-spire
-spit
-spit;fire
-spit;ting
-spite
-spitz
-splash
-splat
-splat;ter
-spleen
-splen;did
-splen;dor
-splen;dour
-splic;ing
-splice
-splin;ter
-spline
-splint
-split
-split;ter
-split;ting
-splits
-spo;ken
-spo;rad;i;cal;ly
-spo;rad;ic
-spode
-spoil
-spoil;er
-spoil;ing
-spoils
-spoilt
-spoke
-spokes;man
-spokes;wom;an
-spon;sor
-spon;ta;ne;i;ty
-spon;ta;ne;ous
-spon;ta;ne;ous;ly
-sponge
-spoof
-spook
-spook;y
-spool
-spoon
-spoon;er
-spoon;ful
-spore
-sport
-sport;ing
-sport;y
-sports
-sports;man
-sports;man;ship
-sports;wear
-spot
-spot;less
-spot;light
-spot;ted
-spot;ter
-spot;ting
-spot;ty
-spous;al
-spouse
-spout
-spp
-sprang
-sprawl
-spray
-spray;er
-spread
-spread;er
-spree
-sprin;kle
-sprin;kling
-spring
-spring;board
-spring;er
-spring;ing
-spring;time
-sprink;ler
-sprint
-sprite
-sprock;et
-sprout
-spruce
-sprung
-spt
-spu;ri;ous
-spu;tum
-spud
-spun
-spunk
-spunk;y
-spur
-spurred
-spurt
-sput;nik
-spy
-spy;ing
-squa;mous
-squad
-squad;ron
-squall
-square
-square;ly
-squash
-squat
-squat;ting
-squaw
-squeak
-squeak;y
-squeez;ing
-squeeze
-squid
-squir;rel
-squire
-squirt
-squirt;er
-squish
-sri
-sta
-sta;bi;li;za;tion
-sta;bi;liz;er
-sta;bi;liz;ing
-sta;bi;lize
-sta;bi;lized
-sta;bil;i;ty
-sta;ble
-sta;di;um
-sta;di;ums
-sta;ple
-sta;pler
-sta;sis
-sta;tion
-sta;tion;ar;y
-sta;tion;er;y
-sta;tis;ti;cal
-sta;tis;ti;cal;ly
-sta;tis;tic
-sta;tis;tics
-sta;tor
-sta;tus
-stab
-stab;bing
-stack
-stack;er
-stacked
-stade
-staff
-staff;er
-stag
-stag;ing
-stag;na;tion
-stag;nant
-stage
-stage;coach
-staged
-stain
-stain;less
-stair
-stair;case
-stair;way
-stairs
-stak;ing
-stake
-stal;lion
-stal;wart
-stale
-stale;mate
-stalk
-stalk;er
-stalked
-stall
-stam;i;na
-stam;pede
-stamp
-stamp;er
-stan
-stan;hope
-stan;za
-stance
-stand
-stand;ard
-stand;ard;i;za;tion
-stand;ard;iz;ing
-stand;ard;ize
-stand;ard;ized
-stand;ing
-stand;ish
-stand;off
-stand;out
-stand;point
-stand;still
-stang
-staph;y;lo;coc;cus
-star
-star;board
-star;dom
-star;dust
-star;fish
-star;ing
-star;let
-star;light
-star;ling
-star;ring
-star;ry
-star;va;tion
-starch
-stare
-stark
-starred
-start
-start;er
-starv;ing
-starve
-stash
-stat
-stat;ed
-stat;i;cal;ly
-stat;ic
-stat;ics
-stat;ing
-stat;is;ti;cian
-stat;u;ary
-stat;u;to;ry
-stat;ue
-stat;ure
-stat;ute
-state
-state;hood
-state;less
-state;ly
-state;ment
-state;room
-state;side
-state;wide
-states;man
-staunch
-stave
-stay
-stay;ing
-stays
-std
-ste;no;sis
-ste;ril;i;ty
-stea;rate
-stead
-stead;fast
-stead;i;ly
-stead;y
-steak
-steak;house
-steal
-steal;ing
-stealth
-steam
-steam;boat
-steam;er
-steam;ship
-steam;y
-stee;ple
-stee;ple;chase
-steed
-steel
-steel;head
-steels
-steep
-steep;er
-steer
-stein
-stel;lar
-stem
-stem;ming
-stem;ware
-stemmed
-sten;cil
-stench
-step
-step;fa;ther
-step;moth;er
-step;per
-step;ping
-step;wise
-steppe
-ster
-ster;e;o;typ;ing
-ster;e;o;type
-ster;e;o;typed
-ster;i;li;za;tion
-ster;i;lized
-ster;ile
-ster;ling
-ster;oid
-stern
-stet;son
-steth;o;scope
-stew
-stew;ard
-stew;ard;ship
-stg
-sti
-sti;fle
-sti;fling
-sti;let;to
-sti;pend
-stick
-stick;er
-stick;ing
-stick;y
-stiff
-stiff;ness
-stig;ma
-stile
-still
-still;er
-stim;u;la;tion
-stim;u;la;tor
-stim;u;lant
-stim;u;lat;ed
-stim;u;lat;ing
-stim;u;late
-stim;u;li
-stim;u;lus
-sting
-sting;er
-sting;ing
-sting;ray
-sting;y
-stink
-stink;ing
-stint
-stip;u;la;tion
-stip;u;lat;ed
-stip;u;late
-stir
-stir;ring
-stitch
-stitch;ing
-stk
-sto;chas;tic
-sto;ic
-sto;rey
-sto;ried
-sto;ry
-sto;ry;board
-sto;ry;book
-sto;ry;tell;er
-sto;ry;tell;ing
-stock
-stock;er
-stock;hold;er
-stock;ing
-stock;pile
-stocks
-stok;er
-stoke
-stokes
-stol;en
-stole
-stom;ach
-stomp
-ston;er
-ston;ey
-ston;ing
-ston;y
-stone
-stone;wall
-stone;ware
-stoned
-stood
-stool
-stoop
-stop
-stop;o;ver
-stop;page
-stop;per
-stop;ping
-stop;watch
-stopped
-stops
-stor;age
-stor;ing
-store
-store;front
-store;house
-stores
-stork
-storm
-storm;y
-stout
-stov;er
-stove
-stow
-stow;a;way
-str
-stra;ta
-stra;te;gic
-stra;tig;ra;phy
-stra;tum
-stra;tus
-strad;dle
-straight;en
-straight;en;er
-straight;for;ward
-strain
-strain;er
-strait
-strand
-strang;er
-strang;est
-strange
-strange;ly
-strange;ness
-strap
-strap;less
-strap;ping
-strat;e;gist
-strat;e;gy
-strat;i;fi;ca;tion
-strat;i;fied
-strat;o;spher;ic
-strat;o;sphere
-straw
-straw;ber;ry
-stray
-stray;er
-strays
-streak
-stream
-stream;er
-stream;ing
-stream;lin;ing
-stream;line
-stream;lined
-street
-street;car
-stren;u;ous
-strength;en
-strep
-strep;to;coc;cus
-strep;to;my;ces
-stress
-stress;ful
-stretch
-stretch;er
-stretch;y
-strewn
-strick;en
-strict
-strict;ly
-strid;er
-stride
-strife
-strik;er
-strik;ing
-strike
-strin;gent
-string
-string;er
-string;ing
-strip
-strip;ing
-strip;per
-strip;ping
-strip;tease
-stripe
-striped
-strive
-strobe
-strode
-strok;ing
-stroke
-stroll
-stroll;er
-stron;ti;um
-strong
-strong;hold
-stroud
-struc;tur;al
-struc;tur;al;ly
-struc;tur;ing
-struc;ture
-struc;tured
-struck
-strug;gle
-strung
-strut
-stu;dent
-stu;di;o
-stu;pen;dous
-stu;pid
-stu;pid;i;ty
-stu;pid;ly
-stub
-stub;ble
-stub;born
-stub;by
-stuc;co
-stuck
-stud
-stud;ied
-stud;ies
-stud;y
-stud;y;ing
-stuff
-stuff;ing
-stuff;y
-stuffed
-stum;ble
-stump
-stun
-stun;ning
-stun;ning;ly
-stung
-stunt
-stur;dy
-stur;geon
-sturt
-sty
-sty;lis;tic
-sty;lus
-sty;rene
-styl;ing
-styl;ish
-styl;ist
-styl;ized
-style
-su;cre
-su;crose
-su;i;cid;al
-su;i;cide
-su;ing
-su;mo
-su;pe;ri;or
-su;pe;ri;or;i;ty
-su;per;an;nu;a;tion
-su;per;charg;er
-su;per;charged
-su;per;class
-su;per;con;duc;tiv;i;ty
-su;per;con;duc;tor
-su;per;cool
-su;per;crit;i;cal
-su;per;fam;i;ly
-su;per;fi;cial
-su;per;fi;cial;ly
-su;per;flu;ous
-su;per;he;ro
-su;per;high;way
-su;per;hu;man
-su;per;im;posed
-su;per;in;tend;ent
-su;per;la;tive
-su;per;man
-su;per;mar;ket
-su;per;na;tant
-su;per;nat;u;ral
-su;per;no;va
-su;per;ox;ide
-su;per;po;si;tion
-su;per;pow;er
-su;per;script
-su;per;sed;ed
-su;per;sede
-su;per;size
-su;per;son;ic
-su;per;son;ics
-su;per;star
-su;per;sti;tion
-su;per;sti;tious
-su;per;struc;ture
-su;per;vi;sion
-su;per;vi;sor
-su;per;vi;sory
-su;per;vis;ing
-su;per;vise
-su;per;vised
-su;perb
-su;perb;ly
-su;pra
-su;prem;a;cy
-su;preme
-su;preme;ly
-su;ra
-su;rah
-su;rat
-su;shi
-su;tra
-su;ture
-suave
-sub
-sub;a;cute
-sub;cat;e;go;ry
-sub;chap;ter
-sub;class
-sub;clause
-sub;con;scious
-sub;con;ti;nent
-sub;con;trac;tor
-sub;con;tract
-sub;cu;ta;ne;ous
-sub;cul;ture
-sub;di;vi;sion
-sub;di;vid;ed
-sub;due
-sub;dued
-sub;fam;i;ly
-sub;field
-sub;group
-sub;head;ing
-sub;jec;tion
-sub;jec;tiv;i;ty
-sub;jec;tive
-sub;ject
-sub;lease
-sub;let
-sub;li;ma;tion
-sub;lim;i;nal
-sub;lime
-sub;lin;gual
-sub;ma;rin;er
-sub;ma;rine
-sub;merged
-sub;mers;i;ble
-sub;mis;sion
-sub;mis;sive
-sub;mit
-sub;mit;ted
-sub;mit;ting
-sub;net
-sub;or;di;na;tion
-sub;or;di;nat;ed
-sub;or;di;nate
-sub;pack;age
-sub;par;a;graph
-sub;part
-sub;poe;na
-sub;rou;tine
-sub;scrib;er
-sub;scrib;ing
-sub;scribe
-sub;scribed
-sub;scrip;tion
-sub;script
-sub;se;quent
-sub;se;quent;ly
-sub;sec;tion
-sub;set
-sub;si;dize
-sub;si;dy
-sub;sid;ence
-sub;sid;i;ar;ies
-sub;sid;i;ar;y
-sub;side
-sub;sist;ence
-sub;space
-sub;spe;cies
-sub;sta;tion
-sub;stan;ti;at;ed
-sub;stan;ti;ate
-sub;stan;tial
-sub;stan;tial;ly
-sub;stan;tive
-sub;stance
-sub;stand;ard
-sub;sti;tu;tion
-sub;sti;tut;ed
-sub;sti;tut;ing
-sub;sti;tute
-sub;strate
-sub;struc;ture
-sub;ter;ra;ne;an
-sub;ti;lis
-sub;ti;tle
-sub;tle
-sub;tle;ty
-sub;tly
-sub;to;tal
-sub;trac;tion
-sub;tract
-sub;trop;i;cal
-sub;type
-sub;u;nit
-sub;ur;ban
-sub;ur;bi;a
-sub;urb
-sub;ver;sion
-sub;ver;sive
-sub;vert
-sub;way
-subj
-subst
-suc;ceed
-suc;ces;sion
-suc;ces;sive
-suc;ces;sive;ly
-suc;ces;sor
-suc;cess
-suc;cess;ful
-suc;cess;ful;ly
-suc;cin;ate
-suc;cinct
-suc;cinct;ly
-suc;cu;lent
-suc;cumb
-suc;tion
-such
-suck
-suck;er
-suck;ing
-sucks
-sud;den
-sud;den;ly
-suds
-sue
-suede
-suf
-suf;fer
-suf;fer;er
-suf;fer;ing
-suf;fi;cien;cy
-suf;fi;cient
-suf;fice
-suf;fix
-suf;frage
-sug;ar
-sug;ar;y
-sug;ges;tion
-sug;ges;tive
-sug;gest
-suit
-suit;a;ble
-suit;a;bly
-suit;case
-suit;ed
-suite
-sul;fate
-sul;fu;ric
-sul;fur
-sul;len
-sul;ly
-sul;phate
-sul;phur
-sul;tan
-sul;try
-sum
-sum;ma
-sum;ma;ri;za;tion
-sum;ma;rise
-sum;ma;rised
-sum;ma;riz;ing
-sum;ma;rize
-sum;ma;rized
-sum;ma;tion
-sum;mar;i;ly
-sum;mar;y
-sum;mer
-sum;mer;time
-sum;ming
-sum;mit
-sum;mon
-sum;mons
-sump
-sump;tu;ous
-sun
-sun;bath;ing
-sun;beam
-sun;bird
-sun;burn
-sun;burst
-sun;dae
-sun;di;al
-sun;down
-sun;dries
-sun;dry
-sun;fish
-sun;flow;er
-sun;glass
-sun;glass;es
-sun;less
-sun;light
-sun;ny
-sun;ray
-sun;rise
-sun;roof
-sun;set
-sun;shine
-sun;spot
-sung
-sunk
-sunk;en
-sup
-sup;per
-sup;plant
-sup;ple
-sup;ple;men;ta;ry
-sup;ple;men;tal
-sup;ple;ment
-sup;pli;er
-sup;plied
-sup;ply
-sup;ply;ing
-sup;po;si;tion
-sup;port
-sup;port;er
-sup;port;ing
-sup;port;ive
-sup;pos;ed;ly
-sup;pos;ing
-sup;pose
-sup;posed
-sup;pres;sion
-sup;press
-super
-supp
-suppl
-supt
-sur
-sur;charge
-sur;fac;ing
-sur;fac;tant
-sur;face
-sur;faced
-sur;geon
-sur;ger;y
-sur;gi;cal
-sur;gi;cal;ly
-sur;ly
-sur;name
-sur;pas;sing
-sur;pass
-sur;plus
-sur;pris;ing
-sur;pris;ing;ly
-sur;prise
-sur;prised
-sur;re;al
-sur;re;al;ism
-sur;ren;der
-sur;rey
-sur;ro;gate
-sur;round
-sur;round;ing
-sur;round;ings
-sur;veil;lance
-sur;vey
-sur;vey;ing
-sur;vey;or
-sur;vi;vor
-sur;vi;vor;ship
-sur;viv;a;bil;i;ty
-sur;viv;al
-sur;viv;ing
-sur;vive
-sur;vived
-sure
-sure;ly
-sure;ty
-surf
-surf;board
-surf;er
-surf;ing
-surg
-surg;ing
-surge
-surv
-sus;cep;ti;bil;i;ty
-sus;cep;ti;ble
-sus;pect
-sus;pen;sion
-sus;pend
-sus;pend;er
-sus;pense
-sus;pi;cion
-sus;pi;cious
-sus;pi;cious;ly
-sus;tain
-sus;tain;a;ble
-sus;te;nance
-swa;mi
-swab
-swag
-swain
-swal;low
-swam
-swamp
-swan
-swank
-swap
-swap;ping
-swarm
-swas;ti;ka
-swash
-swat
-swatch
-swath
-sway
-swear
-swear;ing
-sweat
-sweat;er
-sweat;ing
-sweat;shop
-sweat;y
-swede
-sweep
-sweep;er
-sweep;ing
-sweep;stake
-sweep;stakes
-sweeps
-sweet
-sweet;en;er
-sweet;heart
-sweet;ie
-sweet;ly
-sweet;ness
-swell
-swell;ing
-swept
-swift
-swift;ly
-swig
-swim
-swim;ming
-swim;suit
-swin;dle
-swine
-swing
-swing;er
-swing;ing
-swipe
-swirl
-swish
-switch
-switch;board
-switch;er
-swiv;el
-swol;len
-swoon
-swoop
-swoosh
-sword
-sword;fish
-swords;man
-swore
-sworn
-swot
-swung
-sy;rin;ges
-sy;ringe
-syc;a;more
-syl;la;bi
-syl;la;ble
-syl;la;bus
-syl;van
-sym
-sym;bi;o;sis
-sym;bi;ot;ic
-sym;bol
-sym;bol;i;cal;ly
-sym;bol;ic
-sym;bol;ism
-sym;bol;ize
-sym;bol;ized
-sym;me;try
-sym;met;ri;cal
-sym;met;ric
-sym;pa;thet;ic
-sym;pa;thize
-sym;pa;thy
-sym;pho;ny
-sym;phon;ic
-sym;po;si;a
-sym;po;si;um
-symp;to;mat;ic
-symp;tom
-syn
-syn;a;gogue
-syn;ap;tic
-syn;apse
-syn;chro
-syn;chro;ni;za;tion
-syn;chro;niz;ing
-syn;chro;nize
-syn;chro;nized
-syn;chro;nous
-syn;chro;tron
-syn;di;cat;ed
-syn;di;cate
-syn;drome
-syn;er;gis;tic
-syn;er;gy
-syn;o;nym
-syn;o;vi;al
-syn;od
-syn;on;y;mous
-syn;op;sis
-syn;op;tic
-syn;tac;tic
-syn;tax
-syn;the;sis
-syn;the;siz;er
-syn;the;siz;ing
-syn;the;size
-syn;the;sized
-syn;thet;ic
-sync
-syph;i;lis
-syr;up
-sys;tem
-sys;tem;at;ic
-sys;tem;at;ics
-sys;tem;ic
-syst
-ta;ber
-ta;ble
-ta;ble;cloth
-ta;ble;spoon
-ta;ble;ware
-ta;bling
-ta;boo
-ta;bor
-ta;bu
-ta;chom;e;ter
-ta;co
-ta;ka
-ta;les
-ta;ma;ra
-ta;na
-ta;pas
-ta;ran;tu;la
-ta;ro
-ta;rot
-tab
-tab;by
-tab;er;nac;le
-tab;la
-tab;la;ture
-tab;leau
-tab;let
-tab;loid
-tab;u;la;tion
-tab;u;lar
-tab;u;lat;ed
-tac;it
-tac;ti;cal
-tac;tic
-tac;tics
-tac;tile
-tach;y;car;di;a
-tack
-tack;le
-tack;ling
-tack;y
-tact
-tad
-tad;pole
-tae
-taf;fe;ta
-taf;fy
-tag
-tag;ging
-tai;lor
-tai;lored
-tail
-tail;gat;ing
-tail;gate
-tail;ings
-tail;light
-tails
-tain
-taint
-taj
-tak;en
-tak;er
-tak;in
-tak;ing
-take
-take;a;way
-take;down
-take;o;ver
-take;off
-tal;ent
-tal;ent;ed
-tal;is;man
-tal;lied
-tal;on
-talc
-tale
-talk
-talk;a;tive
-talk;er
-talk;ie
-tall
-tally
-tam
-tam;a;rack
-tam;a;rind
-tam;bou;rine
-tam;er
-tam;ing
-tam;my
-tam;per
-tam;pon
-tame
-tan
-tan;dem
-tan;ga
-tan;ge;rine
-tan;gen;tial
-tan;gent
-tan;gi;ble
-tan;gle
-tan;gled
-tan;go
-tan;ner
-tan;ning
-tan;ta;liz;ing
-tan;ta;lum
-tan;ta;mount
-tan;to
-tan;trum
-tang
-tang;y
-tank
-tank;ard
-tank;er
-tank;less
-tap
-tap;er
-tap;es;try
-tap;i;o;ca
-tap;ping
-tap;root
-tape
-taps
-tar
-tar;dy
-tar;get
-tar;iff
-tar;nish
-tar;pon
-tar;ra;gon
-tar;ry
-tar;tan
-tar;tar
-tarp
-tart
-tas;sel
-task
-tass
-tast;ed
-tast;er
-tast;ing
-tast;y
-taste
-taste;ful
-taste;ful;ly
-taste;less
-tat
-tat;tered
-tat;too
-tat;too;ing
-tat;tooed
-tau
-tau;rine
-taught
-taunt
-taupe
-taut
-tav;ern
-taw;ny
-tax
-tax;a;ble
-tax;a;tion
-tax;i
-tax;i;cab
-tax;i;der;my
-tax;is
-tax;o;nom;ic
-tax;on
-tax;on;o;my
-tax;pay;er
-tay
-tbs
-tbsp
-te;di;ous
-te;lem;e;try
-te;lep;a;thy
-te;leph;o;ny
-te;na;cious
-te;qui;la
-tea
-tea;cup
-tea;pot
-tea;spoon
-teach
-teach;er
-teach;ing
-teak
-teal
-team
-team;mate
-team;work
-tear
-tear;drop
-tear;ing
-tears
-teas;er
-teas;ing
-tease
-tec;ton;ic
-tec;ton;ics
-tech
-tech;ni;cal
-tech;ni;cal;ly
-tech;ni;cian
-tech;nic
-tech;nics
-tech;nique
-tech;no;log;i;cal;ly
-tech;nol;o;gist
-tech;nol;o;gy
-ted
-ted;dy
-tee
-tee;ny
-teem;ing
-teen
-teen;ag;er
-teen;age
-teens
-teeth
-teeth;ing
-teg
-teil
-tel
-tel;e;cast
-tel;e;com;mu;ni;ca;tion
-tel;e;com;mu;ni;ca;tions
-tel;e;gram
-tel;e;graph
-tel;e;graph;ic
-tel;e;mark
-tel;e;phone
-tel;e;port
-tel;e;scop;ic
-tel;e;scop;ing
-tel;e;scope
-tel;e;vi;sion
-tel;ex
-tel;ford
-tel;lu;ride
-tel;ly
-tele
-tell
-tell;er
-tell;ing
-tem;per
-tem;per;a
-tem;per;a;ment
-tem;per;a;ture
-tem;per;ance
-tem;per;ate
-tem;pered
-tem;pest
-tem;plate
-tem;ple
-tem;po
-tem;po;ral
-tem;po;ral;ly
-tem;po;rar;i;ly
-tem;po;rar;y
-temp
-temp;ta;tion
-tempt
-tempt;ing
-ten
-ten;an;cy
-ten;ant
-ten;den;cy
-ten;der
-ten;der;er
-ten;der;loin
-ten;der;ly
-ten;der;ness
-ten;don
-ten;e;ment
-ten;et
-ten;nis
-ten;or
-ten;sile
-ten;sion
-ten;sor
-ten;ta;cle
-ten;ta;tive
-ten;u;ous
-ten;ure
-tend
-tense
-tent
-tent;ed
-tenth
-ter
-ter;i;ya;ki
-ter;mi;na;tion
-ter;mi;na;tor
-ter;mi;nal
-ter;mi;nal;ly
-ter;mi;nat;ed
-ter;mi;nat;ing
-ter;mi;nate
-ter;mi;nol;o;gy
-ter;mi;nus
-ter;mite
-ter;na;ry
-ter;ra
-ter;race
-ter;raced
-ter;rain
-ter;res;tri;al
-ter;ri;ble
-ter;ri;bly
-ter;ri;er
-ter;ri;fied
-ter;ri;fy;ing
-ter;ri;to;ri;al
-ter;ri;to;ry
-ter;rif;ic
-ter;ror
-ter;ror;ism
-ter;ror;ist
-ter;ry
-ter;tiar;y
-term
-terms
-tern
-terr
-terse
-tes;la
-tes;ta
-tes;ta;ment
-tes;tes
-tes;ti;cle
-tes;ti;fied
-tes;ti;fy
-tes;ti;fy;ing
-tes;ti;mo;ni;al
-tes;ti;mo;ny
-tes;tis
-tes;tos;ter;one
-test
-test;a;ble
-test;er
-tet;a;nus
-tet;ra
-tet;ra;cy;cline
-tet;ra;he;dron
-teth;er
-tew
-tex;as
-tex;tile
-tex;tu;al
-tex;tur;ing
-tex;ture
-tex;tured
-text
-text;book
-tha;lid;o;mide
-than
-thane
-thank
-thank;ful
-thank;ful;ly
-thanks
-thanks;giv;ing
-thar
-that
-thatch
-thaw
-the
-the;a;ter
-the;a;tre
-the;at;ri;cal
-the;ism
-the;ma
-the;mat;ic
-the;o;lo;gi;an
-the;o;log;i;cal
-the;o;phyl;line
-the;o;rem
-the;o;ret;i;cal
-the;o;ret;i;cal;ly
-the;o;ret;ic
-the;o;rist
-the;o;ry
-the;oc;ra;cy
-the;ol;o;gy
-the;os;o;phy
-the;sau;ri
-the;sau;rus
-the;sis
-the;ta
-thee
-theft
-their
-theirs
-them
-them;selves
-theme
-then
-thence
-ther;a;peu;tic
-ther;a;peu;tics
-ther;a;pist
-ther;a;py
-ther;mal
-ther;mal;ly
-ther;mo;cou;ple
-ther;mo;dy;nam;ic
-ther;mo;dy;nam;ics
-ther;mo;plas;tic
-ther;mo;stat
-ther;mom;e;ter
-there
-there;af;ter
-there;by
-there;for
-there;fore
-there;from
-there;in
-there;of
-there;on
-there;to
-there;un;der
-there;up;on
-there;with
-therm
-these
-they
-thi;a;mine
-thick
-thick;en;ing
-thick;et
-thick;ness
-thief
-thiev;er;y
-thigh
-thim;ble
-thin
-thin;ly
-thin;ner
-thine
-thing
-think
-think;er
-think;ing
-thir;teen
-thir;teenth
-thir;ty
-third
-third;ly
-thirst
-thirst;y
-this
-this;tle
-thith;er
-tho
-tho;rac;ic
-tho;ri;um
-thong
-thor;ax
-thor;ough
-thor;ough;bred
-thor;ough;fare
-thor;ough;ly
-thorn
-thorn;y
-thorp
-thorpe
-those
-thou
-thou;sand
-though
-thought
-thought;ful
-thrash
-thrash;er
-thrash;ing
-thre;o;nine
-thread
-thread;less
-threat
-threat;en
-three
-three;fold
-three;some
-thresh;old
-threw
-thrice
-thrift
-thrift;y
-thrill
-thrill;er
-thrill;ing
-thrive
-thro
-throat
-throb;bing
-throes
-throm;bin
-throm;bo;sis
-throne
-throng
-throt;tle
-through
-through;out
-through;put
-throw
-throw;back
-throw;er
-thrown
-thru
-thrush
-thrust
-thrust;ing
-thud
-thug
-thumb
-thumb;nail
-thump
-thump;ing
-thun;der
-thun;der;bird
-thun;der;bolt
-thun;der;ing
-thun;der;storm
-thus
-thwart
-thy
-thy;mi;dine
-thy;mus
-thy;roid
-thy;self
-thyme
-ti;ar;a
-ti;ger
-ti;ki
-ti;lap;i;a
-ti;ni;est
-ti;ny
-ti;ta;ni;um
-ti;tan
-ti;tan;ic
-ti;ter
-ti;tle
-ti;tled
-ti;tra;tion
-ti;tre
-tib;i;a
-tib;i;al
-tic
-tick
-tick;er
-tick;et
-tick;ing
-tick;le
-tick;lish
-tid;al
-tid;bit
-tid;ings
-tide
-tide;wat;er
-tie
-tied
-tier
-tif;fa;ny
-tif;fin
-tiff
-tight
-tight;en
-tight;ly
-tight;ness
-tights
-til
-til;bur;y
-til;de
-til;ing
-tile
-tiled
-till
-till;age
-till;er
-tilt
-tim;ber
-tim;ber;land
-tim;bre
-tim;er
-tim;id
-tim;ing
-tim;o;thy
-time
-time;keep;ing
-time;less
-time;li;ness
-time;ly
-time;piece
-time;ta;ble
-tin
-tin;der;box
-tin;gle
-tin;ni;tus
-tin;sel
-tinc;ture
-tine
-ting
-tink;er
-tint
-tip
-tip;per
-tip;ping
-tip;sy
-tir;ing
-tire
-tire;less
-tire;less;ly
-tire;some
-tired
-tis;sue
-tit
-tit;ty
-tit;u;lar
-tithe
-tng
-to;bac;co
-to;by
-to;coph;er;ol
-to;day
-to;ga
-to;geth;er
-to;ken
-to;ma;to
-to;mog;ra;phy
-to;mor;row
-to;night
-to;paz
-to;pi;ar;y
-to;pog;ra;phy
-to;pol;o;gy
-to;ri
-to;ro
-to;roi;dal
-to;rus
-to;tal
-to;tal;i;tar;i;an
-to;tal;i;tar;i;an;ism
-to;tal;i;ty
-to;tal;ing
-to;tal;ling
-to;tal;ly
-to;taled
-to;talled
-to;tem
-to;ward
-to;wards
-toad
-toast
-toast;er
-toast;mas;ter
-tob
-tobe
-tod
-tod;dler
-toe
-toed
-tof;fee
-tog
-tog;gle
-toi;let
-toi;let;ry
-toi;lette
-toil
-toile
-tol;er;a;ble
-tol;er;ance
-tol;er;ant
-tol;er;ate
-tol;u;ene
-told
-tole
-toll
-tom
-tom;a;hawk
-tom;cat
-tom;my
-tomb
-tomb;stone
-tome
-ton
-ton;al
-ton;ga
-ton;ic
-ton;ing
-ton;ite
-ton;nage
-ton;neau
-ton;y
-tone
-tong
-tongs
-tongue
-tongued
-tongues
-tonk
-tonne
-too
-took
-tool
-tool;box
-tool;ing
-toon
-toot
-toot;sie
-tooth
-tooth;brush
-tooth;paste
-tooth;pick
-toothed
-top
-top;i;cal
-top;ic
-top;less
-top;most
-top;o;graph;ic
-top;per
-top;ping
-top;ple
-top;soil
-tops
-tor
-tor;ic
-tor;ment
-tor;na;do
-tor;pe;do
-tor;rent
-tor;rid
-tor;sion
-tor;so
-tor;til;la
-tor;toise
-tor;tur;ing
-tor;ture
-tor;tured
-torch
-tore
-torn
-torque
-torr
-tort
-tos
-tosh
-toss
-tot
-tote
-tou;can
-tou;che
-touch
-touch;down
-touch;ing
-touch;stone
-touch;y
-touched
-tough
-tough;ness
-tour
-tour;ism
-tour;ist
-tour;ma;line
-tour;na;ment
-tour;ney
-tout
-tow
-tow;el
-tow;er
-tow;er;ing
-town
-town;ship
-tox
-tox;i;co;log;i;cal
-tox;i;col;o;gy
-tox;ic
-tox;ic;i;ty
-tox;in
-toy
-tra;che;a
-tra;che;al
-tra;di;tion
-tra;di;tion;al
-tra;jec;to;ry
-tra;peze
-tra;vers;al
-trac;er
-trac;ing
-trac;tion
-trac;tor
-trace
-trace;a;bil;i;ty
-trace;a;ble
-track
-track;er
-track;suit
-tracks
-tract
-trad
-trad;er
-trade
-trade;mark
-trades;man
-traf;fic
-traf;fick;ing
-traf;ficked
-trag;e;dy
-trag;i;cal;ly
-trag;ic
-trai;tor
-trail
-trail;blaz;er
-trail;er
-train
-train;ee
-train;er
-train;ing
-trait
-tram
-tram;ple
-tram;po;line
-tram;way
-tramp
-tran;quil
-tran;quil;i;ty
-tran;quil;li;ty
-tran;scen;den;tal
-tran;scend;ence
-tran;scrib;er
-tran;scrib;ing
-tran;scribe
-tran;scribed
-tran;scrip;tion
-tran;scrip;tion;al
-tran;script
-tran;sect
-tran;si;tion
-tran;si;tion;al
-tran;si;tive
-tran;si;to;ry
-tran;sient
-tran;sis;tor
-tran;som
-tran;spired
-tran;spond;er
-trance
-trans
-trans;ac;tion
-trans;ac;tion;al
-trans;act
-trans;at;lan;tic
-trans;ceiv;er
-trans;cend
-trans;cend;ent
-trans;con;ti;nen;tal
-trans;duc;er
-trans;duc;tion
-trans;fer
-trans;fer;a;ble
-trans;fer;ase
-trans;fer;ee
-trans;fer;ence
-trans;fer;or
-trans;fer;ring
-trans;ferred
-trans;for;ma;tion
-trans;for;ma;tion;al
-trans;form
-trans;form;a;tive
-trans;form;er
-trans;fu;sion
-trans;gres;sion
-trans;it
-trans;la;tion
-trans;la;tion;al
-trans;la;tor
-trans;late
-trans;lo;ca;tion
-trans;lu;cent
-trans;mis;sion
-trans;mit
-trans;mit;tal
-trans;mit;ted
-trans;mit;ter
-trans;mit;ting
-trans;na;tion;al
-trans;par;en;cy
-trans;par;ent
-trans;par;ent;ly
-trans;plant
-trans;po;si;tion
-trans;por;ta;tion
-trans;port
-trans;port;ed
-trans;pose
-trans;posed
-trans;sex;u;al
-trans;verse
-trans;ves;tite
-transl
-transp
-trap
-trap;per
-trap;ping
-trap;pings
-traps
-trash
-trash;y
-trat;to;ri;a
-trau;ma
-trau;ma;tized
-trau;mat;ic
-trav;ail
-trav;el
-trav;el;er
-trav;el;ing
-trav;el;ler
-trav;el;ling
-trav;eled
-trav;elled
-trav;ers;ing
-trav;erse
-trav;ersed
-trav;es;ty
-trawl
-trawl;er
-tray
-tre;ble
-tre;men;dous
-tre;men;dous;ly
-trea;son
-trea;tise
-trea;ty
-treach;er;ous
-treach;er;y
-tread
-tread;ing
-tread;mill
-treas;ur;er
-treas;ur;y
-treas;ure
-treas;ured
-treat
-treat;ment
-treb;u;chet
-tree
-trek
-trek;ker
-trek;king
-trel;lis
-trem;ble
-trem;o;lo
-trem;or
-trench
-trench;es
-trend
-trend;y
-tres
-tres;pass
-trey
-tri;ad
-tri;age
-tri;al
-tri;an;gle
-tri;an;gu;la;tion
-tri;an;gu;lar
-tri;bu;nal
-tri;cy;cle
-tri;dent
-tri;en;ni;al
-tri;er
-tri;fle
-tri;glyc;er;ide
-tri;mes;ter
-tri;o
-tri;os
-tri;par;tite
-tri;phos;phate
-tri;ple
-tri;plet
-tri;plex
-tri;pod
-tri;ton
-tri;um;phant
-tri;umph
-trib;al
-trib;u;la;tion
-trib;u;tar;ies
-trib;u;tar;y
-trib;une
-trib;ute
-tribe
-trice
-trick
-trick;er;y
-trick;le
-trick;ster
-trick;y
-tried
-trig
-trig;ger
-trig;o;no;met;ric
-trig;o;nom;e;try
-trike
-tril;lion
-tril;lium
-tril;o;gy
-trim
-trim;mer
-trim;ming
-trin;i;ty
-trin;ket
-trine
-trip
-trip;o;li
-trip;ping
-trip;wire
-trit;i;um
-trite
-triv;i;a
-triv;i;al
-triv;i;um
-tro;phy
-troi;ka
-trol;ley
-troll
-trom;bone
-troop
-troop;er
-trop
-trop;i;cal
-trop;ic
-trop;o;spher;ic
-trop;o;sphere
-troph;ic
-trot
-trot;ter
-trot;ting
-trou;ble
-trou;ble;shoot
-trou;ble;shoot;er
-trou;ble;shoot;ing
-trou;ble;some
-trou;ser
-trou;sers
-trough
-troupe
-trout
-trove
-trow;el
-troy
-tru;an;cy
-tru;er
-tru;ly
-truce
-truck
-truck;er
-truck;ing
-truck;load
-true
-truf;fle
-trum;pet
-trum;pet;er
-trum;pets
-trump
-trumps
-trun;ca;tion
-trun;cat;ed
-trun;cate
-trun;dle
-trunk
-trunks
-trus;tee
-truss
-trust
-trust;ing
-trust;wor;thi;ness
-trust;wor;thy
-trust;y
-truth
-truth;ful
-try
-try;ing
-try;out
-tryp;sin
-tryp;to;phan
-tsar
-tsk
-tsp
-tsu;na;mi
-tu;ba
-tu;bal
-tu;ber
-tu;ber;cu;lo;sis
-tu;grik
-tu;i
-tu;i;tion
-tu;lip
-tu;mor
-tu;mour
-tu;mul;tu;ous
-tu;na
-tu;ni;ca
-tu;nic
-tu;pe;lo
-tu;to;ri;al
-tu;tor
-tu;tu
-tub
-tub;by
-tub;ing
-tub;u;lar
-tube
-tubes
-tuck
-tuck;er
-tuff
-tuft;ed
-tug
-tulle
-tum
-tum;ble
-tum;ble;weed
-tum;bler
-tum;bling
-tum;my
-tun
-tun;a;ble
-tun;dra
-tun;er
-tun;ing
-tun;nel
-tun;nel;ing
-tun;ning
-tune
-tung;sten
-tur;ban
-tur;bid;i;ty
-tur;bine
-tur;bo
-tur;bu;lence
-tur;bu;lent
-tur;i;on
-tur;key
-tur;mer;ic
-tur;moil
-tur;nip
-tur;quoise
-tur;ret
-tur;tle
-tur;tle;neck
-turd
-turf
-turn
-turn;a;round
-turn;er
-turn;ing
-turn;key
-turn;o;ver
-turn;out
-turn;pike
-turn;ta;ble
-tusk
-tut
-tut;ti
-tut;to
-tux;e;do
-twain
-twang
-twat
-tweak
-twee
-tweed
-tweed;y
-tweet;er
-tweez;ers
-twelfth
-twelve
-twen;ti;eth
-twen;ty
-twi;light
-twice
-twig
-twill
-twin
-twin;kle
-twin;kling
-twin;ning
-twine
-twink
-twist
-twist;er
-twitch
-two
-two;fold
-twp
-ty;coon
-ty;ing
-ty;phoid
-ty;phoon
-ty;po;graph;i;cal
-ty;po;graph;ic
-ty;pog;ra;phy
-ty;pol;o;gy
-ty;ran;ni;cal
-ty;ro;sine
-tye
-tyl;er
-typ
-typ;i;cal
-typ;i;cal;ly
-typ;ing
-typ;ist
-type
-type;face
-type;script
-type;set
-type;set;ting
-type;writ;er
-typo
-tyr;an;ny
-tyrant
-tyre
-u;bi
-u;biq;ui;tous
-u;do
-u;ku;le;le
-u;na;nim;i;ty
-u;nan;i;mous
-u;nan;i;mous;ly
-u;nar;y
-u;ni
-u;ni;corn
-u;ni;di;rec;tion;al
-u;ni;fi;ca;tion
-u;ni;fied
-u;ni;form
-u;ni;form;i;ty
-u;ni;form;ly
-u;ni;formed
-u;ni;fy
-u;ni;fy;ing
-u;ni;lat;er;al
-u;ni;lat;er;al;ly
-u;ni;sex
-u;ni;son
-u;ni;tar;i;an
-u;ni;tar;y
-u;ni;ty
-u;ni;ver;sal
-u;ni;ver;sal;i;ty
-u;ni;ver;sal;ist
-u;ni;ver;sal;ly
-u;ni;ver;si;ty
-u;ni;verse
-u;nique
-u;nit
-u;nit;ed
-u;nit;ing
-u;nite
-u;ra;ni;um
-u;re;a
-u;re;thane
-u;re;thra
-u;re;thral
-u;ri;na;tion
-u;ri;nal
-u;ri;nal;y;sis
-u;ri;nar;y
-u;ri;nat;ing
-u;ri;nate
-u;ric
-u;rine
-u;rol;o;gy
-u;su;al
-u;su;al;ly
-u;ta
-u;ten;sil
-u;ter;ine
-u;ter;us
-u;ti
-u;ti;li;za;tion
-u;ti;lise
-u;ti;liz;ing
-u;ti;lize
-u;ti;lized
-u;til;i;tar;i;an
-u;til;i;ty
-u;tile
-ug;li;ness
-ug;ly
-ugh
-uke
-ul;cer
-ul;cer;a;tive
-ul;ster
-ul;ti;ma
-ul;ti;ma;tum
-ul;ti;mate
-ul;ti;mate;ly
-ul;ti;mo
-ul;tra
-ul;tra;son;ic
-ul;tra;sound
-ul;tra;struc;ture
-ultra;violet
-um;ber
-um;bil;i;cal
-um;bra
-um;brel;la
-um;pire
-un;a;ble
-un;a;bridged
-un;a;vail;a;bil;i;ty
-un;a;vail;a;ble
-un;a;void;a;ble
-un;a;ware
-un;ac;cep;ta;ble
-un;ac;com;pa;nied
-un;ac;count;ed
-un;ad;just;ed
-un;af;fect;ed
-un;af;fil;i;at;ed
-un;am;big;u;ous
-un;an;no;tat;ed
-un;an;nounced
-un;an;tic;i;pat;ed
-un;ap;proved
-un;armed
-un;as;signed
-un;as;sist;ed
-un;at;tached
-un;at;tend;ed
-un;at;trac;tive
-un;au;dit;ed
-un;au;thor;ised
-un;au;thor;ized
-un;bal;anced
-un;be;lief
-un;be;liev;a;ble
-un;bear;a;ble
-un;beat;a;ble
-un;beat;en
-un;bi;ased
-un;bond;ed
-un;born
-un;bound
-un;bound;ed
-un;brand;ed
-un;break;a;ble
-un;bri;dled
-un;bro;ken
-un;buf;fered
-un;bun;dled
-un;can;ny
-un;cat;e;go;rized
-un;cen;sored
-un;cer;tain
-un;cer;tain;ty
-un;chained
-un;chal;lenged
-un;chang;ing
-un;changed
-un;chart;ed
-un;checked
-un;cir;cu;lat;ed
-un;claimed
-un;clas;si;fied
-un;cle
-un;clean
-un;clear
-un;com;fort;a;ble
-un;com;mon
-un;com;pli;cat;ed
-un;com;pressed
-un;com;pro;mis;ing
-un;con;di;tion;al
-un;con;nect;ed
-un;con;scious
-un;con;scious;ly
-un;con;scious;ness
-un;con;sti;tu;tion;al
-un;con;strained
-un;con;test;ed
-un;con;trol;la;ble
-un;con;trolled
-un;con;ven;tion;al
-un;cooked
-un;cor;re;lat;ed
-un;cor;rect;ed
-un;cov;ered
-un;cover
-un;cut
-un;dam;aged
-un;dat;ed
-un;de;cid;ed
-un;de;clared
-un;de;feat;ed
-un;de;fined
-un;de;liv;er;a;ble
-un;de;ni;a;ble
-un;de;ni;a;bly
-un;de;sir;a;ble
-un;de;sired
-un;de;tect;a;ble
-un;de;tect;ed
-un;de;ter;mined
-un;der
-un;der;age
-un;der;arm
-un;der;cov;er
-un;der;cut
-un;der;de;vel;oped
-un;der;dog
-un;der;es;ti;mate
-un;der;go
-un;der;go;ing
-un;der;gone
-un;der;grad
-un;der;grad;u;ate
-un;der;ground
-un;der;hill
-un;der;lay
-un;der;lie
-un;der;line
-un;der;ly;ing
-un;der;min;ing
-un;der;mine
-un;der;mined
-un;der;neath
-un;der;pants
-un;der;pin
-un;der;pin;ning
-un;der;pin;nings
-un;der;pinned
-un;der;priv;i;leged
-un;der;score
-un;der;scored
-un;der;sea
-un;der;sec;re;tar;y
-un;der;side
-un;der;signed
-un;der;stand
-un;der;stand;a;ble
-un;der;stand;a;bly
-un;der;stand;ing
-un;der;stat;ed
-un;der;state;ment
-un;der;stood
-un;der;tak;er
-un;der;tak;ing
-un;der;take
-un;der;took
-un;der;val;ued
-un;der;wa;ter
-un;der;wear
-un;der;weight
-un;der;went
-un;der;wood
-un;der;world
-un;der;writ;er
-un;der;writ;ing
-un;der;writ;ten
-un;der;write
-un;di;vid;ed
-un;dies
-un;dif;fer;en;ti;at;ed
-un;dis;closed
-un;dis;cov;ered
-un;dis;put;ed
-un;dis;trib;ut;ed
-un;dis;turbed
-un;do
-un;do;ing
-un;doc;u;ment;ed
-un;done
-un;doubt;ed;ly
-un;dress
-un;dressed
-un;du;ly
-un;due
-un;dy;ing
-un;e;qual
-un;e;quiv;o;cal
-un;e;quiv;o;cal;ly
-un;e;ven
-un;e;vent;ful
-un;earned
-un;earth
-un;eas;y
-un;ed;it;ed
-un;ed;u;cat;ed
-un;em;ploy;ment
-un;em;ployed
-un;en;force;a;ble
-un;end;ing
-un;eth;i;cal
-un;ex;pect;ed
-un;ex;pect;ed;ly
-un;ex;pired
-un;ex;plained
-un;ex;plored
-un;fa;mil;iar
-un;fa;vor;a;ble
-un;fa;vour;a;ble
-un;fair
-un;faith;ful
-un;fil;tered
-un;filled
-un;fin;ished
-un;fit
-un;fold
-un;for;get;ta;ble
-un;for;giv;en
-un;for;tu;nate
-un;for;tu;nate;ly
-un;fore;seen
-un;found;ed
-un;framed
-un;friend;ly
-un;ful;filled
-un;fund;ed
-un;fur;nished
-un;god;ly
-un;grad;ed
-un;grate;ful
-un;hap;pi;ness
-un;hap;py
-un;health;y
-un;heard
-un;help;ful
-un;ho;ly
-un;i;den;ti;fied
-un;im;ag;i;na;ble
-un;im;por;tant
-un;in;cor;po;ra;ted
-un;in;formed
-un;in;hab;it;ed
-un;in;hib;it;ed
-un;in;stalled
-un;in;sured
-un;in;ten;tion;al
-un;in;tend;ed
-un;in;ter;est;ing
-un;in;ter;rupt;ed
-un;ion
-un;ion;ism
-un;ion;ist
-un;jus;ti;fied
-un;just
-un;just;ly
-un;know;ing;ly
-un;known
-un;la;beled
-un;law;ful
-un;law;ful;ly
-un;lead;ed
-un;leash
-un;less
-un;li;censed
-un;like
-un;like;ly
-un;lim;it;ed
-un;lined
-un;link
-un;list;ed
-un;load
-un;lock
-un;luck;y
-un;man;aged
-un;manned
-un;mar;ried
-un;marked
-un;mask
-un;masked
-un;matched
-un;met
-un;mis;tak;a;ble
-un;mod;er;at;ed
-un;mod;i;fied
-un;mount;ed
-un;named
-un;nat;u;ral
-un;nec;es;sar;i;ly
-un;nec;es;sar;y
-un;need;ed
-un;no;ticed
-un;num;bered
-un;o;pened
-un;ob;served
-un;ob;struct;ed
-un;ob;tru;sive
-un;oc;cu;pied
-un;of;fi;cial
-un;op;posed
-un;or;dered
-un;or;tho;dox
-un;pack
-un;paid
-un;par;al;leled
-un;patched
-un;paved
-un;pleas;ant
-un;plug
-un;plugged
-un;pop;u;lar
-un;pre;dict;a;ble
-un;pre;pared
-un;prec;e;dent;ed
-un;pro;duc;tive
-un;pro;fes;sion;al
-un;pro;tect;ed
-un;proc;essed
-un;prof;it;a;ble
-un;prov;en
-un;pub;lished
-un;qual;i;fied
-un;ques;tion;a;bly
-un;ranked
-un;rat;ed
-un;rav;el
-un;rav;el;ing
-un;re;al
-un;re;al;is;tic
-un;re;al;ized
-un;re;lat;ed
-un;re;leased
-un;re;lent;ing
-un;re;li;a;ble
-un;re;port;ed
-un;re;solved
-un;re;spon;sive
-un;re;strained
-un;re;strict;ed
-un;rea;son;a;ble
-un;rea;son;a;bly
-un;reach;a;ble
-un;read
-un;read;a;ble
-un;rec;og;nized
-un;reg;is;tered
-un;reg;u;lat;ed
-un;rest
-un;ri;valed
-un;ri;valled
-un;ru;ly
-un;safe
-un;sat;is;fac;to;ry
-un;sat;is;fied
-un;sat;u;rat;ed
-un;scathed
-un;scent;ed
-un;sched;uled
-un;scru;pu;lous
-un;se;cured
-un;seen
-un;self;ish
-un;sere
-un;set
-un;set;tled
-un;shaved
-un;sight;ly
-un;signed
-un;skilled
-un;so;lic;it;ed
-un;sold
-un;solved
-un;sound
-un;speak;a;ble
-un;spec;i;fied
-un;spo;ken
-un;spoiled
-un;spoilt
-un;sta;ble
-un;stead;y
-un;stop;pa;ble
-un;struc;tured
-un;strung
-un;su;per;vised
-un;sub;scrib;ing
-un;sub;stan;ti;at;ed
-un;suc;cess;ful
-un;suc;cess;ful;ly
-un;suit;a;ble
-un;sung
-un;sup;port;ed
-un;sur;passed
-un;sure
-un;sus;pect;ing
-un;sus;tain;a;ble
-un;tamed
-un;tapped
-un;ten;a;ble
-un;test;ed
-un;think;a;ble
-un;thread;ed
-un;tied
-un;til
-un;time;ly
-un;tit;led
-un;to
-un;told
-un;touch;a;ble
-un;touched
-un;trained
-un;trans;lat;ed
-un;treat;ed
-un;true
-un;trust;ed
-un;u;su;al
-un;u;su;al;ly
-un;us;a;ble
-un;used
-un;veil
-un;veil;ing
-un;ver;i;fied
-un;wa;ver;ing
-un;want;ed
-un;war;rant;ed
-un;weight;ed
-un;wel;come
-un;wield;y
-un;will;ing
-un;will;ing;ness
-un;wind
-un;wired
-un;wise
-un;wit;ting;ly
-un;wor;thy
-un;wrap
-un;wrapped
-un;writ;ten
-un;zip
-un;zipped
-unb
-univ
-up;beat
-up;bring;ing
-up;dat;ed
-up;dat;er
-up;dat;ing
-up;date
-up;grad;ed
-up;grad;ing
-up;grade
-up;heav;al
-up;held
-up;hill
-up;hol;ster;y
-up;hold
-up;hold;ing
-up;keep
-up;land
-up;lift
-up;on
-up;per
-up;per;most
-up;right
-up;ris;ing
-up;roar
-up;set
-up;set;ting
-up;si;lon
-up;side
-up;stairs
-up;start
-up;state
-up;stream
-up;take
-up;tight
-up;town
-up;ward
-up;wards
-ur;ban
-ur;ban;i;za;tion
-ur;ban;ism
-ur;chin
-ur;gen;cy
-ur;gent
-urg;ing
-urge
-urn
-us;a;ble
-us;age
-us;er
-us;ing
-use
-use;a;ble
-use;ful
-use;ful;ly
-use;ful;ness
-use;less
-used
-ush;er
-ut;most
-ut;ter
-ut;ter;ance
-ute
-va;ca;tion
-va;can;cy
-va;cant
-va;cate
-va;gi;na
-va;grant
-va;le;ri;an
-va;lence
-va;lid;i;ty
-va;na;di;um
-va;nil;la
-va;por
-va;pour
-va;ra
-va;ri;e;tal
-va;ri;e;ty
-va;ri;o
-vac
-vac;ci;na;tion
-vac;ci;nat;ed
-vac;cine
-vac;u;um
-vac;u;ums
-vag;a;bond
-vag;i;nal
-vague
-vague;ly
-vague;ness
-vail
-vain
-val
-val;ance
-val;en;tine
-val;et
-val;i;da;tion
-val;i;date
-val;iant
-val;id
-val;id;ly
-val;ley
-val;or
-val;our
-val;u;a;ble
-val;u;a;tion
-val;ue
-val;ued
-vale
-valve
-vam;pire
-vamp
-van
-van;dal
-van;dal;ism
-van;guard
-van;i;ty
-van;ish
-van;quish
-van;tage
-vane
-vang
-var
-var;i;a
-var;i;a;bil;i;ty
-var;i;a;ble
-var;i;a;tion
-var;i;a;tion;al
-var;i;ance
-var;i;ant
-var;i;cel;la
-var;i;cose
-var;i;ous
-var;ie;gat;ed
-var;ied
-var;na
-var;nish
-var;si;ty
-var;y
-var;y;ing
-vas
-vas;cu;lar
-vas;ec;to;my
-vase
-vast
-vast;ly
-vat
-vaude;ville
-vault
-vault;ed
-ve;gan
-ve;he;ment;ly
-ve;hi;cle
-ve;hic;u;lar
-ve;la
-ve;loc;i;ty
-ve;lour
-ve;na
-ve;neer
-ve;nous
-ve;rac;i;ty
-ve;ran;da
-ve;ran;dah
-ve;ri;tas
-ve;ron;i;ca
-ve;to
-ve;toed
-veal
-vec;tor
-vee
-veer
-veg
-veg;e;ta;ble
-veg;e;ta;tion
-veg;e;ta;tive
-veg;e;tar;i;an
-veg;e;tar;i;an;ism
-veil
-veiled
-vein
-vel
-vel;lum
-vel;vet
-vel;vet;y
-ven;det;ta
-ven;dor
-ven;er;a;ble
-ven;i;son
-ven;om
-ven;om;ous
-ven;ter
-ven;ti;la;tion
-ven;ti;la;tor
-ven;tral
-ven;tri;cle
-ven;tric;u;lar
-ven;tur;ing
-ven;ture
-ven;tured
-ven;ue
-venge;ance
-vent
-ver
-ver;ba;tim
-ver;bal
-ver;bal;ly
-ver;be;na
-ver;bos;i;ty
-ver;bose
-ver;dict
-ver;i;fi;a;ble
-ver;i;fi;er
-ver;i;fied
-ver;i;fy
-ver;i;fy;ing
-ver;i;ly
-ver;i;ta;ble
-ver;i;ty
-ver;meil
-ver;mil;ion
-ver;mil;lion
-ver;min
-ver;nac;u;lar
-ver;nal
-ver;sa;til;i;ty
-ver;sa;tile
-ver;sion
-ver;so
-ver;sus
-ver;te;bral
-ver;te;brate
-ver;tex
-ver;ti;cal
-ver;ti;cal;ly
-ver;ti;ces
-ver;ti;go
-ver;tu
-ver;y
-verb
-verge
-vers
-verse
-versed
-vert
-verve
-ves;i;cle
-ves;sel
-ves;ta
-ves;tal
-ves;tib;u;lar
-vest
-vest;ed
-vest;ing
-vet
-vet;er;an
-vet;er;i;nar;i;an
-vet;er;i;nar;y
-vet;ting
-vex
-vexed
-vhf
-vi;a
-vi;a;bil;i;ty
-vi;a;ble
-vi;a;duct
-vi;al
-vi;bra;tion
-vi;bra;tion;al
-vi;bra;tions
-vi;bra;tor
-vi;brant
-vi;brat;ing
-vi;brate
-vi;car;i;ous
-vi;cin;i;ty
-vi;cious
-vi;de
-vi;er
-vi;gnette
-vi;na
-vi;no
-vi;nyl
-vi;o;la
-vi;o;lat;ed
-vi;o;lat;ing
-vi;o;late
-vi;o;lence
-vi;o;lent
-vi;o;let
-vi;o;lin
-vi;o;lin;ist
-vi;o;lon;cel;lo
-vi;ol
-vi;per
-vi;ral
-vi;ril;i;ty
-vi;rol;o;gy
-vi;rus
-vi;rus;es
-vi;sa
-vi;sion
-vi;sion;ar;ies
-vi;sion;ar;y
-vi;sor
-vi;ta
-vi;tae
-vi;tal
-vi;tal;i;ty
-vi;tal;ly
-vi;va
-vi;vo
-vib;ri;o
-vibes
-vic;ar
-vic;tim
-vic;tim;i;za;tion
-vic;tim;ized
-vic;to;ri;a
-vic;to;ri;ous
-vic;to;ry
-vic;tor
-vice
-vice;roy
-vid;e;o
-vie
-view
-view;a;ble
-view;er
-view;find;er
-view;ing
-view;point
-vig;i;lan;te
-vig;i;lance
-vig;i;lant
-vig;il
-vig;or
-vig;or;ish
-vig;or;ous
-vig;or;ous;ly
-vig;our
-vil
-vil;la
-vil;lag;er
-vil;lage
-vil;lain
-vile
-vim
-vin;ai;grette
-vin;di;ca;tion
-vin;di;cat;ed
-vin;e;gar
-vin;tage
-vine
-vine;land
-vine;yard
-vir;e;o
-vir;gin
-vir;gin;i;ty
-vir;tu;al
-vir;tu;al;ly
-vir;tu;o;so
-vir;tu;ous
-vir;tue
-vir;tues
-vir;u;lence
-vir;u;lent
-vis
-vis;age
-vis;cer;al
-vis;cos;i;ty
-vis;cose
-vis;count
-vis;cous
-vis;i;bil;i;ty
-vis;i;ble
-vis;i;tor
-vis;it
-vis;it;a;tion
-vis;ta
-vis;u;al
-vis;u;al;i;sa;tion
-vis;u;al;i;za;tion
-vis;u;al;iz;ing
-vis;u;al;ize
-vis;u;al;ized
-vis;u;al;ly
-vise
-vit;a;min
-vit;i;cul;ture
-vit;re;ous
-viv;id
-viv;id;ly
-vive
-vix;en
-viz
-vo;ca;tion
-vo;ca;tion;al
-vo;cab
-vo;cab;u;lar;ies
-vo;cab;u;lar;y
-vo;cal
-vo;cal;ist
-vo;li;tion
-vo;lu;mi;nous
-vo;lup;tu;ous
-vo;tive
-vo;yeur
-vo;yeur;ism
-voc
-vod;ka
-vogue
-voi;la
-voi;ture
-voic;ing
-voice
-voiced
-void
-void;ed
-vol
-vol;a;til;i;ty
-vol;a;tile
-vol;ca;no
-vol;can;ic
-vol;ley
-vol;ley;ball
-vol;ta
-vol;u;met;ric
-vol;ume
-vol;un;tar;i;ly
-vol;un;tar;y
-vol;un;teer
-vols
-volt
-volt;age
-vom;it
-voo;doo
-vor;tex
-vor;ti;ces
-vor;tic;i;ty
-vot;ed
-vot;er
-vot;ing
-vote
-vouch
-vouch;er
-vow
-vow;el
-vox
-voy;ag;er
-voy;age
-vul;gar
-vul;gate
-vul;ner;a;ble
-vul;ture
-vul;va
-vy;ing
-wa;di
-wa;fer
-wa;ger
-wa;hoo
-wa;ter
-wa;ter;borne
-wa;ter;col;or
-wa;ter;course
-wa;ter;craft
-wa;ter;fall
-wa;ter;fowl
-wa;ter;front
-wa;ter;ing
-wa;ter;man
-wa;ter;mark
-wa;ter;mel;on
-wa;ter;proof
-wa;ter;shed
-wa;ter;side
-wa;ter;tight
-wa;ter;way
-wa;ter;works
-wa;ter;y
-wack
-wack;er
-wack;y
-wad
-wad;ers
-wad;ing
-wade
-waf;fle
-wag
-wag;ga
-wag;ing
-wag;on
-wag;on;er
-wage
-wail
-wain;wright
-waist
-waist;band
-waist;coat
-wait
-wait;er
-wait;ress
-waiv;er
-waiv;ing
-waive
-wak;ing
-wake
-wal;la
-wal;let
-wal;ly
-wal;nut
-wal;rus
-wale
-walk
-walk;a;bout
-walk;er
-walk;ing
-walk;way
-wall
-wall;eye
-wall;pa;per
-waltz
-wan
-wan;der
-wan;der;er
-wan;der;ing
-wan;der;lust
-wan;ing
-wan;na
-wan;ton
-wand
-wane
-wank
-want
-want;ing
-wap
-war
-war;bler
-war;den
-war;fa;rin
-war;fare
-war;head
-war;ing
-war;lock
-war;lord
-war;ran;ty
-war;rant
-war;ren
-war;ri;or
-war;ring
-war;saw
-war;ship
-war;time
-war;y
-ward
-ward;robe
-ware
-ware;hous;es
-ware;hous;ing
-ware;house
-wares
-warm
-warm;er
-warm;ly
-warmth
-warn
-warn;er
-warn;ing
-warp
-wart
-was
-wash
-wash;a;ble
-wash;er
-wash;ing
-wash;room
-wasp
-wast;ed
-wast;ing
-waste
-waste;ful
-waste;land
-wat
-wat;tle
-watch
-watch;dog
-watch;er
-watch;ful
-watch;man
-watch;tow;er
-watt
-watt;age
-waugh
-wav;ing
-wav;y
-wave
-wave;form
-wave;guide
-wave;length
-wave;let
-waved
-wax
-wax;ing
-wax;y
-way
-way;side
-way;ward
-ways
-we;ber
-wea;ry
-wea;sel
-weak
-weak;en
-weak;ly
-weak;ness
-wealth
-wealth;i;er
-wealth;i;est
-wealth;y
-wean
-weap;on
-weap;on;ry
-wear
-wear;a;ble
-wear;er
-wear;ing
-weath;er
-weath;er;ing
-weath;er;proof
-weath;ered
-weav;er
-weave
-web
-web;bing
-web;by
-web;ster
-wed
-wed;ded
-wed;ding
-wed;lock
-wedge
-wee
-wee;nie
-wee;vil
-weed
-weeds
-week
-week;day
-week;days
-week;end
-week;end;er
-week;ends
-week;ly
-ween
-weep
-weep;ing
-wef
-weigh
-weight
-weight;ed
-weight;ing
-weight;lift;ing
-weight;y
-weir
-weird
-weird;ness
-weird;o
-wel;come
-wel;fare
-welch
-weld
-weld;er
-well
-well;be;ing
-well;ness
-well;spring
-welsh
-welt
-wen
-wench
-went
-wept
-were
-were;wolf
-wert
-west
-west;bound
-west;er;ly
-west;ern
-west;ward
-wet
-wet;ness
-wet;ter
-wet;ting
-weth;er
-whack
-whal;er
-whal;ing
-whale
-wham
-wharf
-what
-what;ev;er
-what;not
-what;so;ev;er
-wheat
-wheel
-wheel;base
-wheel;chair
-wheel;er
-wheel;ing
-wheeled
-wheels
-wheez;ing
-when
-when;ev;er
-whence
-wher;ev;er
-where
-where;a;bouts
-where;as
-where;by
-where;fore
-where;in
-where;of
-where;up;on
-whet
-whet;stone
-wheth;er
-whew
-whey
-which
-which;ev;er
-whiff
-whig
-while
-whilst
-whim
-whim;si;cal
-whin;ing
-whine
-whip
-whip;lash
-whip;ping
-whips
-whirl
-whirl;pool
-whirl;wind
-whis;key
-whis;ky
-whis;per
-whis;per;ing
-whis;tle
-whis;tler
-whis;tling
-whisk
-whisk;er
-whit
-whit;en;ing
-whit;ey
-whit;ing
-whit;tle
-white
-white;fish
-white;ness
-white;tail
-whites
-whith;er
-whiz
-who
-who;ev;er
-who;so;ev;er
-whoa
-whol;ly
-whole
-whole;heart;ed;ly
-whole;sal;er
-whole;sal;ing
-whole;sale
-whole;some
-whom
-whom;ev;er
-whoop
-whoops
-whop;ping
-whore
-whose
-whsle
-why
-wick
-wick;ed
-wick;ed;ness
-wick;er
-wick;et
-wick;ing
-wid;en
-wid;en;er
-wid;er
-wid;est
-wid;ow
-wid;ow;er
-wide
-wide;ly
-wide;spread
-widg;et
-width
-wie;ner
-wield
-wife
-wig
-wig;an
-wig;gle
-wig;wam
-wight
-wil;co
-wil;der
-wil;der;ness
-wil;low
-wil;ly
-wil;y
-wild
-wild;fire
-wild;flow;er
-wild;life
-wild;ly
-wild;wood
-will
-will;ful
-will;ing
-will;ing;ly
-will;ing;ness
-will;pow;er
-willed
-wilt
-win
-win;ches;ter
-win;dow
-win;er;y
-win;kle
-win;ner
-win;ning
-win;ter
-win;ter;green
-wince
-winch
-wind
-wind;ed
-wind;er
-wind;fall
-wind;ing
-wind;mill
-wind;screen
-wind;shield
-wind;ward
-wind;y
-wine
-wing
-wing;er
-wing;span
-winged
-wink
-wip;er
-wipe
-wir;ing
-wire
-wire;less
-wire;less;ly
-wire;tap
-wire;tap;ping
-wired
-wis
-wis;dom
-wis;er
-wis;est
-wis;te;ri;a
-wise
-wish
-wish;bone
-wish;ful
-wisp
-wit
-wit;ness
-wit;ty
-witch
-witch;craft
-with
-with;al
-with;draw
-with;draw;al
-with;draw;ing
-with;drawn
-with;drew
-with;er
-with;ers
-with;held
-with;hold
-with;hold;ing
-with;in
-with;out
-with;stand
-with;stand;ing
-wits
-wives
-wiz
-wiz;ard
-wiz;ard;ry
-wo;ven
-wob;ble
-wob;bly
-woe
-woe;ful;ly
-wok
-wok;en
-woke
-wol;ver;ine
-wold
-wolf
-wolf;ram
-wolves
-wom;an
-wom;an;hood
-wom;bat
-wom;en
-womb
-won
-won;der
-won;der;ful
-won;der;ful;ly
-won;der;ing
-won;der;land
-wont
-woo
-wood
-wood;bine
-wood;cock
-wood;craft
-wood;ed
-wood;en
-wood;house
-wood;land
-wood;man
-wood;peck;er
-wood;ruff
-wood;wind
-wood;work
-wood;work;ing
-wood;y
-woods
-woof
-woof;er
-wool
-wool;en
-wool;len
-wool;ly
-wop
-wor;ri;some
-wor;ried
-wor;ry
-wor;ship
-wor;shipped
-wor;sted
-wor;thi;ness
-wor;thy
-word
-word;ing
-words
-wore
-work
-work;a;ble
-work;bench
-work;book
-work;day
-work;er
-work;horse
-work;ing
-work;load
-work;man
-work;man;ship
-work;out
-work;shop
-work;week
-worked
-works
-world
-world;ly
-world;wide
-worm
-worms
-worn
-wors;en
-worse
-worst
-wort
-worth
-worth;less
-worth;while
-wot
-would
-wound
-wound;ed
-wow
-wraith
-wran;gler
-wrap
-wrap;a;round
-wrap;per
-wrap;ping
-wrapped
-wrath
-wreak
-wreath
-wreck
-wreck;age
-wreck;er
-wren
-wrench
-wres;tle
-wres;tler
-wres;tling
-wretch
-wretch;ed
-wright
-wrin;kle
-wrist
-wrist;band
-wrist;watch
-writ
-writ;er
-writ;ing
-writ;ten
-write
-wrong
-wrong;do;ing
-wrong;ful
-wrong;ful;ly
-wrong;ly
-wrote
-wrought
-wuth;er;ing
-wy;vern
-wye
-wynn
-xe;ni;a
-xen;o;pho;bi;a
-xen;on
-xy;lene
-xy;lo;phone
-ya;hoo
-yacht
-yacht;ing
-yah
-yak
-yam
-yank
-yap
-yar;row
-yard
-yard;age
-yard;stick
-yarn
-yaw
-yawn
-yawn;ing
-ye;shi;va
-yea
-yeah
-year
-year;book
-year;ling
-year;ly
-yearn
-yearn;ing
-yeast
-yel;low
-yel;low;ish
-yel;lows
-yell
-yelp
-yen
-yeo;man
-yep
-yer;ba
-yes
-yes;ter;day
-yes;ter;year
-yet
-yet;i
-yew
-yield
-yield;ing
-yip
-yip;pee
-yo;ga
-yo;ghurt
-yo;gi
-yo;gurt
-yoke
-yolk
-yon
-yon;der
-york
-york;er
-you
-young
-young;er
-young;ster
-your
-your;self
-yours
-youth
-youth;ful
-yrs
-yu;an
-yuc;ca
-yuk
-yule
-yup
-za;ire
-za;ny
-zack
-zan;der
-zap
-ze;bra;fish
-ze;o;lite
-ze;ro
-ze;ta
-zeal
-zeal;ot
-zeal;ous
-zeb;ra
-zed
-zee
-zen;ith
-zep;pe;lin
-zeph;yr
-zest
-ziff
-zig;zag
-zil;la
-zil;lion
-zin;fan;del
-zinc
-zing
-zip
-zip;per
-zip;py
-zir;co;ni;a
-zir;co;ni;um
-zir;con
-zlo;ty
-zo;di;ac
-zo;o;log;i;cal
-zo;o;phil;i;a
-zo;o;plank;ton
-zo;ol;o;gy
-zom;bie
-zon;al
-zon;ing
-zone
-zoo
-zool
-zoom
-zos;ter
-zuc;chi;ni`
+var wordsWithSyllables = map[string]int{
+	"a":                    1,
+	"u":                    1,
+	"aa":                   1,
+	"ab":                   1,
+	"ad":                   1,
+	"ae":                   1,
+	"ag":                   1,
+	"ah":                   1,
+	"ai":                   1,
+	"al":                   1,
+	"am":                   1,
+	"an":                   1,
+	"ar":                   1,
+	"as":                   1,
+	"at":                   1,
+	"aw":                   1,
+	"ax":                   1,
+	"ay":                   1,
+	"ba":                   1,
+	"be":                   1,
+	"bi":                   1,
+	"bo":                   1,
+	"by":                   1,
+	"da":                   1,
+	"de":                   1,
+	"do":                   1,
+	"ed":                   1,
+	"ef":                   1,
+	"eh":                   1,
+	"el":                   1,
+	"em":                   1,
+	"en":                   1,
+	"er":                   1,
+	"es":                   1,
+	"et":                   1,
+	"ex":                   1,
+	"fa":                   1,
+	"fe":                   1,
+	"gi":                   1,
+	"go":                   1,
+	"ha":                   1,
+	"he":                   1,
+	"hi":                   1,
+	"hm":                   1,
+	"ho":                   1,
+	"id":                   1,
+	"if":                   1,
+	"in":                   1,
+	"is":                   1,
+	"it":                   1,
+	"jo":                   1,
+	"ka":                   1,
+	"ki":                   1,
+	"la":                   1,
+	"li":                   1,
+	"lo":                   1,
+	"ma":                   1,
+	"me":                   1,
+	"mi":                   1,
+	"mm":                   1,
+	"mo":                   1,
+	"mu":                   1,
+	"my":                   1,
+	"na":                   1,
+	"ne":                   1,
+	"no":                   1,
+	"nu":                   1,
+	"od":                   1,
+	"oe":                   1,
+	"of":                   1,
+	"oh":                   1,
+	"oi":                   1,
+	"ok":                   1,
+	"om":                   1,
+	"on":                   1,
+	"op":                   1,
+	"or":                   1,
+	"os":                   1,
+	"ow":                   1,
+	"ox":                   1,
+	"oy":                   1,
+	"pa":                   1,
+	"pe":                   1,
+	"pi":                   1,
+	"po":                   1,
+	"qi":                   1,
+	"re":                   1,
+	"sh":                   1,
+	"si":                   1,
+	"so":                   1,
+	"ta":                   1,
+	"te":                   1,
+	"ti":                   1,
+	"to":                   1,
+	"uh":                   1,
+	"um":                   1,
+	"un":                   1,
+	"up":                   1,
+	"us":                   1,
+	"ut":                   1,
+	"we":                   1,
+	"wo":                   1,
+	"xi":                   1,
+	"xu":                   1,
+	"ya":                   1,
+	"ye":                   1,
+	"yo":                   1,
+	"za":                   1,
+	"aback":                2,
+	"abandon":              3,
+	"abandonment":          4,
+	"abandoned":            3,
+	"abated":               3,
+	"abate":                2,
+	"abatement":            3,
+	"abet":                 2,
+	"abiotic":              4,
+	"abiding":              3,
+	"abide":                2,
+	"ability":              4,
+	"ablaze":               2,
+	"able":                 2,
+	"ably":                 2,
+	"aboard":               2,
+	"abode":                2,
+	"abolish":              3,
+	"abominable":           5,
+	"abomination":          5,
+	"abortion":             3,
+	"abort":                2,
+	"abound":               2,
+	"about":                2,
+	"above":                2,
+	"abrasion":             3,
+	"abrasive":             3,
+	"abreast":              2,
+	"abridged":             2,
+	"abroad":               2,
+	"abusive":              3,
+	"abundance":            3,
+	"abundant":             3,
+	"abundantly":           4,
+	"abuser":               3,
+	"abusing":              3,
+	"abuse":                2,
+	"abused":               2,
+	"abutting":             3,
+	"aby":                  2,
+	"abysmal":              3,
+	"abyss":                2,
+	"acacia":               3,
+	"academy":              4,
+	"acetic":               3,
+	"acetylene":            4,
+	"achievable":           4,
+	"achiever":             3,
+	"achieving":            3,
+	"achieve":              2,
+	"achievement":          3,
+	"achieved":             2,
+	"acidity":              4,
+	"acidic":               3,
+	"acorn":                2,
+	"acoustical":           4,
+	"acoustic":             3,
+	"acoustics":            3,
+	"acre":                 2,
+	"acreage":              3,
+	"acropolis":            4,
+	"across":               2,
+	"acrylic":              3,
+	"acuity":               4,
+	"acute":                2,
+	"acutely":              3,
+	"acyclic":              3,
+	"adagio":               3,
+	"adaptive":             3,
+	"adaptor":              3,
+	"adapt":                2,
+	"adaptability":         6,
+	"adaptable":            4,
+	"adapter":              3,
+	"adenosine":            4,
+	"adieu":                2,
+	"ado":                  2,
+	"adobe":                3,
+	"adoption":             3,
+	"adoptive":             3,
+	"adopt":                2,
+	"adopted":              3,
+	"adopter":              3,
+	"adorable":             4,
+	"adore":                2,
+	"adored":               2,
+	"adorn":                2,
+	"adrenaline":           4,
+	"adrift":               2,
+	"adultery":             4,
+	"adult":                2,
+	"adulthood":            3,
+	"afar":                 2,
+	"aficionado":           5,
+	"afield":               2,
+	"afloat":               2,
+	"afoot":                2,
+	"aforementioned":       4,
+	"aforesaid":            3,
+	"afraid":               2,
+	"aga":                  2,
+	"agave":                3,
+	"again":                2,
+	"against":              2,
+	"agape":                2,
+	"agar":                 2,
+	"aged":                 2,
+	"agee":                 2,
+	"agency":               3,
+	"agenda":               3,
+	"agent":                2,
+	"agility":              4,
+	"ago":                  2,
+	"agrarian":             4,
+	"agree":                2,
+	"agreeable":            4,
+	"agreeing":             3,
+	"agreement":            3,
+	"agreed":               2,
+	"agronomy":             4,
+	"aha":                  2,
+	"ahead":                2,
+	"ahem":                 2,
+	"ahold":                2,
+	"ahoy":                 2,
+	"ais":                  2,
+	"akin":                 2,
+	"ala":                  2,
+	"alarm":                2,
+	"alas":                 2,
+	"aleph":                2,
+	"alert":                2,
+	"alertness":            3,
+	"alexia":               4,
+	"aliases":              4,
+	"alight":               2,
+	"align":                2,
+	"alignment":            3,
+	"alike":                2,
+	"aline":                2,
+	"alist":                2,
+	"alive":                2,
+	"aloha":                3,
+	"aloft":                2,
+	"alone":                2,
+	"along":                2,
+	"alongside":            3,
+	"aloof":                2,
+	"aloud":                2,
+	"alumina":              4,
+	"aluminum":             4,
+	"alumnus":              3,
+	"amalgam":              3,
+	"amalgamation":         5,
+	"amalgamated":          5,
+	"amazing":              3,
+	"amazingly":            4,
+	"amaze":                2,
+	"amazement":            3,
+	"amazed":               2,
+	"amenable":             4,
+	"amen":                 2,
+	"amenity":              4,
+	"amend":                2,
+	"amendment":            3,
+	"amends":               2,
+	"ami":                  2,
+	"amiable":              4,
+	"amiga":                3,
+	"amigo":                3,
+	"amino":                3,
+	"amid":                 2,
+	"amidst":               2,
+	"amie":                 2,
+	"amine":                2,
+	"amir":                 2,
+	"amis":                 2,
+	"amiss":                2,
+	"amoeba":               3,
+	"amok":                 2,
+	"among":                2,
+	"amongst":              2,
+	"amorphous":            3,
+	"amount":               2,
+	"amour":                2,
+	"amusing":              3,
+	"amuse":                2,
+	"amusement":            3,
+	"amused":               2,
+	"amygdala":             4,
+	"anaemia":              4,
+	"analogous":            4,
+	"analogy":              4,
+	"analysis":             4,
+	"ananda":               3,
+	"anatomy":              4,
+	"anathema":             4,
+	"anemia":               4,
+	"anemone":              4,
+	"anew":                 2,
+	"ani":                  2,
+	"anomalous":            4,
+	"anomaly":              4,
+	"anonymous":            4,
+	"anonymously":          5,
+	"anus":                 2,
+	"aorta":                3,
+	"aortic":               3,
+	"apa":                  2,
+	"apache":               2,
+	"apart":                2,
+	"apartheid":            3,
+	"apartment":            3,
+	"apex":                 2,
+	"aphasia":              3,
+	"aphid":                2,
+	"aphis":                2,
+	"apiece":               2,
+	"apocalyptic":          5,
+	"apocalypse":           4,
+	"apollo":               3,
+	"apologetic":           5,
+	"apologetics":          5,
+	"apologise":            4,
+	"apologize":            4,
+	"apologized":           4,
+	"apology":              4,
+	"apostle":              3,
+	"apostrophe":           4,
+	"apothecary":           5,
+	"apr":                  2,
+	"apron":                2,
+	"aquarium":             4,
+	"aquariums":            4,
+	"aquatic":              3,
+	"aquatics":             3,
+	"aqueous":              3,
+	"arena":                3,
+	"aria":                 3,
+	"arisen":               3,
+	"arista":               3,
+	"aristocrat":           4,
+	"aristocratic":         5,
+	"arise":                2,
+	"arithmetic":           4,
+	"aroma":                3,
+	"arose":                2,
+	"around":               2,
+	"arousal":              3,
+	"arouse":               2,
+	"aroused":              2,
+	"aseptic":              3,
+	"ashamed":              2,
+	"ashore":               2,
+	"aside":                2,
+	"askew":                2,
+	"asleep":               2,
+	"aspherical":           4,
+	"astigmatism":          4,
+	"astragalus":           4,
+	"astray":               2,
+	"asylum":               3,
+	"asymmetry":            4,
+	"asymmetrical":         5,
+	"asymmetric":           4,
+	"asymptomatic":         5,
+	"asynchronous":         4,
+	"ataxia":               4,
+	"atheism":              3,
+	"atheist":              3,
+	"atomic":               3,
+	"atonement":            3,
+	"atop":                 2,
+	"atria":                3,
+	"atrial":               3,
+	"atrium":               3,
+	"atrocious":            3,
+	"atrocity":             4,
+	"atypical":             4,
+	"ava":                  2,
+	"avail":                2,
+	"availability":         6,
+	"available":            4,
+	"avast":                2,
+	"avenger":              3,
+	"avenge":               2,
+	"avenged":              2,
+	"aver":                 2,
+	"aversion":             3,
+	"averse":               2,
+	"avert":                2,
+	"aviation":             4,
+	"aviator":              4,
+	"avian":                3,
+	"avionics":             4,
+	"aviso":                3,
+	"aviary":               3,
+	"avion":                2,
+	"avo":                  2,
+	"avoid":                2,
+	"avoidable":            4,
+	"avoidance":            3,
+	"awa":                  2,
+	"await":                2,
+	"awaken":               3,
+	"awakening":            4,
+	"awake":                2,
+	"award":                2,
+	"aware":                2,
+	"awareness":            3,
+	"awash":                2,
+	"away":                 2,
+	"awhile":               2,
+	"awoke":                2,
+	"awry":                 2,
+	"azalea":               3,
+	"aardvark":             2,
+	"aba":                  2,
+	"abacus":               3,
+	"abalone":              4,
+	"abba":                 2,
+	"abbey":                2,
+	"abbot":                2,
+	"abbreviation":         5,
+	"abbreviated":          5,
+	"abdomen":              3,
+	"abdominal":            4,
+	"abduction":            3,
+	"aberration":           4,
+	"aberrant":             3,
+	"abigail":              3,
+	"abject":               2,
+	"ablation":             3,
+	"abnormal":             3,
+	"abnormality":          5,
+	"abnormally":           4,
+	"abo":                  2,
+	"abolition":            4,
+	"aboriginal":           5,
+	"abrupt":               2,
+	"abruptly":             3,
+	"abscess":              2,
+	"absentee":             3,
+	"absenteeism":          4,
+	"absence":              2,
+	"absent":               2,
+	"absinthe":             2,
+	"absolution":           4,
+	"absolute":             3,
+	"absolutely":           4,
+	"absorb":               2,
+	"absorbance":           3,
+	"absorbent":            3,
+	"absorber":             3,
+	"absorbing":            3,
+	"absorbed":             2,
+	"absorption":           3,
+	"abstain":              2,
+	"abstinence":           3,
+	"abstraction":          3,
+	"abstract":             2,
+	"abstracted":           3,
+	"absurd":               2,
+	"absurdity":            4,
+	"abb":                  1,
+	"abl":                  1,
+	"abp":                  1,
+	"abr":                  1,
+	"academia":             5,
+	"academically":         6,
+	"academic":             4,
+	"academe":              3,
+	"acceleration":         5,
+	"accelerator":          5,
+	"accelerated":          5,
+	"accelerating":         5,
+	"accelerate":           4,
+	"accelerometer":        6,
+	"accentuate":           4,
+	"accent":               2,
+	"acceptor":             3,
+	"accept":               2,
+	"acceptability":        6,
+	"acceptable":           4,
+	"acceptance":           3,
+	"accepted":             3,
+	"accessibility":        6,
+	"accessible":           4,
+	"accession":            3,
+	"accessory":            4,
+	"access":               2,
+	"accidental":           4,
+	"accidentally":         5,
+	"accident":             3,
+	"acclaim":              2,
+	"accolade":             3,
+	"accommodation":        5,
+	"accommodated":         5,
+	"accommodating":        5,
+	"accommodate":          4,
+	"accompaniment":        5,
+	"accompanied":          4,
+	"accompany":            4,
+	"accompanying":         5,
+	"accomplice":           3,
+	"accomplish":           3,
+	"accomplishment":       4,
+	"accomplished":         3,
+	"accordion":            4,
+	"accord":               2,
+	"accordance":           3,
+	"according":            3,
+	"accordingly":          4,
+	"account":              2,
+	"accountability":       6,
+	"accountable":          4,
+	"accountancy":          4,
+	"accountant":           3,
+	"accounting":           3,
+	"accra":                2,
+	"accretion":            3,
+	"accreditation":        5,
+	"accrual":              3,
+	"accruing":             3,
+	"accrue":               2,
+	"accrued":              2,
+	"accumulation":         5,
+	"accumulator":          5,
+	"accumulated":          5,
+	"accumulating":         5,
+	"accumulate":           4,
+	"accuracy":             4,
+	"accurate":             3,
+	"accurately":           4,
+	"accusation":           4,
+	"accuser":              3,
+	"accusing":             3,
+	"accustomed":           3,
+	"accuse":               2,
+	"accused":              2,
+	"acetate":              3,
+	"acetone":              3,
+	"acetyl":               3,
+	"acetylcholine":        5,
+	"acidosis":             4,
+	"acidophilus":          5,
+	"acid":                 2,
+	"acknowledging":        4,
+	"acknowledgment":       4,
+	"acknowledge":          3,
+	"acknowledgement":      4,
+	"acknowledged":         3,
+	"acme":                 2,
+	"acne":                 2,
+	"acquaint":             2,
+	"acquaintance":         3,
+	"acquainted":           3,
+	"acquisition":          4,
+	"acquiring":            3,
+	"acquire":              2,
+	"acquired":             2,
+	"acquittal":            3,
+	"acquitted":            3,
+	"acrobat":              3,
+	"acrobatic":            4,
+	"acronym":              3,
+	"activation":           4,
+	"activator":            4,
+	"activated":            4,
+	"activating":           4,
+	"activate":             3,
+	"actin":                2,
+	"action":               2,
+	"actionable":           4,
+	"activity":             4,
+	"activism":             3,
+	"activist":             3,
+	"active":               2,
+	"actively":             3,
+	"acton":                2,
+	"actor":                2,
+	"actress":              2,
+	"actuation":            4,
+	"actuator":             4,
+	"actual":               3,
+	"actuality":            5,
+	"actually":             4,
+	"actuarial":            5,
+	"actuaries":            4,
+	"actuary":              3,
+	"actuated":             4,
+	"actuate":              3,
+	"acumen":               3,
+	"acupuncture":          4,
+	"acyl":                 2,
+	"ace":                  1,
+	"aching":               2,
+	"ache":                 1,
+	"act":                  1,
+	"acting":               2,
+	"adamant":              3,
+	"adage":                2,
+	"adaptation":           4,
+	"addendum":             3,
+	"addition":             3,
+	"additional":           4,
+	"additionally":         5,
+	"additive":             3,
+	"addiction":            3,
+	"addictive":            3,
+	"addict":               2,
+	"addicted":             3,
+	"address":              2,
+	"addressee":            3,
+	"addressing":           3,
+	"addy":                 2,
+	"adenine":              3,
+	"adenocarcinoma":       7,
+	"adenoma":              4,
+	"adenovirus":           5,
+	"adequacy":             4,
+	"adequate":             3,
+	"adequately":           4,
+	"adept":                2,
+	"adhesion":             3,
+	"adhesive":             3,
+	"adherence":            3,
+	"adherent":             3,
+	"adhering":             3,
+	"adhere":               2,
+	"adhered":              2,
+	"adiabatic":            5,
+	"adios":                3,
+	"adipose":              3,
+	"adjacency":            4,
+	"adjacent":             3,
+	"adjective":            3,
+	"adjoining":            3,
+	"adjoint":              2,
+	"adjourn":              2,
+	"adjournment":          3,
+	"adjudication":         5,
+	"adjudicator":          5,
+	"adjudicated":          5,
+	"adjutant":             3,
+	"adjuvant":             3,
+	"adjunct":              2,
+	"adjust":               2,
+	"adjustable":           4,
+	"adjuster":             3,
+	"adjustment":           3,
+	"admirable":            4,
+	"admirably":            4,
+	"admiration":           4,
+	"admiral":              3,
+	"admiralty":            4,
+	"admin":                2,
+	"administer":           4,
+	"administration":       5,
+	"administrative":       5,
+	"administratively":     6,
+	"administrator":        5,
+	"admirer":              3,
+	"admiring":             3,
+	"admire":               2,
+	"admired":              2,
+	"admissibility":        6,
+	"admissible":           4,
+	"admission":            3,
+	"admit":                2,
+	"admittance":           3,
+	"admitted":             3,
+	"admittedly":           4,
+	"admitting":            3,
+	"admixture":            3,
+	"admonition":           4,
+	"adolescence":          4,
+	"adolescent":           4,
+	"adoration":            4,
+	"adrenal":              3,
+	"adrenergic":           4,
+	"adsorption":           3,
+	"advantageous":         4,
+	"advantage":            3,
+	"advances":             3,
+	"advancing":            3,
+	"advance":              2,
+	"advancement":          3,
+	"advanced":             2,
+	"advection":            3,
+	"adventurer":           4,
+	"adventurous":          4,
+	"adventure":            3,
+	"advent":               2,
+	"adversaries":          4,
+	"adversary":            4,
+	"adversity":            4,
+	"advertiser":           4,
+	"advertising":          4,
+	"advertise":            3,
+	"advertisement":        4,
+	"advertised":           3,
+	"adverb":               2,
+	"adverse":              2,
+	"adversely":            3,
+	"advert":               2,
+	"advisory":             4,
+	"advisor":              3,
+	"advice":               2,
+	"advisable":            4,
+	"adviser":              3,
+	"advise":               2,
+	"advisement":           3,
+	"advised":              2,
+	"advocacy":             4,
+	"advocated":            4,
+	"advocating":           4,
+	"advocate":             3,
+	"add":                  1,
+	"adder":                2,
+	"adj":                  1,
+	"adv":                  1,
+	"aegis":                2,
+	"aeon":                 2,
+	"aeration":             3,
+	"aerial":               3,
+	"aero":                 2,
+	"aerobic":              3,
+	"aerodrome":            3,
+	"aerodynamic":          5,
+	"aerodynamics":         5,
+	"aeronautical":         5,
+	"aeronautics":          4,
+	"aeroplane":            3,
+	"aerosol":              3,
+	"aerospace":            3,
+	"aesthetically":        5,
+	"aesthetic":            3,
+	"aesthetics":           3,
+	"aet":                  1,
+	"affair":               2,
+	"affairs":              2,
+	"affection":            3,
+	"affectionate":         4,
+	"affectionately":       5,
+	"affective":            3,
+	"affect":               2,
+	"affected":             3,
+	"affecting":            3,
+	"afferent":             3,
+	"affidavit":            4,
+	"affiliation":          5,
+	"affiliated":           5,
+	"affiliate":            4,
+	"affinity":             4,
+	"affine":               2,
+	"affirmation":          4,
+	"affirm":               2,
+	"affirmative":          4,
+	"affirmatively":        5,
+	"affix":                2,
+	"affliction":           3,
+	"affluence":            3,
+	"affluent":             3,
+	"afford":               2,
+	"affordable":           4,
+	"afghan":               2,
+	"afghani":              3,
+	"after":                2,
+	"aftercare":            3,
+	"afterglow":            3,
+	"afterlife":            3,
+	"aftermath":            3,
+	"afternoon":            3,
+	"afternoons":           3,
+	"aftershock":           3,
+	"afterthought":         3,
+	"afterward":            3,
+	"afterwards":           3,
+	"aff":                  1,
+	"aft":                  1,
+	"agate":                2,
+	"aggie":                2,
+	"agglomeration":        5,
+	"aggravation":          4,
+	"aggravating":          4,
+	"aggravate":            3,
+	"aggravated":           3,
+	"aggregation":          4,
+	"aggregated":           4,
+	"aggregating":          4,
+	"aggregate":            3,
+	"aggression":           3,
+	"aggressive":           3,
+	"aggressively":         4,
+	"aggressiveness":       4,
+	"aggressor":            3,
+	"aggrieved":            2,
+	"agitation":            4,
+	"agitator":             4,
+	"agitated":             4,
+	"agile":                2,
+	"aging":                2,
+	"agnostic":             3,
+	"agonist":              3,
+	"agonizing":            4,
+	"agony":                3,
+	"agora":                3,
+	"agribusiness":         4,
+	"agricultural":         5,
+	"agriculture":          4,
+	"agronomic":            4,
+	"age":                  1,
+	"ageing":               2,
+	"ageless":              2,
+	"agr":                  1,
+	"agric":                1,
+	"agt":                  1,
+	"aikido":               3,
+	"aid":                  1,
+	"aide":                 1,
+	"ail":                  1,
+	"ailing":               2,
+	"ailment":              2,
+	"aim":                  1,
+	"ain":                  1,
+	"air":                  1,
+	"airborne":             2,
+	"airbrush":             2,
+	"airbus":               2,
+	"aircraft":             2,
+	"airfield":             2,
+	"airflow":              2,
+	"airframe":             2,
+	"airing":               2,
+	"airlift":              2,
+	"airliner":             3,
+	"airline":              2,
+	"airlines":             2,
+	"airmail":              2,
+	"airman":               2,
+	"airplane":             2,
+	"airport":              2,
+	"airship":              2,
+	"airspace":             2,
+	"airstrip":             2,
+	"airtight":             2,
+	"airwaves":             2,
+	"airway":               2,
+	"airworthiness":        4,
+	"airy":                 2,
+	"airs":                 1,
+	"aisle":                1,
+	"ait":                  1,
+	"ake":                  1,
+	"alabaster":            4,
+	"alameda":              4,
+	"alamo":                3,
+	"alanine":              3,
+	"alba":                 2,
+	"albatross":            3,
+	"albedo":               3,
+	"albeit":               3,
+	"albergo":              3,
+	"albert":               2,
+	"albino":               3,
+	"albumin":              3,
+	"album":                2,
+	"alchemist":            3,
+	"alchemy":              3,
+	"alcohol":              3,
+	"alcoholic":            4,
+	"alcoholism":           4,
+	"alcove":               2,
+	"aldehyde":             3,
+	"alder":                2,
+	"alderman":             3,
+	"alec":                 2,
+	"alexander":            4,
+	"alexandrite":          4,
+	"alfalfa":              3,
+	"algae":                2,
+	"algal":                2,
+	"algebra":              3,
+	"algebraic":            4,
+	"algorithmic":          4,
+	"algorithm":            3,
+	"alibi":                3,
+	"alimony":              4,
+	"aliphatic":            4,
+	"alien":                2,
+	"alienation":           4,
+	"alienated":            4,
+	"alienating":           4,
+	"alienate":             3,
+	"alkali":               3,
+	"alkalinity":           5,
+	"alkaline":             3,
+	"alkyl":                2,
+	"allegation":           4,
+	"allegiance":           3,
+	"allegory":             4,
+	"allegro":              3,
+	"alleviation":          5,
+	"alleviating":          5,
+	"alleviate":            4,
+	"allegedly":            4,
+	"alleging":             3,
+	"allege":               2,
+	"alleged":              2,
+	"allelic":              3,
+	"allele":               2,
+	"allergen":             3,
+	"allergenic":           4,
+	"allergic":             3,
+	"allergy":              3,
+	"alley":                2,
+	"alliance":             3,
+	"alligator":            4,
+	"allium":               3,
+	"allied":               2,
+	"allies":               2,
+	"allocation":           4,
+	"allocated":            4,
+	"allocating":           4,
+	"allocate":             3,
+	"allot":                2,
+	"allotment":            3,
+	"allotted":             3,
+	"allow":                2,
+	"allowable":            4,
+	"allowance":            3,
+	"allowed":              2,
+	"alloy":                2,
+	"allusion":             3,
+	"alluvial":             4,
+	"alluded":              3,
+	"alluring":             3,
+	"allure":               2,
+	"ally":                 2,
+	"alma":                 2,
+	"almanac":              3,
+	"almighty":             3,
+	"almond":               2,
+	"almost":               2,
+	"alopecia":             5,
+	"aloe":                 2,
+	"alpaca":               3,
+	"alpha":                2,
+	"alphabet":             3,
+	"alphabetical":         5,
+	"alphabetically":       6,
+	"alphabetic":           4,
+	"alpine":               2,
+	"already":              3,
+	"alright":              2,
+	"also":                 2,
+	"altar":                2,
+	"alter":                2,
+	"alteration":           4,
+	"altercation":          4,
+	"alternation":          4,
+	"alternative":          4,
+	"alternatively":        5,
+	"alternator":           4,
+	"alternating":          4,
+	"alternate":            3,
+	"alternately":          4,
+	"although":             2,
+	"altitude":             3,
+	"altimeter":            4,
+	"alto":                 2,
+	"altogether":           4,
+	"altruistic":           4,
+	"altruism":             3,
+	"aluminium":            5,
+	"alveolar":             4,
+	"always":               2,
+	"alb":                  1,
+	"ale":                  1,
+	"alfa":                 1,
+	"alg":                  1,
+	"alias":                1,
+	"alk":                  1,
+	"all":                  1,
+	"alms":                 1,
+	"alp":                  1,
+	"alphanumeric":         2,
+	"alt":                  1,
+	"alum":                 1,
+	"amaryllis":            4,
+	"amateur":              3,
+	"amazon":               3,
+	"ambassador":           4,
+	"amber":                2,
+	"ambiance":             3,
+	"ambience":             3,
+	"ambient":              3,
+	"ambiguity":            5,
+	"ambition":             3,
+	"ambitious":            3,
+	"ambiguous":            4,
+	"ambit":                2,
+	"ambivalence":          4,
+	"ambivalent":           4,
+	"ambler":               2,
+	"ambrosia":             3,
+	"ambulatory":           5,
+	"ambulance":            3,
+	"ambush":               2,
+	"amethyst":             3,
+	"amity":                3,
+	"amide":                2,
+	"ammo":                 2,
+	"ammonium":             4,
+	"ammonia":              3,
+	"ammunition":           4,
+	"amnesia":              3,
+	"amnesty":              3,
+	"amniotic":             4,
+	"amorous":              3,
+	"amortisation":         5,
+	"amortization":         5,
+	"amortized":            3,
+	"ampersand":            3,
+	"ampere":               2,
+	"amphetamine":          4,
+	"amphitheater":         5,
+	"amphitheatre":         5,
+	"amphibian":            4,
+	"amphibious":           4,
+	"ample":                2,
+	"amplification":        5,
+	"amplifier":            4,
+	"amplified":            3,
+	"amplify":              3,
+	"amplitude":            3,
+	"amply":                2,
+	"amputation":           4,
+	"amputee":              3,
+	"amulet":               3,
+	"amyloid":              3,
+	"amylase":              3,
+	"amp":                  1,
+	"amt":                  1,
+	"amu":                  1,
+	"ana":                  2,
+	"anabolic":             4,
+	"anaconda":             4,
+	"anagram":              3,
+	"analog":               3,
+	"analogue":             3,
+	"analyser":             4,
+	"analysing":            4,
+	"analyse":              3,
+	"analysed":             3,
+	"analyst":              3,
+	"analytical":           5,
+	"analytically":         6,
+	"analytic":             4,
+	"analytics":            4,
+	"analyzer":             4,
+	"analyzing":            4,
+	"analyze":              3,
+	"analyzed":             3,
+	"anamorphic":           4,
+	"anaphylaxis":          5,
+	"anatomical":           5,
+	"anatomic":             4,
+	"anaerobic":            4,
+	"anaesthesia":          4,
+	"anaesthetic":          4,
+	"analgesia":            5,
+	"analgesic":            4,
+	"anarchism":            3,
+	"anarchist":            3,
+	"anarchy":              3,
+	"ancestor":             3,
+	"ancestral":            3,
+	"ancestry":             3,
+	"anchor":               2,
+	"anchorage":            3,
+	"anchorman":            3,
+	"ancient":              2,
+	"ancillary":            4,
+	"ancona":               3,
+	"andante":              3,
+	"androgen":             3,
+	"android":              2,
+	"andromeda":            4,
+	"anecdotal":            4,
+	"anecdote":             3,
+	"anesthesiology":       7,
+	"anesthesia":           4,
+	"anesthetic":           4,
+	"aneurysm":             3,
+	"angelique":            3,
+	"angelus":              3,
+	"angel":                2,
+	"angelic":              3,
+	"angelica":             4,
+	"anger":                2,
+	"angina":               3,
+	"angle":                2,
+	"angled":               2,
+	"angler":               2,
+	"angling":              2,
+	"angora":               3,
+	"angrily":              3,
+	"angry":                2,
+	"angular":              3,
+	"anguish":              2,
+	"anhydrous":            3,
+	"anima":                3,
+	"animation":            4,
+	"animator":             4,
+	"animal":               3,
+	"animated":             4,
+	"animating":            4,
+	"animate":              3,
+	"anime":                3,
+	"animosity":            5,
+	"anion":                3,
+	"anisotropic":          5,
+	"anisotropy":           5,
+	"anil":                 2,
+	"anise":                2,
+	"ankle":                2,
+	"anklet":               2,
+	"anna":                 2,
+	"annals":               2,
+	"annex":                2,
+	"annexation":           4,
+	"annexe":               2,
+	"annihilation":         5,
+	"anniversary":          5,
+	"annotation":           4,
+	"annotated":            4,
+	"annotate":             3,
+	"announcer":            3,
+	"announcing":           3,
+	"announce":             2,
+	"announcement":         3,
+	"announced":            2,
+	"annoy":                2,
+	"annoyance":            3,
+	"annoying":             3,
+	"annual":               3,
+	"annually":             4,
+	"annuity":              4,
+	"annular":              3,
+	"annulment":            3,
+	"anodized":             3,
+	"anonymity":            5,
+	"anorexia":             5,
+	"anode":                2,
+	"another":              3,
+	"answer":               2,
+	"answerer":             3,
+	"antagonistic":         5,
+	"antagonism":           4,
+	"antagonist":           4,
+	"ante":                 2,
+	"antecedent":           4,
+	"antecedents":          4,
+	"antelope":             3,
+	"antenatal":            4,
+	"anterior":             4,
+	"antenna":              3,
+	"antennae":             3,
+	"antennas":             3,
+	"anthem":               2,
+	"anthology":            4,
+	"anthracite":           3,
+	"anthrax":              2,
+	"anthropological":      6,
+	"anthropologist":       5,
+	"anthropology":         5,
+	"anti":                 2,
+	"antibacterial":        6,
+	"antibiotic":           5,
+	"antibodies":           4,
+	"antibody":             4,
+	"anticoagulant":        6,
+	"antidepressant":       5,
+	"antidote":             3,
+	"antifreeze":           3,
+	"antifungal":           4,
+	"antigen":              3,
+	"antigenic":            4,
+	"antimicrobial":        6,
+	"antimony":             4,
+	"antioxidant":          5,
+	"antiquarian":          5,
+	"antiquated":           4,
+	"antiseptic":           4,
+	"antisocial":           4,
+	"antistatic":           4,
+	"antitrust":            3,
+	"antiviral":            4,
+	"antivirus":            4,
+	"antiwar":              3,
+	"anticipation":         5,
+	"anticipatory":         6,
+	"anticipated":          5,
+	"anticipating":         5,
+	"anticipate":           4,
+	"antics":               2,
+	"antiquities":          4,
+	"antiquity":            4,
+	"antique":              2,
+	"antiqued":             2,
+	"antithesis":           4,
+	"anvil":                2,
+	"any":                  2,
+	"anybody":              4,
+	"anyhow":               3,
+	"anymore":              3,
+	"anyone":               3,
+	"anyplace":             3,
+	"anything":             3,
+	"anytime":              3,
+	"anyway":               3,
+	"anyways":              3,
+	"anywhere":             3,
+	"anal":                 1,
+	"anat":                 1,
+	"i":                    1,
+	"and":                  1,
+	"ane":                  1,
+	"angst":                1,
+	"anim":                 1,
+	"ankh":                 1,
+	"ann":                  1,
+	"anon":                 1,
+	"ant":                  1,
+	"antarctic":            3,
+	"antler":               2,
+	"anxiety":              4,
+	"anxious":              2,
+	"anxiously":            3,
+	"apathetic":            4,
+	"apathy":               3,
+	"aperture":             3,
+	"apical":               3,
+	"apnea":                3,
+	"apogee":               3,
+	"apostolic":            4,
+	"apparatus":            4,
+	"apparition":           4,
+	"appalling":            3,
+	"appalled":             2,
+	"apparel":              3,
+	"apparent":             3,
+	"apparently":           4,
+	"appetite":             3,
+	"appetizer":            4,
+	"appeal":               2,
+	"appealing":            3,
+	"appear":               2,
+	"appearance":           3,
+	"appease":              2,
+	"appel":                2,
+	"appellation":          4,
+	"appellant":            3,
+	"appellate":            3,
+	"appellee":             3,
+	"appendices":           4,
+	"appendicitis":         5,
+	"appendix":             3,
+	"appendixes":           4,
+	"append":               2,
+	"applaud":              2,
+	"applause":             2,
+	"apple":                2,
+	"applesauce":           3,
+	"apples":               2,
+	"appliance":            3,
+	"applicability":        6,
+	"applicable":           4,
+	"application":          4,
+	"applicator":           4,
+	"applicant":            3,
+	"applique":             3,
+	"applied":              2,
+	"apply":                2,
+	"applying":             3,
+	"appoint":              2,
+	"appointed":            3,
+	"appointee":            3,
+	"appointment":          3,
+	"apportionment":        4,
+	"appraisal":            3,
+	"appraiser":            3,
+	"appraising":           3,
+	"appraise":             2,
+	"appraised":            2,
+	"appreciable":          5,
+	"appreciation":         5,
+	"appreciated":          5,
+	"appreciating":         5,
+	"appreciate":           4,
+	"appreciative":         4,
+	"apprehension":         4,
+	"apprehensive":         4,
+	"apprehend":            3,
+	"apprentice":           3,
+	"apprenticeship":       4,
+	"appro":                2,
+	"approbation":          4,
+	"appropriation":        5,
+	"appropriated":         5,
+	"appropriating":        5,
+	"appropriate":          4,
+	"appropriately":        5,
+	"appropriateness":      5,
+	"approach":             2,
+	"approachable":         4,
+	"approval":             3,
+	"approver":             3,
+	"approving":            3,
+	"approve":              2,
+	"approved":             2,
+	"approximation":        5,
+	"approximated":         5,
+	"approximating":        5,
+	"approximate":          4,
+	"approximately":        5,
+	"apricot":              3,
+	"apropos":              3,
+	"aptitude":             3,
+	"ape":                  1,
+	"aphrodisiac":          5,
+	"app":                  1,
+	"approx":               1,
+	"apt":                  1,
+	"aptly":                2,
+	"aqua":                 2,
+	"aquaculture":          4,
+	"aquamarine":           4,
+	"aqueduct":             3,
+	"aquifer":              3,
+	"arabesque":            3,
+	"arable":               3,
+	"arbiter":              3,
+	"arbitration":          4,
+	"arbitrator":           4,
+	"arbitrage":            3,
+	"arbitral":             3,
+	"arbitrarily":          5,
+	"arbitrary":            4,
+	"arboretum":            4,
+	"arbor":                2,
+	"arca":                 2,
+	"arcana":               3,
+	"arcade":               2,
+	"arcane":               2,
+	"archaic":              3,
+	"archaeological":       6,
+	"archaeologist":        5,
+	"archaeology":          5,
+	"archeological":        6,
+	"archeology":           5,
+	"archetypal":           4,
+	"archetype":            3,
+	"archery":              3,
+	"archipelago":          5,
+	"architectural":        5,
+	"architecture":         4,
+	"architect":            3,
+	"archival":             3,
+	"archivist":            3,
+	"archive":              2,
+	"archives":             2,
+	"arco":                 2,
+	"ardent":               2,
+	"ardour":               2,
+	"arduous":              3,
+	"area":                 3,
+	"areal":                3,
+	"argentine":            3,
+	"argent":               2,
+	"arginine":             3,
+	"argosy":               3,
+	"argon":                2,
+	"arguing":              3,
+	"argumentation":        5,
+	"argumentative":        5,
+	"argument":             3,
+	"argue":                2,
+	"argued":               2,
+	"argyle":               2,
+	"ariel":                3,
+	"arid":                 2,
+	"aristocracy":          5,
+	"armada":               3,
+	"armadillo":            4,
+	"armament":             3,
+	"armature":             3,
+	"armistice":            3,
+	"armoire":              2,
+	"armor":                2,
+	"armory":               3,
+	"armored":              2,
+	"armour":               2,
+	"armoured":             2,
+	"army":                 2,
+	"arnica":               3,
+	"aromatic":             4,
+	"arraignment":          3,
+	"arranger":             3,
+	"arranging":            3,
+	"arrange":              2,
+	"arrangement":          3,
+	"arranged":             2,
+	"array":                2,
+	"arrears":              2,
+	"arrest":               2,
+	"arresting":            3,
+	"arrhythmia":           4,
+	"arrival":              3,
+	"arriving":             3,
+	"arrive":               2,
+	"arrived":              2,
+	"arrogance":            3,
+	"arrogant":             3,
+	"arrow":                2,
+	"arrowhead":            3,
+	"arrows":               2,
+	"arroyo":               3,
+	"arsenal":              3,
+	"arsenic":              3,
+	"arson":                2,
+	"artefact":             3,
+	"artemisia":            5,
+	"arterial":             4,
+	"arteriosclerosis":     7,
+	"arteries":             3,
+	"artery":               3,
+	"arthritis":            3,
+	"artichoke":            3,
+	"article":              3,
+	"artifact":             3,
+	"artificial":           4,
+	"artificially":         5,
+	"artifice":             3,
+	"artisan":              3,
+	"artic":                2,
+	"articulation":         5,
+	"articular":            4,
+	"articulated":          5,
+	"articulating":         5,
+	"articulate":           4,
+	"artillery":            4,
+	"artistically":         5,
+	"artistic":             3,
+	"artiste":              2,
+	"aryl":                 2,
+	"arc":                  1,
+	"arctic":               2,
+	"arch":                 1,
+	"archangel":            3,
+	"archbishop":           3,
+	"archdiocese":          4,
+	"archer":               2,
+	"arching":              2,
+	"archway":              2,
+	"arched":               1,
+	"arcs":                 1,
+	"are":                  1,
+	"ark":                  1,
+	"arles":                1,
+	"arm":                  1,
+	"armband":              2,
+	"armchair":             2,
+	"arming":               2,
+	"armpit":               2,
+	"armrest":              2,
+	"armed":                1,
+	"arms":                 1,
+	"arr":                  1,
+	"arse":                 1,
+	"art":                  1,
+	"artful":               2,
+	"artist":               2,
+	"artistry":             3,
+	"artwork":              2,
+	"arty":                 2,
+	"arts":                 1,
+	"asbestos":             3,
+	"ascension":            3,
+	"ascend":               2,
+	"ascendant":            3,
+	"ascending":            3,
+	"ascent":               2,
+	"ascertain":            3,
+	"ascot":                2,
+	"ascribe":              2,
+	"ascribed":             2,
+	"asparagus":            4,
+	"aspect":               2,
+	"aspen":                2,
+	"aspergillus":          4,
+	"asphalt":              2,
+	"aspiration":           4,
+	"aspirin":              3,
+	"aspiring":             3,
+	"aspire":               2,
+	"assailant":            3,
+	"assam":                2,
+	"assassination":        5,
+	"assassinated":         5,
+	"assassinate":          4,
+	"assassin":             3,
+	"assault":              2,
+	"assay":                2,
+	"assemblage":           3,
+	"assemble":             3,
+	"assembled":            3,
+	"assembler":            3,
+	"assembly":             3,
+	"assemblyman":          4,
+	"assent":               2,
+	"assertion":            3,
+	"assertive":            3,
+	"assertiveness":        4,
+	"assert":               2,
+	"asserted":             3,
+	"asses":                2,
+	"assessor":             3,
+	"assess":               2,
+	"assessable":           4,
+	"assessment":           3,
+	"asset":                2,
+	"assets":               2,
+	"assign":               2,
+	"assignable":           4,
+	"assignee":             3,
+	"assignment":           3,
+	"assimilation":         5,
+	"assimilated":          5,
+	"assimilate":           4,
+	"assistance":           3,
+	"assistant":            3,
+	"assist":               2,
+	"assistive":            3,
+	"association":          5,
+	"associative":          5,
+	"associated":           5,
+	"associating":          5,
+	"associate":            4,
+	"assorted":             3,
+	"assortment":           3,
+	"assuming":             3,
+	"assume":               2,
+	"assumed":              2,
+	"assumption":           3,
+	"assurance":            3,
+	"assuredly":            4,
+	"assuring":             3,
+	"assure":               2,
+	"assured":              2,
+	"aster":                2,
+	"asterisk":             3,
+	"asteroid":             3,
+	"astonishing":          4,
+	"astonishingly":        5,
+	"astonishment":         4,
+	"astounding":           3,
+	"astral":               2,
+	"astrobiology":         6,
+	"astrological":         5,
+	"astrometric":          4,
+	"astronautics":         4,
+	"astronaut":            3,
+	"astronomical":         5,
+	"astrophotography":     6,
+	"astrophysical":        5,
+	"astrophysics":         4,
+	"astrologer":           4,
+	"astrology":            4,
+	"astronomer":           4,
+	"astronomy":            4,
+	"astute":               2,
+	"asymptotically":       6,
+	"asymptotic":           4,
+	"ash":                  1,
+	"ashes":                2,
+	"ashram":               2,
+	"ashtray":              2,
+	"ask":                  1,
+	"asker":                2,
+	"asp":                  1,
+	"ass":                  1,
+	"assn":                 1,
+	"assoc":                1,
+	"asst":                 1,
+	"asthma":               2,
+	"asthmatic":            3,
+	"astron":               1,
+	"atelier":              3,
+	"atlas":                2,
+	"atlases":              3,
+	"atmospheric":          4,
+	"atmosphere":           3,
+	"atoll":                2,
+	"atom":                 2,
+	"atrophy":              3,
+	"atropine":             3,
+	"attache":              3,
+	"attaches":             3,
+	"attach":               2,
+	"attachment":           3,
+	"attached":             2,
+	"attack":               2,
+	"attacker":             3,
+	"attain":               2,
+	"attainable":           4,
+	"attainment":           3,
+	"attempt":              2,
+	"attention":            3,
+	"attentive":            3,
+	"attenuation":          5,
+	"attenuator":           5,
+	"attenuated":           5,
+	"attend":               2,
+	"attendance":           3,
+	"attendant":            3,
+	"attending":            3,
+	"attestation":          4,
+	"attest":               2,
+	"attested":             3,
+	"attitude":             3,
+	"attic":                2,
+	"attire":               2,
+	"attorney":             3,
+	"attraction":           3,
+	"attractive":           3,
+	"attractively":         4,
+	"attractiveness":       4,
+	"attractor":            3,
+	"attract":              2,
+	"attribution":          4,
+	"attrition":            3,
+	"attributable":         5,
+	"attributed":           4,
+	"attributing":          4,
+	"attribute":            3,
+	"attuned":              2,
+	"ate":                  1,
+	"athenaeum":            4,
+	"atherosclerosis":      6,
+	"athletic":             3,
+	"athletics":            3,
+	"athlete":              2,
+	"atm":                  1,
+	"att":                  1,
+	"attn":                 1,
+	"attrib":               1,
+	"atty":                 1,
+	"auberge":              2,
+	"auburn":               2,
+	"audacious":            3,
+	"audacity":             4,
+	"audible":              3,
+	"audience":             3,
+	"audio":                3,
+	"audiophile":           4,
+	"audiovisual":          6,
+	"audiology":            5,
+	"audition":             3,
+	"auditorium":           5,
+	"auditory":             4,
+	"auditor":              3,
+	"audit":                2,
+	"auger":                2,
+	"august":               2,
+	"aura":                 2,
+	"aural":                2,
+	"aureus":               3,
+	"aurora":               3,
+	"auroral":              3,
+	"auteur":               2,
+	"authentication":       5,
+	"authenticator":        5,
+	"authenticated":        5,
+	"authenticate":         4,
+	"authentic":            3,
+	"authenticity":         5,
+	"author":               2,
+	"authorisation":        5,
+	"authoritative":        5,
+	"authoritarian":        6,
+	"authority":            4,
+	"authorization":        5,
+	"authorising":          4,
+	"authorise":            3,
+	"authorised":           3,
+	"authorize":            3,
+	"authorized":           3,
+	"authorship":           3,
+	"authors":              2,
+	"autistic":             3,
+	"autism":               2,
+	"autobahn":             3,
+	"autobiographical":     7,
+	"autobiography":        6,
+	"autoclave":            3,
+	"autocorrelation":      6,
+	"autograph":            3,
+	"autoimmune":           4,
+	"automation":           4,
+	"automated":            4,
+	"automatically":        6,
+	"automatic":            4,
+	"automating":           4,
+	"automate":             3,
+	"automobile":           4,
+	"automotive":           4,
+	"autonomic":            4,
+	"autopilot":            4,
+	"automata":             4,
+	"automaton":            4,
+	"autonomous":           4,
+	"autonomy":             4,
+	"autopsy":              3,
+	"autumn":               2,
+	"auction":              2,
+	"auctioneer":           3,
+	"aud":                  1,
+	"aug":                  1,
+	"augmentation":         4,
+	"augment":              2,
+	"augmented":            3,
+	"auk":                  1,
+	"auld":                 1,
+	"aunt":                 1,
+	"auntie":               2,
+	"auspicious":           3,
+	"auspices":             3,
+	"austere":              2,
+	"austral":              2,
+	"auth":                 1,
+	"auto":                 1,
+	"aux":                  1,
+	"auxiliaries":          4,
+	"auxiliary":            4,
+	"avalanche":            3,
+	"avatar":               3,
+	"avenue":               3,
+	"aventail":             3,
+	"averaging":            4,
+	"average":              3,
+	"averaged":             3,
+	"avid":                 2,
+	"avocado":              4,
+	"ave":                  1,
+	"avg":                  1,
+	"avn":                  1,
+	"avoir":                1,
+	"awful":                2,
+	"awfully":              3,
+	"awe":                  1,
+	"awesome":              2,
+	"awkward":              2,
+	"awkwardly":            3,
+	"awning":               2,
+	"axel":                 2,
+	"axes":                 2,
+	"axial":                3,
+	"axiomatic":            5,
+	"axiom":                3,
+	"axillary":             4,
+	"axis":                 2,
+	"axle":                 2,
+	"axon":                 2,
+	"axe":                  1,
+	"aye":                  1,
+	"azimuth":              3,
+	"azide":                2,
+	"azo":                  2,
+	"azure":                2,
+	"baba":                 2,
+	"baboon":               2,
+	"babu":                 2,
+	"baby":                 2,
+	"bacillus":             3,
+	"bacon":                2,
+	"bagel":                2,
+	"baguette":             2,
+	"bananas":              3,
+	"banal":                2,
+	"banana":               3,
+	"barometer":            4,
+	"baroque":              2,
+	"basal":                2,
+	"basically":            4,
+	"basic":                2,
+	"basilica":             4,
+	"basin":                2,
+	"basis":                2,
+	"bathymetry":           4,
+	"batik":                2,
+	"baton":                2,
+	"bazaar":               2,
+	"bazar":                2,
+	"bazooka":              3,
+	"baa":                  1,
+	"baal":                 1,
+	"babbitt":              2,
+	"babble":               2,
+	"babbler":              2,
+	"babbling":             2,
+	"babe":                 1,
+	"baccalaureate":        5,
+	"baccarat":             3,
+	"bacteria":             4,
+	"bacterial":            4,
+	"bacteriophage":        5,
+	"bacteriology":         6,
+	"bacterium":            4,
+	"bach":                 1,
+	"bachelor":             3,
+	"back":                 1,
+	"backbone":             2,
+	"backdoor":             2,
+	"backdrop":             2,
+	"backer":               2,
+	"backfill":             2,
+	"backfire":             2,
+	"backflow":             2,
+	"backgammon":           3,
+	"background":           2,
+	"backhand":             2,
+	"backing":              2,
+	"backlash":             2,
+	"backlit":              2,
+	"backlog":              2,
+	"backpack":             2,
+	"backpacker":           3,
+	"backrest":             2,
+	"backside":             2,
+	"backspace":            2,
+	"backstage":            2,
+	"backstreet":           2,
+	"backstroke":           2,
+	"backup":               2,
+	"backwater":            3,
+	"backward":             2,
+	"backwards":            2,
+	"backyard":             2,
+	"backed":               1,
+	"bad":                  1,
+	"badlands":             2,
+	"badly":                2,
+	"badminton":            3,
+	"badness":              2,
+	"bade":                 1,
+	"badger":               2,
+	"badge":                1,
+	"baffle":               2,
+	"baffling":             2,
+	"bag":                  1,
+	"baggage":              2,
+	"bagging":              2,
+	"baggy":                2,
+	"bagpipe":              2,
+	"bagpipes":             2,
+	"bags":                 1,
+	"bah":                  1,
+	"baht":                 1,
+	"bai":                  1,
+	"bailey":               2,
+	"bail":                 1,
+	"bailiff":              2,
+	"bait":                 1,
+	"baker":                2,
+	"bakeries":             3,
+	"bakery":               3,
+	"baking":               2,
+	"bake":                 1,
+	"bakeware":             2,
+	"bal":                  1,
+	"balancer":             3,
+	"balancing":            3,
+	"balance":              2,
+	"balanced":             2,
+	"balboa":               3,
+	"balcony":              3,
+	"ballad":               2,
+	"ballast":              2,
+	"ballerina":            4,
+	"ballet":               2,
+	"ballets":              2,
+	"ballistic":            3,
+	"ballon":               2,
+	"balloon":              2,
+	"ballot":               2,
+	"balloting":            3,
+	"bally":                2,
+	"balsa":                2,
+	"balsam":               2,
+	"balsamic":             3,
+	"bald":                 1,
+	"balding":              2,
+	"baldness":             2,
+	"bale":                 1,
+	"balk":                 1,
+	"ball":                 1,
+	"baller":               2,
+	"ballpark":             2,
+	"ballpoint":            2,
+	"ballroom":             2,
+	"balls":                1,
+	"balm":                 1,
+	"bamboo":               2,
+	"ban":                  1,
+	"bandana":              3,
+	"bandicoot":            3,
+	"bandit":               2,
+	"bandits":              2,
+	"bangle":               2,
+	"banish":               2,
+	"banjo":                2,
+	"banner":               2,
+	"banning":              2,
+	"bannister":            3,
+	"banquet":              2,
+	"banqueting":           3,
+	"banshee":              2,
+	"bantam":               2,
+	"banter":               2,
+	"banyan":               2,
+	"banc":                 1,
+	"band":                 1,
+	"bandage":              2,
+	"banded":               2,
+	"banding":              2,
+	"bandwagon":            3,
+	"bandwidth":            2,
+	"bane":                 1,
+	"bang":                 1,
+	"banger":               2,
+	"bank":                 1,
+	"banker":               2,
+	"banking":              2,
+	"bankroll":             2,
+	"bankrupt":             2,
+	"bankruptcy":           3,
+	"bans":                 1,
+	"bap":                  1,
+	"baptismal":            3,
+	"baptised":             2,
+	"baptism":              2,
+	"baptized":             2,
+	"bapt":                 1,
+	"bar":                  1,
+	"barbarian":            4,
+	"barbaric":             3,
+	"barbecue":             3,
+	"barbeque":             3,
+	"barbell":              2,
+	"barber":               2,
+	"barbershop":           3,
+	"barbican":             3,
+	"barfly":               2,
+	"bargain":              2,
+	"baritone":             3,
+	"barium":               3,
+	"baring":               2,
+	"barley":               2,
+	"barman":               2,
+	"barney":               2,
+	"barometric":           4,
+	"baron":                2,
+	"baroness":             3,
+	"barr":                 2,
+	"barracuda":            4,
+	"barrack":              2,
+	"barracks":             2,
+	"barrage":              2,
+	"barrel":               2,
+	"barren":               2,
+	"barricade":            3,
+	"barrier":              3,
+	"barring":              2,
+	"barrio":               2,
+	"barrister":            3,
+	"barrow":               2,
+	"barry":                2,
+	"bartender":            3,
+	"barter":               2,
+	"barton":               2,
+	"baryon":               3,
+	"barb":                 1,
+	"barbed":               1,
+	"bard":                 1,
+	"bare":                 1,
+	"bareback":             2,
+	"barefoot":             2,
+	"barely":               2,
+	"barge":                1,
+	"bark":                 1,
+	"barker":               2,
+	"barm":                 1,
+	"barn":                 1,
+	"barnyard":             2,
+	"barre":                1,
+	"barred":               1,
+	"basalt":               2,
+	"bases":                2,
+	"basil":                2,
+	"basing":               2,
+	"basket":               2,
+	"basketball":           3,
+	"basset":               2,
+	"bassinet":             3,
+	"basso":                2,
+	"bassoon":              2,
+	"bastard":              2,
+	"bastille":             2,
+	"bastion":              2,
+	"base":                 1,
+	"baseball":             2,
+	"baseboard":            2,
+	"baseline":             2,
+	"baseman":              2,
+	"basement":             2,
+	"bash":                 1,
+	"bask":                 1,
+	"bass":                 1,
+	"basses":               2,
+	"bassist":              2,
+	"bast":                 1,
+	"bat":                  1,
+	"batman":               2,
+	"battalion":            3,
+	"batterie":             3,
+	"batted":               2,
+	"batten":               2,
+	"batter":               2,
+	"batteries":            3,
+	"battery":              3,
+	"batting":              2,
+	"battle":               2,
+	"battlefield":          3,
+	"battlefront":          3,
+	"battleground":         3,
+	"battleship":           3,
+	"battled":              2,
+	"batty":                2,
+	"batch":                1,
+	"bate":                 1,
+	"bath":                 1,
+	"bathing":              2,
+	"bathrobe":             2,
+	"bathroom":             2,
+	"bathtub":              2,
+	"bathe":                1,
+	"bats":                 1,
+	"batsman":              2,
+	"batt":                 1,
+	"baud":                 1,
+	"bauxite":              2,
+	"bay":                  1,
+	"bayard":               2,
+	"bayonet":              3,
+	"bayou":                2,
+	"bbl":                  1,
+	"bdl":                  1,
+	"bds":                  1,
+	"bebop":                2,
+	"became":               2,
+	"because":              2,
+	"becoming":             3,
+	"become":               2,
+	"before":               2,
+	"beforehand":           3,
+	"began":                2,
+	"begin":                2,
+	"beginner":             3,
+	"beginning":            3,
+	"begotten":             3,
+	"begun":                2,
+	"behalf":               2,
+	"behavior":             3,
+	"behavioral":           4,
+	"behaviour":            3,
+	"behave":               2,
+	"behaved":              2,
+	"behemoth":             3,
+	"beheld":               2,
+	"behest":               2,
+	"behind":               2,
+	"behold":               2,
+	"beholder":             3,
+	"being":                2,
+	"bejeweled":            3,
+	"belated":              3,
+	"belay":                2,
+	"belief":               2,
+	"believable":           4,
+	"believer":             3,
+	"believe":              2,
+	"believed":             2,
+	"belive":               2,
+	"belong":               2,
+	"belonging":            3,
+	"belongings":           3,
+	"beloved":              3,
+	"below":                2,
+	"beluga":               3,
+	"beneath":              2,
+	"benevolence":          4,
+	"benevolent":           4,
+	"benign":               2,
+	"bequest":              2,
+	"bereavement":          3,
+	"beret":                2,
+	"beryllium":            4,
+	"beseech":              2,
+	"beset":                2,
+	"beside":               2,
+	"besides":              2,
+	"besieged":             2,
+	"bespoke":              2,
+	"bestow":               2,
+	"beta":                 2,
+	"betray":               2,
+	"betrayal":             3,
+	"between":              2,
+	"beware":               2,
+	"beyond":               2,
+	"beacon":               2,
+	"beagle":               2,
+	"beaver":               2,
+	"beach":                1,
+	"beachcomber":          3,
+	"bead":                 1,
+	"beaded":               2,
+	"beading":              2,
+	"beadwork":             2,
+	"beak":                 1,
+	"beaker":               2,
+	"beam":                 1,
+	"beaming":              2,
+	"bean":                 1,
+	"beanie":               2,
+	"beano":                2,
+	"bear":                 1,
+	"bearer":               2,
+	"bearing":              2,
+	"bearings":             2,
+	"bearish":              2,
+	"beard":                1,
+	"bearded":              2,
+	"beast":                1,
+	"beastie":              2,
+	"beat":                 1,
+	"beaten":               2,
+	"beater":               2,
+	"beating":              2,
+	"beau":                 1,
+	"beautification":       5,
+	"beautiful":            3,
+	"beautifully":          4,
+	"beauty":               2,
+	"beaux":                1,
+	"beck":                 1,
+	"becket":               2,
+	"bed":                  1,
+	"bedded":               2,
+	"bedding":              2,
+	"bedlam":               2,
+	"bedrock":              2,
+	"bedroom":              2,
+	"bedside":              2,
+	"bedspread":            2,
+	"bedstead":             2,
+	"bedtime":              2,
+	"bee":                  1,
+	"beehive":              2,
+	"beekeeping":           3,
+	"beetle":               2,
+	"beech":                1,
+	"beechwood":            2,
+	"beef":                 1,
+	"beefy":                2,
+	"been":                 1,
+	"beep":                 1,
+	"beeper":               2,
+	"beer":                 1,
+	"beeswax":              2,
+	"beet":                 1,
+	"beg":                  1,
+	"beggar":               2,
+	"beige":                1,
+	"bel":                  1,
+	"belfry":               2,
+	"belladonna":           4,
+	"bellied":              2,
+	"belligerent":          4,
+	"bellow":               2,
+	"bellows":              2,
+	"belly":                2,
+	"belvedere":            3,
+	"belcher":              2,
+	"bell":                 1,
+	"bellflower":           3,
+	"bellman":              2,
+	"belle":                1,
+	"belt":                 1,
+	"belted":               2,
+	"belting":              2,
+	"beltway":              2,
+	"ben":                  1,
+	"benedict":             3,
+	"benefactor":           4,
+	"beneficiaries":        6,
+	"beneficial":           4,
+	"beneficially":         5,
+	"beneficiary":          5,
+	"benefit":              3,
+	"benefited":            4,
+	"benjamin":             3,
+	"bennet":               2,
+	"benny":                2,
+	"benthic":              2,
+	"benzene":              2,
+	"benzyl":               2,
+	"bench":                1,
+	"benchmark":            2,
+	"bend":                 1,
+	"bender":               2,
+	"bending":              2,
+	"bends":                1,
+	"bene":                 1,
+	"bent":                 1,
+	"beretta":              3,
+	"bergamot":             3,
+	"berlin":               2,
+	"berry":                2,
+	"berserk":              2,
+	"bertha":               2,
+	"beryl":                2,
+	"berg":                 1,
+	"berk":                 1,
+	"berth":                1,
+	"bestiality":           5,
+	"bestiary":             4,
+	"bestial":              2,
+	"best":                 1,
+	"bet":                  1,
+	"betta":                2,
+	"better":               2,
+	"betterment":           3,
+	"betting":              2,
+	"betty":                2,
+	"beth":                 1,
+	"bethel":               2,
+	"bevel":                2,
+	"beveled":              2,
+	"beverage":             3,
+	"bey":                  1,
+	"bezel":                2,
+	"bhp":                  1,
+	"bias":                 2,
+	"biased":               2,
+	"biathlon":             3,
+	"bicarbonate":          4,
+	"bicentennial":         5,
+	"biceps":               2,
+	"bicycle":              3,
+	"bidet":                2,
+	"bidi":                 2,
+	"bidirectional":        5,
+	"biennial":             4,
+	"biennium":             4,
+	"bifocal":              3,
+	"bifurcation":          4,
+	"bijou":                2,
+	"bikini":               3,
+	"bilateral":            4,
+	"bilingual":            3,
+	"bimonthly":            3,
+	"binary":               3,
+	"binomial":             4,
+	"bioassay":             4,
+	"biochemical":          5,
+	"biochemistry":         5,
+	"biodegradable":        6,
+	"bioengineering":       6,
+	"biofeedback":          4,
+	"biogeography":         6,
+	"biogenesis":           5,
+	"biographical":         5,
+	"biological":           5,
+	"biologically":         6,
+	"biologic":             4,
+	"biomass":              3,
+	"biomedical":           5,
+	"biometric":            4,
+	"biometrics":           4,
+	"biophysical":          5,
+	"biophysics":           4,
+	"biosphere":            3,
+	"biosynthesis":         5,
+	"biota":                3,
+	"biotechnology":        6,
+	"biotin":               3,
+	"biographer":           4,
+	"biography":            4,
+	"biologist":            4,
+	"biology":              4,
+	"bionic":               3,
+	"biopsy":               3,
+	"biotic":               3,
+	"bipartisan":           4,
+	"bipolar":              3,
+	"bisexual":             4,
+	"bison":                2,
+	"bitumen":              3,
+	"bituminous":           4,
+	"biweekly":             3,
+	"bizarre":              2,
+	"bib":                  1,
+	"biblical":             3,
+	"bibliographic":        5,
+	"bibliography":         5,
+	"bibb":                 1,
+	"bibl":                 1,
+	"bice":                 1,
+	"bickering":            3,
+	"bid":                  1,
+	"bidder":               2,
+	"bidding":              2,
+	"bienvenue":            3,
+	"bier":                 1,
+	"biff":                 1,
+	"big":                  1,
+	"bigger":               2,
+	"biggest":              2,
+	"biggie":               2,
+	"bighorn":              2,
+	"bigot":                2,
+	"bigotry":              3,
+	"bight":                1,
+	"biking":               2,
+	"bike":                 1,
+	"bilbo":                2,
+	"biliary":              4,
+	"bilirubin":            4,
+	"billable":             3,
+	"billabong":            3,
+	"billet":               2,
+	"billiard":             2,
+	"billiards":            2,
+	"billion":              2,
+	"billionaire":          3,
+	"billy":                2,
+	"bile":                 1,
+	"bilge":                1,
+	"bill":                 1,
+	"billboard":            2,
+	"billing":              2,
+	"bimbo":                2,
+	"bin":                  1,
+	"binaural":             3,
+	"bingo":                2,
+	"binning":              2,
+	"binocular":            4,
+	"binoculars":           4,
+	"bind":                 1,
+	"binder":               2,
+	"bindery":              3,
+	"binding":              2,
+	"bing":                 1,
+	"binge":                1,
+	"biol":                 1,
+	"birch":                1,
+	"bird":                 1,
+	"birdhouses":           3,
+	"birdhouse":            2,
+	"birdie":               2,
+	"birdman":              2,
+	"birr":                 1,
+	"birth":                1,
+	"birthday":             2,
+	"birthplace":           2,
+	"birthright":           2,
+	"birthstone":           2,
+	"bis":                  1,
+	"biscuit":              2,
+	"bismuth":              2,
+	"bistro":               2,
+	"bishop":               2,
+	"bisque":               1,
+	"bist":                 1,
+	"bit":                  1,
+	"biting":               2,
+	"bitte":                2,
+	"bitten":               2,
+	"bitter":               2,
+	"bitterly":             3,
+	"bitterness":           3,
+	"bittersweet":          3,
+	"bitty":                2,
+	"bitch":                1,
+	"bite":                 1,
+	"biz":                  1,
+	"bks":                  1,
+	"blas":                 2,
+	"blatant":              2,
+	"blatantly":            3,
+	"black":                1,
+	"blackberry":           3,
+	"blackbird":            2,
+	"blackboard":           2,
+	"blackjack":            2,
+	"blacklist":            2,
+	"blackmail":            2,
+	"blackness":            2,
+	"blackout":             2,
+	"blacksmith":           2,
+	"blackwood":            2,
+	"bladder":              2,
+	"blade":                1,
+	"blah":                 1,
+	"blaming":              2,
+	"blame":                1,
+	"blamed":               1,
+	"blanket":              2,
+	"blanc":                1,
+	"bland":                1,
+	"blank":                1,
+	"blasphemy":            3,
+	"blast":                1,
+	"blasted":              2,
+	"blaster":              2,
+	"blasting":             2,
+	"blather":              2,
+	"blazer":               2,
+	"blazes":               2,
+	"blazing":              2,
+	"blaze":                1,
+	"bldg":                 1,
+	"bleach":               1,
+	"bleachers":            2,
+	"bleak":                1,
+	"bleed":                1,
+	"bleeding":             2,
+	"bleep":                1,
+	"blemish":              2,
+	"blend":                1,
+	"blended":              2,
+	"blender":              2,
+	"blending":             2,
+	"bless":                1,
+	"blessed":              2,
+	"blessing":             2,
+	"blew":                 1,
+	"blight":               1,
+	"blimp":                1,
+	"blind":                1,
+	"blindfold":            2,
+	"blinding":             2,
+	"blindly":              2,
+	"blindness":            2,
+	"blink":                1,
+	"blinking":             2,
+	"blinks":               1,
+	"blip":                 1,
+	"blister":              2,
+	"bliss":                1,
+	"blissful":             2,
+	"blitz":                1,
+	"blitzkrieg":           2,
+	"blizzard":             2,
+	"blk":                  1,
+	"bloat":                1,
+	"bloated":              2,
+	"blob":                 1,
+	"bloc":                 1,
+	"block":                1,
+	"blockade":             2,
+	"blockage":             2,
+	"blockbuster":          3,
+	"blocker":              2,
+	"blocking":             2,
+	"blocked":              1,
+	"bloke":                1,
+	"blond":                1,
+	"blonde":               1,
+	"blood":                1,
+	"blooded":              2,
+	"bloodhound":           2,
+	"bloodline":            2,
+	"bloodshed":            2,
+	"bloodstream":          2,
+	"bloody":               2,
+	"bloom":                1,
+	"bloomer":              2,
+	"blooming":             2,
+	"blossom":              2,
+	"blot":                 1,
+	"blotter":              2,
+	"blotting":             2,
+	"blouse":               1,
+	"blow":                 1,
+	"blower":               2,
+	"blowfish":             2,
+	"blowing":              2,
+	"blowout":              2,
+	"blown":                1,
+	"bluish":               2,
+	"blue":                 1,
+	"blueberry":            3,
+	"bluebird":             2,
+	"bluebonnet":           3,
+	"bluefish":             2,
+	"bluegrass":            2,
+	"blueprint":            2,
+	"blues":                1,
+	"bluff":                1,
+	"blunder":              2,
+	"blunt":                1,
+	"bluntly":              2,
+	"blur":                 1,
+	"blurring":             2,
+	"blurry":               2,
+	"blurb":                1,
+	"blush":                1,
+	"boa":                  2,
+	"boas":                 2,
+	"bodega":               3,
+	"bogey":                2,
+	"bogus":                2,
+	"bola":                 2,
+	"bolero":               3,
+	"boliviano":            4,
+	"bolo":                 2,
+	"bologna":              3,
+	"bolus":                2,
+	"bonanza":              3,
+	"bonito":               3,
+	"bonus":                2,
+	"bonuses":              3,
+	"bora":                 2,
+	"boreal":               3,
+	"boron":                2,
+	"botanical":            4,
+	"botanic":              3,
+	"bovine":               2,
+	"boar":                 1,
+	"board":                1,
+	"boarder":              2,
+	"boarding":             2,
+	"boardroom":            2,
+	"boardwalk":            2,
+	"boast":                1,
+	"boat":                 1,
+	"boater":               2,
+	"boathouse":            2,
+	"boating":              2,
+	"bob":                  1,
+	"bobbin":               2,
+	"bobbing":              2,
+	"bobble":               2,
+	"bobby":                2,
+	"bobcat":               2,
+	"bobsled":              2,
+	"bobs":                 1,
+	"bock":                 1,
+	"bod":                  1,
+	"bodily":               3,
+	"bodice":               2,
+	"bodied":               2,
+	"bodies":               2,
+	"body":                 2,
+	"bodyguard":            3,
+	"bodywork":             3,
+	"bode":                 1,
+	"bog":                  1,
+	"boil":                 1,
+	"boiler":               2,
+	"boiling":              2,
+	"boiled":               1,
+	"bolivar":              3,
+	"bollocks":             2,
+	"bolshevik":            3,
+	"bolster":              2,
+	"bold":                 1,
+	"boldface":             2,
+	"boldly":               2,
+	"boldness":             2,
+	"boll":                 1,
+	"bolt":                 1,
+	"bombardier":           3,
+	"bombardment":          3,
+	"bomb":                 1,
+	"bomber":               2,
+	"bombshell":            2,
+	"bonaventure":          4,
+	"boner":                2,
+	"bonfire":              2,
+	"bongo":                2,
+	"boning":               2,
+	"bonjour":              2,
+	"bonnet":               2,
+	"bonnie":               2,
+	"bonny":                2,
+	"bonsai":               2,
+	"bony":                 2,
+	"bond":                 1,
+	"bondage":              2,
+	"bonded":               2,
+	"bone":                 1,
+	"boneless":             2,
+	"boned":                1,
+	"bong":                 1,
+	"bonne":                1,
+	"boo":                  1,
+	"booby":                2,
+	"booty":                2,
+	"boob":                 1,
+	"boogie":               2,
+	"book":                 1,
+	"bookcase":             2,
+	"bookie":               2,
+	"booking":              2,
+	"bookish":              2,
+	"bookkeeper":           3,
+	"bookkeeping":          3,
+	"booklet":              2,
+	"bookmaker":            3,
+	"bookman":              2,
+	"bookmark":             2,
+	"bookseller":           3,
+	"bookshelf":            2,
+	"bookshop":             2,
+	"bookstore":            2,
+	"bookworm":             2,
+	"boolean":              3,
+	"boom":                 1,
+	"boomer":               2,
+	"boomerang":            3,
+	"boon":                 1,
+	"boost":                1,
+	"booster":              2,
+	"boot":                 1,
+	"booted":               2,
+	"bootleg":              2,
+	"bootloader":           3,
+	"bootstrap":            2,
+	"booth":                1,
+	"boots":                1,
+	"booze":                1,
+	"bop":                  1,
+	"bor":                  1,
+	"border":               2,
+	"borderless":           3,
+	"borderline":           3,
+	"bordered":             2,
+	"borer":                2,
+	"boring":               2,
+	"borough":              2,
+	"borrow":               2,
+	"borrower":             3,
+	"borrowing":            3,
+	"bord":                 1,
+	"bore":                 1,
+	"boredom":              2,
+	"borehole":             2,
+	"born":                 1,
+	"borne":                1,
+	"bosom":                2,
+	"boson":                2,
+	"boston":               2,
+	"bosh":                 1,
+	"boss":                 1,
+	"bossier":              3,
+	"bot":                  1,
+	"botany":               3,
+	"bottle":               2,
+	"bottleneck":           3,
+	"bottom":               2,
+	"bottomless":           3,
+	"bottoms":              2,
+	"both":                 1,
+	"bother":               2,
+	"bothersome":           3,
+	"bots":                 1,
+	"bott":                 1,
+	"boudoir":              2,
+	"bouquet":              2,
+	"boutique":             2,
+	"bough":                1,
+	"bought":               1,
+	"bouillon":             2,
+	"boulder":              2,
+	"bouldering":           3,
+	"boulevard":            2,
+	"bountiful":            3,
+	"bounty":               2,
+	"bouncer":              2,
+	"bouncing":             2,
+	"bouncy":               2,
+	"bounce":               1,
+	"bound":                1,
+	"boundary":             3,
+	"bounded":              2,
+	"boundless":            2,
+	"bounds":               1,
+	"bourbon":              2,
+	"bourgeoisie":          3,
+	"bourgeois":            2,
+	"bourne":               1,
+	"bout":                 1,
+	"bow":                  1,
+	"bowel":                2,
+	"bower":                2,
+	"bowery":               3,
+	"bowing":               2,
+	"bowman":               2,
+	"bowser":               2,
+	"bowyer":               2,
+	"bowl":                 1,
+	"bowler":               2,
+	"bowling":              2,
+	"bowls":                1,
+	"box":                  1,
+	"boxcar":               2,
+	"boxer":                2,
+	"boxers":               2,
+	"boxing":               2,
+	"boy":                  1,
+	"boycott":              2,
+	"boyfriend":            2,
+	"boyhood":              2,
+	"bpi":                  1,
+	"bra":                  1,
+	"brasil":               2,
+	"brava":                2,
+	"bravado":              3,
+	"bravo":                2,
+	"brazen":               2,
+	"brazil":               2,
+	"braces":               2,
+	"bracing":              2,
+	"brace":                1,
+	"bracelet":             2,
+	"bracelets":            2,
+	"bracken":              2,
+	"bracket":              2,
+	"brackish":             2,
+	"brad":                 1,
+	"brag":                 1,
+	"bragging":             2,
+	"braid":                1,
+	"braided":              2,
+	"brain":                1,
+	"brainchild":           2,
+	"brainstorm":           2,
+	"brainstorming":        3,
+	"brainwashing":         3,
+	"brainy":               2,
+	"braking":              2,
+	"brake":                1,
+	"bramble":              2,
+	"bran":                 1,
+	"brandy":               2,
+	"branch":               1,
+	"branching":            2,
+	"brand":                1,
+	"brant":                1,
+	"brasserie":            3,
+	"brassica":             3,
+	"brash":                1,
+	"brass":                1,
+	"brat":                 1,
+	"bravery":              3,
+	"brave":                1,
+	"bravely":              2,
+	"brawl":                1,
+	"bray":                 1,
+	"brazing":              2,
+	"breach":               1,
+	"bread":                1,
+	"breadth":              1,
+	"break":                1,
+	"breakaway":            3,
+	"breakage":             2,
+	"breakdown":            2,
+	"breaker":              2,
+	"breakfast":            2,
+	"breaking":             2,
+	"breakout":             2,
+	"breakpoint":           2,
+	"breakthrough":         2,
+	"breakup":              2,
+	"breakwater":           3,
+	"bream":                1,
+	"breast":               1,
+	"breaststroke":         2,
+	"breath":               1,
+	"breathable":           3,
+	"breather":             2,
+	"breathing":            2,
+	"breathless":           2,
+	"breathtaking":         3,
+	"breathe":              1,
+	"brecht":               1,
+	"bred":                 1,
+	"bree":                 1,
+	"breech":               1,
+	"breeches":             2,
+	"breed":                1,
+	"breeder":              2,
+	"breeding":             2,
+	"breezy":               2,
+	"breeze":               1,
+	"brent":                1,
+	"brethren":             2,
+	"brevity":              3,
+	"breve":                1,
+	"brew":                 1,
+	"brewer":               2,
+	"breweries":            3,
+	"brewery":              3,
+	"brewing":              2,
+	"brian":                2,
+	"briar":                2,
+	"bridle":               2,
+	"brier":                2,
+	"brigade":              2,
+	"brio":                 2,
+	"bribery":              3,
+	"bribe":                1,
+	"brick":                1,
+	"brickyard":            2,
+	"bridal":               2,
+	"bride":                1,
+	"bridegroom":           2,
+	"bridesmaid":           2,
+	"bridging":             2,
+	"bridge":               1,
+	"brie":                 1,
+	"brief":                1,
+	"briefcase":            2,
+	"briefing":             2,
+	"briefly":              2,
+	"briefs":               1,
+	"brig":                 1,
+	"brigadier":            3,
+	"bright":               1,
+	"brighten":             2,
+	"brightly":             2,
+	"brightness":           2,
+	"brilliance":           2,
+	"brilliant":            2,
+	"brilliantly":          3,
+	"brill":                1,
+	"brim":                 1,
+	"brimming":             2,
+	"brimstone":            2,
+	"brindle":              2,
+	"brine":                1,
+	"bring":                1,
+	"bringing":             2,
+	"brink":                1,
+	"bristle":              2,
+	"brisk":                1,
+	"brit":                 1,
+	"brittle":              2,
+	"bro":                  1,
+	"brocade":              2,
+	"brochure":             2,
+	"brodie":               2,
+	"brogan":               2,
+	"broken":               2,
+	"broker":               2,
+	"brokerage":            3,
+	"bromide":              2,
+	"bromine":              2,
+	"broad":                1,
+	"broadband":            2,
+	"broadcast":            2,
+	"broadcaster":          3,
+	"broadcasting":         3,
+	"broaden":              2,
+	"broadleaf":            2,
+	"broadly":              2,
+	"broadside":            2,
+	"broccoli":             3,
+	"brock":                1,
+	"broil":                1,
+	"broiler":              2,
+	"broke":                1,
+	"bronchial":            3,
+	"bronchitis":           3,
+	"bronco":               2,
+	"bronze":               1,
+	"brooch":               1,
+	"brood":                1,
+	"brook":                1,
+	"broom":                1,
+	"bros":                 1,
+	"broth":                1,
+	"brothel":              2,
+	"brother":              2,
+	"brotherhood":          3,
+	"brotherly":            3,
+	"brough":               1,
+	"brought":              1,
+	"brow":                 1,
+	"brown":                1,
+	"brownie":              2,
+	"browning":             2,
+	"brownish":             2,
+	"brownstone":           2,
+	"browser":              2,
+	"browsing":             2,
+	"browse":               1,
+	"bruin":                2,
+	"brunette":             2,
+	"brutal":               2,
+	"brutality":            4,
+	"brutally":             3,
+	"bruising":             2,
+	"bruise":               1,
+	"brunch":               1,
+	"brunt":                1,
+	"brush":                1,
+	"brushless":            2,
+	"brushed":              1,
+	"brut":                 1,
+	"brute":                1,
+	"btl":                  1,
+	"btu":                  1,
+	"bugle":                2,
+	"bulimia":              4,
+	"bureau":               2,
+	"bureaucrat":           3,
+	"bureaucratic":         4,
+	"bureaucracy":          4,
+	"bureaus":              2,
+	"bureaux":              2,
+	"butadiene":            4,
+	"butane":               2,
+	"butyl":                2,
+	"bub":                  1,
+	"bubble":               2,
+	"bubbly":               2,
+	"buccaneer":            3,
+	"buck":                 1,
+	"bucket":               2,
+	"buckeye":              2,
+	"buckle":               2,
+	"buckling":             2,
+	"buckskin":             2,
+	"buckwheat":            2,
+	"bud":                  1,
+	"buddha":               2,
+	"buddy":                2,
+	"budget":               2,
+	"budgetary":            4,
+	"budgeted":             3,
+	"budge":                1,
+	"bueno":                2,
+	"buffalo":              3,
+	"buffet":               2,
+	"buffets":              2,
+	"buff":                 1,
+	"buffer":               2,
+	"bug":                  1,
+	"bugaboo":              3,
+	"bugger":               2,
+	"buggy":                2,
+	"bugs":                 1,
+	"build":                1,
+	"builder":              2,
+	"building":             2,
+	"buildup":              2,
+	"built":                1,
+	"bul":                  1,
+	"bulletin":             3,
+	"bullet":               2,
+	"bulleted":             3,
+	"bulletproof":          3,
+	"bullied":              2,
+	"bullion":              2,
+	"bully":                2,
+	"bullying":             3,
+	"bulb":                 1,
+	"bulge":                1,
+	"bulk":                 1,
+	"bulkhead":             2,
+	"bulky":                2,
+	"bull":                 1,
+	"bulldog":              2,
+	"bulldozer":            3,
+	"bullfrog":             2,
+	"bullhead":             2,
+	"bullish":              2,
+	"bullock":              2,
+	"bullpen":              2,
+	"bullshit":             2,
+	"bum":                  1,
+	"bumble":               2,
+	"bumblebee":            3,
+	"bummer":               2,
+	"bump":                 1,
+	"bumper":               2,
+	"bumpy":                2,
+	"bun":                  1,
+	"buncombe":             2,
+	"bundle":               2,
+	"bungalow":             3,
+	"bungee":               2,
+	"bunny":                2,
+	"bunch":                1,
+	"bunches":              2,
+	"bund":                 1,
+	"bunk":                 1,
+	"bunker":               2,
+	"bunn":                 1,
+	"bunt":                 1,
+	"bunting":              2,
+	"buoy":                 1,
+	"buoyancy":             3,
+	"buoyant":              2,
+	"bur":                  1,
+	"burden":               2,
+	"burdensome":           3,
+	"burdened":             2,
+	"burgess":              2,
+	"burglary":             3,
+	"burglar":              2,
+	"burial":               3,
+	"buried":               2,
+	"burlesque":            2,
+	"burley":               2,
+	"burly":                2,
+	"burnet":               2,
+	"burrow":               2,
+	"bursa":                2,
+	"bursary":              3,
+	"bursar":               2,
+	"burton":               2,
+	"bury":                 2,
+	"burying":              3,
+	"burg":                 1,
+	"burger":               2,
+	"burgh":                1,
+	"burk":                 1,
+	"burke":                1,
+	"burl":                 1,
+	"burn":                 1,
+	"burner":               2,
+	"burning":              2,
+	"burnout":              2,
+	"burned":               1,
+	"burnt":                1,
+	"burp":                 1,
+	"burr":                 1,
+	"burst":                1,
+	"bursting":             2,
+	"bus":                  1,
+	"busby":                2,
+	"buses":                2,
+	"busiest":              3,
+	"busily":               3,
+	"busses":               2,
+	"bustle":               2,
+	"busy":                 2,
+	"bush":                 1,
+	"bushel":               2,
+	"bushing":              2,
+	"bushman":              2,
+	"bushy":                2,
+	"business":             2,
+	"businessman":          3,
+	"buss":                 1,
+	"bust":                 1,
+	"buster":               2,
+	"bustier":              3,
+	"busty":                2,
+	"but":                  1,
+	"butler":               2,
+	"butter":               2,
+	"buttercup":            3,
+	"butterflies":          3,
+	"butterfly":            3,
+	"buttermilk":           3,
+	"butternut":            3,
+	"butterscotch":         3,
+	"buttery":              3,
+	"button":               2,
+	"buttons":              2,
+	"buttress":             2,
+	"butch":                1,
+	"butcher":              2,
+	"butt":                 1,
+	"butte":                1,
+	"buy":                  1,
+	"buyer":                2,
+	"buying":               2,
+	"buzzard":              2,
+	"buzz":                 1,
+	"buzzer":               2,
+	"bygone":               2,
+	"bylaw":                2,
+	"bypass":               2,
+	"bypassing":            3,
+	"bystander":            3,
+	"byway":                2,
+	"bye":                  1,
+	"byte":                 1,
+	"cabana":               3,
+	"cabal":                2,
+	"caballero":            4,
+	"cable":                2,
+	"cabling":              2,
+	"caboose":              2,
+	"cacao":                3,
+	"cachet":               2,
+	"cadastre":             3,
+	"cadaver":              3,
+	"cadence":              2,
+	"cadet":                2,
+	"cadre":                2,
+	"caf":                  2,
+	"cafe":                 2,
+	"cahill":               2,
+	"calamity":             4,
+	"calendula":            4,
+	"calif":                2,
+	"caloric":              3,
+	"calypso":              3,
+	"calyx":                2,
+	"camaraderie":          5,
+	"camellia":             3,
+	"canada":               3,
+	"canal":                2,
+	"canaries":             3,
+	"canary":               3,
+	"canasta":              3,
+	"canine":               2,
+	"canoe":                2,
+	"canoeing":             3,
+	"canonical":            4,
+	"capa":                 2,
+	"capability":           5,
+	"capable":              3,
+	"capacitance":          4,
+	"capacitive":           4,
+	"capacitor":            4,
+	"capacity":             4,
+	"caper":                2,
+	"capers":               2,
+	"capo":                 2,
+	"capote":               2,
+	"capricious":           3,
+	"caprice":              2,
+	"carafe":               2,
+	"career":               2,
+	"caress":               2,
+	"caribe":               3,
+	"carina":               3,
+	"caritas":              3,
+	"carotid":              3,
+	"casa":                 2,
+	"casein":               2,
+	"casino":               3,
+	"catabolism":           4,
+	"catalysis":            4,
+	"catastrophe":          4,
+	"cater":                2,
+	"caterer":              3,
+	"catering":             3,
+	"cathedral":            3,
+	"caveat":               3,
+	"cab":                  1,
+	"cabaret":              3,
+	"cabbage":              2,
+	"cabinet":              3,
+	"cabinetry":            4,
+	"cabin":                2,
+	"cabochon":             3,
+	"cabriolet":            4,
+	"cacti":                2,
+	"cactus":               2,
+	"caching":              2,
+	"cache":                1,
+	"cad":                  1,
+	"caddy":                2,
+	"cadmium":              3,
+	"cade":                 1,
+	"cafeteria":            5,
+	"caffeine":             2,
+	"cage":                 1,
+	"cain":                 1,
+	"cairn":                1,
+	"cake":                 1,
+	"cakewalk":             2,
+	"cal":                  1,
+	"calcareous":           4,
+	"calcium":              3,
+	"calcite":              2,
+	"calculation":          4,
+	"calculator":           4,
+	"calculated":           4,
+	"calculating":          4,
+	"calculate":            3,
+	"calculus":             3,
+	"caldera":              3,
+	"calendar":             3,
+	"calender":             3,
+	"caliber":              3,
+	"calibration":          4,
+	"calibrator":           4,
+	"calibrated":           4,
+	"calibrating":          4,
+	"calibrate":            3,
+	"calibre":              3,
+	"calico":               3,
+	"caliper":              3,
+	"calla":                2,
+	"callan":               2,
+	"calligraphy":          4,
+	"callous":              2,
+	"calorie":              3,
+	"calorimeter":          5,
+	"calumet":              3,
+	"calvary":              3,
+	"calf":                 1,
+	"call":                 1,
+	"callable":             3,
+	"caller":               2,
+	"calling":              2,
+	"calm":                 1,
+	"calmly":               2,
+	"calmness":             2,
+	"calving":              2,
+	"calves":               1,
+	"cam":                  1,
+	"camas":                2,
+	"camber":               2,
+	"cameo":                3,
+	"cameos":               3,
+	"camel":                2,
+	"camera":               3,
+	"cameraman":            4,
+	"cameras":              3,
+	"camisole":             3,
+	"camouflage":           3,
+	"campanile":            4,
+	"campaign":             2,
+	"campaigner":           3,
+	"campion":              3,
+	"campo":                2,
+	"campus":               2,
+	"campuses":             3,
+	"camshaft":             2,
+	"came":                 1,
+	"camp":                 1,
+	"camper":               2,
+	"campfire":             2,
+	"campground":           2,
+	"campsite":             2,
+	"campy":                2,
+	"can":                  1,
+	"cancel":               2,
+	"canceling":            3,
+	"cancellation":         4,
+	"cancelling":           3,
+	"canceled":             2,
+	"cancelled":            2,
+	"cancer":               2,
+	"cancerous":            3,
+	"canciones":            3,
+	"candelabra":           4,
+	"candidacy":            4,
+	"candidate":            3,
+	"candid":               2,
+	"candied":              2,
+	"candle":               2,
+	"candleholder":         4,
+	"candlelight":          3,
+	"candlestick":          3,
+	"candlewood":           3,
+	"candler":              2,
+	"candor":               2,
+	"candy":                2,
+	"canfield":             2,
+	"canister":             3,
+	"canker":               2,
+	"canna":                2,
+	"cannabis":             3,
+	"cannery":              3,
+	"cannibal":             3,
+	"cannibalism":          4,
+	"canning":              2,
+	"cannon":               2,
+	"cannonball":           3,
+	"canopy":               3,
+	"canon":                2,
+	"cantata":              3,
+	"canteen":              2,
+	"canterbury":           4,
+	"cantilever":           4,
+	"cantina":              3,
+	"canto":                2,
+	"canton":               2,
+	"cantor":               2,
+	"canvas":               2,
+	"canvass":              2,
+	"canyon":               2,
+	"canzone":              3,
+	"canzoni":              3,
+	"cane":                 1,
+	"canned":               1,
+	"cans":                 1,
+	"cant":                 1,
+	"canter":               2,
+	"cap":                  1,
+	"capita":               3,
+	"capital":              3,
+	"capitalisation":       6,
+	"capitalization":       6,
+	"capitalism":           4,
+	"capitalist":           4,
+	"capitalizing":         5,
+	"capitalize":           4,
+	"capitalized":          4,
+	"capillaries":          4,
+	"capillary":            4,
+	"capping":              2,
+	"cappuccino":           4,
+	"capsicum":             3,
+	"capstone":             2,
+	"capsule":              2,
+	"captain":              2,
+	"captivated":           4,
+	"captivating":          4,
+	"captivate":            3,
+	"caption":              2,
+	"captivity":            4,
+	"captive":              2,
+	"captor":               2,
+	"capturing":            3,
+	"capture":              2,
+	"captured":             2,
+	"cape":                 1,
+	"caps":                 1,
+	"car":                  1,
+	"carabiner":            4,
+	"caramel":              3,
+	"caravan":              3,
+	"carat":                2,
+	"carbide":              2,
+	"carbine":              2,
+	"carbohydrate":         4,
+	"carbon":               2,
+	"carbonated":           4,
+	"carbonate":            3,
+	"carbonyl":             3,
+	"carboxyl":             3,
+	"carboxylic":           4,
+	"carburetor":           4,
+	"carcass":              2,
+	"carcinogenicity":      7,
+	"carcinoma":            4,
+	"carcinomas":           4,
+	"carcinogen":           4,
+	"carcinogenic":         5,
+	"cardamom":             3,
+	"cardiac":              3,
+	"cardigan":             3,
+	"cardinal":             3,
+	"cardiovascular":       6,
+	"cardiologist":         5,
+	"cardiology":           5,
+	"carer":                2,
+	"caret":                2,
+	"carfax":               2,
+	"cargo":                2,
+	"caribou":              3,
+	"caricature":           4,
+	"carisoprodol":         5,
+	"caries":               2,
+	"caring":               2,
+	"carlin":               2,
+	"carling":              2,
+	"carman":               2,
+	"carmel":               2,
+	"carmine":              2,
+	"carnation":            3,
+	"carnage":              2,
+	"carnal":               2,
+	"carnelian":            3,
+	"carney":               2,
+	"carnival":             3,
+	"carnivore":            3,
+	"carnivorous":          4,
+	"carotene":             3,
+	"carol":                2,
+	"carousel":             3,
+	"carpal":               2,
+	"carpenter":            3,
+	"carpentry":            3,
+	"carpet":               2,
+	"carpeting":            3,
+	"carport":              2,
+	"carrier":              3,
+	"carrion":              3,
+	"carriage":             2,
+	"carriageway":          3,
+	"carried":              2,
+	"carrot":               2,
+	"carry":                2,
+	"carrying":             3,
+	"cartel":               2,
+	"cartilage":            3,
+	"cartographic":         4,
+	"cartography":          4,
+	"carton":               2,
+	"cartoon":              2,
+	"cartoonist":           3,
+	"cartouche":            2,
+	"cartridge":            2,
+	"card":                 1,
+	"cardboard":            2,
+	"cardholder":           3,
+	"cards":                1,
+	"care":                 1,
+	"carefree":             2,
+	"careful":              2,
+	"carefully":            3,
+	"careless":             2,
+	"carelessly":           3,
+	"carelessness":         3,
+	"caretaker":            3,
+	"carl":                 1,
+	"carle":                1,
+	"carp":                 1,
+	"cart":                 1,
+	"carter":               2,
+	"cartwright":           2,
+	"carte":                1,
+	"carver":               2,
+	"carving":              2,
+	"carve":                1,
+	"cascading":            3,
+	"cascade":              2,
+	"casing":               2,
+	"casket":               2,
+	"cassava":              3,
+	"casserole":            3,
+	"cassette":             2,
+	"cassia":               2,
+	"cassie":               2,
+	"castle":               2,
+	"castor":               2,
+	"castration":           3,
+	"casual":               3,
+	"casually":             4,
+	"casualty":             4,
+	"case":                 1,
+	"casebook":             2,
+	"caseload":             2,
+	"casework":             2,
+	"cash":                 1,
+	"cashew":               2,
+	"cashier":              2,
+	"cashmere":             2,
+	"cask":                 1,
+	"cast":                 1,
+	"castaway":             3,
+	"caster":               2,
+	"casting":              2,
+	"caste":                1,
+	"cat":                  1,
+	"catalase":             3,
+	"catalog":              3,
+	"catalogue":            3,
+	"catalyst":             3,
+	"catalytic":            4,
+	"catalyzed":            3,
+	"catamaran":            4,
+	"catapult":             3,
+	"cataract":             3,
+	"catastrophic":         4,
+	"catechism":            3,
+	"categorization":       6,
+	"categorised":          4,
+	"categorize":           4,
+	"categorized":          4,
+	"category":             4,
+	"categorical":          5,
+	"categorically":        6,
+	"cated":                2,
+	"caterpillar":          4,
+	"catfish":              2,
+	"cation":               3,
+	"cationic":             4,
+	"catnip":               2,
+	"cattery":              3,
+	"cattle":               2,
+	"catwalk":              2,
+	"catch":                1,
+	"catcher":              2,
+	"catching":             2,
+	"catchment":            2,
+	"catchy":               2,
+	"cate":                 1,
+	"cates":                1,
+	"catheter":             3,
+	"catheterization":      6,
+	"catholic":             3,
+	"cathode":              2,
+	"caucus":               2,
+	"caucuses":             3,
+	"caudal":               2,
+	"cauliflower":          4,
+	"causation":            3,
+	"causality":            4,
+	"caution":              2,
+	"cautionary":           4,
+	"cautious":             2,
+	"cautiously":           3,
+	"caught":               1,
+	"cauldron":             2,
+	"caulk":                1,
+	"causative":            3,
+	"causal":               2,
+	"causing":              2,
+	"caustic":              2,
+	"cause":                1,
+	"causeway":             2,
+	"cav":                  1,
+	"cavalier":             3,
+	"cavalry":              3,
+	"cavendish":            3,
+	"cavern":               2,
+	"cavernous":            3,
+	"caviar":               3,
+	"cavity":               3,
+	"caving":               2,
+	"cave":                 1,
+	"caveman":              2,
+	"caw":                  1,
+	"cay":                  1,
+	"cayenne":              2,
+	"cayman":               2,
+	"cbd":                  1,
+	"cedar":                2,
+	"cedi":                 2,
+	"celeb":                2,
+	"celebrity":            4,
+	"celestial":            3,
+	"celeste":              2,
+	"celiac":               3,
+	"cement":               2,
+	"ceramic":              3,
+	"ceramics":             3,
+	"cereal":               3,
+	"cesium":               3,
+	"ceasing":              2,
+	"cease":                1,
+	"ceded":                2,
+	"ceiling":              2,
+	"celebration":          4,
+	"celebratory":          5,
+	"celebrated":           4,
+	"celebrating":          4,
+	"celebrate":            3,
+	"celery":               3,
+	"celibacy":             4,
+	"cellar":               2,
+	"cello":                2,
+	"cellophane":           3,
+	"cellular":             3,
+	"celluloid":            3,
+	"cellulose":            3,
+	"cell":                 1,
+	"celt":                 1,
+	"cemeteries":           4,
+	"cemetery":             4,
+	"cen":                  1,
+	"censor":               2,
+	"censorship":           3,
+	"censure":              2,
+	"census":               2,
+	"censuses":             3,
+	"centaur":              2,
+	"centenary":            4,
+	"centennial":           4,
+	"center":               2,
+	"centerfold":           3,
+	"centering":            3,
+	"centerline":           3,
+	"centerpiece":          3,
+	"centered":             2,
+	"centimeter":           4,
+	"centra":               2,
+	"central":              2,
+	"centrality":           4,
+	"centralization":       5,
+	"centralised":          3,
+	"centralized":          3,
+	"centrally":            3,
+	"centre":               2,
+	"centrifuge":           3,
+	"centric":              2,
+	"centrifugation":       5,
+	"centrifugal":          4,
+	"centrist":             2,
+	"centroid":             2,
+	"centrum":              2,
+	"centurion":            4,
+	"century":              3,
+	"cent":                 1,
+	"cep":                  1,
+	"cerebellum":           4,
+	"cerebral":             3,
+	"cerebrospinal":        5,
+	"cerebrovascular":      6,
+	"ceremonial":           5,
+	"ceremony":             4,
+	"certain":              2,
+	"certainly":            3,
+	"certainty":            3,
+	"certification":        5,
+	"certified":            3,
+	"certify":              3,
+	"certifying":           4,
+	"certiorari":           5,
+	"certificated":         5,
+	"certificate":          4,
+	"cervical":             3,
+	"cervix":               2,
+	"cert":                 1,
+	"cessation":            3,
+	"cess":                 1,
+	"cfi":                  1,
+	"chagrin":              2,
+	"chalet":               2,
+	"chalets":              2,
+	"chameleon":            4,
+	"chaos":                2,
+	"chaotic":              3,
+	"charade":              2,
+	"charisma":             3,
+	"chateau":              2,
+	"chad":                 1,
+	"chaff":                1,
+	"chain":                1,
+	"chair":                1,
+	"chairman":             2,
+	"chairmanship":         3,
+	"chairwoman":           3,
+	"chaise":               1,
+	"chakra":               2,
+	"chalice":              2,
+	"challenger":           3,
+	"challenging":          3,
+	"challenge":            2,
+	"challenged":           2,
+	"chalk":                1,
+	"chalkboard":           2,
+	"cham":                 1,
+	"chamber":              2,
+	"chamberlain":          3,
+	"chambers":             2,
+	"chamomile":            3,
+	"chamois":              2,
+	"champagne":            2,
+	"champaign":            2,
+	"champion":             3,
+	"championship":         4,
+	"champ":                1,
+	"chancellor":           3,
+	"chancery":             3,
+	"chandelier":           3,
+	"chandler":             2,
+	"chandlery":            3,
+	"channel":              2,
+	"channeling":           3,
+	"channeled":            2,
+	"chanson":              2,
+	"chance":               1,
+	"changer":              2,
+	"changing":             2,
+	"change":               1,
+	"changeable":           3,
+	"changeover":           3,
+	"chant":                1,
+	"chap":                 1,
+	"chaparral":            3,
+	"chapel":               2,
+	"chaperone":            3,
+	"chaplain":             2,
+	"chaplaincy":           3,
+	"chapman":              2,
+	"chapter":              2,
+	"chaps":                1,
+	"char":                 1,
+	"character":            3,
+	"characterisation":     6,
+	"characterization":     6,
+	"characteristically":   7,
+	"characteristic":       5,
+	"characterise":         4,
+	"characterised":        4,
+	"characterizing":       5,
+	"characterize":         4,
+	"characterized":        4,
+	"charcoal":             2,
+	"chariot":              3,
+	"charitable":           4,
+	"charity":              3,
+	"charing":              2,
+	"charismatic":          4,
+	"charlie":              2,
+	"charlotte":            2,
+	"charter":              2,
+	"chartreuse":           2,
+	"chard":                1,
+	"charger":              2,
+	"charging":             2,
+	"charge":               1,
+	"chargeable":           3,
+	"charged":              1,
+	"charleston":           2,
+	"charm":                1,
+	"charmer":              2,
+	"charming":             2,
+	"chart":                1,
+	"chaser":               2,
+	"chasing":              2,
+	"chasse":               2,
+	"chassis":              2,
+	"chastity":             3,
+	"chase":                1,
+	"chasm":                1,
+	"chaste":               1,
+	"chat":                 1,
+	"chatted":              2,
+	"chatter":              2,
+	"chatterbox":           3,
+	"chatting":             2,
+	"chatty":               2,
+	"chautauqua":           3,
+	"chauffeur":            2,
+	"chelation":            3,
+	"chemise":              2,
+	"chenille":             2,
+	"cherie":               2,
+	"cheap":                1,
+	"cheaply":              2,
+	"cheat":                1,
+	"cheater":              2,
+	"check":                1,
+	"checkbook":            2,
+	"checker":              2,
+	"checkerboard":         3,
+	"checkered":            2,
+	"checkers":             2,
+	"checkmate":            2,
+	"checkpoint":           2,
+	"checksum":             2,
+	"checkup":              2,
+	"checked":              1,
+	"cheetah":              2,
+	"cheek":                1,
+	"cheeky":               2,
+	"cheep":                1,
+	"cheer":                1,
+	"cheerful":             2,
+	"cheerfully":           3,
+	"cheerleader":          3,
+	"cheerleading":         3,
+	"cheery":               2,
+	"cheers":               1,
+	"cheesy":               2,
+	"cheese":               1,
+	"cheeseburger":         3,
+	"cheesecake":           2,
+	"chef":                 1,
+	"chem":                 1,
+	"chemical":             3,
+	"chemically":           4,
+	"chemistry":            3,
+	"chemist":              2,
+	"chemotherapy":         5,
+	"cheque":               1,
+	"cherish":              2,
+	"cherry":               2,
+	"cherub":               2,
+	"cherubs":              2,
+	"chesterfield":         3,
+	"chess":                1,
+	"chest":                1,
+	"chestnut":             2,
+	"chevalier":            3,
+	"chevron":              2,
+	"chevy":                2,
+	"chew":                 1,
+	"chewable":             3,
+	"chewy":                2,
+	"chez":                 1,
+	"chg":                  1,
+	"chi":                  1,
+	"chianti":              3,
+	"chicano":              3,
+	"chico":                2,
+	"chimera":              3,
+	"chimeric":             3,
+	"china":                2,
+	"chino":                2,
+	"chinook":              2,
+	"chiropractic":         4,
+	"chiropractor":         4,
+	"chic":                 1,
+	"chick":                1,
+	"chicken":              2,
+	"chickenpox":           3,
+	"chief":                1,
+	"chiefly":              2,
+	"chieftain":            2,
+	"chiffon":              2,
+	"children":             2,
+	"chile":                2,
+	"chili":                2,
+	"chiller":              2,
+	"chilli":               2,
+	"chilly":               2,
+	"child":                1,
+	"childbearing":         3,
+	"childbirth":           2,
+	"childhood":            2,
+	"childish":             2,
+	"childless":            2,
+	"childlike":            2,
+	"chill":                1,
+	"chimney":              2,
+	"chimpanzee":           3,
+	"chime":                1,
+	"chimp":                1,
+	"chin":                 1,
+	"chinchilla":           3,
+	"chine":                1,
+	"chip":                 1,
+	"chipmunk":             2,
+	"chippendale":          3,
+	"chipper":              2,
+	"chipping":             2,
+	"chisel":               2,
+	"chit":                 1,
+	"chivalry":             3,
+	"chloramphenicol":      5,
+	"chloride":             2,
+	"chlorinated":          4,
+	"chlorine":             2,
+	"chloroform":           3,
+	"chlorophyll":          3,
+	"chloroplast":          3,
+	"chlorpheniramine":     5,
+	"chm":                  1,
+	"cholesterol":          4,
+	"cholinergic":          4,
+	"choline":              2,
+	"choral":               2,
+	"chorale":              2,
+	"choreographer":        5,
+	"choreography":         5,
+	"chorus":               2,
+	"choruses":             3,
+	"chosen":               2,
+	"chocolate":            3,
+	"choctaw":              2,
+	"chock":                1,
+	"choice":               1,
+	"choir":                1,
+	"choker":               2,
+	"choking":              2,
+	"choke":                1,
+	"chokes":               1,
+	"cholera":              3,
+	"chomp":                1,
+	"chooser":              2,
+	"choose":               1,
+	"chop":                 1,
+	"chopin":               2,
+	"chopper":              2,
+	"choppers":             2,
+	"chopping":             2,
+	"choppy":               2,
+	"chopsticks":           2,
+	"chops":                1,
+	"chord":                1,
+	"chore":                1,
+	"chose":                1,
+	"chou":                 1,
+	"chow":                 1,
+	"chowder":              2,
+	"chowhound":            2,
+	"choy":                 1,
+	"christen":             2,
+	"christening":          3,
+	"chroma":               2,
+	"chromatin":            3,
+	"chromatographic":      5,
+	"chromatography":       5,
+	"chromatic":            3,
+	"chromium":             3,
+	"chromosomal":          4,
+	"chromosome":           3,
+	"chronology":           4,
+	"chrome":               1,
+	"chron":                1,
+	"chronically":          4,
+	"chronicle":            3,
+	"chronic":              2,
+	"chronograph":          3,
+	"chronological":        5,
+	"chronologically":      6,
+	"chrysanthemum":        4,
+	"chrysalis":            3,
+	"chs":                  1,
+	"chub":                 1,
+	"chubby":               2,
+	"chuck":                1,
+	"chuckle":              2,
+	"chuckled":             2,
+	"chucky":               2,
+	"chum":                 1,
+	"chump":                1,
+	"chunk":                1,
+	"chunky":               2,
+	"church":               1,
+	"churchyard":           2,
+	"churn":                1,
+	"churning":             2,
+	"chutney":              2,
+	"chute":                1,
+	"cider":                2,
+	"cigar":                2,
+	"cipher":               2,
+	"citation":             3,
+	"civility":             4,
+	"civilian":             3,
+	"ciao":                 1,
+	"cicero":               3,
+	"cif":                  1,
+	"cig":                  1,
+	"cigarette":            3,
+	"cinder":               2,
+	"cine":                 2,
+	"cinema":               3,
+	"cinematographer":      6,
+	"cinematography":       6,
+	"cinematic":            4,
+	"cinnamon":             3,
+	"cinch":                1,
+	"cinque":               1,
+	"cir":                  1,
+	"circa":                2,
+	"circadian":            4,
+	"circle":               2,
+	"circulation":          4,
+	"circulatory":          5,
+	"circular":             3,
+	"circulated":           4,
+	"circulating":          4,
+	"circulate":            3,
+	"circuit":              2,
+	"circuitry":            3,
+	"circumcision":         4,
+	"circumcised":          3,
+	"circumference":        4,
+	"circumstantial":       4,
+	"circumstance":         3,
+	"circumvention":        4,
+	"circumvent":           3,
+	"circus":               2,
+	"cirrhosis":            3,
+	"cirrus":               2,
+	"circ":                 1,
+	"cirque":               1,
+	"cisco":                2,
+	"cit":                  1,
+	"citadel":              3,
+	"cited":                2,
+	"citizen":              3,
+	"citizenry":            4,
+	"citizenship":          4,
+	"cities":               2,
+	"citing":               2,
+	"citrate":              2,
+	"citric":               2,
+	"citrine":              2,
+	"citron":               2,
+	"citrus":               2,
+	"city":                 2,
+	"cityscape":            3,
+	"cite":                 1,
+	"civ":                  1,
+	"civilisation":         5,
+	"civilization":         5,
+	"civilised":            3,
+	"civilized":            3,
+	"civic":                2,
+	"civics":               2,
+	"civil":                2,
+	"clack":                1,
+	"clad":                 1,
+	"cladding":             2,
+	"claim":                1,
+	"claimant":             2,
+	"clam":                 1,
+	"clamshell":            2,
+	"clamp":                1,
+	"clan":                 1,
+	"clandestine":          3,
+	"clank":                1,
+	"clap":                 1,
+	"clapping":             2,
+	"clarendon":            3,
+	"clarence":             2,
+	"claret":               2,
+	"clarification":        5,
+	"clarified":            3,
+	"clarify":              3,
+	"clarifying":           4,
+	"clarinet":             3,
+	"clarion":              3,
+	"clarity":              3,
+	"claro":                2,
+	"clary":                2,
+	"classes":              2,
+	"classical":            3,
+	"classically":          4,
+	"classicism":           3,
+	"classifiable":         5,
+	"classification":       5,
+	"classifier":           4,
+	"classified":           3,
+	"classify":             3,
+	"classifying":          4,
+	"classic":              2,
+	"classics":             2,
+	"clash":                1,
+	"clasp":                1,
+	"class":                1,
+	"classmate":            2,
+	"classroom":            2,
+	"classy":               2,
+	"clause":               1,
+	"clave":                1,
+	"claw":                 1,
+	"clay":                 1,
+	"clean":                1,
+	"cleaner":              2,
+	"cleaning":             2,
+	"cleanliness":          3,
+	"cleanly":              2,
+	"cleanup":              2,
+	"cleanser":             2,
+	"cleansing":            2,
+	"cleanse":              1,
+	"clear":                1,
+	"clearance":            2,
+	"clearer":              2,
+	"clearing":             2,
+	"clearly":              2,
+	"cleat":                1,
+	"cleavage":             2,
+	"cleaver":              2,
+	"cleave":               1,
+	"clef":                 1,
+	"cleft":                1,
+	"clem":                 1,
+	"clematis":             3,
+	"clemency":             3,
+	"clementine":           3,
+	"clement":              2,
+	"clergy":               2,
+	"clergyman":            3,
+	"clerical":             3,
+	"cleric":               2,
+	"clerk":                1,
+	"clerkship":            2,
+	"clever":               2,
+	"cleverly":             3,
+	"cliche":               2,
+	"clientele":            3,
+	"client":               2,
+	"climatology":          5,
+	"climatic":             3,
+	"climate":              2,
+	"climax":               2,
+	"clinician":            3,
+	"click":                1,
+	"clicker":              2,
+	"cliff":                1,
+	"clift":                1,
+	"climb":                1,
+	"climber":              2,
+	"climbing":             2,
+	"clinical":             3,
+	"clinically":           4,
+	"clinic":               2,
+	"clinch":               1,
+	"cline":                1,
+	"cling":                1,
+	"clinging":             2,
+	"clip":                 1,
+	"clipboard":            2,
+	"clipper":              2,
+	"clippers":             2,
+	"clipping":             2,
+	"clipped":              1,
+	"clips":                1,
+	"clique":               1,
+	"clitoral":             3,
+	"clitoris":             3,
+	"closure":              2,
+	"cloture":              2,
+	"clover":               2,
+	"cloak":                1,
+	"clobber":              2,
+	"clock":                1,
+	"clockwise":            2,
+	"clockwork":            2,
+	"clog":                 1,
+	"clogging":             2,
+	"cloisonne":            3,
+	"cloister":             2,
+	"clone":                1,
+	"closer":               2,
+	"closest":              2,
+	"closet":               2,
+	"closing":              2,
+	"clostridium":          4,
+	"close":                1,
+	"closely":              2,
+	"closeness":            2,
+	"closeout":             2,
+	"closed":               1,
+	"clot":                 1,
+	"clotting":             2,
+	"cloth":                1,
+	"clothing":             2,
+	"clothe":               1,
+	"clothes":              1,
+	"cloud":                1,
+	"clouded":              2,
+	"cloudy":               2,
+	"clough":               1,
+	"clout":                1,
+	"clove":                1,
+	"clown":                1,
+	"club":                 1,
+	"clubbing":             2,
+	"clubhouse":            2,
+	"clue":                 1,
+	"clueless":             2,
+	"clumsy":               2,
+	"clump":                1,
+	"clung":                1,
+	"cluster":              2,
+	"clustered":            2,
+	"clutter":              2,
+	"clutch":               1,
+	"cml":                  1,
+	"coalition":            4,
+	"coagulation":          5,
+	"coauthor":             3,
+	"coaxial":              4,
+	"cobalt":               2,
+	"cobra":                2,
+	"coburg":               2,
+	"coca":                 2,
+	"cocaine":              2,
+	"cochin":               2,
+	"coco":                 2,
+	"coconut":              3,
+	"cocoa":                2,
+	"cocoon":               2,
+	"coda":                 2,
+	"codeine":              2,
+	"codex":                2,
+	"codon":                2,
+	"coed":                 2,
+	"coefficient":          4,
+	"coenzyme":             3,
+	"coercion":             3,
+	"coercive":             3,
+	"coerce":               2,
+	"coerced":              2,
+	"coexist":              3,
+	"coexistence":          4,
+	"cofactor":             3,
+	"cogent":               2,
+	"cognac":               2,
+	"cohabitation":         5,
+	"cohesion":             3,
+	"cohesive":             3,
+	"coherence":            3,
+	"coherent":             3,
+	"coho":                 2,
+	"cohort":               2,
+	"cohosh":               2,
+	"coincidental":         5,
+	"coincidentally":       6,
+	"coincidence":          4,
+	"coincident":           4,
+	"coincided":            4,
+	"coincide":             3,
+	"coinsurance":          4,
+	"cola":                 2,
+	"coleoptera":           5,
+	"colitis":              3,
+	"colonial":             4,
+	"colonialism":          5,
+	"cologne":              2,
+	"colon":                2,
+	"colonic":              3,
+	"colossal":             3,
+	"colossus":             3,
+	"colostrum":            3,
+	"columnar":             3,
+	"coma":                 2,
+	"comedian":             4,
+	"comedic":              3,
+	"comes":                2,
+	"coney":                2,
+	"conifer":              3,
+	"coniferous":           4,
+	"conundrum":            3,
+	"cooperation":          5,
+	"cooperative":          5,
+	"cooperatively":        6,
+	"cooperated":           5,
+	"cooperating":          5,
+	"cooperate":            4,
+	"coordination":         5,
+	"coordinator":          5,
+	"coordinated":          5,
+	"coordinating":         5,
+	"coordinate":           4,
+	"coordinates":          4,
+	"copilot":              3,
+	"copious":              3,
+	"copolymer":            4,
+	"coquille":             2,
+	"coriander":            4,
+	"corona":               3,
+	"corolla":              3,
+	"cosine":               2,
+	"cosy":                 2,
+	"covalent":             3,
+	"covariance":           4,
+	"covers":               2,
+	"cozy":                 2,
+	"coach":                1,
+	"coal":                 1,
+	"coarse":               1,
+	"coarsely":             2,
+	"coast":                1,
+	"coastal":              2,
+	"coaster":              2,
+	"coastguard":           2,
+	"coastline":            2,
+	"coat":                 1,
+	"coated":               2,
+	"coating":              2,
+	"coax":                 1,
+	"cob":                  1,
+	"cobble":               2,
+	"cobblestone":          3,
+	"cobbler":              2,
+	"cobwebs":              2,
+	"cobb":                 1,
+	"cochlear":             3,
+	"cock":                 1,
+	"cocker":               2,
+	"cockpit":              2,
+	"cockroach":            2,
+	"cocktail":             2,
+	"cocky":                2,
+	"cod":                  1,
+	"coded":                2,
+	"coder":                2,
+	"codification":         5,
+	"codified":             3,
+	"coding":               2,
+	"code":                 1,
+	"coffee":               2,
+	"coffeehouse":          3,
+	"coffin":               2,
+	"cog":                  1,
+	"cognate":              2,
+	"cognition":            3,
+	"cognitive":            3,
+	"cognizant":            3,
+	"coil":                 1,
+	"coin":                 1,
+	"coinage":              2,
+	"coker":                2,
+	"coke":                 1,
+	"col":                  1,
+	"coliform":             3,
+	"coliseum":             4,
+	"colic":                2,
+	"colin":                2,
+	"collagen":             3,
+	"collation":            3,
+	"collaboration":        5,
+	"collaborative":        5,
+	"collaboratively":      6,
+	"collaborator":         5,
+	"collaborated":         5,
+	"collaborating":        5,
+	"collaborate":          4,
+	"collage":              2,
+	"collapsible":          4,
+	"collapsing":           3,
+	"collapse":             2,
+	"collapsed":            2,
+	"collar":               2,
+	"collated":             3,
+	"collateral":           4,
+	"collating":            3,
+	"collate":              2,
+	"collegiate":           3,
+	"colleague":            2,
+	"collection":           3,
+	"collective":           3,
+	"collectively":         4,
+	"collector":            3,
+	"collect":              2,
+	"collectable":          4,
+	"collected":            3,
+	"collectible":          4,
+	"colleen":              2,
+	"college":              2,
+	"collet":               2,
+	"collision":            3,
+	"collided":             3,
+	"colliding":            3,
+	"collide":              2,
+	"collie":               2,
+	"collier":              2,
+	"colliery":             3,
+	"collins":              2,
+	"collocation":          4,
+	"colloquia":            4,
+	"colloquial":           4,
+	"colloquium":           4,
+	"colloidal":            3,
+	"colloid":              2,
+	"collusion":            3,
+	"colonization":         5,
+	"colonized":            3,
+	"colony":               3,
+	"colophon":             3,
+	"colorado":             4,
+	"color":                2,
+	"coloration":           4,
+	"colorful":             3,
+	"coloring":             3,
+	"colorless":            3,
+	"colored":              2,
+	"colors":               2,
+	"colosseum":            4,
+	"columbine":            3,
+	"column":               2,
+	"columnist":            3,
+	"cold":                 1,
+	"cole":                 1,
+	"coll":                 1,
+	"colonel":              2,
+	"colt":                 1,
+	"com":                  1,
+	"combat":               2,
+	"combatant":            3,
+	"combating":            3,
+	"combination":          4,
+	"combinations":         4,
+	"combinatorial":        6,
+	"combining":            3,
+	"combine":              2,
+	"combined":             2,
+	"combo":                2,
+	"combustible":          4,
+	"combustion":           3,
+	"comedy":               3,
+	"comer":                2,
+	"comet":                2,
+	"cometh":               2,
+	"comfort":              2,
+	"comfortable":          4,
+	"comfortably":          4,
+	"comforter":            3,
+	"comfy":                2,
+	"comical":              3,
+	"comic":                2,
+	"coming":               2,
+	"comma":                2,
+	"commandant":           3,
+	"commando":             3,
+	"command":              2,
+	"commander":            3,
+	"commanding":           3,
+	"commandment":          3,
+	"commemoration":        5,
+	"commemorative":        5,
+	"commemorating":        5,
+	"commemorate":          4,
+	"commendation":         4,
+	"commensurate":         4,
+	"commentator":          4,
+	"commentaries":         4,
+	"commentary":           4,
+	"commencing":           3,
+	"commence":             2,
+	"commencement":         3,
+	"commenced":            2,
+	"commend":              2,
+	"commendable":          4,
+	"comment":              2,
+	"commenter":            3,
+	"commercial":           3,
+	"commercialization":    6,
+	"commercialize":        4,
+	"commercially":         4,
+	"commerce":             2,
+	"commis":               2,
+	"commissary":           4,
+	"commission":           3,
+	"commissioner":         4,
+	"commit":               2,
+	"commitment":           3,
+	"committed":            3,
+	"committee":            3,
+	"committing":           3,
+	"commodore":            3,
+	"commotion":            3,
+	"commodity":            4,
+	"common":               2,
+	"commonality":          5,
+	"commonly":             3,
+	"commonplace":          3,
+	"commonsense":          3,
+	"commonwealth":         3,
+	"commons":              2,
+	"communal":             3,
+	"communicable":         5,
+	"communication":        5,
+	"communicative":        5,
+	"communicator":         5,
+	"communicated":         5,
+	"communicating":        5,
+	"communicate":          4,
+	"communique":           4,
+	"community":            4,
+	"commutation":          4,
+	"commutative":          4,
+	"communion":            3,
+	"communism":            3,
+	"communist":            3,
+	"commune":              2,
+	"commuter":             3,
+	"commuting":            3,
+	"commute":              2,
+	"compagnie":            3,
+	"company":              3,
+	"comparability":        6,
+	"comparable":           4,
+	"compaction":           3,
+	"compact":              2,
+	"compactness":          3,
+	"companion":            3,
+	"companionship":        4,
+	"comparative":          4,
+	"comparatively":        5,
+	"comparator":           4,
+	"comparison":           4,
+	"comparing":            3,
+	"compare":              2,
+	"compared":             2,
+	"compartment":          3,
+	"compassion":           3,
+	"compassionate":        4,
+	"compass":              2,
+	"compatibility":        6,
+	"compatible":           4,
+	"competency":           4,
+	"competence":           3,
+	"competent":            3,
+	"competently":          4,
+	"competition":          4,
+	"compel":               2,
+	"compelling":           3,
+	"compelled":            2,
+	"compendium":           4,
+	"compensation":         4,
+	"compensatory":         5,
+	"compensated":          4,
+	"compensating":         4,
+	"compensate":           3,
+	"competed":             3,
+	"competitive":          4,
+	"competitively":        5,
+	"competitiveness":      5,
+	"competitor":           4,
+	"competing":            3,
+	"compete":              2,
+	"compilation":          4,
+	"compiler":             3,
+	"compiling":            3,
+	"compile":              2,
+	"compiled":             2,
+	"complacency":          4,
+	"complacent":           3,
+	"complain":             2,
+	"complainant":          3,
+	"complaint":            2,
+	"complementary":        5,
+	"complement":           3,
+	"complemented":         4,
+	"completion":           3,
+	"completed":            3,
+	"completing":           3,
+	"complete":             2,
+	"completely":           3,
+	"completeness":         3,
+	"complex":              2,
+	"complexity":           4,
+	"complexion":           3,
+	"compliance":           3,
+	"compliant":            3,
+	"complication":         4,
+	"complicated":          4,
+	"complicating":         4,
+	"complicate":           3,
+	"complimentary":        5,
+	"compliment":           3,
+	"complicity":           4,
+	"complied":             2,
+	"comply":               2,
+	"complying":            3,
+	"compo":                2,
+	"component":            3,
+	"composition":          4,
+	"compositional":        5,
+	"composure":            3,
+	"composer":             3,
+	"composing":            3,
+	"composite":            3,
+	"compose":              2,
+	"composed":             2,
+	"compost":              2,
+	"compound":             2,
+	"comprehensible":       5,
+	"comprehension":        4,
+	"comprehensive":        4,
+	"comprehensively":      5,
+	"comprehend":           3,
+	"compression":          3,
+	"compressive":          3,
+	"compressor":           3,
+	"compress":             2,
+	"compressible":         4,
+	"compressed":           2,
+	"comprising":           3,
+	"comprise":             2,
+	"comprised":            2,
+	"compromising":         4,
+	"compromise":           3,
+	"compromised":          3,
+	"computation":          4,
+	"computational":        5,
+	"computerized":         4,
+	"compulsion":           3,
+	"compulsive":           3,
+	"compulsory":           4,
+	"computable":           4,
+	"computed":             3,
+	"computer":             3,
+	"computing":            3,
+	"compute":              2,
+	"comrade":              2,
+	"comb":                 1,
+	"combe":                1,
+	"come":                 1,
+	"comeback":             2,
+	"comm":                 1,
+	"comp":                 1,
+	"comptroller":          3,
+	"con":                  1,
+	"concatenation":        5,
+	"concatenated":         5,
+	"concave":              2,
+	"conceal":              2,
+	"concealer":            3,
+	"concealment":          3,
+	"conceded":             3,
+	"concede":              2,
+	"conceit":              2,
+	"conceivable":          4,
+	"conceivably":          4,
+	"conceive":             2,
+	"conceived":            2,
+	"concentration":        4,
+	"concentrator":         4,
+	"concentrated":         4,
+	"concentrating":        4,
+	"concentrate":          3,
+	"concentric":           3,
+	"conception":           3,
+	"conceptual":           4,
+	"conceptualization":    7,
+	"conceptually":         5,
+	"concept":              2,
+	"concerto":             3,
+	"concern":              2,
+	"concerning":           3,
+	"concerned":            2,
+	"concert":              2,
+	"concerted":            3,
+	"concession":           3,
+	"concierge":            2,
+	"conciliation":         5,
+	"concise":              2,
+	"concisely":            3,
+	"conclave":             2,
+	"conclusion":           3,
+	"conclusive":           3,
+	"conclusively":         4,
+	"concluded":            3,
+	"concluding":           3,
+	"conclude":             2,
+	"concomitant":          4,
+	"concord":              2,
+	"concordance":          3,
+	"concourse":            2,
+	"concrete":             2,
+	"concur":               2,
+	"concurrence":          3,
+	"concurrent":           3,
+	"concurrently":         4,
+	"concurring":           3,
+	"concurred":            2,
+	"concussion":           3,
+	"condescending":        4,
+	"condemnation":         4,
+	"condemn":              2,
+	"condensation":         4,
+	"condensate":           3,
+	"condenser":            3,
+	"condensing":           3,
+	"condensed":            2,
+	"condiment":            3,
+	"condition":            3,
+	"conditional":          4,
+	"conditionally":        5,
+	"conditioner":          4,
+	"conditioning":         4,
+	"conditioned":          3,
+	"condominium":          5,
+	"condom":               2,
+	"condone":              2,
+	"condor":               2,
+	"conducive":            3,
+	"conduction":           3,
+	"conductivity":         5,
+	"conductive":           3,
+	"conductor":            3,
+	"conduct":              2,
+	"conductance":          3,
+	"conduit":              2,
+	"confectionery":        5,
+	"confederacy":          5,
+	"confederation":        5,
+	"confederate":          4,
+	"confer":               2,
+	"conference":           3,
+	"conferring":           3,
+	"conferred":            2,
+	"confession":           3,
+	"confessional":         4,
+	"confess":              2,
+	"confetti":             3,
+	"confidentiality":      7,
+	"confidential":         4,
+	"confidentially":       5,
+	"confidence":           3,
+	"confident":            3,
+	"confidently":          4,
+	"configuration":        5,
+	"configure":            3,
+	"confining":            3,
+	"confine":              2,
+	"confinement":          3,
+	"confined":             2,
+	"confirmation":         4,
+	"confirm":              2,
+	"confirmed":            2,
+	"confiscation":         4,
+	"confiscated":          4,
+	"conflict":             2,
+	"confluence":           3,
+	"confocal":             3,
+	"conformation":         4,
+	"conformal":            3,
+	"conform":              2,
+	"conformance":          3,
+	"conformity":           4,
+	"confound":             2,
+	"confounded":           3,
+	"confrontation":        4,
+	"confront":             2,
+	"confusion":            3,
+	"confusing":            3,
+	"confuse":              2,
+	"confused":             2,
+	"conga":                2,
+	"congenital":           4,
+	"congenial":            3,
+	"congestion":           3,
+	"congestive":           3,
+	"conglomerate":         4,
+	"congo":                2,
+	"congratulation":       5,
+	"congratulations":      5,
+	"congratulated":        5,
+	"congratulating":       5,
+	"congratulate":         4,
+	"congrats":             2,
+	"congregation":         4,
+	"congregational":       5,
+	"congregate":           3,
+	"congressional":        4,
+	"congress":             2,
+	"congressman":          3,
+	"congresswoman":        4,
+	"congruence":           3,
+	"congruent":            3,
+	"conical":              3,
+	"conjecture":           3,
+	"conjugation":          4,
+	"conjugated":           4,
+	"conjugate":            3,
+	"conjunctivitis":       5,
+	"conjunction":          3,
+	"conjure":              2,
+	"connection":           3,
+	"connectivity":         5,
+	"connective":           3,
+	"connector":            3,
+	"connect":              2,
+	"connected":            3,
+	"connectedness":        4,
+	"connexion":            3,
+	"connotation":          4,
+	"connoisseur":          3,
+	"conquer":              2,
+	"conqueror":            3,
+	"conquest":             2,
+	"conscientious":        4,
+	"conscience":           2,
+	"conscious":            2,
+	"consciously":          3,
+	"consciousness":        3,
+	"conscription":         3,
+	"consecration":         4,
+	"consecrated":          4,
+	"consequential":        4,
+	"consequences":         4,
+	"consequence":          3,
+	"consequent":           3,
+	"consequently":         4,
+	"consecutive":          4,
+	"consecutively":        5,
+	"consensual":           4,
+	"consensus":            3,
+	"consent":              2,
+	"conservator":          4,
+	"conservatism":         4,
+	"conservative":         4,
+	"conservatively":       5,
+	"conservatory":         4,
+	"conservancy":          4,
+	"conserve":             2,
+	"consider":             3,
+	"considerable":         5,
+	"considerably":         5,
+	"consideration":        5,
+	"considerate":          4,
+	"considering":          4,
+	"considered":           3,
+	"consignee":            3,
+	"consignment":          3,
+	"consist":              2,
+	"consistency":          4,
+	"consistent":           3,
+	"consistently":         4,
+	"consolation":          4,
+	"consonant":            3,
+	"consolidation":        5,
+	"consolidator":         5,
+	"consolidated":         5,
+	"consolidating":        5,
+	"consolidate":          4,
+	"console":              2,
+	"consortia":            4,
+	"consortium":           4,
+	"consort":              2,
+	"conspicuous":          4,
+	"conspicuously":        5,
+	"conspiracy":           4,
+	"conspiring":           3,
+	"conspired":            2,
+	"constable":            3,
+	"constabulary":         5,
+	"constancy":            3,
+	"constant":             2,
+	"constantly":           3,
+	"constellation":        4,
+	"constipation":         4,
+	"constitution":         4,
+	"constitutional":       5,
+	"constitutionality":    7,
+	"constitutionally":     6,
+	"constitutive":         4,
+	"constituted":          4,
+	"constituting":         4,
+	"constitute":           3,
+	"constituency":         5,
+	"constituent":          4,
+	"constrain":            2,
+	"constrained":          2,
+	"constraint":           2,
+	"constriction":         3,
+	"construction":         3,
+	"constructive":         3,
+	"constructively":       4,
+	"constructor":          3,
+	"construct":            2,
+	"construed":            2,
+	"consular":             3,
+	"consulate":            3,
+	"consul":               2,
+	"consultation":         4,
+	"consult":              2,
+	"consultative":         4,
+	"consultant":           3,
+	"consulting":           3,
+	"consumable":           4,
+	"consumer":             3,
+	"consumerism":          4,
+	"consuming":            3,
+	"consummation":         4,
+	"consummate":           3,
+	"consume":              2,
+	"consumed":             2,
+	"consumption":          3,
+	"contagion":            3,
+	"contagious":           3,
+	"contact":              2,
+	"contain":              2,
+	"container":            3,
+	"containment":          3,
+	"contained":            2,
+	"contamination":        5,
+	"contaminant":          4,
+	"contaminated":         5,
+	"contaminating":        5,
+	"contaminate":          4,
+	"contemplation":        4,
+	"contemplative":        4,
+	"contemplated":         4,
+	"contemplating":        4,
+	"contemplate":          3,
+	"contemporaneous":      6,
+	"contemporaries":       5,
+	"contemporary":         5,
+	"contempt":             2,
+	"contention":           3,
+	"contentious":          3,
+	"contend":              2,
+	"content":              2,
+	"contented":            3,
+	"contentment":          3,
+	"contest":              2,
+	"contestant":           3,
+	"contextual":           4,
+	"context":              2,
+	"continental":          4,
+	"continence":           3,
+	"continent":            3,
+	"continuity":           5,
+	"contiguous":           4,
+	"contingency":          4,
+	"contingent":           3,
+	"continua":             4,
+	"continuation":         5,
+	"continual":            4,
+	"continually":          5,
+	"continuance":          4,
+	"continuing":           4,
+	"continuous":           4,
+	"continuously":         5,
+	"continuum":            4,
+	"continue":             3,
+	"continued":            3,
+	"conto":                2,
+	"contour":              2,
+	"contra":               2,
+	"contraband":           3,
+	"contraception":        4,
+	"contraceptive":        4,
+	"contradiction":        4,
+	"contradictory":        5,
+	"contradict":           3,
+	"contrary":             3,
+	"contravention":        4,
+	"contraction":          3,
+	"contractor":           3,
+	"contractual":          4,
+	"contractually":        5,
+	"contract":             2,
+	"contracted":           3,
+	"contrast":             2,
+	"contribution":         4,
+	"contributed":          4,
+	"contributing":         4,
+	"contributory":         5,
+	"contributor":          4,
+	"contribute":           3,
+	"contrived":            2,
+	"controversial":        4,
+	"controversy":          4,
+	"control":              2,
+	"controllable":         4,
+	"controller":           3,
+	"controlling":          3,
+	"controlled":           2,
+	"convalescent":         4,
+	"convection":           3,
+	"convective":           3,
+	"convener":             3,
+	"convenience":          3,
+	"convenient":           3,
+	"conveniently":         4,
+	"convening":            3,
+	"convenor":             3,
+	"convention":           3,
+	"conventional":         4,
+	"conventionally":       5,
+	"convene":              2,
+	"convened":             2,
+	"convent":              2,
+	"convergence":          3,
+	"convergent":           3,
+	"conversation":         4,
+	"conversational":       5,
+	"conversion":           3,
+	"convertor":            3,
+	"converging":           3,
+	"converge":             2,
+	"converged":            2,
+	"conversing":           3,
+	"converse":             2,
+	"conversely":           3,
+	"convert":              2,
+	"converted":            3,
+	"converter":            3,
+	"convertible":          4,
+	"convex":               2,
+	"convey":               2,
+	"conveyancing":         4,
+	"conveyance":           3,
+	"conveyor":             3,
+	"conviction":           3,
+	"convict":              2,
+	"convincing":           3,
+	"convincingly":         4,
+	"convince":             2,
+	"convinced":            2,
+	"convocation":          4,
+	"convolution":          4,
+	"convoluted":           4,
+	"convoy":               2,
+	"conc":                 1,
+	"conch":                1,
+	"concurrency":          3,
+	"cone":                 1,
+	"conf":                 1,
+	"cong":                 1,
+	"conn":                 1,
+	"cons":                 1,
+	"conservation":         2,
+	"const":                1,
+	"constr":               1,
+	"cont":                 1,
+	"conte":                1,
+	"contr":                1,
+	"coo":                  1,
+	"cook":                 1,
+	"cookbook":             2,
+	"cooker":               2,
+	"cookery":              3,
+	"cookie":               2,
+	"cookies":              2,
+	"cooking":              2,
+	"cookware":             2,
+	"cool":                 1,
+	"coolant":              2,
+	"cooler":               2,
+	"coolness":             2,
+	"coon":                 1,
+	"coop":                 1,
+	"cooper":               2,
+	"cop":                  1,
+	"copier":               3,
+	"copied":               2,
+	"copies":               2,
+	"coping":               2,
+	"copper":               2,
+	"copy":                 2,
+	"copycat":              3,
+	"copying":              3,
+	"copyright":            3,
+	"copyrighted":          4,
+	"copywriter":           4,
+	"copywriting":          4,
+	"cope":                 1,
+	"cor":                  1,
+	"coral":                2,
+	"corby":                2,
+	"cordial":              2,
+	"cordially":            3,
+	"cordis":               2,
+	"cordoba":              3,
+	"cordon":               2,
+	"corduroy":             3,
+	"corgi":                2,
+	"cormorant":            3,
+	"cornea":               3,
+	"corneal":              3,
+	"corner":               2,
+	"cornerstone":          3,
+	"cornered":             2,
+	"cornet":               2,
+	"cornucopia":           5,
+	"coronation":           4,
+	"coronal":              3,
+	"coronary":             4,
+	"coroner":              3,
+	"coronet":              3,
+	"corollary":            4,
+	"corpora":              3,
+	"corporation":          4,
+	"corporal":             3,
+	"corporate":            3,
+	"corpus":               2,
+	"corral":               2,
+	"correlation":          4,
+	"correlated":           4,
+	"correlating":          4,
+	"correlate":            3,
+	"correspond":           3,
+	"correspondence":       4,
+	"correspondent":        4,
+	"correspondingly":      5,
+	"correction":           3,
+	"correctional":         4,
+	"corrective":           3,
+	"corrector":            3,
+	"correct":              2,
+	"correctly":            3,
+	"correctness":          3,
+	"corrente":             3,
+	"corridor":             3,
+	"corrie":               2,
+	"corrosion":            3,
+	"corrosive":            3,
+	"corroborated":         5,
+	"corrugated":           4,
+	"corruption":           3,
+	"corrupt":              2,
+	"corsair":              2,
+	"corset":               2,
+	"cort":                 2,
+	"cortex":               2,
+	"cortical":             3,
+	"corticosteroid":       5,
+	"cortisol":             3,
+	"corvette":             2,
+	"cord":                 1,
+	"corded":               2,
+	"cordless":             2,
+	"cords":                1,
+	"core":                 1,
+	"cork":                 1,
+	"corkscrew":            2,
+	"corky":                2,
+	"corn":                 1,
+	"cornstarch":           2,
+	"corny":                2,
+	"corp":                 1,
+	"corps":                1,
+	"corpse":               1,
+	"corr":                 1,
+	"corse":                1,
+	"cos":                  1,
+	"cosmetology":          5,
+	"cosmetic":             3,
+	"cosmic":               2,
+	"cosmological":         5,
+	"cosmopolitan":         5,
+	"cosmology":            4,
+	"cosmos":               2,
+	"costa":                2,
+	"costume":              2,
+	"cosh":                 1,
+	"cost":                 1,
+	"costing":              2,
+	"costly":               2,
+	"cot":                  1,
+	"cotta":                2,
+	"cottage":              2,
+	"cotter":               2,
+	"cotton":               2,
+	"cottonwood":           3,
+	"cote":                 1,
+	"cougar":               2,
+	"coulee":               2,
+	"coulomb":              2,
+	"couple":               2,
+	"coupler":              2,
+	"coupon":               2,
+	"courageous":           3,
+	"courageously":         4,
+	"courant":              2,
+	"couture":              2,
+	"couch":                1,
+	"cough":                1,
+	"coulter":              2,
+	"could":                1,
+	"councilor":            3,
+	"council":              2,
+	"councillor":           3,
+	"councilman":           3,
+	"councilwoman":         4,
+	"counselor":            3,
+	"counsel":              2,
+	"counseling":           3,
+	"counselling":          3,
+	"counsellor":           3,
+	"counseled":            2,
+	"countenance":          3,
+	"counteract":           3,
+	"counterclockwise":     4,
+	"counterfeit":          3,
+	"counterpart":          3,
+	"counterpoint":         3,
+	"counterproductive":    5,
+	"counterpunch":         3,
+	"countess":             2,
+	"country":              2,
+	"countryman":           3,
+	"countryside":          3,
+	"countrywide":          3,
+	"county":               2,
+	"count":                1,
+	"countable":            3,
+	"countdown":            2,
+	"counter":              2,
+	"countless":            2,
+	"coup":                 1,
+	"coupling":             2,
+	"coupe":                1,
+	"courage":              2,
+	"courier":              3,
+	"courteous":            3,
+	"courtesy":             3,
+	"courses":              2,
+	"course":               1,
+	"court":                1,
+	"courthouse":           2,
+	"courtroom":            2,
+	"courtship":            2,
+	"courtyard":            2,
+	"cousin":               2,
+	"covenant":             3,
+	"coven":                2,
+	"cover":                2,
+	"coverage":             3,
+	"covering":             3,
+	"covered":              2,
+	"covert":               2,
+	"covey":                2,
+	"cove":                 1,
+	"cow":                  1,
+	"coward":               2,
+	"cowardice":            3,
+	"cowardly":             3,
+	"cowbell":              2,
+	"cowboy":               2,
+	"cowgirl":              2,
+	"cowhide":              2,
+	"cowl":                 1,
+	"cox":                  1,
+	"coy":                  1,
+	"coyote":               2,
+	"coz":                  1,
+	"cpd":                  1,
+	"cps":                  1,
+	"crl":                  2,
+	"cradle":               2,
+	"cranial":              3,
+	"cranium":              3,
+	"crater":               2,
+	"craven":               2,
+	"craziness":            3,
+	"crazy":                2,
+	"crab":                 1,
+	"crabs":                1,
+	"crack":                1,
+	"crackdown":            2,
+	"cracker":              2,
+	"crackers":             2,
+	"cracking":             2,
+	"crackle":              2,
+	"crackling":            2,
+	"cracked":              1,
+	"craft":                1,
+	"crafty":               2,
+	"craftsman":            2,
+	"craftsmanship":        3,
+	"crag":                 1,
+	"cram":                 1,
+	"cramp":                1,
+	"cramped":              1,
+	"cran":                 1,
+	"cranberry":            3,
+	"crandall":             2,
+	"crane":                1,
+	"crank":                1,
+	"crankshaft":           2,
+	"cranky":               2,
+	"crap":                 1,
+	"crappie":              2,
+	"craps":                1,
+	"crash":                1,
+	"crashing":             2,
+	"crass":                1,
+	"crate":                1,
+	"craving":              2,
+	"crave":                1,
+	"crawfish":             2,
+	"crawl":                1,
+	"crawler":              2,
+	"cray":                 1,
+	"crayfish":             2,
+	"crayon":               2,
+	"craze":                1,
+	"crazed":               1,
+	"creatine":             3,
+	"creation":             3,
+	"creationism":          4,
+	"creationist":          4,
+	"creativity":           5,
+	"creative":             3,
+	"creatively":           4,
+	"creator":              3,
+	"created":              3,
+	"creatinine":           4,
+	"creating":             3,
+	"create":               2,
+	"credential":           3,
+	"credence":             2,
+	"credo":                2,
+	"cremation":            3,
+	"creole":               2,
+	"crescendo":            3,
+	"cretaceous":           3,
+	"creature":             2,
+	"cream":                1,
+	"creamer":              2,
+	"creamery":             3,
+	"creamy":               2,
+	"crease":               1,
+	"credibility":          5,
+	"credible":             3,
+	"creditor":             3,
+	"credit":               2,
+	"creditable":           4,
+	"credits":              2,
+	"cree":                 1,
+	"creed":                1,
+	"creek":                1,
+	"creep":                1,
+	"creeper":              2,
+	"creeping":             2,
+	"creepy":               2,
+	"creeps":               1,
+	"crematorium":          5,
+	"crepe":                1,
+	"crept":                1,
+	"crescent":             2,
+	"cress":                1,
+	"crest":                1,
+	"crested":              2,
+	"crew":                 1,
+	"crewneck":             2,
+	"crier":                2,
+	"crisis":               2,
+	"criteria":             4,
+	"criterion":            4,
+	"critique":             2,
+	"crib":                 1,
+	"cribbage":             2,
+	"crick":                1,
+	"cricket":              2,
+	"cricketer":            3,
+	"cried":                1,
+	"crim":                 1,
+	"criminal":             3,
+	"criminality":          5,
+	"criminally":           4,
+	"criminology":          5,
+	"crimson":              2,
+	"crime":                1,
+	"crimp":                1,
+	"cringe":               1,
+	"cripple":              2,
+	"crippling":            2,
+	"crisp":                1,
+	"crispy":               2,
+	"crisscross":           2,
+	"crit":                 1,
+	"critical":             3,
+	"critically":           4,
+	"criticise":            3,
+	"criticised":           3,
+	"criticism":            3,
+	"criticizing":          4,
+	"criticize":            3,
+	"criticized":           3,
+	"critic":               2,
+	"critter":              2,
+	"crochet":              2,
+	"crocus":               2,
+	"croquet":              2,
+	"croton":               2,
+	"crocodile":            3,
+	"crock":                1,
+	"crockery":             3,
+	"croft":                1,
+	"crook":                1,
+	"crooked":              2,
+	"crop":                 1,
+	"cropland":             2,
+	"cropping":             2,
+	"crore":                1,
+	"cross":                1,
+	"crossbar":             2,
+	"crossbow":             2,
+	"crosscut":             2,
+	"crossfire":            2,
+	"crossing":             2,
+	"crossover":            3,
+	"crossroad":            2,
+	"crossroads":           2,
+	"crosstalk":            2,
+	"crosswalk":            2,
+	"crosse":               1,
+	"crossed":              1,
+	"crotch":               1,
+	"crouch":               1,
+	"croupier":             3,
+	"crouse":               1,
+	"crow":                 1,
+	"crowbar":              2,
+	"crowd":                1,
+	"crowded":              2,
+	"crown":                1,
+	"crowning":             2,
+	"crowned":              1,
+	"cru":                  1,
+	"cruces":               2,
+	"crucible":             3,
+	"crucified":            3,
+	"crucifix":             3,
+	"crucifixion":          4,
+	"crucial":              2,
+	"crucially":            3,
+	"cruel":                2,
+	"cruelly":              3,
+	"cruelty":              3,
+	"crusader":             3,
+	"crusade":              2,
+	"crud":                 1,
+	"crude":                1,
+	"cruiser":              2,
+	"cruising":             2,
+	"cruise":               1,
+	"crum":                 1,
+	"crumble":              2,
+	"crumpled":             2,
+	"crumb":                1,
+	"crumbs":               1,
+	"crump":                1,
+	"crunch":               1,
+	"crunchy":              2,
+	"crustal":              2,
+	"crush":                1,
+	"crusher":              2,
+	"crushing":             2,
+	"crust":                1,
+	"crusty":               2,
+	"crutch":               1,
+	"crux":                 1,
+	"cry":                  1,
+	"crying":               2,
+	"cryogenic":            4,
+	"cryptic":              2,
+	"cryptographic":        4,
+	"cryptography":         4,
+	"crypt":                1,
+	"crystal":              2,
+	"crystallization":      5,
+	"crystalline":          3,
+	"crystallized":         3,
+	"crystallographic":     5,
+	"crystallography":      5,
+	"csc":                  1,
+	"ctn":                  1,
+	"ctr":                  1,
+	"cts":                  1,
+	"cubicle":              3,
+	"cubic":                2,
+	"cucumber":             3,
+	"cuda":                 2,
+	"cumulative":           4,
+	"cumulus":              3,
+	"curator":              3,
+	"cures":                2,
+	"curiae":               3,
+	"curio":                3,
+	"curios":               3,
+	"curiosity":            5,
+	"curious":              3,
+	"curiously":            4,
+	"curie":                2,
+	"cutaneous":            4,
+	"cuticle":              3,
+	"cub":                  1,
+	"cube":                 1,
+	"cuckold":              2,
+	"cuckoo":               2,
+	"cud":                  1,
+	"cuddle":               2,
+	"cue":                  1,
+	"cuesta":               2,
+	"cuff":                 1,
+	"cuffs":                1,
+	"cuisine":              2,
+	"culinary":             4,
+	"culmination":          4,
+	"culminated":           4,
+	"culminating":          4,
+	"culminate":            3,
+	"culpa":                2,
+	"culprit":              2,
+	"cultivation":          4,
+	"cultivar":             3,
+	"cultivated":           4,
+	"cultivating":          4,
+	"cultivate":            3,
+	"cultural":             3,
+	"culturally":           4,
+	"culture":              2,
+	"cultured":             2,
+	"culver":               2,
+	"culvert":              2,
+	"cull":                 1,
+	"cult":                 1,
+	"cum":                  1,
+	"cumbersome":           3,
+	"cumin":                2,
+	"cunnilingus":          4,
+	"cunning":              2,
+	"cunt":                 1,
+	"cup":                  1,
+	"cupboard":             2,
+	"cupcake":              2,
+	"cur":                  1,
+	"curative":             3,
+	"curfew":               2,
+	"curing":               2,
+	"curmudgeon":           3,
+	"currant":              2,
+	"currency":             3,
+	"current":              2,
+	"currently":            3,
+	"currier":              3,
+	"curricular":           4,
+	"curriculum":           4,
+	"currie":               2,
+	"curry":                2,
+	"cursive":              2,
+	"cursory":              3,
+	"cursor":               2,
+	"curtail":              2,
+	"curtain":              2,
+	"curtains":             2,
+	"curvature":            3,
+	"curb":                 1,
+	"curbing":              2,
+	"curd":                 1,
+	"cure":                 1,
+	"curl":                 1,
+	"curling":              2,
+	"curly":                2,
+	"curr":                 1,
+	"cursed":               2,
+	"curses":               2,
+	"cursing":              2,
+	"curse":                1,
+	"curt":                 1,
+	"curving":              2,
+	"curvy":                2,
+	"curve":                1,
+	"custard":              2,
+	"custodial":            4,
+	"custodian":            4,
+	"custody":              3,
+	"custom":               2,
+	"customarily":          5,
+	"customary":            4,
+	"customer":             3,
+	"customise":            3,
+	"customize":            3,
+	"customs":              2,
+	"cushion":              2,
+	"cusp":                 1,
+	"cuss":                 1,
+	"cut":                  1,
+	"cutaway":              3,
+	"cutest":               2,
+	"cutie":                2,
+	"cutlass":              2,
+	"cutler":               2,
+	"cutlery":              3,
+	"cutoff":               2,
+	"cutout":               2,
+	"cutter":               2,
+	"cutthroat":            2,
+	"cutting":              2,
+	"cute":                 1,
+	"cwm":                  1,
+	"cwt":                  1,
+	"cyanide":              3,
+	"cyan":                 2,
+	"cybernetics":          4,
+	"cycle":                2,
+	"cyclical":             3,
+	"cyclic":               2,
+	"cycling":              2,
+	"cyclist":              2,
+	"cyclotron":            3,
+	"cyclonic":             3,
+	"cyclone":              2,
+	"cylindrical":          4,
+	"cypher":               2,
+	"cypress":              2,
+	"cyprus":               2,
+	"cytochrome":           3,
+	"cytogenetic":          5,
+	"cytoplasmic":          4,
+	"cytoplasm":            3,
+	"cytotoxic":            4,
+	"cytology":             4,
+	"cyc":                  1,
+	"cyclades":             3,
+	"cyl":                  1,
+	"cylinder":             3,
+	"cymbal":               2,
+	"cynical":              3,
+	"cynicism":             3,
+	"cynic":                2,
+	"cysteine":             3,
+	"cystitis":             3,
+	"cyst":                 1,
+	"cystic":               2,
+	"czar":                 1,
+	"dj":                   2,
+	"dado":                 2,
+	"dalasi":               3,
+	"data":                 2,
+	"dato":                 2,
+	"datum":                2,
+	"dab":                  1,
+	"dachshund":            2,
+	"dad":                  1,
+	"daddy":                2,
+	"daemon":               2,
+	"daffodil":             3,
+	"daffy":                2,
+	"daft":                 1,
+	"dag":                  1,
+	"dagger":               2,
+	"dah":                  1,
+	"dahlia":               2,
+	"dailies":              2,
+	"daily":                2,
+	"daisy":                2,
+	"dainty":               2,
+	"dairies":              2,
+	"dairy":                2,
+	"dak":                  1,
+	"dal":                  1,
+	"dalton":               2,
+	"dale":                 1,
+	"dalles":               1,
+	"dam":                  1,
+	"damages":              3,
+	"damaging":             3,
+	"damage":               2,
+	"damaged":              2,
+	"daman":                2,
+	"damask":               2,
+	"dammit":               2,
+	"damnation":            3,
+	"damsel":               2,
+	"dame":                 1,
+	"damn":                 1,
+	"damning":              2,
+	"damned":               1,
+	"damp":                 1,
+	"dampen":               2,
+	"damper":               2,
+	"dan":                  1,
+	"dandelion":            4,
+	"dandruff":             2,
+	"dandy":                2,
+	"danger":               2,
+	"dangerous":            3,
+	"dangerously":          4,
+	"dangle":               2,
+	"danny":                2,
+	"dancer":               2,
+	"dancing":              2,
+	"dance":                1,
+	"dang":                 1,
+	"dank":                 1,
+	"dap":                  1,
+	"dapper":               2,
+	"daphne":               2,
+	"darby":                2,
+	"daring":               2,
+	"darling":              2,
+	"dard":                 1,
+	"dare":                 1,
+	"daredevil":            3,
+	"dark":                 1,
+	"darken":               2,
+	"darkly":               2,
+	"darkness":             2,
+	"darkroom":             2,
+	"darn":                 1,
+	"darned":               1,
+	"dart":                 1,
+	"darts":                1,
+	"dash":                 1,
+	"dashboard":            2,
+	"dashing":              2,
+	"dashed":               1,
+	"dat":                  1,
+	"dated":                2,
+	"dating":               2,
+	"date":                 1,
+	"dateline":             2,
+	"dates":                1,
+	"dau":                  1,
+	"dauphin":              2,
+	"daughter":             2,
+	"davenport":            3,
+	"daw":                  1,
+	"dawn":                 1,
+	"day":                  1,
+	"daybed":               2,
+	"daybreak":             2,
+	"daydream":             2,
+	"daylight":             2,
+	"daytime":              2,
+	"days":                 1,
+	"dazzle":               2,
+	"daze":                 1,
+	"dbl":                  1,
+	"deactivation":         5,
+	"deactivated":          5,
+	"deactivate":           4,
+	"debacle":              3,
+	"debarment":            3,
+	"debatable":            4,
+	"debated":              3,
+	"debating":             3,
+	"debate":               2,
+	"debauchery":           4,
+	"debilitating":         5,
+	"debris":               2,
+	"debug":                2,
+	"debugging":            3,
+	"debut":                2,
+	"decal":                2,
+	"decanter":             3,
+	"decapitated":          5,
+	"decarboxylase":        5,
+	"decathlon":            3,
+	"decay":                2,
+	"decedent":             3,
+	"deceased":             2,
+	"deceit":               2,
+	"deceitful":            3,
+	"deceiving":            3,
+	"deceive":              2,
+	"deceived":             2,
+	"deceleration":         5,
+	"decency":              3,
+	"decentralization":     6,
+	"decentralised":        4,
+	"decentralized":        4,
+	"decent":               2,
+	"deception":            3,
+	"deceptive":            3,
+	"deceptively":          4,
+	"decipher":             3,
+	"decision":             3,
+	"decisive":             3,
+	"decisively":           4,
+	"decided":              3,
+	"decidedly":            4,
+	"deciding":             3,
+	"deciduous":            4,
+	"decide":               2,
+	"declarative":          4,
+	"declaratory":          5,
+	"declaring":            3,
+	"declare":              2,
+	"declared":             2,
+	"declassified":         4,
+	"declining":            3,
+	"decline":              2,
+	"declined":             2,
+	"decorum":              3,
+	"decoded":              3,
+	"decoder":              3,
+	"decoding":             3,
+	"decode":               2,
+	"decomposition":        5,
+	"decomposing":          4,
+	"decompose":            3,
+	"decomposed":           3,
+	"decompression":        4,
+	"decompress":           3,
+	"decontamination":      6,
+	"decor":                2,
+	"decoupage":            3,
+	"decoupling":           3,
+	"decoy":                2,
+	"decreasing":           3,
+	"decrease":             2,
+	"decree":               2,
+	"decreed":              2,
+	"decrypt":              2,
+	"deduction":            3,
+	"deductive":            3,
+	"deduce":               2,
+	"deduced":              2,
+	"deduct":               2,
+	"deductible":           4,
+	"defaced":              2,
+	"defamatory":           5,
+	"defamer":              3,
+	"default":              2,
+	"defeat":               2,
+	"defective":            3,
+	"defect":               2,
+	"defensible":           4,
+	"defensive":            3,
+	"defensively":          4,
+	"defence":              2,
+	"defend":               2,
+	"defendant":            3,
+	"defender":             3,
+	"defense":              2,
+	"defenseman":           3,
+	"defer":                2,
+	"deferment":            3,
+	"deferral":             3,
+	"deferred":             2,
+	"defiance":             3,
+	"defiant":              3,
+	"defiantly":            4,
+	"deficiency":           4,
+	"deficient":            3,
+	"defibrillator":        5,
+	"definable":            4,
+	"definitive":           4,
+	"definitively":         5,
+	"defining":             3,
+	"define":               2,
+	"defined":              2,
+	"deflation":            3,
+	"deflated":             3,
+	"deflate":              2,
+	"deflection":           3,
+	"deflector":            3,
+	"deflect":              2,
+	"deflected":            3,
+	"deforestation":        5,
+	"deformation":          4,
+	"deformity":            4,
+	"deformed":             2,
+	"defraud":              2,
+	"defray":               2,
+	"defrost":              2,
+	"defunct":              2,
+	"defuse":               2,
+	"defy":                 2,
+	"degas":                2,
+	"degeneration":         5,
+	"degenerative":         5,
+	"degenerate":           4,
+	"degraded":             3,
+	"degrading":            3,
+	"degrade":              2,
+	"degree":               2,
+	"dehumidifier":         6,
+	"dehydration":          4,
+	"dehydrated":           4,
+	"dehydrogenase":        5,
+	"deity":                3,
+	"delay":                2,
+	"deletion":             3,
+	"delectable":           4,
+	"deleted":              3,
+	"deleting":             3,
+	"delete":               2,
+	"delicious":            3,
+	"deliciously":          4,
+	"deliberation":         5,
+	"deliberative":         5,
+	"deliberate":           4,
+	"deliberately":         5,
+	"delight":              2,
+	"delighted":            3,
+	"delightful":           3,
+	"delightfully":         4,
+	"delineation":          5,
+	"delineated":           5,
+	"delineate":            4,
+	"delinquency":          4,
+	"delinquent":           3,
+	"delirious":            4,
+	"delirium":             4,
+	"deliver":              3,
+	"deliverable":          5,
+	"deliverance":          4,
+	"deliveries":           4,
+	"delivery":             4,
+	"delusion":             3,
+	"delusional":           4,
+	"deluded":              3,
+	"deluxe":               2,
+	"demand":               2,
+	"demanding":            3,
+	"demarcation":          4,
+	"demeanor":             3,
+	"dementia":             3,
+	"demented":             3,
+	"demise":               2,
+	"demographic":          4,
+	"democracy":            4,
+	"democratization":      6,
+	"demography":           4,
+	"demolish":             3,
+	"demon":                2,
+	"demonic":              3,
+	"demonstrable":         4,
+	"demonstrably":         4,
+	"denial":               3,
+	"denied":               2,
+	"denomination":         5,
+	"denominational":       6,
+	"denominator":          5,
+	"denominated":          5,
+	"denoted":              3,
+	"denoting":             3,
+	"denote":               2,
+	"denouncing":           3,
+	"denounce":             2,
+	"denounced":            2,
+	"deny":                 2,
+	"denying":              3,
+	"deodorant":            4,
+	"departure":            3,
+	"depart":               2,
+	"departed":             3,
+	"departmental":         4,
+	"department":           3,
+	"depend":               2,
+	"dependability":        6,
+	"dependable":           4,
+	"dependant":            3,
+	"dependency":           4,
+	"dependence":           3,
+	"dependent":            3,
+	"depiction":            3,
+	"depict":               2,
+	"depletion":            3,
+	"depleted":             3,
+	"depleting":            3,
+	"deplorable":           4,
+	"deploy":               2,
+	"deployment":           3,
+	"deportation":          4,
+	"deport":               2,
+	"depositary":           5,
+	"depository":           5,
+	"depositor":            4,
+	"deposit":              3,
+	"deposed":              2,
+	"depot":                2,
+	"depravity":            4,
+	"depraved":             2,
+	"depreciation":         5,
+	"depreciated":          5,
+	"depressant":           3,
+	"depression":           3,
+	"depressive":           3,
+	"depress":              2,
+	"depressed":            2,
+	"depriving":            3,
+	"deprive":              2,
+	"deprived":             2,
+	"derail":               2,
+	"derailleur":           3,
+	"deranged":             2,
+	"derivative":           4,
+	"derive":               2,
+	"derived":              2,
+	"derogatory":           5,
+	"desalination":         5,
+	"descend":              2,
+	"descendant":           3,
+	"descent":              2,
+	"describing":           3,
+	"describe":             2,
+	"described":            2,
+	"description":          3,
+	"descriptive":          3,
+	"desegregation":        5,
+	"deserted":             3,
+	"deserving":            3,
+	"deserve":              2,
+	"deserved":             2,
+	"design":               2,
+	"designer":             3,
+	"designing":            3,
+	"designed":             2,
+	"desirability":         6,
+	"desirable":            4,
+	"desiring":             3,
+	"desirous":             3,
+	"desire":               2,
+	"desired":              2,
+	"desist":               2,
+	"desorption":           3,
+	"despised":             2,
+	"despite":              2,
+	"destroy":              2,
+	"destroyer":            3,
+	"destruction":          3,
+	"destructive":          3,
+	"destructor":           3,
+	"destruct":             2,
+	"detach":               2,
+	"detachable":           4,
+	"detachment":           3,
+	"detached":             2,
+	"detail":               2,
+	"detailed":             2,
+	"detain":               2,
+	"deterioration":        6,
+	"deteriorated":         6,
+	"deteriorating":        6,
+	"deteriorate":          5,
+	"detection":            3,
+	"detective":            3,
+	"detector":             3,
+	"detect":               2,
+	"detectable":           4,
+	"detention":            3,
+	"deter":                2,
+	"detergent":            3,
+	"determination":        5,
+	"determinant":          4,
+	"determining":          4,
+	"deterministic":        5,
+	"determinism":          4,
+	"determine":            3,
+	"determined":           3,
+	"deterrence":           3,
+	"deterrent":            3,
+	"deterred":             2,
+	"detour":               2,
+	"detoxification":       6,
+	"detract":              2,
+	"detritus":             3,
+	"deva":                 2,
+	"devaluation":          5,
+	"develop":              3,
+	"developer":            4,
+	"developing":           4,
+	"developmental":        5,
+	"development":          4,
+	"developement":         4,
+	"developed":            3,
+	"deviation":            4,
+	"deviance":             3,
+	"deviant":              3,
+	"deviate":              3,
+	"devious":              3,
+	"device":               2,
+	"devising":             3,
+	"devise":               2,
+	"devised":              2,
+	"devotion":             3,
+	"devotional":           4,
+	"devoid":               2,
+	"devolved":             2,
+	"devoted":              3,
+	"devoting":             3,
+	"devote":               2,
+	"devour":               2,
+	"devout":               2,
+	"deacon":               2,
+	"deaconess":            3,
+	"dead":                 1,
+	"deadliest":            3,
+	"deadline":             2,
+	"deadlock":             2,
+	"deadly":               2,
+	"deadwood":             2,
+	"deaf":                 1,
+	"deafening":            3,
+	"deafness":             2,
+	"deal":                 1,
+	"dealer":               2,
+	"dealership":           3,
+	"dealing":              2,
+	"dealings":             2,
+	"dealt":                1,
+	"dean":                 1,
+	"dear":                 1,
+	"dearly":               2,
+	"dearth":               1,
+	"death":                1,
+	"deb":                  1,
+	"debit":                2,
+	"debt":                 1,
+	"debtor":               2,
+	"dec":                  1,
+	"decadence":            3,
+	"decadent":             3,
+	"decade":               2,
+	"decibel":              3,
+	"decimation":           4,
+	"decimal":              3,
+	"decimated":            4,
+	"declaration":          4,
+	"declination":          4,
+	"decoration":           4,
+	"decorative":           4,
+	"decorator":            4,
+	"decorated":            4,
+	"decorating":           4,
+	"decorate":             3,
+	"decrement":            3,
+	"deck":                 1,
+	"decker":               2,
+	"decking":              2,
+	"decks":                1,
+	"decl":                 1,
+	"dedication":           4,
+	"dedicated":            4,
+	"dedicating":           4,
+	"dedicate":             3,
+	"dee":                  1,
+	"deejay":               2,
+	"deed":                 1,
+	"deem":                 1,
+	"deep":                 1,
+	"deepen":               2,
+	"deeply":               2,
+	"deepwater":            3,
+	"deer":                 1,
+	"def":                  1,
+	"defamation":           4,
+	"deference":            3,
+	"deficit":              3,
+	"definition":           4,
+	"definite":             3,
+	"definitely":           4,
+	"deft":                 1,
+	"deftly":               2,
+	"deg":                  1,
+	"degradation":          4,
+	"del":                  1,
+	"delegation":           4,
+	"delegated":            4,
+	"delegating":           4,
+	"delegate":             3,
+	"deleterious":          5,
+	"deli":                 2,
+	"delicacy":             4,
+	"delicatessen":         5,
+	"delicate":             3,
+	"delicately":           4,
+	"della":                2,
+	"delta":                2,
+	"deluge":               2,
+	"delft":                1,
+	"dell":                 1,
+	"dells":                1,
+	"delving":              2,
+	"delve":                1,
+	"demo":                 2,
+	"democrat":             3,
+	"democratically":       6,
+	"democratic":           4,
+	"demolition":           4,
+	"demonstration":        4,
+	"demonstrator":         4,
+	"demonstrated":         4,
+	"demonstrating":        4,
+	"demonstrate":          3,
+	"demos":                2,
+	"dempster":             2,
+	"den":                  1,
+	"dendritic":            3,
+	"dengue":               2,
+	"denier":               2,
+	"denim":                2,
+	"denning":              2,
+	"density":              3,
+	"dental":               2,
+	"dentist":              2,
+	"dentistry":            3,
+	"denture":              2,
+	"dene":                 1,
+	"dens":                 1,
+	"denser":               2,
+	"dense":                1,
+	"densely":              2,
+	"dent":                 1,
+	"dep":                  1,
+	"deposition":           4,
+	"deprecated":           4,
+	"deprivation":          4,
+	"deputy":               3,
+	"dept":                 1,
+	"depth":                1,
+	"der":                  1,
+	"derby":                2,
+	"derelict":             3,
+	"derivation":           4,
+	"derma":                2,
+	"dermatitis":           4,
+	"dermatologist":        5,
+	"dermatology":          5,
+	"dermal":               2,
+	"derogation":           4,
+	"derrick":              2,
+	"derry":                2,
+	"derm":                 1,
+	"des":                  1,
+	"desecration":          4,
+	"desert":               2,
+	"designation":          4,
+	"designator":           4,
+	"designated":           4,
+	"designating":          4,
+	"designate":            3,
+	"designee":             3,
+	"desolation":           4,
+	"desolate":             3,
+	"despair":              2,
+	"despatch":             2,
+	"desperado":            4,
+	"desperation":          4,
+	"desperate":            3,
+	"desperately":          4,
+	"despicable":           4,
+	"despise":              2,
+	"dessert":              2,
+	"destination":          4,
+	"destiny":              3,
+	"destitute":            3,
+	"destined":             2,
+	"desc":                 1,
+	"desk":                 1,
+	"detonation":           4,
+	"detonator":            4,
+	"detonated":            4,
+	"detrimental":          4,
+	"detriment":            3,
+	"deuterium":            4,
+	"deuce":                1,
+	"devastation":          4,
+	"devastated":           4,
+	"devastating":          4,
+	"devel":                2,
+	"devil":                2,
+	"devilish":             3,
+	"devolution":           4,
+	"devotee":              3,
+	"dew":                  1,
+	"dexamethasone":        5,
+	"dexter":               2,
+	"dexterity":            4,
+	"dextrose":             2,
+	"dey":                  1,
+	"dhamma":               2,
+	"dharma":               2,
+	"diabetes":             4,
+	"diabetic":             4,
+	"diabolical":           5,
+	"diabolic":             4,
+	"diagram":              3,
+	"dialectical":          5,
+	"dialectic":            4,
+	"dialect":              3,
+	"dialog":               3,
+	"dialogic":             4,
+	"dialogue":             3,
+	"diamant":              4,
+	"diaphragm":            3,
+	"diary":                3,
+	"diatom":               3,
+	"diagnosis":            4,
+	"diagnosing":           4,
+	"diagnostic":           4,
+	"diagnostics":          4,
+	"diagnose":             3,
+	"diagnosed":            3,
+	"diagonal":             4,
+	"diagonally":           5,
+	"dialer":               3,
+	"dialing":              3,
+	"dialling":             3,
+	"dialysis":             4,
+	"dialed":               2,
+	"diameter":             4,
+	"diarrhea":             4,
+	"diarrhoea":            4,
+	"diastolic":            4,
+	"dichotomy":            4,
+	"dichroic":             3,
+	"didactic":             3,
+	"dido":                 2,
+	"dielectric":           4,
+	"dietary":              4,
+	"dietetic":             4,
+	"dietetics":            4,
+	"dietitian":            4,
+	"diet":                 2,
+	"dieter":               3,
+	"dieting":              3,
+	"digestion":            3,
+	"digestive":            3,
+	"digest":               2,
+	"digester":             3,
+	"digress":              2,
+	"dilation":             3,
+	"dilapidated":          5,
+	"dilated":              3,
+	"dilemma":              3,
+	"dilution":             3,
+	"diluted":              3,
+	"dilute":               2,
+	"dimension":            3,
+	"dimensional":          4,
+	"dimensionality":       6,
+	"dimensionless":        4,
+	"dimer":                2,
+	"dimethyl":             3,
+	"diminish":             3,
+	"diminished":           3,
+	"diminutive":           4,
+	"dinar":                2,
+	"dinette":              2,
+	"dinosaur":             3,
+	"diocese":              3,
+	"diorama":              4,
+	"diocesan":             4,
+	"diode":                2,
+	"dioxide":              3,
+	"diphosphate":          3,
+	"diploma":              3,
+	"diplomacy":            4,
+	"dipole":               2,
+	"direction":            3,
+	"directional":          4,
+	"directions":           3,
+	"directive":            3,
+	"directorate":          4,
+	"directorial":          5,
+	"directory":            4,
+	"director":             3,
+	"direct":               2,
+	"directed":             3,
+	"directly":             3,
+	"disulfide":            3,
+	"dita":                 2,
+	"diuretic":             4,
+	"diurnal":              3,
+	"diva":                 2,
+	"divan":                2,
+	"divergence":           3,
+	"divergent":            3,
+	"diversification":      6,
+	"diversified":          4,
+	"diversify":            4,
+	"diversifying":         5,
+	"diversity":            4,
+	"diversion":            3,
+	"diverge":              2,
+	"divers":               2,
+	"diverse":              2,
+	"divert":               2,
+	"diverting":            3,
+	"divest":               2,
+	"divestiture":          4,
+	"divi":                 2,
+	"division":             3,
+	"divisional":           4,
+	"divisive":             3,
+	"divisor":              3,
+	"divided":              3,
+	"divider":              3,
+	"dividers":             3,
+	"dividing":             3,
+	"divide":               2,
+	"divinity":             4,
+	"divine":               2,
+	"divinely":             3,
+	"divisible":            4,
+	"divorce":              2,
+	"divorced":             2,
+	"divulge":              2,
+	"divulged":             2,
+	"dia":                  1,
+	"diamond":              2,
+	"diamondback":          3,
+	"diaper":               2,
+	"diag":                 1,
+	"dial":                 1,
+	"diam":                 1,
+	"dictation":            3,
+	"dictator":             3,
+	"dictatorship":         4,
+	"dictate":              2,
+	"diction":              2,
+	"dictionaries":         4,
+	"dictionary":           4,
+	"dictum":               2,
+	"dice":                 1,
+	"dick":                 1,
+	"dickens":              2,
+	"dickey":               2,
+	"dickie":               2,
+	"dickies":              2,
+	"dict":                 1,
+	"did":                  1,
+	"didst":                1,
+	"die":                  1,
+	"diehard":              2,
+	"diesel":               2,
+	"dies":                 1,
+	"differ":               2,
+	"differentiable":       6,
+	"differentiation":      6,
+	"differentiated":       6,
+	"differentiating":      6,
+	"differentiate":        5,
+	"differential":         4,
+	"differentially":       5,
+	"difference":           3,
+	"different":            3,
+	"differently":          4,
+	"difficulty":           4,
+	"difficult":            3,
+	"diffraction":          3,
+	"diffusion":            3,
+	"diffuser":             3,
+	"diffuse":              2,
+	"diff":                 1,
+	"difficulties":         2,
+	"dig":                  1,
+	"digger":               2,
+	"digging":              2,
+	"digitization":         5,
+	"digitizing":           4,
+	"digitized":            3,
+	"digit":                2,
+	"digital":              3,
+	"digitally":            4,
+	"digitize":             3,
+	"dignified":            3,
+	"dignitaries":          4,
+	"dignity":              3,
+	"digs":                 1,
+	"dike":                 1,
+	"dilatation":           4,
+	"dildo":                2,
+	"diligence":            3,
+	"diligent":             3,
+	"diligently":           4,
+	"dill":                 1,
+	"dim":                  1,
+	"diminution":           4,
+	"dimly":                2,
+	"dimmer":               2,
+	"dimming":              2,
+	"dime":                 1,
+	"din":                  1,
+	"diner":                2,
+	"dinghy":               2,
+	"dingle":               2,
+	"dingo":                2,
+	"dingy":                2,
+	"dining":               2,
+	"dinner":               2,
+	"dinnerware":           3,
+	"dinning":              2,
+	"dine":                 1,
+	"ding":                 1,
+	"dink":                 1,
+	"dinky":                2,
+	"dip":                  1,
+	"diplomat":             3,
+	"diplomatic":           4,
+	"diploid":              2,
+	"dipper":               2,
+	"dipping":              2,
+	"diptera":              3,
+	"diphtheria":           4,
+	"dir":                  1,
+	"dirham":               2,
+	"dire":                 1,
+	"dirge":                1,
+	"dirk":                 1,
+	"dirt":                 1,
+	"dirty":                2,
+	"disability":           5,
+	"disable":              3,
+	"disabled":             3,
+	"disagree":             3,
+	"disagreeable":         5,
+	"disagreeing":          4,
+	"disagreement":         4,
+	"disagreed":            3,
+	"disadvantaged":        4,
+	"disadvantage":         4,
+	"disallow":             3,
+	"disappear":            3,
+	"disappearance":        4,
+	"disappoint":           3,
+	"disappointed":         4,
+	"disappointment":       4,
+	"disapproval":          4,
+	"disapprove":           3,
+	"disapproved":          3,
+	"disarray":             3,
+	"disarm":               2,
+	"disarmament":          4,
+	"disarming":            3,
+	"disassemble":          4,
+	"disassembly":          4,
+	"disaster":             3,
+	"disastrous":           3,
+	"disbelief":            3,
+	"disbursement":         3,
+	"disbursed":            2,
+	"discard":              2,
+	"discern":              2,
+	"discernible":          4,
+	"discerning":           3,
+	"discernment":          3,
+	"discharge":            2,
+	"disciple":             3,
+	"discipleship":         4,
+	"disciplinary":         5,
+	"discipline":           3,
+	"disciplined":          3,
+	"disclaim":             2,
+	"disclaimer":           3,
+	"disclosure":           3,
+	"disclosing":           3,
+	"disclose":             2,
+	"disclosed":            2,
+	"disco":                2,
+	"discography":          4,
+	"discoloration":        5,
+	"discomfort":           3,
+	"disconnection":        4,
+	"disconnect":           3,
+	"disconnected":         4,
+	"discontent":           3,
+	"discontinuity":        6,
+	"discontinuation":      6,
+	"discontinuance":       5,
+	"discontinuing":        5,
+	"discontinuous":        5,
+	"discontinue":          4,
+	"discontinued":         4,
+	"discord":              2,
+	"discount":             2,
+	"discouraging":         4,
+	"discourage":           3,
+	"discouraged":          3,
+	"discourse":            2,
+	"discover":             3,
+	"discoverer":           4,
+	"discoveries":          4,
+	"discovery":            4,
+	"discretion":           3,
+	"discretionary":        5,
+	"discredit":            3,
+	"discreet":             2,
+	"discreetly":           3,
+	"discrepancy":          4,
+	"discrete":             2,
+	"discrimination":       5,
+	"discriminatory":       6,
+	"discriminant":         4,
+	"discriminated":        5,
+	"discriminating":       5,
+	"discriminate":         4,
+	"discursive":           3,
+	"discus":               2,
+	"discussant":           3,
+	"discussion":           3,
+	"discuss":              2,
+	"disdain":              2,
+	"disease":              2,
+	"diseased":             2,
+	"disenfranchised":      4,
+	"disengagement":        4,
+	"disgrace":             2,
+	"disgraceful":          3,
+	"disgraced":            2,
+	"disguise":             2,
+	"disguised":            2,
+	"disgust":              2,
+	"disgusting":           3,
+	"dishonesty":           4,
+	"dishonest":            3,
+	"dishonor":             3,
+	"disinfection":         4,
+	"disinfectant":         4,
+	"disintegration":       5,
+	"disinterested":        5,
+	"disjoint":             2,
+	"disjointed":           3,
+	"dislike":              2,
+	"disliked":             2,
+	"dislocation":          4,
+	"dislocated":           4,
+	"dismal":               2,
+	"dismantle":            3,
+	"dismay":               2,
+	"dismiss":              2,
+	"dismissal":            3,
+	"disobedience":         5,
+	"disorder":             3,
+	"disorderly":           4,
+	"disordered":           3,
+	"disorganized":         4,
+	"disparate":            3,
+	"disparity":            4,
+	"dispatch":             2,
+	"dispatcher":           3,
+	"dispel":               2,
+	"dispensation":         4,
+	"dispenser":            3,
+	"dispensing":           3,
+	"dispense":             2,
+	"dispensed":            2,
+	"dispersal":            3,
+	"dispersion":           3,
+	"disperse":             2,
+	"dispersed":            2,
+	"displacing":           3,
+	"displace":             2,
+	"displacement":         3,
+	"displaced":            2,
+	"display":              2,
+	"displayed":            2,
+	"displeasure":          3,
+	"displeased":           2,
+	"disposition":          4,
+	"disposable":           4,
+	"disposal":             3,
+	"disposing":            3,
+	"dispose":              2,
+	"disposed":             2,
+	"disproportionate":     5,
+	"disproportionately":   6,
+	"disprove":             2,
+	"disputed":             3,
+	"disputing":            3,
+	"dispute":              2,
+	"disqualification":     6,
+	"disqualified":         4,
+	"disqualify":           4,
+	"disregard":            3,
+	"disrespect":           3,
+	"disrespectful":        4,
+	"disruption":           3,
+	"disruptive":           3,
+	"disrupt":              2,
+	"dissatisfaction":      5,
+	"dissatisfied":         4,
+	"dissection":           3,
+	"dissect":              2,
+	"dissected":            3,
+	"dissemination":        5,
+	"disseminated":         5,
+	"disseminating":        5,
+	"disseminate":          4,
+	"dissent":              2,
+	"dissertation":         4,
+	"disservice":           3,
+	"dissident":            3,
+	"dissipation":          4,
+	"dissipated":           4,
+	"dissipate":            3,
+	"dissimilar":           4,
+	"dissociation":         5,
+	"dissolution":          4,
+	"dissonance":           3,
+	"dissolving":           3,
+	"dissolve":             2,
+	"dissolved":            2,
+	"distal":               2,
+	"distance":             2,
+	"distant":              2,
+	"distasteful":          3,
+	"distillation":         4,
+	"distillate":           3,
+	"distiller":            3,
+	"distillery":           4,
+	"distilled":            2,
+	"distinguish":          3,
+	"distinguishable":      5,
+	"distinguishing":       4,
+	"distinguished":        3,
+	"distinction":          3,
+	"distinctive":          3,
+	"distinctively":        4,
+	"distinct":             2,
+	"distinctly":           3,
+	"distortion":           3,
+	"distort":              2,
+	"distorted":            3,
+	"distraction":          3,
+	"distract":             2,
+	"distracted":           3,
+	"distraught":           2,
+	"distress":             2,
+	"distressed":           2,
+	"distribution":         4,
+	"distributional":       5,
+	"distributive":         4,
+	"distributor":          4,
+	"distributable":        5,
+	"distributed":          4,
+	"distributing":         4,
+	"distribute":           3,
+	"district":             2,
+	"distrust":             2,
+	"disturb":              2,
+	"disturbance":          3,
+	"disturbing":           3,
+	"disturbed":            2,
+	"disc":                 1,
+	"dish":                 1,
+	"dishwasher":           3,
+	"disk":                 1,
+	"dist":                 1,
+	"distr":                1,
+	"dit":                  1,
+	"ditto":                2,
+	"ditty":                2,
+	"ditch":                1,
+	"div":                  1,
+	"diver":                2,
+	"dividend":             3,
+	"divination":           4,
+	"diving":               2,
+	"dive":                 1,
+	"dixie":                2,
+	"dixit":                2,
+	"diy":                  1,
+	"dizziness":            3,
+	"dizzy":                2,
+	"dizzying":             3,
+	"dlr":                  1,
+	"doable":               3,
+	"dobra":                2,
+	"dodo":                 2,
+	"doer":                 2,
+	"doing":                2,
+	"doings":               2,
+	"dojo":                 2,
+	"dolomite":             3,
+	"domain":               2,
+	"domestically":         5,
+	"domesticated":         5,
+	"domestic":             3,
+	"dominion":             3,
+	"dona":                 2,
+	"donation":             3,
+	"donated":              3,
+	"donating":             3,
+	"donate":               2,
+	"donor":                2,
+	"donut":                2,
+	"dorado":               3,
+	"dore":                 2,
+	"dory":                 2,
+	"dosimetry":            4,
+	"dobson":               2,
+	"doc":                  1,
+	"doctor":               2,
+	"doctoral":             3,
+	"doctorate":            3,
+	"doctrinal":            3,
+	"doctrine":             2,
+	"documentary":          5,
+	"documentation":        5,
+	"document":             3,
+	"dock":                 1,
+	"docket":               2,
+	"dodger":               2,
+	"dodging":              2,
+	"dodgy":                2,
+	"dodge":                1,
+	"doe":                  1,
+	"does":                 1,
+	"dog":                  1,
+	"dogged":               2,
+	"doggie":               2,
+	"dogging":              2,
+	"doggy":                2,
+	"doghouse":             2,
+	"dogma":                2,
+	"dogmatic":             3,
+	"dogwood":              2,
+	"dogs":                 1,
+	"doh":                  1,
+	"doit":                 1,
+	"dol":                  1,
+	"dolce":                2,
+	"dollar":               2,
+	"dollies":              2,
+	"dolly":                2,
+	"dolor":                2,
+	"dolphin":              2,
+	"dole":                 1,
+	"doll":                 1,
+	"dollhouse":            2,
+	"dom":                  1,
+	"domicile":             3,
+	"domiciled":            3,
+	"domination":           4,
+	"dominator":            4,
+	"dominance":            3,
+	"dominant":             3,
+	"dominated":            4,
+	"dominating":           4,
+	"dominate":             3,
+	"domino":               3,
+	"dominoes":             3,
+	"dome":                 1,
+	"domed":                1,
+	"don":                  1,
+	"donkey":               2,
+	"donna":                2,
+	"donne":                2,
+	"donny":                2,
+	"done":                 1,
+	"dong":                 1,
+	"doodle":               2,
+	"doom":                 1,
+	"doomsday":             2,
+	"door":                 1,
+	"doorbell":             2,
+	"doorman":              2,
+	"doorstep":             2,
+	"doorway":              2,
+	"dop":                  1,
+	"doping":               2,
+	"dope":                 1,
+	"dor":                  1,
+	"dormant":              2,
+	"dormer":               2,
+	"dormitory":            4,
+	"dorsal":               2,
+	"dorm":                 1,
+	"dorr":                 1,
+	"dosage":               2,
+	"dosing":               2,
+	"dossier":              3,
+	"dossiers":             3,
+	"dose":                 1,
+	"doss":                 1,
+	"dost":                 1,
+	"dot":                  1,
+	"dotted":               2,
+	"doty":                 2,
+	"doth":                 1,
+	"double":               2,
+	"doubletree":           3,
+	"doubles":              2,
+	"doublet":              2,
+	"doubling":             2,
+	"doubly":               2,
+	"doubt":                1,
+	"doubtful":             2,
+	"doubtless":            2,
+	"douche":               1,
+	"dough":                1,
+	"doughnut":             2,
+	"doughty":              2,
+	"dove":                 1,
+	"dovecot":              2,
+	"dovetail":             2,
+	"dow":                  1,
+	"dowel":                2,
+	"dowry":                2,
+	"down":                 1,
+	"downer":               2,
+	"downfall":             2,
+	"downgraded":           3,
+	"downgrade":            2,
+	"downhill":             2,
+	"downright":            2,
+	"downstairs":           2,
+	"downstream":           2,
+	"downtime":             2,
+	"downtown":             2,
+	"downturn":             2,
+	"downward":             2,
+	"downwards":            2,
+	"downwind":             2,
+	"downy":                2,
+	"downs":                1,
+	"doz":                  1,
+	"dozen":                2,
+	"dozens":               2,
+	"dozer":                2,
+	"dpt":                  1,
+	"dragoon":              2,
+	"drama":                2,
+	"dramatically":         5,
+	"dramatic":             3,
+	"draperies":            3,
+	"drapery":              3,
+	"drab":                 1,
+	"draft":                1,
+	"drafter":              2,
+	"drag":                 1,
+	"dragging":             2,
+	"dragon":               2,
+	"dragonfly":            3,
+	"dragster":             2,
+	"drain":                1,
+	"drainage":             2,
+	"drake":                1,
+	"dram":                 1,
+	"drank":                1,
+	"draper":               2,
+	"drape":                1,
+	"drapes":               1,
+	"drastically":          4,
+	"drastic":              2,
+	"draught":              1,
+	"draw":                 1,
+	"drawback":             2,
+	"drawer":               2,
+	"drawing":              2,
+	"drawstring":           2,
+	"drawn":                1,
+	"dread":                1,
+	"dreadful":             2,
+	"dreadnought":          2,
+	"dream":                1,
+	"dreamer":              2,
+	"dreaming":             2,
+	"dreamland":            2,
+	"dreamtime":            2,
+	"dreamy":               2,
+	"dreamt":               1,
+	"dreary":               2,
+	"dredging":             2,
+	"dredge":               1,
+	"dree":                 1,
+	"dressage":             2,
+	"dress":                1,
+	"dresser":              2,
+	"dressing":             2,
+	"dressings":            2,
+	"dressy":               2,
+	"drew":                 1,
+	"drier":                2,
+	"dribble":              2,
+	"dried":                1,
+	"drift":                1,
+	"drifter":              2,
+	"driftwood":            2,
+	"drill":                1,
+	"driller":              2,
+	"drilling":             2,
+	"drink":                1,
+	"drinker":              2,
+	"drinking":             2,
+	"drip":                 1,
+	"dripping":             2,
+	"drivel":               2,
+	"driven":               2,
+	"driver":               2,
+	"driving":              2,
+	"drive":                1,
+	"driveway":             2,
+	"drizzle":              2,
+	"drosophila":           4,
+	"droit":                1,
+	"drone":                1,
+	"drool":                1,
+	"drop":                 1,
+	"droplet":              2,
+	"dropout":              2,
+	"dropper":              2,
+	"dropping":             2,
+	"droppings":            2,
+	"drops":                1,
+	"drought":              1,
+	"drove":                1,
+	"drowsiness":           3,
+	"drown":                1,
+	"drowsy":               2,
+	"druid":                2,
+	"drudge":               1,
+	"drug":                 1,
+	"drugstore":            2,
+	"drum":                 1,
+	"drummer":              2,
+	"drumming":             2,
+	"drunk":                1,
+	"drunken":              2,
+	"drunkenness":          3,
+	"dry":                  1,
+	"drying":               2,
+	"dryness":              2,
+	"dryer":                1,
+	"dsp":                  1,
+	"dual":                 2,
+	"duality":              4,
+	"dualism":              3,
+	"dually":               3,
+	"dubious":              3,
+	"duce":                 2,
+	"duel":                 2,
+	"dueling":              3,
+	"duet":                 2,
+	"duly":                 2,
+	"duma":                 2,
+	"duo":                  2,
+	"duodenal":             4,
+	"duplex":               2,
+	"duplication":          4,
+	"duplicator":           4,
+	"duplicated":           4,
+	"duplicating":          4,
+	"duplicate":            3,
+	"dura":                 2,
+	"durability":           5,
+	"durable":              3,
+	"duration":             3,
+	"duress":               2,
+	"duro":                 2,
+	"duty":                 2,
+	"duvet":                2,
+	"dub":                  1,
+	"dubbing":              2,
+	"ductile":              2,
+	"duchess":              2,
+	"duchy":                2,
+	"duck":                 1,
+	"duckling":             2,
+	"ducky":                2,
+	"ducks":                1,
+	"duct":                 1,
+	"dud":                  1,
+	"dude":                 1,
+	"due":                  1,
+	"dues":                 1,
+	"duffel":               2,
+	"duffle":               2,
+	"duff":                 1,
+	"dug":                  1,
+	"dugout":               2,
+	"duke":                 1,
+	"dukes":                1,
+	"dulcimer":             3,
+	"dull":                 1,
+	"dummy":                2,
+	"dumb":                 1,
+	"dumbbell":             2,
+	"dump":                 1,
+	"dumper":               2,
+	"dumps":                1,
+	"dun":                  1,
+	"dungeon":              2,
+	"dunning":              2,
+	"dunno":                2,
+	"dune":                 1,
+	"dung":                 1,
+	"dunk":                 1,
+	"duomo":                2,
+	"dup":                  1,
+	"duper":                2,
+	"dupe":                 1,
+	"during":               2,
+	"durst":                1,
+	"dusk":                 1,
+	"dusky":                2,
+	"dust":                 1,
+	"duster":               2,
+	"dusting":              2,
+	"dusty":                2,
+	"dutch":                1,
+	"dwarf":                1,
+	"dwell":                1,
+	"dweller":              2,
+	"dwelling":             2,
+	"dwelt":                1,
+	"dwt":                  1,
+	"dyer":                 2,
+	"dying":                2,
+	"dynamism":             3,
+	"dynamite":             3,
+	"dynamo":               3,
+	"dynamical":            4,
+	"dynamically":          5,
+	"dynamic":              3,
+	"dynamics":             3,
+	"dye":                  1,
+	"dyeing":               2,
+	"dyke":                 1,
+	"dynasty":              3,
+	"dysfunction":          3,
+	"dyslexia":             4,
+	"dysphagia":            3,
+	"dysplasia":            3,
+	"dystopia":             4,
+	"dystrophy":            3,
+	"eclipse":              2,
+	"eclipsed":             2,
+	"economical":           5,
+	"economically":         6,
+	"economic":             4,
+	"economics":            4,
+	"ecologist":            4,
+	"ecology":              4,
+	"econometric":          5,
+	"econometrics":         5,
+	"economist":            4,
+	"economy":              4,
+	"ecu":                  2,
+	"edema":                3,
+	"edelweiss":            3,
+	"edition":              3,
+	"edict":                2,
+	"egalitarian":          6,
+	"ego":                  2,
+	"egos":                 2,
+	"egregious":            3,
+	"egress":               2,
+	"egret":                2,
+	"ejaculation":          5,
+	"ejaculating":          5,
+	"ejaculate":            4,
+	"ejection":             3,
+	"eject":                2,
+	"elation":              3,
+	"elaboration":          5,
+	"elaborated":           5,
+	"elaborate":            4,
+	"elan":                 2,
+	"elapsed":              2,
+	"elastic":              3,
+	"elasticity":           5,
+	"elastomer":            4,
+	"elated":               3,
+	"election":             3,
+	"elective":             3,
+	"elector":              3,
+	"electoral":            4,
+	"electorate":           4,
+	"electrical":           4,
+	"electrically":         5,
+	"electrician":          4,
+	"electrification":      6,
+	"electrified":          4,
+	"electrifying":         5,
+	"electric":             3,
+	"electricity":          5,
+	"electro":              3,
+	"electrochemical":      6,
+	"electrochemistry":     6,
+	"electrolytic":         5,
+	"electrolyte":          4,
+	"electromagnetic":      6,
+	"electromechanical":    7,
+	"electrophoresis":      6,
+	"electrophoretic":      6,
+	"electrophysiology":    8,
+	"electrostatic":        5,
+	"electrode":            3,
+	"electrolysis":         5,
+	"electron":             3,
+	"electronically":       6,
+	"electronic":           4,
+	"electronics":          4,
+	"elektra":              3,
+	"eleven":               3,
+	"eleventh":             3,
+	"elicit":               3,
+	"elimination":          5,
+	"eliminator":           5,
+	"eliminated":           5,
+	"eliminating":          5,
+	"eliminate":            4,
+	"elitist":              3,
+	"elite":                2,
+	"elixir":               3,
+	"elongation":           4,
+	"elongated":            4,
+	"elucidate":            4,
+	"elusive":              3,
+	"emancipation":         5,
+	"emergency":            4,
+	"emergence":            3,
+	"emergent":             3,
+	"emeritus":             4,
+	"emerging":             3,
+	"emerge":               2,
+	"emerged":              2,
+	"emir":                 2,
+	"emission":             3,
+	"emit":                 2,
+	"emitted":              3,
+	"emitter":              3,
+	"emitting":             3,
+	"emotion":              3,
+	"emotional":            4,
+	"emotionally":          5,
+	"emotive":              3,
+	"emulsion":             3,
+	"enamel":               3,
+	"enameled":             3,
+	"enigma":               3,
+	"enormous":             3,
+	"enormously":           4,
+	"enough":               2,
+	"enumeration":          5,
+	"enumerator":           5,
+	"enumerated":           5,
+	"enumerate":            4,
+	"eon":                  2,
+	"ep":                   2,
+	"ephedra":              3,
+	"ephedrine":            3,
+	"ephemera":             4,
+	"ephemeral":            4,
+	"ephemeris":            4,
+	"epidural":             4,
+	"epiphany":             4,
+	"episcopal":            4,
+	"epistemological":      7,
+	"epistemology":         6,
+	"epistle":              3,
+	"epitome":              4,
+	"equation":             3,
+	"equatorial":           5,
+	"equator":              3,
+	"equal":                2,
+	"equality":             4,
+	"equalization":         5,
+	"equalizer":            4,
+	"equally":              3,
+	"equated":              3,
+	"equating":             3,
+	"equate":               2,
+	"equestrian":           4,
+	"equilibria":           5,
+	"equilibrium":          5,
+	"equinox":              3,
+	"equip":                2,
+	"equipment":            3,
+	"equipping":            3,
+	"equipped":             2,
+	"equivalent":           4,
+	"equivalently":         5,
+	"era":                  2,
+	"eradication":          5,
+	"eradicated":           5,
+	"eradicating":          5,
+	"eradicate":            4,
+	"eraser":               3,
+	"erasing":              3,
+	"erasure":              3,
+	"erase":                2,
+	"erased":               2,
+	"erectile":             3,
+	"erection":             3,
+	"erect":                2,
+	"erosion":              3,
+	"eroded":               3,
+	"eroding":              3,
+	"erode":                2,
+	"erotica":              4,
+	"erotic":               3,
+	"eruption":             3,
+	"erupt":                2,
+	"erythrocyte":          4,
+	"erythromycin":         5,
+	"esophageal":           5,
+	"esophagus":            4,
+	"eta":                  2,
+	"eternal":              3,
+	"eternally":            4,
+	"eternity":             4,
+	"ethereal":             4,
+	"ether":                2,
+	"ethos":                2,
+	"etiology":             5,
+	"etude":                2,
+	"evasion":              3,
+	"evasive":              3,
+	"evacuation":           5,
+	"evacuated":            5,
+	"evacuate":             4,
+	"evade":                2,
+	"evaluation":           5,
+	"evaluative":           5,
+	"evaluator":            5,
+	"evaluated":            5,
+	"evaluating":           5,
+	"evaluate":             4,
+	"evangelistic":         5,
+	"evangelism":           4,
+	"evangelist":           4,
+	"evangelical":          5,
+	"evaporation":          5,
+	"evaporative":          5,
+	"evaporator":           5,
+	"evaporated":           5,
+	"evaporate":            4,
+	"even":                 2,
+	"evenly":               3,
+	"eventual":             4,
+	"eventually":           5,
+	"event":                2,
+	"eventful":             3,
+	"evert":                2,
+	"eviction":             3,
+	"evil":                 2,
+	"evite":                2,
+	"evocative":            4,
+	"evoking":              3,
+	"evoke":                2,
+	"evoked":               2,
+	"evolving":             3,
+	"evolve":               2,
+	"evolved":              2,
+	"eager":                2,
+	"eagerly":              3,
+	"eagerness":            3,
+	"eagle":                2,
+	"easel":                2,
+	"each":                 1,
+	"ear":                  1,
+	"earlier":              3,
+	"earliest":             3,
+	"early":                2,
+	"earnest":              2,
+	"earnestly":            3,
+	"earphone":             2,
+	"earpiece":             2,
+	"earring":              2,
+	"eared":                1,
+	"earl":                 1,
+	"earn":                 1,
+	"earner":               2,
+	"earning":              2,
+	"earnings":             2,
+	"earth":                1,
+	"earthen":              2,
+	"earthenware":          3,
+	"earthly":              2,
+	"earthquake":           2,
+	"earthy":               2,
+	"easier":               3,
+	"easiest":              3,
+	"easily":               3,
+	"easing":               2,
+	"easy":                 2,
+	"ease":                 1,
+	"easement":             2,
+	"east":                 1,
+	"eastbound":            2,
+	"easterly":             3,
+	"eastern":              2,
+	"eastward":             2,
+	"eat":                  1,
+	"eaten":                2,
+	"eater":                2,
+	"eateries":             3,
+	"eatery":               3,
+	"eating":               2,
+	"eats":                 1,
+	"eaves":                1,
+	"eavesdropping":        3,
+	"ebony":                3,
+	"ebb":                  1,
+	"eccentric":            3,
+	"eccentricity":         5,
+	"ecclesiastical":       6,
+	"eclectic":             3,
+	"ecological":           5,
+	"ecologically":         6,
+	"ecosystem":            4,
+	"ecru":                 2,
+	"ecstasy":              3,
+	"ecstatic":             3,
+	"ectopic":              3,
+	"ecumenical":           5,
+	"eczema":               3,
+	"eccles":               1,
+	"echelon":              3,
+	"echo":                 2,
+	"echoing":              3,
+	"echoed":               2,
+	"echoes":               2,
+	"ecol":                 1,
+	"econ":                 1,
+	"eddy":                 2,
+	"edible":               3,
+	"edifice":              3,
+	"editorial":            5,
+	"editor":               3,
+	"education":            4,
+	"educational":          5,
+	"educationally":        6,
+	"educator":             4,
+	"educated":             4,
+	"educating":            4,
+	"educate":              3,
+	"edging":               2,
+	"edgy":                 2,
+	"edge":                 1,
+	"edit":                 1,
+	"edp":                  1,
+	"educ":                 1,
+	"eerie":                2,
+	"eel":                  1,
+	"effective":            3,
+	"effectively":          4,
+	"effectiveness":        4,
+	"effector":             3,
+	"effect":               2,
+	"effects":              2,
+	"efficacious":          4,
+	"efficacy":             4,
+	"efficiency":           4,
+	"efficient":            3,
+	"efficiently":          4,
+	"effluent":             2,
+	"efflux":               2,
+	"effort":               2,
+	"effortless":           3,
+	"effortlessly":         4,
+	"effusion":             3,
+	"eff":                  1,
+	"eft":                  1,
+	"egg":                  1,
+	"eggplant":             2,
+	"eide":                 2,
+	"eidos":                2,
+	"eigenvalue":           4,
+	"either":               2,
+	"eight":                1,
+	"eighteen":             2,
+	"eighteenth":           2,
+	"eighties":             2,
+	"eighty":               2,
+	"eighth":               1,
+	"elbow":                2,
+	"elegance":             3,
+	"elegant":              3,
+	"elegantly":            4,
+	"elegy":                3,
+	"elementary":           5,
+	"element":              3,
+	"elemental":            4,
+	"elephant":             3,
+	"elevation":            4,
+	"elevator":             4,
+	"elevated":             4,
+	"elevating":            4,
+	"elevate":              3,
+	"eligibility":          6,
+	"eligible":             4,
+	"ellipsis":             3,
+	"ellipsoid":            3,
+	"elliptical":           4,
+	"elliptic":             3,
+	"ellipse":              2,
+	"eloquence":            3,
+	"eloquent":             3,
+	"eloquently":           4,
+	"eld":                  1,
+	"elder":                2,
+	"elderly":              3,
+	"eldest":               2,
+	"elec":                 1,
+	"elect":                1,
+	"elem":                 1,
+	"elev":                 1,
+	"elf":                  1,
+	"elk":                  1,
+	"ell":                  1,
+	"elm":                  1,
+	"else":                 1,
+	"elsewhere":            2,
+	"elves":                1,
+	"emanating":            4,
+	"embankment":           3,
+	"embargo":              3,
+	"embarrass":            3,
+	"embarrassment":        4,
+	"embark":               2,
+	"embassy":              3,
+	"embattled":            3,
+	"embed":                2,
+	"embedded":             3,
+	"embedding":            3,
+	"embellishment":        4,
+	"ember":                2,
+	"embezzlement":         4,
+	"emblem":               2,
+	"embolism":             3,
+	"embodiment":           4,
+	"embodied":             3,
+	"embody":               3,
+	"embodying":            4,
+	"emboss":               2,
+	"embracing":            3,
+	"embrace":              2,
+	"embraced":             2,
+	"embroidery":           4,
+	"embryo":               3,
+	"embryology":           5,
+	"embryonic":            4,
+	"emcee":                2,
+	"emerald":              3,
+	"emery":                3,
+	"emigration":           4,
+	"emigrant":             3,
+	"emigrated":            4,
+	"eminence":             3,
+	"eminent":              3,
+	"eminently":            4,
+	"emmet":                2,
+	"empathy":              3,
+	"emperor":              3,
+	"emphasis":             3,
+	"emphasising":          4,
+	"emphasise":            3,
+	"emphasised":           3,
+	"emphasizing":          4,
+	"emphasize":            3,
+	"emphasized":           3,
+	"emphatic":             3,
+	"emphysema":            4,
+	"empirical":            4,
+	"empirically":          5,
+	"empire":               2,
+	"emplacement":          3,
+	"employ":               2,
+	"employability":        6,
+	"employee":             3,
+	"employer":             3,
+	"employment":           3,
+	"emporium":             4,
+	"empower":              3,
+	"empowerment":          4,
+	"empress":              2,
+	"emulation":            4,
+	"emulator":             4,
+	"emulated":             4,
+	"emulating":            4,
+	"emulate":              3,
+	"eme":                  1,
+	"emf":                  1,
+	"emptiness":            3,
+	"emptied":              2,
+	"empty":                2,
+	"emptying":             3,
+	"emu":                  1,
+	"enable":               3,
+	"enabler":              3,
+	"enabling":             3,
+	"enact":                2,
+	"enactment":            3,
+	"encampment":           3,
+	"encapsulation":        5,
+	"encapsulated":         5,
+	"encapsulating":        5,
+	"encapsulate":          4,
+	"encased":              2,
+	"encephalitis":         5,
+	"encephalopathy":       6,
+	"enchant":              2,
+	"enchanting":           3,
+	"enchantment":          3,
+	"enclave":              2,
+	"enclosure":            3,
+	"enclosing":            3,
+	"enclose":              2,
+	"enclosed":             2,
+	"encoded":              3,
+	"encoder":              3,
+	"encoding":             3,
+	"encode":               2,
+	"encompass":            3,
+	"encore":               2,
+	"encounter":            3,
+	"encouraging":          4,
+	"encourage":            3,
+	"encouragement":        4,
+	"encouraged":           3,
+	"encroachment":         3,
+	"encryption":           3,
+	"encrypt":              2,
+	"encumbrance":          3,
+	"encyclopaedia":        6,
+	"encyclopedia":         6,
+	"encyclopedic":         5,
+	"encyclical":           4,
+	"endanger":             3,
+	"endeavor":             3,
+	"endocarditis":         5,
+	"endocrinology":        6,
+	"endocrine":            3,
+	"endometrial":          5,
+	"endometriosis":        6,
+	"endoplasmic":          4,
+	"endoscopic":           4,
+	"endothelial":          5,
+	"endothelium":          5,
+	"endotoxin":            4,
+	"endogenous":           4,
+	"endorsing":            3,
+	"endorse":              2,
+	"endorsement":          3,
+	"endorsed":             2,
+	"endoscopy":            4,
+	"endowment":            3,
+	"endurance":            3,
+	"enduring":             3,
+	"endure":               2,
+	"endured":              2,
+	"enema":                3,
+	"enemy":                3,
+	"energetic":            4,
+	"energetics":           4,
+	"energizer":            4,
+	"energizing":           4,
+	"energize":             3,
+	"energized":            3,
+	"energy":               3,
+	"enforcer":             3,
+	"enforcing":            3,
+	"enforce":              2,
+	"enforceability":       6,
+	"enforceable":          4,
+	"enforcement":          3,
+	"enforced":             2,
+	"engaging":             3,
+	"engage":               2,
+	"engagement":           3,
+	"engaged":              2,
+	"engender":             3,
+	"engineer":             3,
+	"engineering":          4,
+	"engine":               2,
+	"engraver":             3,
+	"engraving":            3,
+	"engrave":              2,
+	"engraved":             2,
+	"engrossing":           3,
+	"enhancer":             3,
+	"enhancing":            3,
+	"enhance":              2,
+	"enhancement":          3,
+	"enhanced":             2,
+	"enigmatic":            4,
+	"enjoy":                2,
+	"enjoyable":            4,
+	"enjoyment":            3,
+	"enlarger":             3,
+	"enlarging":            3,
+	"enlarge":              2,
+	"enlargement":          3,
+	"enlarged":             2,
+	"enlighten":            3,
+	"enlightenment":        4,
+	"enlist":               2,
+	"enlistment":           3,
+	"enmity":               3,
+	"enquiries":            3,
+	"enquiry":              3,
+	"enquire":              2,
+	"enraged":              2,
+	"enrich":               2,
+	"enrichment":           3,
+	"enrol":                2,
+	"enrolling":            3,
+	"enrolment":            3,
+	"enroll":               2,
+	"enrollee":             3,
+	"enrollment":           3,
+	"enrolled":             2,
+	"ensemble":             3,
+	"enshrined":            2,
+	"ensign":               2,
+	"enslaved":             2,
+	"ensuing":              3,
+	"ensue":                2,
+	"ensued":               2,
+	"ensuring":             3,
+	"ensure":               2,
+	"ensured":              2,
+	"entail":               2,
+	"entanglement":         4,
+	"enter":                2,
+	"enteral":              3,
+	"enteric":              3,
+	"enterprising":         4,
+	"enterprise":           3,
+	"entertain":            3,
+	"entertainer":          4,
+	"entertaining":         4,
+	"entertainment":        4,
+	"enthalpy":             3,
+	"enthralled":           2,
+	"enthusiastically":     7,
+	"enthusiastic":         5,
+	"enthusiasm":           4,
+	"enthusiast":           4,
+	"entitle":              3,
+	"entitlement":          4,
+	"entity":               3,
+	"enticing":             3,
+	"entice":               2,
+	"entire":               2,
+	"entirely":             3,
+	"entirety":             3,
+	"entomological":        6,
+	"entomology":           5,
+	"entourage":            3,
+	"entrada":              3,
+	"entrance":             2,
+	"entrant":              2,
+	"entrapment":           3,
+	"entrepreneur":         4,
+	"entrepreneurial":      6,
+	"entrepreneurship":     5,
+	"entree":               2,
+	"entropy":              3,
+	"entrust":              2,
+	"entry":                2,
+	"envelope":             3,
+	"enveloped":            3,
+	"enviable":             4,
+	"envious":              3,
+	"environ":              3,
+	"environmental":        5,
+	"environmentalism":     6,
+	"environmentalist":     6,
+	"environmentally":      6,
+	"environment":          4,
+	"environs":             3,
+	"envision":             3,
+	"envisage":             3,
+	"envisaged":            3,
+	"envoy":                2,
+	"envy":                 2,
+	"enzymatic":            4,
+	"enzymology":           5,
+	"enzyme":               2,
+	"enc":                  1,
+	"end":                  1,
+	"ender":                2,
+	"endgame":              2,
+	"ending":               2,
+	"endless":              2,
+	"endlessly":            3,
+	"endnote":              2,
+	"endpoint":             2,
+	"endemic":              1,
+	"eng":                  1,
+	"engin":                1,
+	"engr":                 1,
+	"ens":                  1,
+	"epicenter":            4,
+	"epidemiological":      8,
+	"epidemiology":         7,
+	"epidemic":             4,
+	"epidermal":            4,
+	"epidermis":            4,
+	"epilepsy":             4,
+	"epileptic":            4,
+	"epilogue":             3,
+	"epinephrine":          4,
+	"episodic":             4,
+	"episode":              3,
+	"epitaph":              3,
+	"epithelial":           5,
+	"epithelium":           5,
+	"epic":                 2,
+	"epistemic":            4,
+	"epoch":                2,
+	"epos":                 2,
+	"epoxy":                3,
+	"epsilon":              3,
+	"equitable":            4,
+	"equitably":            4,
+	"equities":             3,
+	"equity":               3,
+	"equivalency":          5,
+	"equivalence":          4,
+	"equine":               2,
+	"equiv":                1,
+	"ergo":                 2,
+	"ergonomic":            4,
+	"ergonomics":           4,
+	"erica":                3,
+	"eric":                 2,
+	"errata":               3,
+	"erratum":              3,
+	"errand":               2,
+	"errant":               2,
+	"erratic":              3,
+	"erroneous":            4,
+	"erroneously":          5,
+	"error":                2,
+	"erythema":             4,
+	"ere":                  1,
+	"erg":                  1,
+	"erk":                  1,
+	"ern":                  1,
+	"err":                  1,
+	"ers":                  1,
+	"erstwhile":            2,
+	"escalation":           4,
+	"escalator":            4,
+	"escalade":             3,
+	"escalated":            4,
+	"escalating":           4,
+	"escalate":             3,
+	"escaping":             3,
+	"escape":               2,
+	"escaped":              2,
+	"escarpment":           3,
+	"eschatology":          5,
+	"escort":               2,
+	"escrow":               2,
+	"escudo":               3,
+	"esker":                2,
+	"esoteric":             4,
+	"espanol":              3,
+	"especial":             3,
+	"especially":           4,
+	"esperance":            3,
+	"espionage":            4,
+	"esplanade":            3,
+	"espoused":             2,
+	"espresso":             3,
+	"esprit":               2,
+	"esquire":              2,
+	"essay":                2,
+	"esse":                 2,
+	"essential":            3,
+	"essentially":          4,
+	"essence":              2,
+	"establish":            3,
+	"establishment":        4,
+	"estate":               2,
+	"esteem":               2,
+	"ester":                2,
+	"estimation":           4,
+	"estimator":            4,
+	"estimated":            4,
+	"estimating":           4,
+	"estimate":             3,
+	"estoppel":             3,
+	"estradiol":            4,
+	"estranged":            2,
+	"estrogen":             3,
+	"estuarine":            4,
+	"estuaries":            4,
+	"estuary":              4,
+	"esp":                  1,
+	"ess":                  1,
+	"est":                  1,
+	"esu":                  1,
+	"etcetera":             4,
+	"etiquette":            3,
+	"etna":                 2,
+	"etymology":            5,
+	"etc":                  1,
+	"etch":                 1,
+	"etching":              2,
+	"eth":                  1,
+	"ethanol":              3,
+	"ethical":              3,
+	"ethically":            4,
+	"ethic":                2,
+	"ethics":               2,
+	"ethnically":           4,
+	"ethnic":               2,
+	"ethnicity":            4,
+	"ethnographic":         4,
+	"ethnography":          4,
+	"ethnology":            4,
+	"ethyl":                2,
+	"ethylene":             3,
+	"eucalyptus":           4,
+	"euchre":               2,
+	"eugenics":             3,
+	"eulogy":               3,
+	"euphonium":            4,
+	"euphoria":             4,
+	"euphoric":             3,
+	"eureka":               3,
+	"eurythmics":           3,
+	"euthanasia":           4,
+	"eutrophication":       5,
+	"evanescence":          4,
+	"ever":                 2,
+	"evergreen":            3,
+	"everlasting":          4,
+	"evermore":             3,
+	"evidentiary":          5,
+	"evidence":             3,
+	"evidenced":            3,
+	"evident":              3,
+	"evidently":            4,
+	"evolution":            4,
+	"evolutionary":         6,
+	"evan":                 1,
+	"eve":                  1,
+	"evening":              2,
+	"evenings":             2,
+	"every":                2,
+	"everybody":            4,
+	"everyday":             3,
+	"everyone":             3,
+	"everything":           3,
+	"everywhere":           3,
+	"ewe":                  1,
+	"examen":               3,
+	"exacerbated":          5,
+	"exacerbate":           4,
+	"exact":                2,
+	"exacting":             3,
+	"exactly":              3,
+	"exaggeration":         5,
+	"exaggerated":          5,
+	"exaggerating":         5,
+	"exaggerate":           4,
+	"exalted":              3,
+	"exam":                 2,
+	"examination":          5,
+	"examiner":             4,
+	"examining":            4,
+	"examine":              3,
+	"examined":             3,
+	"example":              3,
+	"excavation":           4,
+	"excavator":            4,
+	"excavated":            4,
+	"excavating":           4,
+	"exceed":               2,
+	"exceeding":            3,
+	"exceedingly":          4,
+	"excel":                2,
+	"excellency":           4,
+	"excellence":           3,
+	"excellent":            3,
+	"excellently":          4,
+	"excelsior":            4,
+	"excelled":             2,
+	"exception":            3,
+	"exceptional":          4,
+	"exceptionally":        5,
+	"except":               2,
+	"excepting":            3,
+	"excerpt":              2,
+	"excessive":            3,
+	"excessively":          4,
+	"excess":               2,
+	"exchanger":            3,
+	"exchanging":           3,
+	"exchange":             2,
+	"exchangeable":         4,
+	"exchanged":            2,
+	"exchequer":            3,
+	"excision":             3,
+	"excitation":           4,
+	"excise":               2,
+	"excised":              2,
+	"excitatory":           5,
+	"excited":              3,
+	"excitedly":            4,
+	"exciting":             3,
+	"excite":               2,
+	"excitement":           3,
+	"exclamation":          4,
+	"exclusion":            3,
+	"exclusionary":         5,
+	"exclusivity":          5,
+	"exclusive":            3,
+	"exclusively":          4,
+	"excluded":             3,
+	"excluding":            3,
+	"exclude":              2,
+	"excretion":            3,
+	"excreted":             3,
+	"excruciating":         5,
+	"excursion":            3,
+	"excuse":               2,
+	"excused":              2,
+	"execution":            4,
+	"executioner":          5,
+	"executable":           5,
+	"executed":             4,
+	"executing":            4,
+	"execute":              3,
+	"exegesis":             4,
+	"executive":            4,
+	"executor":             4,
+	"exemplary":            4,
+	"exemplar":             3,
+	"exemplified":          4,
+	"exemplify":            4,
+	"exemption":            3,
+	"exempt":               2,
+	"exercisable":          5,
+	"exercising":           4,
+	"exercise":             3,
+	"exercised":            3,
+	"exertion":             3,
+	"exert":                2,
+	"exfoliating":          5,
+	"exhale":               2,
+	"exhaustion":           3,
+	"exhaustive":           3,
+	"exhaust":              2,
+	"exhibition":           4,
+	"exhibitionism":        5,
+	"exhibitionist":        5,
+	"exhibitor":            4,
+	"exhibit":              3,
+	"exhilarating":         5,
+	"exile":                2,
+	"exiled":               2,
+	"existential":          4,
+	"existentialism":       5,
+	"exist":                2,
+	"existence":            3,
+	"existent":             3,
+	"exit":                 2,
+	"exodus":               3,
+	"exogenous":            4,
+	"exon":                 2,
+	"exorbitant":           4,
+	"exorcism":             3,
+	"exorcist":             3,
+	"exotica":              4,
+	"exotic":               3,
+	"expansion":            3,
+	"expansive":            3,
+	"expand":               2,
+	"expandable":           4,
+	"expanded":             3,
+	"expander":             3,
+	"expanse":              2,
+	"expatriate":           4,
+	"expedient":            4,
+	"expedition":           4,
+	"expeditionary":        6,
+	"expeditious":          4,
+	"expeditiously":        5,
+	"expedited":            4,
+	"expediting":           4,
+	"expedite":             3,
+	"experiential":         5,
+	"experiencing":         5,
+	"experience":           4,
+	"experienced":          4,
+	"expectation":          4,
+	"expect":               2,
+	"expectancy":           4,
+	"expectant":            3,
+	"expecting":            3,
+	"expel":                2,
+	"expelled":             2,
+	"expensive":            3,
+	"expend":               2,
+	"expendable":           4,
+	"expenditure":          4,
+	"expense":              2,
+	"experimentation":      6,
+	"experimental":         5,
+	"experimentally":       6,
+	"experiment":           4,
+	"experimenter":         5,
+	"expert":               2,
+	"expertise":            3,
+	"expertly":             3,
+	"expiration":           4,
+	"expiry":               3,
+	"expiring":             3,
+	"expire":               2,
+	"expired":              2,
+	"explanation":          4,
+	"explain":              2,
+	"explanatory":          5,
+	"explicit":             3,
+	"explicitly":           4,
+	"exploration":          4,
+	"explosion":            3,
+	"explosive":            3,
+	"exploded":             3,
+	"exploding":            3,
+	"explode":              2,
+	"exploitation":         4,
+	"exploit":              2,
+	"exploitable":          4,
+	"exploratory":          5,
+	"explorer":             3,
+	"exploring":            3,
+	"explore":              2,
+	"explored":             2,
+	"expo":                 2,
+	"exponential":          4,
+	"exponentially":        5,
+	"exponent":             3,
+	"expos":                3,
+	"exposition":           4,
+	"exposure":             3,
+	"exportation":          4,
+	"export":               2,
+	"exporter":             3,
+	"expository":           5,
+	"exposing":             3,
+	"expose":               2,
+	"exposed":              2,
+	"expression":           3,
+	"expressionism":        4,
+	"expressive":           3,
+	"express":              2,
+	"expressly":            3,
+	"expresso":             3,
+	"expressway":           3,
+	"expropriation":        5,
+	"expulsion":            3,
+	"exquisitely":          4,
+	"exquisite":            3,
+	"extant":               2,
+	"exterior":             4,
+	"extensibility":        6,
+	"extensible":           4,
+	"extension":            3,
+	"extensive":            3,
+	"extensively":          4,
+	"extenuating":          5,
+	"extend":               2,
+	"extendable":           4,
+	"extended":             3,
+	"extender":             3,
+	"extent":               2,
+	"extermination":        5,
+	"external":             3,
+	"externally":           4,
+	"extern":               2,
+	"extinguish":           3,
+	"extinguisher":         4,
+	"extinction":           3,
+	"extinct":              2,
+	"extortion":            3,
+	"extra":                2,
+	"extracellular":        5,
+	"extracurricular":      6,
+	"extradition":          4,
+	"extramural":           4,
+	"extraneous":           4,
+	"extraterrestrial":     6,
+	"extraction":           3,
+	"extractions":          3,
+	"extractive":           3,
+	"extractor":            3,
+	"extract":              2,
+	"extraordinarily":      6,
+	"extraordinary":        5,
+	"extrapolation":        5,
+	"extrapolated":         5,
+	"extrapolate":          4,
+	"extravaganza":         5,
+	"extravagance":         4,
+	"extravagant":          4,
+	"extremity":            4,
+	"extremism":            3,
+	"extremist":            3,
+	"extreme":              2,
+	"extremely":            3,
+	"extrinsic":            3,
+	"extrusion":            3,
+	"extruded":             3,
+	"exuberance":           4,
+	"exuberant":            4,
+	"exc":                  1,
+	"exch":                 1,
+	"excl":                 1,
+	"exec":                 1,
+	"exp":                  1,
+	"ext":                  1,
+	"eye":                  1,
+	"eyeball":              2,
+	"eyebrow":              2,
+	"eyeglass":             2,
+	"eyeglasses":           3,
+	"eyeing":               2,
+	"eyelash":              2,
+	"eyelet":               2,
+	"eyelid":               2,
+	"eyeliner":             3,
+	"eyepiece":             2,
+	"eyesight":             2,
+	"eyewitness":           3,
+	"eyed":                 1,
+	"eyes":                 1,
+	"eyre":                 1,
+	"fable":                2,
+	"fabled":               2,
+	"facade":               2,
+	"facia":                3,
+	"facies":               3,
+	"facial":               2,
+	"facilitation":         5,
+	"facilitator":          5,
+	"facilitated":          5,
+	"facilitating":         5,
+	"facilitate":           4,
+	"facility":             4,
+	"faerie":               3,
+	"faeries":              3,
+	"faery":                3,
+	"familiarity":          6,
+	"familial":             3,
+	"familiar":             3,
+	"familiarize":          4,
+	"famille":              2,
+	"famous":               2,
+	"famously":             3,
+	"fanatical":            4,
+	"fanaticism":           4,
+	"fanatic":              3,
+	"farina":               3,
+	"fatal":                2,
+	"fatality":             4,
+	"fatally":              3,
+	"father":               2,
+	"fatherhood":           3,
+	"fatigue":              2,
+	"fatigued":             2,
+	"favor":                2,
+	"favorable":            4,
+	"favorably":            4,
+	"favorite":             3,
+	"favored":              2,
+	"favors":               2,
+	"favour":               2,
+	"favourable":           4,
+	"favourably":           4,
+	"favourite":            3,
+	"favoured":             2,
+	"favours":              2,
+	"fab":                  1,
+	"fabrication":          4,
+	"fabricator":           4,
+	"fabricated":           4,
+	"fabricating":          4,
+	"fabricate":            3,
+	"fabric":               2,
+	"fabulous":             3,
+	"fac":                  1,
+	"facet":                2,
+	"faceted":              3,
+	"facile":               2,
+	"facing":               2,
+	"facsimile":            4,
+	"faction":              2,
+	"factorial":            4,
+	"factory":              3,
+	"factor":               2,
+	"factorization":        5,
+	"factoring":            3,
+	"factual":              3,
+	"factually":            4,
+	"faculty":              3,
+	"face":                 1,
+	"faceless":             2,
+	"faceplate":            2,
+	"fact":                 1,
+	"fad":                  1,
+	"faded":                2,
+	"fader":                2,
+	"fading":               2,
+	"fade":                 1,
+	"fag":                  1,
+	"faggot":               2,
+	"fail":                 1,
+	"failing":              2,
+	"failure":              2,
+	"fain":                 1,
+	"faint":                1,
+	"fainter":              2,
+	"faintly":              2,
+	"fair":                 1,
+	"fairbanks":            2,
+	"fairies":              2,
+	"fairing":              2,
+	"fairly":               2,
+	"fairness":             2,
+	"fairway":              2,
+	"fairy":                2,
+	"faith":                1,
+	"faithful":             2,
+	"faithfully":           3,
+	"faithfulness":         3,
+	"faithless":            2,
+	"faking":               2,
+	"fake":                 1,
+	"falcon":               2,
+	"falconer":             3,
+	"fallacy":              3,
+	"fallow":               2,
+	"falsification":        5,
+	"falsified":            3,
+	"falter":               2,
+	"fall":                 1,
+	"fallen":               2,
+	"falling":              2,
+	"fallout":              2,
+	"false":                1,
+	"falsehood":            2,
+	"falsely":              2,
+	"fam":                  1,
+	"family":               3,
+	"famine":               2,
+	"fame":                 1,
+	"famed":                1,
+	"fan":                  1,
+	"fanciful":             3,
+	"fancied":              2,
+	"fancy":                2,
+	"fandango":             3,
+	"fanfare":              2,
+	"fanning":              2,
+	"fanny":                2,
+	"fantasia":             3,
+	"fantasy":              3,
+	"fantastically":        5,
+	"fantastic":            3,
+	"fantom":               2,
+	"fang":                 1,
+	"faq":                  1,
+	"far":                  1,
+	"faraday":              3,
+	"faraway":              3,
+	"faro":                 2,
+	"farrow":               2,
+	"farther":              2,
+	"farthest":             2,
+	"farce":                1,
+	"fare":                 1,
+	"farewell":             2,
+	"farm":                 1,
+	"farmer":               2,
+	"farmhouses":           3,
+	"farmhouse":            2,
+	"farming":              2,
+	"farmland":             2,
+	"fart":                 1,
+	"fas":                  1,
+	"fascia":               3,
+	"fascination":          4,
+	"fascinated":           4,
+	"fascinating":          4,
+	"fascism":              2,
+	"fascist":              2,
+	"fasten":               2,
+	"fastener":             3,
+	"fastening":            3,
+	"fashion":              2,
+	"fashionable":          4,
+	"fast":                 1,
+	"fat":                  1,
+	"fated":                2,
+	"fatter":               2,
+	"fatty":                2,
+	"fatwa":                2,
+	"fate":                 1,
+	"fateful":              2,
+	"fath":                 1,
+	"fathom":               2,
+	"fats":                 1,
+	"faucet":               2,
+	"fauna":                2,
+	"fault":                1,
+	"faulty":               2,
+	"fawn":                 1,
+	"fay":                  1,
+	"fecal":                2,
+	"feces":                2,
+	"fedora":               3,
+	"felicity":             4,
+	"feline":               2,
+	"female":               2,
+	"femur":                2,
+	"feral":                2,
+	"ferocious":            3,
+	"fetal":                2,
+	"fetus":                2,
+	"fetuses":              3,
+	"fever":                2,
+	"feasibility":          5,
+	"feasible":             3,
+	"featurette":           3,
+	"featuring":            3,
+	"feature":              2,
+	"featured":             2,
+	"fear":                 1,
+	"fearful":              2,
+	"fearless":             2,
+	"fearsome":             2,
+	"feast":                1,
+	"feat":                 1,
+	"feather":              2,
+	"featherweight":        3,
+	"feathered":            2,
+	"feathers":             2,
+	"fec":                  1,
+	"fed":                  1,
+	"federation":           4,
+	"federal":              3,
+	"federalism":           4,
+	"federalist":           4,
+	"federally":            4,
+	"federated":            4,
+	"fee":                  1,
+	"feeble":               2,
+	"feed":                 1,
+	"feedback":             2,
+	"feeder":               2,
+	"feeding":              2,
+	"feel":                 1,
+	"feeling":              2,
+	"feet":                 1,
+	"feist":                1,
+	"feisty":               2,
+	"fellatio":             4,
+	"fellow":               2,
+	"fellowship":           3,
+	"felony":               3,
+	"felon":                2,
+	"feldspar":             2,
+	"fell":                 1,
+	"feller":               2,
+	"felt":                 1,
+	"fem":                  1,
+	"feminization":         5,
+	"femininity":           5,
+	"feminine":             3,
+	"feminism":             3,
+	"feminist":             3,
+	"femoral":              3,
+	"femme":                1,
+	"fen":                  1,
+	"fennel":               2,
+	"fencing":              2,
+	"fence":                1,
+	"fend":                 1,
+	"fender":               2,
+	"fer":                  1,
+	"fermentation":         4,
+	"fermi":                2,
+	"fermion":              3,
+	"ferret":               2,
+	"ferric":               2,
+	"ferrite":              2,
+	"ferromagnetic":        5,
+	"ferrous":              2,
+	"ferry":                2,
+	"fertilization":        5,
+	"fertiliser":           4,
+	"fertilizer":           4,
+	"fertilized":           3,
+	"fertility":            4,
+	"fertile":              2,
+	"fervent":              2,
+	"fervently":            3,
+	"fervor":               2,
+	"fere":                 1,
+	"fern":                 1,
+	"fescue":               2,
+	"festa":                2,
+	"festival":             3,
+	"festive":              2,
+	"fet":                  1,
+	"feta":                 2,
+	"fetish":               2,
+	"fetch":                1,
+	"fetching":             2,
+	"fete":                 1,
+	"feu":                  1,
+	"feudal":               2,
+	"feud":                 1,
+	"few":                  1,
+	"fewer":                2,
+	"fey":                  1,
+	"fez":                  1,
+	"ffa":                  1,
+	"fiance":               3,
+	"fiancee":              3,
+	"fiasco":               3,
+	"fiat":                 2,
+	"fiber":                2,
+	"fiberglass":           3,
+	"fibre":                2,
+	"fibreglass":           3,
+	"fibrillation":         4,
+	"fibrinogen":           4,
+	"fibroblast":           3,
+	"fibrosis":             3,
+	"fibrous":              2,
+	"fico":                 2,
+	"fidelity":             4,
+	"fiduciary":            5,
+	"fiesta":               3,
+	"filet":                2,
+	"finale":               3,
+	"finalization":         5,
+	"finalizing":           4,
+	"finalized":            3,
+	"final":                2,
+	"finality":             4,
+	"finalise":             3,
+	"finalist":             3,
+	"finalize":             3,
+	"finally":              3,
+	"finals":               2,
+	"financial":            3,
+	"financially":          4,
+	"financing":            3,
+	"financed":             2,
+	"finesse":              2,
+	"finite":               2,
+	"finitely":             3,
+	"fino":                 2,
+	"fib":                  1,
+	"fictitious":           3,
+	"fiction":              2,
+	"fictional":            3,
+	"fiche":                1,
+	"fickle":               2,
+	"fid":                  1,
+	"fiddle":               2,
+	"fiddler":              2,
+	"fiddling":             2,
+	"fie":                  1,
+	"field":                1,
+	"fielder":              2,
+	"fieldwork":            2,
+	"fiend":                1,
+	"fiery":                2,
+	"fierce":               1,
+	"fiercely":             2,
+	"fifteen":              2,
+	"fifteenth":            2,
+	"fifty":                2,
+	"fife":                 1,
+	"fifth":                1,
+	"fig":                  1,
+	"figurative":           4,
+	"figuratively":         5,
+	"figural":              3,
+	"figurine":             3,
+	"figuring":             3,
+	"figure":               2,
+	"figured":              2,
+	"fight":                1,
+	"fighter":              2,
+	"fighting":             2,
+	"fil":                  1,
+	"filament":             3,
+	"filer":                2,
+	"filibuster":           4,
+	"filigree":             3,
+	"filing":               2,
+	"filings":              2,
+	"filip":                2,
+	"fillet":               2,
+	"filly":                2,
+	"filmography":          4,
+	"filter":               2,
+	"filtration":           3,
+	"file":                 1,
+	"filename":             2,
+	"fill":                 1,
+	"filler":               2,
+	"filling":              2,
+	"film":                 1,
+	"filming":              2,
+	"filmmaker":            3,
+	"filmmaking":           3,
+	"filmstrip":            2,
+	"filmy":                2,
+	"fils":                 1,
+	"filth":                1,
+	"filthy":               2,
+	"fin":                  1,
+	"financier":            3,
+	"finca":                2,
+	"finer":                2,
+	"finest":               2,
+	"finger":               2,
+	"fingerboard":          3,
+	"fingering":            3,
+	"fingerprint":          3,
+	"fingertip":            3,
+	"fingered":             2,
+	"finial":               3,
+	"finish":               2,
+	"finisher":             3,
+	"finished":             2,
+	"finance":              1,
+	"finch":                1,
+	"find":                 1,
+	"finder":               2,
+	"finding":              2,
+	"fine":                 1,
+	"finely":               2,
+	"fink":                 1,
+	"fir":                  1,
+	"firing":               2,
+	"fire":                 1,
+	"firearm":              2,
+	"fireball":             2,
+	"firebird":             2,
+	"firebox":              2,
+	"firefly":              2,
+	"firehouse":            2,
+	"fireman":              2,
+	"fireplace":            2,
+	"firepower":            3,
+	"fireproof":            2,
+	"fireside":             2,
+	"firestone":            2,
+	"firestorm":            2,
+	"firewood":             2,
+	"firework":             2,
+	"fireworks":            2,
+	"firm":                 1,
+	"firmly":               2,
+	"firmness":             2,
+	"firmware":             2,
+	"first":                1,
+	"firsthand":            2,
+	"firstly":              2,
+	"firsts":               1,
+	"firth":                1,
+	"fiscal":               2,
+	"fiscally":             3,
+	"fission":              2,
+	"fissure":              2,
+	"fistula":              3,
+	"fish":                 1,
+	"fishbowl":             2,
+	"fisher":               2,
+	"fisheries":            3,
+	"fisherman":            3,
+	"fishery":              3,
+	"fishes":               2,
+	"fisheye":              2,
+	"fishing":              2,
+	"fishnet":              2,
+	"fishy":                2,
+	"fist":                 1,
+	"fistful":              2,
+	"fit":                  1,
+	"fitness":              2,
+	"fitted":               2,
+	"fitter":               2,
+	"fittest":              2,
+	"fitting":              2,
+	"fitch":                1,
+	"five":                 1,
+	"fives":                1,
+	"fix":                  1,
+	"fixation":             3,
+	"fixer":                2,
+	"fixing":               2,
+	"fixings":              2,
+	"fixture":              2,
+	"fixed":                1,
+	"fizz":                 1,
+	"fjord":                1,
+	"flagrant":             2,
+	"flamenco":             3,
+	"flamingo":             3,
+	"flavor":               2,
+	"flavorful":            3,
+	"flavoring":            3,
+	"flavour":              2,
+	"flack":                1,
+	"flag":                 1,
+	"flagging":             2,
+	"flagpole":             2,
+	"flagship":             2,
+	"flagstaff":            2,
+	"flags":                1,
+	"flair":                1,
+	"flak":                 1,
+	"flaky":                2,
+	"flake":                1,
+	"flamboyant":           3,
+	"flaming":              2,
+	"flammability":         5,
+	"flammable":            3,
+	"flame":                1,
+	"flannel":              2,
+	"flange":               1,
+	"flank":                1,
+	"flap":                 1,
+	"flapping":             2,
+	"flaps":                1,
+	"flaring":              2,
+	"flare":                1,
+	"flash":                1,
+	"flashback":            2,
+	"flasher":              2,
+	"flashing":             2,
+	"flashlight":           2,
+	"flashy":               2,
+	"flask":                1,
+	"flat":                 1,
+	"flathead":             2,
+	"flatiron":             3,
+	"flatly":               2,
+	"flatness":             2,
+	"flatten":              2,
+	"flatter":              2,
+	"flattery":             3,
+	"flatware":             2,
+	"flats":                1,
+	"flaw":                 1,
+	"flawless":             2,
+	"flawlessly":           3,
+	"flawed":               1,
+	"flax":                 1,
+	"flaxseed":             2,
+	"fld":                  1,
+	"flea":                 1,
+	"fleck":                1,
+	"fled":                 1,
+	"fledgling":            2,
+	"fledged":              1,
+	"flee":                 1,
+	"fleeing":              2,
+	"fleece":               1,
+	"fleer":                1,
+	"fleet":                1,
+	"fleeting":             2,
+	"flesh":                1,
+	"fleshy":               2,
+	"fletcher":             2,
+	"fleury":               2,
+	"flew":                 1,
+	"flex":                 1,
+	"flexibility":          5,
+	"flexible":             3,
+	"flexibly":             3,
+	"flexion":              2,
+	"flier":                2,
+	"flick":                1,
+	"flicker":              2,
+	"flied":                1,
+	"flight":               1,
+	"flimsy":               2,
+	"flinders":             2,
+	"fling":                1,
+	"flint":                1,
+	"flip":                 1,
+	"flipper":              2,
+	"flipping":             2,
+	"flirt":                1,
+	"flirty":               2,
+	"flite":                1,
+	"flora":                2,
+	"floral":               2,
+	"flores":               2,
+	"florist":              2,
+	"flotation":            3,
+	"float":                1,
+	"floater":              2,
+	"floating":             2,
+	"floats":               1,
+	"flock":                1,
+	"flogging":             2,
+	"flood":                1,
+	"flooded":              2,
+	"floor":                1,
+	"flooring":             2,
+	"flop":                 1,
+	"floppy":               2,
+	"flor":                 1,
+	"florin":               2,
+	"floss":                1,
+	"flounder":             2,
+	"flour":                1,
+	"flourish":             2,
+	"flourishing":          3,
+	"flow":                 1,
+	"flower":               2,
+	"flowering":            3,
+	"flowery":              3,
+	"flowered":             2,
+	"flowing":              2,
+	"flown":                1,
+	"flu":                  1,
+	"fluency":              3,
+	"fluent":               2,
+	"fluently":             3,
+	"fluid":                2,
+	"fluidity":             4,
+	"fluorescein":          5,
+	"fluorescence":         4,
+	"fluorescent":          4,
+	"fluoride":             3,
+	"fluorine":             3,
+	"fluor":                2,
+	"fluctuation":          4,
+	"fluctuating":          4,
+	"fluctuate":            3,
+	"flue":                 1,
+	"fluff":                1,
+	"fluffy":               2,
+	"fluke":                1,
+	"flung":                1,
+	"flurry":               2,
+	"flush":                1,
+	"fluted":               2,
+	"flutter":              2,
+	"flute":                1,
+	"flux":                 1,
+	"fly":                  1,
+	"flycatcher":           3,
+	"flyer":                2,
+	"flying":               2,
+	"flywheel":             2,
+	"focal":                2,
+	"foci":                 2,
+	"focus":                2,
+	"focuses":              3,
+	"focusing":             3,
+	"focussing":            3,
+	"focused":              2,
+	"focussed":             2,
+	"foliage":              3,
+	"foliar":               3,
+	"folio":                3,
+	"folios":               3,
+	"folic":                2,
+	"fora":                 2,
+	"forensic":             3,
+	"forensics":            3,
+	"forum":                2,
+	"forums":               2,
+	"foal":                 1,
+	"foam":                 1,
+	"fob":                  1,
+	"fodder":               2,
+	"foe":                  1,
+	"foetus":               2,
+	"fog":                  1,
+	"fogdog":               2,
+	"foggy":                2,
+	"foil":                 1,
+	"foiled":               1,
+	"fol":                  1,
+	"follicle":             3,
+	"follicular":           4,
+	"follow":               2,
+	"follower":             3,
+	"following":            3,
+	"folly":                2,
+	"fold":                 1,
+	"foldable":             3,
+	"folder":               2,
+	"folk":                 1,
+	"folklore":             2,
+	"fondue":               2,
+	"fond":                 1,
+	"fondly":               2,
+	"fondness":             2,
+	"font":                 1,
+	"food":                 1,
+	"fool":                 1,
+	"foolish":              2,
+	"foolishly":            3,
+	"foolishness":          3,
+	"foolproof":            2,
+	"foot":                 1,
+	"footage":              2,
+	"football":             2,
+	"footed":               2,
+	"footer":               2,
+	"foothill":             2,
+	"foothold":             2,
+	"footing":              2,
+	"footnote":             2,
+	"footpath":             2,
+	"footprint":            2,
+	"footwear":             2,
+	"footwork":             2,
+	"footy":                2,
+	"fop":                  1,
+	"for":                  1,
+	"foraging":             3,
+	"forage":               2,
+	"foray":                2,
+	"forbade":              2,
+	"forbearance":          3,
+	"forbid":               2,
+	"forbidden":            3,
+	"forbidding":           3,
+	"forceps":              2,
+	"forcible":             3,
+	"forcibly":             3,
+	"foreign":              2,
+	"foreigner":            3,
+	"forest":               2,
+	"forester":             3,
+	"forestry":             3,
+	"forever":              3,
+	"forfeiture":           3,
+	"forfeit":              2,
+	"forgery":              3,
+	"forget":               2,
+	"forgetting":           3,
+	"forgiven":             3,
+	"forgiving":            3,
+	"forgive":              2,
+	"forgiveness":          3,
+	"forgo":                2,
+	"forgot":               2,
+	"forgotten":            3,
+	"forint":               2,
+	"forlorn":              2,
+	"formation":            3,
+	"formal":               2,
+	"formality":            4,
+	"formalism":            3,
+	"formalize":            3,
+	"formalized":           3,
+	"formally":             3,
+	"format":               2,
+	"formatted":            3,
+	"formatting":           3,
+	"formerly":             3,
+	"formidable":           4,
+	"formula":              3,
+	"formulation":          4,
+	"formulary":            4,
+	"formulated":           4,
+	"formulating":          4,
+	"formulate":            3,
+	"fornication":          4,
+	"forsaken":             3,
+	"forsake":              2,
+	"fortification":        5,
+	"fortified":            3,
+	"fortify":              3,
+	"fortifying":           4,
+	"fortitude":            3,
+	"fortis":               2,
+	"fortress":             2,
+	"fortunate":            3,
+	"fortunately":          4,
+	"fortune":              2,
+	"forty":                2,
+	"forward":              2,
+	"forwarder":            3,
+	"forwarding":           3,
+	"forwards":             2,
+	"forcing":              2,
+	"force":                1,
+	"forceful":             2,
+	"forcefully":           3,
+	"forced":               1,
+	"ford":                 1,
+	"fore":                 1,
+	"forearm":              2,
+	"forecast":             2,
+	"forecasted":           3,
+	"forecaster":           3,
+	"forecasting":          3,
+	"foreclosure":          3,
+	"foreclosed":           2,
+	"forefoot":             2,
+	"forefront":            2,
+	"forego":               2,
+	"foregoing":            3,
+	"foregone":             2,
+	"foreground":           2,
+	"forehand":             2,
+	"forehead":             2,
+	"foreman":              2,
+	"foremost":             2,
+	"foreplay":             2,
+	"forerunner":           3,
+	"foresee":              2,
+	"foreseeable":          4,
+	"foreseen":             2,
+	"foreshore":            2,
+	"foresight":            2,
+	"foreskin":             2,
+	"foretold":             2,
+	"foreword":             2,
+	"forging":              2,
+	"forge":                1,
+	"fork":                 1,
+	"forklift":             2,
+	"forked":               1,
+	"form":                 1,
+	"formative":            3,
+	"formaldehyde":         4,
+	"former":               2,
+	"forme":                1,
+	"fort":                 1,
+	"fortnight":            2,
+	"fortnightly":          3,
+	"forte":                1,
+	"forth":                1,
+	"forthcoming":          3,
+	"forthright":           2,
+	"forthwith":            2,
+	"fossil":               2,
+	"foster":               2,
+	"foss":                 1,
+	"fought":               1,
+	"foul":                 1,
+	"fouls":                1,
+	"foundational":         4,
+	"fountain":             2,
+	"found":                1,
+	"founder":              2,
+	"foundry":              2,
+	"foundation":           2,
+	"four":                 1,
+	"foursome":             2,
+	"fourteen":             2,
+	"fourteenth":           2,
+	"fourth":               1,
+	"fowl":                 1,
+	"fowler":               2,
+	"fox":                  1,
+	"foxes":                2,
+	"foxtrot":              2,
+	"foxy":                 2,
+	"foy":                  1,
+	"foyer":                2,
+	"fps":                  1,
+	"fragility":            4,
+	"fragrance":            2,
+	"fragrant":             2,
+	"fraternal":            3,
+	"fraternity":           4,
+	"fraction":             2,
+	"fractionation":        4,
+	"fractional":           3,
+	"fracture":             2,
+	"fractured":            2,
+	"frag":                 1,
+	"fragile":              2,
+	"fragmentation":        4,
+	"fragment":             2,
+	"fragmented":           3,
+	"frail":                1,
+	"framing":              2,
+	"frame":                1,
+	"framework":            2,
+	"franchising":          3,
+	"franchisor":           3,
+	"franchise":            2,
+	"franchised":           2,
+	"francophone":          3,
+	"frantically":          4,
+	"frantic":              2,
+	"franc":                1,
+	"frank":                1,
+	"frankfort":            2,
+	"frankfurt":            2,
+	"frankfurter":          3,
+	"franklin":             2,
+	"frankly":              2,
+	"frat":                 1,
+	"fraud":                1,
+	"fraudulent":           3,
+	"fraudulently":         4,
+	"fraught":              1,
+	"fray":                 1,
+	"freer":                2,
+	"frenetic":             3,
+	"frequency":            3,
+	"frequent":             2,
+	"frequently":           3,
+	"freak":                1,
+	"freaky":               2,
+	"free":                 1,
+	"freebie":              2,
+	"freedom":              2,
+	"freehand":             2,
+	"freehold":             2,
+	"freeing":              2,
+	"freelancer":           3,
+	"freelancing":          3,
+	"freelance":            2,
+	"freely":               2,
+	"freemasonry":          4,
+	"freeman":              2,
+	"freestanding":         3,
+	"freestyle":            2,
+	"freeway":              2,
+	"freedman":             2,
+	"freezer":              2,
+	"freezing":             2,
+	"freeze":               1,
+	"freight":              1,
+	"freighter":            2,
+	"freightliner":         3,
+	"frenzied":             2,
+	"frenzy":               2,
+	"freq":                 1,
+	"fresco":               2,
+	"fresnel":              2,
+	"fresh":                1,
+	"freshener":            3,
+	"fresher":              2,
+	"freshly":              2,
+	"freshman":             2,
+	"freshness":            2,
+	"freshwater":           3,
+	"fret":                 1,
+	"friar":                2,
+	"friction":             2,
+	"fridge":               1,
+	"fried":                1,
+	"friend":               1,
+	"friendlier":           3,
+	"friendliness":         3,
+	"friendly":             2,
+	"friendship":           2,
+	"fries":                1,
+	"frieze":               1,
+	"frigate":              2,
+	"fright":               1,
+	"frighten":             2,
+	"frightened":           2,
+	"frightful":            2,
+	"frigid":               1,
+	"fringe":               1,
+	"frith":                1,
+	"fritz":                1,
+	"frivolous":            3,
+	"fro":                  1,
+	"frozen":               2,
+	"frog":                 1,
+	"froggy":               2,
+	"frolic":               2,
+	"from":                 1,
+	"frontier":             2,
+	"front":                1,
+	"frontage":             2,
+	"frontal":              2,
+	"frosh":                1,
+	"frost":                1,
+	"frostbite":            2,
+	"frosted":              2,
+	"frosting":             2,
+	"frosty":               2,
+	"froth":                1,
+	"frown":                1,
+	"froze":                1,
+	"frugal":               2,
+	"fruition":             3,
+	"fructose":             2,
+	"fruit":                1,
+	"fruitful":             2,
+	"fruitless":            2,
+	"fruity":               2,
+	"frustration":          3,
+	"frustrated":           3,
+	"frustrating":          3,
+	"frustrate":            2,
+	"fry":                  1,
+	"fryer":                2,
+	"frying":               2,
+	"fueling":              3,
+	"fueled":               2,
+	"fuelled":              2,
+	"fugitive":             3,
+	"fumigation":           4,
+	"funeral":              3,
+	"furious":              3,
+	"furiously":            4,
+	"fury":                 2,
+	"fuselage":             3,
+	"fusion":               2,
+	"futility":             4,
+	"futile":               2,
+	"futurama":             4,
+	"futuristic":           4,
+	"future":               2,
+	"futures":              2,
+	"fuchsia":              2,
+	"fuck":                 1,
+	"fucker":               2,
+	"fucking":              1,
+	"fudge":                1,
+	"fuel":                 1,
+	"fug":                  1,
+	"fugue":                1,
+	"fulcrum":              2,
+	"fulfil":               2,
+	"fulfilling":           3,
+	"fulfilment":           3,
+	"fulfill":              2,
+	"fulfillment":          3,
+	"fulfilled":            2,
+	"fulham":               2,
+	"fully":                2,
+	"full":                 1,
+	"fuller":               2,
+	"fullness":             2,
+	"fumble":               2,
+	"fume":                 1,
+	"fun":                  1,
+	"fundamental":          4,
+	"fundamentalism":       5,
+	"fundamentalist":       5,
+	"fundamentally":        5,
+	"fungal":               2,
+	"fungi":                2,
+	"fungicide":            3,
+	"fungus":               2,
+	"funnel":               2,
+	"funnier":              3,
+	"funniest":             3,
+	"funnies":              2,
+	"funny":                2,
+	"function":             2,
+	"functional":           3,
+	"functionally":         4,
+	"functor":              2,
+	"fund":                 1,
+	"funds":                1,
+	"funk":                 1,
+	"funky":                2,
+	"fur":                  1,
+	"furlong":              2,
+	"furnace":              2,
+	"furniture":            3,
+	"furnish":              2,
+	"furnishing":           3,
+	"furnishings":          3,
+	"furrow":               2,
+	"furry":                2,
+	"further":              2,
+	"furtherance":          3,
+	"furthermore":          3,
+	"furthest":             2,
+	"furl":                 1,
+	"fusing":               2,
+	"fuse":                 1,
+	"fuss":                 1,
+	"fussy":                2,
+	"fut":                  1,
+	"fuzz":                 1,
+	"fuzzy":                2,
+	"fwd":                  1,
+	"gable":                2,
+	"gaby":                 2,
+	"gala":                 2,
+	"galactic":             3,
+	"galactose":            3,
+	"galena":               3,
+	"galore":               2,
+	"gata":                 2,
+	"gator":                2,
+	"gazebo":               3,
+	"gazelle":              2,
+	"gazette":              2,
+	"gab":                  1,
+	"gabber":               2,
+	"gabby":                2,
+	"gad":                  1,
+	"gadget":               2,
+	"gag":                  1,
+	"gagging":              2,
+	"gage":                 1,
+	"gain":                 1,
+	"gainer":               2,
+	"gains":                1,
+	"gait":                 1,
+	"gal":                  1,
+	"galaxy":               3,
+	"galilee":              3,
+	"gallant":              2,
+	"galleries":            3,
+	"gallery":              3,
+	"galley":               2,
+	"gallium":              3,
+	"gallon":               2,
+	"gallop":               2,
+	"galloping":            3,
+	"gallows":              2,
+	"gallus":               2,
+	"galvanised":           3,
+	"galvanized":           3,
+	"galaxies":             2,
+	"gale":                 1,
+	"gall":                 1,
+	"gallbladder":          3,
+	"gam":                  1,
+	"gambier":              2,
+	"gambit":               2,
+	"gamble":               2,
+	"gambler":              2,
+	"gamer":                2,
+	"gaming":               2,
+	"gamma":                2,
+	"gammon":               2,
+	"gamut":                2,
+	"game":                 1,
+	"gan":                  1,
+	"gander":               2,
+	"ganglia":              3,
+	"ganglion":             3,
+	"gang":                 1,
+	"gangbang":             2,
+	"gangster":             2,
+	"gap":                  1,
+	"gaping":               2,
+	"gar":                  1,
+	"garage":               2,
+	"garbage":              2,
+	"gardenia":             3,
+	"garden":               2,
+	"gardener":             3,
+	"gardening":            3,
+	"gargoyle":             2,
+	"garibaldi":            4,
+	"garland":              2,
+	"garlic":               2,
+	"garment":              2,
+	"garner":               2,
+	"garnet":               2,
+	"garnett":              2,
+	"garnish":              2,
+	"garnishment":          3,
+	"garret":               2,
+	"garrison":             3,
+	"garter":               2,
+	"garvey":               2,
+	"garb":                 1,
+	"gare":                 1,
+	"garth":                1,
+	"gas":                  1,
+	"gaseous":              3,
+	"gases":                2,
+	"gasification":         5,
+	"gasket":               2,
+	"gasoline":             3,
+	"gastritis":            3,
+	"gastric":              2,
+	"gastroenteritis":      6,
+	"gastroenterology":     7,
+	"gastrointestinal":     6,
+	"gastronomy":           4,
+	"gash":                 1,
+	"gasp":                 1,
+	"gat":                  1,
+	"gated":                2,
+	"gating":               2,
+	"gate":                 1,
+	"gatefold":             2,
+	"gatekeeper":           3,
+	"gateway":              2,
+	"gather":               2,
+	"gatherer":             3,
+	"gathering":            3,
+	"gaucho":               2,
+	"gauche":               1,
+	"gaudy":                2,
+	"gauging":              2,
+	"gauge":                1,
+	"gaunt":                1,
+	"gauntlet":             2,
+	"gauss":                1,
+	"gauze":                1,
+	"gavel":                2,
+	"gave":                 1,
+	"gawk":                 1,
+	"gay":                  1,
+	"gaz":                  1,
+	"gazetteer":            3,
+	"gazing":               2,
+	"gaze":                 1,
+	"gcm":                  1,
+	"gds":                  1,
+	"gena":                 2,
+	"genealogical":         6,
+	"genealogy":            5,
+	"geneva":               3,
+	"generically":          5,
+	"generic":              3,
+	"genetically":          5,
+	"genetic":              3,
+	"genetics":             3,
+	"genie":                2,
+	"genomic":              3,
+	"genome":               2,
+	"genus":                2,
+	"geochemical":          5,
+	"geochemistry":         5,
+	"geodesic":             4,
+	"geodetic":             4,
+	"geographical":         5,
+	"geographically":       6,
+	"geographic":           4,
+	"geological":           5,
+	"geologic":             4,
+	"geomagnetic":          5,
+	"geometrical":          5,
+	"geometrically":        6,
+	"geometric":            4,
+	"geomorphology":        6,
+	"geophysical":          5,
+	"geophysics":           4,
+	"geopolitical":         6,
+	"geopolitics":          5,
+	"geoscience":           4,
+	"geothermal":           4,
+	"geodesy":              4,
+	"geography":            4,
+	"geology":              4,
+	"geometry":             4,
+	"geranium":             4,
+	"gesellschaft":         3,
+	"gestalt":              2,
+	"gesundheit":           3,
+	"gear":                 1,
+	"gearbox":              2,
+	"gearing":              2,
+	"gecko":                2,
+	"ged":                  1,
+	"gee":                  1,
+	"geezer":               2,
+	"geek":                 1,
+	"geese":                1,
+	"geisha":               2,
+	"gel":                  1,
+	"gelatin":              3,
+	"geld":                 1,
+	"gelding":              2,
+	"gem":                  1,
+	"gemini":               3,
+	"gemma":                2,
+	"gemstone":             2,
+	"gems":                 1,
+	"gen":                  1,
+	"gender":               2,
+	"genesis":              3,
+	"genera":               3,
+	"generation":           4,
+	"generative":           4,
+	"generator":            4,
+	"general":              3,
+	"generality":           5,
+	"generalization":       6,
+	"generalised":          4,
+	"generalist":           4,
+	"generalize":           4,
+	"generalized":          4,
+	"generally":            4,
+	"generated":            4,
+	"generating":           4,
+	"generate":             3,
+	"generosity":           5,
+	"generous":             3,
+	"generously":           4,
+	"genet":                2,
+	"genitalia":            4,
+	"genital":              3,
+	"genitals":             3,
+	"genial":               2,
+	"genius":               2,
+	"geniuses":             3,
+	"genoa":                3,
+	"genocide":             3,
+	"genotype":             3,
+	"genre":                2,
+	"gentile":              2,
+	"gentle":               2,
+	"gentleman":            3,
+	"gentleness":           3,
+	"gentlewoman":          4,
+	"gently":               2,
+	"gentry":               2,
+	"genuine":              3,
+	"genuinely":            4,
+	"gene":                 1,
+	"gens":                 1,
+	"gent":                 1,
+	"gents":                1,
+	"geog":                 1,
+	"geol":                 1,
+	"geom":                 1,
+	"georgette":            2,
+	"ger":                  1,
+	"gerbil":               2,
+	"geriatric":            4,
+	"geriatrics":           4,
+	"germanium":            4,
+	"german":               2,
+	"germanic":             3,
+	"germination":          4,
+	"gerontology":          5,
+	"gertrude":             2,
+	"gervais":              2,
+	"germ":                 1,
+	"gestation":            3,
+	"gestational":          4,
+	"gestion":              2,
+	"gesture":              2,
+	"gest":                 1,
+	"get":                  1,
+	"getaway":              3,
+	"getter":               2,
+	"getting":              2,
+	"geyser":               2,
+	"ghastly":              2,
+	"ghetto":               2,
+	"ghost":                1,
+	"ghostly":              2,
+	"ghoul":                1,
+	"giant":                2,
+	"gigantic":             3,
+	"giraffe":              2,
+	"giro":                 2,
+	"gib":                  1,
+	"gibberish":            3,
+	"gibbon":               2,
+	"gid":                  1,
+	"giddy":                2,
+	"gift":                 1,
+	"gifted":               2,
+	"gig":                  1,
+	"giggle":               2,
+	"gigolo":               3,
+	"gilbert":              2,
+	"gilded":               2,
+	"giles":                1,
+	"gill":                 1,
+	"gills":                1,
+	"gilt":                 1,
+	"gimme":                2,
+	"gimmick":              2,
+	"gimp":                 1,
+	"gin":                  1,
+	"ginger":               2,
+	"gingerbread":          3,
+	"ginseng":              2,
+	"gingham":              2,
+	"ginkgo":               2,
+	"gip":                  1,
+	"gipsy":                2,
+	"girdle":               2,
+	"girder":               2,
+	"girl":                 1,
+	"girlfriend":           2,
+	"girlie":               2,
+	"girly":                2,
+	"girth":                1,
+	"gist":                 1,
+	"git":                  1,
+	"given":                2,
+	"giver":                2,
+	"giving":               2,
+	"give":                 1,
+	"giveaway":             3,
+	"gizmo":                2,
+	"glace":                2,
+	"glacial":              2,
+	"glacier":              3,
+	"glad":                 1,
+	"gladiator":            4,
+	"gladly":               2,
+	"glade":                1,
+	"glamorous":            3,
+	"glandular":            3,
+	"glancing":             2,
+	"glance":               1,
+	"gland":                1,
+	"glaring":              2,
+	"glare":                1,
+	"glass":                1,
+	"glasses":              2,
+	"glassman":             2,
+	"glassware":            2,
+	"glassy":               2,
+	"glaucoma":             3,
+	"glazer":               2,
+	"glazing":              2,
+	"glaze":                1,
+	"glazed":               1,
+	"gld":                  1,
+	"gleam":                1,
+	"glebe":                1,
+	"glee":                 1,
+	"glen":                 1,
+	"glial":                2,
+	"glioma":               3,
+	"glib":                 1,
+	"glider":               2,
+	"gliding":              2,
+	"glide":                1,
+	"glimmer":              2,
+	"glimpse":              1,
+	"glint":                1,
+	"glitter":              2,
+	"glomerular":           4,
+	"gloria":               3,
+	"glorified":            3,
+	"glorify":              3,
+	"glorious":             3,
+	"gloriously":           4,
+	"glory":                2,
+	"glob":                 1,
+	"global":               2,
+	"globally":             3,
+	"globular":             3,
+	"globulin":             3,
+	"globe":                1,
+	"gloom":                1,
+	"gloomy":               2,
+	"glossary":             3,
+	"gloss":                1,
+	"glossy":               2,
+	"glover":               2,
+	"glove":                1,
+	"glow":                 1,
+	"glowing":              2,
+	"glucagon":             3,
+	"glucose":              2,
+	"gluing":               2,
+	"gluon":                2,
+	"glutamate":            3,
+	"glutamine":            3,
+	"glutathione":          4,
+	"gluten":               2,
+	"glue":                 1,
+	"glut":                 1,
+	"glycemic":             3,
+	"glycine":              2,
+	"glycogen":             3,
+	"glycoprotein":         4,
+	"glycol":               2,
+	"glycerin":             3,
+	"glycerol":             3,
+	"glyph":                1,
+	"gnat":                 1,
+	"gnome":                1,
+	"gnostic":              2,
+	"gnu":                  1,
+	"goa":                  2,
+	"gogo":                 2,
+	"going":                2,
+	"golem":                2,
+	"gopher":               2,
+	"gorilla":              3,
+	"goal":                 1,
+	"goalie":               2,
+	"goalkeeper":           3,
+	"goaltender":           3,
+	"goat":                 1,
+	"gob":                  1,
+	"gobble":               2,
+	"goblet":               2,
+	"goblin":               2,
+	"god":                  1,
+	"goddamn":              2,
+	"goddess":              2,
+	"godfather":            3,
+	"godless":              2,
+	"godly":                2,
+	"godsend":              2,
+	"goes":                 1,
+	"goggle":               2,
+	"goi":                  1,
+	"golly":                2,
+	"gold":                 1,
+	"golden":               2,
+	"goldeneye":            3,
+	"goldenrod":            3,
+	"goldfields":           2,
+	"goldfish":             2,
+	"goldsmith":            2,
+	"goldstone":            2,
+	"golf":                 1,
+	"golfer":               2,
+	"gonadotropin":         5,
+	"gondola":              3,
+	"gonna":                2,
+	"gonorrhea":            4,
+	"gone":                 1,
+	"gong":                 1,
+	"goo":                  1,
+	"gooey":                2,
+	"good":                 1,
+	"goodbye":              2,
+	"goodies":              2,
+	"goodly":               2,
+	"goodman":              2,
+	"goodness":             2,
+	"goodwill":             2,
+	"goody":                2,
+	"goods":                1,
+	"goof":                 1,
+	"goofy":                2,
+	"goog":                 1,
+	"goon":                 1,
+	"goose":                1,
+	"gooseneck":            2,
+	"gor":                  1,
+	"gorgeous":             2,
+	"gory":                 2,
+	"gore":                 1,
+	"gorge":                1,
+	"gosling":              2,
+	"gospel":               2,
+	"gosport":              2,
+	"gossamer":             3,
+	"gossip":               2,
+	"gosh":                 1,
+	"got":                  1,
+	"gotta":                2,
+	"gotten":               2,
+	"goulash":              2,
+	"gouache":              1,
+	"gouging":              2,
+	"gourmet":              2,
+	"gourd":                1,
+	"gourde":               1,
+	"gout":                 1,
+	"gov":                  1,
+	"governor":             3,
+	"govern":               2,
+	"governance":           3,
+	"governmental":         4,
+	"government":           3,
+	"govt":                 1,
+	"gown":                 1,
+	"gracias":              3,
+	"gracious":             2,
+	"graciously":           3,
+	"gradation":            3,
+	"gradient":             3,
+	"graham":               2,
+	"gramercy":             3,
+	"gratuitous":           4,
+	"gratuity":             4,
+	"gravy":                2,
+	"grab":                 1,
+	"grabber":              2,
+	"grabbing":             2,
+	"grace":                1,
+	"graceful":             2,
+	"gracefully":           3,
+	"grad":                 1,
+	"graded":               2,
+	"grader":               2,
+	"grading":              2,
+	"graduation":           4,
+	"gradual":              3,
+	"gradually":            4,
+	"graduated":            4,
+	"graduating":           4,
+	"graduate":             3,
+	"grade":                1,
+	"graft":                1,
+	"grafting":             2,
+	"grain":                1,
+	"grainy":               2,
+	"grained":              1,
+	"grains":               1,
+	"gram":                 1,
+	"grammar":              2,
+	"grammatical":          4,
+	"gramophone":           3,
+	"grandeur":             2,
+	"grandiose":            3,
+	"granite":              2,
+	"granny":               2,
+	"grantor":              2,
+	"granular":             3,
+	"granularity":          5,
+	"granulated":           4,
+	"granule":              2,
+	"grand":                1,
+	"grandchildren":        3,
+	"grandchild":           2,
+	"granddaughter":        3,
+	"grandfather":          3,
+	"grandma":              2,
+	"grandmaster":          3,
+	"grandmother":          3,
+	"grandpa":              2,
+	"grandparent":          3,
+	"grandson":             2,
+	"grandstand":           2,
+	"granger":              2,
+	"grange":               1,
+	"grant":                1,
+	"grantee":              2,
+	"grapple":              2,
+	"grappling":            2,
+	"grape":                1,
+	"grapefruit":           2,
+	"grapevine":            2,
+	"grapes":               1,
+	"graph":                1,
+	"graphical":            3,
+	"graphically":          4,
+	"graphic":              2,
+	"graphics":             2,
+	"graphite":             2,
+	"grasp":                1,
+	"grasping":             2,
+	"grass":                1,
+	"grasshopper":          3,
+	"grassland":            2,
+	"grassy":               2,
+	"grated":               2,
+	"gratification":        5,
+	"gratifying":           4,
+	"gratitude":            3,
+	"grating":              2,
+	"gratis":               2,
+	"grate":                1,
+	"grateful":             2,
+	"gratefully":           3,
+	"grav":                 1,
+	"gravel":               2,
+	"graver":               2,
+	"gravitation":          4,
+	"gravitational":        5,
+	"gravity":              3,
+	"grave":                1,
+	"gravely":              2,
+	"gravestone":           2,
+	"graveyard":            2,
+	"gray":                 1,
+	"grayling":             2,
+	"grazing":              2,
+	"graze":                1,
+	"grenade":              2,
+	"greasy":               2,
+	"grease":               1,
+	"great":                1,
+	"greatest":             2,
+	"greatly":              2,
+	"greatness":            2,
+	"greaves":              1,
+	"grebe":                1,
+	"gree":                 1,
+	"greed":                1,
+	"greedy":               2,
+	"green":                1,
+	"greenbrier":           3,
+	"greenery":             3,
+	"greenhouses":          3,
+	"greenhouse":           2,
+	"greening":             2,
+	"greenish":             2,
+	"greenwood":            2,
+	"greet":                1,
+	"greeting":             2,
+	"gremlin":              2,
+	"grew":                 1,
+	"grey":                 1,
+	"greyhound":            2,
+	"grid":                 1,
+	"griddle":              2,
+	"gridiron":             3,
+	"grief":                1,
+	"grievance":            2,
+	"grieving":             2,
+	"grievous":             2,
+	"grieve":               1,
+	"griffin":              2,
+	"griffon":              2,
+	"griff":                1,
+	"grill":                1,
+	"grille":               1,
+	"grilled":              1,
+	"grim":                 1,
+	"grime":                1,
+	"grin":                 1,
+	"gringo":               2,
+	"grinning":             2,
+	"grind":                1,
+	"grinder":              2,
+	"grinding":             2,
+	"grip":                 1,
+	"gripper":              2,
+	"gripping":             2,
+	"gripe":                1,
+	"grisly":               2,
+	"grist":                1,
+	"grit":                 1,
+	"gritty":               2,
+	"grits":                1,
+	"grizzly":              2,
+	"gro":                  1,
+	"grocer":               2,
+	"groceries":            3,
+	"grocery":              3,
+	"grotesque":            2,
+	"groan":                1,
+	"groin":                1,
+	"grommet":              2,
+	"groom":                1,
+	"groovy":               2,
+	"groove":               1,
+	"grooved":              1,
+	"gross":                1,
+	"grosses":              2,
+	"grossly":              2,
+	"grotto":               2,
+	"ground":               1,
+	"groundwork":           2,
+	"group":                1,
+	"grouper":              2,
+	"groupie":              2,
+	"grouping":             2,
+	"groupwise":            2,
+	"grouse":               1,
+	"grout":                1,
+	"grove":                1,
+	"grow":                 1,
+	"grower":               2,
+	"growing":              2,
+	"growl":                1,
+	"grown":                1,
+	"growth":               1,
+	"grueling":             3,
+	"grub":                 1,
+	"grudge":               1,
+	"gruesome":             2,
+	"grumble":              2,
+	"grumpy":               2,
+	"grunt":                1,
+	"gryphon":              2,
+	"gtc":                  1,
+	"gtd":                  1,
+	"gubernatorial":        6,
+	"guru":                 2,
+	"guacamole":            4,
+	"guanine":              2,
+	"guarani":              3,
+	"guava":                2,
+	"guan":                 1,
+	"guar":                 1,
+	"guarantee":            3,
+	"guaranteeing":         4,
+	"guaranteed":           3,
+	"guarantor":            3,
+	"guaranty":             3,
+	"guard":                1,
+	"guarded":              2,
+	"guardian":             3,
+	"guardianship":         4,
+	"guerilla":             3,
+	"guerrilla":            3,
+	"guess":                1,
+	"guesswork":            2,
+	"guest":                1,
+	"guesthouses":          3,
+	"guesthouse":           2,
+	"guitar":               2,
+	"guitarist":            3,
+	"guidance":             2,
+	"guided":               2,
+	"guiding":              2,
+	"guide":                1,
+	"guidebook":            2,
+	"guideline":            2,
+	"guilder":              2,
+	"guillemot":            3,
+	"guillotine":           3,
+	"guild":                1,
+	"guildhall":            2,
+	"guile":                1,
+	"guilt":                1,
+	"guilty":               2,
+	"guinea":               2,
+	"guise":                1,
+	"gullible":             3,
+	"gully":                2,
+	"gulch":                1,
+	"gulf":                 1,
+	"gull":                 1,
+	"gulp":                 1,
+	"gum":                  1,
+	"gumbo":                2,
+	"gummy":                2,
+	"gump":                 1,
+	"gun":                  1,
+	"gunfire":              2,
+	"gunman":               2,
+	"gunmetal":             3,
+	"gunner":               2,
+	"gunning":              2,
+	"gunpowder":            3,
+	"gunshot":              2,
+	"gunslinger":           3,
+	"gunter":               2,
+	"gunther":              2,
+	"gunned":               1,
+	"guns":                 1,
+	"gusset":               2,
+	"gusto":                2,
+	"gush":                 1,
+	"gust":                 1,
+	"gut":                  1,
+	"gutted":               2,
+	"gutter":               2,
+	"guy":                  1,
+	"gynaecology":          5,
+	"gynecology":           5,
+	"gyro":                 2,
+	"gym":                  1,
+	"gymnasium":            4,
+	"gymnastic":            3,
+	"gymnastics":           3,
+	"gymnast":              2,
+	"gyn":                  1,
+	"gynecologic":          5,
+	"gypsum":               2,
+	"gypsy":                2,
+	"habitual":             4,
+	"habitually":           5,
+	"hadith":               2,
+	"hakeem":               2,
+	"hakim":                2,
+	"halo":                 2,
+	"hatred":               2,
+	"hazel":                2,
+	"hazelnut":             3,
+	"hazy":                 2,
+	"haar":                 1,
+	"habitation":           4,
+	"habitat":              3,
+	"habit":                2,
+	"habitable":            4,
+	"hacienda":             4,
+	"hack":                 1,
+	"hacker":               2,
+	"hacking":              2,
+	"hackman":              2,
+	"hackney":              2,
+	"had":                  1,
+	"haddock":              2,
+	"hadron":               2,
+	"hae":                  1,
+	"haematology":          5,
+	"hag":                  1,
+	"haggard":              2,
+	"haggis":               2,
+	"haggle":               2,
+	"hah":                  1,
+	"haiku":                2,
+	"hail":                 1,
+	"hair":                 1,
+	"haircut":              2,
+	"hairdresser":          3,
+	"hairdressing":         3,
+	"hairless":             2,
+	"hairpin":              2,
+	"hairstyle":            2,
+	"hairy":                2,
+	"haji":                 2,
+	"hajj":                 1,
+	"halal":                2,
+	"halcyon":              3,
+	"halibut":              3,
+	"halide":               2,
+	"hallelujah":           4,
+	"hallo":                2,
+	"hallowed":             2,
+	"halogen":              3,
+	"hale":                 1,
+	"half":                 1,
+	"halfway":              2,
+	"hall":                 1,
+	"hallmark":             2,
+	"hallway":              2,
+	"halt":                 1,
+	"halter":               2,
+	"halting":              2,
+	"halves":               1,
+	"ham":                  1,
+	"hamburg":              2,
+	"hamburger":            3,
+	"hamlet":               2,
+	"hammer":               2,
+	"hammerhead":           3,
+	"hammering":            3,
+	"hammered":             2,
+	"hammock":              2,
+	"hamper":               2,
+	"hamster":              2,
+	"hamstring":            2,
+	"hamza":                2,
+	"handle":               2,
+	"handlebar":            3,
+	"handlebars":           3,
+	"handled":              2,
+	"handler":              2,
+	"handling":             2,
+	"hansel":               2,
+	"hand":                 1,
+	"handbag":              2,
+	"handball":             2,
+	"handbook":             2,
+	"handcrafted":          3,
+	"handcuffs":            2,
+	"handed":               2,
+	"handful":              2,
+	"handgun":              2,
+	"handicap":             3,
+	"handicapper":          4,
+	"handicapping":         4,
+	"handicapped":          3,
+	"handicraft":           3,
+	"handkerchief":         3,
+	"handmade":             2,
+	"handout":              2,
+	"handset":              2,
+	"handshake":            2,
+	"handsome":             2,
+	"handsomely":           3,
+	"handspring":           2,
+	"handwriting":          3,
+	"handwritten":          3,
+	"handy":                2,
+	"handyman":             3,
+	"hands":                1,
+	"hang":                 1,
+	"hangar":               2,
+	"hanger":               2,
+	"hanging":              2,
+	"hangman":              2,
+	"hangover":             3,
+	"hangout":              2,
+	"hank":                 1,
+	"hanky":                2,
+	"hap":                  1,
+	"haphazard":            3,
+	"hapless":              2,
+	"happen":               2,
+	"happening":            3,
+	"happier":              3,
+	"happiest":             3,
+	"happily":              3,
+	"happiness":            3,
+	"happy":                2,
+	"harass":               2,
+	"harassment":           3,
+	"harassed":             2,
+	"harbinger":            3,
+	"harbor":               2,
+	"harbour":              2,
+	"hardiness":            3,
+	"hardie":               2,
+	"hardy":                2,
+	"harem":                2,
+	"harlequin":            3,
+	"harlot":               2,
+	"harmonious":           4,
+	"harmonisation":        5,
+	"harmonization":        5,
+	"harmonised":           3,
+	"harmonize":            3,
+	"harmonized":           3,
+	"harmony":              3,
+	"harmonica":            4,
+	"harmonic":             3,
+	"harmonics":            3,
+	"harness":              2,
+	"harpoon":              2,
+	"harrier":              3,
+	"harrow":               2,
+	"harry":                2,
+	"harvest":              2,
+	"harvester":            3,
+	"harvesting":           3,
+	"hard":                 1,
+	"hardback":             2,
+	"hardball":             2,
+	"hardbound":            2,
+	"hardcore":             2,
+	"hardcover":            3,
+	"harden":               2,
+	"hardening":            3,
+	"hardened":             2,
+	"hardly":               2,
+	"hardness":             2,
+	"hardship":             2,
+	"hardtop":              2,
+	"hardware":             2,
+	"hardwood":             2,
+	"hare":                 1,
+	"hark":                 1,
+	"harken":               2,
+	"harm":                 1,
+	"harmful":              2,
+	"harmless":             2,
+	"harp":                 1,
+	"harper":               2,
+	"harpsichord":          3,
+	"harsh":                1,
+	"harshly":              2,
+	"hart":                 1,
+	"has":                  1,
+	"hassle":               2,
+	"hasten":               2,
+	"hash":                 1,
+	"hashing":              2,
+	"hast":                 1,
+	"hastily":              3,
+	"hasty":                2,
+	"haste":                1,
+	"hat":                  1,
+	"hated":                2,
+	"hater":                2,
+	"hating":               2,
+	"hatter":               2,
+	"hatch":                1,
+	"hatchback":            2,
+	"hatcher":              2,
+	"hatchery":             3,
+	"hatchet":              2,
+	"hatching":             2,
+	"hate":                 1,
+	"hateful":              2,
+	"hath":                 1,
+	"haughty":              2,
+	"haul":                 1,
+	"haulage":              2,
+	"hauler":               2,
+	"haunt":                1,
+	"haunted":              2,
+	"haunting":             2,
+	"hausfrau":             2,
+	"hausfrauen":           3,
+	"haven":                2,
+	"having":               2,
+	"havoc":                2,
+	"have":                 1,
+	"havelock":             2,
+	"haw":                  1,
+	"hawthorn":             2,
+	"hawk":                 1,
+	"hawker":               2,
+	"hawking":              2,
+	"hay":                  1,
+	"haystack":             2,
+	"hayward":              2,
+	"hazard":               2,
+	"hazardous":            3,
+	"hazing":               2,
+	"haze":                 1,
+	"hcf":                  1,
+	"hedonism":             3,
+	"hegemony":             4,
+	"helio":                3,
+	"helium":               3,
+	"helix":                2,
+	"hemodialysis":         6,
+	"hemodynamic":          5,
+	"hemolytic":            4,
+	"hemophilia":           5,
+	"hepatic":              3,
+	"hereditary":           5,
+	"heredity":             4,
+	"heres":                2,
+	"heretical":            4,
+	"hero":                 2,
+	"heroic":               3,
+	"heathen":              2,
+	"head":                 1,
+	"headache":             2,
+	"headband":             2,
+	"headboard":            2,
+	"headed":               2,
+	"header":               2,
+	"headgear":             2,
+	"headhunter":           3,
+	"heading":              2,
+	"headlamp":             2,
+	"headland":             2,
+	"headless":             2,
+	"headlight":            2,
+	"headliner":            3,
+	"headlining":           3,
+	"headline":             2,
+	"headlong":             2,
+	"headmaster":           3,
+	"headphone":            2,
+	"headphones":           2,
+	"headquarter":          3,
+	"headquarters":         3,
+	"headrest":             2,
+	"headroom":             2,
+	"headset":              2,
+	"headstone":            2,
+	"headwaters":           3,
+	"headway":              2,
+	"heady":                2,
+	"heads":                1,
+	"heal":                 1,
+	"healer":               2,
+	"healing":              2,
+	"heald":                1,
+	"health":               1,
+	"healthful":            2,
+	"healthier":            3,
+	"healthiest":           3,
+	"healthy":              2,
+	"heap":                 1,
+	"hear":                 1,
+	"hearing":              2,
+	"hearsay":              2,
+	"hearse":               1,
+	"heart":                1,
+	"heartache":            2,
+	"heartbeat":            2,
+	"heartbreak":           2,
+	"heartbreaker":         3,
+	"heartbreaking":        3,
+	"heartburn":            2,
+	"hearted":              2,
+	"heartfelt":            2,
+	"heartily":             3,
+	"heartland":            2,
+	"heartless":            2,
+	"heartwarming":         3,
+	"heartwood":            2,
+	"heartworm":            2,
+	"hearty":               2,
+	"hearth":               1,
+	"hearts":               1,
+	"heat":                 1,
+	"heated":               2,
+	"heater":               2,
+	"heath":                1,
+	"heather":              2,
+	"heaven":               2,
+	"heavenly":             3,
+	"heavier":              3,
+	"heaviest":             3,
+	"heavily":              3,
+	"heavy":                2,
+	"heavyweight":          3,
+	"heave":                1,
+	"hectare":              2,
+	"hectic":               2,
+	"hector":               2,
+	"hecht":                1,
+	"heck":                 1,
+	"hedging":              2,
+	"hedge":                1,
+	"hedgehog":             2,
+	"heed":                 1,
+	"heel":                 1,
+	"heeled":               1,
+	"heft":                 1,
+	"hefty":                2,
+	"heh":                  1,
+	"heinous":              2,
+	"heifer":               2,
+	"height":               1,
+	"heighten":             2,
+	"heir":                 1,
+	"heiress":              2,
+	"heirloom":             2,
+	"heist":                1,
+	"helical":              3,
+	"helices":              3,
+	"helicopter":           4,
+	"hello":                2,
+	"helmet":               2,
+	"held":                 1,
+	"hell":                 1,
+	"heller":               2,
+	"hellfire":             2,
+	"hellish":              2,
+	"helm":                 1,
+	"help":                 1,
+	"helper":               2,
+	"helpful":              2,
+	"helpfulness":          3,
+	"helping":              2,
+	"helpless":             2,
+	"helplessly":           3,
+	"helplessness":         3,
+	"hem":                  1,
+	"hematite":             3,
+	"hematologic":          5,
+	"hematopoietic":        6,
+	"hematology":           5,
+	"hemispheric":          4,
+	"hemisphere":           3,
+	"hemlock":              2,
+	"hemorrhagic":          4,
+	"hemorrhage":           3,
+	"hemorrhoids":          3,
+	"heme":                 1,
+	"hemoglobin":           2,
+	"hemp":                 1,
+	"hen":                  1,
+	"henna":                2,
+	"henrietta":            4,
+	"henry":                2,
+	"hence":                1,
+	"henceforth":           2,
+	"hep":                  1,
+	"heparin":              3,
+	"hepatitis":            4,
+	"her":                  1,
+	"herald":               2,
+	"heraldry":             3,
+	"herbaceous":           3,
+	"herbarium":            4,
+	"heresy":               3,
+	"heretic":              3,
+	"heriot":               3,
+	"heritage":             3,
+	"hermaphrodite":        4,
+	"hermeneutics":         4,
+	"hermes":               2,
+	"hermetic":             3,
+	"hermit":               2,
+	"hermitage":            3,
+	"hernia":               3,
+	"heroin":               3,
+	"heroine":              3,
+	"heroism":              3,
+	"heron":                2,
+	"herpes":               2,
+	"herring":              2,
+	"herringbone":          3,
+	"herself":              2,
+	"herb":                 1,
+	"herbal":               2,
+	"herbicide":            3,
+	"herd":                 1,
+	"herder":               2,
+	"here":                 1,
+	"hereafter":            3,
+	"hereby":               2,
+	"herein":               2,
+	"hereinafter":          4,
+	"hereof":               2,
+	"hereto":               2,
+	"heretofore":           3,
+	"hereunder":            3,
+	"herewith":             2,
+	"hers":                 1,
+	"hertz":                1,
+	"hesitation":           4,
+	"hesitant":             3,
+	"hesitated":            4,
+	"hesitate":             3,
+	"hessian":              3,
+	"het":                  1,
+	"hetero":               3,
+	"heterogeneity":        7,
+	"heterogeneous":        6,
+	"heterosexual":         6,
+	"heterozygous":         5,
+	"heuristic":            3,
+	"hew":                  1,
+	"hex":                  1,
+	"hexadecimal":          5,
+	"hexagon":              3,
+	"hexagonal":            4,
+	"hexane":               2,
+	"hey":                  1,
+	"heyday":               2,
+	"hgt":                  1,
+	"hiatus":               3,
+	"hibernation":          4,
+	"hibernate":            3,
+	"hibiscus":             3,
+	"hidalgo":              3,
+	"hierarchical":         5,
+	"hierarchy":            4,
+	"hijack":               2,
+	"hilarious":            4,
+	"hilarity":             4,
+	"hic":                  1,
+	"hick":                 1,
+	"hickey":               2,
+	"hickory":              3,
+	"hid":                  1,
+	"hidden":               2,
+	"hideous":              3,
+	"hiding":               2,
+	"hide":                 1,
+	"hideaway":             3,
+	"hideout":              2,
+	"hie":                  1,
+	"high":                 1,
+	"highland":             2,
+	"highlight":            2,
+	"highlighted":          3,
+	"highlighting":         3,
+	"highline":             2,
+	"highly":               2,
+	"highness":             2,
+	"highway":              2,
+	"hight":                1,
+	"hiker":                2,
+	"hiking":               2,
+	"hike":                 1,
+	"hill":                 1,
+	"hillbilly":            3,
+	"hiller":               2,
+	"hillier":              3,
+	"hillside":             2,
+	"hilltop":              2,
+	"hilly":                2,
+	"hills":                1,
+	"hilt":                 1,
+	"him":                  1,
+	"himself":              2,
+	"hin":                  1,
+	"hindi":                2,
+	"hindrance":            2,
+	"hinterland":           3,
+	"hind":                 1,
+	"hinder":               2,
+	"hindsight":            2,
+	"hinge":                1,
+	"hint":                 1,
+	"hip":                  1,
+	"hippie":               2,
+	"hippo":                2,
+	"hippocampal":          4,
+	"hippocampus":          4,
+	"hippy":                2,
+	"hipster":              2,
+	"hiring":               2,
+	"hirsute":              2,
+	"hire":                 1,
+	"his":                  1,
+	"histamine":            3,
+	"histidine":            3,
+	"histogram":            3,
+	"histological":         5,
+	"historian":            4,
+	"historiography":       6,
+	"history":              3,
+	"histology":            4,
+	"histone":              2,
+	"historical":           4,
+	"historically":         5,
+	"historic":             3,
+	"hiss":                 1,
+	"hissing":              2,
+	"hist":                 1,
+	"hit":                  1,
+	"hitter":               2,
+	"hitting":              2,
+	"hitch":                1,
+	"hither":               2,
+	"hitherto":             3,
+	"hive":                 1,
+	"hives":                1,
+	"hobo":                 2,
+	"hogan":                2,
+	"holiness":             3,
+	"holistic":             3,
+	"hologram":             3,
+	"holy":                 2,
+	"homeopathic":          5,
+	"homeostasis":          5,
+	"homeopathy":           5,
+	"homo":                 2,
+	"homogeneity":          6,
+	"homogeneous":          5,
+	"homomorphism":         4,
+	"homosexual":           5,
+	"homosexuality":        7,
+	"homozygous":           4,
+	"homogenous":           4,
+	"homologous":           4,
+	"homology":             4,
+	"hora":                 2,
+	"horizon":              3,
+	"hosiery":              3,
+	"hotel":                2,
+	"hoary":                2,
+	"hoard":                1,
+	"hoarding":             2,
+	"hoarse":               1,
+	"hoax":                 1,
+	"hob":                  1,
+	"hobby":                2,
+	"hobbyist":             3,
+	"hock":                 1,
+	"hockey":               2,
+	"hod":                  1,
+	"hodge":                1,
+	"hoe":                  1,
+	"hog":                  1,
+	"hogtied":              2,
+	"hogg":                 1,
+	"hoist":                1,
+	"hoke":                 1,
+	"holiday":              3,
+	"holla":                2,
+	"holland":              2,
+	"holler":               2,
+	"hollow":               2,
+	"holly":                2,
+	"holocaust":            3,
+	"holographic":          4,
+	"holomorphic":          4,
+	"holster":              2,
+	"hold":                 1,
+	"holdall":              2,
+	"holden":               2,
+	"holder":               2,
+	"holding":              2,
+	"hole":                 1,
+	"holm":                 1,
+	"holt":                 1,
+	"hom":                  1,
+	"homage":               2,
+	"hombre":               2,
+	"homer":                2,
+	"homicide":             3,
+	"hominid":              3,
+	"homing":               2,
+	"homolog":              3,
+	"homologue":            3,
+	"home":                 1,
+	"homebound":            2,
+	"homecoming":           3,
+	"homeland":             2,
+	"homeless":             2,
+	"homelessness":         3,
+	"homely":               2,
+	"homemade":             2,
+	"homemaker":            3,
+	"homesick":             2,
+	"homesite":             2,
+	"homespun":             2,
+	"homestead":            2,
+	"hometown":             2,
+	"homeward":             2,
+	"homework":             2,
+	"hon":                  1,
+	"honda":                2,
+	"honesty":              3,
+	"honest":               2,
+	"honestly":             3,
+	"honey":                2,
+	"honeycomb":            3,
+	"honeymoon":            3,
+	"honeysuckle":          4,
+	"honeys":               2,
+	"honing":               2,
+	"honor":                2,
+	"honorable":            4,
+	"honorary":             4,
+	"honors":               2,
+	"hone":                 1,
+	"hong":                 1,
+	"honk":                 1,
+	"honky":                2,
+	"hoo":                  1,
+	"hooray":               2,
+	"hood":                 1,
+	"hooded":               2,
+	"hoodie":               2,
+	"hoof":                 1,
+	"hook":                 1,
+	"hookah":               2,
+	"hooker":               2,
+	"hookup":               2,
+	"hooked":               1,
+	"hoop":                 1,
+	"hooper":               2,
+	"hoot":                 1,
+	"hop":                  1,
+	"hoping":               2,
+	"hopper":               2,
+	"hopping":              2,
+	"hope":                 1,
+	"hopeful":              2,
+	"hopefully":            3,
+	"hopeless":             2,
+	"hopelessly":           3,
+	"hopelessness":         3,
+	"hops":                 1,
+	"hor":                  1,
+	"horizontal":           4,
+	"horizontally":         5,
+	"hormonal":             3,
+	"hormone":              2,
+	"hornet":               2,
+	"horoscope":            3,
+	"horrendous":           3,
+	"horrible":             3,
+	"horribly":             3,
+	"horrified":            3,
+	"horrifying":           4,
+	"horrid":               2,
+	"horrific":             3,
+	"horror":               2,
+	"horrors":              2,
+	"horticultural":        5,
+	"horticulture":         4,
+	"horde":                1,
+	"horn":                 1,
+	"horny":                2,
+	"horned":               1,
+	"horses":               2,
+	"horse":                1,
+	"horseback":            2,
+	"horseman":             2,
+	"horsepower":           3,
+	"horseradish":          3,
+	"horseshoe":            2,
+	"horseshoes":           2,
+	"horst":                1,
+	"hort":                 1,
+	"hoses":                2,
+	"hospitable":           4,
+	"hospital":             3,
+	"hospitality":          5,
+	"hospitalization":      6,
+	"hospitalized":         4,
+	"hospice":              2,
+	"hosta":                2,
+	"hostage":              2,
+	"hostel":               2,
+	"hostility":            4,
+	"hostile":              2,
+	"hose":                 1,
+	"hosp":                 1,
+	"host":                 1,
+	"hostess":              2,
+	"hot":                  1,
+	"hotline":              2,
+	"hotly":                2,
+	"hotspur":              2,
+	"hotter":               2,
+	"hottest":              2,
+	"hottie":               2,
+	"hough":                1,
+	"hound":                1,
+	"hour":                 1,
+	"hourglass":            2,
+	"hourly":               2,
+	"hours":                1,
+	"houses":               2,
+	"housing":              2,
+	"house":                1,
+	"houseboat":            2,
+	"household":            2,
+	"householder":          3,
+	"housekeeper":          3,
+	"housekeeping":         3,
+	"housewares":           2,
+	"housewarming":         3,
+	"housewife":            2,
+	"housework":            2,
+	"hover":                2,
+	"hovercraft":           3,
+	"hove":                 1,
+	"how":                  1,
+	"howdy":                2,
+	"however":              3,
+	"howe":                 1,
+	"howl":                 1,
+	"howler":               2,
+	"howling":              2,
+	"hoy":                  1,
+	"hoya":                 2,
+	"hsien":                1,
+	"hubris":               2,
+	"hula":                 2,
+	"human":                2,
+	"humanitarian":         6,
+	"humanity":             4,
+	"humanistic":           4,
+	"humanism":             3,
+	"humanist":             3,
+	"humankind":            3,
+	"humanly":              3,
+	"humanoid":             3,
+	"humane":               2,
+	"humidor":              3,
+	"humid":                2,
+	"humidifier":           5,
+	"humidity":             4,
+	"humiliation":          5,
+	"humiliated":           5,
+	"humiliating":          5,
+	"humility":             4,
+	"humor":                2,
+	"humorous":             3,
+	"humour":               2,
+	"hub":                  1,
+	"hubble":               2,
+	"hubby":                2,
+	"huckleberry":          4,
+	"huddle":               2,
+	"hue":                  1,
+	"huff":                 1,
+	"hug":                  1,
+	"hugger":               2,
+	"hugging":              2,
+	"huge":                 1,
+	"hugely":               2,
+	"huh":                  1,
+	"hullabaloo":           4,
+	"hulk":                 1,
+	"hull":                 1,
+	"hum":                  1,
+	"humble":               2,
+	"humbly":               2,
+	"humbug":               2,
+	"hummel":               2,
+	"hummer":               2,
+	"humming":              2,
+	"hummingbird":          3,
+	"hump":                 1,
+	"humpback":             2,
+	"humpty":               2,
+	"hundred":              2,
+	"hundredth":            2,
+	"hunger":               2,
+	"hungry":               2,
+	"hunch":                1,
+	"hunchback":            2,
+	"hung":                 1,
+	"hunk":                 1,
+	"hunky":                2,
+	"hunks":                1,
+	"hunt":                 1,
+	"hunted":               2,
+	"hunter":               2,
+	"hunting":              2,
+	"huntsman":             2,
+	"hurdle":               2,
+	"hurrah":               2,
+	"hurricane":            3,
+	"hurried":              2,
+	"hurriedly":            3,
+	"hurry":                2,
+	"hurl":                 1,
+	"hurley":               2,
+	"hurling":              2,
+	"hurst":                1,
+	"hurt":                 1,
+	"hurtful":              2,
+	"hurting":              2,
+	"husband":              2,
+	"husbandry":            3,
+	"hustle":               2,
+	"hustler":              2,
+	"hush":                 1,
+	"husk":                 1,
+	"huskies":              2,
+	"husky":                2,
+	"hut":                  1,
+	"hutch":                1,
+	"hyacinth":             3,
+	"hybrid":               2,
+	"hydra":                2,
+	"hydration":            3,
+	"hydrangea":            3,
+	"hydrant":              2,
+	"hydrated":             3,
+	"hydrating":            3,
+	"hydrate":              2,
+	"hydraulic":            3,
+	"hydraulics":           3,
+	"hydride":              2,
+	"hydro":                2,
+	"hydrocarbon":          4,
+	"hydrocephalus":        5,
+	"hydrochloric":         4,
+	"hydrochloride":        4,
+	"hydrochlorothiazide":  7,
+	"hydrocortisone":       5,
+	"hydrodynamic":         5,
+	"hydroelectric":        5,
+	"hydrogen":             3,
+	"hydrogenated":         5,
+	"hydrographic":         4,
+	"hydrolase":            3,
+	"hydrologic":           4,
+	"hydrophilic":          4,
+	"hydrophobic":          4,
+	"hydroponic":           4,
+	"hydroponics":          4,
+	"hydropower":           4,
+	"hydrostatic":          4,
+	"hydrotherapy":         5,
+	"hydrothermal":         4,
+	"hydrology":            4,
+	"hydrolysis":           4,
+	"hydroxide":            3,
+	"hydroxy":              3,
+	"hydroxyl":             3,
+	"hyena":                3,
+	"hygienic":             3,
+	"hygienist":            3,
+	"hygiene":              2,
+	"hymenoptera":          5,
+	"hymen":                2,
+	"hyperactivity":        6,
+	"hyperactive":          4,
+	"hyperbaric":           4,
+	"hyperbole":            4,
+	"hyperbolic":           4,
+	"hyperplasia":          5,
+	"hypersensitivity":     7,
+	"hyperspace":           3,
+	"hypertension":         4,
+	"hypertensive":         4,
+	"hyperthyroidism":      5,
+	"hypertrophy":          4,
+	"hyphen":               2,
+	"hyphenated":           4,
+	"hypo":                 2,
+	"hypoglycemia":         6,
+	"hypotension":          4,
+	"hypothalamic":         5,
+	"hypothalamus":         5,
+	"hypothermia":          5,
+	"hypothetical":         5,
+	"hypothyroidism":       5,
+	"hypocrisy":            4,
+	"hypothesis":           4,
+	"hypothesized":         4,
+	"hypoxia":              4,
+	"hymn":                 1,
+	"hyp":                  1,
+	"hypnosis":             3,
+	"hypnotherapy":         5,
+	"hypnotist":            3,
+	"hypnotize":            3,
+	"hypnotic":             3,
+	"hypocritical":         5,
+	"hypocrite":            3,
+	"hype":                 1,
+	"hysteria":             4,
+	"hysteresis":           4,
+	"hysterectomy":         5,
+	"hysterical":           4,
+	"ibex":                 2,
+	"ibis":                 2,
+	"iconography":          5,
+	"icon":                 2,
+	"iconic":               3,
+	"icons":                2,
+	"icy":                  2,
+	"idea":                 3,
+	"ideal":                3,
+	"idealistic":           5,
+	"idealism":             4,
+	"idealist":             4,
+	"idealized":            4,
+	"ideally":              4,
+	"ideological":          6,
+	"ideology":             5,
+	"idem":                 2,
+	"identical":            4,
+	"identically":          5,
+	"identifiable":         6,
+	"identification":       6,
+	"identifier":           5,
+	"identified":           4,
+	"identify":             4,
+	"identifying":          5,
+	"identity":             4,
+	"idle":                 2,
+	"idler":                2,
+	"idling":               2,
+	"idly":                 2,
+	"idol":                 2,
+	"idolatry":             4,
+	"idyllic":              3,
+	"iguana":               3,
+	"ikon":                 2,
+	"imagines":             4,
+	"imago":                3,
+	"imam":                 2,
+	"iman":                 2,
+	"iodide":               3,
+	"iodine":               3,
+	"iota":                 3,
+	"ion":                  2,
+	"ionization":           5,
+	"ionic":                3,
+	"ionizing":             4,
+	"ionized":              3,
+	"ionospheric":          5,
+	"ionosphere":           4,
+	"irate":                2,
+	"iridium":              4,
+	"iris":                 2,
+	"iron":                 2,
+	"ironically":           5,
+	"ironic":               3,
+	"ironing":              3,
+	"ironwood":             3,
+	"irony":                3,
+	"irons":                2,
+	"isobaric":             4,
+	"isolation":            4,
+	"isolator":             4,
+	"isolated":             4,
+	"isolating":            4,
+	"isolate":              3,
+	"isometric":            4,
+	"isomorphic":           4,
+	"isomorphism":          4,
+	"isopropyl":            4,
+	"isotopic":             4,
+	"isotope":              3,
+	"isotropic":            4,
+	"isotype":              3,
+	"italicized":           4,
+	"italic":               3,
+	"item":                 2,
+	"itemize":              3,
+	"itemized":             3,
+	"itinerant":            4,
+	"itineraries":          5,
+	"itinerary":            5,
+	"ivory":                3,
+	"ivy":                  2,
+	"icing":                2,
+	"ice":                  1,
+	"iceberg":              2,
+	"icebreaker":           3,
+	"iceman":               2,
+	"iced":                 1,
+	"ich":                  1,
+	"icky":                 2,
+	"ideograph":            4,
+	"idiocy":               4,
+	"idiopathic":           5,
+	"idiosyncratic":        6,
+	"idiom":                3,
+	"idiot":                3,
+	"idiotic":              4,
+	"ide":                  1,
+	"ides":                 1,
+	"igloo":                2,
+	"igneous":              3,
+	"ignition":             3,
+	"ignited":              3,
+	"ignite":               2,
+	"ignorance":            3,
+	"ignorant":             3,
+	"ignoring":             3,
+	"ignore":               2,
+	"ignored":              2,
+	"ign":                  1,
+	"ike":                  1,
+	"ilia":                 3,
+	"illegal":              3,
+	"illegally":            4,
+	"illegitimate":         5,
+	"illegible":            4,
+	"illicit":              3,
+	"illiteracy":           5,
+	"illiterate":           4,
+	"illogical":            4,
+	"illuminati":           5,
+	"illumination":         5,
+	"illuminator":          5,
+	"illuminated":          5,
+	"illuminating":         5,
+	"illuminate":           4,
+	"illusion":             3,
+	"illusory":             4,
+	"illustration":         4,
+	"illustrative":         4,
+	"illustrator":          4,
+	"illustrated":          4,
+	"illustrating":         4,
+	"illustrate":           3,
+	"illustrious":          4,
+	"ilk":                  1,
+	"ill":                  1,
+	"illness":              2,
+	"illus":                1,
+	"imager":               3,
+	"imaginable":           5,
+	"imagination":          5,
+	"imaginative":          5,
+	"imaginary":            5,
+	"imagining":            4,
+	"imagine":              3,
+	"imagined":             3,
+	"imaging":              3,
+	"image":                2,
+	"imagery":              3,
+	"imaged":               2,
+	"imbalance":            3,
+	"imbedded":             3,
+	"imbued":               2,
+	"imitation":            4,
+	"imitated":             4,
+	"imitating":            4,
+	"imitate":              3,
+	"immaterial":           5,
+	"immature":             3,
+	"immaculate":           4,
+	"immediacy":            5,
+	"immediate":            4,
+	"immediately":          5,
+	"immense":              2,
+	"immensely":            3,
+	"immersion":            3,
+	"immerse":              2,
+	"immersed":             2,
+	"immigration":          4,
+	"immigrant":            3,
+	"immigrated":           4,
+	"imminent":             3,
+	"immobilization":       6,
+	"immobilized":          4,
+	"immorality":           5,
+	"immoral":              3,
+	"immortal":             3,
+	"immortality":          5,
+	"immovable":            4,
+	"immunity":             4,
+	"immunization":         5,
+	"immunized":            3,
+	"immunoassay":          5,
+	"immunoglobulin":       6,
+	"immunologic":          5,
+	"immunotherapy":        6,
+	"immunology":           5,
+	"immutable":            4,
+	"immune":               2,
+	"impatience":           3,
+	"impatient":            3,
+	"impatiently":          4,
+	"impact":               2,
+	"impacted":             3,
+	"impair":               2,
+	"impairment":           3,
+	"impala":               3,
+	"impaled":              2,
+	"impartiality":         6,
+	"impartial":            3,
+	"impart":               2,
+	"impassioned":          3,
+	"impasse":              2,
+	"imperial":             4,
+	"imperialism":          5,
+	"imperialist":          5,
+	"imperium":             4,
+	"impetus":              3,
+	"impeach":              2,
+	"impeachment":          3,
+	"impeccable":           4,
+	"impedance":            3,
+	"impeded":              3,
+	"impediment":           4,
+	"impeding":             3,
+	"impede":               2,
+	"impeller":             3,
+	"impenetrable":         5,
+	"impending":            3,
+	"imperative":           4,
+	"imperfection":         4,
+	"imperfect":            3,
+	"impersonation":        5,
+	"impersonal":           4,
+	"impersonate":          4,
+	"impervious":           4,
+	"implantation":         4,
+	"implant":              2,
+	"implausible":          4,
+	"implementation":       5,
+	"implement":            3,
+	"implication":          4,
+	"implicated":           4,
+	"implicate":            3,
+	"implicit":             3,
+	"implicitly":           4,
+	"implied":              2,
+	"implosion":            3,
+	"implode":              2,
+	"imply":                2,
+	"implying":             3,
+	"imposition":           4,
+	"impotence":            3,
+	"impotent":             3,
+	"importation":          4,
+	"importance":           3,
+	"important":            3,
+	"importantly":          4,
+	"import":               2,
+	"importer":             3,
+	"imposing":             3,
+	"impossibility":        6,
+	"impossible":           4,
+	"impossibly":           4,
+	"impose":               2,
+	"imposed":              2,
+	"impoundment":          3,
+	"impoverished":         4,
+	"impractical":          4,
+	"imprecise":            3,
+	"impressing":           3,
+	"impression":           3,
+	"impressionism":        4,
+	"impressionist":        4,
+	"impressive":           3,
+	"impressively":         4,
+	"impress":              2,
+	"imprint":              2,
+	"imprinting":           3,
+	"imprisonment":         4,
+	"improvise":            3,
+	"improvised":           3,
+	"improbable":           4,
+	"impromptu":            3,
+	"improper":             3,
+	"improperly":           4,
+	"improvisation":        5,
+	"improving":            3,
+	"improve":              2,
+	"improvement":          3,
+	"improved":             2,
+	"impunity":             4,
+	"impurity":             4,
+	"imputation":           4,
+	"impulsive":            3,
+	"impulse":              2,
+	"impure":               2,
+	"imputed":              3,
+	"imp":                  1,
+	"inability":            5,
+	"inaccessible":         5,
+	"inaccuracy":           5,
+	"inaccurate":           4,
+	"inactivation":         5,
+	"inactivated":          5,
+	"inaction":             3,
+	"inactivity":           5,
+	"inactive":             3,
+	"inadequacy":           5,
+	"inadequate":           4,
+	"inadequately":         5,
+	"inadmissible":         5,
+	"inadvertent":          4,
+	"inadvertently":        5,
+	"inalienable":          5,
+	"inanimate":            4,
+	"inane":                2,
+	"inapplicable":         5,
+	"inappropriate":        5,
+	"inappropriately":      6,
+	"inaudible":            4,
+	"inauguration":         5,
+	"inaugural":            4,
+	"inaugurated":          5,
+	"inboard":              2,
+	"inbound":              2,
+	"inbred":               2,
+	"incapable":            4,
+	"incapacitated":        6,
+	"incapacity":           5,
+	"incandescent":         4,
+	"incarceration":        5,
+	"incarcerated":         5,
+	"incarnation":          4,
+	"incarnate":            3,
+	"incase":               2,
+	"incendiary":           5,
+	"incentive":            3,
+	"incense":              2,
+	"inception":            3,
+	"incessant":            3,
+	"incessantly":          4,
+	"incest":               2,
+	"incidental":           4,
+	"incidentally":         5,
+	"incidence":            3,
+	"incident":             3,
+	"incision":             3,
+	"incisive":             3,
+	"incineration":         5,
+	"incinerator":          5,
+	"incipient":            4,
+	"inciting":             3,
+	"incite":               2,
+	"incitement":           3,
+	"inclement":            3,
+	"inclination":          4,
+	"incline":              2,
+	"inclined":             2,
+	"inclusion":            3,
+	"inclusive":            3,
+	"included":             3,
+	"including":            3,
+	"include":              2,
+	"incoherent":           4,
+	"incognito":            4,
+	"incoming":             3,
+	"incomparable":         5,
+	"incompatibility":      7,
+	"incompatible":         5,
+	"incompetence":         4,
+	"incompetent":          4,
+	"incomplete":           3,
+	"incompleteness":       4,
+	"incomprehensible":     6,
+	"income":               2,
+	"inconceivable":        5,
+	"inconclusive":         4,
+	"inconsequential":      5,
+	"inconsistency":        5,
+	"inconsistent":         4,
+	"incontinence":         4,
+	"inconvenience":        4,
+	"inconvenient":         4,
+	"incorporation":        5,
+	"incorporated":         5,
+	"incorporating":        5,
+	"incorporate":          4,
+	"incorrect":            3,
+	"incorrectly":          4,
+	"incremental":          4,
+	"increment":            3,
+	"increasing":           3,
+	"increasingly":         4,
+	"increase":             2,
+	"increased":            2,
+	"incredible":           4,
+	"incredibly":           4,
+	"incubation":           4,
+	"incubator":            4,
+	"incubated":            4,
+	"incubus":              3,
+	"incumbent":            3,
+	"incur":                2,
+	"incurable":            4,
+	"incurring":            3,
+	"incurred":             2,
+	"inde":                 2,
+	"indecency":            4,
+	"indecent":             3,
+	"indecision":           4,
+	"independence":         4,
+	"independent":          4,
+	"independently":        5,
+	"indescribable":        5,
+	"indestructible":       5,
+	"indeterminate":        5,
+	"indebted":             3,
+	"indebtedness":         4,
+	"indeed":               2,
+	"indefinite":           4,
+	"indefinitely":         5,
+	"indelible":            4,
+	"indemnification":      6,
+	"indemnified":          4,
+	"indemnify":            4,
+	"indemnity":            4,
+	"indentation":          4,
+	"indenture":            3,
+	"indent":               2,
+	"indented":             3,
+	"index":                2,
+	"indexer":              3,
+	"indexes":              3,
+	"indication":           4,
+	"indicator":            4,
+	"indicated":            4,
+	"indicating":           4,
+	"indicate":             3,
+	"indices":              3,
+	"indicia":              4,
+	"indigent":             3,
+	"indigestion":          4,
+	"indigo":               3,
+	"indirect":             3,
+	"indirectly":           4,
+	"indium":               3,
+	"individual":           5,
+	"individuality":        7,
+	"individualistic":      7,
+	"individualism":        6,
+	"individualized":       6,
+	"individually":         6,
+	"indicative":           4,
+	"indictment":           3,
+	"indifference":         4,
+	"indifferent":          4,
+	"indigenous":           4,
+	"indignation":          4,
+	"indignant":            3,
+	"indiscriminate":       5,
+	"indispensable":        5,
+	"indistinguishable":    6,
+	"indomethacin":         5,
+	"indoctrination":       5,
+	"indoor":               2,
+	"indoors":              2,
+	"inducible":            4,
+	"inducing":             3,
+	"induction":            3,
+	"inductive":            3,
+	"inductor":             3,
+	"induce":               2,
+	"inducement":           3,
+	"induced":              2,
+	"inductance":           3,
+	"indulgence":           3,
+	"indulgent":            3,
+	"indulging":            3,
+	"indulge":              2,
+	"indulged":             2,
+	"industrial":           4,
+	"industrialization":    7,
+	"industrialised":       5,
+	"industrialized":       5,
+	"industrials":          4,
+	"industrious":          4,
+	"industry":             3,
+	"inelastic":            4,
+	"inequality":           5,
+	"ineffective":          4,
+	"inefficiency":         5,
+	"inefficient":          4,
+	"ineligible":           5,
+	"inept":                2,
+	"inequity":             4,
+	"inertia":              3,
+	"inertial":             3,
+	"inert":                2,
+	"inescapable":          5,
+	"inevitability":        7,
+	"inevitable":           5,
+	"inevitably":           5,
+	"inexperienced":        5,
+	"inexpensive":          4,
+	"inexpensively":        5,
+	"inexplicable":         5,
+	"inexplicably":         5,
+	"inextricably":         5,
+	"infamous":             3,
+	"infamy":               3,
+	"infallible":           4,
+	"infancy":              3,
+	"infantile":            3,
+	"infantry":             3,
+	"infant":               2,
+	"infarction":           3,
+	"infatuation":          5,
+	"inferior":             4,
+	"inferiority":          6,
+	"infeasible":           4,
+	"infection":            3,
+	"infectious":           3,
+	"infective":            3,
+	"infect":               2,
+	"infer":                2,
+	"inference":            3,
+	"infernal":             3,
+	"inferno":              3,
+	"inferring":            3,
+	"infertility":          5,
+	"infertile":            3,
+	"inferred":             2,
+	"infestation":          4,
+	"infidel":              3,
+	"infidelity":           5,
+	"infinite":             3,
+	"infinitely":           4,
+	"infield":              2,
+	"infiltration":         4,
+	"infiltrated":          4,
+	"infiltrate":           3,
+	"infill":               2,
+	"infinitesimal":        6,
+	"infinity":             4,
+	"infirmary":            4,
+	"infirm":               2,
+	"inflation":            3,
+	"inflationary":         5,
+	"inflammation":         4,
+	"inflammatory":         5,
+	"inflamed":             2,
+	"inflatable":           4,
+	"inflated":             3,
+	"inflating":            3,
+	"inflate":              2,
+	"inflection":           3,
+	"inflexible":           4,
+	"inflict":              2,
+	"inflight":             2,
+	"inflow":               2,
+	"influential":          4,
+	"influenza":            4,
+	"influencing":          4,
+	"influence":            3,
+	"influenced":           3,
+	"influx":               2,
+	"info":                 2,
+	"information":          4,
+	"informational":        5,
+	"informal":             3,
+	"informally":           4,
+	"inform":               2,
+	"informative":          4,
+	"informant":            3,
+	"informer":             3,
+	"informed":             2,
+	"infra":                2,
+	"infrared":             3,
+	"infrastructure":       4,
+	"infraction":           3,
+	"infrequent":           3,
+	"infrequently":         4,
+	"infringing":           3,
+	"infringe":             2,
+	"infringement":         3,
+	"infringed":            2,
+	"infusion":             3,
+	"infuse":               2,
+	"infused":              2,
+	"ingenuity":            5,
+	"ingenious":            3,
+	"ingestion":            3,
+	"ingest":               2,
+	"ingle":                2,
+	"ingleside":            3,
+	"ingrained":            2,
+	"ingredient":           4,
+	"ingress":              2,
+	"inhalation":           4,
+	"inhabit":              3,
+	"inhabitant":           4,
+	"inhabited":            4,
+	"inhaler":              3,
+	"inhaling":             3,
+	"inhale":               2,
+	"inhaled":              2,
+	"inherent":             3,
+	"inherently":           4,
+	"inherit":              3,
+	"inheritance":          4,
+	"inherited":            4,
+	"inhibition":           4,
+	"inhibitory":           5,
+	"inhibitor":            4,
+	"inhibit":              3,
+	"inhomogeneous":        6,
+	"inhuman":              3,
+	"inhumane":             3,
+	"initiation":           5,
+	"initiative":           5,
+	"initiator":            5,
+	"initiated":            5,
+	"initiating":           5,
+	"initiate":             4,
+	"initial":              3,
+	"initialize":           4,
+	"initially":            4,
+	"iniquity":             4,
+	"injection":            3,
+	"injector":             3,
+	"inject":               2,
+	"injectable":           4,
+	"injurious":            4,
+	"injuries":             3,
+	"injury":               3,
+	"injunction":           3,
+	"injunctive":           3,
+	"injuring":             3,
+	"injure":               2,
+	"injured":              2,
+	"injustice":            3,
+	"inlaid":               2,
+	"inland":               2,
+	"inlay":                2,
+	"inlet":                2,
+	"inline":               2,
+	"inmate":               2,
+	"innate":               2,
+	"inner":                2,
+	"innermost":            3,
+	"innervation":          4,
+	"inning":               2,
+	"innings":              2,
+	"innocence":            3,
+	"innocent":             3,
+	"innocently":           4,
+	"innovation":           4,
+	"innovative":           4,
+	"innovator":            4,
+	"innovate":             3,
+	"innocuous":            4,
+	"innuendo":             4,
+	"innumerable":          5,
+	"inositol":             4,
+	"inoculation":          5,
+	"inoculated":           5,
+	"inoperable":           5,
+	"inoperative":          5,
+	"inordinate":           4,
+	"inorganic":            4,
+	"inpatient":            3,
+	"input":                2,
+	"inputting":            3,
+	"inquest":              2,
+	"inquisition":          4,
+	"inquirer":             3,
+	"inquiries":            3,
+	"inquiring":            3,
+	"inquiry":              3,
+	"inquire":              2,
+	"inquired":             2,
+	"inquisitive":          4,
+	"inquisitor":           4,
+	"insatiable":           4,
+	"insanity":             4,
+	"insane":               2,
+	"insanely":             3,
+	"inscribed":            2,
+	"inscription":          3,
+	"insecurity":           5,
+	"insecure":             3,
+	"insecticide":          4,
+	"insect":               2,
+	"insemination":         5,
+	"insensitivity":        6,
+	"insensitive":          4,
+	"inseparable":          5,
+	"insertion":            3,
+	"insert":               2,
+	"inserted":             3,
+	"inset":                2,
+	"inshore":              2,
+	"insider":              3,
+	"insidious":            4,
+	"inside":               2,
+	"insides":              2,
+	"insignia":             4,
+	"insignificant":        5,
+	"insight":              2,
+	"insightful":           3,
+	"insist":               2,
+	"insistence":           3,
+	"insistent":            3,
+	"insofar":              3,
+	"insoluble":            4,
+	"insolvency":           4,
+	"insolvent":            3,
+	"insole":               2,
+	"insomnia":             4,
+	"insomniac":            4,
+	"inspection":           3,
+	"inspector":            3,
+	"inspectorate":         4,
+	"inspect":              2,
+	"inspiration":          4,
+	"inspirational":        5,
+	"inspiring":            3,
+	"inspire":              2,
+	"inspired":             2,
+	"instability":          5,
+	"installation":         4,
+	"installing":           3,
+	"instalment":           3,
+	"install":              2,
+	"installer":            3,
+	"installment":          3,
+	"installed":            2,
+	"instantaneous":        5,
+	"instantaneously":      6,
+	"instantiate":          4,
+	"instance":             2,
+	"instant":              2,
+	"instantly":            3,
+	"instead":              2,
+	"instep":               2,
+	"instigated":           4,
+	"institution":          4,
+	"institutional":        5,
+	"institutionalization": 8,
+	"institutionalized":    6,
+	"instituted":           4,
+	"instituting":          4,
+	"institute":            3,
+	"institutes":           3,
+	"instill":              2,
+	"instilled":            2,
+	"instinctive":          3,
+	"instinctively":        4,
+	"instinct":             2,
+	"instrumentation":      5,
+	"instrumental":         4,
+	"instrumentality":      6,
+	"instrument":           3,
+	"instruction":          3,
+	"instructional":        4,
+	"instructions":         3,
+	"instructive":          3,
+	"instructor":           3,
+	"instruct":             2,
+	"insulation":           4,
+	"insulator":            4,
+	"insular":              3,
+	"insulated":            4,
+	"insulating":           4,
+	"insulate":             3,
+	"insulin":              3,
+	"insufficiency":        5,
+	"insufficient":         4,
+	"insufficiently":       5,
+	"insult":               2,
+	"insulting":            3,
+	"insurer":              3,
+	"insurgency":           4,
+	"insurgent":            3,
+	"insuring":             3,
+	"insurmountable":       5,
+	"insurrection":         4,
+	"insure":               2,
+	"insured":              2,
+	"intact":               2,
+	"intake":               2,
+	"intangible":           4,
+	"integer":              3,
+	"integrable":           4,
+	"integration":          4,
+	"integrative":          4,
+	"integrator":           4,
+	"integral":             3,
+	"integrated":           4,
+	"integrating":          4,
+	"integrate":            3,
+	"interior":             4,
+	"integrity":            4,
+	"intellectual":         5,
+	"intellectually":       6,
+	"intellect":            3,
+	"intelligencer":        5,
+	"intelligence":         4,
+	"intelligent":          4,
+	"intelligently":        5,
+	"intelligible":         5,
+	"intensification":      6,
+	"intensified":          4,
+	"intensify":            4,
+	"intensifying":         5,
+	"intensity":            4,
+	"intensive":            3,
+	"intensively":          4,
+	"intention":            3,
+	"intentional":          4,
+	"intentionally":        5,
+	"intentioned":          3,
+	"intend":               2,
+	"intended":             3,
+	"intense":              2,
+	"intensely":            3,
+	"intent":               2,
+	"intently":             3,
+	"interagency":          5,
+	"interaction":          4,
+	"interactive":          4,
+	"interact":             3,
+	"interbank":            3,
+	"interception":         4,
+	"interceptor":          4,
+	"intercept":            3,
+	"intercession":         4,
+	"interchange":          3,
+	"interchangeable":      5,
+	"interchangeably":      5,
+	"intercity":            4,
+	"intercollegiate":      5,
+	"intercom":             3,
+	"interconnection":      5,
+	"intercontinental":     6,
+	"intercooler":          4,
+	"intercourse":          3,
+	"interdepartmental":    6,
+	"interdependence":      5,
+	"interdependent":       5,
+	"interdiction":         4,
+	"interdisciplinary":    7,
+	"interest":             3,
+	"interested":           4,
+	"interesting":          4,
+	"interestingly":        5,
+	"interfacial":          4,
+	"interfacing":          4,
+	"interface":            3,
+	"interfaith":           3,
+	"interference":         4,
+	"interfering":          4,
+	"interferometer":       6,
+	"interferometry":       6,
+	"interferon":           4,
+	"interfere":            3,
+	"interfered":           3,
+	"intergalactic":        5,
+	"intergovernmental":    6,
+	"interim":              3,
+	"interlaced":           3,
+	"interleaved":          3,
+	"interlibrary":         5,
+	"interlink":            3,
+	"interlock":            3,
+	"interlude":            3,
+	"intermediation":       6,
+	"intermediaries":       6,
+	"intermediary":         6,
+	"intermediate":         5,
+	"interment":            3,
+	"intermission":         4,
+	"intermittent":         4,
+	"intermittently":       5,
+	"intermountain":        4,
+	"internation":          4,
+	"international":        5,
+	"internationalization": 8,
+	"internationally":      6,
+	"internal":             3,
+	"internally":           4,
+	"interpersonal":        5,
+	"interphase":           3,
+	"interplanetary":       6,
+	"interplay":            3,
+	"interpolation":        5,
+	"interpolated":         5,
+	"interpretation":       5,
+	"interpretative":       5,
+	"interpretive":         4,
+	"interpret":            3,
+	"interpreter":          4,
+	"interracial":          4,
+	"interrelated":         5,
+	"interrogation":        5,
+	"interrogated":         5,
+	"interrogate":          4,
+	"interrogatories":      6,
+	"interruption":         4,
+	"interrupt":            3,
+	"interrupted":          4,
+	"interscience":         4,
+	"intersection":         4,
+	"intersect":            3,
+	"interspersed":         3,
+	"interstate":           3,
+	"interstellar":         4,
+	"interstitial":         4,
+	"intertidal":           4,
+	"intertwined":          3,
+	"interval":             3,
+	"intervening":          4,
+	"intervention":         4,
+	"interventional":       5,
+	"intervene":            3,
+	"intervened":           3,
+	"interview":            3,
+	"interviewee":          4,
+	"interviewer":          4,
+	"interwoven":           4,
+	"interworking":         4,
+	"intern":               2,
+	"internment":           3,
+	"internship":           3,
+	"interne":              2,
+	"intestinal":           4,
+	"intestine":            3,
+	"intimacy":             4,
+	"intimate":             3,
+	"intimately":           4,
+	"intitle":              3,
+	"intimidation":         5,
+	"intimidated":          5,
+	"intimidating":         5,
+	"intimidate":           4,
+	"into":                 2,
+	"intonation":           4,
+	"intolerable":          5,
+	"intolerance":          4,
+	"intolerant":           4,
+	"intoxication":         5,
+	"intoxicated":          5,
+	"intoxicating":         5,
+	"intracellular":        5,
+	"intracranial":         5,
+	"intramural":           4,
+	"intramuscular":        5,
+	"intrastate":           3,
+	"intrauterine":         5,
+	"intravenous":          4,
+	"intractable":          4,
+	"intrepid":             3,
+	"intricate":            3,
+	"intricately":          4,
+	"intriguing":           3,
+	"intrigue":             2,
+	"intrigued":            2,
+	"intrinsically":        5,
+	"intrinsic":            3,
+	"introducing":          4,
+	"introduction":         4,
+	"introductory":         5,
+	"introduce":            3,
+	"introduced":           3,
+	"introspection":        4,
+	"introspective":        4,
+	"intrusion":            3,
+	"intrusive":            3,
+	"intruder":             3,
+	"intrude":              2,
+	"intubation":           4,
+	"intuition":            4,
+	"intuitive":            4,
+	"intuitively":          5,
+	"intuit":               3,
+	"inundated":            4,
+	"invalidity":           5,
+	"invasion":             3,
+	"invasive":             3,
+	"invaded":              3,
+	"invader":              3,
+	"invading":             3,
+	"invade":               2,
+	"invalidated":          5,
+	"invalidate":           4,
+	"invalid":              3,
+	"invaluable":           5,
+	"invariably":           5,
+	"invariant":            4,
+	"invention":            3,
+	"inventive":            3,
+	"inventories":          4,
+	"inventory":            4,
+	"inventor":             3,
+	"invent":               2,
+	"inversion":            3,
+	"invertebrate":         4,
+	"inverse":              2,
+	"inversely":            3,
+	"invert":               2,
+	"inverter":             3,
+	"investigation":        5,
+	"investigational":      6,
+	"investigative":        5,
+	"investigator":         5,
+	"investigated":         5,
+	"investigating":        5,
+	"investigate":          4,
+	"investor":             3,
+	"invest":               2,
+	"investment":           3,
+	"invitation":           4,
+	"invitational":         5,
+	"invigorating":         5,
+	"invincible":           4,
+	"invisibility":         6,
+	"invisible":            4,
+	"invited":              3,
+	"inviting":             3,
+	"invite":               2,
+	"invocation":           4,
+	"invoicing":            3,
+	"invoice":              2,
+	"invoiced":             2,
+	"invoking":             3,
+	"invoke":               2,
+	"invoked":              2,
+	"involuntarily":        6,
+	"involuntary":          5,
+	"involving":            3,
+	"involve":              2,
+	"involvement":          3,
+	"involved":             2,
+	"inward":               2,
+	"inwardly":             3,
+	"inc":                  1,
+	"inch":                 1,
+	"incl":                 1,
+	"incr":                 1,
+	"ind":                  1,
+	"inf":                  1,
+	"init":                 1,
+	"ink":                  1,
+	"inn":                  1,
+	"innkeeper":            3,
+	"ins":                  1,
+	"insp":                 1,
+	"inst":                 1,
+	"instr":                1,
+	"insurance":            2,
+	"int":                  1,
+	"inter":                1,
+	"intl":                 1,
+	"intr":                 1,
+	"intro":                1,
+	"inv":                  1,
+	"iridescent":           4,
+	"irradiation":          5,
+	"irradiance":           4,
+	"irradiated":           5,
+	"irrational":           4,
+	"irreducible":          5,
+	"irreplaceable":        5,
+	"irresistible":         5,
+	"irrespective":         4,
+	"irresponsible":        5,
+	"irreversible":         5,
+	"irregular":            4,
+	"irregularity":         6,
+	"irregularly":          5,
+	"irrelevant":           4,
+	"irreparable":          5,
+	"irreverent":           4,
+	"irrevocable":          5,
+	"irrevocably":          5,
+	"irrigation":           4,
+	"irrigated":            4,
+	"irritability":         6,
+	"irritable":            4,
+	"irritation":           4,
+	"irritant":             3,
+	"irritated":            4,
+	"irritating":           4,
+	"irritate":             3,
+	"ire":                  1,
+	"ischemia":             4,
+	"ischemic":             3,
+	"ischia":               3,
+	"island":               2,
+	"islander":             3,
+	"islet":                2,
+	"issuance":             3,
+	"issuer":               3,
+	"issuing":              3,
+	"issue":                2,
+	"issued":               2,
+	"isle":                 1,
+	"ism":                  1,
+	"isthmus":              2,
+	"iter":                 2,
+	"iteration":            4,
+	"iterative":            4,
+	"iterated":             4,
+	"iterate":              3,
+	"itself":               2,
+	"ita":                  1,
+	"ital":                 1,
+	"itch":                 1,
+	"itching":              2,
+	"itchy":                2,
+	"its":                  1,
+	"jager":                2,
+	"japan":                2,
+	"japonica":             4,
+	"jaap":                 1,
+	"jab":                  1,
+	"jabber":               2,
+	"jacquard":             2,
+	"jack":                 1,
+	"jackal":               2,
+	"jackass":              2,
+	"jacket":               2,
+	"jackpot":              2,
+	"jacks":                1,
+	"jad":                  1,
+	"jaded":                2,
+	"jade":                 1,
+	"jaeger":               2,
+	"jag":                  1,
+	"jagged":               2,
+	"jaguar":               2,
+	"jai":                  1,
+	"jail":                 1,
+	"jailhouse":            2,
+	"jak":                  1,
+	"jake":                 1,
+	"jakes":                1,
+	"jam":                  1,
+	"jamboree":             3,
+	"jamming":              2,
+	"janitorial":           5,
+	"janitor":              3,
+	"jane":                 1,
+	"jar":                  1,
+	"jargon":               2,
+	"jarring":              2,
+	"jasmine":              2,
+	"jasper":               2,
+	"jaundice":             2,
+	"javelin":              2,
+	"jaw":                  1,
+	"jaws":                 1,
+	"jay":                  1,
+	"jazz":                 1,
+	"jazzy":                2,
+	"jct":                  1,
+	"jealous":              2,
+	"jealousy":             3,
+	"jean":                 1,
+	"jeans":                1,
+	"jee":                  1,
+	"jeepers":              2,
+	"jeep":                 1,
+	"jeez":                 1,
+	"jelly":                2,
+	"jellyfish":            3,
+	"jello":                2,
+	"jen":                  1,
+	"jennie":               2,
+	"jenny":                2,
+	"jeopardize":           3,
+	"jeopardy":             3,
+	"jer":                  1,
+	"jerry":                2,
+	"jersey":               2,
+	"jerk":                 1,
+	"jerky":                2,
+	"jess":                 1,
+	"jesse":                1,
+	"jest":                 1,
+	"jester":               2,
+	"jet":                  1,
+	"jetty":                2,
+	"jewel":                2,
+	"jeweler":              3,
+	"jewellery":            4,
+	"jewelry":              3,
+	"jeweled":              2,
+	"jihad":                2,
+	"jib":                  1,
+	"jiffy":                2,
+	"jig":                  1,
+	"jigsaw":               2,
+	"jill":                 1,
+	"jimmy":                2,
+	"jin":                  1,
+	"jingle":               2,
+	"jinx":                 1,
+	"jitter":               2,
+	"jive":                 1,
+	"joey":                 2,
+	"johannes":             3,
+	"jojoba":               3,
+	"joseph":               2,
+	"jota":                 2,
+	"job":                  1,
+	"jobless":              2,
+	"jock":                 1,
+	"jockey":               2,
+	"jodhpur":              2,
+	"joe":                  1,
+	"jog":                  1,
+	"jogger":               2,
+	"jogging":              2,
+	"john":                 1,
+	"johnny":               2,
+	"join":                 1,
+	"joiner":               2,
+	"joinery":              3,
+	"joint":                1,
+	"jointed":              2,
+	"jointly":              2,
+	"joker":                2,
+	"joking":               2,
+	"joke":                 1,
+	"jolly":                2,
+	"jolt":                 1,
+	"jordan":               2,
+	"jornada":              3,
+	"josh":                 1,
+	"joss":                 1,
+	"jot":                  1,
+	"joule":                1,
+	"jour":                 1,
+	"journal":              2,
+	"journalistic":         4,
+	"journalism":           3,
+	"journalist":           3,
+	"journey":              2,
+	"journeyman":           3,
+	"joy":                  1,
+	"joyful":               2,
+	"joyous":               2,
+	"jubilee":              3,
+	"judas":                2,
+	"judiciary":            5,
+	"judicial":             3,
+	"judicious":            3,
+	"judo":                 2,
+	"juju":                 2,
+	"juniper":              3,
+	"jura":                 2,
+	"juridical":            4,
+	"jurisdiction":         4,
+	"jurisprudence":        4,
+	"jurist":               2,
+	"juror":                2,
+	"jury":                 2,
+	"juvenile":             3,
+	"judging":              2,
+	"judgmental":           3,
+	"judgment":             2,
+	"judge":                1,
+	"judgement":            2,
+	"jug":                  1,
+	"juggernaut":           3,
+	"juggle":               2,
+	"juicer":               2,
+	"juicy":                2,
+	"juice":                1,
+	"jukebox":              2,
+	"jumble":               2,
+	"jumbo":                2,
+	"jump":                 1,
+	"jumper":               2,
+	"jungle":               2,
+	"junior":               2,
+	"junta":                2,
+	"junction":             2,
+	"juncture":             2,
+	"junk":                 1,
+	"junkie":               2,
+	"junky":                2,
+	"junkyard":             2,
+	"jus":                  1,
+	"justifiable":          5,
+	"justifiably":          5,
+	"justification":        5,
+	"justified":            3,
+	"justify":              3,
+	"justifying":           4,
+	"justice":              2,
+	"just":                 1,
+	"justly":               2,
+	"jute":                 1,
+	"juxtaposition":        5,
+	"kabuki":               3,
+	"kahuna":               3,
+	"kaleidoscope":         4,
+	"kami":                 2,
+	"kamikaze":             4,
+	"kana":                 2,
+	"karate":               3,
+	"karoo":                2,
+	"katana":               3,
+	"kava":                 2,
+	"kaiser":               2,
+	"kain":                 1,
+	"kali":                 2,
+	"kale":                 1,
+	"kangaroo":             3,
+	"kanji":                2,
+	"kane":                 1,
+	"kang":                 1,
+	"kappa":                2,
+	"karat":                2,
+	"karma":                2,
+	"karmic":               2,
+	"karst":                1,
+	"kart":                 1,
+	"kas":                  1,
+	"kashmir":              2,
+	"kat":                  1,
+	"kayak":                2,
+	"kcal":                 1,
+	"kea":                  2,
+	"kebab":                2,
+	"keno":                 2,
+	"keto":                 2,
+	"ketone":               2,
+	"keck":                 1,
+	"keel":                 1,
+	"keen":                 1,
+	"keener":               2,
+	"keenly":               2,
+	"keep":                 1,
+	"keeper":               2,
+	"keeping":              2,
+	"keepsake":             2,
+	"kef":                  1,
+	"keg":                  1,
+	"kelly":                2,
+	"kelvin":               2,
+	"kelp":                 1,
+	"kemp":                 1,
+	"ken":                  1,
+	"kendo":                2,
+	"kennel":               2,
+	"kent":                 1,
+	"kept":                 1,
+	"keratin":              3,
+	"kernel":               2,
+	"kerosene":             3,
+	"kerry":                2,
+	"kerb":                 1,
+	"kern":                 1,
+	"kestrel":              2,
+	"kettle":               2,
+	"ketchup":              2,
+	"key":                  1,
+	"keyboard":             2,
+	"keyhole":              2,
+	"keying":               2,
+	"keyless":              2,
+	"keynote":              2,
+	"keystone":             2,
+	"keystroke":            2,
+	"keyword":              2,
+	"keyed":                1,
+	"khaki":                2,
+	"khan":                 1,
+	"kiley":                2,
+	"kimono":               3,
+	"kinase":               2,
+	"kinesiology":          6,
+	"kinetic":              3,
+	"kinetics":             3,
+	"kino":                 2,
+	"kiosk":                2,
+	"kiwi":                 2,
+	"kick":                 1,
+	"kickback":             2,
+	"kicker":               2,
+	"kickoff":              2,
+	"kid":                  1,
+	"kidder":               2,
+	"kiddie":               2,
+	"kidding":              2,
+	"kiddy":                2,
+	"kidnap":               2,
+	"kidnapping":           3,
+	"kidney":               2,
+	"kilo":                 2,
+	"kilogram":             3,
+	"kilometer":            4,
+	"kilometre":            4,
+	"kilowatt":             3,
+	"kilos":                2,
+	"kill":                 1,
+	"killer":               2,
+	"killing":              2,
+	"kiln":                 1,
+	"kilt":                 1,
+	"kin":                  1,
+	"kindergarten":         4,
+	"kindling":             2,
+	"kindred":              2,
+	"kinematic":            4,
+	"kinematics":           4,
+	"kinship":              2,
+	"kind":                 1,
+	"kindly":               2,
+	"kindness":             2,
+	"kine":                 1,
+	"king":                 1,
+	"kingdom":              2,
+	"kingfisher":           3,
+	"kingpin":              2,
+	"kingwood":             2,
+	"kink":                 1,
+	"kinky":                2,
+	"kinsman":              2,
+	"kip":                  1,
+	"kirby":                2,
+	"kirk":                 1,
+	"kismet":               2,
+	"kish":                 1,
+	"kiss":                 1,
+	"kit":                  1,
+	"kitten":               2,
+	"kitty":                2,
+	"kitchen":              2,
+	"kitchener":            3,
+	"kitchenette":          3,
+	"kitchenware":          3,
+	"kite":                 1,
+	"kitsch":               1,
+	"knack":                1,
+	"knee":                 1,
+	"kneel":                1,
+	"kneeling":             2,
+	"knelt":                1,
+	"knew":                 1,
+	"knickers":             2,
+	"knife":                1,
+	"knight":               1,
+	"knit":                 1,
+	"knitted":              2,
+	"knitter":              2,
+	"knitting":             2,
+	"knitwear":             2,
+	"knives":               1,
+	"knob":                 1,
+	"knock":                1,
+	"knockout":             2,
+	"knoll":                1,
+	"knot":                 1,
+	"knotted":              2,
+	"knotting":             2,
+	"know":                 1,
+	"knowing":              2,
+	"knowingly":            3,
+	"knowledgable":         4,
+	"knowledge":            2,
+	"knowledgeable":        4,
+	"known":                1,
+	"knuckle":              2,
+	"koa":                  2,
+	"koala":                3,
+	"koko":                 2,
+	"kola":                 2,
+	"kona":                 2,
+	"kore":                 2,
+	"koruna":               3,
+	"kosher":               2,
+	"kohl":                 1,
+	"kondo":                2,
+	"kor":                  1,
+	"kos":                  1,
+	"kraft":                1,
+	"kremlin":              2,
+	"kris":                 1,
+	"krona":                2,
+	"krone":                2,
+	"kroon":                1,
+	"krypton":              2,
+	"kudos":                2,
+	"kula":                 2,
+	"kudzu":                2,
+	"kundalini":            4,
+	"kwacha":               2,
+	"kwanza":               2,
+	"kwh":                  1,
+	"kylie":                2,
+	"kylix":                2,
+	"kyat":                 1,
+	"kyle":                 1,
+	"kyu":                  1,
+	"label":                2,
+	"labeling":             3,
+	"labelling":            3,
+	"labeled":              2,
+	"labelled":             2,
+	"labia":                3,
+	"laborious":            4,
+	"labor":                2,
+	"laborer":              3,
+	"labored":              2,
+	"labour":               2,
+	"labourer":             3,
+	"lacrosse":             2,
+	"lacuna":               3,
+	"ladies":               2,
+	"ladle":                2,
+	"lady":                 2,
+	"ladybird":             3,
+	"ladybug":              3,
+	"lager":                2,
+	"lagoon":               2,
+	"laity":                3,
+	"lama":                 2,
+	"lament":               2,
+	"lamented":             3,
+	"lanai":                3,
+	"lapel":                2,
+	"lasagna":              3,
+	"laser":                2,
+	"lata":                 2,
+	"latency":              3,
+	"latent":               2,
+	"latex":                2,
+	"latino":               3,
+	"lava":                 2,
+	"lazily":               3,
+	"laziness":             3,
+	"lazy":                 2,
+	"lab":                  1,
+	"laboratory":           5,
+	"labyrinth":            3,
+	"lac":                  1,
+	"lacing":               2,
+	"lacquer":              2,
+	"lactation":            3,
+	"lactating":            3,
+	"lactate":              2,
+	"lactic":               2,
+	"lactobacillus":        5,
+	"lactose":              2,
+	"lacy":                 2,
+	"lace":                 1,
+	"lack":                 1,
+	"lackey":               2,
+	"lacking":              2,
+	"lackluster":           3,
+	"lad":                  1,
+	"ladder":               2,
+	"laden":                2,
+	"lading":               2,
+	"lag":                  1,
+	"lagging":              2,
+	"lah":                  1,
+	"lai":                  1,
+	"laid":                 1,
+	"lain":                 1,
+	"lair":                 1,
+	"laird":                1,
+	"lake":                 1,
+	"lakefront":            2,
+	"lakeshore":            2,
+	"lakh":                 1,
+	"lam":                  1,
+	"lambert":              2,
+	"lamina":               3,
+	"lamination":           4,
+	"laminator":            4,
+	"laminar":              3,
+	"laminated":            4,
+	"laminating":           4,
+	"laminate":             3,
+	"lampoon":              2,
+	"lamb":                 1,
+	"lambda":               2,
+	"lame":                 1,
+	"lamp":                 1,
+	"lancet":               2,
+	"landau":               2,
+	"language":             2,
+	"lantana":              3,
+	"lantern":              2,
+	"lanyard":              2,
+	"lancer":               2,
+	"lance":                1,
+	"land":                 1,
+	"landed":               2,
+	"landfall":             2,
+	"landing":              2,
+	"landlocked":           2,
+	"landlord":             2,
+	"landmark":             2,
+	"landowner":            3,
+	"landscaping":          3,
+	"landscape":            2,
+	"landscaped":           2,
+	"landslide":            2,
+	"lands":                1,
+	"lane":                 1,
+	"lang":                 1,
+	"langue":               1,
+	"lap":                  1,
+	"lapis":                2,
+	"lapping":              2,
+	"lapse":                1,
+	"lar":                  1,
+	"larceny":              3,
+	"larder":               2,
+	"largo":                2,
+	"lariat":               3,
+	"larry":                2,
+	"larva":                2,
+	"larval":               2,
+	"laryngeal":            4,
+	"larynx":               2,
+	"larch":                1,
+	"lard":                 1,
+	"larger":               2,
+	"largest":              2,
+	"large":                1,
+	"largely":              2,
+	"lark":                 1,
+	"larkspur":             2,
+	"lassie":               2,
+	"lasso":                2,
+	"lash":                 1,
+	"lashing":              2,
+	"lashed":               1,
+	"lass":                 1,
+	"last":                 1,
+	"lasting":              2,
+	"lastly":               2,
+	"lat":                  1,
+	"lated":                2,
+	"later":                2,
+	"lateral":              3,
+	"laterally":            4,
+	"latest":               2,
+	"latitude":             3,
+	"latter":               2,
+	"lattice":              2,
+	"latch":                1,
+	"latching":             2,
+	"late":                 1,
+	"lately":               2,
+	"lather":               2,
+	"lathe":                1,
+	"laura":                2,
+	"laureate":             3,
+	"laurel":               2,
+	"laurence":             2,
+	"laudable":             3,
+	"lauder":               2,
+	"laugh":                1,
+	"laughable":            3,
+	"laughing":             2,
+	"laughter":             2,
+	"laundry":              2,
+	"launch":               1,
+	"launcher":             2,
+	"lav":                  1,
+	"lavatory":             4,
+	"lavender":             3,
+	"lavish":               2,
+	"lavishly":             3,
+	"law":                  1,
+	"lawful":               2,
+	"lawfully":             3,
+	"lawless":              2,
+	"lawlessness":          3,
+	"lawmaker":             3,
+	"lawsuit":              2,
+	"lawyer":               2,
+	"lawn":                 1,
+	"lax":                  1,
+	"laxative":             3,
+	"lay":                  1,
+	"layer":                2,
+	"layering":             3,
+	"layette":              2,
+	"laying":               2,
+	"layman":               2,
+	"layoff":               2,
+	"layout":               2,
+	"layup":                2,
+	"lazar":                2,
+	"lazuli":               3,
+	"lbw":                  1,
+	"lcd":                  1,
+	"lcl":                  1,
+	"lcm":                  1,
+	"legato":               3,
+	"legal":                2,
+	"legality":             4,
+	"legalization":         5,
+	"legalize":             3,
+	"legalized":            3,
+	"legally":              3,
+	"legion":               2,
+	"legit":                2,
+	"legitimacy":           5,
+	"legitimate":           4,
+	"legitimately":         5,
+	"leis":                 2,
+	"lemur":                2,
+	"lenient":              3,
+	"leno":                 2,
+	"leone":                3,
+	"leotard":              3,
+	"lesion":               2,
+	"lethal":               2,
+	"lethality":            4,
+	"leu":                  2,
+	"levant":               2,
+	"leviathan":            4,
+	"lea":                  1,
+	"leach":                1,
+	"lead":                 1,
+	"leader":               2,
+	"leadership":           3,
+	"leading":              2,
+	"leaf":                 1,
+	"leaflet":              2,
+	"leafy":                2,
+	"league":               1,
+	"leak":                 1,
+	"leakage":              2,
+	"leaky":                2,
+	"leal":                 1,
+	"lean":                 1,
+	"leaner":               2,
+	"leaning":              2,
+	"leap":                 1,
+	"leapfrog":             2,
+	"leaping":              2,
+	"leapt":                1,
+	"lear":                 1,
+	"leary":                2,
+	"learn":                1,
+	"learned":              2,
+	"learner":              2,
+	"learning":             2,
+	"learnt":               1,
+	"leasing":              2,
+	"lease":                1,
+	"leasehold":            2,
+	"leash":                1,
+	"least":                1,
+	"leather":              2,
+	"leatherhead":          3,
+	"leaving":              2,
+	"leave":                1,
+	"leaved":               1,
+	"leaves":               1,
+	"leben":                2,
+	"lecithin":             3,
+	"lectionary":           4,
+	"lecturer":             3,
+	"lecturing":            3,
+	"lecture":              2,
+	"lectured":             2,
+	"lech":                 1,
+	"lect":                 1,
+	"led":                  1,
+	"ledger":               2,
+	"ledge":                1,
+	"lee":                  1,
+	"leeward":              2,
+	"leeway":               2,
+	"leech":                1,
+	"leek":                 1,
+	"leer":                 1,
+	"lees":                 1,
+	"left":                 1,
+	"lefties":              2,
+	"leftist":              2,
+	"leftover":             3,
+	"lefty":                2,
+	"leg":                  1,
+	"legacy":               3,
+	"legend":               2,
+	"legendary":            4,
+	"leger":                2,
+	"legged":               2,
+	"leggings":             2,
+	"legible":              3,
+	"legislation":          4,
+	"legislative":          4,
+	"legislator":           4,
+	"legislature":          4,
+	"legislated":           4,
+	"legislate":            3,
+	"legume":               2,
+	"lei":                  1,
+	"leisure":              2,
+	"leisurely":            3,
+	"leishmania":           4,
+	"lek":                  1,
+	"lemma":                2,
+	"lemmas":               2,
+	"lemon":                2,
+	"lemonade":             3,
+	"lemony":               3,
+	"lempira":              3,
+	"lentil":               2,
+	"lend":                 1,
+	"lender":               2,
+	"lending":              2,
+	"length":               1,
+	"lengthen":             2,
+	"lengthwise":           2,
+	"lengthy":              2,
+	"lens":                 1,
+	"lenses":               2,
+	"lent":                 1,
+	"leopard":              2,
+	"lepidoptera":          5,
+	"leprechaun":           3,
+	"leprosy":              3,
+	"lepton":               2,
+	"lesbian":              3,
+	"lesbianism":           4,
+	"lessee":               2,
+	"lesson":               2,
+	"lessor":               2,
+	"leste":                2,
+	"less":                 1,
+	"lessen":               2,
+	"lesser":               2,
+	"lest":                 1,
+	"let":                  1,
+	"letter":               2,
+	"letterhead":           3,
+	"lettering":            3,
+	"letterman":            3,
+	"lettered":             2,
+	"letters":              2,
+	"letting":              2,
+	"lettuce":              2,
+	"lethargy":             3,
+	"leucine":              2,
+	"leukaemia":            4,
+	"leukemia":             4,
+	"leukocyte":            3,
+	"lev":                  1,
+	"levee":                2,
+	"level":                2,
+	"leveling":             3,
+	"levelling":            3,
+	"leveled":              2,
+	"levelled":             2,
+	"lever":                2,
+	"leverage":             3,
+	"levied":               2,
+	"levies":               2,
+	"levin":                2,
+	"levy":                 2,
+	"lewis":                2,
+	"lewd":                 1,
+	"lex":                  1,
+	"lexical":              3,
+	"lexicon":              3,
+	"lexis":                2,
+	"ley":                  1,
+	"lge":                  1,
+	"liabilities":          5,
+	"liability":            5,
+	"liable":               3,
+	"liaison":              3,
+	"liaise":               2,
+	"liar":                 2,
+	"libel":                2,
+	"libellous":            3,
+	"libelous":             3,
+	"liber":                2,
+	"libido":               3,
+	"libra":                2,
+	"librarian":            4,
+	"librarianship":        5,
+	"libraries":            3,
+	"library":              3,
+	"libretto":             3,
+	"libri":                2,
+	"licensee":             3,
+	"licensor":             3,
+	"licence":              2,
+	"licenced":             2,
+	"licensing":            3,
+	"license":              2,
+	"licensed":             2,
+	"lichen":               2,
+	"lido":                 2,
+	"lidocaine":            3,
+	"ligation":             3,
+	"lila":                 2,
+	"lilac":                2,
+	"limes":                2,
+	"lino":                 2,
+	"linoleum":             4,
+	"lion":                 2,
+	"lionheart":            3,
+	"lipase":               2,
+	"lipid":                2,
+	"liqueur":              2,
+	"liquidity":            4,
+	"lira":                 2,
+	"lire":                 2,
+	"litas":                2,
+	"liter":                2,
+	"lithography":          4,
+	"litre":                2,
+	"liturgical":           4,
+	"livre":                2,
+	"liza":                 2,
+	"liang":                1,
+	"lib":                  1,
+	"liberation":           4,
+	"liberator":            4,
+	"liberal":              3,
+	"liberalization":       6,
+	"liberalism":           4,
+	"liberally":            4,
+	"liberated":            4,
+	"liberating":           4,
+	"liberate":             3,
+	"libertarian":          5,
+	"libertarianism":       6,
+	"liberty":              3,
+	"licorice":             3,
+	"lice":                 1,
+	"licht":                1,
+	"lick":                 1,
+	"licking":              2,
+	"lid":                  1,
+	"lie":                  1,
+	"lied":                 1,
+	"lieder":               2,
+	"liege":                1,
+	"lien":                 1,
+	"lieu":                 1,
+	"lieutenant":           3,
+	"life":                 1,
+	"lifeboat":             2,
+	"lifeguard":            2,
+	"lifeless":             2,
+	"lifelike":             2,
+	"lifeline":             2,
+	"lifelong":             2,
+	"lifesaving":           3,
+	"lifetime":             2,
+	"lift":                 1,
+	"lifter":               2,
+	"ligament":             3,
+	"ligand":               2,
+	"lignin":               2,
+	"light":                1,
+	"lighted":              2,
+	"lighten":              2,
+	"lightening":           3,
+	"lighter":              2,
+	"lighthouses":          3,
+	"lighthouse":           2,
+	"lighting":             2,
+	"lightly":              2,
+	"lightness":            2,
+	"lightning":            2,
+	"lightweight":          2,
+	"lights":               1,
+	"ligne":                1,
+	"likable":              3,
+	"liking":               2,
+	"like":                 1,
+	"likeable":             3,
+	"likelihood":           3,
+	"likely":               2,
+	"likeness":             2,
+	"likewise":             2,
+	"lilies":               2,
+	"lily":                 2,
+	"limbo":                2,
+	"limerick":             3,
+	"limitation":           4,
+	"limit":                2,
+	"limited":              3,
+	"limiter":              3,
+	"limiting":             3,
+	"limitless":            3,
+	"limousine":            3,
+	"limb":                 1,
+	"lime":                 1,
+	"limelight":            2,
+	"limestone":            2,
+	"limp":                 1,
+	"lin":                  1,
+	"linac":                2,
+	"linden":               2,
+	"lindy":                2,
+	"linear":               3,
+	"linearity":            5,
+	"linearized":           4,
+	"linearly":             4,
+	"linen":                2,
+	"liner":                2,
+	"lingerie":             3,
+	"linger":               2,
+	"lingo":                2,
+	"lingua":               2,
+	"lingual":              2,
+	"linguistically":       5,
+	"linguistic":           3,
+	"linguistics":          3,
+	"linguist":             2,
+	"lining":               2,
+	"linoleic":             4,
+	"linsey":               2,
+	"line":                 1,
+	"lineage":              2,
+	"linebacker":           3,
+	"lineman":              2,
+	"lineup":               2,
+	"lines":                1,
+	"ling":                 1,
+	"link":                 1,
+	"linkage":              2,
+	"linked":               1,
+	"links":                1,
+	"linn":                 1,
+	"lint":                 1,
+	"lip":                  1,
+	"lipoprotein":          4,
+	"lipper":               2,
+	"lipstick":             2,
+	"lipped":               1,
+	"liquefied":            3,
+	"liquidation":          4,
+	"liquidator":           4,
+	"liquidated":           4,
+	"liquidate":            3,
+	"liquid":               2,
+	"liquor":               2,
+	"listeria":             4,
+	"listen":               2,
+	"listener":             3,
+	"lisle":                1,
+	"lisp":                 1,
+	"list":                 1,
+	"listed":               2,
+	"lister":               2,
+	"listing":              2,
+	"lists":                1,
+	"lit":                  1,
+	"litany":               3,
+	"literacy":             4,
+	"literature":           4,
+	"literal":              3,
+	"literally":            4,
+	"literary":             4,
+	"literate":             3,
+	"litigation":           4,
+	"litmus":               2,
+	"litter":               2,
+	"little":               2,
+	"littlest":             2,
+	"littoral":             3,
+	"liturgy":              3,
+	"lith":                 1,
+	"lithium":              3,
+	"lithograph":           3,
+	"litho":                1,
+	"livable":              3,
+	"liver":                2,
+	"livery":               3,
+	"livid":                2,
+	"living":               2,
+	"live":                 1,
+	"livelihood":           3,
+	"lively":               2,
+	"livestock":            2,
+	"lived":                1,
+	"lives":                1,
+	"lizard":               2,
+	"lizzie":               2,
+	"llama":                2,
+	"llano":                2,
+	"lobo":                 2,
+	"loca":                 2,
+	"location":             3,
+	"locator":              3,
+	"local":                2,
+	"localisation":         5,
+	"locality":             4,
+	"localization":         5,
+	"localised":            3,
+	"localize":             3,
+	"localized":            3,
+	"locally":              3,
+	"locale":               2,
+	"located":              3,
+	"locating":             3,
+	"locate":               2,
+	"loci":                 2,
+	"loco":                 2,
+	"locomotion":           4,
+	"locomotive":           4,
+	"locum":                2,
+	"locus":                2,
+	"locust":               2,
+	"logan":                2,
+	"logistical":           4,
+	"logistic":             3,
+	"logistics":            3,
+	"loma":                 2,
+	"loris":                2,
+	"lotion":               2,
+	"lotus":                2,
+	"load":                 1,
+	"loaded":               2,
+	"loader":               2,
+	"loading":              2,
+	"loads":                1,
+	"loaf":                 1,
+	"loafer":               2,
+	"loam":                 1,
+	"loan":                 1,
+	"loathing":             2,
+	"loathe":               1,
+	"loaves":               1,
+	"lob":                  1,
+	"lobbied":              2,
+	"lobby":                2,
+	"lobbying":             3,
+	"lobbyist":             3,
+	"lobster":              2,
+	"lobe":                 1,
+	"loch":                 1,
+	"lock":                 1,
+	"lockable":             3,
+	"locker":               2,
+	"locket":               2,
+	"lockout":              2,
+	"locksmith":            2,
+	"lockup":               2,
+	"lode":                 1,
+	"lodger":               2,
+	"lodging":              2,
+	"lodgings":             2,
+	"lodge":                1,
+	"lodged":               1,
+	"loe":                  1,
+	"loft":                 1,
+	"lofty":                2,
+	"log":                  1,
+	"logarithmic":          4,
+	"logarithm":            3,
+	"logbook":              2,
+	"logger":               2,
+	"logging":              2,
+	"logical":              3,
+	"logically":            4,
+	"logic":                2,
+	"logo":                 2,
+	"logotype":             3,
+	"logos":                2,
+	"loge":                 1,
+	"loin":                 1,
+	"loins":                1,
+	"lollipop":             3,
+	"lolly":                2,
+	"loner":                2,
+	"longevity":            4,
+	"longitudinal":         5,
+	"longitude":            3,
+	"lone":                 1,
+	"loneliness":           3,
+	"lonely":               2,
+	"lonesome":             2,
+	"long":                 1,
+	"longer":               2,
+	"longhorn":             2,
+	"longing":              2,
+	"longstanding":         3,
+	"longtime":             2,
+	"longs":                1,
+	"loo":                  1,
+	"look":                 1,
+	"lookout":              2,
+	"loom":                 1,
+	"looming":              2,
+	"loon":                 1,
+	"looney":               2,
+	"loony":                2,
+	"loop":                 1,
+	"looper":               2,
+	"loophole":             2,
+	"loopy":                2,
+	"looped":               1,
+	"loosen":               2,
+	"looser":               2,
+	"loosing":              2,
+	"loose":                1,
+	"loosely":              2,
+	"loot":                 1,
+	"lop":                  1,
+	"lor":                  1,
+	"lorry":                2,
+	"lord":                 1,
+	"lordship":             2,
+	"lore":                 1,
+	"loser":                2,
+	"losing":               2,
+	"lossy":                2,
+	"lose":                 1,
+	"loss":                 1,
+	"lost":                 1,
+	"lot":                  1,
+	"lotteries":            3,
+	"lottery":              3,
+	"lotto":                2,
+	"lots":                 1,
+	"louie":                2,
+	"louis":                2,
+	"louvre":               2,
+	"loud":                 1,
+	"loudly":               2,
+	"loudness":             2,
+	"loudspeaker":          3,
+	"lough":                1,
+	"lounging":             2,
+	"lounge":               1,
+	"loup":                 1,
+	"lousy":                2,
+	"lovable":              3,
+	"lover":                2,
+	"loving":               2,
+	"lovingly":             3,
+	"love":                 1,
+	"loveable":             3,
+	"loveless":             2,
+	"lovely":               2,
+	"lovemaking":           3,
+	"low":                  1,
+	"lowball":              2,
+	"lowdown":              2,
+	"lower":                2,
+	"lowering":             3,
+	"lowery":               3,
+	"lowing":               2,
+	"lowland":              2,
+	"lowly":                2,
+	"lowe":                 1,
+	"lox":                  1,
+	"loyal":                2,
+	"loyalist":             3,
+	"loyalty":              3,
+	"lsd":                  1,
+	"ltd":                  1,
+	"luau":                 2,
+	"lubrication":          4,
+	"lubricated":           4,
+	"lubricating":          4,
+	"lucent":               2,
+	"lucerne":              2,
+	"lucida":               3,
+	"lucifer":              3,
+	"lucid":                2,
+	"luciferase":           4,
+	"ludicrous":            3,
+	"lulu":                 2,
+	"lumen":                2,
+	"lumens":               2,
+	"lumina":               3,
+	"luminance":            3,
+	"luminaries":           4,
+	"luminescence":         4,
+	"luminescent":          4,
+	"luminosity":           5,
+	"luminous":             3,
+	"lunacy":               3,
+	"lunatic":              3,
+	"lunar":                2,
+	"lupin":                2,
+	"lupine":               2,
+	"lupus":                2,
+	"lutein":               3,
+	"lubricant":            3,
+	"lube":                 1,
+	"lucrative":            3,
+	"luce":                 1,
+	"luck":                 1,
+	"luckily":              3,
+	"lucky":                2,
+	"lug":                  1,
+	"luggage":              2,
+	"luge":                 1,
+	"lukewarm":             2,
+	"lull":                 1,
+	"lullaby":              3,
+	"lumbar":               2,
+	"lumber":               2,
+	"lumberjack":           3,
+	"lump":                 1,
+	"lumpy":                2,
+	"lunch":                1,
+	"luncheon":             2,
+	"lunchtime":            2,
+	"lune":                 1,
+	"lung":                 1,
+	"lure":                 1,
+	"lurk":                 1,
+	"lurker":               2,
+	"luscious":             2,
+	"luster":               2,
+	"lustre":               2,
+	"lustrous":             2,
+	"lush":                 1,
+	"lust":                 1,
+	"lusty":                2,
+	"lute":                 1,
+	"lux":                  1,
+	"luxurious":            4,
+	"luxuriously":          5,
+	"luxury":               3,
+	"luxe":                 1,
+	"lyceum":               3,
+	"lying":                2,
+	"lysine":               2,
+	"lysis":                2,
+	"lye":                  1,
+	"lymphatic":            3,
+	"lymphocytic":          4,
+	"lymphocyte":           3,
+	"lymphoma":             3,
+	"lymphoid":             2,
+	"lymph":                1,
+	"lynch":                1,
+	"lynx":                 1,
+	"lyrical":              3,
+	"lyricist":             3,
+	"lyric":                2,
+	"lyre":                 1,
+	"ml":                   2,
+	"mro":                  2,
+	"macabre":              3,
+	"macaw":                2,
+	"machete":              3,
+	"machinery":            4,
+	"machining":            3,
+	"machinist":            3,
+	"machine":              2,
+	"machined":             2,
+	"madre":                2,
+	"maduro":               3,
+	"magenta":              3,
+	"magi":                 2,
+	"magician":             3,
+	"magus":                2,
+	"maharaja":             4,
+	"maharishi":            4,
+	"mahatma":              3,
+	"mahogany":             4,
+	"majestic":             3,
+	"major":                2,
+	"majority":             4,
+	"mako":                 2,
+	"malacca":              3,
+	"malaise":              2,
+	"malaria":              4,
+	"malevolent":           4,
+	"mali":                 2,
+	"malicious":            3,
+	"malignancy":           4,
+	"malignant":            3,
+	"mama":                 2,
+	"mana":                 2,
+	"manet":                2,
+	"maneuver":             3,
+	"mania":                3,
+	"maniac":               3,
+	"manipulative":         5,
+	"manipulator":          5,
+	"manipulated":          5,
+	"manipulating":         5,
+	"manipulate":           4,
+	"manoeuvre":            3,
+	"manuka":               3,
+	"manure":               2,
+	"maple":                2,
+	"mara":                 2,
+	"marauder":             3,
+	"maria":                3,
+	"marijuana":            4,
+	"marina":               3,
+	"marimba":              3,
+	"marine":               2,
+	"maroon":               2,
+	"mason":                2,
+	"masonic":              3,
+	"masonry":              3,
+	"material":             4,
+	"materiality":          6,
+	"materialism":          5,
+	"materialize":          5,
+	"materialized":         5,
+	"materially":           5,
+	"materials":            4,
+	"materiel":             4,
+	"mater":                2,
+	"maternal":             3,
+	"maternity":            4,
+	"matilda":              3,
+	"matrices":             3,
+	"matriculation":        5,
+	"matrix":               2,
+	"matron":               2,
+	"maturity":             4,
+	"mature":               2,
+	"maven":                2,
+	"mavis":                2,
+	"maya":                 2,
+	"mayan":                2,
+	"maar":                 1,
+	"mac":                  1,
+	"macadamia":            5,
+	"macaroni":             4,
+	"macfarlane":           3,
+	"macintosh":            3,
+	"macro":                2,
+	"macroeconomics":       6,
+	"macromolecular":       6,
+	"macrophage":           3,
+	"macroscopic":          4,
+	"macular":              3,
+	"mace":                 1,
+	"mach":                 1,
+	"mack":                 1,
+	"mackinaw":             3,
+	"mackintosh":           3,
+	"mackerel":             2,
+	"mad":                  1,
+	"madam":                2,
+	"madame":               2,
+	"madden":               2,
+	"madeleine":            3,
+	"mademoiselle":         4,
+	"madly":                2,
+	"madman":               2,
+	"madness":              2,
+	"madras":               2,
+	"made":                 1,
+	"maelstrom":            2,
+	"maestro":              2,
+	"mag":                  1,
+	"magazine":             3,
+	"magdalen":             3,
+	"magdalene":            3,
+	"maggie":               2,
+	"maggot":               2,
+	"magical":              3,
+	"magically":            4,
+	"magic":                2,
+	"magistrate":           3,
+	"magma":                2,
+	"magnesium":            4,
+	"magneto":              3,
+	"magnetometer":         5,
+	"magnet":               2,
+	"magnetically":         5,
+	"magnetization":        5,
+	"magnetic":             3,
+	"magnetics":            3,
+	"magnetism":            3,
+	"magnification":        5,
+	"magnifier":            4,
+	"magnified":            3,
+	"magnify":              3,
+	"magnifying":           4,
+	"magnitude":            3,
+	"magnificence":         4,
+	"magnificent":          4,
+	"magnolia":             3,
+	"magnum":               2,
+	"magpie":               2,
+	"mage":                 1,
+	"mahjong":              2,
+	"maid":                 1,
+	"maiden":               2,
+	"maidenhead":           3,
+	"mail":                 1,
+	"mailbag":              2,
+	"mailbox":              2,
+	"mailer":               2,
+	"mailman":              2,
+	"mailed":               1,
+	"main":                 1,
+	"mainland":             2,
+	"mainline":             2,
+	"mainly":               2,
+	"mainstay":             2,
+	"mainstream":           2,
+	"maintain":             2,
+	"maintainer":           3,
+	"maintenance":          3,
+	"mains":                1,
+	"mair":                 1,
+	"maize":                1,
+	"majesty":              3,
+	"maker":                2,
+	"making":               2,
+	"make":                 1,
+	"makeshift":            2,
+	"makeup":               2,
+	"malachite":            3,
+	"malfunction":          3,
+	"malice":               2,
+	"malkin":               2,
+	"mallard":              2,
+	"malleable":            4,
+	"mallet":               2,
+	"mallow":               2,
+	"malnourished":         3,
+	"malnutrition":         4,
+	"malpractice":          3,
+	"male":                 1,
+	"mall":                 1,
+	"malt":                 1,
+	"mam":                  1,
+	"mambo":                2,
+	"mamma":                2,
+	"mammalian":            4,
+	"mammary":              3,
+	"mammal":               2,
+	"mammoth":              2,
+	"man":                  1,
+	"managerial":           5,
+	"manatee":              3,
+	"manager":              3,
+	"managing":             3,
+	"manage":               2,
+	"manageable":           4,
+	"management":           3,
+	"managed":              2,
+	"mandala":              3,
+	"mandarin":             3,
+	"mandatory":            4,
+	"mandated":             3,
+	"mandating":            3,
+	"mandate":              2,
+	"mandi":                2,
+	"mandible":             3,
+	"mandibular":           4,
+	"mandir":               2,
+	"mandolin":             3,
+	"mandrake":             2,
+	"manganese":            3,
+	"manger":               2,
+	"mango":                2,
+	"mangosteen":           3,
+	"mangrove":             2,
+	"manhole":              2,
+	"manhood":              2,
+	"manhunt":              2,
+	"manicure":             3,
+	"manifestation":        5,
+	"manifesto":            4,
+	"manifest":             3,
+	"manifold":             3,
+	"manitou":              3,
+	"manic":                2,
+	"mankind":              2,
+	"manly":                2,
+	"manna":                2,
+	"mannequin":            3,
+	"manner":               2,
+	"mannered":             2,
+	"manners":              2,
+	"mannose":              2,
+	"manor":                2,
+	"manpower":             3,
+	"mansion":              2,
+	"manslaughter":         3,
+	"manta":                2,
+	"mantel":               2,
+	"mantis":               2,
+	"mantle":               2,
+	"mantra":               2,
+	"mantua":               3,
+	"manual":               3,
+	"manually":             4,
+	"manufacturer":         5,
+	"manufacturing":        5,
+	"manufacture":          4,
+	"manufactured":         4,
+	"manuscript":           3,
+	"many":                 2,
+	"mane":                 1,
+	"mange":                1,
+	"manned":               1,
+	"manuf":                1,
+	"map":                  1,
+	"mapping":              2,
+	"mar":                  1,
+	"maranatha":            4,
+	"marathon":             3,
+	"marble":               2,
+	"marbles":              2,
+	"marcasite":            3,
+	"marcel":               2,
+	"marcella":             3,
+	"margarita":            4,
+	"margarine":            3,
+	"margin":               2,
+	"marginal":             3,
+	"marguerite":           3,
+	"mariachi":             4,
+	"marigold":             3,
+	"marinade":             3,
+	"marinated":            4,
+	"mariner":              3,
+	"marionette":           4,
+	"mariposa":             4,
+	"marital":              3,
+	"maritime":             3,
+	"market":               2,
+	"marketable":           4,
+	"marketer":             3,
+	"marketing":            3,
+	"marketplace":          3,
+	"marlin":               2,
+	"marmalade":            3,
+	"marmot":               2,
+	"marquee":              2,
+	"marquis":              2,
+	"marquise":             2,
+	"marriage":             2,
+	"married":              2,
+	"marrow":               2,
+	"marry":                2,
+	"marrying":             3,
+	"marseille":            2,
+	"marseilles":           2,
+	"marshal":              2,
+	"marshall":             2,
+	"marten":               2,
+	"martini":              3,
+	"martial":              2,
+	"martin":               2,
+	"martingale":           3,
+	"martyr":               2,
+	"martyrdom":            3,
+	"marvel":               2,
+	"marvellous":           3,
+	"marvelous":            3,
+	"mary":                 2,
+	"marys":                2,
+	"marc":                 1,
+	"march":                1,
+	"mare":                 1,
+	"marg":                 1,
+	"marge":                1,
+	"mark":                 1,
+	"markedly":             3,
+	"marker":               2,
+	"marking":              2,
+	"markka":               2,
+	"markup":               2,
+	"marked":               1,
+	"marl":                 1,
+	"marque":               1,
+	"marsh":                1,
+	"marshmallow":          3,
+	"mart":                 1,
+	"mascara":              3,
+	"mascot":               2,
+	"masculinity":          5,
+	"masculine":            3,
+	"masjid":               2,
+	"masochism":            3,
+	"masquerading":         4,
+	"masquerade":           3,
+	"massacre":             3,
+	"massager":             3,
+	"massaging":            3,
+	"massage":              2,
+	"massif":               2,
+	"massive":              2,
+	"massively":            3,
+	"mastectomy":           4,
+	"master":               2,
+	"masterful":            3,
+	"mastermind":           3,
+	"masterpiece":          3,
+	"mastery":              3,
+	"mastiff":              2,
+	"masturbation":         4,
+	"masturbate":           3,
+	"mash":                 1,
+	"mask":                 1,
+	"masked":               1,
+	"masque":               1,
+	"mass":                 1,
+	"masses":               2,
+	"mast":                 1,
+	"masthead":             2,
+	"mat":                  1,
+	"matador":              3,
+	"mated":                2,
+	"matinee":              3,
+	"mating":               2,
+	"matrimonial":          5,
+	"matrimony":            4,
+	"matted":               2,
+	"matter":               2,
+	"matting":              2,
+	"mattress":             2,
+	"maturation":           4,
+	"match":                1,
+	"matchbook":            2,
+	"matchbox":             2,
+	"matcher":              2,
+	"matchmaker":           3,
+	"matchmaking":          3,
+	"mate":                 1,
+	"math":                 1,
+	"mathematician":        5,
+	"mathematical":         5,
+	"mathematically":       6,
+	"mathematics":          4,
+	"maths":                1,
+	"matt":                 1,
+	"matte":                1,
+	"mausoleum":            4,
+	"maud":                 1,
+	"maul":                 1,
+	"mauve":                1,
+	"maverick":             3,
+	"maw":                  1,
+	"max":                  1,
+	"maxi":                 2,
+	"maxima":               3,
+	"maximal":              3,
+	"maximally":            4,
+	"maximization":         5,
+	"maximizing":           4,
+	"maximized":            3,
+	"maximum":              3,
+	"maximus":              3,
+	"maxim":                2,
+	"maximise":             3,
+	"maximize":             3,
+	"maxwell":              2,
+	"may":                  1,
+	"maybe":                2,
+	"mayflower":            3,
+	"mayhem":               2,
+	"mayonnaise":           3,
+	"mayoral":              3,
+	"mayor":                1,
+	"maze":                 1,
+	"meander":              3,
+	"mechanical":           4,
+	"mechanically":         5,
+	"mechanic":             3,
+	"mechanics":            3,
+	"medallion":            3,
+	"media":                3,
+	"mediation":            4,
+	"mediator":             4,
+	"mediaeval":            4,
+	"medial":               3,
+	"median":               3,
+	"mediated":             4,
+	"mediating":            4,
+	"mediate":              3,
+	"medieval":             4,
+	"medina":               3,
+	"mediocre":             4,
+	"mediocrity":           5,
+	"medium":               3,
+	"mediums":              3,
+	"medicinal":            4,
+	"medusa":               3,
+	"medulla":              3,
+	"mela":                 2,
+	"melee":                2,
+	"melodic":              3,
+	"memento":              3,
+	"memorial":             4,
+	"menagerie":            4,
+	"meningococcal":        5,
+	"menorah":              3,
+	"meow":                 2,
+	"merengue":             3,
+	"merino":               3,
+	"meridian":             4,
+	"mesa":                 2,
+	"meson":                2,
+	"metabolism":           4,
+	"metabolite":           4,
+	"metallic":             3,
+	"metastasis":           4,
+	"meteorite":            4,
+	"meteorological":       7,
+	"meteorology":          6,
+	"meter":                2,
+	"methionine":           4,
+	"methinks":             2,
+	"methodical":           4,
+	"methoxy":              3,
+	"methyl":               2,
+	"meticulous":           4,
+	"meticulously":         5,
+	"metis":                2,
+	"metre":                2,
+	"metrology":            4,
+	"metropolis":           4,
+	"meager":               2,
+	"measles":              2,
+	"mead":                 1,
+	"meadow":               2,
+	"meal":                 1,
+	"mean":                 1,
+	"meaning":              2,
+	"meaningful":           3,
+	"meaningfully":         4,
+	"meaningless":          3,
+	"meantime":             2,
+	"meanwhile":            2,
+	"means":                1,
+	"meant":                1,
+	"meas":                 1,
+	"measurable":           4,
+	"measuring":            3,
+	"measure":              2,
+	"measurement":          3,
+	"measured":             2,
+	"measures":             2,
+	"meat":                 1,
+	"meaty":                2,
+	"mech":                 1,
+	"mechanistic":          4,
+	"mechanism":            3,
+	"med":                  1,
+	"medal":                2,
+	"medalist":             3,
+	"medication":           4,
+	"medicaid":             3,
+	"medical":              3,
+	"medicare":             3,
+	"medicated":            4,
+	"medicine":             3,
+	"medico":               3,
+	"meditation":           4,
+	"meditating":           4,
+	"meditate":             3,
+	"medic":                2,
+	"medley":               2,
+	"mee":                  1,
+	"meek":                 1,
+	"meet":                 1,
+	"meeting":              2,
+	"megahertz":            3,
+	"megalithic":           4,
+	"megawatt":             3,
+	"meiosis":              3,
+	"mel":                  1,
+	"melamine":             3,
+	"melanoma":             4,
+	"melatonin":            4,
+	"melancholy":           4,
+	"mellow":               2,
+	"melodrama":            4,
+	"melody":               3,
+	"melon":                2,
+	"melton":               2,
+	"meld":                 1,
+	"melt":                 1,
+	"mem":                  1,
+	"member":               2,
+	"membership":           3,
+	"membrane":             2,
+	"memo":                 2,
+	"memorabilia":          6,
+	"memorable":            4,
+	"memorandum":           4,
+	"memorizing":           4,
+	"memorize":             3,
+	"memorized":            3,
+	"memory":               3,
+	"memoir":               2,
+	"memoirs":              2,
+	"men":                  1,
+	"menacing":             3,
+	"menace":               2,
+	"meningitis":           4,
+	"menopausal":           4,
+	"menopause":            3,
+	"mensa":                2,
+	"menstruation":         4,
+	"menstrual":            3,
+	"mental":               2,
+	"mentality":            4,
+	"mentally":             3,
+	"menthol":              2,
+	"mention":              2,
+	"mentor":               2,
+	"menu":                 2,
+	"mend":                 1,
+	"mending":              2,
+	"menswear":             2,
+	"mer":                  1,
+	"mercantile":           3,
+	"mercenaries":          4,
+	"mercenary":            4,
+	"mercer":               2,
+	"merchandiser":         4,
+	"merchandising":        4,
+	"merchandise":          3,
+	"merchant":             2,
+	"merciful":             3,
+	"merciless":            3,
+	"mercilessly":          4,
+	"mercurial":            4,
+	"mercury":              3,
+	"mercy":                2,
+	"merida":               3,
+	"meritorious":          5,
+	"merit":                2,
+	"merits":               2,
+	"merlin":               2,
+	"mermaid":              2,
+	"merrimack":            3,
+	"merry":                2,
+	"mere":                 1,
+	"merely":               2,
+	"merger":               2,
+	"merging":              2,
+	"merge":                1,
+	"merle":                1,
+	"mesmerizing":          4,
+	"mesothelioma":         6,
+	"mesquite":             2,
+	"message":              2,
+	"messenger":            3,
+	"messianic":            4,
+	"mesh":                 1,
+	"mess":                 1,
+	"messier":              3,
+	"messy":                2,
+	"met":                  1,
+	"meta":                 2,
+	"metabolic":            4,
+	"metamorphic":          4,
+	"metamorphosis":        5,
+	"metaphor":             3,
+	"metaphorical":         5,
+	"metaphysical":         5,
+	"metaphysics":          4,
+	"metastatic":           4,
+	"metallurgy":           4,
+	"metalware":            3,
+	"metalwork":            3,
+	"metalworking":         4,
+	"metric":               2,
+	"metrics":              2,
+	"metro":                2,
+	"metronidazole":        5,
+	"metronome":            3,
+	"metropolitan":         5,
+	"metal":                1,
+	"meteor":               1,
+	"methadone":            3,
+	"methanol":             3,
+	"methane":              2,
+	"methotrexate":         4,
+	"method":               2,
+	"methodology":          5,
+	"methylation":          4,
+	"methylene":            3,
+	"meu":                  1,
+	"mew":                  1,
+	"mews":                 1,
+	"mezzanine":            3,
+	"mezzo":                2,
+	"mfg":                  1,
+	"mfr":                  1,
+	"mica":                 2,
+	"micra":                2,
+	"microbial":            4,
+	"microbiological":      7,
+	"microbiology":         6,
+	"microcosm":            3,
+	"microeconomics":       6,
+	"microelectronics":     6,
+	"microfiche":           3,
+	"microfilm":            3,
+	"microgram":            3,
+	"microphone":           3,
+	"microprocessor":       5,
+	"microscopic":          4,
+	"microscope":           3,
+	"microstructure":       4,
+	"microwave":            3,
+	"microbe":              2,
+	"micrometer":           4,
+	"micron":               2,
+	"microscopy":           4,
+	"mignon":               2,
+	"migration":            3,
+	"migratory":            4,
+	"migraine":             2,
+	"migrant":              2,
+	"migrated":             3,
+	"migrating":            3,
+	"migrate":              2,
+	"mikado":               3,
+	"militia":              3,
+	"milieu":               2,
+	"milo":                 2,
+	"mimosa":               3,
+	"mina":                 2,
+	"minor":                2,
+	"minority":             4,
+	"minus":                2,
+	"miraculous":           4,
+	"miraculously":         5,
+	"mirage":               2,
+	"mis":                  2,
+	"miso":                 2,
+	"miter":                2,
+	"mitochondrial":        5,
+	"mitosis":              3,
+	"mitotic":              3,
+	"mitra":                2,
+	"mitral":               2,
+	"mitre":                2,
+	"mib":                  1,
+	"mice":                 1,
+	"mich":                 1,
+	"michigan":             3,
+	"mickey":               2,
+	"micky":                2,
+	"mid":                  1,
+	"midday":               2,
+	"middle":               2,
+	"middleman":            3,
+	"middleweight":         3,
+	"midfield":             2,
+	"midi":                 2,
+	"midland":              2,
+	"midline":              2,
+	"midnight":             2,
+	"midpoint":             2,
+	"midsummer":            3,
+	"midterm":              2,
+	"midtown":              2,
+	"midway":               2,
+	"midweek":              2,
+	"midwife":              2,
+	"midwifery":            3,
+	"midwinter":            3,
+	"midget":               2,
+	"midge":                1,
+	"midst":                1,
+	"mien":                 1,
+	"mig":                  1,
+	"might":                1,
+	"mightily":             3,
+	"mighty":               2,
+	"mike":                 1,
+	"mil":                  1,
+	"mildew":               2,
+	"militarism":           4,
+	"militant":             3,
+	"militarily":           5,
+	"military":             4,
+	"millennia":            4,
+	"millennial":           4,
+	"millennium":           4,
+	"miller":               2,
+	"millet":               2,
+	"milligram":            3,
+	"millimeter":           4,
+	"millisecond":          4,
+	"million":              2,
+	"millionaire":          3,
+	"mild":                 1,
+	"mildly":               2,
+	"mile":                 1,
+	"mileage":              2,
+	"milestone":            2,
+	"milk":                 1,
+	"milky":                2,
+	"mill":                 1,
+	"milling":              2,
+	"millstone":            2,
+	"millwork":             2,
+	"milled":               1,
+	"milt":                 1,
+	"mim":                  1,
+	"mimic":                2,
+	"mimicking":            3,
+	"mime":                 1,
+	"min":                  1,
+	"miner":                2,
+	"mineral":              3,
+	"mineralogy":           5,
+	"mingle":               2,
+	"mini":                 2,
+	"minibus":              3,
+	"minima":               3,
+	"minimal":              3,
+	"minimalist":           4,
+	"minimally":            4,
+	"minimization":         5,
+	"minimising":           4,
+	"minimise":             3,
+	"minimised":            3,
+	"minimizing":           4,
+	"minimize":             3,
+	"minimized":            3,
+	"minimum":              3,
+	"miniskirt":            3,
+	"miniature":            3,
+	"mining":               2,
+	"minion":               2,
+	"ministerial":          5,
+	"minister":             3,
+	"ministry":             3,
+	"minnie":               2,
+	"minnow":               2,
+	"minster":              2,
+	"minstrel":             2,
+	"minute":               2,
+	"minutes":              2,
+	"mince":                1,
+	"mind":                 1,
+	"minded":               2,
+	"minder":               2,
+	"mindful":              2,
+	"mindfulness":          3,
+	"mindless":             2,
+	"mine":                 1,
+	"minefield":            2,
+	"mink":                 1,
+	"mint":                 1,
+	"minter":               2,
+	"minx":                 1,
+	"mir":                  1,
+	"miracle":              3,
+	"mirror":               2,
+	"mirza":                2,
+	"mire":                 1,
+	"mirth":                1,
+	"miscarriage":          3,
+	"miscategorized":       5,
+	"miscellanea":          5,
+	"miscellaneous":        5,
+	"miscellany":           4,
+	"mischievous":          3,
+	"mischief":             2,
+	"misconception":        4,
+	"misconduct":           3,
+	"misdemeanor":          4,
+	"miserable":            4,
+	"miserably":            4,
+	"misery":               3,
+	"misfit":               2,
+	"misfortune":           3,
+	"misguided":            3,
+	"mishap":               2,
+	"misheard":             2,
+	"misinformation":       5,
+	"mislead":              2,
+	"misleading":           3,
+	"misled":               2,
+	"mismanagement":        4,
+	"mismatch":             2,
+	"misplace":             2,
+	"misplaced":            2,
+	"misrepresentation":    6,
+	"misrepresent":         4,
+	"missile":              2,
+	"missing":              2,
+	"mission":              2,
+	"missionaries":         4,
+	"missionary":           4,
+	"mistaken":             3,
+	"mistakenly":           4,
+	"mistake":              2,
+	"mister":               2,
+	"mistletoe":            3,
+	"mistral":              2,
+	"mistreatment":         3,
+	"mistress":             2,
+	"mistrust":             2,
+	"misunderstand":        4,
+	"misunderstanding":     5,
+	"misunderstood":        4,
+	"misuse":               2,
+	"misused":              2,
+	"misc":                 1,
+	"mise":                 1,
+	"miss":                 1,
+	"misses":               2,
+	"missy":                2,
+	"mist":                 1,
+	"misty":                2,
+	"mitigation":           4,
+	"mitigate":             3,
+	"mitten":               2,
+	"mitch":                1,
+	"mite":                 1,
+	"mitt":                 1,
+	"mitzvah":              2,
+	"mix":                  1,
+	"mixer":                2,
+	"mixing":               2,
+	"mixture":              2,
+	"mixed":                1,
+	"mkt":                  1,
+	"mmf":                  1,
+	"mnemonic":             3,
+	"moa":                  2,
+	"mobilisation":         5,
+	"mobilization":         5,
+	"mobilize":             3,
+	"mobility":             4,
+	"mobile":               2,
+	"mocha":                2,
+	"modality":             4,
+	"modem":                2,
+	"modernity":            4,
+	"moderne":              2,
+	"mogul":                2,
+	"mohair":               2,
+	"mohawk":               2,
+	"molar":                2,
+	"molasses":             3,
+	"molecular":            4,
+	"molestation":          4,
+	"moline":               2,
+	"molybdenum":           4,
+	"momentarily":          5,
+	"momentary":            4,
+	"momentous":            3,
+	"momentum":             3,
+	"moment":               2,
+	"mona":                 2,
+	"monastic":             3,
+	"monocular":            4,
+	"monopolistic":         5,
+	"monopoly":             4,
+	"monotonous":           4,
+	"moped":                2,
+	"mora":                 2,
+	"moraine":              2,
+	"morality":             4,
+	"morale":               2,
+	"moray":                2,
+	"morel":                2,
+	"mores":                2,
+	"morocco":              3,
+	"mosaic":               3,
+	"motel":                2,
+	"motivation":           4,
+	"motivational":         5,
+	"motivated":            4,
+	"motivating":           4,
+	"motivate":             3,
+	"motif":                2,
+	"motility":             4,
+	"motion":               2,
+	"motionless":           3,
+	"motive":               2,
+	"motocross":            3,
+	"motor":                2,
+	"motorbike":            3,
+	"motorcoach":           3,
+	"motorcycle":           4,
+	"motoring":             3,
+	"motorised":            3,
+	"motorist":             3,
+	"motorized":            3,
+	"motorway":             3,
+	"moan":                 1,
+	"moat":                 1,
+	"mob":                  1,
+	"mobs":                 1,
+	"moc":                  1,
+	"moccasin":             3,
+	"mock":                 1,
+	"mockery":              3,
+	"mockingbird":          3,
+	"mod":                  1,
+	"modal":                2,
+	"model":                2,
+	"modeler":              3,
+	"modeling":             3,
+	"modeller":             3,
+	"modelling":            3,
+	"modeled":              2,
+	"modelled":             2,
+	"moderation":           4,
+	"moderator":            4,
+	"moderate":             3,
+	"moderately":           4,
+	"modern":               2,
+	"modernization":        5,
+	"modernising":          4,
+	"modernism":            3,
+	"modernizing":          4,
+	"modernize":            3,
+	"modernized":           3,
+	"modesty":              3,
+	"modest":               2,
+	"modestly":             3,
+	"modification":         5,
+	"modifier":             4,
+	"modified":             3,
+	"modify":               3,
+	"modifying":            4,
+	"modulation":           4,
+	"modulator":            4,
+	"modular":              3,
+	"modularity":           5,
+	"modulated":            4,
+	"modulating":           4,
+	"modulate":             3,
+	"modulo":               3,
+	"modulus":              3,
+	"module":               2,
+	"mode":                 1,
+	"mog":                  1,
+	"moiety":               3,
+	"moisturizer":          4,
+	"moisture":             2,
+	"moist":                1,
+	"mol":                  1,
+	"molecule":             3,
+	"molly":                2,
+	"molten":               2,
+	"molto":                2,
+	"mold":                 1,
+	"molding":              2,
+	"mole":                 1,
+	"moll":                 1,
+	"mom":                  1,
+	"mommy":                2,
+	"mon":                  1,
+	"monarchy":             3,
+	"monarch":              2,
+	"monastery":            4,
+	"mondo":                2,
+	"monetary":             4,
+	"money":                2,
+	"moneys":               2,
+	"mongolian":            4,
+	"mongol":               2,
+	"mongoose":             2,
+	"moniker":              3,
+	"monitor":              3,
+	"monies":               2,
+	"monkey":               2,
+	"mono":                 2,
+	"monochromatic":        5,
+	"monochrome":           3,
+	"monogram":             3,
+	"monograph":            3,
+	"monohydrate":          4,
+	"monolayer":            4,
+	"monolith":             3,
+	"monolithic":           4,
+	"monologue":            3,
+	"monomer":              3,
+	"mononuclear":          5,
+	"monophonic":           4,
+	"monorail":             3,
+	"monotonic":            4,
+	"monotone":             3,
+	"monotype":             3,
+	"monoxide":             3,
+	"monsieur":             2,
+	"monsoon":              2,
+	"monster":              2,
+	"monstrous":            2,
+	"montage":              2,
+	"montane":              2,
+	"monte":                2,
+	"montero":              3,
+	"montes":               2,
+	"monumental":           4,
+	"monument":             3,
+	"mondial":              3,
+	"mong":                 1,
+	"monk":                 1,
+	"mons":                 1,
+	"month":                1,
+	"monthly":              2,
+	"moo":                  1,
+	"mood":                 1,
+	"moody":                2,
+	"moon":                 1,
+	"moonlight":            2,
+	"moonshine":            2,
+	"moonstone":            2,
+	"moor":                 1,
+	"moorcock":             2,
+	"mooring":              2,
+	"moorings":             2,
+	"moorland":             2,
+	"moose":                1,
+	"moot":                 1,
+	"mop":                  1,
+	"mor":                  1,
+	"moratorium":           5,
+	"moral":                2,
+	"morbid":               2,
+	"morbidity":            4,
+	"morgen":               2,
+	"moron":                2,
+	"morphine":             2,
+	"morphogenesis":        5,
+	"morphology":           4,
+	"morro":                2,
+	"morrow":               2,
+	"mortal":               2,
+	"mortality":            4,
+	"mortar":               2,
+	"mortuary":             4,
+	"more":                 1,
+	"moreover":             3,
+	"morgue":               1,
+	"morn":                 1,
+	"morning":              2,
+	"mornings":             2,
+	"morph":                1,
+	"morse":                1,
+	"mort":                 1,
+	"mortgagee":            3,
+	"mortgage":             2,
+	"mos":                  1,
+	"mosquito":             3,
+	"mosque":               1,
+	"moss":                 1,
+	"mossy":                2,
+	"most":                 1,
+	"mostly":               2,
+	"mot":                  1,
+	"motley":               2,
+	"mottled":              2,
+	"motto":                2,
+	"mote":                 1,
+	"moth":                 1,
+	"mother":               2,
+	"motherfucker":         4,
+	"motherhood":           3,
+	"mothering":            3,
+	"motherland":           3,
+	"motte":                1,
+	"moulin":               2,
+	"mouton":               2,
+	"mould":                1,
+	"moulding":             2,
+	"mountain":             2,
+	"mountaineer":          3,
+	"mountaineering":       4,
+	"mountainous":          3,
+	"mountainside":         3,
+	"mound":                1,
+	"mount":                1,
+	"mounted":              2,
+	"mounting":             2,
+	"mourn":                1,
+	"mourning":             2,
+	"mouser":               2,
+	"moustache":            2,
+	"mouse":                1,
+	"mousse":               1,
+	"mouth":                1,
+	"mouthful":             2,
+	"mouthpiece":           2,
+	"movable":              3,
+	"mover":                2,
+	"movie":                2,
+	"moving":               2,
+	"move":                 1,
+	"moveable":             3,
+	"movement":             2,
+	"mow":                  1,
+	"mower":                2,
+	"mowing":               2,
+	"moxie":                2,
+	"mozzarella":           4,
+	"mpg":                  1,
+	"mph":                  1,
+	"msl":                  1,
+	"mtg":                  1,
+	"mucosa":               3,
+	"mucosal":              3,
+	"mucous":               2,
+	"mucus":                2,
+	"munitions":            3,
+	"municipal":            4,
+	"municipality":         6,
+	"muon":                 2,
+	"mural":                2,
+	"murine":               2,
+	"museum":               3,
+	"musical":              3,
+	"musically":            4,
+	"musician":             3,
+	"musicianship":         4,
+	"musicology":           5,
+	"music":                2,
+	"mutable":              3,
+	"mutation":             3,
+	"mutant":               2,
+	"mutated":              3,
+	"mutilation":           4,
+	"mutilated":            4,
+	"mutiny":               3,
+	"mutual":               3,
+	"mutually":             4,
+	"much":                 1,
+	"muck":                 1,
+	"mud":                  1,
+	"muddy":                2,
+	"muenster":             2,
+	"muffin":               2,
+	"muffler":              2,
+	"muff":                 1,
+	"mug":                  1,
+	"mulberry":             3,
+	"mullen":               2,
+	"mullet":               2,
+	"mulligan":             3,
+	"multichannel":         4,
+	"multicolor":           4,
+	"multicolored":         4,
+	"multidimensional":     6,
+	"multidisciplinary":    7,
+	"multifaceted":         5,
+	"multilateral":         5,
+	"multilayer":           4,
+	"multilingual":         4,
+	"multimedia":           5,
+	"multimillion":         4,
+	"multinational":        5,
+	"multipath":            3,
+	"multiple":             3,
+	"multiplex":            3,
+	"multiplication":       5,
+	"multiplicative":       5,
+	"multiplier":           4,
+	"multiplicity":         5,
+	"multiplied":           3,
+	"multiply":             3,
+	"multiplying":          4,
+	"multipurpose":         4,
+	"multiracial":          3,
+	"multithreaded":        4,
+	"multitude":            3,
+	"multivariate":         5,
+	"multimeter":           4,
+	"mulch":                1,
+	"mule":                 1,
+	"mull":                 1,
+	"muller":               2,
+	"mum":                  1,
+	"mummy":                2,
+	"mumps":                1,
+	"mun":                  1,
+	"mundane":              2,
+	"munch":                1,
+	"murder":               2,
+	"murderer":             3,
+	"murderous":            3,
+	"murmur":               2,
+	"murphy":               2,
+	"murky":                2,
+	"mus":                  1,
+	"muscat":               2,
+	"muscle":               2,
+	"muscular":             3,
+	"musing":               2,
+	"muslin":               2,
+	"mussel":               2,
+	"mustache":             2,
+	"mustang":              2,
+	"mustard":              2,
+	"muster":               2,
+	"muse":                 1,
+	"mush":                 1,
+	"mushroom":             2,
+	"mushy":                2,
+	"musk":                 1,
+	"muss":                 1,
+	"must":                 1,
+	"mut":                  1,
+	"muted":                2,
+	"mutter":               2,
+	"mutton":               2,
+	"mute":                 1,
+	"mutt":                 1,
+	"muzzle":               2,
+	"mycobacterium":        6,
+	"myelin":               3,
+	"myeloma":              4,
+	"myeloid":              3,
+	"myocardial":           5,
+	"myocardium":           5,
+	"myopia":               4,
+	"myosin":               3,
+	"myopic":               3,
+	"myron":                2,
+	"myself":               2,
+	"mythology":            4,
+	"mythos":               2,
+	"myriad":               3,
+	"myrtle":               2,
+	"myrrh":                1,
+	"mysterious":           4,
+	"mysteriously":         5,
+	"mysteries":            3,
+	"mystery":              3,
+	"mystical":             3,
+	"mysticism":            3,
+	"mystic":               2,
+	"mystique":             2,
+	"myth":                 1,
+	"mythical":             3,
+	"mythic":               2,
+	"mythological":         5,
+	"nv":                   2,
+	"nadir":                2,
+	"naira":                3,
+	"naive":                2,
+	"naked":                2,
+	"namaste":              3,
+	"nana":                 2,
+	"nanometer":            4,
+	"napalm":               2,
+	"napier":               2,
+	"napoleon":             4,
+	"nasal":                2,
+	"natal":                2,
+	"nation":               2,
+	"national":             3,
+	"nationality":          5,
+	"nationalism":          4,
+	"nationalist":          4,
+	"nationally":           4,
+	"nationwide":           3,
+	"nativity":             4,
+	"native":               2,
+	"natively":             3,
+	"naturopathic":         5,
+	"naturopathy":          5,
+	"nature":               2,
+	"naval":                2,
+	"navel":                2,
+	"navy":                 2,
+	"nab":                  1,
+	"nae":                  1,
+	"nag":                  1,
+	"nagging":              2,
+	"nail":                 1,
+	"nailer":               2,
+	"naming":               2,
+	"name":                 1,
+	"nameless":             2,
+	"namely":               2,
+	"nameplate":            2,
+	"namesake":             2,
+	"nan":                  1,
+	"nancy":                2,
+	"nanny":                2,
+	"nance":                1,
+	"nap":                  1,
+	"napkin":               2,
+	"nappa":                2,
+	"napping":              2,
+	"nappy":                2,
+	"narcissistic":         4,
+	"narcissism":           3,
+	"narcissus":            3,
+	"narcotic":             3,
+	"narration":            3,
+	"narrative":            3,
+	"narrator":             3,
+	"narrated":             3,
+	"narrow":               2,
+	"narrowly":             3,
+	"narrows":              2,
+	"nary":                 2,
+	"nascent":              2,
+	"nasty":                2,
+	"nat":                  1,
+	"natural":              3,
+	"naturalization":       6,
+	"naturalistic":         5,
+	"naturalism":           4,
+	"naturalist":           4,
+	"naturalizer":          5,
+	"naturalized":          4,
+	"naturally":            4,
+	"natl":                 1,
+	"nausea":               3,
+	"nautical":             3,
+	"nautilus":             3,
+	"naughty":              2,
+	"naught":               1,
+	"nav":                  1,
+	"navigable":            4,
+	"navigation":           4,
+	"navigational":         5,
+	"navigator":            4,
+	"navigating":           4,
+	"navigate":             3,
+	"nave":                 1,
+	"nay":                  1,
+	"necessitated":         5,
+	"necessitate":          4,
+	"necessity":            4,
+	"necrosis":             3,
+	"nefarious":            4,
+	"negation":             3,
+	"negate":               2,
+	"neglect":              2,
+	"negotiation":          5,
+	"negotiator":           5,
+	"negotiate":            4,
+	"negotiable":           4,
+	"nemo":                 2,
+	"nene":                 2,
+	"neoclassical":         5,
+	"neodymium":            5,
+	"neonatal":             4,
+	"neoplastic":           4,
+	"neoplasm":             3,
+	"neoprene":             3,
+	"neon":                 2,
+	"nephropathy":          4,
+	"near":                 1,
+	"nearby":               2,
+	"nearly":               2,
+	"neat":                 1,
+	"neatly":               2,
+	"neath":                1,
+	"neb":                  1,
+	"nebula":               3,
+	"necessarily":          5,
+	"necessary":            4,
+	"necromancer":          4,
+	"nectar":               2,
+	"neck":                 1,
+	"necklace":             2,
+	"neckline":             2,
+	"necktie":              2,
+	"nee":                  1,
+	"needle":               2,
+	"needlepoint":          3,
+	"needlework":           3,
+	"need":                 1,
+	"needful":              2,
+	"needless":             2,
+	"needy":                2,
+	"needs":                1,
+	"nef":                  1,
+	"neg":                  1,
+	"negativity":           5,
+	"negative":             3,
+	"negatively":           4,
+	"negligence":           3,
+	"negligent":            3,
+	"negligible":           4,
+	"neither":              2,
+	"neighbor":             2,
+	"neighborhood":         3,
+	"neighbour":            2,
+	"neighbourhood":        3,
+	"neighbouring":         3,
+	"neisseria":            4,
+	"nelly":                2,
+	"nelson":               2,
+	"nematode":             3,
+	"nephew":               2,
+	"nervous":              2,
+	"nervously":            3,
+	"nervousness":          3,
+	"nerve":                1,
+	"nerves":               1,
+	"nestle":               2,
+	"ness":                 1,
+	"nest":                 1,
+	"nested":               2,
+	"net":                  1,
+	"netball":              2,
+	"netted":               2,
+	"netting":              2,
+	"nettle":               2,
+	"network":              2,
+	"nether":               2,
+	"nett":                 1,
+	"neural":               2,
+	"neuralgia":            3,
+	"neuromuscular":        5,
+	"neurophysiology":      7,
+	"neurosis":             3,
+	"neurosurgery":         5,
+	"neurologist":          4,
+	"neurology":            4,
+	"neuron":               2,
+	"neuropathy":           4,
+	"neurotic":             3,
+	"neuter":               2,
+	"neutral":              2,
+	"neutrality":           4,
+	"neutralization":       5,
+	"neutralizing":         4,
+	"neutralize":           3,
+	"neutrino":             3,
+	"neutrophil":           3,
+	"neutron":              2,
+	"neurol":               1,
+	"never":                2,
+	"nevermind":            3,
+	"nevermore":            3,
+	"nevertheless":         4,
+	"new":                  1,
+	"newborn":              2,
+	"newcomer":             3,
+	"newly":                2,
+	"newmarket":            3,
+	"newton":               2,
+	"news":                 1,
+	"newscast":             2,
+	"newsletter":           3,
+	"newspaper":            3,
+	"newsprint":            2,
+	"newsreader":           3,
+	"newsstand":            2,
+	"newsworthy":           3,
+	"newt":                 1,
+	"nexus":                2,
+	"next":                 1,
+	"niacin":               3,
+	"nihilism":             3,
+	"nitrate":              2,
+	"nitric":               2,
+	"nitride":              2,
+	"nitrile":              2,
+	"nitrite":              2,
+	"nitro":                2,
+	"nitrogen":             3,
+	"nitroglycerin":        5,
+	"nitrous":              2,
+	"nib":                  1,
+	"nibble":               2,
+	"nicer":                2,
+	"nicest":               2,
+	"nicotinic":            4,
+	"nicotine":             3,
+	"nice":                 1,
+	"nicely":               2,
+	"niche":                1,
+	"nick":                 1,
+	"nickel":               2,
+	"nickelodeon":          5,
+	"nickname":             2,
+	"nicknamed":            2,
+	"niece":                1,
+	"nies":                 1,
+	"nifty":                2,
+	"nigger":               2,
+	"nigh":                 1,
+	"night":                1,
+	"nightclub":            2,
+	"nightfall":            2,
+	"nighthawk":            2,
+	"nightingale":          3,
+	"nightlife":            2,
+	"nightly":              2,
+	"nightmare":            2,
+	"nightshade":           2,
+	"nightstand":           2,
+	"nighttime":            2,
+	"nightwear":            2,
+	"nights":               1,
+	"nil":                  1,
+	"nim":                  1,
+	"nimble":               2,
+	"nimbus":               2,
+	"nine":                 1,
+	"nineteen":             2,
+	"nineteenth":           2,
+	"ninety":               2,
+	"ninth":                1,
+	"nip":                  1,
+	"nipple":               2,
+	"nirvana":              3,
+	"nit":                  1,
+	"nitty":                2,
+	"nix":                  1,
+	"nobility":             4,
+	"noble":                2,
+	"nobleman":             3,
+	"nobody":               3,
+	"nomad":                2,
+	"nomadic":              3,
+	"nomenclature":         4,
+	"notable":              3,
+	"notably":              3,
+	"notarized":            3,
+	"notary":               3,
+	"notation":             3,
+	"notifiable":           5,
+	"notification":         5,
+	"notifier":             4,
+	"notified":             3,
+	"notify":               3,
+	"notifying":            4,
+	"noticing":             3,
+	"notice":               2,
+	"noticeable":           4,
+	"noticed":              2,
+	"notion":               2,
+	"notional":             3,
+	"notions":              2,
+	"notorious":            4,
+	"notoriously":          5,
+	"nova":                 2,
+	"novella":              3,
+	"nowhere":              2,
+	"nob":                  1,
+	"nocturnal":            3,
+	"nocturne":             2,
+	"nod":                  1,
+	"nodal":                2,
+	"nodded":               2,
+	"nodding":              2,
+	"noddy":                2,
+	"node":                 1,
+	"nog":                  1,
+	"noir":                 1,
+	"noisy":                2,
+	"noise":                1,
+	"nom":                  1,
+	"nomination":           4,
+	"nominal":              3,
+	"nominated":            4,
+	"nominating":           4,
+	"nominate":             3,
+	"nominee":              3,
+	"nome":                 1,
+	"nonattainment":        4,
+	"noncommercial":        4,
+	"noncompliance":        4,
+	"nondestructive":       4,
+	"nondiscrimination":    6,
+	"nondurable":           4,
+	"nonexistent":          4,
+	"nonfatal":             3,
+	"nonfarm":              2,
+	"nonfiction":           3,
+	"nongovernmental":      5,
+	"nonlinear":            4,
+	"nonlinearity":         6,
+	"nonmetallic":          4,
+	"nonnegative":          4,
+	"nonpartisan":          4,
+	"nonproliferation":     6,
+	"nonprofit":            3,
+	"nonpublic":            3,
+	"nonresidential":       5,
+	"nonresident":          4,
+	"nonsensical":          4,
+	"nonsense":             2,
+	"nonspecific":          4,
+	"nonstandard":          3,
+	"nonstick":             2,
+	"nonstop":              2,
+	"nontraditional":       5,
+	"nontrivial":           4,
+	"nonverbal":            3,
+	"nonviolence":          4,
+	"nonzero":              3,
+	"nonce":                1,
+	"none":                 1,
+	"nonetheless":          3,
+	"noodle":               2,
+	"nook":                 1,
+	"noon":                 1,
+	"noose":                1,
+	"nope":                 1,
+	"nor":                  1,
+	"norepinephrine":       5,
+	"normative":            3,
+	"normal":               2,
+	"normality":            4,
+	"normalised":           3,
+	"normalizing":          4,
+	"normalize":            3,
+	"normalized":           3,
+	"normally":             3,
+	"norm":                 1,
+	"north":                1,
+	"northbound":           2,
+	"northeast":            2,
+	"northeastern":         3,
+	"northerly":            3,
+	"northern":             2,
+	"northward":            2,
+	"northwest":            2,
+	"northwestern":         3,
+	"nos":                  1,
+	"nostalgia":            3,
+	"nostalgic":            3,
+	"nose":                 1,
+	"not":                  1,
+	"noted":                2,
+	"noting":               2,
+	"notwithstanding":      4,
+	"notch":                1,
+	"note":                 1,
+	"notebook":             2,
+	"noteworthy":           3,
+	"notes":                1,
+	"nothing":              2,
+	"nothingness":          3,
+	"nouvelles":            2,
+	"noun":                 1,
+	"nourish":              2,
+	"nourishment":          3,
+	"nous":                 1,
+	"novel":                2,
+	"novelist":             3,
+	"novelty":              3,
+	"novice":               2,
+	"now":                  1,
+	"nowadays":             3,
+	"noxious":              2,
+	"nozzle":               2,
+	"nth":                  1,
+	"nuances":              3,
+	"nuance":               2,
+	"nucleation":           4,
+	"nuclear":              3,
+	"nuclei":               3,
+	"nucleoside":           4,
+	"nucleotide":           4,
+	"nucleon":              3,
+	"nucleus":              3,
+	"nudity":               3,
+	"numerator":            4,
+	"numeral":              3,
+	"numerical":            4,
+	"numerically":          5,
+	"numeric":              3,
+	"numerology":           5,
+	"numerous":             3,
+	"nutrient":             3,
+	"nutrition":            3,
+	"nutritionist":         4,
+	"nutritious":           3,
+	"nudism":               2,
+	"nudist":               2,
+	"nude":                 1,
+	"nudge":                1,
+	"nugget":               2,
+	"nuisance":             2,
+	"nuke":                 1,
+	"null":                 1,
+	"num":                  1,
+	"number":               2,
+	"numb":                 1,
+	"numbing":              2,
+	"numbness":             2,
+	"nun":                  1,
+	"nurturing":            3,
+	"nurture":              2,
+	"nurtured":             2,
+	"nurseries":            3,
+	"nurse":                1,
+	"nursery":              2,
+	"nut":                  1,
+	"nutcracker":           3,
+	"nutmeg":               2,
+	"nutshell":             2,
+	"nutter":               2,
+	"nutty":                2,
+	"nuts":                 1,
+	"nylon":                2,
+	"nylons":               2,
+	"nye":                  1,
+	"nympho":               2,
+	"nymph":                1,
+	"oasis":                3,
+	"obedience":            4,
+	"obedient":             4,
+	"obesity":              4,
+	"obese":                2,
+	"obey":                 2,
+	"obi":                  2,
+	"obituaries":           5,
+	"obituary":             5,
+	"oblige":               2,
+	"obliged":              2,
+	"oboe":                 2,
+	"oca":                  2,
+	"oceanographic":        6,
+	"oceanic":              4,
+	"ocean":                2,
+	"oceanfront":           3,
+	"oceanography":         5,
+	"ochre":                2,
+	"odious":               3,
+	"odometer":             4,
+	"odor":                 2,
+	"odour":                2,
+	"ogle":                 2,
+	"ogre":                 2,
+	"oka":                  2,
+	"okay":                 2,
+	"okra":                 2,
+	"ol":                   2,
+	"olympiad":             4,
+	"omega":                3,
+	"omen":                 2,
+	"omer":                 2,
+	"omicron":              3,
+	"omission":             3,
+	"omit":                 2,
+	"omitted":              3,
+	"omitting":             3,
+	"onus":                 2,
+	"oocyte":               3,
+	"opa":                  2,
+	"opacity":              4,
+	"opal":                 2,
+	"opaque":               2,
+	"open":                 2,
+	"opener":               3,
+	"opening":              3,
+	"opiate":               3,
+	"opium":                3,
+	"opinion":              3,
+	"opinionated":          5,
+	"opus":                 2,
+	"ora":                  2,
+	"oral":                 2,
+	"orally":               3,
+	"orang":                2,
+	"oregano":              4,
+	"orientation":          5,
+	"oriental":             4,
+	"orientated":           5,
+	"orient":               3,
+	"origami":              4,
+	"oriole":               3,
+	"origination":          5,
+	"originator":           5,
+	"original":             4,
+	"originality":          6,
+	"originally":           5,
+	"originated":           5,
+	"originating":          5,
+	"originate":            4,
+	"otitis":               3,
+	"otolaryngology":       7,
+	"ova":                  2,
+	"ovary":                3,
+	"ovation":              3,
+	"oval":                 2,
+	"ovarian":              4,
+	"overall":              3,
+	"overboard":            3,
+	"overcame":             3,
+	"overcast":             3,
+	"overcoat":             3,
+	"overcoming":           4,
+	"overcome":             3,
+	"overdose":             3,
+	"overdraft":            3,
+	"overdrive":            3,
+	"overdue":              3,
+	"overestimate":         5,
+	"overflow":             3,
+	"overgrown":            3,
+	"overhang":             3,
+	"overhaul":             3,
+	"overhead":             3,
+	"overheads":            3,
+	"overheard":            3,
+	"overkill":             3,
+	"overlaid":             3,
+	"overland":             3,
+	"overlap":              3,
+	"overlapping":          4,
+	"overlapped":           3,
+	"overlay":              3,
+	"overload":             3,
+	"overlook":             3,
+	"overlord":             3,
+	"overly":               3,
+	"overlying":            4,
+	"overnight":            3,
+	"overpaid":             3,
+	"overpass":             3,
+	"overpayment":          4,
+	"overpowering":         5,
+	"overpriced":           3,
+	"overrated":            4,
+	"overridden":           4,
+	"overriding":           4,
+	"override":             3,
+	"overruled":            3,
+	"overrun":              3,
+	"oversaw":              3,
+	"overseer":             4,
+	"overseas":             3,
+	"oversee":              3,
+	"overseeing":           4,
+	"overseen":             3,
+	"oversight":            3,
+	"oversize":             3,
+	"oversized":            3,
+	"overstock":            3,
+	"overtake":             3,
+	"overthrow":            3,
+	"overtime":             3,
+	"overture":             3,
+	"overturn":             3,
+	"overuse":              3,
+	"overview":             3,
+	"overweight":           3,
+	"overwhelm":            3,
+	"overwhelming":         4,
+	"overwhelmingly":       5,
+	"overwrite":            3,
+	"overt":                2,
+	"overtly":              3,
+	"ovum":                 2,
+	"oyez":                 2,
+	"ozone":                2,
+	"oak":                  1,
+	"oar":                  1,
+	"oars":                 1,
+	"oat":                  1,
+	"oatmeal":              2,
+	"oath":                 1,
+	"obelisk":              3,
+	"obit":                 2,
+	"objection":            3,
+	"objectionable":        5,
+	"objectivity":          5,
+	"objective":            3,
+	"objectively":          4,
+	"objector":             3,
+	"object":               2,
+	"oblast":               2,
+	"obligation":           4,
+	"obligate":             3,
+	"obligor":              3,
+	"obligatory":           5,
+	"oblique":              2,
+	"oblivion":             4,
+	"oblivious":            4,
+	"oblong":               2,
+	"obnoxious":            3,
+	"obscenity":            4,
+	"obscene":              2,
+	"obscurity":            4,
+	"obscure":              2,
+	"observation":          4,
+	"observant":            3,
+	"observable":           4,
+	"observatory":          5,
+	"observance":           3,
+	"observer":             3,
+	"observing":            3,
+	"observe":              2,
+	"observed":             2,
+	"obsession":            3,
+	"obsessive":            3,
+	"obsidian":             4,
+	"obsoleted":            4,
+	"obsolete":             3,
+	"obstacle":             3,
+	"obstetric":            3,
+	"obstetrics":           3,
+	"obstruction":          3,
+	"obstructive":          3,
+	"obstruct":             2,
+	"obtain":               2,
+	"obtuse":               2,
+	"obverse":              2,
+	"obvious":              3,
+	"obviously":            4,
+	"obj":                  1,
+	"obs":                  1,
+	"obstet":               1,
+	"ocarina":              4,
+	"occasion":             3,
+	"occasional":           4,
+	"occasionally":         5,
+	"occasions":            3,
+	"occipital":            4,
+	"occlusion":            3,
+	"occupation":           4,
+	"occupational":         5,
+	"occupancy":            4,
+	"occupant":             3,
+	"occupier":             4,
+	"occupy":               3,
+	"occult":               2,
+	"occur":                2,
+	"occurrence":           3,
+	"occurring":            3,
+	"occurred":             2,
+	"octagon":              3,
+	"octagonal":            4,
+	"octal":                2,
+	"octane":               2,
+	"octave":               2,
+	"octet":                2,
+	"octopus":              3,
+	"ocular":               3,
+	"och":                  1,
+	"oct":                  1,
+	"odd":                  1,
+	"oddball":              2,
+	"oddity":               3,
+	"oddly":                2,
+	"odds":                 1,
+	"ode":                  1,
+	"oeuvre":               2,
+	"oeuvres":              2,
+	"offensive":            3,
+	"offence":              2,
+	"offend":               2,
+	"offender":             3,
+	"offense":              2,
+	"offer":                2,
+	"offering":             3,
+	"offeror":              3,
+	"officiating":          5,
+	"official":             3,
+	"officially":           4,
+	"officer":              3,
+	"office":               2,
+	"often":                2,
+	"off":                  1,
+	"offbeat":              2,
+	"offset":               2,
+	"offsetting":           3,
+	"offshore":             2,
+	"offside":              2,
+	"offspring":            2,
+	"oft":                  1,
+	"ohm":                  1,
+	"ohv":                  1,
+	"oil":                  1,
+	"oilfield":             2,
+	"oilseed":              2,
+	"oily":                 2,
+	"ointment":             2,
+	"olfactory":            4,
+	"olivet":               3,
+	"olivine":              3,
+	"olive":                2,
+	"old":                  1,
+	"olden":                2,
+	"older":                2,
+	"oldest":               2,
+	"ombre":                2,
+	"ombudsman":            3,
+	"ominous":              3,
+	"omni":                 2,
+	"omnibus":              3,
+	"omnipresent":          4,
+	"omnipotent":           4,
+	"omelet":               2,
+	"oncology":             4,
+	"oncoming":             3,
+	"onerous":              3,
+	"ongoing":              3,
+	"onion":                2,
+	"only":                 2,
+	"onset":                2,
+	"onshore":              2,
+	"onslaught":            2,
+	"onstage":              2,
+	"onto":                 2,
+	"ontological":          5,
+	"ontology":             4,
+	"onward":               2,
+	"onwards":              2,
+	"onyx":                 2,
+	"once":                 1,
+	"one":                  1,
+	"oneness":              2,
+	"oneself":              2,
+	"ooh":                  1,
+	"oops":                 1,
+	"oozing":               2,
+	"ooze":                 1,
+	"opcode":               2,
+	"opera":                3,
+	"operable":             4,
+	"operation":            4,
+	"operational":          5,
+	"operative":            4,
+	"operator":             4,
+	"operand":              3,
+	"operatic":             4,
+	"operate":              3,
+	"operon":               3,
+	"opponent":             3,
+	"opposition":           4,
+	"opposite":             3,
+	"opportunity":          5,
+	"opportunistic":        5,
+	"oppose":               2,
+	"oppression":           3,
+	"oppressive":           3,
+	"optical":              3,
+	"optician":             3,
+	"optimal":              3,
+	"optimization":         5,
+	"optimistic":           4,
+	"optimise":             3,
+	"optimism":             3,
+	"optimist":             3,
+	"optimizing":           4,
+	"optimize":             3,
+	"optimized":            3,
+	"optimum":              3,
+	"optic":                2,
+	"optics":               2,
+	"option":               2,
+	"optional":             3,
+	"optionally":           4,
+	"optometrist":          4,
+	"optometry":            4,
+	"opulent":              3,
+	"ope":                  1,
+	"ophthalmic":           3,
+	"ophthalmology":        5,
+	"opp":                  1,
+	"opt":                  1,
+	"oracle":               3,
+	"oracles":              3,
+	"oratory":              4,
+	"orator":               3,
+	"orange":               2,
+	"orbit":                2,
+	"orbital":              3,
+	"orca":                 2,
+	"orchard":              2,
+	"orchestra":            3,
+	"orchestration":        4,
+	"orchestral":           3,
+	"orchestrated":         4,
+	"orchid":               2,
+	"ordeal":               2,
+	"order":                2,
+	"orderly":              3,
+	"ordination":           4,
+	"ordinal":              3,
+	"ordinance":            3,
+	"ordinarily":           5,
+	"ordinary":             4,
+	"ordinate":             3,
+	"organ":                2,
+	"organically":          5,
+	"organisation":         5,
+	"organisational":       6,
+	"organization":         5,
+	"organizational":       6,
+	"organic":              3,
+	"organiser":            4,
+	"organising":           4,
+	"organise":             3,
+	"organised":            3,
+	"organism":             3,
+	"organist":             3,
+	"organizer":            4,
+	"organizing":           4,
+	"organize":             3,
+	"organized":            3,
+	"organza":              3,
+	"orgasmic":             3,
+	"orgasm":               2,
+	"orgy":                 2,
+	"orienteering":         5,
+	"orifice":              3,
+	"origin":               3,
+	"ornamental":           4,
+	"ornament":             3,
+	"ornate":               2,
+	"ornithine":            3,
+	"ornithology":          5,
+	"orphan":               2,
+	"orphanage":            3,
+	"ortho":                2,
+	"orthodontic":          4,
+	"orthodontics":         4,
+	"orthodox":             3,
+	"orthodoxy":            4,
+	"orthopaedic":          4,
+	"orthopaedics":         4,
+	"orthopedic":           4,
+	"orthopedics":          4,
+	"orthogonal":           4,
+	"oryx":                 2,
+	"orb":                  1,
+	"orc":                  1,
+	"orch":                 1,
+	"ord":                  1,
+	"ordnance":             2,
+	"ore":                  1,
+	"org":                  1,
+	"orig":                 1,
+	"oscar":                2,
+	"oscillation":          4,
+	"oscillatory":          5,
+	"oscillator":           4,
+	"oscillating":          4,
+	"oscilloscope":         4,
+	"osmosis":              3,
+	"osprey":               2,
+	"osteoarthritis":       6,
+	"osteopathic":          5,
+	"osteoporosis":         6,
+	"osteopathy":           5,
+	"ostensibly":           4,
+	"ostrich":              2,
+	"otter":                2,
+	"otto":                 2,
+	"ottoman":              3,
+	"other":                2,
+	"otherwise":            3,
+	"ouch":                 1,
+	"ought":                1,
+	"ounce":                1,
+	"our":                  1,
+	"ourselves":            2,
+	"ours":                 1,
+	"oust":                 1,
+	"out":                  1,
+	"outage":               2,
+	"outback":              2,
+	"outboard":             2,
+	"outbound":             2,
+	"outbreak":             2,
+	"outburst":             2,
+	"outcast":              2,
+	"outcome":              2,
+	"outcrop":              2,
+	"outcry":               2,
+	"outdated":             3,
+	"outdoor":              2,
+	"outdoors":             2,
+	"outer":                2,
+	"outermost":            3,
+	"outerwear":            3,
+	"outfall":              2,
+	"outfield":             2,
+	"outfielder":           3,
+	"outfit":               2,
+	"outfitted":            3,
+	"outfitter":            3,
+	"outfitting":           3,
+	"outflow":              2,
+	"outgoing":             3,
+	"outgrowth":            2,
+	"outhouse":             2,
+	"outing":               2,
+	"outlander":            3,
+	"outlandish":           3,
+	"outlaw":               2,
+	"outlay":               2,
+	"outlet":               2,
+	"outlier":              3,
+	"outlining":            3,
+	"outline":              2,
+	"outlined":             2,
+	"outlook":              2,
+	"outlying":             3,
+	"outnumber":            3,
+	"outpatient":           3,
+	"outperform":           3,
+	"outpost":              2,
+	"outpouring":           3,
+	"output":               2,
+	"outrageous":           3,
+	"outrageously":         4,
+	"outrage":              2,
+	"outraged":             2,
+	"outreach":             2,
+	"outrigger":            3,
+	"outright":             2,
+	"outrun":               2,
+	"outset":               2,
+	"outsider":             3,
+	"outside":              2,
+	"outskirts":            2,
+	"outsole":              2,
+	"outspoken":            3,
+	"outstation":           3,
+	"outstanding":          3,
+	"outward":              2,
+	"outwardly":            3,
+	"outwards":             2,
+	"outweigh":             2,
+	"oven":                 2,
+	"over":                 2,
+	"owing":                2,
+	"owe":                  1,
+	"owl":                  1,
+	"own":                  1,
+	"owner":                2,
+	"ownership":            3,
+	"oxbow":                2,
+	"oxen":                 2,
+	"oxford":               2,
+	"oxidation":            4,
+	"oxidative":            4,
+	"oxidant":              3,
+	"oxidase":              3,
+	"oxidoreductase":       6,
+	"oxide":                2,
+	"oxygen":               3,
+	"oxygenation":          5,
+	"oxygenated":           5,
+	"oxymoron":             4,
+	"oxytocin":             4,
+	"oyster":               2,
+	"pt":                   2,
+	"pacific":              3,
+	"padre":                2,
+	"pagan":                2,
+	"paganism":             3,
+	"pagoda":               3,
+	"pajama":               3,
+	"pajamas":              3,
+	"palais":               2,
+	"palazzo":              3,
+	"paleontology":         6,
+	"panache":              2,
+	"papa":                 2,
+	"papacy":               3,
+	"paparazzi":            4,
+	"papaya":               3,
+	"papal":                2,
+	"paper":                2,
+	"paperback":            3,
+	"paperboard":           3,
+	"paperweight":          3,
+	"paperwork":            3,
+	"papyrus":              3,
+	"para":                 2,
+	"parade":               2,
+	"paralysis":            4,
+	"parameter":            4,
+	"parental":             3,
+	"parenthesis":          4,
+	"pariah":               3,
+	"parietal":             4,
+	"parochial":            4,
+	"parole":               2,
+	"paseo":                3,
+	"pasha":                2,
+	"pataca":               3,
+	"paternal":             3,
+	"paternity":            4,
+	"pathetic":             3,
+	"pathology":            4,
+	"pathos":               2,
+	"patio":                3,
+	"patios":               3,
+	"patience":             2,
+	"patient":              2,
+	"patiently":            3,
+	"patriarchal":          4,
+	"patriarchy":           4,
+	"patriarch":            3,
+	"patriot":              3,
+	"patriotic":            4,
+	"patrol":               2,
+	"patrolling":           3,
+	"patrolled":            2,
+	"patron":               2,
+	"paves":                2,
+	"pavilion":             3,
+	"pacer":                2,
+	"pacifier":             4,
+	"pacifist":             3,
+	"pacing":               2,
+	"pace":                 1,
+	"pacemaker":            3,
+	"paced":                1,
+	"pack":                 1,
+	"packaging":            3,
+	"package":              2,
+	"packaged":             2,
+	"packer":               2,
+	"packet":               2,
+	"packing":              2,
+	"pact":                 1,
+	"pad":                  1,
+	"padding":              2,
+	"paddle":               2,
+	"paddock":              2,
+	"paddy":                2,
+	"padlock":              2,
+	"paediatrics":          4,
+	"pageant":              2,
+	"paging":               2,
+	"page":                 1,
+	"pah":                  1,
+	"paisa":                2,
+	"paid":                 1,
+	"pail":                 1,
+	"pain":                 1,
+	"painful":              2,
+	"painfully":            3,
+	"painkiller":           3,
+	"painless":             2,
+	"pains":                1,
+	"painstaking":          3,
+	"painstakingly":        4,
+	"paint":                1,
+	"paintbrush":           2,
+	"painted":              2,
+	"painter":              2,
+	"painting":             2,
+	"pair":                 1,
+	"pairs":                1,
+	"paisley":              2,
+	"pal":                  1,
+	"paladin":              3,
+	"palatine":             3,
+	"palace":               2,
+	"palatable":            4,
+	"palate":               2,
+	"palette":              2,
+	"palisade":             3,
+	"palisades":            3,
+	"palladium":            4,
+	"pallet":               2,
+	"palliative":           4,
+	"palmetto":             3,
+	"palmyra":              3,
+	"palomino":             4,
+	"palpable":             3,
+	"palsy":                2,
+	"paltry":               2,
+	"pale":                 1,
+	"pall":                 1,
+	"palm":                 1,
+	"palmer":               2,
+	"pam":                  1,
+	"pamper":               2,
+	"pamphlet":             2,
+	"pan":                  1,
+	"panacea":              4,
+	"pancake":              2,
+	"pancreatitis":         5,
+	"pancreas":             3,
+	"pancreatic":           4,
+	"panda":                2,
+	"pandemonium":          5,
+	"pandemic":             3,
+	"pandora":              3,
+	"panel":                2,
+	"paneling":             3,
+	"panelist":             3,
+	"panhandle":            3,
+	"panic":                2,
+	"panier":               2,
+	"panning":              2,
+	"panorama":             4,
+	"panoramic":            4,
+	"pansy":                2,
+	"pantheon":             3,
+	"panther":              2,
+	"pantomime":            3,
+	"pantry":               2,
+	"panzer":               2,
+	"pane":                 1,
+	"pang":                 1,
+	"pant":                 1,
+	"pantie":               2,
+	"panties":              2,
+	"pants":                1,
+	"pap":                  1,
+	"papillon":             3,
+	"paprika":              3,
+	"par":                  1,
+	"parable":              3,
+	"parabolic":            4,
+	"parachute":            3,
+	"paradigm":             3,
+	"paradise":             3,
+	"paradox":              3,
+	"paradoxical":          5,
+	"paradoxically":        6,
+	"paragon":              3,
+	"paragraph":            3,
+	"paramedic":            4,
+	"parametric":           4,
+	"paramilitary":         6,
+	"paramount":            3,
+	"paranoia":             4,
+	"paranoid":             3,
+	"paranormal":           4,
+	"paraphernalia":        5,
+	"paraphrase":           3,
+	"parapsychology":       6,
+	"parasitic":            4,
+	"parasitology":         6,
+	"parasite":             3,
+	"parasol":              3,
+	"parathyroid":          4,
+	"paraffin":             3,
+	"parallax":             3,
+	"parallel":             3,
+	"parallelism":          4,
+	"parcel":               2,
+	"pardon":               2,
+	"parenteral":           4,
+	"parent":               2,
+	"parentage":            3,
+	"parenthood":           3,
+	"parity":               3,
+	"paring":               2,
+	"parish":               2,
+	"parka":                2,
+	"parkin":               2,
+	"parlay":               2,
+	"parliamentary":        5,
+	"parliament":           3,
+	"parlor":               2,
+	"parlour":              2,
+	"parody":               3,
+	"parquet":              2,
+	"parramatta":           4,
+	"parrot":               2,
+	"parry":                2,
+	"parson":               2,
+	"partake":              2,
+	"parti":                2,
+	"particle":             3,
+	"partisan":             3,
+	"partisanship":         4,
+	"partition":            3,
+	"partial":              2,
+	"participation":        5,
+	"participant":          4,
+	"participated":         5,
+	"participating":        5,
+	"participatory":        6,
+	"participate":          4,
+	"particular":           4,
+	"particularly":         5,
+	"particulate":          4,
+	"parton":               2,
+	"partridge":            2,
+	"party":                2,
+	"partying":             3,
+	"parchment":            2,
+	"pard":                 1,
+	"pare":                 1,
+	"park":                 1,
+	"parking":              2,
+	"parkland":             2,
+	"parkway":              2,
+	"parr":                 1,
+	"pars":                 1,
+	"parser":               2,
+	"parsing":              2,
+	"parsley":              2,
+	"parse":                1,
+	"part":                 1,
+	"parted":               2,
+	"parting":              2,
+	"partly":               2,
+	"partner":              2,
+	"partnership":          3,
+	"partners":             2,
+	"parts":                1,
+	"pas":                  1,
+	"pascal":               2,
+	"passage":              2,
+	"passe":                2,
+	"passenger":            3,
+	"passes":               2,
+	"passion":              2,
+	"passionate":           3,
+	"passionately":         4,
+	"passive":              2,
+	"pasta":                2,
+	"pastel":               2,
+	"pastime":              2,
+	"pastoral":             3,
+	"pastor":               2,
+	"pastry":               2,
+	"pasture":              2,
+	"pass":                 1,
+	"passable":             3,
+	"passer":               2,
+	"passing":              2,
+	"passport":             2,
+	"password":             2,
+	"passed":               1,
+	"past":                 1,
+	"pasted":               2,
+	"pasting":              2,
+	"paste":                1,
+	"pat":                  1,
+	"patent":               2,
+	"patently":             3,
+	"patina":               3,
+	"patriotism":           4,
+	"patronage":            3,
+	"patsy":                2,
+	"patted":               2,
+	"patten":               2,
+	"pattern":              2,
+	"patty":                2,
+	"patch":                1,
+	"patchouli":            3,
+	"patchwork":            2,
+	"patchy":               2,
+	"pate":                 1,
+	"path":                 1,
+	"pathfinder":           3,
+	"pathogen":             3,
+	"pathogenesis":         5,
+	"pathogenic":           4,
+	"pathological":         5,
+	"pathologic":           4,
+	"pathway":              2,
+	"pathol":               1,
+	"pauper":               2,
+	"pausing":              2,
+	"pause":                1,
+	"pav":                  1,
+	"paving":               2,
+	"pave":                 1,
+	"pavement":             2,
+	"paw":                  1,
+	"pawn":                 1,
+	"pax":                  1,
+	"pay":                  1,
+	"payable":              3,
+	"paycheck":             2,
+	"payday":               2,
+	"payee":                2,
+	"payer":                2,
+	"paying":               2,
+	"payload":              2,
+	"payment":              2,
+	"payoff":               2,
+	"payroll":              2,
+	"pct":                  1,
+	"pecan":                2,
+	"peculiar":             3,
+	"peculiarly":           4,
+	"pecuniary":            5,
+	"pedantic":             3,
+	"pedestrian":           4,
+	"pediatrician":         5,
+	"pediatric":            4,
+	"pediatrics":           4,
+	"pedometer":            4,
+	"pedro":                2,
+	"pekin":                2,
+	"pelagic":              3,
+	"penal":                2,
+	"penalize":             3,
+	"penalized":            3,
+	"penang":               2,
+	"penile":               2,
+	"penis":                2,
+	"penultimate":          4,
+	"peony":                3,
+	"peri":                 2,
+	"periodicity":          6,
+	"period":               3,
+	"periodical":           5,
+	"periodically":         6,
+	"perimeter":            4,
+	"peripheral":           4,
+	"periphery":            4,
+	"perusal":              3,
+	"peruse":               2,
+	"peseta":               3,
+	"peso":                 2,
+	"peter":                2,
+	"petition":             3,
+	"petitioner":           4,
+	"petite":               2,
+	"petroleum":            4,
+	"petrology":            4,
+	"petunia":              4,
+	"pea":                  1,
+	"peacock":              2,
+	"peanut":               2,
+	"peanuts":              2,
+	"peavey":               2,
+	"peace":                1,
+	"peaceful":             2,
+	"peacefully":           3,
+	"peacemaker":           3,
+	"peacemaking":          3,
+	"peacetime":            2,
+	"peach":                1,
+	"peachy":               2,
+	"peak":                 1,
+	"peaked":               1,
+	"pear":                 1,
+	"pearl":                1,
+	"pearly":               2,
+	"peasant":              2,
+	"pease":                1,
+	"peat":                 1,
+	"pebble":               2,
+	"pectin":               2,
+	"peck":                 1,
+	"pecker":               2,
+	"ped":                  1,
+	"pedagogy":             4,
+	"pedagogical":          5,
+	"pedal":                2,
+	"peddler":              2,
+	"peddling":             2,
+	"pedestal":             3,
+	"pedicure":             3,
+	"pedigree":             3,
+	"pee":                  1,
+	"peeing":               2,
+	"peek":                 1,
+	"peel":                 1,
+	"peeler":               2,
+	"peeling":              2,
+	"peep":                 1,
+	"peepshow":             2,
+	"peer":                 1,
+	"peerage":              2,
+	"peerless":             2,
+	"peg":                  1,
+	"pelham":               2,
+	"pelican":              3,
+	"pellet":               2,
+	"pelvic":               2,
+	"pelvis":               2,
+	"pele":                 1,
+	"pelt":                 1,
+	"pen":                  1,
+	"penalty":              3,
+	"penance":              2,
+	"penchant":             2,
+	"pencil":               2,
+	"pendant":              2,
+	"pendragon":            3,
+	"pendulum":             3,
+	"penetration":          4,
+	"penetrating":          4,
+	"penetrate":            3,
+	"peng":                 2,
+	"penguin":              2,
+	"penicillin":           4,
+	"penitentiary":         5,
+	"peninsula":            4,
+	"peninsular":           4,
+	"penna":                2,
+	"pennant":              2,
+	"penner":               2,
+	"pennies":              2,
+	"penny":                2,
+	"pension":              2,
+	"pensioner":            3,
+	"pentagon":             3,
+	"pentagram":            3,
+	"pence":                1,
+	"pend":                 1,
+	"pendent":              2,
+	"pending":              2,
+	"pent":                 1,
+	"penthouse":            2,
+	"people":               2,
+	"pep":                  1,
+	"pepper":               2,
+	"peppermint":           3,
+	"pepperoni":            4,
+	"peptidase":            3,
+	"peptic":               2,
+	"peptide":              2,
+	"per":                  1,
+	"perceive":             2,
+	"percentile":           3,
+	"percent":              2,
+	"percentage":           3,
+	"perceptible":          4,
+	"perception":           3,
+	"perceptive":           3,
+	"perceptual":           4,
+	"perchance":            2,
+	"perchlorate":          3,
+	"percolation":          4,
+	"percutaneous":         5,
+	"percussion":           3,
+	"perdition":            3,
+	"perdue":               2,
+	"peregrine":            3,
+	"perennial":            4,
+	"perfection":           3,
+	"perfect":              2,
+	"perfectly":            3,
+	"perforation":          4,
+	"perforated":           4,
+	"performance":          3,
+	"perforce":             2,
+	"perform":              2,
+	"performer":            3,
+	"performing":           3,
+	"perfume":              2,
+	"perhaps":              2,
+	"peridot":              3,
+	"perilous":             3,
+	"perinatal":            4,
+	"periodontal":          5,
+	"periodic":             4,
+	"periwinkle":           4,
+	"peril":                2,
+	"perish":               2,
+	"perishable":           4,
+	"perished":             2,
+	"perjury":              3,
+	"permafrost":           3,
+	"permanency":           4,
+	"permanence":           3,
+	"permanent":            3,
+	"permanently":          4,
+	"permeability":         6,
+	"permeable":            4,
+	"permeate":             3,
+	"permissible":          4,
+	"permission":           3,
+	"permissive":           3,
+	"permit":               2,
+	"permutation":          4,
+	"pernicious":           3,
+	"peroxidase":           4,
+	"peroxide":             3,
+	"perpetrator":          4,
+	"perpetrated":          4,
+	"perpetuity":           5,
+	"perpendicular":        5,
+	"perpetual":            4,
+	"perpetually":          5,
+	"perpetuated":          5,
+	"perpetuating":         5,
+	"perpetuate":           4,
+	"perplexed":            2,
+	"perry":                2,
+	"persecution":          4,
+	"persecuted":           4,
+	"perseverance":         4,
+	"persevere":            3,
+	"persimmon":            3,
+	"persistence":          3,
+	"persist":              2,
+	"persistent":           3,
+	"persistently":         4,
+	"persona":              3,
+	"person":               2,
+	"personable":           4,
+	"personal":             3,
+	"personality":          5,
+	"personalization":      6,
+	"personalise":          4,
+	"personalised":         4,
+	"personalize":          4,
+	"personally":           4,
+	"personnel":            3,
+	"perspective":          3,
+	"perspiration":         4,
+	"persuasion":           3,
+	"persuasive":           3,
+	"persuade":             2,
+	"pertain":              2,
+	"pertinent":            3,
+	"perturbation":         4,
+	"perturbative":         4,
+	"pertussis":            3,
+	"pervasive":            3,
+	"perversion":           3,
+	"perverse":             2,
+	"pervert":              2,
+	"perverted":            3,
+	"perch":                1,
+	"perches":              2,
+	"perf":                 1,
+	"perk":                 1,
+	"perky":                2,
+	"perm":                 1,
+	"pers":                 1,
+	"pert":                 1,
+	"pes":                  1,
+	"pessimism":            3,
+	"pesticide":            3,
+	"pestilence":           3,
+	"pesky":                2,
+	"pest":                 1,
+	"pet":                  1,
+	"petal":                2,
+	"petit":                2,
+	"petrified":            3,
+	"petrochemical":        5,
+	"petticoat":            3,
+	"petting":              2,
+	"petty":                2,
+	"petrol":               1,
+	"pew":                  1,
+	"pewter":               2,
+	"phage":                1,
+	"phalanx":              2,
+	"phantasy":             3,
+	"phantom":              2,
+	"phar":                 1,
+	"pharmaceutical":       5,
+	"pharmacist":           3,
+	"pharmacological":      6,
+	"pharmacology":         5,
+	"pharmacy":             3,
+	"pharm":                1,
+	"phase":                1,
+	"phenix":               2,
+	"phenobarbital":        5,
+	"phenotypic":           4,
+	"phenotype":            3,
+	"phenol":               2,
+	"phenolic":             3,
+	"phenomena":            4,
+	"phenomenal":           4,
+	"phenomenology":        6,
+	"phenomenon":           4,
+	"phenylalanine":        5,
+	"pheasant":             2,
+	"phenyl":               2,
+	"pheromone":            3,
+	"phew":                 1,
+	"phi":                  1,
+	"philanthropist":       4,
+	"philanthropy":         4,
+	"philosopher":          4,
+	"philosophy":           4,
+	"phil":                 1,
+	"philatelic":           4,
+	"philanthropic":        4,
+	"philharmonic":         4,
+	"philosophical":        5,
+	"philosophically":      6,
+	"phobia":               3,
+	"phonetic":             3,
+	"phonetics":            3,
+	"phono":                2,
+	"phonograph":           3,
+	"phonological":         5,
+	"phonology":            4,
+	"phonon":               2,
+	"phony":                2,
+	"photo":                2,
+	"photochemical":        5,
+	"photocopier":          5,
+	"photocopy":            4,
+	"photoelectric":        5,
+	"photograph":           3,
+	"photographic":         4,
+	"photojournalism":      5,
+	"photometric":          4,
+	"photoset":             3,
+	"photosynthesis":       5,
+	"photovoltaic":         5,
+	"photographer":         4,
+	"photography":          4,
+	"photometry":           4,
+	"photon":               2,
+	"phoebe":               2,
+	"phoenix":              2,
+	"phonics":              2,
+	"phone":                1,
+	"phosphatase":          3,
+	"phosphate":            2,
+	"phospholipid":         4,
+	"phosphorous":          3,
+	"phosphorus":           3,
+	"phosphorylation":      5,
+	"phosphorylated":       5,
+	"phosphor":             2,
+	"phosphoric":           3,
+	"phr":                  1,
+	"phrasing":             2,
+	"phrase":               1,
+	"phylogenetic":         5,
+	"phylogeny":            4,
+	"phylum":               2,
+	"physician":            3,
+	"physique":             2,
+	"phytoplankton":        4,
+	"phys":                 1,
+	"physical":             3,
+	"physically":           4,
+	"physicist":            3,
+	"physiological":        6,
+	"physiologic":          5,
+	"physiotherapy":        6,
+	"physiology":           5,
+	"physics":              2,
+	"pianist":              3,
+	"pianos":               3,
+	"piazza":               3,
+	"pica":                 2,
+	"piety":                3,
+	"piet":                 2,
+	"pigeon":               2,
+	"pilar":                2,
+	"pilot":                2,
+	"piloting":             3,
+	"pina":                 2,
+	"pioneer":              3,
+	"pion":                 2,
+	"pious":                2,
+	"pipa":                 2,
+	"pipette":              2,
+	"piracy":               3,
+	"piranha":              3,
+	"pirate":               2,
+	"pita":                 2,
+	"pituitary":            5,
+	"piano":                2,
+	"pic":                  1,
+	"picayune":             3,
+	"piccolo":              3,
+	"picnic":               2,
+	"pictorial":            4,
+	"picturesque":          3,
+	"picture":              2,
+	"pictured":             2,
+	"pick":                 1,
+	"picker":               2,
+	"picket":               2,
+	"pickin":               2,
+	"pickle":               2,
+	"pickled":              2,
+	"pickwick":             2,
+	"picky":                2,
+	"picked":               1,
+	"pie":                  1,
+	"piecing":              2,
+	"piece":                1,
+	"piecemeal":            2,
+	"piecewise":            2,
+	"pied":                 1,
+	"piedmont":             2,
+	"pier":                 1,
+	"piercing":             2,
+	"pierce":               1,
+	"pig":                  1,
+	"piggy":                2,
+	"piggyback":            3,
+	"piglet":               2,
+	"pigmentation":         4,
+	"pigment":              2,
+	"pigtail":              2,
+	"pike":                 1,
+	"pilgrim":              2,
+	"pilgrimage":           3,
+	"piling":               2,
+	"pillar":               2,
+	"pillow":               2,
+	"pillowcase":           3,
+	"pile":                 1,
+	"piled":                1,
+	"piles":                1,
+	"pill":                 1,
+	"pills":                1,
+	"pimp":                 1,
+	"pin":                  1,
+	"pinball":              2,
+	"pinhole":              2,
+	"pinion":               2,
+	"pinnacle":             3,
+	"pinning":              2,
+	"pinpoint":             2,
+	"pinstripe":            2,
+	"pinto":                2,
+	"pinup":                2,
+	"pinch":                1,
+	"pine":                 1,
+	"pineapple":            3,
+	"piney":                2,
+	"ping":                 1,
+	"pinging":              2,
+	"pink":                 1,
+	"pinky":                2,
+	"pint":                 1,
+	"pip":                  1,
+	"piper":                2,
+	"piping":               2,
+	"pippin":               2,
+	"pipe":                 1,
+	"pipeline":             2,
+	"pique":                1,
+	"piscina":              3,
+	"piscine":              2,
+	"pistachio":            4,
+	"pistol":               2,
+	"piston":               2,
+	"piss":                 1,
+	"pissing":              2,
+	"pissed":               1,
+	"piste":                1,
+	"pit":                  1,
+	"pitfall":              2,
+	"pitiful":              3,
+	"pitman":               2,
+	"pitted":               2,
+	"pitting":              2,
+	"pity":                 2,
+	"pitch":                1,
+	"pitcher":              2,
+	"pitchfork":            2,
+	"pitching":             2,
+	"pivot":                2,
+	"pivotal":              3,
+	"pivoting":             3,
+	"pix":                  1,
+	"pixel":                2,
+	"pixie":                2,
+	"pixies":               2,
+	"pizza":                2,
+	"pizzeria":             4,
+	"pkg":                  1,
+	"pkt":                  1,
+	"placebo":              3,
+	"placenta":             3,
+	"placental":            3,
+	"plagiarism":           3,
+	"planar":               2,
+	"platoon":              2,
+	"playa":                2,
+	"playas":               2,
+	"plaza":                2,
+	"placard":              2,
+	"placer":               2,
+	"placid":               2,
+	"placing":              2,
+	"place":                1,
+	"placement":            2,
+	"plage":                1,
+	"plague":               1,
+	"plaid":                1,
+	"plain":                1,
+	"plainly":              2,
+	"plaintiff":            2,
+	"plains":               1,
+	"plan":                 1,
+	"planetarium":          5,
+	"planetary":            4,
+	"planer":               2,
+	"planet":               2,
+	"planing":              2,
+	"planning":             2,
+	"plantation":           3,
+	"plantar":              2,
+	"plane":                1,
+	"plank":                1,
+	"plankton":             2,
+	"planktonic":           3,
+	"plant":                1,
+	"planter":              2,
+	"plaque":               1,
+	"plasma":               2,
+	"plasminogen":          4,
+	"plasmodium":           4,
+	"plaster":              2,
+	"plastering":           3,
+	"plastered":            2,
+	"plastic":              2,
+	"plasticity":           4,
+	"plastics":             2,
+	"plat":                 1,
+	"plateau":              2,
+	"plated":               2,
+	"platform":             2,
+	"platinum":             3,
+	"plating":              2,
+	"platter":              2,
+	"platypus":             3,
+	"plate":                1,
+	"platelet":             2,
+	"plausible":            3,
+	"play":                 1,
+	"playable":             3,
+	"playback":             2,
+	"playbill":             2,
+	"playbook":             2,
+	"playboy":              2,
+	"player":               2,
+	"playful":              2,
+	"playgirl":             2,
+	"playground":           2,
+	"playhouse":            2,
+	"playmate":             2,
+	"playroom":             2,
+	"playtime":             2,
+	"playwright":           2,
+	"plenary":              3,
+	"plenum":               2,
+	"plea":                 1,
+	"plead":                1,
+	"pleaded":              2,
+	"pleading":             2,
+	"pleadings":            2,
+	"pleasant":             2,
+	"pleaser":              2,
+	"pleasing":             2,
+	"pleasurable":          4,
+	"pleasure":             2,
+	"please":               1,
+	"pleat":                1,
+	"pled":                 1,
+	"pledging":             2,
+	"pledge":               1,
+	"plentiful":            3,
+	"plenty":               2,
+	"plethora":             3,
+	"pleural":              2,
+	"plexus":               2,
+	"pliable":              3,
+	"plier":                2,
+	"pliers":               2,
+	"plight":               1,
+	"plot":                 1,
+	"plotter":              2,
+	"plough":               1,
+	"plover":               2,
+	"plow":                 1,
+	"ploy":                 1,
+	"plu":                  1,
+	"plural":               2,
+	"plurality":            4,
+	"pluralism":            3,
+	"plutonium":            4,
+	"pluck":                1,
+	"plucker":              2,
+	"plug":                 1,
+	"pluggable":            3,
+	"plugging":             2,
+	"plum":                 1,
+	"plumage":              2,
+	"plumb":                1,
+	"plumber":              2,
+	"plumbing":             2,
+	"plume":                1,
+	"plump":                1,
+	"plumper":              2,
+	"plunder":              2,
+	"plunger":              2,
+	"plunging":             2,
+	"plunge":               1,
+	"plus":                 1,
+	"plush":                1,
+	"ply":                  1,
+	"plywood":              2,
+	"pneumatic":            3,
+	"pneumatics":           3,
+	"pneumococcal":         4,
+	"pneumonia":            3,
+	"poco":                 2,
+	"podiatry":             4,
+	"podium":               3,
+	"poem":                 2,
+	"poetic":               3,
+	"poetics":              3,
+	"poetry":               3,
+	"polar":                2,
+	"polarisation":         5,
+	"polarity":             4,
+	"polarization":         5,
+	"polarizing":           4,
+	"polarized":            3,
+	"polio":                3,
+	"police":               2,
+	"policeman":            3,
+	"political":            4,
+	"politico":             4,
+	"polite":               2,
+	"politely":             3,
+	"politeness":           3,
+	"polo":                 2,
+	"polygamy":             4,
+	"polygonal":            4,
+	"polymerization":       6,
+	"pony":                 2,
+	"ponytail":             3,
+	"porosity":             4,
+	"porous":               2,
+	"posada":               3,
+	"position":             3,
+	"positional":           4,
+	"potable":              3,
+	"potato":               3,
+	"potassium":            4,
+	"potency":              3,
+	"potentiometer":        6,
+	"potential":            3,
+	"potent":               2,
+	"potion":               2,
+	"pocket":               2,
+	"pocketbook":           3,
+	"pod":                  1,
+	"poet":                 1,
+	"poi":                  1,
+	"poison":               2,
+	"poisoning":            3,
+	"poisonous":            3,
+	"poignant":             2,
+	"poinsettia":           4,
+	"point":                1,
+	"pointed":              2,
+	"pointer":              2,
+	"pointing":             2,
+	"pointless":            2,
+	"pointe":               1,
+	"poise":                1,
+	"poised":               1,
+	"poker":                2,
+	"pokey":                2,
+	"poking":               2,
+	"poke":                 1,
+	"pol":                  1,
+	"policy":               3,
+	"policyholder":         5,
+	"politician":           4,
+	"politic":              3,
+	"politics":             3,
+	"polity":               3,
+	"polis":                2,
+	"polish":               2,
+	"polisher":             3,
+	"polished":             2,
+	"polka":                2,
+	"pollack":              2,
+	"pollard":              2,
+	"pollen":               2,
+	"pollination":          4,
+	"pollock":              2,
+	"pollutant":            3,
+	"pollution":            3,
+	"polluted":             3,
+	"polluting":            3,
+	"pollute":              2,
+	"polos":                2,
+	"poltergeist":          3,
+	"poly":                 2,
+	"polyamide":            4,
+	"polyester":            4,
+	"polyethylene":         5,
+	"polygon":              3,
+	"polygraph":            3,
+	"polymer":              3,
+	"polymeric":            4,
+	"polymorphic":          4,
+	"polymorphism":         4,
+	"polynomial":           5,
+	"polypeptide":          4,
+	"polyphonic":           4,
+	"polypropylene":        5,
+	"polysaccharide":       5,
+	"polystyrene":          4,
+	"polytechnic":          4,
+	"polyurethane":         5,
+	"polyunsaturated":      7,
+	"polyvinyl":            4,
+	"pole":                 1,
+	"poll":                 1,
+	"polled":               1,
+	"pom":                  1,
+	"needed":               2,
+	"laptop":               2,
+	"pombe":                2,
+	"pompano":              3,
+	"pomegranate":          3,
+	"pomp":                 1,
+	"pompous":              2,
+	"poncho":               2,
+	"ponder":               2,
+	"pontiff":              2,
+	"pontoon":              2,
+	"ponce":                1,
+	"pond":                 1,
+	"pong":                 1,
+	"pons":                 1,
+	"pont":                 1,
+	"poodle":               2,
+	"pooch":                1,
+	"poof":                 1,
+	"pooh":                 1,
+	"pool":                 1,
+	"pools":                1,
+	"poon":                 1,
+	"poop":                 1,
+	"poor":                 1,
+	"poorly":               2,
+	"pop":                  1,
+	"popcorn":              2,
+	"poplar":               2,
+	"poplin":               2,
+	"popper":               2,
+	"poppy":                2,
+	"population":           4,
+	"populace":             3,
+	"popular":              3,
+	"popularity":           5,
+	"popularly":            4,
+	"populate":             3,
+	"populist":             3,
+	"populous":             3,
+	"pope":                 1,
+	"pops":                 1,
+	"porcine":              2,
+	"porcupine":            3,
+	"pornography":          4,
+	"porridge":             2,
+	"portage":              2,
+	"portal":               2,
+	"porter":               2,
+	"portico":              3,
+	"portion":              2,
+	"portraiture":          3,
+	"portrait":             2,
+	"portray":              2,
+	"portrayal":            3,
+	"porcelain":            2,
+	"porch":                1,
+	"pore":                 1,
+	"pork":                 1,
+	"port":                 1,
+	"portable":             3,
+	"portcullis":           3,
+	"portfolio":            4,
+	"pos":                  1,
+	"poser":                2,
+	"positive":             3,
+	"positively":           4,
+	"positron":             3,
+	"posing":               2,
+	"posit":                2,
+	"posse":                2,
+	"possession":           3,
+	"possessive":           3,
+	"possess":              2,
+	"possessed":            2,
+	"possibility":          5,
+	"possible":             3,
+	"possibly":             3,
+	"possum":               2,
+	"posterior":            4,
+	"posterity":            4,
+	"postulated":           4,
+	"postulate":            3,
+	"postural":             3,
+	"posturing":            3,
+	"posture":              2,
+	"pose":                 1,
+	"posh":                 1,
+	"poss":                 1,
+	"post":                 1,
+	"postage":              2,
+	"postal":               2,
+	"postcard":             2,
+	"postcode":             2,
+	"postdoctoral":         4,
+	"poster":               2,
+	"postfix":              2,
+	"postgraduate":         4,
+	"posthumous":           3,
+	"posting":              2,
+	"postman":              2,
+	"postmark":             2,
+	"postmaster":           3,
+	"postmenopausal":       5,
+	"postmortem":           3,
+	"postoperative":        5,
+	"postpartum":           3,
+	"postponing":           3,
+	"postpone":             2,
+	"postponed":            2,
+	"postscript":           2,
+	"postseason":           3,
+	"pot":                  1,
+	"potash":               2,
+	"potluck":              2,
+	"potpourri":            3,
+	"potted":               2,
+	"potter":               2,
+	"pottery":              3,
+	"potting":              2,
+	"potty":                2,
+	"pouch":                1,
+	"poultry":              2,
+	"pounce":               1,
+	"pound":                1,
+	"pounder":              2,
+	"pour":                 1,
+	"pout":                 1,
+	"poverty":              3,
+	"pow":                  1,
+	"powder":               2,
+	"powdery":              3,
+	"powders":              2,
+	"power":                2,
+	"powerboat":            3,
+	"powerful":             3,
+	"powerfully":           4,
+	"powerhouse":           3,
+	"powerless":            3,
+	"powered":              2,
+	"pox":                  1,
+	"ppd":                  1,
+	"ppm":                  1,
+	"ppr":                  1,
+	"prana":                2,
+	"practicable":          4,
+	"practical":            3,
+	"practicality":         5,
+	"practically":          4,
+	"practicum":            3,
+	"practitioner":         4,
+	"practicing":           3,
+	"practice":             2,
+	"practiced":            2,
+	"practise":             2,
+	"practised":            2,
+	"pragmatism":           3,
+	"pragmatic":            3,
+	"pragmatics":           3,
+	"prairie":              2,
+	"praising":             2,
+	"praise":               1,
+	"pram":                 1,
+	"prank":                1,
+	"prat":                 1,
+	"prater":               2,
+	"prawn":                1,
+	"praxis":               2,
+	"pray":                 1,
+	"prayer":               2,
+	"preamble":             3,
+	"precarious":           4,
+	"precast":              2,
+	"precaution":           3,
+	"precautionary":        5,
+	"preceded":             3,
+	"preceding":            3,
+	"precede":              2,
+	"preceptor":            3,
+	"precept":              2,
+	"precision":            3,
+	"precinct":             2,
+	"precincts":            2,
+	"precious":             2,
+	"precipitation":        5,
+	"precipitate":          4,
+	"precise":              2,
+	"precisely":            3,
+	"preclinical":          4,
+	"precluded":            3,
+	"preclude":             2,
+	"precocious":           3,
+	"preconceived":         3,
+	"preconception":        4,
+	"precondition":         4,
+	"precursor":            3,
+	"predation":            3,
+	"predefined":           3,
+	"predicament":          4,
+	"prediction":           3,
+	"predictor":            3,
+	"predict":              2,
+	"predictability":       6,
+	"predictable":          4,
+	"predictably":          4,
+	"predisposition":       5,
+	"predominance":         4,
+	"predominant":          4,
+	"predominate":          4,
+	"predominately":        5,
+	"preeminent":           4,
+	"preemption":           3,
+	"preemptive":           3,
+	"preempt":              2,
+	"prefab":               2,
+	"prefecture":           3,
+	"prefect":              2,
+	"prefer":               2,
+	"preferring":           3,
+	"preferred":            2,
+	"prefix":               2,
+	"prefrontal":           3,
+	"preheat":              2,
+	"prehistory":           4,
+	"prehistoric":          4,
+	"preliminaries":        5,
+	"preliminary":          5,
+	"prelims":              2,
+	"prematurely":          4,
+	"premenstrual":         4,
+	"premium":              3,
+	"premiered":            2,
+	"prenatal":             3,
+	"preoccupation":        5,
+	"preoccupied":          4,
+	"preorder":             3,
+	"prepackaged":          3,
+	"preparatory":          5,
+	"preparedness":         4,
+	"preparing":            3,
+	"prepare":              2,
+	"prepared":             2,
+	"prepay":               2,
+	"preponderance":        4,
+	"preposterous":         4,
+	"preprint":             2,
+	"prequalification":     6,
+	"prerelease":           3,
+	"prerequisite":         4,
+	"prerogative":          4,
+	"preschool":            2,
+	"prescriber":           3,
+	"prescribing":          3,
+	"prescribe":            2,
+	"prescribed":           2,
+	"prescription":         3,
+	"prescriptive":         3,
+	"preseason":            3,
+	"preservative":         4,
+	"preserving":           3,
+	"preserve":             2,
+	"preserved":            2,
+	"preset":               2,
+	"preshrunk":            2,
+	"presidio":             4,
+	"preside":              2,
+	"presumably":           4,
+	"presume":              2,
+	"presumed":             2,
+	"presumption":          3,
+	"presumptive":          3,
+	"pretentious":          3,
+	"pretend":              2,
+	"pretended":            3,
+	"pretender":            3,
+	"pretense":             2,
+	"pretext":              2,
+	"prevail":              2,
+	"prevailing":           3,
+	"preventative":         4,
+	"prevention":           3,
+	"preventive":           3,
+	"prevent":              2,
+	"previous":             3,
+	"preview":              2,
+	"preach":               1,
+	"preacher":             2,
+	"prec":                 1,
+	"precedence":           3,
+	"precedent":            3,
+	"pred":                 1,
+	"predatory":            4,
+	"predator":             3,
+	"predecessor":          4,
+	"predicated":           4,
+	"predicate":            3,
+	"prednisone":           3,
+	"pref":                 1,
+	"preface":              2,
+	"preferable":           4,
+	"preferably":           4,
+	"preferential":         4,
+	"preferentially":       5,
+	"preference":           3,
+	"pregnancy":            3,
+	"pregnant":             2,
+	"prejudicial":          4,
+	"prejudice":            3,
+	"prejudiced":           3,
+	"prelude":              2,
+	"prelim":               1,
+	"prem":                 1,
+	"premature":            3,
+	"premiere":             3,
+	"premier":              2,
+	"premiership":          3,
+	"premises":             3,
+	"premise":              2,
+	"prentice":             2,
+	"prep":                 1,
+	"preparation":          4,
+	"pres":                 1,
+	"presbyterian":         5,
+	"presbytery":           4,
+	"presentation":         4,
+	"presence":             2,
+	"present":              2,
+	"presently":            3,
+	"presents":             2,
+	"preservation":         4,
+	"presidency":           4,
+	"president":            2,
+	"pressurized":          3,
+	"pressuring":           3,
+	"pressure":             2,
+	"pressured":            2,
+	"prestigious":          3,
+	"prestige":             2,
+	"presto":               2,
+	"press":                1,
+	"presser":              2,
+	"pressing":             2,
+	"pressroom":            2,
+	"pret":                 1,
+	"prettier":             3,
+	"prettiest":            3,
+	"pretty":               2,
+	"pretzel":              2,
+	"prevalence":           3,
+	"prevalent":            3,
+	"prey":                 1,
+	"primacy":              3,
+	"primary":              3,
+	"primavera":            4,
+	"primal":               2,
+	"primarily":            4,
+	"primate":              2,
+	"primo":                2,
+	"primordial":           4,
+	"primus":               2,
+	"prion":                2,
+	"prior":                2,
+	"priority":             4,
+	"priory":               3,
+	"prius":                2,
+	"privacy":              3,
+	"privateer":            3,
+	"private":              2,
+	"privately":            3,
+	"privates":             2,
+	"pricing":              2,
+	"price":                1,
+	"priceless":            2,
+	"pricey":               2,
+	"prick":                1,
+	"prickly":              2,
+	"pride":                1,
+	"priest":               1,
+	"priestess":            2,
+	"priesthood":           2,
+	"priestly":             2,
+	"prim":                 1,
+	"primer":               2,
+	"primitive":            3,
+	"priming":              2,
+	"primrose":             2,
+	"prime":                1,
+	"prin":                 1,
+	"princess":             2,
+	"principal":            3,
+	"principality":         5,
+	"principally":          4,
+	"principe":             3,
+	"principle":            3,
+	"principled":           3,
+	"prince":               1,
+	"print":                1,
+	"printable":            3,
+	"printer":              2,
+	"printing":             2,
+	"printmaking":          3,
+	"prison":               2,
+	"prisoner":             3,
+	"pristine":             2,
+	"prise":                1,
+	"prism":                1,
+	"priv":                 1,
+	"privilege":            3,
+	"privileged":           3,
+	"privy":                2,
+	"prize":                1,
+	"pro":                  1,
+	"probation":            3,
+	"probate":              2,
+	"procedure":            3,
+	"proceed":              2,
+	"proceeding":           3,
+	"proceeds":             2,
+	"procession":           3,
+	"processor":            3,
+	"proclaim":             2,
+	"procrastination":      5,
+	"procuring":            3,
+	"procure":              2,
+	"procurement":          3,
+	"procured":             2,
+	"prodigious":           3,
+	"producer":             3,
+	"producing":            3,
+	"production":           3,
+	"productivity":         5,
+	"productive":           3,
+	"productively":         4,
+	"produce":              2,
+	"produced":             2,
+	"profanity":            4,
+	"profane":              2,
+	"profession":           3,
+	"professional":         4,
+	"professionalism":      5,
+	"professionally":       5,
+	"professor":            3,
+	"professorship":        4,
+	"profess":              2,
+	"professed":            2,
+	"proficiency":          4,
+	"proficient":           3,
+	"profiler":             3,
+	"profiling":            3,
+	"profile":              2,
+	"profiled":             2,
+	"profound":             2,
+	"profoundly":           3,
+	"profusion":            3,
+	"profusely":            3,
+	"progenitor":           4,
+	"progesterone":         4,
+	"program":              2,
+	"programing":           3,
+	"programmable":         4,
+	"programmatic":         4,
+	"programmer":           3,
+	"programming":          3,
+	"programme":            2,
+	"programmed":           2,
+	"progression":          3,
+	"progressive":          3,
+	"progressively":        4,
+	"prohibition":          4,
+	"prohibitive":          4,
+	"prohibit":             3,
+	"projectile":           3,
+	"projection":           3,
+	"projective":           3,
+	"projector":            3,
+	"projet":               2,
+	"prolactin":            3,
+	"prolapse":             2,
+	"proletariat":          5,
+	"proliferation":        5,
+	"proliferative":        5,
+	"proliferate":          4,
+	"prolific":             3,
+	"proline":              2,
+	"prolog":               2,
+	"prologue":             2,
+	"prolongation":         4,
+	"prolong":              2,
+	"promiscuous":          4,
+	"promotion":            3,
+	"promotional":          4,
+	"promoted":             3,
+	"promoter":             3,
+	"promoting":            3,
+	"promote":              2,
+	"pronoun":              2,
+	"pronounce":            2,
+	"pronounced":           2,
+	"pronunciation":        5,
+	"propane":              2,
+	"propel":               2,
+	"propellant":           3,
+	"propeller":            3,
+	"propelled":            2,
+	"propensity":           4,
+	"prophetic":            3,
+	"propionate":           4,
+	"proponent":            3,
+	"proportion":           3,
+	"proportional":         4,
+	"proportionality":      6,
+	"proportionate":        4,
+	"proportionately":      5,
+	"proportioned":         3,
+	"proposal":             3,
+	"proposer":             3,
+	"proposing":            3,
+	"propose":              2,
+	"proposed":             2,
+	"propranolol":          4,
+	"proprietary":          5,
+	"proprietor":           4,
+	"proprietorship":       5,
+	"propriety":            4,
+	"propulsion":           3,
+	"propylene":            3,
+	"prorated":             3,
+	"prospective":          3,
+	"prospectus":           3,
+	"prospectuses":         4,
+	"prostatic":            3,
+	"protagonist":          4,
+	"protea":               3,
+	"protease":             3,
+	"protege":              3,
+	"proteolytic":          5,
+	"protection":           3,
+	"protectionism":        4,
+	"protective":           3,
+	"protector":            3,
+	"protect":              2,
+	"protecting":           3,
+	"protein":              2,
+	"proteinase":           3,
+	"protest":              2,
+	"protester":            3,
+	"protocol":             3,
+	"prototype":            3,
+	"protozoa":             4,
+	"proton":               2,
+	"protruding":           3,
+	"proverbial":           4,
+	"provision":            3,
+	"provisional":          4,
+	"provisionally":        5,
+	"proviso":              3,
+	"provided":             3,
+	"provider":             3,
+	"providing":            3,
+	"provide":              2,
+	"provincial":           3,
+	"provocative":          4,
+	"provoking":            3,
+	"provoke":              2,
+	"provoked":             2,
+	"prob":                 1,
+	"probability":          5,
+	"probable":             3,
+	"probably":             3,
+	"probing":              2,
+	"problem":              2,
+	"problematic":          4,
+	"probe":                1,
+	"proc":                 1,
+	"process":              2,
+	"proclamation":         4,
+	"proctor":              2,
+	"prod":                 1,
+	"prodigal":             3,
+	"prodigy":              3,
+	"product":              2,
+	"prof":                 1,
+	"profit":               2,
+	"profitability":        6,
+	"profitable":           4,
+	"profitably":           4,
+	"prog":                 1,
+	"progeny":              3,
+	"prognosis":            3,
+	"prognostic":           3,
+	"progress":             2,
+	"project":              2,
+	"prom":                 1,
+	"promenade":            3,
+	"prominence":           3,
+	"prominent":            3,
+	"promising":            3,
+	"promissory":           4,
+	"promise":              2,
+	"promised":             2,
+	"promontory":           4,
+	"promulgation":         4,
+	"promulgate":           3,
+	"prompt":               1,
+	"promptly":             2,
+	"pron":                 1,
+	"pronto":               2,
+	"prone":                1,
+	"prong":                1,
+	"proof":                1,
+	"proofing":             2,
+	"proofread":            2,
+	"prop":                 1,
+	"propagation":          4,
+	"propaganda":           4,
+	"propagate":            3,
+	"proper":               2,
+	"properly":             3,
+	"property":             3,
+	"proposition":          4,
+	"propositional":        5,
+	"prophecy":             3,
+	"prophesy":             3,
+	"prophet":              2,
+	"prophylactic":         4,
+	"prophylaxis":          4,
+	"pros":                 1,
+	"prosecution":          4,
+	"prosecutor":           4,
+	"prosecuted":           4,
+	"prosecuting":          4,
+	"prosecute":            3,
+	"prospector":           3,
+	"prospect":             2,
+	"prosper":              2,
+	"prosperity":           4,
+	"prosperous":           3,
+	"prostaglandin":        4,
+	"prostate":             2,
+	"prosthesis":           3,
+	"prosthetics":          3,
+	"prostitution":         4,
+	"prostitute":           3,
+	"prostrate":            2,
+	"prose":                1,
+	"prosser":              2,
+	"proud":                1,
+	"proudly":              2,
+	"prov":                 1,
+	"provenance":           3,
+	"proven":               2,
+	"proverb":              2,
+	"providence":           3,
+	"provident":            3,
+	"province":             2,
+	"provocation":          4,
+	"provost":              2,
+	"prove":                1,
+	"prowess":              2,
+	"prowl":                1,
+	"prowler":              2,
+	"proximal":             3,
+	"proximate":            3,
+	"proxies":              2,
+	"proximity":            4,
+	"proxy":                2,
+	"prs":                  1,
+	"prudential":           3,
+	"prudence":             2,
+	"prudent":              2,
+	"pruning":              2,
+	"prune":                1,
+	"pry":                  1,
+	"prying":               2,
+	"psalm":                1,
+	"pseudo":               2,
+	"pseudoephedrine":      5,
+	"pseudonym":            3,
+	"pseudomonas":          4,
+	"psf":                  1,
+	"psi":                  1,
+	"psig":                 1,
+	"psoriasis":            4,
+	"pss":                  1,
+	"psychiatrist":         4,
+	"psychiatry":           4,
+	"psychiatric":          4,
+	"psychic":              2,
+	"psycho":               2,
+	"psychoanalysis":       6,
+	"psychoanalytic":       6,
+	"psychological":        5,
+	"psychologically":      6,
+	"psychometric":         4,
+	"psychopathology":      6,
+	"psychopharmacology":   7,
+	"psychosis":            3,
+	"psychosocial":         4,
+	"psychotherapist":      5,
+	"psychotherapy":        5,
+	"psychotropic":         4,
+	"psychologist":         4,
+	"psychology":           4,
+	"psychotic":            3,
+	"psych":                1,
+	"psychedelic":          4,
+	"psyche":               1,
+	"pta":                  1,
+	"pto":                  1,
+	"pts":                  1,
+	"pty":                  1,
+	"puberty":              3,
+	"pubescent":            3,
+	"pubic":                2,
+	"puja":                 2,
+	"puma":                 2,
+	"punitive":             3,
+	"puny":                 2,
+	"pupa":                 2,
+	"pupil":                2,
+	"puree":                2,
+	"puri":                 2,
+	"purified":             3,
+	"purify":               3,
+	"purifying":            4,
+	"puritan":              3,
+	"purity":               3,
+	"purine":               2,
+	"putative":             3,
+	"pub":                  1,
+	"publication":          4,
+	"publicist":            3,
+	"publicize":            3,
+	"publicized":           3,
+	"public":               2,
+	"publicity":            4,
+	"publicly":             3,
+	"publish":              2,
+	"publisher":            3,
+	"publishing":           3,
+	"publ":                 1,
+	"puck":                 1,
+	"pudding":              2,
+	"puddle":               2,
+	"pueblo":               2,
+	"puffin":               2,
+	"puff":                 1,
+	"puffy":                2,
+	"pug":                  1,
+	"puke":                 1,
+	"pul":                  1,
+	"pulley":               2,
+	"pulmonary":            4,
+	"pulpit":               2,
+	"pulsar":               2,
+	"pulsating":            3,
+	"pull":                 1,
+	"pullover":             3,
+	"pulp":                 1,
+	"pulsing":              2,
+	"pulse":                1,
+	"pumice":               2,
+	"pump":                 1,
+	"pumping":              2,
+	"pumpkin":              2,
+	"pun":                  1,
+	"pundit":               2,
+	"pungent":              2,
+	"punish":               2,
+	"punishable":           4,
+	"punisher":             3,
+	"punishment":           3,
+	"punctuation":          4,
+	"punctual":             3,
+	"punctuality":          5,
+	"puncture":             2,
+	"punch":                1,
+	"punk":                 1,
+	"punt":                 1,
+	"punter":               2,
+	"pup":                  1,
+	"puppet":               2,
+	"puppetry":             3,
+	"puppy":                2,
+	"purchaser":            3,
+	"purchase":             2,
+	"purest":               2,
+	"purgatory":            4,
+	"purple":               2,
+	"purport":              2,
+	"purpose":              2,
+	"purposeful":           3,
+	"purposely":            3,
+	"pursuance":            3,
+	"pursuant":             3,
+	"pursuing":             3,
+	"pursue":               2,
+	"pursued":              2,
+	"pursuit":              2,
+	"purview":              2,
+	"pure":                 1,
+	"purebred":             2,
+	"purely":               2,
+	"purging":              2,
+	"purge":                1,
+	"purl":                 1,
+	"purr":                 1,
+	"purse":                1,
+	"pus":                  1,
+	"push":                 1,
+	"pushchair":            2,
+	"pusher":               2,
+	"pushing":              2,
+	"pushy":                2,
+	"pushed":               1,
+	"puss":                 1,
+	"pussies":              2,
+	"pussy":                2,
+	"put":                  1,
+	"putting":              2,
+	"putty":                2,
+	"putt":                 1,
+	"putter":               2,
+	"puzzle":               2,
+	"pyjamas":              3,
+	"pylori":               3,
+	"pylon":                2,
+	"pyramidal":            4,
+	"pyrene":               2,
+	"pyrite":               2,
+	"pyrotechnics":         4,
+	"python":               2,
+	"pye":                  1,
+	"pygmy":                2,
+	"pyramid":              3,
+	"qty":                  1,
+	"qua":                  1,
+	"quasar":               2,
+	"quaternary":           4,
+	"quatre":               2,
+	"quack":                1,
+	"quad":                 1,
+	"quadra":               2,
+	"quadrature":           3,
+	"quadrangle":           3,
+	"quadrant":             2,
+	"quadratic":            3,
+	"quadruple":            3,
+	"quagga":               2,
+	"quagmire":             2,
+	"quail":                1,
+	"quaint":               1,
+	"quake":                1,
+	"qualification":        5,
+	"qualifier":            4,
+	"qualified":            3,
+	"qualify":              3,
+	"qualifying":           4,
+	"qualitative":          4,
+	"qualitatively":        5,
+	"quality":              3,
+	"quandary":             3,
+	"quanta":               2,
+	"quantifiable":         5,
+	"quantified":           3,
+	"quantify":             3,
+	"quantifying":          4,
+	"quantitative":         4,
+	"quantitatively":       5,
+	"quantity":             3,
+	"quantization":         4,
+	"quantized":            2,
+	"quantum":              2,
+	"quant":                1,
+	"quarantine":           3,
+	"quarrel":              2,
+	"quarry":               2,
+	"quarrying":            3,
+	"quarter":              2,
+	"quarterback":          3,
+	"quarterly":            3,
+	"quartermaster":        4,
+	"quarters":             2,
+	"quartet":              2,
+	"quartile":             2,
+	"quarto":               2,
+	"quark":                1,
+	"quart":                1,
+	"quartz":               1,
+	"quay":                 1,
+	"query":                2,
+	"queen":                1,
+	"queer":                1,
+	"quell":                1,
+	"quench":               1,
+	"ques":                 1,
+	"question":             2,
+	"questionable":         4,
+	"questioning":          3,
+	"questionnaire":        3,
+	"quest":                1,
+	"quetzal":              2,
+	"queuing":              2,
+	"queue":                1,
+	"quiescent":            3,
+	"quiet":                2,
+	"quieter":              3,
+	"quietly":              3,
+	"quibble":              2,
+	"quiche":               1,
+	"quick":                1,
+	"quicken":              2,
+	"quicker":              2,
+	"quickie":              2,
+	"quickly":              2,
+	"quickness":            2,
+	"quicksilver":          3,
+	"quid":                 1,
+	"quill":                1,
+	"quilt":                1,
+	"quilted":              2,
+	"quilter":              2,
+	"quilting":             2,
+	"quin":                 1,
+	"quincy":               2,
+	"quintessential":       4,
+	"quintessence":         3,
+	"quintet":              2,
+	"quintile":             2,
+	"quinton":              2,
+	"quince":               1,
+	"quint":                1,
+	"quirk":                1,
+	"quirky":               2,
+	"quit":                 1,
+	"quite":                1,
+	"quits":                1,
+	"quiver":               2,
+	"quiz":                 1,
+	"quizzes":              2,
+	"quo":                  1,
+	"quota":                2,
+	"quotation":            3,
+	"quotient":             2,
+	"quod":                 1,
+	"quorum":               2,
+	"quot":                 1,
+	"quotable":             3,
+	"quoted":               2,
+	"quoting":              2,
+	"quote":                1,
+	"quoth":                1,
+	"rabies":               2,
+	"racial":               2,
+	"racially":             3,
+	"radar":                2,
+	"radiation":            4,
+	"radiative":            4,
+	"radiator":             4,
+	"radial":               3,
+	"radian":               3,
+	"radiance":             3,
+	"radiant":              3,
+	"radiated":             4,
+	"radiating":            4,
+	"radiate":              3,
+	"radii":                3,
+	"radio":                3,
+	"radioactivity":        7,
+	"radioactive":          5,
+	"radiographic":         5,
+	"radiological":         6,
+	"radiologic":           5,
+	"radionuclide":         5,
+	"radiotherapy":         6,
+	"radiography":          5,
+	"radiologist":          5,
+	"radiology":            5,
+	"radiometer":           5,
+	"radios":               3,
+	"radium":               3,
+	"radius":               3,
+	"radix":                2,
+	"radon":                2,
+	"raga":                 2,
+	"raia":                 2,
+	"raja":                 2,
+	"ramon":                2,
+	"rani":                 2,
+	"rapier":               3,
+	"rapidity":             4,
+	"rasa":                 2,
+	"rata":                 2,
+	"ratios":               3,
+	"ratio":                2,
+	"ration":               2,
+	"rational":             3,
+	"rationality":          5,
+	"rationalization":      6,
+	"rationalize":          4,
+	"rationally":           4,
+	"rationale":            3,
+	"rations":              2,
+	"ravioli":              4,
+	"ravine":               2,
+	"raya":                 2,
+	"razor":                2,
+	"rab":                  1,
+	"rabbi":                2,
+	"rabbit":               2,
+	"rabble":               2,
+	"rabid":                2,
+	"raccoon":              2,
+	"racer":                2,
+	"races":                2,
+	"racing":               2,
+	"racism":               2,
+	"racist":               2,
+	"racquet":              2,
+	"racy":                 2,
+	"race":                 1,
+	"racecourse":           2,
+	"racetrack":            2,
+	"raceway":              2,
+	"rack":                 1,
+	"racket":               2,
+	"rackets":              2,
+	"rad":                  1,
+	"radical":              3,
+	"radically":            4,
+	"radish":               2,
+	"raffle":               2,
+	"raffles":              2,
+	"raff":                 1,
+	"raft":                 1,
+	"rafter":               2,
+	"rag":                  1,
+	"ragged":               2,
+	"raggedy":              3,
+	"raging":               2,
+	"raglan":               2,
+	"ragtime":              2,
+	"rage":                 1,
+	"rags":                 1,
+	"rah":                  1,
+	"raisin":               2,
+	"raid":                 1,
+	"raider":               2,
+	"rail":                 1,
+	"railing":              2,
+	"railroad":             2,
+	"railway":              2,
+	"rain":                 1,
+	"rainbow":              2,
+	"raincoat":             2,
+	"rainfall":             2,
+	"rainforest":           3,
+	"rainier":              3,
+	"rainwater":            3,
+	"rainwear":             2,
+	"rainy":                2,
+	"rains":                1,
+	"raiser":               2,
+	"raising":              2,
+	"raise":                1,
+	"raised":               1,
+	"raj":                  1,
+	"raking":               2,
+	"rake":                 1,
+	"raked":                1,
+	"rallied":              2,
+	"rally":                2,
+	"rallying":             3,
+	"rallye":               2,
+	"rall":                 1,
+	"ram":                  1,
+	"ramble":               2,
+	"rambler":              2,
+	"rambling":             2,
+	"ramming":              2,
+	"rampage":              2,
+	"rampant":              2,
+	"rampart":              2,
+	"ramp":                 1,
+	"ran":                  1,
+	"rancho":               2,
+	"rancid":               2,
+	"random":               2,
+	"randomly":             3,
+	"randomness":           3,
+	"ransom":               2,
+	"ranch":                1,
+	"rancher":              2,
+	"rand":                 1,
+	"randy":                2,
+	"rang":                 1,
+	"ranger":               2,
+	"ranging":              2,
+	"range":                1,
+	"rangefinder":          3,
+	"ranged":               1,
+	"rank":                 1,
+	"ranking":              2,
+	"rant":                 1,
+	"rap":                  1,
+	"rapid":                2,
+	"rapidly":              3,
+	"rapids":               2,
+	"raping":               2,
+	"rapist":               2,
+	"rapper":               2,
+	"rapping":              2,
+	"rapporteur":           3,
+	"rapport":              2,
+	"raptor":               2,
+	"rapture":              2,
+	"rape":                 1,
+	"rarer":                2,
+	"rarest":               2,
+	"rarity":               3,
+	"rare":                 1,
+	"rarely":               2,
+	"rascal":               2,
+	"raster":               2,
+	"rash":                 1,
+	"raspberry":            3,
+	"rat":                  1,
+	"rated":                2,
+	"rater":                2,
+	"ratified":             3,
+	"ratify":               3,
+	"rating":               2,
+	"rattan":               2,
+	"rattle":               2,
+	"rattlesnake":          3,
+	"rattling":             2,
+	"ratchet":              2,
+	"rate":                 1,
+	"rates":                1,
+	"rath":                 1,
+	"rather":               2,
+	"rats":                 1,
+	"raucous":              2,
+	"raunchy":              2,
+	"ravaged":              2,
+	"ravel":                2,
+	"raven":                2,
+	"raver":                2,
+	"raving":               2,
+	"rave":                 1,
+	"raw":                  1,
+	"rawhide":              2,
+	"ray":                  1,
+	"rayon":                2,
+	"razer":                2,
+	"razz":                 1,
+	"rcd":                  1,
+	"rct":                  1,
+	"reagent":              3,
+	"realignment":          4,
+	"reactivation":         5,
+	"reactivated":          5,
+	"reactivate":           4,
+	"reaction":             3,
+	"reactionary":          5,
+	"reactive":             3,
+	"reactor":              3,
+	"react":                2,
+	"readmission":          4,
+	"reaffirm":             3,
+	"real":                 2,
+	"realestate":           4,
+	"realisation":          5,
+	"reality":              4,
+	"realising":            4,
+	"realistically":        6,
+	"realistic":            4,
+	"realise":              3,
+	"realised":             3,
+	"realism":              3,
+	"realist":              3,
+	"realizing":            4,
+	"realize":              3,
+	"realized":             3,
+	"reallocation":         5,
+	"really":               3,
+	"realtor":              3,
+	"realty":               3,
+	"reals":                2,
+	"reappear":             3,
+	"reapply":              3,
+	"reappointment":        4,
+	"rearranging":          4,
+	"rearrange":            3,
+	"rearrangement":        4,
+	"rearranged":           3,
+	"reassess":             3,
+	"reassessment":         4,
+	"reassignment":         4,
+	"reassurance":          4,
+	"reassure":             3,
+	"reauthorization":      6,
+	"rebate":               2,
+	"rebellion":            3,
+	"rebellious":           3,
+	"rebirth":              2,
+	"reborn":               2,
+	"rebound":              2,
+	"rebroadcast":          3,
+	"rebuild":              2,
+	"rebuilding":           3,
+	"rebuke":               2,
+	"rebuttal":             3,
+	"recalculated":         5,
+	"recalculate":          4,
+	"recall":               2,
+	"recap":                2,
+	"recapture":            3,
+	"recast":               2,
+	"receding":             3,
+	"receipt":              2,
+	"receivable":           4,
+	"receiver":             3,
+	"receiving":            3,
+	"receive":              2,
+	"received":             2,
+	"recent":               2,
+	"recently":             3,
+	"receptacle":           4,
+	"reception":            3,
+	"receptionist":         4,
+	"receptive":            3,
+	"receptor":             3,
+	"recertification":      6,
+	"recertified":          4,
+	"recession":            3,
+	"recessive":            3,
+	"recess":               2,
+	"recharging":           3,
+	"recharge":             2,
+	"rechargeable":         4,
+	"recharged":            2,
+	"recidivism":           4,
+	"recipient":            4,
+	"reciprocal":           4,
+	"reciprocating":        5,
+	"recirculation":        5,
+	"recital":              3,
+	"recited":              3,
+	"reciting":             3,
+	"recite":               2,
+	"reclaim":              2,
+	"reclassification":     6,
+	"recliner":             3,
+	"reclining":            3,
+	"recode":               2,
+	"recoil":               2,
+	"recombination":        5,
+	"recompile":            3,
+	"recon":                2,
+	"reconnaissance":       4,
+	"reconnection":         4,
+	"reconnect":            3,
+	"reconsider":           4,
+	"reconsideration":      6,
+	"reconstituted":        5,
+	"reconstitution":       5,
+	"reconstruction":       4,
+	"reconstructive":       4,
+	"reconstruct":          3,
+	"reconstructed":        4,
+	"recordable":           4,
+	"recorder":             3,
+	"recording":            3,
+	"recount":              2,
+	"recoup":               2,
+	"recourse":             2,
+	"recover":              3,
+	"recoverable":          5,
+	"recoveries":           4,
+	"recovery":             4,
+	"recruit":              2,
+	"recruiter":            3,
+	"recruitment":          3,
+	"recumbent":            3,
+	"recur":                2,
+	"recurrence":           3,
+	"recurrent":            3,
+	"recursion":            3,
+	"recursive":            3,
+	"recycle":              3,
+	"redefining":           4,
+	"redefine":             3,
+	"redefined":            3,
+	"redeployment":         4,
+	"redesign":             3,
+	"redevelopment":        5,
+	"redeem":               2,
+	"redeemable":           4,
+	"redeemer":             3,
+	"redeeming":            3,
+	"redefinition":         5,
+	"redemption":           3,
+	"redesignated":         5,
+	"redirect":             3,
+	"rediscover":           4,
+	"redistribution":       5,
+	"redistributed":        5,
+	"redistributing":       5,
+	"redistribute":         4,
+	"redo":                 2,
+	"redone":               2,
+	"redox":                2,
+	"redraw":               2,
+	"redress":              2,
+	"reducing":             3,
+	"reductase":            3,
+	"reduction":            3,
+	"reduce":               2,
+	"reduced":              2,
+	"reducer":              2,
+	"redundancy":           4,
+	"redundant":            3,
+	"reelection":           4,
+	"reenter":              3,
+	"reentry":              3,
+	"referral":             3,
+	"referring":            3,
+	"referred":             2,
+	"refinancing":          4,
+	"refinance":            3,
+	"refinanced":           3,
+	"refill":               2,
+	"refillable":           4,
+	"refineries":           4,
+	"refinery":             4,
+	"refining":             3,
+	"refine":               2,
+	"refinement":           3,
+	"refined":              2,
+	"reflection":           3,
+	"reflectivity":         5,
+	"reflective":           3,
+	"reflector":            3,
+	"reflect":              2,
+	"reflectance":          3,
+	"reflex":               2,
+	"reflexive":            3,
+	"reflux":               2,
+	"refocus":              3,
+	"reformulated":         5,
+	"reform":               2,
+	"reformer":             3,
+	"reformed":             2,
+	"refraction":           3,
+	"refractive":           3,
+	"refractory":           4,
+	"refractor":            3,
+	"refrain":              2,
+	"refresh":              2,
+	"refresher":            3,
+	"refreshing":           3,
+	"refreshingly":         4,
+	"refreshment":          3,
+	"refrigeration":        5,
+	"refrigerator":         5,
+	"refrigerant":          4,
+	"refrigerated":         5,
+	"refrigerate":          4,
+	"refueling":            4,
+	"refund":               2,
+	"refundable":           4,
+	"refurbish":            3,
+	"refusal":              3,
+	"refusing":             3,
+	"refused":              2,
+	"refuted":              3,
+	"refute":               2,
+	"regalia":              4,
+	"regain":               2,
+	"regal":                2,
+	"regard":               2,
+	"regarding":            3,
+	"regardless":           3,
+	"regatta":              3,
+	"regency":              3,
+	"regeneration":         5,
+	"regenerative":         5,
+	"regenerated":          5,
+	"regenerating":         5,
+	"regenerate":           4,
+	"regent":               2,
+	"regina":               3,
+	"regime":               2,
+	"region":               2,
+	"regional":             3,
+	"regionalism":          4,
+	"regionally":           4,
+	"regression":           3,
+	"regressive":           3,
+	"regress":              2,
+	"regret":               2,
+	"regrettable":          4,
+	"regrettably":          4,
+	"regrowth":             2,
+	"rehabilitation":       6,
+	"rehabilitative":       6,
+	"rehabilitated":        6,
+	"rehabilitate":         5,
+	"rehearing":            3,
+	"rehearsal":            3,
+	"rehearsing":           3,
+	"rehearse":             2,
+	"rehearsed":            2,
+	"reimburse":            3,
+	"reimbursed":           3,
+	"reincarnation":        5,
+	"reinforce":            3,
+	"reinforcement":        4,
+	"reinstall":            3,
+	"reinstated":           4,
+	"reinstate":            3,
+	"reinstatement":        4,
+	"reinsurance":          4,
+	"reintegration":        5,
+	"reintroduction":       5,
+	"reintroduced":         4,
+	"reinvent":             3,
+	"reinvestment":         4,
+	"reissue":              3,
+	"reissued":             3,
+	"reiterate":            4,
+	"rejection":            3,
+	"reject":               2,
+	"rejoicing":            3,
+	"rejoice":              2,
+	"rejoiced":             2,
+	"rejoin":               2,
+	"rejuvenating":         5,
+	"rejuvenate":           4,
+	"relation":             3,
+	"relational":           4,
+	"relationship":         4,
+	"relations":            3,
+	"relapse":              2,
+	"related":              3,
+	"relating":             3,
+	"relate":               2,
+	"relaunch":             2,
+	"relax":                2,
+	"relaxation":           4,
+	"relay":                2,
+	"relaying":             3,
+	"releasing":            3,
+	"release":              2,
+	"released":             2,
+	"relentless":           3,
+	"relentlessly":         4,
+	"reliable":             4,
+	"reliance":             3,
+	"reliant":              3,
+	"religion":             3,
+	"religious":            3,
+	"religiously":          4,
+	"relied":               2,
+	"relief":               2,
+	"reliever":             3,
+	"relieving":            3,
+	"relieve":              2,
+	"relieved":             2,
+	"relinquish":           3,
+	"relist":               2,
+	"relive":               2,
+	"relocation":           4,
+	"relocated":            4,
+	"relocating":           4,
+	"relocate":             3,
+	"reload":               2,
+	"reluctance":           3,
+	"reluctant":            3,
+	"reluctantly":          4,
+	"rely":                 2,
+	"relying":              3,
+	"remain":               2,
+	"remainder":            3,
+	"remains":              2,
+	"remake":               2,
+	"remanufactured":       5,
+	"remand":               2,
+	"remarried":            3,
+	"remark":               2,
+	"remarkable":           4,
+	"remaster":             3,
+	"rematch":              2,
+	"remediation":          5,
+	"remedial":             4,
+	"remember":             3,
+	"remembrance":          3,
+	"remind":               2,
+	"remission":            3,
+	"remit":                2,
+	"remittance":           3,
+	"remitted":             3,
+	"remix":                2,
+	"remodel":              3,
+	"remodeling":           4,
+	"remodeled":            3,
+	"remorse":              2,
+	"remortgage":           3,
+	"remote":               2,
+	"remotely":             3,
+	"removable":            4,
+	"removal":              3,
+	"remover":              3,
+	"removing":             3,
+	"remove":               2,
+	"removed":              2,
+	"remuneration":         5,
+	"renaissance":          3,
+	"renal":                2,
+	"renaming":             3,
+	"rename":               2,
+	"renamed":              2,
+	"renew":                2,
+	"renewal":              3,
+	"renin":                2,
+	"renormalization":      6,
+	"renounce":             2,
+	"renounced":            2,
+	"renown":               2,
+	"renowned":             2,
+	"renunciation":         5,
+	"reopen":               3,
+	"reorder":              3,
+	"reorganization":       6,
+	"reorganize":           4,
+	"reorganized":          4,
+	"repaint":              2,
+	"repair":               2,
+	"repairer":             3,
+	"repay":                2,
+	"repayment":            3,
+	"repeal":               2,
+	"repeat":               2,
+	"repeatability":        6,
+	"repeatable":           4,
+	"repeated":             3,
+	"repeatedly":           4,
+	"repeater":             3,
+	"repel":                2,
+	"repellent":            3,
+	"repent":               2,
+	"repentance":           3,
+	"repetitive":           4,
+	"replacing":            3,
+	"replace":              2,
+	"replacement":          3,
+	"replaced":             2,
+	"replay":               2,
+	"replenish":            3,
+	"replete":              2,
+	"reply":                2,
+	"reposition":           4,
+	"report":               2,
+	"reportable":           4,
+	"reportage":            3,
+	"reportedly":           4,
+	"reporter":             3,
+	"repositories":         5,
+	"repository":           5,
+	"repose":               2,
+	"repost":               2,
+	"repression":           3,
+	"repressive":           3,
+	"repressor":            3,
+	"repress":              2,
+	"reprieve":             2,
+	"reprint":              2,
+	"reprisal":             3,
+	"reprise":              2,
+	"repro":                2,
+	"reproducibility":      7,
+	"reproducible":         5,
+	"reproducing":          4,
+	"reproduction":         4,
+	"reproductive":         4,
+	"reproduce":            3,
+	"reproduced":           3,
+	"reproach":             2,
+	"repudiation":          5,
+	"republication":        5,
+	"republican":           4,
+	"republic":             3,
+	"republish":            3,
+	"repugnant":            3,
+	"repulsion":            3,
+	"repulsive":            3,
+	"repurchase":           3,
+	"reputed":              3,
+	"request":              2,
+	"requiring":            3,
+	"require":              2,
+	"requirement":          3,
+	"required":             2,
+	"reread":               2,
+	"rerun":                2,
+	"resale":               2,
+	"reschedule":           3,
+	"rescheduled":          3,
+	"rescind":              2,
+	"rescission":           3,
+	"reseal":               2,
+	"research":             2,
+	"researcher":           3,
+	"resection":            3,
+	"resell":               2,
+	"reseller":             3,
+	"reselling":            3,
+	"resemblance":          3,
+	"resemble":             3,
+	"resend":               2,
+	"resent":               2,
+	"resentment":           3,
+	"reserving":            3,
+	"reserve":              2,
+	"reserved":             2,
+	"reset":                2,
+	"resetting":            3,
+	"resettlement":         4,
+	"reshape":              2,
+	"resided":              3,
+	"residing":             3,
+	"residual":             4,
+	"reside":               2,
+	"resign":               2,
+	"resigned":             2,
+	"resiliency":           4,
+	"resilience":           3,
+	"resilient":            3,
+	"resistivity":          5,
+	"resistive":            3,
+	"resistor":             3,
+	"resist":               2,
+	"resistance":           3,
+	"resistant":            3,
+	"resold":               2,
+	"resolver":             3,
+	"resolving":            3,
+	"resolve":              2,
+	"resolved":             2,
+	"resort":               2,
+	"resource":             2,
+	"resourceful":          3,
+	"respective":           3,
+	"respectively":         4,
+	"respect":              2,
+	"respectable":          4,
+	"respectful":           3,
+	"respectfully":         4,
+	"respecting":           3,
+	"responsibility":       6,
+	"responsible":          4,
+	"responsibly":          4,
+	"responsive":           3,
+	"responsiveness":       4,
+	"respond":              2,
+	"respondent":           3,
+	"response":             2,
+	"restart":              2,
+	"restated":             3,
+	"restate":              2,
+	"restatement":          3,
+	"restock":              2,
+	"restorative":          4,
+	"restoring":            3,
+	"restore":              2,
+	"restored":             2,
+	"restrain":             2,
+	"restraint":            2,
+	"restriction":          3,
+	"restrictive":          3,
+	"restrict":             2,
+	"restricted":           3,
+	"restructuring":        4,
+	"restructure":          3,
+	"restructured":         3,
+	"resubmit":             3,
+	"result":               2,
+	"resultant":            3,
+	"resuming":             3,
+	"resume":               2,
+	"resumed":              2,
+	"resumption":           3,
+	"resurfacing":          4,
+	"resurgence":           3,
+	"resuscitation":        5,
+	"retail":               2,
+	"retailer":             3,
+	"retain":               2,
+	"retainer":             3,
+	"retake":               2,
+	"retaliation":          5,
+	"retaliate":            4,
+	"retardation":          4,
+	"retard":               2,
+	"retardant":            3,
+	"retarded":             3,
+	"rete":                 2,
+	"retelling":            3,
+	"retention":            3,
+	"retest":               2,
+	"rethink":              2,
+	"rethinking":           3,
+	"reticulum":            4,
+	"retin":                2,
+	"retiree":              3,
+	"retiring":             3,
+	"retire":               2,
+	"retirement":           3,
+	"retired":              2,
+	"retort":               2,
+	"retraction":           3,
+	"retract":              2,
+	"retractable":          4,
+	"retransmission":       4,
+	"retransmit":           3,
+	"retransmitted":        4,
+	"retreat":              2,
+	"retrieval":            3,
+	"retriever":            3,
+	"retrieving":           3,
+	"retrieve":             2,
+	"retrieved":            2,
+	"retry":                2,
+	"return":               2,
+	"returnable":           4,
+	"retype":               2,
+	"reunification":        6,
+	"reunited":             4,
+	"reunite":              3,
+	"reunion":              3,
+	"reusable":             4,
+	"reusing":              3,
+	"reuse":                2,
+	"reused":               2,
+	"revaluation":          5,
+	"revamp":               2,
+	"reveal":               2,
+	"revenge":              2,
+	"reversal":             3,
+	"reversion":            3,
+	"revere":               2,
+	"revered":              2,
+	"reversible":           4,
+	"reverse":              2,
+	"revert":               2,
+	"revision":             3,
+	"revisionist":          4,
+	"revitalization":       6,
+	"revitalizing":         5,
+	"revitalize":           4,
+	"revitalized":          4,
+	"review":               2,
+	"revising":             3,
+	"revisit":              3,
+	"revise":               2,
+	"revised":              2,
+	"revival":              3,
+	"reviving":             3,
+	"revive":               2,
+	"revived":              2,
+	"revoking":             3,
+	"revoke":               2,
+	"revoked":              2,
+	"revolt":               2,
+	"revolting":            3,
+	"revolver":             3,
+	"revolving":            3,
+	"revolve":              2,
+	"revolved":             2,
+	"revue":                2,
+	"reward":               2,
+	"rewarding":            3,
+	"rewind":               2,
+	"rework":               2,
+	"reworking":            3,
+	"rewriting":            3,
+	"rewritten":            3,
+	"rewrite":              2,
+	"rewrote":              2,
+	"rezoning":             3,
+	"reason":               2,
+	"reasonable":           4,
+	"reasonableness":       5,
+	"reasonably":           4,
+	"reasoning":            3,
+	"reasoned":             2,
+	"reach":                1,
+	"reachable":            3,
+	"read":                 1,
+	"readability":          5,
+	"readable":             3,
+	"reader":               2,
+	"readership":           3,
+	"readily":              3,
+	"readiness":            3,
+	"reading":              2,
+	"ready":                2,
+	"realm":                1,
+	"ream":                 1,
+	"reap":                 1,
+	"reaper":               2,
+	"rear":                 1,
+	"reb":                  1,
+	"rebbe":                2,
+	"rebel":                2,
+	"rec":                  1,
+	"recipe":               3,
+	"reciprocity":          5,
+	"recitation":           4,
+	"reclamation":          4,
+	"recluse":              2,
+	"recognition":          4,
+	"recognising":          4,
+	"recognise":            3,
+	"recognised":           3,
+	"recognizable":         5,
+	"recognizing":          4,
+	"recognize":            3,
+	"recognized":           3,
+	"recollection":         4,
+	"recollect":            3,
+	"recommendation":       5,
+	"recommend":            3,
+	"reconciling":          4,
+	"reconcile":            3,
+	"reconciled":           3,
+	"record":               2,
+	"recreation":           4,
+	"recreational":         5,
+	"recreate":             3,
+	"rectal":               2,
+	"rectangle":            3,
+	"rectangular":          4,
+	"rectification":        5,
+	"rectifier":            4,
+	"rectified":            3,
+	"rectify":              3,
+	"rectory":              3,
+	"rector":               2,
+	"rectum":               2,
+	"reckless":             2,
+	"reckon":               2,
+	"reckoning":            3,
+	"rect":                 1,
+	"red":                  1,
+	"reddish":              2,
+	"redhead":              2,
+	"redneck":              2,
+	"redness":              2,
+	"redwood":              2,
+	"redd":                 1,
+	"redding":              2,
+	"rede":                 1,
+	"reebok":               2,
+	"reed":                 1,
+	"reedy":                2,
+	"reef":                 1,
+	"reefer":               2,
+	"reel":                 1,
+	"reeve":                1,
+	"ref":                  1,
+	"referee":              3,
+	"referendum":           4,
+	"referential":          4,
+	"referencing":          4,
+	"reference":            3,
+	"referenced":           3,
+	"referent":             3,
+	"reformation":          4,
+	"refugee":              3,
+	"refutation":           4,
+	"refuge":               2,
+	"refuse":               2,
+	"refer":                1,
+	"reg":                  1,
+	"reggae":               2,
+	"regimen":              3,
+	"regimental":           4,
+	"regiment":             3,
+	"register":             3,
+	"registered":           3,
+	"registration":         4,
+	"registrant":           3,
+	"registrar":            3,
+	"registry":             3,
+	"rego":                 2,
+	"regulation":           4,
+	"regulator":            4,
+	"regular":              3,
+	"regularity":           5,
+	"regularization":       6,
+	"regularly":            4,
+	"regulated":            4,
+	"regulating":           4,
+	"regulate":             3,
+	"reif":                 1,
+	"reign":                1,
+	"rein":                 1,
+	"reindeer":             2,
+	"reins":                1,
+	"reis":                 1,
+	"rel":                  1,
+	"relativity":           5,
+	"relativistic":         5,
+	"relativism":           4,
+	"relative":             3,
+	"relegated":            4,
+	"relevancy":            4,
+	"relevance":            3,
+	"relevant":             3,
+	"relic":                2,
+	"relish":               2,
+	"rem":                  1,
+	"remedied":             3,
+	"remedy":               3,
+	"reminiscent":          4,
+	"remnant":              2,
+	"rencontre":            3,
+	"renderer":             3,
+	"rendering":            3,
+	"rendezvous":           3,
+	"rendition":            3,
+	"rendu":                2,
+	"renegade":             3,
+	"renovation":           4,
+	"renovated":            4,
+	"renovating":           4,
+	"renovate":             3,
+	"rend":                 1,
+	"render":               2,
+	"rent":                 1,
+	"rental":               2,
+	"renter":               2,
+	"rep":                  1,
+	"reparation":           4,
+	"repetition":           4,
+	"repertory":            4,
+	"repertoire":           3,
+	"replica":              3,
+	"replication":          4,
+	"replicated":           4,
+	"replicate":            3,
+	"reprehensible":        5,
+	"representation":       5,
+	"representational":     6,
+	"represent":            3,
+	"representative":       5,
+	"reprimand":            3,
+	"reptile":              2,
+	"reputable":            4,
+	"reputation":           4,
+	"repr":                 1,
+	"rept":                 1,
+	"req":                  1,
+	"requiem":              3,
+	"requisition":          4,
+	"requisite":            3,
+	"res":                  1,
+	"rescuing":             3,
+	"rescue":               2,
+	"rescued":              2,
+	"reservation":          4,
+	"reservoir":            3,
+	"residency":            4,
+	"residential":          4,
+	"residence":            3,
+	"resident":             3,
+	"residue":              3,
+	"resignation":          4,
+	"resin":                2,
+	"resolution":           4,
+	"resolute":             3,
+	"resonator":            4,
+	"resonance":            3,
+	"resonant":             3,
+	"resonate":             3,
+	"respiration":          4,
+	"respiratory":          5,
+	"respirator":           4,
+	"respite":              2,
+	"restaurant":           3,
+	"restitution":          4,
+	"restoration":          4,
+	"resurrection":         4,
+	"resurrect":            3,
+	"resp":                 1,
+	"rest":                 1,
+	"restful":              2,
+	"resting":              2,
+	"restless":             2,
+	"restlessness":         3,
+	"ret":                  1,
+	"retina":               3,
+	"retinol":              3,
+	"retribution":          4,
+	"retro":                2,
+	"retroactive":          4,
+	"retrofit":             3,
+	"retrograde":           3,
+	"retrospective":        4,
+	"retrospectively":      5,
+	"retrospect":           3,
+	"rev":                  1,
+	"revelation":           4,
+	"revenue":              3,
+	"revel":                2,
+	"reverence":            3,
+	"reverend":             3,
+	"reverie":              3,
+	"revocable":            4,
+	"revocation":           4,
+	"revolution":           4,
+	"revolutionaries":      6,
+	"revolutionary":        6,
+	"revolutionize":        5,
+	"revolutionized":       5,
+	"rhapsody":             3,
+	"rhea":                 2,
+	"rheology":             4,
+	"rhetorical":           4,
+	"rhetoric":             3,
+	"rheumatism":           3,
+	"rheumatoid":           3,
+	"rheumatology":         5,
+	"rheumatic":            3,
+	"rhinitis":             3,
+	"rhino":                2,
+	"rhinoplasty":          4,
+	"rhinoceros":           4,
+	"rhizome":              2,
+	"rhinestone":           2,
+	"rho":                  1,
+	"rhodium":              3,
+	"rhododendron":         4,
+	"rhubarb":              2,
+	"rhyming":              2,
+	"rhyme":                1,
+	"rhythmic":             2,
+	"rhythm":               1,
+	"ria":                  2,
+	"rial":                 2,
+	"rialto":               3,
+	"riboflavin":           4,
+	"ribosome":             3,
+	"ribose":               2,
+	"ricotta":              3,
+	"ridiculous":           4,
+	"ridiculously":         5,
+	"rifle":                2,
+	"riley":                2,
+	"riot":                 2,
+	"riparian":             4,
+	"risotto":              3,
+	"rival":                2,
+	"rivalry":              3,
+	"riyal":                2,
+	"rib":                  1,
+	"ribbon":               2,
+	"ricochet":             3,
+	"rice":                 1,
+	"rich":                 1,
+	"riches":               2,
+	"richly":               2,
+	"richness":             2,
+	"rick":                 1,
+	"rickey":               2,
+	"rid":                  1,
+	"riddance":             2,
+	"ridden":               2,
+	"ridder":               2,
+	"riddle":               2,
+	"rider":                2,
+	"ridicule":             3,
+	"ridiculed":            3,
+	"riding":               2,
+	"ridley":               2,
+	"ride":                 1,
+	"ridge":                1,
+	"ridgeway":             2,
+	"riel":                 1,
+	"riesling":             2,
+	"rife":                 1,
+	"riff":                 1,
+	"rift":                 1,
+	"rig":                  1,
+	"rigging":              2,
+	"rigid":                2,
+	"rigor":                2,
+	"rigorous":             3,
+	"rigorously":           4,
+	"right":                1,
+	"righteous":            2,
+	"righteousness":        3,
+	"rightful":             2,
+	"rightfully":           3,
+	"rightly":              2,
+	"rights":               1,
+	"rim":                  1,
+	"rimming":              2,
+	"rin":                  1,
+	"rind":                 1,
+	"ring":                 1,
+	"ringer":               2,
+	"ringers":              2,
+	"ringgit":              2,
+	"ringing":              2,
+	"ringed":               1,
+	"rink":                 1,
+	"rinsing":              2,
+	"rinse":                1,
+	"rip":                  1,
+	"ripper":               2,
+	"ripping":              2,
+	"ripple":               2,
+	"ripe":                 1,
+	"risen":                2,
+	"riser":                2,
+	"rising":               2,
+	"rise":                 1,
+	"risk":                 1,
+	"risky":                2,
+	"rit":                  1,
+	"rita":                 2,
+	"ritter":               2,
+	"ritual":               3,
+	"rite":                 1,
+	"ritz":                 1,
+	"riv":                  1,
+	"river":                2,
+	"riverbank":            3,
+	"riverhead":            3,
+	"riverine":             3,
+	"rivet":                2,
+	"riveted":              3,
+	"riveting":             3,
+	"rive":                 1,
+	"rms":                  1,
+	"robot":                2,
+	"robust":               2,
+	"robustness":           3,
+	"rococo":               3,
+	"rodeo":                3,
+	"rodent":               2,
+	"romaine":              2,
+	"roman":                2,
+	"romanticism":          4,
+	"romantic":             3,
+	"romance":              2,
+	"romero":               3,
+	"ronin":                2,
+	"ros":                  2,
+	"rosary":               3,
+	"roselle":              2,
+	"rosette":              2,
+	"rota":                 2,
+	"rotary":               3,
+	"rotation":             3,
+	"rotational":           4,
+	"rotator":              3,
+	"rotate":               2,
+	"rotisserie":           4,
+	"roto":                 2,
+	"rotor":                2,
+	"rotunda":              3,
+	"roach":                1,
+	"road":                 1,
+	"roadblock":            2,
+	"roadhouse":            2,
+	"roadless":             2,
+	"roadrunner":           3,
+	"roadster":             2,
+	"roadway":              2,
+	"roam":                 1,
+	"roan":                 1,
+	"roar":                 1,
+	"roaring":              2,
+	"roast":                1,
+	"roaster":              2,
+	"roasting":             2,
+	"rob":                  1,
+	"robber":               2,
+	"robberies":            3,
+	"robbery":              3,
+	"robbing":              2,
+	"robin":                2,
+	"robe":                 1,
+	"roc":                  1,
+	"rock":                 1,
+	"rockabilly":           4,
+	"rockaway":             3,
+	"rocker":               2,
+	"rocket":               2,
+	"rockfish":             2,
+	"rocky":                2,
+	"rod":                  1,
+	"rode":                 1,
+	"roe":                  1,
+	"roebuck":              2,
+	"roger":                2,
+	"rogue":                1,
+	"role":                 1,
+	"roll":                 1,
+	"rollaway":             3,
+	"rollback":             2,
+	"roller":               2,
+	"rolling":              2,
+	"rom":                  1,
+	"romp":                 1,
+	"romper":               2,
+	"rondo":                2,
+	"ronde":                1,
+	"roo":                  1,
+	"rood":                 1,
+	"roof":                 1,
+	"roofing":              2,
+	"rook":                 1,
+	"rookie":               2,
+	"room":                 1,
+	"roommate":             2,
+	"roomy":                2,
+	"roost":                1,
+	"rooster":              2,
+	"root":                 1,
+	"rooted":               2,
+	"rooter":               2,
+	"roper":                2,
+	"roping":               2,
+	"rope":                 1,
+	"roque":                1,
+	"rosin":                2,
+	"roster":               2,
+	"rosy":                 2,
+	"rose":                 1,
+	"rosebud":              2,
+	"rosemary":             3,
+	"rosewood":             2,
+	"ross":                 1,
+	"rot":                  1,
+	"rotten":               2,
+	"rotting":              2,
+	"rote":                 1,
+	"rouble":               2,
+	"roulette":             2,
+	"routine":              2,
+	"routinely":            3,
+	"rouge":                1,
+	"rough":                1,
+	"roughly":              2,
+	"roughness":            2,
+	"round":                1,
+	"roundabout":           3,
+	"rounded":              2,
+	"rounder":              2,
+	"rounders":             2,
+	"roundhouse":           2,
+	"rounding":             2,
+	"roundup":              2,
+	"rousing":              2,
+	"rouse":                1,
+	"rout":                 1,
+	"routed":               2,
+	"router":               2,
+	"routing":              2,
+	"route":                1,
+	"roux":                 1,
+	"rover":                2,
+	"roving":               2,
+	"rove":                 1,
+	"row":                  1,
+	"rowan":                2,
+	"rowdy":                2,
+	"royal":                2,
+	"royalty":              3,
+	"royale":               2,
+	"rpm":                  1,
+	"rps":                  1,
+	"rpt":                  1,
+	"rubella":              3,
+	"ruble":                2,
+	"rubric":               2,
+	"ruby":                 2,
+	"rudimentary":          5,
+	"rumor":                2,
+	"rumour":               2,
+	"rupee":                2,
+	"rupiah":               3,
+	"rural":                2,
+	"rub":                  1,
+	"rubber":               2,
+	"rubberized":           3,
+	"rubbing":              2,
+	"rubbish":              2,
+	"rubble":               2,
+	"rucksack":             2,
+	"ruckus":               2,
+	"rudder":               2,
+	"ruddy":                2,
+	"rudd":                 1,
+	"rude":                 1,
+	"rudely":               2,
+	"rue":                  1,
+	"ruffle":               2,
+	"ruffled":              2,
+	"ruff":                 1,
+	"rug":                  1,
+	"rugby":                2,
+	"rugged":               2,
+	"ruin":                 1,
+	"ruler":                2,
+	"ruling":               2,
+	"rule":                 1,
+	"rum":                  1,
+	"rumba":                2,
+	"rumble":               2,
+	"rummy":                2,
+	"rump":                 1,
+	"run":                  1,
+	"rundown":              2,
+	"runner":               2,
+	"running":              2,
+	"runny":                2,
+	"runoff":               2,
+	"runway":               2,
+	"rune":                 1,
+	"rung":                 1,
+	"rupture":              2,
+	"rustic":               2,
+	"ruse":                 1,
+	"rush":                 1,
+	"rushing":              2,
+	"rusk":                 1,
+	"rust":                 1,
+	"rusty":                2,
+	"rut":                  1,
+	"ruth":                 1,
+	"rutherford":           3,
+	"ruthless":             2,
+	"rwd":                  1,
+	"rye":                  1,
+	"saber":                2,
+	"sabin":                2,
+	"sable":                2,
+	"sabre":                2,
+	"sacred":               2,
+	"sade":                 2,
+	"sadistic":             3,
+	"safari":               3,
+	"saga":                 2,
+	"sago":                 2,
+	"sahib":                2,
+	"sakai":                2,
+	"salami":               3,
+	"salaam":               2,
+	"salient":              3,
+	"saliva":               3,
+	"salina":               3,
+	"salinity":             4,
+	"saline":               2,
+	"salon":                2,
+	"saloon":               2,
+	"salute":               2,
+	"samara":               3,
+	"sari":                 2,
+	"sarong":               2,
+	"satanic":              3,
+	"sateen":               2,
+	"satirical":            4,
+	"savanna":              3,
+	"savannah":             3,
+	"savant":               2,
+	"savor":                2,
+	"savory":               3,
+	"savour":               2,
+	"savoy":                2,
+	"sabbatical":           4,
+	"sabotage":             3,
+	"sac":                  1,
+	"sacramental":          4,
+	"sacrament":            3,
+	"sacrificial":          4,
+	"sacrifice":            3,
+	"sack":                 1,
+	"sad":                  1,
+	"saddle":               2,
+	"saddlery":             3,
+	"sadism":               2,
+	"sadly":                2,
+	"sadness":              2,
+	"sae":                  1,
+	"saffron":              2,
+	"safe":                 1,
+	"safeguard":            2,
+	"safely":               2,
+	"safety":               2,
+	"sag":                  1,
+	"sager":                2,
+	"sagging":              2,
+	"sage":                 1,
+	"sagebrush":            2,
+	"said":                 1,
+	"sail":                 1,
+	"sailboat":             2,
+	"sailing":              2,
+	"sailor":               2,
+	"sain":                 1,
+	"saint":                1,
+	"saith":                1,
+	"sake":                 1,
+	"sal":                  1,
+	"salamander":           4,
+	"salaried":             3,
+	"salary":               3,
+	"salad":                2,
+	"salivary":             4,
+	"sally":                2,
+	"salmonella":           4,
+	"salutation":           4,
+	"salvation":            3,
+	"salvage":              2,
+	"salvaged":             2,
+	"salvia":               3,
+	"salvo":                2,
+	"sale":                 1,
+	"sales":                1,
+	"salesman":             2,
+	"salespeople":          3,
+	"salesperson":          3,
+	"salmon":               2,
+	"salt":                 1,
+	"salted":               2,
+	"salter":               2,
+	"saltwater":            3,
+	"salty":                2,
+	"salts":                1,
+	"salve":                1,
+	"samba":                2,
+	"sammy":                2,
+	"sample":               2,
+	"sampler":              2,
+	"sampling":             2,
+	"samurai":              3,
+	"same":                 1,
+	"samp":                 1,
+	"sandal":               2,
+	"sandalwood":           3,
+	"sanguine":             2,
+	"sanitation":           4,
+	"sanitary":             4,
+	"sanity":               3,
+	"sanctification":       5,
+	"sanctified":           3,
+	"sanctity":             3,
+	"sanction":             2,
+	"sanctuaries":          4,
+	"sanctuary":            4,
+	"sanctum":              2,
+	"sand":                 1,
+	"sandbox":              2,
+	"sanded":               2,
+	"sander":               2,
+	"sandman":              2,
+	"sandpaper":            3,
+	"sandpiper":            3,
+	"sandstone":            2,
+	"sandstorm":            2,
+	"sandwich":             2,
+	"sandy":                2,
+	"sane":                 1,
+	"sang":                 1,
+	"sank":                 1,
+	"sans":                 1,
+	"sant":                 1,
+	"sap":                  1,
+	"sapphire":             2,
+	"saraband":             3,
+	"sarcastic":            3,
+	"sarcasm":              2,
+	"sarcoma":              3,
+	"sarge":                1,
+	"saskatoon":            3,
+	"sassafras":            3,
+	"sassy":                2,
+	"sash":                 1,
+	"sass":                 1,
+	"sat":                  1,
+	"satellite":            3,
+	"satin":                2,
+	"satire":               2,
+	"satisfaction":         4,
+	"satisfactorily":       6,
+	"satisfactory":         5,
+	"satisfied":            3,
+	"satisfy":              3,
+	"saturation":           4,
+	"saturated":            4,
+	"satchel":              2,
+	"saucer":               2,
+	"sauna":                2,
+	"sausage":              2,
+	"saute":                2,
+	"saucy":                2,
+	"sauce":                1,
+	"saucepan":             2,
+	"sav":                  1,
+	"savage":               2,
+	"saver":                2,
+	"savin":                2,
+	"saving":               2,
+	"savior":               2,
+	"saviour":              2,
+	"savvy":                2,
+	"save":                 1,
+	"saw":                  1,
+	"sawdust":              2,
+	"sawing":               2,
+	"sawmill":              2,
+	"sawyer":               2,
+	"sawn":                 1,
+	"sax":                  1,
+	"saxony":               3,
+	"saxophonist":          4,
+	"saxophone":            3,
+	"say":                  1,
+	"sayer":                2,
+	"saying":               2,
+	"scabies":              2,
+	"scalar":               2,
+	"scab":                 1,
+	"scaffold":             2,
+	"scaffolding":          3,
+	"scalable":             3,
+	"scaler":               2,
+	"scaling":              2,
+	"scallop":              2,
+	"scalpel":              2,
+	"scaly":                2,
+	"scale":                1,
+	"scaled":               1,
+	"scalp":                1,
+	"scamp":                1,
+	"scan":                 1,
+	"scandal":              2,
+	"scandic":              2,
+	"scanner":              2,
+	"scanning":             2,
+	"scant":                1,
+	"scape":                1,
+	"scapegoat":            2,
+	"scar":                 1,
+	"scarab":               2,
+	"scarcity":             3,
+	"scariest":             3,
+	"scaring":              2,
+	"scarlet":              2,
+	"scary":                2,
+	"scarce":               1,
+	"scarcely":             2,
+	"scare":                1,
+	"scarecrow":            2,
+	"scarf":                1,
+	"scart":                1,
+	"scarves":              1,
+	"scat":                 1,
+	"scatter":              2,
+	"scattering":           3,
+	"scathing":             2,
+	"scavenger":            3,
+	"scenario":             4,
+	"scenarios":            4,
+	"scenic":               2,
+	"scenery":              3,
+	"scene":                1,
+	"scent":                1,
+	"sceptical":            3,
+	"scepticism":           3,
+	"sceptre":              2,
+	"sch":                  1,
+	"schema":               2,
+	"schematic":            3,
+	"schedule":             2,
+	"scheme":               1,
+	"schiller":             2,
+	"schilling":            2,
+	"schism":               1,
+	"schizophrenia":        5,
+	"schizophrenic":        4,
+	"schnauzer":            2,
+	"schneider":            2,
+	"scholastic":           3,
+	"scholar":              2,
+	"scholarship":          3,
+	"school":               1,
+	"schoolboy":            2,
+	"schoolchildren":       3,
+	"schoolgirl":           2,
+	"schoolhouse":          2,
+	"schooling":            2,
+	"schooner":             2,
+	"sci":                  1,
+	"sciatica":             4,
+	"scientific":           4,
+	"scientist":            3,
+	"science":              2,
+	"scion":                2,
+	"scintillation":        4,
+	"scissor":              2,
+	"scissors":             2,
+	"scleroderma":          4,
+	"sclerosis":            3,
+	"scoliosis":            4,
+	"scotia":               2,
+	"sconce":               1,
+	"scoop":                1,
+	"scoot":                1,
+	"scooter":              2,
+	"scop":                 1,
+	"scope":                1,
+	"scoring":              2,
+	"scorpion":             3,
+	"score":                1,
+	"scoreboard":           2,
+	"scorecard":            2,
+	"scoreless":            2,
+	"scorn":                1,
+	"scot":                 1,
+	"scotch":               1,
+	"scour":                1,
+	"scouring":             2,
+	"scourge":              1,
+	"scouse":               1,
+	"scout":                1,
+	"scouting":             2,
+	"scr":                  1,
+	"scrabble":             2,
+	"scramble":             2,
+	"scrambler":            2,
+	"scran":                1,
+	"scrap":                1,
+	"scrapbook":            2,
+	"scraper":              2,
+	"scraping":             2,
+	"scrapping":            2,
+	"scrappy":              2,
+	"scrape":               1,
+	"scratch":              1,
+	"scratches":            2,
+	"scratchy":             2,
+	"scream":               1,
+	"screech":              1,
+	"screeching":           2,
+	"screen":               1,
+	"screening":            2,
+	"screenings":           2,
+	"screenplay":           2,
+	"screw":                1,
+	"screwdriver":          3,
+	"screwed":              1,
+	"scribble":             2,
+	"scribe":               1,
+	"scrimmage":            2,
+	"scrip":                1,
+	"scriptural":           3,
+	"scripture":            2,
+	"script":               1,
+	"scrotum":              2,
+	"scroll":               1,
+	"scrutinize":           3,
+	"scrutiny":             3,
+	"scrub":                1,
+	"scrubbed":             2,
+	"scrubber":             2,
+	"scrubbing":            2,
+	"scrum":                1,
+	"scrumptious":          2,
+	"scuba":                2,
+	"scud":                 1,
+	"sculptor":             2,
+	"sculpture":            2,
+	"sculptured":           2,
+	"sculpt":               1,
+	"scum":                 1,
+	"secession":            3,
+	"seclusion":            3,
+	"secluded":             3,
+	"secrecy":              3,
+	"secretion":            3,
+	"secretive":            3,
+	"secretory":            4,
+	"secret":               2,
+	"secretly":             3,
+	"security":             4,
+	"secure":               2,
+	"securely":             3,
+	"sedation":             3,
+	"sedan":                2,
+	"sedition":             3,
+	"seducing":             3,
+	"seduction":            3,
+	"seductive":            3,
+	"seduce":               2,
+	"seduced":              2,
+	"selenium":             4,
+	"selectable":           4,
+	"selection":            3,
+	"selectivity":          5,
+	"selective":            3,
+	"selectively":          4,
+	"selector":             3,
+	"select":               2,
+	"semantically":         5,
+	"semantic":             3,
+	"semantics":            3,
+	"semen":                2,
+	"semester":             3,
+	"semiotics":            4,
+	"semis":                2,
+	"sena":                 2,
+	"senile":               2,
+	"senor":                2,
+	"sepia":                3,
+	"sequel":               2,
+	"sequential":           3,
+	"sequentially":         4,
+	"sequencer":            3,
+	"sequence":             2,
+	"sequent":              2,
+	"sequestration":        4,
+	"sequin":               2,
+	"sequined":             2,
+	"sequoia":              3,
+	"sera":                 2,
+	"serena":               3,
+	"serenity":             4,
+	"serene":               2,
+	"serial":               3,
+	"serialization":        6,
+	"serialize":            4,
+	"serialized":           4,
+	"serious":              3,
+	"seriously":            4,
+	"seriousness":          4,
+	"series":               2,
+	"serum":                2,
+	"seta":                 2,
+	"seton":                2,
+	"severity":             4,
+	"severe":               2,
+	"severely":             3,
+	"sea":                  1,
+	"seaboard":             2,
+	"seacoast":             2,
+	"seafood":              2,
+	"seafront":             2,
+	"seaman":               2,
+	"seaplane":             2,
+	"seaport":              2,
+	"seascape":             2,
+	"seashell":             2,
+	"seashore":             2,
+	"seaside":              2,
+	"season":               2,
+	"seasonal":             3,
+	"seasonally":           4,
+	"seasoning":            3,
+	"seaward":              2,
+	"seaweed":              2,
+	"seal":                 1,
+	"sealant":              2,
+	"sealer":               2,
+	"sealed":               1,
+	"seam":                 1,
+	"seamless":             2,
+	"seamlessly":           3,
+	"sear":                 1,
+	"search":               1,
+	"searchable":           3,
+	"searcher":             2,
+	"searching":            2,
+	"searchlight":          2,
+	"seat":                 1,
+	"seater":               2,
+	"seating":              2,
+	"sec":                  1,
+	"second":               2,
+	"secondary":            4,
+	"secondly":             3,
+	"secretarial":          5,
+	"secretariat":          5,
+	"secretary":            4,
+	"sectarian":            4,
+	"section":              2,
+	"sectional":            3,
+	"sector":               2,
+	"sectoral":             3,
+	"secular":              3,
+	"secularism":           4,
+	"sect":                 1,
+	"sedative":             3,
+	"sedentary":            4,
+	"sedimentary":          5,
+	"sedimentation":        5,
+	"sediment":             3,
+	"sedge":                1,
+	"see":                  1,
+	"seeing":               2,
+	"seed":                 1,
+	"seedling":             2,
+	"seedy":                2,
+	"seek":                 1,
+	"seeker":               2,
+	"seeking":              2,
+	"seem":                 1,
+	"seeming":              2,
+	"seen":                 1,
+	"seep":                 1,
+	"seepage":              2,
+	"seer":                 1,
+	"segmentation":         4,
+	"segmental":            3,
+	"segment":              2,
+	"segregation":          4,
+	"segregated":           4,
+	"sei":                  1,
+	"seizure":              2,
+	"seine":                1,
+	"seismic":              2,
+	"seismology":           3,
+	"seizing":              2,
+	"seize":                1,
+	"sel":                  1,
+	"seldom":               2,
+	"selva":                2,
+	"self":                 1,
+	"selfish":              2,
+	"selfishness":          3,
+	"selfless":             2,
+	"sell":                 1,
+	"seller":               2,
+	"selling":              2,
+	"selves":               1,
+	"sem":                  1,
+	"semaphore":            3,
+	"semblance":            2,
+	"semi":                 2,
+	"semiannual":           5,
+	"semicolon":            4,
+	"semiconductor":        5,
+	"semifinal":            4,
+	"seminal":              3,
+	"seminar":              3,
+	"seminaries":           4,
+	"seminary":             4,
+	"sempre":               2,
+	"sen":                  1,
+	"senatorial":           5,
+	"senator":              3,
+	"senate":               2,
+	"senior":               2,
+	"seniority":            4,
+	"senna":                2,
+	"sensation":            3,
+	"sensational":          4,
+	"sensibility":          5,
+	"sensible":             3,
+	"sensibly":             3,
+	"sensitization":        5,
+	"sensitivity":          5,
+	"sensitive":            3,
+	"sensory":              3,
+	"sensor":               2,
+	"sensual":              3,
+	"sensuality":           5,
+	"sensuous":             3,
+	"sentencing":           3,
+	"sentence":             2,
+	"sentenced":            2,
+	"sentient":             3,
+	"sentiment":            3,
+	"sentimental":          4,
+	"sentinel":             3,
+	"sentry":               2,
+	"senza":                2,
+	"send":                 1,
+	"sender":               2,
+	"sending":              2,
+	"sensing":              2,
+	"sense":                1,
+	"senseless":            2,
+	"sent":                 1,
+	"sep":                  1,
+	"separable":            4,
+	"separation":           4,
+	"separatist":           4,
+	"separator":            4,
+	"separated":            4,
+	"separating":           4,
+	"separate":             3,
+	"separately":           4,
+	"separates":            3,
+	"sepsis":               2,
+	"septal":               2,
+	"septic":               2,
+	"septum":               2,
+	"sept":                 1,
+	"seq":                  1,
+	"ser":                  1,
+	"seraphim":             3,
+	"serenade":             3,
+	"serendipity":          5,
+	"sergeant":             2,
+	"serif":                2,
+	"serine":               2,
+	"sermon":               2,
+	"serotonin":            4,
+	"serpentine":           3,
+	"serpent":              2,
+	"serrated":             3,
+	"servitude":            3,
+	"services":             3,
+	"servo":                2,
+	"serge":                1,
+	"serv":                 1,
+	"servant":              2,
+	"server":               2,
+	"servicing":            3,
+	"service":              2,
+	"serviceability":       6,
+	"serviceable":          4,
+	"serviced":             2,
+	"serving":              2,
+	"serve":                1,
+	"sesame":               3,
+	"session":              2,
+	"sessional":            3,
+	"sessions":             2,
+	"set":                  1,
+	"setter":               2,
+	"setting":              2,
+	"settle":               2,
+	"settlement":           3,
+	"settler":              2,
+	"settling":             2,
+	"setup":                2,
+	"seven":                2,
+	"sevenfold":            3,
+	"seventeen":            3,
+	"seventeenth":          3,
+	"seventy":              3,
+	"sevens":               2,
+	"seventh":              2,
+	"sever":                2,
+	"several":              3,
+	"severally":            4,
+	"severance":            3,
+	"sew":                  1,
+	"sewage":               2,
+	"sewer":                2,
+	"sewerage":             3,
+	"sewing":               2,
+	"sewn":                 1,
+	"sex":                  1,
+	"sexiest":              3,
+	"sexism":               2,
+	"sexist":               2,
+	"sextet":               2,
+	"sexton":               2,
+	"sexual":               3,
+	"sexuality":            5,
+	"sexy":                 2,
+	"sgd":                  1,
+	"shalom":               2,
+	"shamanic":             3,
+	"shamanism":            3,
+	"sharia":               3,
+	"sharif":               2,
+	"shabby":               2,
+	"shack":                1,
+	"shackle":              2,
+	"shad":                 1,
+	"shaded":               2,
+	"shading":              2,
+	"shadow":               2,
+	"shadowy":              3,
+	"shadowed":             2,
+	"shady":                2,
+	"shade":                1,
+	"shades":               1,
+	"shaft":                1,
+	"shag":                 1,
+	"shaggy":               2,
+	"shah":                 1,
+	"shaken":               2,
+	"shaker":               2,
+	"shaking":              2,
+	"shaky":                2,
+	"shake":                1,
+	"shakedown":            2,
+	"shallow":              2,
+	"shale":                1,
+	"shall":                1,
+	"shalt":                1,
+	"sham":                 1,
+	"shaman":               2,
+	"shambles":             2,
+	"shampoo":              2,
+	"shamrock":             2,
+	"shame":                1,
+	"shameful":             2,
+	"shameless":            2,
+	"shamelessly":          3,
+	"shandy":               2,
+	"shanti":               2,
+	"shanty":               2,
+	"shanghai":             2,
+	"shank":                1,
+	"shaping":              2,
+	"shape":                1,
+	"shaped":               1,
+	"shard":                1,
+	"share":                1,
+	"shareholder":          3,
+	"shark":                1,
+	"sharp":                1,
+	"sharpen":              2,
+	"sharper":              2,
+	"sharpie":              2,
+	"sharply":              2,
+	"sharpness":            2,
+	"shatter":              2,
+	"shaven":               2,
+	"shaver":               2,
+	"shaving":              2,
+	"shave":                1,
+	"shaw":                 1,
+	"shawl":                1,
+	"shay":                 1,
+	"she":                  1,
+	"shea":                 2,
+	"sheaf":                1,
+	"shear":                1,
+	"shearer":              2,
+	"shearing":             2,
+	"shearling":            2,
+	"shears":               1,
+	"sheath":               1,
+	"shed":                 1,
+	"shedding":             2,
+	"sheen":                1,
+	"sheep":                1,
+	"sheepdog":             2,
+	"sheepskin":            2,
+	"sheer":                1,
+	"sheet":                1,
+	"sheeting":             2,
+	"sheila":               2,
+	"sheik":                1,
+	"sheikh":               1,
+	"shekel":               2,
+	"shelter":              2,
+	"shelf":                1,
+	"shell":                1,
+	"shellfish":            2,
+	"shelly":               2,
+	"shelled":              1,
+	"shelving":             2,
+	"shelves":              1,
+	"shepherd":             2,
+	"sheriff":              2,
+	"sherlock":             2,
+	"sherry":               2,
+	"shew":                 1,
+	"shh":                  1,
+	"shigella":             3,
+	"shield":               1,
+	"shift":                1,
+	"shilling":             2,
+	"shim":                 1,
+	"shimmer":              2,
+	"shin":                 1,
+	"shiner":               2,
+	"shingle":              2,
+	"shingles":             2,
+	"shining":              2,
+	"shiny":                2,
+	"shine":                1,
+	"ship":                 1,
+	"shipboard":            2,
+	"shipman":              2,
+	"shipment":             2,
+	"shipper":              2,
+	"shipping":             2,
+	"shipwreck":            2,
+	"shipyard":             2,
+	"shire":                1,
+	"shirt":                1,
+	"shirtless":            2,
+	"shit":                 1,
+	"shitting":             2,
+	"shitty":               2,
+	"shiv":                 1,
+	"shiver":               2,
+	"shogun":               2,
+	"shoal":                1,
+	"shock":                1,
+	"shocker":              2,
+	"shocking":             2,
+	"shockingly":           3,
+	"shoddy":               2,
+	"shoe":                 1,
+	"shoemaker":            3,
+	"shoestring":           2,
+	"shone":                1,
+	"shook":                1,
+	"shoot":                1,
+	"shooter":              2,
+	"shop":                 1,
+	"shopgirl":             2,
+	"shopkeeper":           3,
+	"shoplifting":          3,
+	"shopper":              2,
+	"shopping":             2,
+	"shore":                1,
+	"shoreline":            2,
+	"short":                1,
+	"shortage":             2,
+	"shortcake":            2,
+	"shortcoming":          3,
+	"shortcut":             2,
+	"shorten":              2,
+	"shortening":           3,
+	"shortfall":            2,
+	"shorthand":            2,
+	"shortly":              2,
+	"shortness":            2,
+	"shortstop":            2,
+	"shortwave":            2,
+	"shorty":               2,
+	"shorts":               1,
+	"shot":                 1,
+	"shotgun":              2,
+	"shoulder":             2,
+	"should":               1,
+	"shout":                1,
+	"shovel":               2,
+	"shoving":              2,
+	"shove":                1,
+	"show":                 1,
+	"showcase":             2,
+	"showdown":             2,
+	"shower":               2,
+	"showing":              2,
+	"showplace":            2,
+	"showroom":             2,
+	"showy":                2,
+	"shown":                1,
+	"shr":                  1,
+	"shrapnel":             2,
+	"shred":                1,
+	"shredded":             2,
+	"shredder":             2,
+	"shredding":            2,
+	"shrew":                1,
+	"shrewd":               1,
+	"shrike":               1,
+	"shrill":               1,
+	"shrimp":               1,
+	"shrine":               1,
+	"shrink":               1,
+	"shrinkage":            2,
+	"shrinking":            2,
+	"shroud":               1,
+	"shrub":                1,
+	"shrug":                1,
+	"shrunk":               1,
+	"shrunken":             2,
+	"shudder":              2,
+	"shuffle":              2,
+	"shun":                 1,
+	"shunt":                1,
+	"shut":                 1,
+	"shutdown":             2,
+	"shutout":              2,
+	"shutter":              2,
+	"shuttle":              2,
+	"shy":                  1,
+	"shyness":              2,
+	"sienna":               3,
+	"sierra":               3,
+	"siesta":               3,
+	"silage":               2,
+	"silencer":             3,
+	"silencing":            3,
+	"silence":              2,
+	"silenced":             2,
+	"silent":               2,
+	"silently":             3,
+	"silex":                2,
+	"silo":                 2,
+	"sima":                 2,
+	"simultaneously":       6,
+	"sinus":                2,
+	"sinuses":              3,
+	"sinusitis":            4,
+	"sinusoidal":           4,
+	"siphon":               2,
+	"siren":                2,
+	"sisal":                2,
+	"sitar":                2,
+	"situs":                2,
+	"sib":                  1,
+	"sibling":              2,
+	"sic":                  1,
+	"sick":                 1,
+	"sickening":            3,
+	"sickle":               2,
+	"sickly":               2,
+	"sickness":             2,
+	"sided":                2,
+	"siding":               2,
+	"side":                 1,
+	"sidebar":              2,
+	"sideboard":            2,
+	"sidekick":             2,
+	"sideline":             2,
+	"sidelines":            2,
+	"sideshow":             2,
+	"sidestep":             2,
+	"sidewalk":             2,
+	"sidewall":             2,
+	"sideways":             2,
+	"sidewinder":           3,
+	"siemens":              2,
+	"siege":                1,
+	"sieve":                1,
+	"sift":                 1,
+	"sig":                  1,
+	"sigma":                2,
+	"signatory":            4,
+	"signature":            3,
+	"signal":               2,
+	"signaling":            3,
+	"signalling":           3,
+	"signaled":             2,
+	"signalled":            2,
+	"signet":               2,
+	"signified":            3,
+	"signify":              3,
+	"signifying":           4,
+	"significance":         4,
+	"significant":          4,
+	"sigh":                 1,
+	"sight":                1,
+	"sighted":              2,
+	"sign":                 1,
+	"silhouetted":          4,
+	"silhouette":           3,
+	"silicate":             3,
+	"silicon":              3,
+	"silicone":             3,
+	"silica":               3,
+	"silliness":            3,
+	"silly":                2,
+	"silva":                2,
+	"silver":               2,
+	"silverware":           3,
+	"silvery":              3,
+	"silk":                 1,
+	"silken":               2,
+	"silkscreen":           2,
+	"silky":                2,
+	"sill":                 1,
+	"silt":                 1,
+	"silty":                2,
+	"simba":                2,
+	"simian":               3,
+	"similar":              3,
+	"similarity":           5,
+	"similarly":            4,
+	"simile":               3,
+	"simmer":               2,
+	"simple":               2,
+	"simplex":              2,
+	"simplified":           3,
+	"simplify":             3,
+	"simplifying":          4,
+	"simplicity":           4,
+	"simplistic":           3,
+	"simulation":           4,
+	"simulator":            4,
+	"simulated":            4,
+	"simulating":           4,
+	"simulate":             3,
+	"simultaneous":         5,
+	"simp":                 1,
+	"simply":               2,
+	"sin":                  1,
+	"sincerity":            4,
+	"sincere":              2,
+	"sincerely":            3,
+	"sinfonia":             4,
+	"sinful":               2,
+	"single":               2,
+	"singleton":            3,
+	"singles":              2,
+	"singlet":              2,
+	"singly":               2,
+	"singular":             3,
+	"singularity":          5,
+	"singularly":           4,
+	"sinister":             3,
+	"sinner":               2,
+	"since":                1,
+	"sine":                 1,
+	"sing":                 1,
+	"singer":               2,
+	"singing":              2,
+	"sinh":                 1,
+	"sink":                 1,
+	"sinking":              2,
+	"sip":                  1,
+	"sipping":              2,
+	"sir":                  1,
+	"sirloin":              2,
+	"sire":                 1,
+	"sis":                  1,
+	"sissy":                2,
+	"sister":               2,
+	"sisterhood":           3,
+	"sit":                  1,
+	"sitcom":               2,
+	"sited":                2,
+	"siting":               2,
+	"sitter":               2,
+	"sitting":              2,
+	"situation":            4,
+	"situational":          5,
+	"situated":             4,
+	"site":                 1,
+	"sith":                 1,
+	"six":                  1,
+	"sixpence":             2,
+	"sixteen":              2,
+	"sixteenth":            2,
+	"sixty":                2,
+	"sixth":                1,
+	"sizable":              3,
+	"sizing":               2,
+	"sizzle":               2,
+	"size":                 1,
+	"sizeable":             3,
+	"sized":                1,
+	"skater":               2,
+	"skating":              2,
+	"skate":                1,
+	"skateboard":           2,
+	"skatepark":            2,
+	"skeet":                1,
+	"skeleton":             3,
+	"skeptical":            3,
+	"skepticism":           3,
+	"skeptic":              2,
+	"sketch":               1,
+	"sketchbook":           2,
+	"sketchy":              2,
+	"skew":                 1,
+	"ski":                  1,
+	"skiing":               2,
+	"skid":                 1,
+	"skiff":                1,
+	"skilful":              2,
+	"skillet":              2,
+	"skilling":             2,
+	"skill":                1,
+	"skillful":             2,
+	"skillfully":           3,
+	"skilled":              1,
+	"skim":                 1,
+	"skimmer":              2,
+	"skimming":             2,
+	"skimpy":               2,
+	"skin":                 1,
+	"skinner":              2,
+	"skinning":             2,
+	"skinny":               2,
+	"skinned":              1,
+	"skip":                 1,
+	"skipper":              2,
+	"skipping":             2,
+	"skirmish":             2,
+	"skirt":                1,
+	"skirting":             2,
+	"skit":                 1,
+	"skull":                1,
+	"skunk":                1,
+	"sky":                  1,
+	"skydiving":            3,
+	"skydive":              2,
+	"skylark":              2,
+	"skylight":             2,
+	"skyline":              2,
+	"skyscraper":           3,
+	"skyway":               2,
+	"slalom":               2,
+	"slab":                 1,
+	"slack":                1,
+	"slacker":              2,
+	"slacks":               1,
+	"slag":                 1,
+	"slain":                1,
+	"slam":                 1,
+	"slamming":             2,
+	"slander":              2,
+	"slang":                1,
+	"slant":                1,
+	"slap":                 1,
+	"slapping":             2,
+	"slapstick":            2,
+	"slash":                1,
+	"slashing":             2,
+	"slat":                 1,
+	"slated":               2,
+	"slater":               2,
+	"slate":                1,
+	"slaughter":            2,
+	"slaughterhouse":       3,
+	"slavery":              3,
+	"slave":                1,
+	"slaw":                 1,
+	"slay":                 1,
+	"slaying":              2,
+	"sld":                  1,
+	"sleazy":               2,
+	"sled":                 1,
+	"sledding":             2,
+	"sledge":               1,
+	"sleek":                1,
+	"sleep":                1,
+	"sleeper":              2,
+	"sleeping":             2,
+	"sleepless":            2,
+	"sleepwear":            2,
+	"sleepy":               2,
+	"sleeps":               1,
+	"sleet":                1,
+	"sleeve":               1,
+	"sleeveless":           2,
+	"sleigh":               1,
+	"slender":              2,
+	"slept":                1,
+	"sleuth":               1,
+	"slew":                 1,
+	"slicer":               2,
+	"slicing":              2,
+	"slice":                1,
+	"slick":                1,
+	"slider":               2,
+	"sliding":              2,
+	"slide":                1,
+	"slight":               1,
+	"slightly":             2,
+	"slim":                 1,
+	"slimline":             2,
+	"slimmer":              2,
+	"slimming":             2,
+	"slimy":                2,
+	"slime":                1,
+	"sling":                1,
+	"slingshot":            2,
+	"slinky":               2,
+	"slip":                 1,
+	"slipknot":             2,
+	"slippage":             2,
+	"slipper":              2,
+	"slippery":             3,
+	"slit":                 1,
+	"sliver":               2,
+	"slogan":               2,
+	"sloop":                1,
+	"sloping":              2,
+	"sloppy":               2,
+	"slope":                1,
+	"slot":                 1,
+	"slotted":              2,
+	"sloth":                1,
+	"slough":               1,
+	"slow":                 1,
+	"slowdown":             2,
+	"slowly":               2,
+	"slowness":             2,
+	"sludge":               1,
+	"slug":                 1,
+	"slugger":              2,
+	"sluggish":             2,
+	"slum":                 1,
+	"slumber":              2,
+	"slump":                1,
+	"slung":                1,
+	"slur":                 1,
+	"slurry":               2,
+	"slurp":                1,
+	"slush":                1,
+	"slut":                 1,
+	"slutty":               2,
+	"sly":                  1,
+	"smack":                1,
+	"smacking":             2,
+	"small":                1,
+	"smallpox":             2,
+	"smart":                1,
+	"smartly":              2,
+	"smarty":               2,
+	"smash":                1,
+	"smashing":             2,
+	"smashed":              1,
+	"smear":                1,
+	"smell":                1,
+	"smelling":             2,
+	"smelly":               2,
+	"smelt":                1,
+	"smelter":              2,
+	"smiling":              2,
+	"smile":                1,
+	"smirk":                1,
+	"smit":                 1,
+	"smitten":              2,
+	"smite":                1,
+	"smith":                1,
+	"smithers":             2,
+	"smog":                 1,
+	"smoker":               2,
+	"smoking":              2,
+	"smoky":                2,
+	"smoke":                1,
+	"smokeless":            2,
+	"smooth":               1,
+	"smoother":             2,
+	"smoothie":             2,
+	"smoothies":            2,
+	"smoothly":             2,
+	"smoothness":           2,
+	"smote":                1,
+	"smother":              2,
+	"smudge":               1,
+	"smug":                 1,
+	"smuggler":             2,
+	"smut":                 1,
+	"snack":                1,
+	"snag":                 1,
+	"snail":                1,
+	"snake":                1,
+	"snap":                 1,
+	"snapper":              2,
+	"snapping":             2,
+	"snappy":               2,
+	"snapshot":             2,
+	"snare":                1,
+	"snatch":               1,
+	"sneak":                1,
+	"sneaker":              2,
+	"sneakers":             2,
+	"sneaking":             2,
+	"sneaky":               2,
+	"sneezing":             2,
+	"sneeze":               1,
+	"snell":                1,
+	"snicket":              2,
+	"snider":               2,
+	"sniff":                1,
+	"sniffer":              2,
+	"snip":                 1,
+	"sniper":               2,
+	"sniping":              2,
+	"snippet":              2,
+	"snipe":                1,
+	"snips":                1,
+	"snob":                 1,
+	"snook":                1,
+	"snooker":              2,
+	"snoop":                1,
+	"snooper":              2,
+	"snoopy":               2,
+	"snooze":               1,
+	"snoring":              2,
+	"snorkel":              2,
+	"snore":                1,
+	"snort":                1,
+	"snot":                 1,
+	"snout":                1,
+	"snow":                 1,
+	"snowball":             2,
+	"snowbird":             2,
+	"snowfall":             2,
+	"snowflake":            2,
+	"snowman":              2,
+	"snowmobile":           3,
+	"snowshoe":             2,
+	"snowshoeing":          3,
+	"snowstorm":            2,
+	"snowy":                2,
+	"snr":                  1,
+	"snub":                 1,
+	"snuck":                1,
+	"snuff":                1,
+	"snug":                 1,
+	"snuggle":              2,
+	"snugly":               2,
+	"sober":                2,
+	"sobriety":             4,
+	"societal":             4,
+	"society":              4,
+	"socioeconomic":        7,
+	"sociological":         6,
+	"sociologist":          5,
+	"sociology":            5,
+	"sociable":             3,
+	"social":               2,
+	"socialization":        5,
+	"socialism":            3,
+	"socialist":            3,
+	"socialite":            3,
+	"socializing":          4,
+	"socialize":            3,
+	"socialized":           3,
+	"soda":                 2,
+	"sodium":               3,
+	"sofa":                 2,
+	"soho":                 2,
+	"sojourn":              2,
+	"sola":                 2,
+	"solano":               3,
+	"solar":                2,
+	"solarium":             4,
+	"solenoid":             3,
+	"solicitor":            4,
+	"solicit":              3,
+	"solidified":           4,
+	"solidify":             4,
+	"solo":                 2,
+	"soloist":              3,
+	"solution":             3,
+	"soma":                 2,
+	"somatic":              3,
+	"sonata":               3,
+	"sonar":                2,
+	"sophistication":       5,
+	"sophisticated":        5,
+	"soprano":              3,
+	"sopranos":             3,
+	"sora":                 2,
+	"sorority":             4,
+	"soviet":               3,
+	"soak":                 1,
+	"soap":                 1,
+	"soapbox":              2,
+	"soapy":                2,
+	"soar":                 1,
+	"soaring":              2,
+	"sob":                  1,
+	"sobbing":              2,
+	"soc":                  1,
+	"soccer":               2,
+	"sock":                 1,
+	"socket":               2,
+	"sockeye":              2,
+	"sod":                  1,
+	"sodomy":               3,
+	"soften":               2,
+	"softener":             3,
+	"soft":                 1,
+	"softball":             2,
+	"softly":               2,
+	"softness":             2,
+	"software":             2,
+	"softwood":             2,
+	"soggy":                2,
+	"soil":                 1,
+	"sol":                  1,
+	"solace":               2,
+	"solder":               2,
+	"soldier":              2,
+	"solemn":               2,
+	"solemnly":             3,
+	"solidarity":           5,
+	"solitaire":            3,
+	"solitary":             4,
+	"solitude":             3,
+	"solid":                2,
+	"solidly":              3,
+	"solstice":             2,
+	"solubility":           5,
+	"soluble":              3,
+	"solute":               2,
+	"solvency":             3,
+	"solvent":              2,
+	"sold":                 1,
+	"sole":                 1,
+	"solely":               2,
+	"solvable":             3,
+	"solver":               2,
+	"solving":              2,
+	"solve":                1,
+	"somber":               2,
+	"sombre":               2,
+	"somerset":             3,
+	"some":                 1,
+	"somebody":             3,
+	"someday":              2,
+	"somehow":              2,
+	"someone":              2,
+	"someplace":            2,
+	"something":            2,
+	"sometime":             2,
+	"sometimes":            2,
+	"somewhat":             2,
+	"somewhere":            2,
+	"son":                  1,
+	"sonic":                2,
+	"sonics":               2,
+	"sonnet":               2,
+	"sonny":                2,
+	"song":                 1,
+	"songbird":             2,
+	"songwriter":           3,
+	"soon":                 1,
+	"sooner":               2,
+	"soot":                 1,
+	"soothing":             2,
+	"soothe":               1,
+	"sop":                  1,
+	"sophomore":            3,
+	"sorbet":               2,
+	"sorcerer":             3,
+	"sorceress":            3,
+	"sorcery":              3,
+	"sordid":               2,
+	"sorghum":              2,
+	"sorrel":               2,
+	"sorrow":               2,
+	"sorry":                2,
+	"sortie":               2,
+	"sore":                 1,
+	"sorely":               2,
+	"soreness":             2,
+	"sorption":             2,
+	"sort":                 1,
+	"sorter":               2,
+	"sot":                  1,
+	"sou":                  1,
+	"souvenir":             3,
+	"sought":               1,
+	"soul":                 1,
+	"soulful":              2,
+	"sound":                1,
+	"soundboard":           2,
+	"sounder":              2,
+	"sounding":             2,
+	"soundly":              2,
+	"soundness":            2,
+	"soundtrack":           2,
+	"soup":                 1,
+	"sour":                 1,
+	"sourdough":            2,
+	"source":               1,
+	"souter":               2,
+	"south":                1,
+	"southbound":           2,
+	"southeast":            2,
+	"southeastern":         3,
+	"southerly":            3,
+	"southern":             2,
+	"southernmost":         3,
+	"southland":            2,
+	"southward":            2,
+	"southwest":            2,
+	"southwestern":         3,
+	"sovereign":            3,
+	"sovereignty":          4,
+	"sow":                  1,
+	"sowing":               2,
+	"sown":                 1,
+	"sox":                  1,
+	"soy":                  1,
+	"soya":                 2,
+	"soybean":              2,
+	"spa":                  1,
+	"spacious":             2,
+	"spaghetti":            3,
+	"spatial":              2,
+	"spatially":            3,
+	"spacer":               2,
+	"spacing":              2,
+	"space":                1,
+	"spacecraft":           2,
+	"spaceship":            2,
+	"spade":                1,
+	"spake":                1,
+	"span":                 1,
+	"spandex":              2,
+	"spaniel":              2,
+	"spanner":              2,
+	"spanning":             2,
+	"spank":                1,
+	"spanking":             2,
+	"spans":                1,
+	"spar":                 1,
+	"sparing":              2,
+	"sparingly":            3,
+	"sparkle":              2,
+	"sparring":             2,
+	"sparrow":              2,
+	"spare":                1,
+	"spark":                1,
+	"sparks":               1,
+	"sparse":               1,
+	"sparsely":             2,
+	"spastic":              2,
+	"spasm":                1,
+	"spat":                 1,
+	"spatula":              3,
+	"spate":                1,
+	"spawn":                1,
+	"spay":                 1,
+	"speciation":           4,
+	"speciality":           5,
+	"special":              2,
+	"specialization":       5,
+	"specialising":         4,
+	"specialise":           3,
+	"specialised":          3,
+	"specialist":           3,
+	"specializing":         4,
+	"specialize":           3,
+	"specialized":          3,
+	"specially":            3,
+	"specialty":            3,
+	"species":              2,
+	"specific":             3,
+	"speak":                1,
+	"speakeasy":            3,
+	"speaker":              2,
+	"speaking":             2,
+	"spear":                1,
+	"spearhead":            2,
+	"spearman":             2,
+	"spec":                 1,
+	"specification":        5,
+	"specifier":            4,
+	"specified":            3,
+	"specify":              3,
+	"specifying":           4,
+	"specimen":             3,
+	"spectacle":            3,
+	"spectacles":           3,
+	"spectator":            3,
+	"spectacular":          4,
+	"spectacularly":        5,
+	"specter":              2,
+	"spectra":              2,
+	"spectral":             2,
+	"spectre":              2,
+	"spectroscopic":        4,
+	"spectrometer":         4,
+	"spectrometry":         4,
+	"spectroscopy":         4,
+	"spectrum":             2,
+	"speculation":          4,
+	"speculative":          4,
+	"specular":             3,
+	"speculated":           4,
+	"speculating":          4,
+	"speculate":            3,
+	"speculum":             3,
+	"speck":                1,
+	"specs":                1,
+	"sped":                 1,
+	"speech":               1,
+	"speechless":           2,
+	"speed":                1,
+	"speedily":             3,
+	"speeding":             2,
+	"speedo":               2,
+	"speedometer":          4,
+	"speedway":             2,
+	"speedy":               2,
+	"speer":                1,
+	"spell":                1,
+	"spellbound":           2,
+	"spelling":             2,
+	"spelt":                1,
+	"spencer":              2,
+	"spence":               1,
+	"spend":                1,
+	"spending":             2,
+	"spends":               1,
+	"spent":                1,
+	"sperm":                1,
+	"spew":                 1,
+	"spherical":            3,
+	"sphere":               1,
+	"sphincter":            2,
+	"sphinx":               1,
+	"spider":               2,
+	"spiderman":            3,
+	"spina":                2,
+	"spinal":               2,
+	"spiraling":            3,
+	"spicy":                2,
+	"spice":                1,
+	"spiegel":              2,
+	"spiel":                1,
+	"spiffy":               2,
+	"spigot":               2,
+	"spike":                1,
+	"spill":                1,
+	"spillage":             2,
+	"spilling":             2,
+	"spin":                 1,
+	"spinach":              2,
+	"spindle":              2,
+	"spinnaker":            3,
+	"spinner":              2,
+	"spinning":             2,
+	"spinster":             2,
+	"spiny":                2,
+	"spine":                1,
+	"spiral":               2,
+	"spirit":               2,
+	"spirited":             3,
+	"spiritual":            4,
+	"spirituality":         6,
+	"spiritualism":         5,
+	"spire":                1,
+	"spit":                 1,
+	"spitfire":             2,
+	"spitting":             2,
+	"spite":                1,
+	"spitz":                1,
+	"splash":               1,
+	"splat":                1,
+	"splatter":             2,
+	"spleen":               1,
+	"splendid":             2,
+	"splendor":             2,
+	"splendour":            2,
+	"splicing":             2,
+	"splice":               1,
+	"splinter":             2,
+	"spline":               1,
+	"splint":               1,
+	"split":                1,
+	"splitter":             2,
+	"splitting":            2,
+	"splits":               1,
+	"spoken":               2,
+	"sporadically":         5,
+	"sporadic":             3,
+	"spode":                1,
+	"spoil":                1,
+	"spoiler":              2,
+	"spoiling":             2,
+	"spoils":               1,
+	"spoilt":               1,
+	"spoke":                1,
+	"spokesman":            2,
+	"spokeswoman":          3,
+	"sponsor":              2,
+	"spontaneity":          5,
+	"spontaneous":          4,
+	"spontaneously":        5,
+	"sponge":               1,
+	"spoof":                1,
+	"spook":                1,
+	"spooky":               2,
+	"spool":                1,
+	"spoon":                1,
+	"spooner":              2,
+	"spoonful":             2,
+	"spore":                1,
+	"sport":                1,
+	"sporting":             2,
+	"sporty":               2,
+	"sports":               1,
+	"sportsman":            2,
+	"sportsmanship":        3,
+	"sportswear":           2,
+	"spot":                 1,
+	"spotless":             2,
+	"spotlight":            2,
+	"spotted":              2,
+	"spotter":              2,
+	"spotting":             2,
+	"spotty":               2,
+	"spousal":              2,
+	"spouse":               1,
+	"spout":                1,
+	"spp":                  1,
+	"sprang":               1,
+	"sprawl":               1,
+	"spray":                1,
+	"sprayer":              2,
+	"spread":               1,
+	"spreader":             2,
+	"spree":                1,
+	"sprinkle":             2,
+	"sprinkling":           2,
+	"spring":               1,
+	"springboard":          2,
+	"springer":             2,
+	"springing":            2,
+	"springtime":           2,
+	"sprinkler":            2,
+	"sprint":               1,
+	"sprite":               1,
+	"sprocket":             2,
+	"sprout":               1,
+	"spruce":               1,
+	"sprung":               1,
+	"spt":                  1,
+	"spurious":             3,
+	"sputum":               2,
+	"spud":                 1,
+	"spun":                 1,
+	"spunk":                1,
+	"spunky":               2,
+	"spur":                 1,
+	"spurred":              1,
+	"spurt":                1,
+	"sputnik":              2,
+	"spy":                  1,
+	"spying":               2,
+	"squamous":             2,
+	"squad":                1,
+	"squadron":             2,
+	"squall":               1,
+	"square":               1,
+	"squarely":             2,
+	"squash":               1,
+	"squat":                1,
+	"squatting":            2,
+	"squaw":                1,
+	"squeak":               1,
+	"squeaky":              2,
+	"squeezing":            2,
+	"squeeze":              1,
+	"squid":                1,
+	"squirrel":             2,
+	"squire":               1,
+	"squirt":               1,
+	"squirter":             2,
+	"squish":               1,
+	"sri":                  1,
+	"sta":                  1,
+	"stabilization":        5,
+	"stabilizer":           4,
+	"stabilizing":          4,
+	"stabilize":            3,
+	"stabilized":           3,
+	"stability":            4,
+	"stable":               2,
+	"stadium":              3,
+	"stadiums":             3,
+	"staple":               2,
+	"stapler":              2,
+	"stasis":               2,
+	"station":              2,
+	"stationary":           4,
+	"stationery":           4,
+	"statistical":          4,
+	"statistically":        5,
+	"statistic":            3,
+	"statistics":           3,
+	"stator":               2,
+	"status":               2,
+	"stab":                 1,
+	"stabbing":             2,
+	"stack":                1,
+	"stacker":              2,
+	"stacked":              1,
+	"stade":                1,
+	"staff":                1,
+	"staffer":              2,
+	"stag":                 1,
+	"staging":              2,
+	"stagnation":           3,
+	"stagnant":             2,
+	"stage":                1,
+	"stagecoach":           2,
+	"staged":               1,
+	"stain":                1,
+	"stainless":            2,
+	"stair":                1,
+	"staircase":            2,
+	"stairway":             2,
+	"stairs":               1,
+	"staking":              2,
+	"stake":                1,
+	"stallion":             2,
+	"stalwart":             2,
+	"stale":                1,
+	"stalemate":            2,
+	"stalk":                1,
+	"stalker":              2,
+	"stalked":              1,
+	"stall":                1,
+	"stamina":              3,
+	"stampede":             2,
+	"stamp":                1,
+	"stamper":              2,
+	"stan":                 1,
+	"stanhope":             2,
+	"stanza":               2,
+	"stance":               1,
+	"stand":                1,
+	"standard":             2,
+	"standardization":      5,
+	"standardizing":        4,
+	"standardize":          3,
+	"standardized":         3,
+	"standing":             2,
+	"standish":             2,
+	"standoff":             2,
+	"standout":             2,
+	"standpoint":           2,
+	"standstill":           2,
+	"stang":                1,
+	"staphylococcus":       5,
+	"star":                 1,
+	"starboard":            2,
+	"stardom":              2,
+	"stardust":             2,
+	"starfish":             2,
+	"staring":              2,
+	"starlet":              2,
+	"starlight":            2,
+	"starling":             2,
+	"starring":             2,
+	"starry":               2,
+	"starvation":           3,
+	"starch":               1,
+	"stare":                1,
+	"stark":                1,
+	"starred":              1,
+	"start":                1,
+	"starter":              2,
+	"starving":             2,
+	"starve":               1,
+	"stash":                1,
+	"stat":                 1,
+	"stated":               2,
+	"statically":           4,
+	"static":               2,
+	"statics":              2,
+	"stating":              2,
+	"statistician":         4,
+	"statuary":             3,
+	"statutory":            4,
+	"statue":               2,
+	"stature":              2,
+	"statute":              2,
+	"state":                1,
+	"statehood":            2,
+	"stateless":            2,
+	"stately":              2,
+	"statement":            2,
+	"stateroom":            2,
+	"stateside":            2,
+	"statewide":            2,
+	"statesman":            2,
+	"staunch":              1,
+	"stave":                1,
+	"stay":                 1,
+	"staying":              2,
+	"stays":                1,
+	"std":                  1,
+	"stenosis":             3,
+	"sterility":            4,
+	"stearate":             2,
+	"stead":                1,
+	"steadfast":            2,
+	"steadily":             3,
+	"steady":               2,
+	"steak":                1,
+	"steakhouse":           2,
+	"steal":                1,
+	"stealing":             2,
+	"stealth":              1,
+	"steam":                1,
+	"steamboat":            2,
+	"steamer":              2,
+	"steamship":            2,
+	"steamy":               2,
+	"steeple":              2,
+	"steeplechase":         3,
+	"steed":                1,
+	"steel":                1,
+	"steelhead":            2,
+	"steels":               1,
+	"steep":                1,
+	"steeper":              2,
+	"steer":                1,
+	"stein":                1,
+	"stellar":              2,
+	"stem":                 1,
+	"stemming":             2,
+	"stemware":             2,
+	"stemmed":              1,
+	"stencil":              2,
+	"stench":               1,
+	"step":                 1,
+	"stepfather":           3,
+	"stepmother":           3,
+	"stepper":              2,
+	"stepping":             2,
+	"stepwise":             2,
+	"steppe":               1,
+	"ster":                 1,
+	"stereotyping":         5,
+	"stereotype":           4,
+	"stereotyped":          4,
+	"sterilization":        5,
+	"sterilized":           3,
+	"sterile":              2,
+	"sterling":             2,
+	"steroid":              2,
+	"stern":                1,
+	"stetson":              2,
+	"stethoscope":          3,
+	"stew":                 1,
+	"steward":              2,
+	"stewardship":          3,
+	"stg":                  1,
+	"sti":                  1,
+	"stifle":               2,
+	"stifling":             2,
+	"stiletto":             3,
+	"stipend":              2,
+	"stick":                1,
+	"sticker":              2,
+	"sticking":             2,
+	"sticky":               2,
+	"stiff":                1,
+	"stiffness":            2,
+	"stigma":               2,
+	"stile":                1,
+	"still":                1,
+	"stiller":              2,
+	"stimulation":          4,
+	"stimulator":           4,
+	"stimulant":            3,
+	"stimulated":           4,
+	"stimulating":          4,
+	"stimulate":            3,
+	"stimuli":              3,
+	"stimulus":             3,
+	"sting":                1,
+	"stinger":              2,
+	"stinging":             2,
+	"stingray":             2,
+	"stingy":               2,
+	"stink":                1,
+	"stinking":             2,
+	"stint":                1,
+	"stipulation":          4,
+	"stipulated":           4,
+	"stipulate":            3,
+	"stir":                 1,
+	"stirring":             2,
+	"stitch":               1,
+	"stitching":            2,
+	"stk":                  1,
+	"stochastic":           3,
+	"stoic":                2,
+	"storey":               2,
+	"storied":              2,
+	"story":                2,
+	"storyboard":           3,
+	"storybook":            3,
+	"storyteller":          4,
+	"storytelling":         4,
+	"stock":                1,
+	"stocker":              2,
+	"stockholder":          3,
+	"stocking":             2,
+	"stockpile":            2,
+	"stocks":               1,
+	"stoker":               2,
+	"stoke":                1,
+	"stokes":               1,
+	"stolen":               2,
+	"stole":                1,
+	"stomach":              2,
+	"stomp":                1,
+	"stoner":               2,
+	"stoney":               2,
+	"stoning":              2,
+	"stony":                2,
+	"stone":                1,
+	"stonewall":            2,
+	"stoneware":            2,
+	"stoned":               1,
+	"stood":                1,
+	"stool":                1,
+	"stoop":                1,
+	"stop":                 1,
+	"stopover":             3,
+	"stoppage":             2,
+	"stopper":              2,
+	"stopping":             2,
+	"stopwatch":            2,
+	"stopped":              1,
+	"stops":                1,
+	"storage":              2,
+	"storing":              2,
+	"store":                1,
+	"storefront":           2,
+	"storehouse":           2,
+	"stores":               1,
+	"stork":                1,
+	"storm":                1,
+	"stormy":               2,
+	"stout":                1,
+	"stover":               2,
+	"stove":                1,
+	"stow":                 1,
+	"stowaway":             3,
+	"str":                  1,
+	"strata":               2,
+	"strategic":            3,
+	"stratigraphy":         4,
+	"stratum":              2,
+	"stratus":              2,
+	"straddle":             2,
+	"straighten":           2,
+	"straightener":         3,
+	"straightforward":      3,
+	"strain":               1,
+	"strainer":             2,
+	"strait":               1,
+	"strand":               1,
+	"stranger":             2,
+	"strangest":            2,
+	"strange":              1,
+	"strangely":            2,
+	"strangeness":          2,
+	"strap":                1,
+	"strapless":            2,
+	"strapping":            2,
+	"strategist":           3,
+	"strategy":             3,
+	"stratification":       5,
+	"stratified":           3,
+	"stratospheric":        4,
+	"stratosphere":         3,
+	"straw":                1,
+	"strawberry":           3,
+	"stray":                1,
+	"strayer":              2,
+	"strays":               1,
+	"streak":               1,
+	"stream":               1,
+	"streamer":             2,
+	"streaming":            2,
+	"streamlining":         3,
+	"streamline":           2,
+	"streamlined":          2,
+	"street":               1,
+	"streetcar":            2,
+	"strenuous":            3,
+	"strengthen":           2,
+	"strep":                1,
+	"streptococcus":        4,
+	"streptomyces":         4,
+	"stress":               1,
+	"stressful":            2,
+	"stretch":              1,
+	"stretcher":            2,
+	"stretchy":             2,
+	"strewn":               1,
+	"stricken":             2,
+	"strict":               1,
+	"strictly":             2,
+	"strider":              2,
+	"stride":               1,
+	"strife":               1,
+	"striker":              2,
+	"striking":             2,
+	"strike":               1,
+	"stringent":            2,
+	"string":               1,
+	"stringer":             2,
+	"stringing":            2,
+	"strip":                1,
+	"striping":             2,
+	"stripper":             2,
+	"stripping":            2,
+	"striptease":           2,
+	"stripe":               1,
+	"striped":              1,
+	"strive":               1,
+	"strobe":               1,
+	"strode":               1,
+	"stroking":             2,
+	"stroke":               1,
+	"stroll":               1,
+	"stroller":             2,
+	"strontium":            3,
+	"strong":               1,
+	"stronghold":           2,
+	"stroud":               1,
+	"structural":           3,
+	"structurally":         4,
+	"structuring":          3,
+	"structure":            2,
+	"structured":           2,
+	"struck":               1,
+	"struggle":             2,
+	"strung":               1,
+	"strut":                1,
+	"student":              2,
+	"studio":               3,
+	"stupendous":           3,
+	"stupid":               2,
+	"stupidity":            4,
+	"stupidly":             3,
+	"stub":                 1,
+	"stubble":              2,
+	"stubborn":             2,
+	"stubby":               2,
+	"stucco":               2,
+	"stuck":                1,
+	"stud":                 1,
+	"studied":              2,
+	"studies":              2,
+	"study":                2,
+	"studying":             3,
+	"stuff":                1,
+	"stuffing":             2,
+	"stuffy":               2,
+	"stuffed":              1,
+	"stumble":              2,
+	"stump":                1,
+	"stun":                 1,
+	"stunning":             2,
+	"stunningly":           3,
+	"stung":                1,
+	"stunt":                1,
+	"sturdy":               2,
+	"sturgeon":             2,
+	"sturt":                1,
+	"sty":                  1,
+	"stylistic":            3,
+	"stylus":               2,
+	"styrene":              2,
+	"styling":              2,
+	"stylish":              2,
+	"stylist":              2,
+	"stylized":             2,
+	"style":                1,
+	"sucre":                2,
+	"sucrose":              2,
+	"suicidal":             4,
+	"suicide":              3,
+	"suing":                2,
+	"sumo":                 2,
+	"superior":             4,
+	"superiority":          6,
+	"superannuation":       6,
+	"supercharger":         4,
+	"supercharged":         3,
+	"superclass":           3,
+	"superconductivity":    7,
+	"superconductor":       5,
+	"supercool":            3,
+	"supercritical":        5,
+	"superfamily":          5,
+	"superficial":          4,
+	"superficially":        5,
+	"superfluous":          4,
+	"superhero":            4,
+	"superhighway":         4,
+	"superhuman":           4,
+	"superimposed":         4,
+	"superintendent":       5,
+	"superlative":          4,
+	"superman":             3,
+	"supermarket":          4,
+	"supernatant":          4,
+	"supernatural":         5,
+	"supernova":            4,
+	"superoxide":           4,
+	"superposition":        5,
+	"superpower":           4,
+	"superscript":          3,
+	"superseded":           4,
+	"supersede":            3,
+	"supersize":            3,
+	"supersonic":           4,
+	"supersonics":          4,
+	"superstar":            3,
+	"superstition":         4,
+	"superstitious":        4,
+	"superstructure":       4,
+	"supervision":          4,
+	"supervisor":           4,
+	"supervisory":          4,
+	"supervising":          4,
+	"supervise":            3,
+	"supervised":           3,
+	"superb":               2,
+	"superbly":             3,
+	"supra":                2,
+	"supremacy":            4,
+	"supreme":              2,
+	"supremely":            3,
+	"sura":                 2,
+	"surah":                2,
+	"surat":                2,
+	"sushi":                2,
+	"sutra":                2,
+	"suture":               2,
+	"suave":                1,
+	"sub":                  1,
+	"subacute":             3,
+	"subcategory":          5,
+	"subchapter":           3,
+	"subclass":             2,
+	"subclause":            2,
+	"subconscious":         3,
+	"subcontinent":         4,
+	"subcontractor":        4,
+	"subcontract":          3,
+	"subcutaneous":         5,
+	"subculture":           3,
+	"subdivision":          4,
+	"subdivided":           4,
+	"subdue":               2,
+	"subdued":              2,
+	"subfamily":            4,
+	"subfield":             2,
+	"subgroup":             2,
+	"subheading":           3,
+	"subjection":           3,
+	"subjectivity":         5,
+	"subjective":           3,
+	"subject":              2,
+	"sublease":             2,
+	"sublet":               2,
+	"sublimation":          4,
+	"subliminal":           4,
+	"sublime":              2,
+	"sublingual":           3,
+	"submariner":           4,
+	"submarine":            3,
+	"submerged":            2,
+	"submersible":          4,
+	"submission":           3,
+	"submissive":           3,
+	"submit":               2,
+	"submitted":            3,
+	"submitting":           3,
+	"subnet":               2,
+	"subordination":        5,
+	"subordinated":         5,
+	"subordinate":          4,
+	"subpackage":           3,
+	"subparagraph":         4,
+	"subpart":              2,
+	"subpoena":             3,
+	"subroutine":           3,
+	"subscriber":           3,
+	"subscribing":          3,
+	"subscribe":            2,
+	"subscribed":           2,
+	"subscription":         3,
+	"subscript":            2,
+	"subsequent":           3,
+	"subsequently":         4,
+	"subsection":           3,
+	"subset":               2,
+	"subsidize":            3,
+	"subsidy":              3,
+	"subsidence":           3,
+	"subsidiaries":         5,
+	"subsidiary":           5,
+	"subside":              2,
+	"subsistence":          3,
+	"subspace":             2,
+	"subspecies":           3,
+	"substation":           3,
+	"substantiated":        5,
+	"substantiate":         4,
+	"substantial":          3,
+	"substantially":        4,
+	"substantive":          3,
+	"substance":            2,
+	"substandard":          3,
+	"substitution":         4,
+	"substituted":          4,
+	"substituting":         4,
+	"substitute":           3,
+	"substrate":            2,
+	"substructure":         3,
+	"subterranean":         5,
+	"subtilis":             3,
+	"subtitle":             3,
+	"subtle":               2,
+	"subtlety":             3,
+	"subtly":               2,
+	"subtotal":             3,
+	"subtraction":          3,
+	"subtract":             2,
+	"subtropical":          4,
+	"subtype":              2,
+	"subunit":              3,
+	"suburban":             3,
+	"suburbia":             4,
+	"suburb":               2,
+	"subversion":           3,
+	"subversive":           3,
+	"subvert":              2,
+	"subway":               2,
+	"subj":                 1,
+	"subst":                1,
+	"succeed":              2,
+	"succession":           3,
+	"successive":           3,
+	"successively":         4,
+	"successor":            3,
+	"success":              2,
+	"successful":           3,
+	"successfully":         4,
+	"succinate":            3,
+	"succinct":             2,
+	"succinctly":           3,
+	"succulent":            3,
+	"succumb":              2,
+	"suction":              2,
+	"such":                 1,
+	"suck":                 1,
+	"sucker":               2,
+	"sucking":              2,
+	"sucks":                1,
+	"sudden":               2,
+	"suddenly":             3,
+	"suds":                 1,
+	"sue":                  1,
+	"suede":                1,
+	"suf":                  1,
+	"suffer":               2,
+	"sufferer":             3,
+	"suffering":            3,
+	"sufficiency":          4,
+	"sufficient":           3,
+	"suffice":              2,
+	"suffix":               2,
+	"suffrage":             2,
+	"sugar":                2,
+	"sugary":               3,
+	"suggestion":           3,
+	"suggestive":           3,
+	"suggest":              2,
+	"suit":                 1,
+	"suitable":             3,
+	"suitably":             3,
+	"suitcase":             2,
+	"suited":               2,
+	"suite":                1,
+	"sulfate":              2,
+	"sulfuric":             3,
+	"sulfur":               2,
+	"sullen":               2,
+	"sully":                2,
+	"sulphate":             2,
+	"sulphur":              2,
+	"sultan":               2,
+	"sultry":               2,
+	"sum":                  1,
+	"summa":                2,
+	"summarization":        5,
+	"summarise":            3,
+	"summarised":           3,
+	"summarizing":          4,
+	"summarize":            3,
+	"summarized":           3,
+	"summation":            3,
+	"summarily":            4,
+	"summary":              3,
+	"summer":               2,
+	"summertime":           3,
+	"summing":              2,
+	"summit":               2,
+	"summon":               2,
+	"summons":              2,
+	"sump":                 1,
+	"sumptuous":            3,
+	"sun":                  1,
+	"sunbathing":           3,
+	"sunbeam":              2,
+	"sunbird":              2,
+	"sunburn":              2,
+	"sunburst":             2,
+	"sundae":               2,
+	"sundial":              3,
+	"sundown":              2,
+	"sundries":             2,
+	"sundry":               2,
+	"sunfish":              2,
+	"sunflower":            3,
+	"sunglass":             2,
+	"sunglasses":           3,
+	"sunless":              2,
+	"sunlight":             2,
+	"sunny":                2,
+	"sunray":               2,
+	"sunrise":              2,
+	"sunroof":              2,
+	"sunset":               2,
+	"sunshine":             2,
+	"sunspot":              2,
+	"sung":                 1,
+	"sunk":                 1,
+	"sunken":               2,
+	"sup":                  1,
+	"supper":               2,
+	"supplant":             2,
+	"supple":               2,
+	"supplementary":        5,
+	"supplemental":         4,
+	"supplement":           3,
+	"supplier":             3,
+	"supplied":             2,
+	"supply":               2,
+	"supplying":            3,
+	"supposition":          4,
+	"support":              2,
+	"supporter":            3,
+	"supporting":           3,
+	"supportive":           3,
+	"supposedly":           4,
+	"supposing":            3,
+	"suppose":              2,
+	"supposed":             2,
+	"suppression":          3,
+	"suppress":             2,
+	"super":                1,
+	"supp":                 1,
+	"suppl":                1,
+	"supt":                 1,
+	"sur":                  1,
+	"surcharge":            2,
+	"surfacing":            3,
+	"surfactant":           3,
+	"surface":              2,
+	"surfaced":             2,
+	"surgeon":              2,
+	"surgery":              3,
+	"surgical":             3,
+	"surgically":           4,
+	"surly":                2,
+	"surname":              2,
+	"surpassing":           3,
+	"surpass":              2,
+	"surplus":              2,
+	"surprising":           3,
+	"surprisingly":         4,
+	"surprise":             2,
+	"surprised":            2,
+	"surreal":              3,
+	"surrealism":           4,
+	"surrender":            3,
+	"surrey":               2,
+	"surrogate":            3,
+	"surround":             2,
+	"surrounding":          3,
+	"surroundings":         3,
+	"surveillance":         3,
+	"survey":               2,
+	"surveying":            3,
+	"surveyor":             3,
+	"survivor":             3,
+	"survivorship":         4,
+	"survivability":        6,
+	"survival":             3,
+	"surviving":            3,
+	"survive":              2,
+	"survived":             2,
+	"sure":                 1,
+	"surely":               2,
+	"surety":               2,
+	"surf":                 1,
+	"surfboard":            2,
+	"surfer":               2,
+	"surfing":              2,
+	"surg":                 1,
+	"surging":              2,
+	"surge":                1,
+	"surv":                 1,
+	"susceptibility":       6,
+	"susceptible":          4,
+	"suspect":              2,
+	"suspension":           3,
+	"suspend":              2,
+	"suspender":            3,
+	"suspense":             2,
+	"suspicion":            3,
+	"suspicious":           3,
+	"suspiciously":         4,
+	"sustain":              2,
+	"sustainable":          4,
+	"sustenance":           3,
+	"swami":                2,
+	"swab":                 1,
+	"swag":                 1,
+	"swain":                1,
+	"swallow":              2,
+	"swam":                 1,
+	"swamp":                1,
+	"swan":                 1,
+	"swank":                1,
+	"swap":                 1,
+	"swapping":             2,
+	"swarm":                1,
+	"swastika":             3,
+	"swash":                1,
+	"swat":                 1,
+	"swatch":               1,
+	"swath":                1,
+	"sway":                 1,
+	"swear":                1,
+	"swearing":             2,
+	"sweat":                1,
+	"sweater":              2,
+	"sweating":             2,
+	"sweatshop":            2,
+	"sweaty":               2,
+	"swede":                1,
+	"sweep":                1,
+	"sweeper":              2,
+	"sweeping":             2,
+	"sweepstake":           2,
+	"sweepstakes":          2,
+	"sweeps":               1,
+	"sweet":                1,
+	"sweetener":            3,
+	"sweetheart":           2,
+	"sweetie":              2,
+	"sweetly":              2,
+	"sweetness":            2,
+	"swell":                1,
+	"swelling":             2,
+	"swept":                1,
+	"swift":                1,
+	"swiftly":              2,
+	"swig":                 1,
+	"swim":                 1,
+	"swimming":             2,
+	"swimsuit":             2,
+	"swindle":              2,
+	"swine":                1,
+	"swing":                1,
+	"swinger":              2,
+	"swinging":             2,
+	"swipe":                1,
+	"swirl":                1,
+	"swish":                1,
+	"switch":               1,
+	"switchboard":          2,
+	"switcher":             2,
+	"swivel":               2,
+	"swollen":              2,
+	"swoon":                1,
+	"swoop":                1,
+	"swoosh":               1,
+	"sword":                1,
+	"swordfish":            2,
+	"swordsman":            2,
+	"swore":                1,
+	"sworn":                1,
+	"swot":                 1,
+	"swung":                1,
+	"syringes":             3,
+	"syringe":              2,
+	"sycamore":             3,
+	"syllabi":              3,
+	"syllable":             3,
+	"syllabus":             3,
+	"sylvan":               2,
+	"sym":                  1,
+	"symbiosis":            4,
+	"symbiotic":            4,
+	"symbol":               2,
+	"symbolically":         5,
+	"symbolic":             3,
+	"symbolism":            3,
+	"symbolize":            3,
+	"symbolized":           3,
+	"symmetry":             3,
+	"symmetrical":          4,
+	"symmetric":            3,
+	"sympathetic":          4,
+	"sympathize":           3,
+	"sympathy":             3,
+	"symphony":             3,
+	"symphonic":            3,
+	"symposia":             4,
+	"symposium":            4,
+	"symptomatic":          4,
+	"symptom":              2,
+	"syn":                  1,
+	"synagogue":            3,
+	"synaptic":             3,
+	"synapse":              2,
+	"synchro":              2,
+	"synchronization":      5,
+	"synchronizing":        4,
+	"synchronize":          3,
+	"synchronized":         3,
+	"synchronous":          3,
+	"synchrotron":          3,
+	"syndicated":           4,
+	"syndicate":            3,
+	"syndrome":             2,
+	"synergistic":          4,
+	"synergy":              3,
+	"synonym":              3,
+	"synovial":             4,
+	"synod":                2,
+	"synonymous":           4,
+	"synopsis":             3,
+	"synoptic":             3,
+	"syntactic":            3,
+	"syntax":               2,
+	"synthesis":            3,
+	"synthesizer":          4,
+	"synthesizing":         4,
+	"synthesize":           3,
+	"synthesized":          3,
+	"synthetic":            3,
+	"sync":                 1,
+	"syphilis":             3,
+	"syrup":                2,
+	"system":               2,
+	"systematic":           4,
+	"systematics":          4,
+	"systemic":             3,
+	"syst":                 1,
+	"taber":                2,
+	"table":                2,
+	"tablecloth":           3,
+	"tablespoon":           3,
+	"tableware":            3,
+	"tabling":              2,
+	"taboo":                2,
+	"tabor":                2,
+	"tabu":                 2,
+	"tachometer":           4,
+	"taco":                 2,
+	"taka":                 2,
+	"tales":                2,
+	"tamara":               3,
+	"tana":                 2,
+	"tapas":                2,
+	"tarantula":            4,
+	"taro":                 2,
+	"tarot":                2,
+	"tab":                  1,
+	"tabby":                2,
+	"tabernacle":           4,
+	"tabla":                2,
+	"tablature":            3,
+	"tableau":              2,
+	"tablet":               2,
+	"tabloid":              2,
+	"tabulation":           4,
+	"tabular":              3,
+	"tabulated":            4,
+	"tacit":                2,
+	"tactical":             3,
+	"tactic":               2,
+	"tactics":              2,
+	"tactile":              2,
+	"tachycardia":          5,
+	"tack":                 1,
+	"tackle":               2,
+	"tackling":             2,
+	"tacky":                2,
+	"tact":                 1,
+	"tad":                  1,
+	"tadpole":              2,
+	"tae":                  1,
+	"taffeta":              3,
+	"taffy":                2,
+	"tag":                  1,
+	"tagging":              2,
+	"tailor":               2,
+	"tailored":             2,
+	"tail":                 1,
+	"tailgating":           3,
+	"tailgate":             2,
+	"tailings":             2,
+	"taillight":            2,
+	"tails":                1,
+	"tain":                 1,
+	"taint":                1,
+	"taj":                  1,
+	"taken":                2,
+	"taker":                2,
+	"takin":                2,
+	"taking":               2,
+	"take":                 1,
+	"takeaway":             3,
+	"takedown":             2,
+	"takeover":             3,
+	"takeoff":              2,
+	"talent":               2,
+	"talented":             3,
+	"talisman":             3,
+	"tallied":              2,
+	"talon":                2,
+	"talc":                 1,
+	"tale":                 1,
+	"talk":                 1,
+	"talkative":            3,
+	"talker":               2,
+	"talkie":               2,
+	"tall":                 1,
+	"tally":                1,
+	"tam":                  1,
+	"tamarack":             3,
+	"tamarind":             3,
+	"tambourine":           3,
+	"tamer":                2,
+	"taming":               2,
+	"tammy":                2,
+	"tamper":               2,
+	"tampon":               2,
+	"tame":                 1,
+	"tan":                  1,
+	"tandem":               2,
+	"tanga":                2,
+	"tangerine":            3,
+	"tangential":           3,
+	"tangent":              2,
+	"tangible":             3,
+	"tangle":               2,
+	"tangled":              2,
+	"tango":                2,
+	"tanner":               2,
+	"tanning":              2,
+	"tantalizing":          4,
+	"tantalum":             3,
+	"tantamount":           3,
+	"tanto":                2,
+	"tantrum":              2,
+	"tang":                 1,
+	"tangy":                2,
+	"tank":                 1,
+	"tankard":              2,
+	"tanker":               2,
+	"tankless":             2,
+	"tap":                  1,
+	"taper":                2,
+	"tapestry":             3,
+	"tapioca":              4,
+	"tapping":              2,
+	"taproot":              2,
+	"tape":                 1,
+	"taps":                 1,
+	"tar":                  1,
+	"tardy":                2,
+	"target":               2,
+	"tariff":               2,
+	"tarnish":              2,
+	"tarpon":               2,
+	"tarragon":             3,
+	"tarry":                2,
+	"tartan":               2,
+	"tartar":               2,
+	"tarp":                 1,
+	"tart":                 1,
+	"tassel":               2,
+	"task":                 1,
+	"tass":                 1,
+	"tasted":               2,
+	"taster":               2,
+	"tasting":              2,
+	"tasty":                2,
+	"taste":                1,
+	"tasteful":             2,
+	"tastefully":           3,
+	"tasteless":            2,
+	"tat":                  1,
+	"tattered":             2,
+	"tattoo":               2,
+	"tattooing":            3,
+	"tattooed":             2,
+	"tau":                  1,
+	"taurine":              2,
+	"taught":               1,
+	"taunt":                1,
+	"taupe":                1,
+	"taut":                 1,
+	"tavern":               2,
+	"tawny":                2,
+	"tax":                  1,
+	"taxable":              3,
+	"taxation":             3,
+	"taxi":                 2,
+	"taxicab":              3,
+	"taxidermy":            4,
+	"taxis":                2,
+	"taxonomic":            4,
+	"taxon":                2,
+	"taxonomy":             4,
+	"taxpayer":             3,
+	"tay":                  1,
+	"tbs":                  1,
+	"tbsp":                 1,
+	"tedious":              3,
+	"telemetry":            4,
+	"telepathy":            4,
+	"telephony":            4,
+	"tenacious":            3,
+	"tequila":              3,
+	"tea":                  1,
+	"teacup":               2,
+	"teapot":               2,
+	"teaspoon":             2,
+	"teach":                1,
+	"teacher":              2,
+	"teaching":             2,
+	"teak":                 1,
+	"teal":                 1,
+	"team":                 1,
+	"teammate":             2,
+	"teamwork":             2,
+	"tear":                 1,
+	"teardrop":             2,
+	"tearing":              2,
+	"tears":                1,
+	"teaser":               2,
+	"teasing":              2,
+	"tease":                1,
+	"tectonic":             3,
+	"tectonics":            3,
+	"tech":                 1,
+	"technical":            3,
+	"technically":          4,
+	"technician":           3,
+	"technic":              2,
+	"technics":             2,
+	"technique":            2,
+	"technologically":      6,
+	"technologist":         4,
+	"technology":           4,
+	"ted":                  1,
+	"teddy":                2,
+	"tee":                  1,
+	"teeny":                2,
+	"teeming":              2,
+	"teen":                 1,
+	"teenager":             3,
+	"teenage":              2,
+	"teens":                1,
+	"teeth":                1,
+	"teething":             2,
+	"teg":                  1,
+	"teil":                 1,
+	"tel":                  1,
+	"telecast":             3,
+	"telecommunication":    7,
+	"telecommunications":   7,
+	"telegram":             3,
+	"telegraph":            3,
+	"telegraphic":          4,
+	"telemark":             3,
+	"telephone":            3,
+	"teleport":             3,
+	"telescopic":           4,
+	"telescoping":          4,
+	"telescope":            3,
+	"television":           4,
+	"telex":                2,
+	"telford":              2,
+	"telluride":            3,
+	"telly":                2,
+	"tele":                 1,
+	"tell":                 1,
+	"teller":               2,
+	"telling":              2,
+	"temper":               2,
+	"tempera":              3,
+	"temperament":          4,
+	"temperature":          4,
+	"temperance":           3,
+	"temperate":            3,
+	"tempered":             2,
+	"tempest":              2,
+	"template":             2,
+	"temple":               2,
+	"tempo":                2,
+	"temporal":             3,
+	"temporally":           4,
+	"temporarily":          5,
+	"temporary":            4,
+	"temp":                 1,
+	"temptation":           3,
+	"tempt":                1,
+	"tempting":             2,
+	"ten":                  1,
+	"tenancy":              3,
+	"tenant":               2,
+	"tendency":             3,
+	"tender":               2,
+	"tenderer":             3,
+	"tenderloin":           3,
+	"tenderly":             3,
+	"tenderness":           3,
+	"tendon":               2,
+	"tenement":             3,
+	"tenet":                2,
+	"tennis":               2,
+	"tenor":                2,
+	"tensile":              2,
+	"tension":              2,
+	"tensor":               2,
+	"tentacle":             3,
+	"tentative":            3,
+	"tenuous":              3,
+	"tenure":               2,
+	"tend":                 1,
+	"tense":                1,
+	"tent":                 1,
+	"tented":               2,
+	"tenth":                1,
+	"ter":                  1,
+	"teriyaki":             4,
+	"termination":          4,
+	"terminator":           4,
+	"terminal":             3,
+	"terminally":           4,
+	"terminated":           4,
+	"terminating":          4,
+	"terminate":            3,
+	"terminology":          5,
+	"terminus":             3,
+	"termite":              2,
+	"ternary":              3,
+	"terra":                2,
+	"terrace":              2,
+	"terraced":             2,
+	"terrain":              2,
+	"terrestrial":          4,
+	"terrible":             3,
+	"terribly":             3,
+	"terrier":              3,
+	"terrified":            3,
+	"terrifying":           4,
+	"territorial":          5,
+	"territory":            4,
+	"terrific":             3,
+	"terror":               2,
+	"terrorism":            3,
+	"terrorist":            3,
+	"terry":                2,
+	"tertiary":             3,
+	"term":                 1,
+	"terms":                1,
+	"tern":                 1,
+	"terr":                 1,
+	"terse":                1,
+	"tesla":                2,
+	"testa":                2,
+	"testament":            3,
+	"testes":               2,
+	"testicle":             3,
+	"testified":            3,
+	"testify":              3,
+	"testifying":           4,
+	"testimonial":          5,
+	"testimony":            4,
+	"testis":               2,
+	"testosterone":         4,
+	"test":                 1,
+	"testable":             3,
+	"tester":               2,
+	"tetanus":              3,
+	"tetra":                2,
+	"tetracycline":         4,
+	"tetrahedron":          4,
+	"tether":               2,
+	"tew":                  1,
+	"texas":                2,
+	"textile":              2,
+	"textual":              3,
+	"texturing":            3,
+	"texture":              2,
+	"textured":             2,
+	"text":                 1,
+	"textbook":             2,
+	"thalidomide":          4,
+	"than":                 1,
+	"thane":                1,
+	"thank":                1,
+	"thankful":             2,
+	"thankfully":           3,
+	"thanks":               1,
+	"thanksgiving":         3,
+	"thar":                 1,
+	"that":                 1,
+	"thatch":               1,
+	"thaw":                 1,
+	"the":                  1,
+	"theater":              3,
+	"theatre":              3,
+	"theatrical":           4,
+	"theism":               2,
+	"thema":                2,
+	"thematic":             3,
+	"theologian":           5,
+	"theological":          5,
+	"theophylline":         4,
+	"theorem":              3,
+	"theoretical":          5,
+	"theoretically":        6,
+	"theoretic":            4,
+	"theorist":             3,
+	"theory":               3,
+	"theocracy":            4,
+	"theology":             4,
+	"theosophy":            4,
+	"thesauri":             3,
+	"thesaurus":            3,
+	"thesis":               2,
+	"theta":                2,
+	"thee":                 1,
+	"theft":                1,
+	"their":                1,
+	"theirs":               1,
+	"them":                 1,
+	"themselves":           2,
+	"theme":                1,
+	"then":                 1,
+	"thence":               1,
+	"therapeutic":          4,
+	"therapeutics":         4,
+	"therapist":            3,
+	"therapy":              3,
+	"thermal":              2,
+	"thermally":            3,
+	"thermocouple":         4,
+	"thermodynamic":        5,
+	"thermodynamics":       5,
+	"thermoplastic":        4,
+	"thermostat":           3,
+	"thermometer":          4,
+	"there":                1,
+	"thereafter":           3,
+	"thereby":              2,
+	"therefor":             2,
+	"therefore":            2,
+	"therefrom":            2,
+	"therein":              2,
+	"thereof":              2,
+	"thereon":              2,
+	"thereto":              2,
+	"thereunder":           3,
+	"thereupon":            3,
+	"therewith":            2,
+	"therm":                1,
+	"these":                1,
+	"they":                 1,
+	"thiamine":             3,
+	"thick":                1,
+	"thickening":           3,
+	"thicket":              2,
+	"thickness":            2,
+	"thief":                1,
+	"thievery":             3,
+	"thigh":                1,
+	"thimble":              2,
+	"thin":                 1,
+	"thinly":               2,
+	"thinner":              2,
+	"thine":                1,
+	"thing":                1,
+	"think":                1,
+	"thinker":              2,
+	"thinking":             2,
+	"thirteen":             2,
+	"thirteenth":           2,
+	"thirty":               2,
+	"third":                1,
+	"thirdly":              2,
+	"thirst":               1,
+	"thirsty":              2,
+	"this":                 1,
+	"thistle":              2,
+	"thither":              2,
+	"tho":                  1,
+	"thoracic":             3,
+	"thorium":              3,
+	"thong":                1,
+	"thorax":               2,
+	"thorough":             2,
+	"thoroughbred":         3,
+	"thoroughfare":         3,
+	"thoroughly":           3,
+	"thorn":                1,
+	"thorny":               2,
+	"thorp":                1,
+	"thorpe":               1,
+	"those":                1,
+	"thou":                 1,
+	"thousand":             2,
+	"though":               1,
+	"thought":              1,
+	"thoughtful":           2,
+	"thrash":               1,
+	"thrasher":             2,
+	"thrashing":            2,
+	"threonine":            3,
+	"thread":               1,
+	"threadless":           2,
+	"threat":               1,
+	"threaten":             2,
+	"three":                1,
+	"threefold":            2,
+	"threesome":            2,
+	"threshold":            2,
+	"threw":                1,
+	"thrice":               1,
+	"thrift":               1,
+	"thrifty":              2,
+	"thrill":               1,
+	"thriller":             2,
+	"thrilling":            2,
+	"thrive":               1,
+	"thro":                 1,
+	"throat":               1,
+	"throbbing":            2,
+	"throes":               1,
+	"thrombin":             2,
+	"thrombosis":           3,
+	"throne":               1,
+	"throng":               1,
+	"throttle":             2,
+	"through":              1,
+	"throughout":           2,
+	"throughput":           2,
+	"throw":                1,
+	"throwback":            2,
+	"thrower":              2,
+	"thrown":               1,
+	"thru":                 1,
+	"thrush":               1,
+	"thrust":               1,
+	"thrusting":            2,
+	"thud":                 1,
+	"thug":                 1,
+	"thumb":                1,
+	"thumbnail":            2,
+	"thump":                1,
+	"thumping":             2,
+	"thunder":              2,
+	"thunderbird":          3,
+	"thunderbolt":          3,
+	"thundering":           3,
+	"thunderstorm":         3,
+	"thus":                 1,
+	"thwart":               1,
+	"thy":                  1,
+	"thymidine":            3,
+	"thymus":               2,
+	"thyroid":              2,
+	"thyself":              2,
+	"thyme":                1,
+	"tiara":                3,
+	"tiger":                2,
+	"tiki":                 2,
+	"tilapia":              4,
+	"tiniest":              3,
+	"tiny":                 2,
+	"titanium":             4,
+	"titan":                2,
+	"titanic":              3,
+	"titer":                2,
+	"title":                2,
+	"titled":               2,
+	"titration":            3,
+	"titre":                2,
+	"tibia":                3,
+	"tibial":               3,
+	"tic":                  1,
+	"tick":                 1,
+	"ticker":               2,
+	"ticket":               2,
+	"ticking":              2,
+	"tickle":               2,
+	"ticklish":             2,
+	"tidal":                2,
+	"tidbit":               2,
+	"tidings":              2,
+	"tide":                 1,
+	"tidewater":            3,
+	"tie":                  1,
+	"tied":                 1,
+	"tier":                 1,
+	"tiffany":              3,
+	"tiffin":               2,
+	"tiff":                 1,
+	"tight":                1,
+	"tighten":              2,
+	"tightly":              2,
+	"tightness":            2,
+	"tights":               1,
+	"til":                  1,
+	"tilbury":              3,
+	"tilde":                2,
+	"tiling":               2,
+	"tile":                 1,
+	"tiled":                1,
+	"till":                 1,
+	"tillage":              2,
+	"tiller":               2,
+	"tilt":                 1,
+	"timber":               2,
+	"timberland":           3,
+	"timbre":               2,
+	"timer":                2,
+	"timid":                2,
+	"timing":               2,
+	"timothy":              3,
+	"time":                 1,
+	"timekeeping":          3,
+	"timeless":             2,
+	"timeliness":           3,
+	"timely":               2,
+	"timepiece":            2,
+	"timetable":            3,
+	"tin":                  1,
+	"tinderbox":            3,
+	"tingle":               2,
+	"tinnitus":             3,
+	"tinsel":               2,
+	"tincture":             2,
+	"tine":                 1,
+	"ting":                 1,
+	"tinker":               2,
+	"tint":                 1,
+	"tip":                  1,
+	"tipper":               2,
+	"tipping":              2,
+	"tipsy":                2,
+	"tiring":               2,
+	"tire":                 1,
+	"tireless":             2,
+	"tirelessly":           3,
+	"tiresome":             2,
+	"tired":                1,
+	"tissue":               2,
+	"tit":                  1,
+	"titty":                2,
+	"titular":              3,
+	"tithe":                1,
+	"tng":                  1,
+	"tobacco":              3,
+	"toby":                 2,
+	"tocopherol":           4,
+	"today":                2,
+	"toga":                 2,
+	"together":             3,
+	"token":                2,
+	"tomato":               3,
+	"tomography":           4,
+	"tomorrow":             3,
+	"tonight":              2,
+	"topaz":                2,
+	"topiary":              4,
+	"topography":           4,
+	"topology":             4,
+	"tori":                 2,
+	"toro":                 2,
+	"toroidal":             3,
+	"torus":                2,
+	"total":                2,
+	"totalitarian":         6,
+	"totalitarianism":      7,
+	"totality":             4,
+	"totaling":             3,
+	"totalling":            3,
+	"totally":              3,
+	"totaled":              2,
+	"totalled":             2,
+	"totem":                2,
+	"toward":               2,
+	"towards":              2,
+	"toad":                 1,
+	"toast":                1,
+	"toaster":              2,
+	"toastmaster":          3,
+	"tob":                  1,
+	"tobe":                 1,
+	"tod":                  1,
+	"toddler":              2,
+	"toe":                  1,
+	"toed":                 1,
+	"toffee":               2,
+	"tog":                  1,
+	"toggle":               2,
+	"toilet":               2,
+	"toiletry":             3,
+	"toilette":             2,
+	"toil":                 1,
+	"toile":                1,
+	"tolerable":            4,
+	"tolerance":            3,
+	"tolerant":             3,
+	"tolerate":             3,
+	"toluene":              3,
+	"told":                 1,
+	"tole":                 1,
+	"toll":                 1,
+	"tom":                  1,
+	"tomahawk":             3,
+	"tomcat":               2,
+	"tommy":                2,
+	"tomb":                 1,
+	"tombstone":            2,
+	"tome":                 1,
+	"ton":                  1,
+	"tonal":                2,
+	"tonga":                2,
+	"tonic":                2,
+	"toning":               2,
+	"tonite":               2,
+	"tonnage":              2,
+	"tonneau":              2,
+	"tony":                 2,
+	"tone":                 1,
+	"tong":                 1,
+	"tongs":                1,
+	"tongue":               1,
+	"tongued":              1,
+	"tongues":              1,
+	"tonk":                 1,
+	"tonne":                1,
+	"too":                  1,
+	"took":                 1,
+	"tool":                 1,
+	"toolbox":              2,
+	"tooling":              2,
+	"toon":                 1,
+	"toot":                 1,
+	"tootsie":              2,
+	"tooth":                1,
+	"toothbrush":           2,
+	"toothpaste":           2,
+	"toothpick":            2,
+	"toothed":              1,
+	"top":                  1,
+	"topical":              3,
+	"topic":                2,
+	"topless":              2,
+	"topmost":              2,
+	"topographic":          4,
+	"topper":               2,
+	"topping":              2,
+	"topple":               2,
+	"topsoil":              2,
+	"tops":                 1,
+	"tor":                  1,
+	"toric":                2,
+	"torment":              2,
+	"tornado":              3,
+	"torpedo":              3,
+	"torrent":              2,
+	"torrid":               2,
+	"torsion":              2,
+	"torso":                2,
+	"tortilla":             3,
+	"tortoise":             2,
+	"torturing":            3,
+	"torture":              2,
+	"tortured":             2,
+	"torch":                1,
+	"tore":                 1,
+	"torn":                 1,
+	"torque":               1,
+	"torr":                 1,
+	"tort":                 1,
+	"tos":                  1,
+	"tosh":                 1,
+	"toss":                 1,
+	"tot":                  1,
+	"tote":                 1,
+	"toucan":               2,
+	"touche":               2,
+	"touch":                1,
+	"touchdown":            2,
+	"touching":             2,
+	"touchstone":           2,
+	"touchy":               2,
+	"touched":              1,
+	"tough":                1,
+	"toughness":            2,
+	"tour":                 1,
+	"tourism":              2,
+	"tourist":              2,
+	"tourmaline":           3,
+	"tournament":           3,
+	"tourney":              2,
+	"tout":                 1,
+	"tow":                  1,
+	"towel":                2,
+	"tower":                2,
+	"towering":             3,
+	"town":                 1,
+	"township":             2,
+	"tox":                  1,
+	"toxicological":        6,
+	"toxicology":           5,
+	"toxic":                2,
+	"toxicity":             4,
+	"toxin":                2,
+	"toy":                  1,
+	"trachea":              3,
+	"tracheal":             3,
+	"tradition":            3,
+	"traditional":          4,
+	"trajectory":           4,
+	"trapeze":              2,
+	"traversal":            3,
+	"tracer":               2,
+	"tracing":              2,
+	"traction":             2,
+	"tractor":              2,
+	"trace":                1,
+	"traceability":         5,
+	"traceable":            3,
+	"track":                1,
+	"tracker":              2,
+	"tracksuit":            2,
+	"tracks":               1,
+	"tract":                1,
+	"trad":                 1,
+	"trader":               2,
+	"trade":                1,
+	"trademark":            2,
+	"tradesman":            2,
+	"traffic":              2,
+	"trafficking":          3,
+	"trafficked":           2,
+	"tragedy":              3,
+	"tragically":           4,
+	"tragic":               2,
+	"traitor":              2,
+	"trail":                1,
+	"trailblazer":          3,
+	"trailer":              2,
+	"train":                1,
+	"trainee":              2,
+	"trainer":              2,
+	"training":             2,
+	"trait":                1,
+	"tram":                 1,
+	"trample":              2,
+	"trampoline":           3,
+	"tramway":              2,
+	"tramp":                1,
+	"tranquil":             2,
+	"tranquility":          4,
+	"tranquillity":         4,
+	"transcendental":       4,
+	"transcendence":        3,
+	"transcriber":          3,
+	"transcribing":         3,
+	"transcribe":           2,
+	"transcribed":          2,
+	"transcription":        3,
+	"transcriptional":      4,
+	"transcript":           2,
+	"transect":             2,
+	"transition":           3,
+	"transitional":         4,
+	"transitive":           3,
+	"transitory":           4,
+	"transient":            2,
+	"transistor":           3,
+	"transom":              2,
+	"transpired":           2,
+	"transponder":          3,
+	"trance":               1,
+	"trans":                1,
+	"transaction":          3,
+	"transactional":        4,
+	"transact":             2,
+	"transatlantic":        4,
+	"transceiver":          3,
+	"transcend":            2,
+	"transcendent":         3,
+	"transcontinental":     5,
+	"transducer":           3,
+	"transduction":         3,
+	"transfer":             2,
+	"transferable":         4,
+	"transferase":          3,
+	"transferee":           3,
+	"transference":         3,
+	"transferor":           3,
+	"transferring":         3,
+	"transferred":          2,
+	"transformation":       4,
+	"transformational":     5,
+	"transform":            2,
+	"transformative":       4,
+	"transformer":          3,
+	"transfusion":          3,
+	"transgression":        3,
+	"transit":              2,
+	"translation":          3,
+	"translational":        4,
+	"translator":           3,
+	"translate":            2,
+	"translocation":        4,
+	"translucent":          3,
+	"transmission":         3,
+	"transmit":             2,
+	"transmittal":          3,
+	"transmitted":          3,
+	"transmitter":          3,
+	"transmitting":         3,
+	"transnational":        4,
+	"transparency":         4,
+	"transparent":          3,
+	"transparently":        4,
+	"transplant":           2,
+	"transposition":        4,
+	"transportation":       4,
+	"transport":            2,
+	"transported":          3,
+	"transpose":            2,
+	"transposed":           2,
+	"transsexual":          4,
+	"transverse":           2,
+	"transvestite":         3,
+	"transl":               1,
+	"transp":               1,
+	"trap":                 1,
+	"trapper":              2,
+	"trapping":             2,
+	"trappings":            2,
+	"traps":                1,
+	"trash":                1,
+	"trashy":               2,
+	"trattoria":            4,
+	"trauma":               2,
+	"traumatized":          3,
+	"traumatic":            3,
+	"travail":              2,
+	"travel":               2,
+	"traveler":             3,
+	"traveling":            3,
+	"traveller":            3,
+	"travelling":           3,
+	"traveled":             2,
+	"travelled":            2,
+	"traversing":           3,
+	"traverse":             2,
+	"traversed":            2,
+	"travesty":             3,
+	"trawl":                1,
+	"trawler":              2,
+	"tray":                 1,
+	"treble":               2,
+	"tremendous":           3,
+	"tremendously":         4,
+	"treason":              2,
+	"treatise":             2,
+	"treaty":               2,
+	"treacherous":          3,
+	"treachery":            3,
+	"tread":                1,
+	"treading":             2,
+	"treadmill":            2,
+	"treasurer":            3,
+	"treasury":             3,
+	"treasure":             2,
+	"treasured":            2,
+	"treat":                1,
+	"treatment":            2,
+	"trebuchet":            3,
+	"tree":                 1,
+	"trek":                 1,
+	"trekker":              2,
+	"trekking":             2,
+	"trellis":              2,
+	"tremble":              2,
+	"tremolo":              3,
+	"tremor":               2,
+	"trench":               1,
+	"trenches":             2,
+	"trend":                1,
+	"trendy":               2,
+	"tres":                 1,
+	"trespass":             2,
+	"trey":                 1,
+	"triad":                2,
+	"triage":               2,
+	"trial":                2,
+	"triangle":             3,
+	"triangulation":        5,
+	"triangular":           4,
+	"tribunal":             3,
+	"tricycle":             3,
+	"trident":              2,
+	"triennial":            4,
+	"trier":                2,
+	"trifle":               2,
+	"triglyceride":         4,
+	"trimester":            3,
+	"trio":                 2,
+	"trios":                2,
+	"tripartite":           3,
+	"triphosphate":         3,
+	"triple":               2,
+	"triplet":              2,
+	"triplex":              2,
+	"tripod":               2,
+	"triton":               2,
+	"triumphant":           3,
+	"triumph":              2,
+	"tribal":               2,
+	"tribulation":          4,
+	"tributaries":          4,
+	"tributary":            4,
+	"tribune":              2,
+	"tribute":              2,
+	"tribe":                1,
+	"trice":                1,
+	"trick":                1,
+	"trickery":             3,
+	"trickle":              2,
+	"trickster":            2,
+	"tricky":               2,
+	"tried":                1,
+	"trig":                 1,
+	"trigger":              2,
+	"trigonometric":        5,
+	"trigonometry":         5,
+	"trike":                1,
+	"trillion":             2,
+	"trillium":             2,
+	"trilogy":              3,
+	"trim":                 1,
+	"trimmer":              2,
+	"trimming":             2,
+	"trinity":              3,
+	"trinket":              2,
+	"trine":                1,
+	"trip":                 1,
+	"tripoli":              3,
+	"tripping":             2,
+	"tripwire":             2,
+	"tritium":              3,
+	"trite":                1,
+	"trivia":               3,
+	"trivial":              3,
+	"trivium":              3,
+	"trophy":               2,
+	"troika":               2,
+	"trolley":              2,
+	"troll":                1,
+	"trombone":             2,
+	"troop":                1,
+	"trooper":              2,
+	"trop":                 1,
+	"tropical":             3,
+	"tropic":               2,
+	"tropospheric":         4,
+	"troposphere":          3,
+	"trophic":              2,
+	"trot":                 1,
+	"trotter":              2,
+	"trotting":             2,
+	"trouble":              2,
+	"troubleshoot":         3,
+	"troubleshooter":       4,
+	"troubleshooting":      4,
+	"troublesome":          3,
+	"trouser":              2,
+	"trousers":             2,
+	"trough":               1,
+	"troupe":               1,
+	"trout":                1,
+	"trove":                1,
+	"trowel":               2,
+	"troy":                 1,
+	"truancy":              3,
+	"truer":                2,
+	"truly":                2,
+	"truce":                1,
+	"truck":                1,
+	"trucker":              2,
+	"trucking":             2,
+	"truckload":            2,
+	"true":                 1,
+	"truffle":              2,
+	"trumpet":              2,
+	"trumpeter":            3,
+	"trumpets":             2,
+	"trump":                1,
+	"trumps":               1,
+	"truncation":           3,
+	"truncated":            3,
+	"truncate":             2,
+	"trundle":              2,
+	"trunk":                1,
+	"trunks":               1,
+	"trustee":              2,
+	"truss":                1,
+	"trust":                1,
+	"trusting":             2,
+	"trustworthiness":      4,
+	"trustworthy":          3,
+	"trusty":               2,
+	"truth":                1,
+	"truthful":             2,
+	"try":                  1,
+	"trying":               2,
+	"tryout":               2,
+	"trypsin":              2,
+	"tryptophan":           3,
+	"tsar":                 1,
+	"tsk":                  1,
+	"tsp":                  1,
+	"tsunami":              3,
+	"tuba":                 2,
+	"tubal":                2,
+	"tuber":                2,
+	"tuberculosis":         5,
+	"tugrik":               2,
+	"tui":                  2,
+	"tuition":              3,
+	"tulip":                2,
+	"tumor":                2,
+	"tumour":               2,
+	"tumultuous":           4,
+	"tuna":                 2,
+	"tunica":               3,
+	"tunic":                2,
+	"tupelo":               3,
+	"tutorial":             4,
+	"tutor":                2,
+	"tutu":                 2,
+	"tub":                  1,
+	"tubby":                2,
+	"tubing":               2,
+	"tubular":              3,
+	"tube":                 1,
+	"tubes":                1,
+	"tuck":                 1,
+	"tucker":               2,
+	"tuff":                 1,
+	"tufted":               2,
+	"tug":                  1,
+	"tulle":                1,
+	"tum":                  1,
+	"tumble":               2,
+	"tumbleweed":           3,
+	"tumbler":              2,
+	"tumbling":             2,
+	"tummy":                2,
+	"tun":                  1,
+	"tunable":              3,
+	"tundra":               2,
+	"tuner":                2,
+	"tuning":               2,
+	"tunnel":               2,
+	"tunneling":            3,
+	"tunning":              2,
+	"tune":                 1,
+	"tungsten":             2,
+	"turban":               2,
+	"turbidity":            4,
+	"turbine":              2,
+	"turbo":                2,
+	"turbulence":           3,
+	"turbulent":            3,
+	"turion":               3,
+	"turkey":               2,
+	"turmeric":             3,
+	"turmoil":              2,
+	"turnip":               2,
+	"turquoise":            2,
+	"turret":               2,
+	"turtle":               2,
+	"turtleneck":           3,
+	"turd":                 1,
+	"turf":                 1,
+	"turn":                 1,
+	"turnaround":           3,
+	"turner":               2,
+	"turning":              2,
+	"turnkey":              2,
+	"turnover":             3,
+	"turnout":              2,
+	"turnpike":             2,
+	"turntable":            3,
+	"tusk":                 1,
+	"tut":                  1,
+	"tutti":                2,
+	"tutto":                2,
+	"tuxedo":               3,
+	"twain":                1,
+	"twang":                1,
+	"twat":                 1,
+	"tweak":                1,
+	"twee":                 1,
+	"tweed":                1,
+	"tweedy":               2,
+	"tweeter":              2,
+	"tweezers":             2,
+	"twelfth":              1,
+	"twelve":               1,
+	"twentieth":            3,
+	"twenty":               2,
+	"twilight":             2,
+	"twice":                1,
+	"twig":                 1,
+	"twill":                1,
+	"twin":                 1,
+	"twinkle":              2,
+	"twinkling":            2,
+	"twinning":             2,
+	"twine":                1,
+	"twink":                1,
+	"twist":                1,
+	"twister":              2,
+	"twitch":               1,
+	"two":                  1,
+	"twofold":              2,
+	"twp":                  1,
+	"tycoon":               2,
+	"tying":                2,
+	"typhoid":              2,
+	"typhoon":              2,
+	"typographical":        5,
+	"typographic":          4,
+	"typography":           4,
+	"typology":             4,
+	"tyrannical":           4,
+	"tyrosine":             3,
+	"tye":                  1,
+	"tyler":                2,
+	"typ":                  1,
+	"typical":              3,
+	"typically":            4,
+	"typing":               2,
+	"typist":               2,
+	"type":                 1,
+	"typeface":             2,
+	"typescript":           2,
+	"typeset":              2,
+	"typesetting":          3,
+	"typewriter":           3,
+	"typo":                 1,
+	"tyranny":              3,
+	"tyrant":               1,
+	"tyre":                 1,
+	"ubi":                  2,
+	"ubiquitous":           4,
+	"udo":                  2,
+	"ukulele":              4,
+	"unanimity":            5,
+	"unanimous":            4,
+	"unanimously":          5,
+	"unary":                3,
+	"uni":                  2,
+	"unicorn":              3,
+	"unidirectional":       6,
+	"unification":          5,
+	"unified":              3,
+	"uniform":              3,
+	"uniformity":           5,
+	"uniformly":            4,
+	"uniformed":            3,
+	"unify":                3,
+	"unifying":             4,
+	"unilateral":           5,
+	"unilaterally":         6,
+	"unisex":               3,
+	"unison":               3,
+	"unitarian":            5,
+	"unitary":              4,
+	"unity":                3,
+	"universal":            4,
+	"universality":         6,
+	"universalist":         5,
+	"universally":          5,
+	"university":           5,
+	"universe":             3,
+	"unique":               2,
+	"unit":                 2,
+	"united":               3,
+	"uniting":              3,
+	"unite":                2,
+	"uranium":              4,
+	"urea":                 3,
+	"urethane":             3,
+	"urethra":              3,
+	"urethral":             3,
+	"urination":            4,
+	"urinal":               3,
+	"urinalysis":           5,
+	"urinary":              4,
+	"urinating":            4,
+	"urinate":              3,
+	"uric":                 2,
+	"urine":                2,
+	"urology":              4,
+	"usual":                3,
+	"usually":              4,
+	"uta":                  2,
+	"utensil":              3,
+	"uterine":              3,
+	"uterus":               3,
+	"uti":                  2,
+	"utilization":          5,
+	"utilise":              3,
+	"utilizing":            4,
+	"utilize":              3,
+	"utilized":             3,
+	"utilitarian":          6,
+	"utility":              4,
+	"utile":                2,
+	"ugliness":             3,
+	"ugly":                 2,
+	"ugh":                  1,
+	"uke":                  1,
+	"ulcer":                2,
+	"ulcerative":           4,
+	"ulster":               2,
+	"ultima":               3,
+	"ultimatum":            4,
+	"ultimate":             3,
+	"ultimately":           4,
+	"ultimo":               3,
+	"ultra":                2,
+	"ultrasonic":           4,
+	"ultrasound":           3,
+	"ultrastructure":       4,
+	"ultraviolet":          2,
+	"umber":                2,
+	"umbilical":            4,
+	"umbra":                2,
+	"umbrella":             3,
+	"umpire":               2,
+	"unable":               3,
+	"unabridged":           3,
+	"unavailability":       7,
+	"unavailable":          5,
+	"unavoidable":          5,
+	"unaware":              3,
+	"unacceptable":         5,
+	"unaccompanied":        5,
+	"unaccounted":          4,
+	"unadjusted":           4,
+	"unaffected":           4,
+	"unaffiliated":         6,
+	"unambiguous":          5,
+	"unannotated":          5,
+	"unannounced":          3,
+	"unanticipated":        6,
+	"unapproved":           3,
+	"unarmed":              2,
+	"unassigned":           3,
+	"unassisted":           4,
+	"unattached":           3,
+	"unattended":           4,
+	"unattractive":         4,
+	"unaudited":            4,
+	"unauthorised":         4,
+	"unauthorized":         4,
+	"unbalanced":           3,
+	"unbelief":             3,
+	"unbelievable":         5,
+	"unbearable":           4,
+	"unbeatable":           4,
+	"unbeaten":             3,
+	"unbiased":             3,
+	"unbonded":             3,
+	"unborn":               2,
+	"unbound":              2,
+	"unbounded":            3,
+	"unbranded":            3,
+	"unbreakable":          4,
+	"unbridled":            3,
+	"unbroken":             3,
+	"unbuffered":           3,
+	"unbundled":            3,
+	"uncanny":              3,
+	"uncategorized":        5,
+	"uncensored":           3,
+	"uncertain":            3,
+	"uncertainty":          4,
+	"unchained":            2,
+	"unchallenged":         3,
+	"unchanging":           3,
+	"unchanged":            2,
+	"uncharted":            3,
+	"unchecked":            2,
+	"uncirculated":         5,
+	"unclaimed":            2,
+	"unclassified":         4,
+	"uncle":                2,
+	"unclean":              2,
+	"unclear":              2,
+	"uncomfortable":        5,
+	"uncommon":             3,
+	"uncomplicated":        5,
+	"uncompressed":         3,
+	"uncompromising":       5,
+	"unconditional":        5,
+	"unconnected":          4,
+	"unconscious":          3,
+	"unconsciously":        4,
+	"unconsciousness":      4,
+	"unconstitutional":     6,
+	"unconstrained":        3,
+	"uncontested":          4,
+	"uncontrollable":       5,
+	"uncontrolled":         3,
+	"unconventional":       5,
+	"uncooked":             2,
+	"uncorrelated":         5,
+	"uncorrected":          4,
+	"uncovered":            3,
+	"uncover":              2,
+	"uncut":                2,
+	"undamaged":            3,
+	"undated":              3,
+	"undecided":            4,
+	"undeclared":           3,
+	"undefeated":           4,
+	"undefined":            3,
+	"undeliverable":        6,
+	"undeniable":           5,
+	"undeniably":           5,
+	"undesirable":          5,
+	"undesired":            3,
+	"undetectable":         5,
+	"undetected":           4,
+	"undetermined":         4,
+	"under":                2,
+	"underage":             3,
+	"underarm":             3,
+	"undercover":           4,
+	"undercut":             3,
+	"underdeveloped":       5,
+	"underdog":             3,
+	"underestimate":        5,
+	"undergo":              3,
+	"undergoing":           4,
+	"undergone":            3,
+	"undergrad":            3,
+	"undergraduate":        5,
+	"underground":          3,
+	"underhill":            3,
+	"underlay":             3,
+	"underlie":             3,
+	"underline":            3,
+	"underlying":           4,
+	"undermining":          4,
+	"undermine":            3,
+	"undermined":           3,
+	"underneath":           3,
+	"underpants":           3,
+	"underpin":             3,
+	"underpinning":         4,
+	"underpinnings":        4,
+	"underpinned":          3,
+	"underprivileged":      5,
+	"underscore":           3,
+	"underscored":          3,
+	"undersea":             3,
+	"undersecretary":       6,
+	"underside":            3,
+	"undersigned":          3,
+	"understand":           3,
+	"understandable":       5,
+	"understandably":       5,
+	"understanding":        4,
+	"understated":          4,
+	"understatement":       4,
+	"understood":           3,
+	"undertaker":           4,
+	"undertaking":          4,
+	"undertake":            3,
+	"undertook":            3,
+	"undervalued":          4,
+	"underwater":           4,
+	"underwear":            3,
+	"underweight":          3,
+	"underwent":            3,
+	"underwood":            3,
+	"underworld":           3,
+	"underwriter":          4,
+	"underwriting":         4,
+	"underwritten":         4,
+	"underwrite":           3,
+	"undivided":            4,
+	"undies":               2,
+	"undifferentiated":     7,
+	"undisclosed":          3,
+	"undiscovered":         4,
+	"undisputed":           4,
+	"undistributed":        5,
+	"undisturbed":          3,
+	"undo":                 2,
+	"undoing":              3,
+	"undocumented":         5,
+	"undone":               2,
+	"undoubtedly":          4,
+	"undress":              2,
+	"undressed":            2,
+	"unduly":               3,
+	"undue":                2,
+	"undying":              3,
+	"unequal":              3,
+	"unequivocal":          5,
+	"unequivocally":        6,
+	"uneven":               3,
+	"uneventful":           4,
+	"unearned":             2,
+	"unearth":              2,
+	"uneasy":               3,
+	"unedited":             4,
+	"uneducated":           5,
+	"unemployment":         4,
+	"unemployed":           3,
+	"unenforceable":        5,
+	"unending":             3,
+	"unethical":            4,
+	"unexpected":           4,
+	"unexpectedly":         5,
+	"unexpired":            3,
+	"unexplained":          3,
+	"unexplored":           3,
+	"unfamiliar":           4,
+	"unfavorable":          5,
+	"unfavourable":         5,
+	"unfair":               2,
+	"unfaithful":           3,
+	"unfiltered":           3,
+	"unfilled":             2,
+	"unfinished":           3,
+	"unfit":                2,
+	"unfold":               2,
+	"unforgettable":        5,
+	"unforgiven":           4,
+	"unfortunate":          4,
+	"unfortunately":        5,
+	"unforeseen":           3,
+	"unfounded":            3,
+	"unframed":             2,
+	"unfriendly":           3,
+	"unfulfilled":          3,
+	"unfunded":             3,
+	"unfurnished":          3,
+	"ungodly":              3,
+	"ungraded":             3,
+	"ungrateful":           3,
+	"unhappiness":          4,
+	"unhappy":              3,
+	"unhealthy":            3,
+	"unheard":              2,
+	"unhelpful":            3,
+	"unholy":               3,
+	"unidentified":         5,
+	"unimaginable":         6,
+	"unimportant":          4,
+	"unincorporated":       6,
+	"uninformed":           3,
+	"uninhabited":          5,
+	"uninhibited":          5,
+	"uninstalled":          3,
+	"uninsured":            3,
+	"unintentional":        5,
+	"unintended":           4,
+	"uninteresting":        5,
+	"uninterrupted":        5,
+	"union":                2,
+	"unionism":             3,
+	"unionist":             3,
+	"unjustified":          4,
+	"unjust":               2,
+	"unjustly":             3,
+	"unknowingly":          4,
+	"unknown":              2,
+	"unlabeled":            3,
+	"unlawful":             3,
+	"unlawfully":           4,
+	"unleaded":             3,
+	"unleash":              2,
+	"unless":               2,
+	"unlicensed":           3,
+	"unlike":               2,
+	"unlikely":             3,
+	"unlimited":            4,
+	"unlined":              2,
+	"unlink":               2,
+	"unlisted":             3,
+	"unload":               2,
+	"unlock":               2,
+	"unlucky":              3,
+	"unmanaged":            3,
+	"unmanned":             2,
+	"unmarried":            3,
+	"unmarked":             2,
+	"unmask":               2,
+	"unmasked":             2,
+	"unmatched":            2,
+	"unmet":                2,
+	"unmistakable":         5,
+	"unmoderated":          5,
+	"unmodified":           4,
+	"unmounted":            3,
+	"unnamed":              2,
+	"unnatural":            4,
+	"unnecessarily":        6,
+	"unnecessary":          5,
+	"unneeded":             3,
+	"unnoticed":            3,
+	"unnumbered":           3,
+	"unopened":             3,
+	"unobserved":           3,
+	"unobstructed":         4,
+	"unobtrusive":          4,
+	"unoccupied":           4,
+	"unofficial":           4,
+	"unopposed":            3,
+	"unordered":            3,
+	"unorthodox":           4,
+	"unpack":               2,
+	"unpaid":               2,
+	"unparalleled":         4,
+	"unpatched":            2,
+	"unpaved":              2,
+	"unpleasant":           3,
+	"unplug":               2,
+	"unplugged":            2,
+	"unpopular":            4,
+	"unpredictable":        5,
+	"unprepared":           3,
+	"unprecedented":        5,
+	"unproductive":         4,
+	"unprofessional":       5,
+	"unprotected":          4,
+	"unprocessed":          3,
+	"unprofitable":         5,
+	"unproven":             3,
+	"unpublished":          3,
+	"unqualified":          4,
+	"unquestionably":       5,
+	"unranked":             2,
+	"unrated":              3,
+	"unravel":              3,
+	"unraveling":           4,
+	"unreal":               3,
+	"unrealistic":          5,
+	"unrealized":           4,
+	"unrelated":            4,
+	"unreleased":           3,
+	"unrelenting":          4,
+	"unreliable":           5,
+	"unreported":           4,
+	"unresolved":           3,
+	"unresponsive":         4,
+	"unrestrained":         3,
+	"unrestricted":         4,
+	"unreasonable":         5,
+	"unreasonably":         5,
+	"unreachable":          4,
+	"unread":               2,
+	"unreadable":           4,
+	"unrecognized":         4,
+	"unregistered":         4,
+	"unregulated":          5,
+	"unrest":               2,
+	"unrivaled":            3,
+	"unrivalled":           3,
+	"unruly":               3,
+	"unsafe":               2,
+	"unsatisfactory":       6,
+	"unsatisfied":          4,
+	"unsaturated":          5,
+	"unscathed":            2,
+	"unscented":            3,
+	"unscheduled":          3,
+	"unscrupulous":         4,
+	"unsecured":            3,
+	"unseen":               2,
+	"unselfish":            3,
+	"unsere":               2,
+	"unset":                2,
+	"unsettled":            3,
+	"unshaved":             2,
+	"unsightly":            3,
+	"unsigned":             2,
+	"unskilled":            2,
+	"unsolicited":          5,
+	"unsold":               2,
+	"unsolved":             2,
+	"unsound":              2,
+	"unspeakable":          4,
+	"unspecified":          4,
+	"unspoken":             3,
+	"unspoiled":            2,
+	"unspoilt":             2,
+	"unstable":             3,
+	"unsteady":             3,
+	"unstoppable":          4,
+	"unstructured":         3,
+	"unstrung":             2,
+	"unsupervised":         4,
+	"unsubscribing":        4,
+	"unsubstantiated":      6,
+	"unsuccessful":         4,
+	"unsuccessfully":       5,
+	"unsuitable":           4,
+	"unsung":               2,
+	"unsupported":          4,
+	"unsurpassed":          3,
+	"unsure":               2,
+	"unsuspecting":         4,
+	"unsustainable":        5,
+	"untamed":              2,
+	"untapped":             2,
+	"untenable":            4,
+	"untested":             3,
+	"unthinkable":          4,
+	"unthreaded":           3,
+	"untied":               2,
+	"until":                2,
+	"untimely":             3,
+	"untitled":             3,
+	"unto":                 2,
+	"untold":               2,
+	"untouchable":          4,
+	"untouched":            2,
+	"untrained":            2,
+	"untranslated":         4,
+	"untreated":            3,
+	"untrue":               2,
+	"untrusted":            3,
+	"unusual":              4,
+	"unusually":            5,
+	"unusable":             4,
+	"unused":               2,
+	"unveil":               2,
+	"unveiling":            3,
+	"unverified":           4,
+	"unwavering":           4,
+	"unwanted":             3,
+	"unwarranted":          4,
+	"unweighted":           3,
+	"unwelcome":            3,
+	"unwieldy":             3,
+	"unwilling":            3,
+	"unwillingness":        4,
+	"unwind":               2,
+	"unwired":              2,
+	"unwise":               2,
+	"unwittingly":          4,
+	"unworthy":             3,
+	"unwrap":               2,
+	"unwrapped":            2,
+	"unwritten":            3,
+	"unzip":                2,
+	"unzipped":             2,
+	"unb":                  1,
+	"univ":                 1,
+	"upbeat":               2,
+	"upbringing":           3,
+	"updated":              3,
+	"updater":              3,
+	"updating":             3,
+	"update":               2,
+	"upgraded":             3,
+	"upgrading":            3,
+	"upgrade":              2,
+	"upheaval":             3,
+	"upheld":               2,
+	"uphill":               2,
+	"upholstery":           4,
+	"uphold":               2,
+	"upholding":            3,
+	"upkeep":               2,
+	"upland":               2,
+	"uplift":               2,
+	"upon":                 2,
+	"upper":                2,
+	"uppermost":            3,
+	"upright":              2,
+	"uprising":             3,
+	"uproar":               2,
+	"upset":                2,
+	"upsetting":            3,
+	"upsilon":              3,
+	"upside":               2,
+	"upstairs":             2,
+	"upstart":              2,
+	"upstate":              2,
+	"upstream":             2,
+	"uptake":               2,
+	"uptight":              2,
+	"uptown":               2,
+	"upward":               2,
+	"upwards":              2,
+	"urban":                2,
+	"urbanization":         5,
+	"urbanism":             3,
+	"urchin":               2,
+	"urgency":              3,
+	"urgent":               2,
+	"urging":               2,
+	"urge":                 1,
+	"urn":                  1,
+	"usable":               3,
+	"usage":                2,
+	"user":                 2,
+	"using":                2,
+	"use":                  1,
+	"useable":              3,
+	"useful":               2,
+	"usefully":             3,
+	"usefulness":           3,
+	"useless":              2,
+	"used":                 1,
+	"usher":                2,
+	"utmost":               2,
+	"utter":                2,
+	"utterance":            3,
+	"ute":                  1,
+	"vacation":             3,
+	"vacancy":              3,
+	"vacant":               2,
+	"vacate":               2,
+	"vagina":               3,
+	"vagrant":              2,
+	"valerian":             4,
+	"valence":              2,
+	"validity":             4,
+	"vanadium":             4,
+	"vanilla":              3,
+	"vapor":                2,
+	"vapour":               2,
+	"vara":                 2,
+	"varietal":             4,
+	"variety":              4,
+	"vario":                3,
+	"vac":                  1,
+	"vaccination":          4,
+	"vaccinated":           4,
+	"vaccine":              2,
+	"vacuum":               3,
+	"vacuums":              3,
+	"vagabond":             3,
+	"vaginal":              3,
+	"vague":                1,
+	"vaguely":              2,
+	"vagueness":            2,
+	"vail":                 1,
+	"vain":                 1,
+	"val":                  1,
+	"valance":              2,
+	"valentine":            3,
+	"valet":                2,
+	"validation":           4,
+	"validate":             3,
+	"valiant":              2,
+	"valid":                2,
+	"validly":              3,
+	"valley":               2,
+	"valor":                2,
+	"valour":               2,
+	"valuable":             4,
+	"valuation":            4,
+	"value":                2,
+	"valued":               2,
+	"vale":                 1,
+	"valve":                1,
+	"vampire":              2,
+	"vamp":                 1,
+	"van":                  1,
+	"vandal":               2,
+	"vandalism":            3,
+	"vanguard":             2,
+	"vanity":               3,
+	"vanish":               2,
+	"vanquish":             2,
+	"vantage":              2,
+	"vane":                 1,
+	"vang":                 1,
+	"var":                  1,
+	"varia":                3,
+	"variability":          6,
+	"variable":             4,
+	"variation":            4,
+	"variational":          5,
+	"variance":             3,
+	"variant":              3,
+	"varicella":            4,
+	"varicose":             3,
+	"various":              3,
+	"variegated":           4,
+	"varied":               2,
+	"varna":                2,
+	"varnish":              2,
+	"varsity":              3,
+	"vary":                 2,
+	"varying":              3,
+	"vas":                  1,
+	"vascular":             3,
+	"vasectomy":            4,
+	"vase":                 1,
+	"vast":                 1,
+	"vastly":               2,
+	"vat":                  1,
+	"vaudeville":           2,
+	"vault":                1,
+	"vaulted":              2,
+	"vegan":                2,
+	"vehemently":           4,
+	"vehicle":              3,
+	"vehicular":            4,
+	"vela":                 2,
+	"velocity":             4,
+	"velour":               2,
+	"vena":                 2,
+	"veneer":               2,
+	"venous":               2,
+	"veracity":             4,
+	"veranda":              3,
+	"verandah":             3,
+	"veritas":              3,
+	"veronica":             4,
+	"veto":                 2,
+	"vetoed":               2,
+	"veal":                 1,
+	"vector":               2,
+	"vee":                  1,
+	"veer":                 1,
+	"veg":                  1,
+	"vegetable":            4,
+	"vegetation":           4,
+	"vegetative":           4,
+	"vegetarian":           5,
+	"vegetarianism":        6,
+	"veil":                 1,
+	"veiled":               1,
+	"vein":                 1,
+	"vel":                  1,
+	"vellum":               2,
+	"velvet":               2,
+	"velvety":              3,
+	"vendetta":             3,
+	"vendor":               2,
+	"venerable":            4,
+	"venison":              3,
+	"venom":                2,
+	"venomous":             3,
+	"venter":               2,
+	"ventilation":          4,
+	"ventilator":           4,
+	"ventral":              2,
+	"ventricle":            3,
+	"ventricular":          4,
+	"venturing":            3,
+	"venture":              2,
+	"ventured":             2,
+	"venue":                2,
+	"vengeance":            2,
+	"vent":                 1,
+	"ver":                  1,
+	"verbatim":             3,
+	"verbal":               2,
+	"verbally":             3,
+	"verbena":              3,
+	"verbosity":            4,
+	"verbose":              2,
+	"verdict":              2,
+	"verifiable":           5,
+	"verifier":             4,
+	"verified":             3,
+	"verify":               3,
+	"verifying":            4,
+	"verily":               3,
+	"veritable":            4,
+	"verity":               3,
+	"vermeil":              2,
+	"vermilion":            3,
+	"vermillion":           3,
+	"vermin":               2,
+	"vernacular":           4,
+	"vernal":               2,
+	"versatility":          5,
+	"versatile":            3,
+	"version":              2,
+	"verso":                2,
+	"versus":               2,
+	"vertebral":            3,
+	"vertebrate":           3,
+	"vertex":               2,
+	"vertical":             3,
+	"vertically":           4,
+	"vertices":             3,
+	"vertigo":              3,
+	"vertu":                2,
+	"very":                 2,
+	"verb":                 1,
+	"verge":                1,
+	"vers":                 1,
+	"verse":                1,
+	"versed":               1,
+	"vert":                 1,
+	"verve":                1,
+	"vesicle":              3,
+	"vessel":               2,
+	"vesta":                2,
+	"vestal":               2,
+	"vestibular":           4,
+	"vest":                 1,
+	"vested":               2,
+	"vesting":              2,
+	"vet":                  1,
+	"veteran":              3,
+	"veterinarian":         6,
+	"veterinary":           5,
+	"vetting":              2,
+	"vex":                  1,
+	"vexed":                1,
+	"vhf":                  1,
+	"via":                  2,
+	"viability":            5,
+	"viable":               3,
+	"viaduct":              3,
+	"vial":                 2,
+	"vibration":            3,
+	"vibrational":          4,
+	"vibrations":           3,
+	"vibrator":             3,
+	"vibrant":              2,
+	"vibrating":            3,
+	"vibrate":              2,
+	"vicarious":            4,
+	"vicinity":             4,
+	"vicious":              2,
+	"vide":                 2,
+	"vier":                 2,
+	"vignette":             2,
+	"vina":                 2,
+	"vino":                 2,
+	"vinyl":                2,
+	"viola":                3,
+	"violated":             4,
+	"violating":            4,
+	"violate":              3,
+	"violence":             3,
+	"violent":              3,
+	"violet":               3,
+	"violin":               3,
+	"violinist":            4,
+	"violoncello":          5,
+	"viol":                 2,
+	"viper":                2,
+	"viral":                2,
+	"virility":             4,
+	"virology":             4,
+	"virus":                2,
+	"viruses":              3,
+	"visa":                 2,
+	"vision":               2,
+	"visionaries":          4,
+	"visionary":            4,
+	"visor":                2,
+	"vita":                 2,
+	"vitae":                2,
+	"vital":                2,
+	"vitality":             4,
+	"vitally":              3,
+	"viva":                 2,
+	"vivo":                 2,
+	"vibrio":               3,
+	"vibes":                1,
+	"vicar":                2,
+	"victim":               2,
+	"victimization":        5,
+	"victimized":           3,
+	"victoria":             4,
+	"victorious":           4,
+	"victory":              3,
+	"victor":               2,
+	"vice":                 1,
+	"viceroy":              2,
+	"video":                3,
+	"vie":                  1,
+	"view":                 1,
+	"viewable":             3,
+	"viewer":               2,
+	"viewfinder":           3,
+	"viewing":              2,
+	"viewpoint":            2,
+	"vigilante":            4,
+	"vigilance":            3,
+	"vigilant":             3,
+	"vigil":                2,
+	"vigor":                2,
+	"vigorish":             3,
+	"vigorous":             3,
+	"vigorously":           4,
+	"vigour":               2,
+	"vil":                  1,
+	"villa":                2,
+	"villager":             3,
+	"village":              2,
+	"villain":              2,
+	"vile":                 1,
+	"vim":                  1,
+	"vinaigrette":          3,
+	"vindication":          4,
+	"vindicated":           4,
+	"vinegar":              3,
+	"vintage":              2,
+	"vine":                 1,
+	"vineland":             2,
+	"vineyard":             2,
+	"vireo":                3,
+	"virgin":               2,
+	"virginity":            4,
+	"virtual":              3,
+	"virtually":            4,
+	"virtuoso":             4,
+	"virtuous":             3,
+	"virtue":               2,
+	"virtues":              2,
+	"virulence":            3,
+	"virulent":             3,
+	"vis":                  1,
+	"visage":               2,
+	"visceral":             3,
+	"viscosity":            4,
+	"viscose":              2,
+	"viscount":             2,
+	"viscous":              2,
+	"visibility":           5,
+	"visible":              3,
+	"visitor":              3,
+	"visit":                2,
+	"visitation":           4,
+	"vista":                2,
+	"visual":               3,
+	"visualisation":        6,
+	"visualization":        6,
+	"visualizing":          5,
+	"visualize":            4,
+	"visualized":           4,
+	"visually":             4,
+	"vise":                 1,
+	"vitamin":              3,
+	"viticulture":          4,
+	"vitreous":             3,
+	"vivid":                2,
+	"vividly":              3,
+	"vive":                 1,
+	"vixen":                2,
+	"viz":                  1,
+	"vocation":             3,
+	"vocational":           4,
+	"vocab":                2,
+	"vocabularies":         5,
+	"vocabulary":           5,
+	"vocal":                2,
+	"vocalist":             3,
+	"volition":             3,
+	"voluminous":           4,
+	"voluptuous":           4,
+	"votive":               2,
+	"voyeur":               2,
+	"voyeurism":            3,
+	"voc":                  1,
+	"vodka":                2,
+	"vogue":                1,
+	"voila":                2,
+	"voiture":              2,
+	"voicing":              2,
+	"voice":                1,
+	"voiced":               1,
+	"void":                 1,
+	"voided":               2,
+	"vol":                  1,
+	"volatility":           5,
+	"volatile":             3,
+	"volcano":              3,
+	"volcanic":             3,
+	"volley":               2,
+	"volleyball":           3,
+	"volta":                2,
+	"volumetric":           4,
+	"volume":               2,
+	"voluntarily":          5,
+	"voluntary":            4,
+	"volunteer":            3,
+	"vols":                 1,
+	"volt":                 1,
+	"voltage":              2,
+	"vomit":                2,
+	"voodoo":               2,
+	"vortex":               2,
+	"vortices":             3,
+	"vorticity":            4,
+	"voted":                2,
+	"voter":                2,
+	"voting":               2,
+	"vote":                 1,
+	"vouch":                1,
+	"voucher":              2,
+	"vow":                  1,
+	"vowel":                2,
+	"vox":                  1,
+	"voyager":              3,
+	"voyage":               2,
+	"vulgar":               2,
+	"vulgate":              2,
+	"vulnerable":           4,
+	"vulture":              2,
+	"vulva":                2,
+	"vying":                2,
+	"wadi":                 2,
+	"wafer":                2,
+	"wager":                2,
+	"wahoo":                2,
+	"water":                2,
+	"waterborne":           3,
+	"watercolor":           4,
+	"watercourse":          3,
+	"watercraft":           3,
+	"waterfall":            3,
+	"waterfowl":            3,
+	"waterfront":           3,
+	"watering":             3,
+	"waterman":             3,
+	"watermark":            3,
+	"watermelon":           4,
+	"waterproof":           3,
+	"watershed":            3,
+	"waterside":            3,
+	"watertight":           3,
+	"waterway":             3,
+	"waterworks":           3,
+	"watery":               3,
+	"wack":                 1,
+	"wacker":               2,
+	"wacky":                2,
+	"wad":                  1,
+	"waders":               2,
+	"wading":               2,
+	"wade":                 1,
+	"waffle":               2,
+	"wag":                  1,
+	"wagga":                2,
+	"waging":               2,
+	"wagon":                2,
+	"wagoner":              3,
+	"wage":                 1,
+	"wail":                 1,
+	"wainwright":           2,
+	"waist":                1,
+	"waistband":            2,
+	"waistcoat":            2,
+	"wait":                 1,
+	"waiter":               2,
+	"waitress":             2,
+	"waiver":               2,
+	"waiving":              2,
+	"waive":                1,
+	"waking":               2,
+	"wake":                 1,
+	"walla":                2,
+	"wallet":               2,
+	"wally":                2,
+	"walnut":               2,
+	"walrus":               2,
+	"wale":                 1,
+	"walk":                 1,
+	"walkabout":            3,
+	"walker":               2,
+	"walking":              2,
+	"walkway":              2,
+	"wall":                 1,
+	"walleye":              2,
+	"wallpaper":            3,
+	"waltz":                1,
+	"wan":                  1,
+	"wander":               2,
+	"wanderer":             3,
+	"wandering":            3,
+	"wanderlust":           3,
+	"waning":               2,
+	"wanna":                2,
+	"wanton":               2,
+	"wand":                 1,
+	"wane":                 1,
+	"wank":                 1,
+	"want":                 1,
+	"wanting":              2,
+	"wap":                  1,
+	"war":                  1,
+	"warbler":              2,
+	"warden":               2,
+	"warfarin":             3,
+	"warfare":              2,
+	"warhead":              2,
+	"waring":               2,
+	"warlock":              2,
+	"warlord":              2,
+	"warranty":             3,
+	"warrant":              2,
+	"warren":               2,
+	"warrior":              3,
+	"warring":              2,
+	"warsaw":               2,
+	"warship":              2,
+	"wartime":              2,
+	"wary":                 2,
+	"ward":                 1,
+	"wardrobe":             2,
+	"ware":                 1,
+	"warehouses":           3,
+	"warehousing":          3,
+	"warehouse":            2,
+	"wares":                1,
+	"warm":                 1,
+	"warmer":               2,
+	"warmly":               2,
+	"warmth":               1,
+	"warn":                 1,
+	"warner":               2,
+	"warning":              2,
+	"warp":                 1,
+	"wart":                 1,
+	"was":                  1,
+	"wash":                 1,
+	"washable":             3,
+	"washer":               2,
+	"washing":              2,
+	"washroom":             2,
+	"wasp":                 1,
+	"wasted":               2,
+	"wasting":              2,
+	"waste":                1,
+	"wasteful":             2,
+	"wasteland":            2,
+	"wat":                  1,
+	"wattle":               2,
+	"watch":                1,
+	"watchdog":             2,
+	"watcher":              2,
+	"watchful":             2,
+	"watchman":             2,
+	"watchtower":           3,
+	"watt":                 1,
+	"wattage":              2,
+	"waugh":                1,
+	"waving":               2,
+	"wavy":                 2,
+	"wave":                 1,
+	"waveform":             2,
+	"waveguide":            2,
+	"wavelength":           2,
+	"wavelet":              2,
+	"waved":                1,
+	"wax":                  1,
+	"waxing":               2,
+	"waxy":                 2,
+	"way":                  1,
+	"wayside":              2,
+	"wayward":              2,
+	"ways":                 1,
+	"weber":                2,
+	"weary":                2,
+	"weasel":               2,
+	"weak":                 1,
+	"weaken":               2,
+	"weakly":               2,
+	"weakness":             2,
+	"wealth":               1,
+	"wealthier":            3,
+	"wealthiest":           3,
+	"wealthy":              2,
+	"wean":                 1,
+	"weapon":               2,
+	"weaponry":             3,
+	"wear":                 1,
+	"wearable":             3,
+	"wearer":               2,
+	"wearing":              2,
+	"weather":              2,
+	"weathering":           3,
+	"weatherproof":         3,
+	"weathered":            2,
+	"weaver":               2,
+	"weave":                1,
+	"web":                  1,
+	"webbing":              2,
+	"webby":                2,
+	"webster":              2,
+	"wed":                  1,
+	"wedded":               2,
+	"wedding":              2,
+	"wedlock":              2,
+	"wedge":                1,
+	"wee":                  1,
+	"weenie":               2,
+	"weevil":               2,
+	"weed":                 1,
+	"weeds":                1,
+	"week":                 1,
+	"weekday":              2,
+	"weekdays":             2,
+	"weekend":              2,
+	"weekender":            3,
+	"weekends":             2,
+	"weekly":               2,
+	"ween":                 1,
+	"weep":                 1,
+	"weeping":              2,
+	"wef":                  1,
+	"weigh":                1,
+	"weight":               1,
+	"weighted":             2,
+	"weighting":            2,
+	"weightlifting":        3,
+	"weighty":              2,
+	"weir":                 1,
+	"weird":                1,
+	"weirdness":            2,
+	"weirdo":               2,
+	"welcome":              2,
+	"welfare":              2,
+	"welch":                1,
+	"weld":                 1,
+	"welder":               2,
+	"well":                 1,
+	"wellbeing":            3,
+	"wellness":             2,
+	"wellspring":           2,
+	"welsh":                1,
+	"welt":                 1,
+	"wen":                  1,
+	"wench":                1,
+	"went":                 1,
+	"wept":                 1,
+	"were":                 1,
+	"werewolf":             2,
+	"wert":                 1,
+	"west":                 1,
+	"westbound":            2,
+	"westerly":             3,
+	"western":              2,
+	"westward":             2,
+	"wet":                  1,
+	"wetness":              2,
+	"wetter":               2,
+	"wetting":              2,
+	"wether":               2,
+	"whack":                1,
+	"whaler":               2,
+	"whaling":              2,
+	"whale":                1,
+	"wham":                 1,
+	"wharf":                1,
+	"what":                 1,
+	"whatever":             3,
+	"whatnot":              2,
+	"whatsoever":           4,
+	"wheat":                1,
+	"wheel":                1,
+	"wheelbase":            2,
+	"wheelchair":           2,
+	"wheeler":              2,
+	"wheeling":             2,
+	"wheeled":              1,
+	"wheels":               1,
+	"wheezing":             2,
+	"when":                 1,
+	"whenever":             3,
+	"whence":               1,
+	"wherever":             3,
+	"where":                1,
+	"whereabouts":          3,
+	"whereas":              2,
+	"whereby":              2,
+	"wherefore":            2,
+	"wherein":              2,
+	"whereof":              2,
+	"whereupon":            3,
+	"whet":                 1,
+	"whetstone":            2,
+	"whether":              2,
+	"whew":                 1,
+	"whey":                 1,
+	"which":                1,
+	"whichever":            3,
+	"whiff":                1,
+	"whig":                 1,
+	"while":                1,
+	"whilst":               1,
+	"whim":                 1,
+	"whimsical":            3,
+	"whining":              2,
+	"whine":                1,
+	"whip":                 1,
+	"whiplash":             2,
+	"whipping":             2,
+	"whips":                1,
+	"whirl":                1,
+	"whirlpool":            2,
+	"whirlwind":            2,
+	"whiskey":              2,
+	"whisky":               2,
+	"whisper":              2,
+	"whispering":           3,
+	"whistle":              2,
+	"whistler":             2,
+	"whistling":            2,
+	"whisk":                1,
+	"whisker":              2,
+	"whit":                 1,
+	"whitening":            3,
+	"whitey":               2,
+	"whiting":              2,
+	"whittle":              2,
+	"white":                1,
+	"whitefish":            2,
+	"whiteness":            2,
+	"whitetail":            2,
+	"whites":               1,
+	"whither":              2,
+	"whiz":                 1,
+	"who":                  1,
+	"whoever":              3,
+	"whosoever":            4,
+	"whoa":                 1,
+	"wholly":               2,
+	"whole":                1,
+	"wholeheartedly":       4,
+	"wholesaler":           3,
+	"wholesaling":          3,
+	"wholesale":            2,
+	"wholesome":            2,
+	"whom":                 1,
+	"whomever":             3,
+	"whoop":                1,
+	"whoops":               1,
+	"whopping":             2,
+	"whore":                1,
+	"whose":                1,
+	"whsle":                1,
+	"why":                  1,
+	"wick":                 1,
+	"wicked":               2,
+	"wickedness":           3,
+	"wicker":               2,
+	"wicket":               2,
+	"wicking":              2,
+	"widen":                2,
+	"widener":              3,
+	"wider":                2,
+	"widest":               2,
+	"widow":                2,
+	"widower":              3,
+	"wide":                 1,
+	"widely":               2,
+	"widespread":           2,
+	"widget":               2,
+	"width":                1,
+	"wiener":               2,
+	"wield":                1,
+	"wife":                 1,
+	"wig":                  1,
+	"wigan":                2,
+	"wiggle":               2,
+	"wigwam":               2,
+	"wight":                1,
+	"wilco":                2,
+	"wilder":               2,
+	"wilderness":           3,
+	"willow":               2,
+	"willy":                2,
+	"wily":                 2,
+	"wild":                 1,
+	"wildfire":             2,
+	"wildflower":           3,
+	"wildlife":             2,
+	"wildly":               2,
+	"wildwood":             2,
+	"will":                 1,
+	"willful":              2,
+	"willing":              2,
+	"willingly":            3,
+	"willingness":          3,
+	"willpower":            3,
+	"willed":               1,
+	"wilt":                 1,
+	"win":                  1,
+	"winchester":           3,
+	"window":               2,
+	"winery":               3,
+	"winkle":               2,
+	"winner":               2,
+	"winning":              2,
+	"winter":               2,
+	"wintergreen":          3,
+	"wince":                1,
+	"winch":                1,
+	"wind":                 1,
+	"winded":               2,
+	"winder":               2,
+	"windfall":             2,
+	"winding":              2,
+	"windmill":             2,
+	"windscreen":           2,
+	"windshield":           2,
+	"windward":             2,
+	"windy":                2,
+	"wine":                 1,
+	"wing":                 1,
+	"winger":               2,
+	"wingspan":             2,
+	"winged":               1,
+	"wink":                 1,
+	"wiper":                2,
+	"wipe":                 1,
+	"wiring":               2,
+	"wire":                 1,
+	"wireless":             2,
+	"wirelessly":           3,
+	"wiretap":              2,
+	"wiretapping":          3,
+	"wired":                1,
+	"wis":                  1,
+	"wisdom":               2,
+	"wiser":                2,
+	"wisest":               2,
+	"wisteria":             4,
+	"wise":                 1,
+	"wish":                 1,
+	"wishbone":             2,
+	"wishful":              2,
+	"wisp":                 1,
+	"wit":                  1,
+	"witness":              2,
+	"witty":                2,
+	"witch":                1,
+	"witchcraft":           2,
+	"with":                 1,
+	"withal":               2,
+	"withdraw":             2,
+	"withdrawal":           3,
+	"withdrawing":          3,
+	"withdrawn":            2,
+	"withdrew":             2,
+	"wither":               2,
+	"withers":              2,
+	"withheld":             2,
+	"withhold":             2,
+	"withholding":          3,
+	"within":               2,
+	"without":              2,
+	"withstand":            2,
+	"withstanding":         3,
+	"wits":                 1,
+	"wives":                1,
+	"wiz":                  1,
+	"wizard":               2,
+	"wizardry":             3,
+	"woven":                2,
+	"wobble":               2,
+	"wobbly":               2,
+	"woe":                  1,
+	"woefully":             3,
+	"wok":                  1,
+	"woken":                2,
+	"woke":                 1,
+	"wolverine":            3,
+	"wold":                 1,
+	"wolf":                 1,
+	"wolfram":              2,
+	"wolves":               1,
+	"woman":                2,
+	"womanhood":            3,
+	"wombat":               2,
+	"women":                2,
+	"womb":                 1,
+	"won":                  1,
+	"wonder":               2,
+	"wonderful":            3,
+	"wonderfully":          4,
+	"wondering":            3,
+	"wonderland":           3,
+	"wont":                 1,
+	"woo":                  1,
+	"wood":                 1,
+	"woodbine":             2,
+	"woodcock":             2,
+	"woodcraft":            2,
+	"wooded":               2,
+	"wooden":               2,
+	"woodhouse":            2,
+	"woodland":             2,
+	"woodman":              2,
+	"woodpecker":           3,
+	"woodruff":             2,
+	"woodwind":             2,
+	"woodwork":             2,
+	"woodworking":          3,
+	"woody":                2,
+	"woods":                1,
+	"woof":                 1,
+	"woofer":               2,
+	"wool":                 1,
+	"woolen":               2,
+	"woollen":              2,
+	"woolly":               2,
+	"wop":                  1,
+	"worrisome":            3,
+	"worried":              2,
+	"worry":                2,
+	"worship":              2,
+	"worshipped":           2,
+	"worsted":              2,
+	"worthiness":           3,
+	"worthy":               2,
+	"word":                 1,
+	"wording":              2,
+	"words":                1,
+	"wore":                 1,
+	"work":                 1,
+	"workable":             3,
+	"workbench":            2,
+	"workbook":             2,
+	"workday":              2,
+	"worker":               2,
+	"workhorse":            2,
+	"working":              2,
+	"workload":             2,
+	"workman":              2,
+	"workmanship":          3,
+	"workout":              2,
+	"workshop":             2,
+	"workweek":             2,
+	"worked":               1,
+	"works":                1,
+	"world":                1,
+	"worldly":              2,
+	"worldwide":            2,
+	"worm":                 1,
+	"worms":                1,
+	"worn":                 1,
+	"worsen":               2,
+	"worse":                1,
+	"worst":                1,
+	"wort":                 1,
+	"worth":                1,
+	"worthless":            2,
+	"worthwhile":           2,
+	"wot":                  1,
+	"would":                1,
+	"wound":                1,
+	"wounded":              2,
+	"wow":                  1,
+	"wraith":               1,
+	"wrangler":             2,
+	"wrap":                 1,
+	"wraparound":           3,
+	"wrapper":              2,
+	"wrapping":             2,
+	"wrapped":              1,
+	"wrath":                1,
+	"wreak":                1,
+	"wreath":               1,
+	"wreck":                1,
+	"wreckage":             2,
+	"wrecker":              2,
+	"wren":                 1,
+	"wrench":               1,
+	"wrestle":              2,
+	"wrestler":             2,
+	"wrestling":            2,
+	"wretch":               1,
+	"wretched":             2,
+	"wright":               1,
+	"wrinkle":              2,
+	"wrist":                1,
+	"wristband":            2,
+	"wristwatch":           2,
+	"writ":                 1,
+	"writer":               2,
+	"writing":              2,
+	"written":              2,
+	"write":                1,
+	"wrong":                1,
+	"wrongdoing":           3,
+	"wrongful":             2,
+	"wrongfully":           3,
+	"wrongly":              2,
+	"wrote":                1,
+	"wrought":              1,
+	"wuthering":            3,
+	"wyvern":               2,
+	"wye":                  1,
+	"wynn":                 1,
+	"xenia":                3,
+	"xenophobia":           5,
+	"xenon":                2,
+	"xylene":               2,
+	"xylophone":            3,
+	"yahoo":                2,
+	"yacht":                1,
+	"yachting":             2,
+	"yah":                  1,
+	"yak":                  1,
+	"yam":                  1,
+	"yank":                 1,
+	"yap":                  1,
+	"yarrow":               2,
+	"yard":                 1,
+	"yardage":              2,
+	"yardstick":            2,
+	"yarn":                 1,
+	"yaw":                  1,
+	"yawn":                 1,
+	"yawning":              2,
+	"yeshiva":              3,
+	"yea":                  1,
+	"yeah":                 1,
+	"year":                 1,
+	"yearbook":             2,
+	"yearling":             2,
+	"yearly":               2,
+	"yearn":                1,
+	"yearning":             2,
+	"yeast":                1,
+	"yellow":               2,
+	"yellowish":            3,
+	"yellows":              2,
+	"yell":                 1,
+	"yelp":                 1,
+	"yen":                  1,
+	"yeoman":               2,
+	"yep":                  1,
+	"yerba":                2,
+	"yes":                  1,
+	"yesterday":            3,
+	"yesteryear":           3,
+	"yet":                  1,
+	"yeti":                 2,
+	"yew":                  1,
+	"yield":                1,
+	"yielding":             2,
+	"yip":                  1,
+	"yippee":               2,
+	"yoga":                 2,
+	"yoghurt":              2,
+	"yogi":                 2,
+	"yogurt":               2,
+	"yoke":                 1,
+	"yolk":                 1,
+	"yon":                  1,
+	"yonder":               2,
+	"york":                 1,
+	"yorker":               2,
+	"you":                  1,
+	"young":                1,
+	"younger":              2,
+	"youngster":            2,
+	"your":                 1,
+	"yourself":             2,
+	"yours":                1,
+	"youth":                1,
+	"youthful":             2,
+	"yrs":                  1,
+	"yuan":                 2,
+	"yucca":                2,
+	"yuk":                  1,
+	"yule":                 1,
+	"yup":                  1,
+	"zaire":                2,
+	"zany":                 2,
+	"zack":                 1,
+	"zander":               2,
+	"zap":                  1,
+	"zebrafish":            3,
+	"zeolite":              3,
+	"zero":                 2,
+	"zeta":                 2,
+	"zeal":                 1,
+	"zealot":               2,
+	"zealous":              2,
+	"zebra":                2,
+	"zed":                  1,
+	"zee":                  1,
+	"zenith":               2,
+	"zeppelin":             3,
+	"zephyr":               2,
+	"zest":                 1,
+	"ziff":                 1,
+	"zigzag":               2,
+	"zilla":                2,
+	"zillion":              2,
+	"zinfandel":            3,
+	"zinc":                 1,
+	"zing":                 1,
+	"zip":                  1,
+	"zipper":               2,
+	"zippy":                2,
+	"zirconia":             4,
+	"zirconium":            4,
+	"zircon":               2,
+	"zloty":                2,
+	"zodiac":               3,
+	"zoological":           5,
+	"zoophilia":            5,
+	"zooplankton":          4,
+	"zoology":              4,
+	"zombie":               2,
+	"zonal":                2,
+	"zoning":               2,
+	"zone":                 1,
+	"zoo":                  1,
+	"zool":                 1,
+	"zoom":                 1,
+	"zoster":               2,
+	"zucchini":             3,
+}
