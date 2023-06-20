@@ -44,3 +44,30 @@ fmt:
 .PHONY: lint
 lint:
 	golangci-lint run --config .github/golangci.yml
+
+
+server:
+	-pkill -f 'build/gnoland'
+	-pkill -f 'build/gnoweb'
+	# gno test --verbose examples/gno.land/p/demo/audio
+	rm -rf gno.land/testdir
+	cd gno.land && ./build/gnoland & 
+	sleep 5
+	cd gno.land && ./build/gnoweb -bind 0.0.0.0:8888 & 
+	sleep 2
+
+p:
+	-cat password | gnokey maketx addpkg --pkgpath "gno.land/p/demo/microblog" --pkgdir "examples/gno.land/p/demo/microblog" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 --insecure-password-stdin=true zzkey1
+
+r:
+	cat password | gnokey maketx addpkg --pkgpath "gno.land/r/demo/microblog" --pkgdir "examples/gno.land/r/demo/microblog" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657  --insecure-password-stdin=true  zzkey1
+
+tests:
+	gno test --verbose examples/gno.land/p/demo/audio/ 2>&1
+	go run ./gnovm/cmd/gno precompile --verbose ./examples/gno.land/p/demo/audio
+	go run ./gnovm/cmd/gno build --verbose ./examples/gno.land/p/demo/audio
+	go run ./gnovm/cmd/gno precompile --verbose ./examples/gno.land/r/demo/bytebeat
+	go run ./gnovm/cmd/gno build --verbose ./examples/gno.land/r/demo/bytebeat
+	
+
+all: server p r
