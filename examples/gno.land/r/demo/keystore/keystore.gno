@@ -1,8 +1,6 @@
 package keystore
 
 import (
-	"strings"
-
 	"gno.land/p/demo/avl"
 )
 
@@ -26,16 +24,5 @@ func Get(k string) string {
 }
 
 func Render(p string) string {
-	if strings.HasPrefix(p, "set:") {
-		kv := strings.Split(strings.TrimPrefix(p, "set:"), ":")
-		if len(kv) == 2 {
-			return Set(kv[0], kv[1])
-		} else {
-			return "incorrect :"
-		}
-	} else if strings.HasPrefix(p, "get:") {
-		return Get(strings.TrimPrefix(p, "get:"))
-	} else {
-		return "404"
-	}
+	return Get(p)
 }

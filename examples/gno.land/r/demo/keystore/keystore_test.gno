@@ -13,11 +13,7 @@ func TestRender(t *testing.T) {
 		expected string
 	}{
 		{
-			path:     "set:hello:world",
-			expected: "ok",
-		},
-		{
-			path:     "get:hello",
+			path:     "hello",
 			expected: "world",
 		},
 		{
