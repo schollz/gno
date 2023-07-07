@@ -133,6 +133,7 @@ func Render(p string) string {
 			data.Iterate("", "", func(key string, value interface{}) bool {
 				ks := value.(*KeyStore)
 				response += ufmt.Sprintf("- [%s](%s:%s) (%d keys)\n", ks.Owner, BaseURL, ks.Owner, ks.Data.Size())
+				return false
 			})
 		} else {
 			response = "no databases"
