@@ -44,3 +44,21 @@ fmt:
 .PHONY: lint
 lint:
 	$(rundep) github.com/golangci/golangci-lint/cmd/golangci-lint run --config .github/golangci.yml
+
+
+server:
+	-pkill -f 'build/gnoland'
+	-pkill -f 'build/gnoweb'
+	# gno test --verbose examples/gno.land/p/demo/audio
+	rm -rf gno.land/testdir
+	cd gno.land && ./build/gnoland start & 
+	sleep 2
+	cd gno.land && ./build/gnoweb & 
+	sleep 2
+
+p:
+	-cat ~/password | gnokey maketx addpkg --pkgpath "gno.land/p/demo/eval/int32" --pkgdir "examples/gno.land/p/demo/eval/int32" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 --insecure-password-stdin=true zzkey1
+
+r:
+	-cat ~/password | gnokey maketx addpkg --pkgpath "gno.land/r/demo/eval" --pkgdir "examples/gno.land/r/demo/eval" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 --insecure-password-stdin=true zzkey1
+
