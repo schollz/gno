@@ -2,19 +2,22 @@ package bytebeat
 
 import (
 	"gno.land/p/demo/audio/bytebeat"
+	evalint32 "gno.land/p/demo/eval/int32"
 )
 
-var data string
-
-func init() {
-	data = bytebeat.ByteBeat(2, 8000, func(t int) int {
-		return (t>>10^t>>11)%5*((t>>14&3^t>>15&1)+1)*t%99 + ((3 + (t >> 14 & 3) - (t >> 16 & 1)) / 3 * t % 99 & 64)
-	})
-}
-
 func Render(path string) string {
+	exp, err := evalint32.Parse(path)
+	if err != nil {
+		return err.Error()
+	}
+	variables := make(map[string]int)
+	data := bytebeat.ByteBeat(1, 8000, func(t int) int {
+		variables["t"] = t
+		res, _ := evalint32.Eval(exp, variables)
+		return res
+	})
 	output := "# bytebeat\n\n"
-	output += "(t>>10^t>>11)%5*((t>>14&3^t>>15&1)+1)*t%99 + ((3 + (t >> 14 & 3) - (t >> 16 & 1)) / 3 * t % 99 & 64)\n\n\n"
+	output += "```\n" + path + "\n```\n\n\n"
 	output += `<audio controls="controls" autobuffer="autobuffer" autoplay="autoplay">
 <source src="data:audio/wav;base64,`
 	output += data
