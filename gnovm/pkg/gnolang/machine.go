@@ -886,9 +886,10 @@ const (
 
 func (m *Machine) incrCPU(cycles int64) {
 	m.Cycles += cycles
-	if m.MaxCycles != 0 && m.Cycles > m.MaxCycles {
-		panic("CPU cycle overrun")
-	}
+	// no-limits: disable limits on cpu time
+	// if m.MaxCycles != 0 && m.Cycles > m.MaxCycles {
+	// 	panic("CPU cycle overrun")
+	// }
 }
 
 const (

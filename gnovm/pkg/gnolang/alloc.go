@@ -101,9 +101,10 @@ func (alloc *Allocator) Allocate(size int64) {
 		return
 	}
 	alloc.bytes += size
-	if alloc.bytes > alloc.maxBytes {
-		panic("allocation limit exceeded")
-	}
+	// no-limits: disable max bytes
+	// if alloc.bytes > alloc.maxBytes {
+	// 	panic("allocation limit exceeded")
+	// }
 }
 
 func (alloc *Allocator) AllocateString(size int64) {
