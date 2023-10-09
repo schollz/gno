@@ -44,3 +44,28 @@ fmt:
 .PHONY: lint
 lint:
 	$(rundep) github.com/golangci/golangci-lint/cmd/golangci-lint run --config .github/golangci.yml
+
+.PHONY: build
+build: install
+	cd gno.land && make build
+
+.PHONY: run
+run:
+	-pkill -f 'build/gnoland'
+	-pkill -f 'build/gnoweb'
+	rm -rf gno.land/testdir
+	# cd gno.land && ./build/gnoland start &
+	cd gno.land && ./build/gnoland start >/dev/null 2>&1 & 
+	sleep 5
+	cd gno.land && ./build/gnoweb & 
+	sleep 3
+
+
+push:
+	-cat password | gnokey maketx addpkg --pkgpath "gno.land/p/demo/audio/riff/v1" --pkgdir "examples/gno.land/p/demo/audio/riff" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 --insecure-password-stdin=true ${KEY}
+	-cat password | gnokey maketx addpkg --pkgpath "gno.land/p/demo/audio/wav/v1" --pkgdir "examples/gno.land/p/demo/audio/wav" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 2000000 --broadcast --chainid dev --remote localhost:26657 --insecure-password-stdin=true ${KEY}
+	-cat password | gnokey maketx addpkg --pkgpath "gno.land/p/demo/audio/bytebeat/v1" --pkgdir "examples/gno.land/p/demo/audio/bytebeat" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 8000000  --broadcast --chainid dev --remote localhost:26657 --insecure-password-stdin=true ${KEY}
+	-cat password | gnokey maketx addpkg --pkgpath "gno.land/r/demo/bytebeat/v1" --pkgdir "examples/gno.land/r/demo/bytebeat" --deposit 100000000ugnot --gas-fee 1000000ugnot --gas-wanted 8000000  --broadcast --chainid dev --remote localhost:26657 --insecure-password-stdin=true ${KEY}
+
+comment:
+	-cat password | gnokey maketx call --pkgpath "gno.land/r/demo/bytebeat/v1" --func "AddComment" --args "this is cool" --gas-fee 1000000ugnot --gas-wanted 8000000  --broadcast --chainid dev --remote localhost:26657 --insecure-password-stdin=true ${KEY}
