@@ -18,7 +18,7 @@ var (
 )
 
 func init() {
-	seconds := uint32(3)
+	seconds := uint32(10)
 	data = bytebeat.ByteBeat(seconds, 8000, func(t int) int {
 		return (t>>10^t>>11)%5*((t>>14&3^t>>15&1)+1)*t%99 + ((3 + (t >> 14 & 3) - (t >> 16 & 1)) / 3 * t % 99 & 64)
 	})
