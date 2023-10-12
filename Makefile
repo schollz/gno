@@ -49,11 +49,14 @@ lint:
 build: install
 	cd gno.land && make build
 
-.PHONY: run
-run:
+.PHONY: kill
+kill:
 	-pkill -f 'build/gnoland'
 	-pkill -f 'build/gnoweb'
 	rm -rf gno.land/testdir
+
+.PHONY: run
+run: kill
 	# cd gno.land && ./build/gnoland start &
 	cd gno.land && ./build/gnoland start >/dev/null 2>&1 & 
 	sleep 5
